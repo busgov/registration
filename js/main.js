@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 
 /* Expand collapse headings config */
 
-new jQueryCollapse($("#showhide"), {
+new jQueryCollapse($(".showhide"), {
   open: function() {
     this.slideDown(150);
   },
