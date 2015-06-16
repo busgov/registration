@@ -250,7 +250,6 @@ body.condensed header {
 // Aside
 // ------------------------------------------------------------------------------------------------------
 
-
 aside.help h3 {
     background: $blue url(../img/ico-help.png) no-repeat 8px 9px;
     color: white;
@@ -296,14 +295,44 @@ aside.help ul.content {
   margin: 0 0 1em 25px;
 }
 aside.help ul.content li {
-    background: transparent url(../img/bullet.png) no-repeat 0 0.55em;
+    background: transparent url(../img/sprite-bullet.png) no-repeat 0 0.55em;
     line-height: 1.2em;
-    padding: 0.3em 0 0.3em 18px;
+    padding: 0.35em 0 0.35em 25px;
+}
+aside.help ul.content li {
+    background: transparent url(../img/sprite-bullet.png) no-repeat 0 0.55em;
+    line-height: 1.2em;
+    padding: 0.35em 0 0.35em 25px;
+}
+aside.help ul.content li.current-step {
+    background: transparent url(../img/sprite-bullet.png) no-repeat 0 -63px;
+    font-weight: bold;
+    color: black;
 }
 aside.help p,
 aside.help li {
   font-size: $smaller;
 }
+
+/* Navigation in aside */
+
+aside.aside-nav {
+  display: none;
+}
+@media only screen and (min-width: $break-large) {
+  aside.aside-nav {
+    display: inline;
+  }
+}
+aside.aside-nav h2 {
+    background: transparent url(../img/ico-map.png) no-repeat 0.8em 5px;  
+    padding: 10px 0 12px 70px;
+    color: $gray;
+}
+aside.aside-nav li {
+    color: $gray;
+}
+
 
 
 // Footer
