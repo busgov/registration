@@ -291,6 +291,9 @@ aside.help ul.media {
 aside.help ul.media li {
     background: transparent url(../img/sprite-help.png) no-repeat 0 -78px;
 }
+aside.help ul.help li {
+    background: transparent url(../img/sprite-help.png) no-repeat 0 -177px;
+}
 aside.help ul.content {
   margin: 0 0 1em 25px;
 }
@@ -302,7 +305,7 @@ aside.help ul.content li {
 aside.help ul.content li {
     background: transparent url(../img/sprite-bullet.png) no-repeat 0 0.55em;
     line-height: 1.2em;
-    padding: 0.35em 0 0.35em 25px;
+    padding: 0.4em 0 0.4em 25px;
 }
 aside.help ul.content li.current-step {
     background: transparent url(../img/sprite-bullet.png) no-repeat 0 -63px;
@@ -331,6 +334,43 @@ aside.aside-nav h2 {
 }
 aside.aside-nav li {
     color: $gray;
+}
+
+/* Highlight box, ie: to advertise discovery from registration page */
+
+.highlight {
+  background-color: $highlight-bg;
+  padding: 1em 0.75em 0.5em 0.75em;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-bottom: 2em;
+}
+.highlight h2 {
+    background: transparent url(../img/ico-hand-small.png) no-repeat 0 50%;  
+    padding: 10px 0 12px 60px;
+    font-size: 130%;
+}
+
+
+/* Sign in form in aside */
+
+.sign-in {
+  background-color: $blue-paler;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 1em 1em 0.5em 1em;
+  margin-bottom: 2em;
+}
+.sign-in .form-row {
+  clear: both;
+  margin: 0.5em 0;
+}
+.sign-in .buttons {
+  margin: 1.5em 0 0.5em 0;
+}
+.sign-in input[type=text] {
+  padding: 0.35em 0.2em;
+  width: 95%;
 }
 
 
