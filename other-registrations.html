@@ -22,31 +22,43 @@
         <div class="wrapper main-container clearfix">
             <main class="cd-main-content">
                 <div class="col-2-3">
-                    <h1>Goods and Services Tax (GST)</h1>
-                    <p class="meter-description"><strong>Step 3 of 5:</strong> 40% complete</p>
+                    <h1>Business name</h1>
+                    <p class="meter-description"><strong>Step 5 of 5:</strong> 80% complete</p>
                     <div class="meter">
-                        <span style="width: 40%"></span>
+                        <span style="width: 80%"></span>
                     </div><!-- meter -->
                     <fieldset id="gst-form">
-                        <legend>Will you be registering for <acronym title="Goods and Services Tax">GST</acronym>?</legend>
+                        <legend>Select other tax registrations</legend>
                         <table class="question-wrapper">
                           <tr>
-                            <td class="choice"><input id="yes-gst" type="radio" name="gst" value="yes-gst"></td>
-                            <td><label for="yes-gst"><strong>Yes</strong>, I do want to register for GST</label></td>
+                            <td class="choice"><input id="payg" type="checkbox" value="payg"></td>
+                            <td><label for="payg"><strong>PAYG</strong> - Pay as you go withholding</label></td>
                           </tr>
                           <tr>
-                            <td class="choice"><input id="no-gst" type="radio" name="gst" value="no-gst"></td>
-                            <td><label for="no-gst"><strong>No</strong>, I do not need to register for GST</label></td>
+                            <td class="choice"><input id="fbt" type="checkbox" value="fbt"></td>
+                            <td><label for="fbt"><strong>FBT</strong> - Fringe Benefits Tax</label></td>
+                          </tr>
+                          <tr>
+                            <td class="choice"><input id="lct" type="checkbox" value="lct"></td>
+                            <td><label for="lct"><strong>LCT</strong> - Luxury Car Tax</label></td>
+                          </tr>
+                          <tr>
+                            <td class="choice"><input id="ftc" type="checkbox" value="ftc"></td>
+                            <td><label for="ftc"><strong>FTC</strong> - Fuel Tax Credits</label></td>
+                          </tr>
+                          <tr>
+                            <td class="choice"><input id="wet" type="checkbox" value="wet"></td>
+                            <td><label for="wet"><strong>WET</strong> - Wine Equalisation Tax</label></td>
                           </tr>
                           <tr>
                             <td class="help"><img src="img/ico-help-form.png" /></td>
-                            <td class="help"><span class="toggle-nav">GST is not always required. <a href="#help" class="cd-btn">Tell me more</a></span></td>
+                            <td class="help"><span class="toggle-nav"><a href="#help" class="cd-btn">Explain what these are</a></span></td>
                           </tr>
                         </table>
                     </fieldset>
                     <p class="buttons">
-                      <span class="button button-secondary"><a href="business-structure.html">&laquo; Previous</a></span>
-                      <span class="button"><a href="business-name.html">Next &raquo;</a></span>
+                      <span class="button button-secondary"><a href="business-name.html">&laquo; Previous</a></span>
+                      <span class="button"><a href="discovery-confirmation.html">Next &raquo;</a></span>
                     </p>
                 </div><!-- col-2-3 -->
             </main>
@@ -55,9 +67,9 @@
                 <ul class="content">
                   <li><a href="sole-trader.html">Step 1: Sole trader</a></li>
                   <li><a href="business-structure.html">Step 2: Business structure</a></li>
-                  <li class="current-step">Step 3: GST</li>
-                  <li>Step 4: Business name</li>
-                  <li>Step 5: Other tax registrations</li>
+                  <li><a href="gst.html">Step 3: GST</a></li>
+                  <li><a href="business-name.html">Step 4: Business name</a></li>
+                  <li class="current-step">Step 5: Other tax registrations</li>
                 </ul>
             </aside>
             <div class="help" id="help">

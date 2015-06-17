@@ -16,6 +16,18 @@
     padding: 2em 0;
 }
 
+.center-message .buttons {
+  margin-top: 2.5em;
+}
+@media only screen and (min-width: $break-large) {
+  .center-message {
+    margin: 0 auto;
+    width: 75%;
+    max-width: $content-max-width;
+  }
+}
+
+
 
 // Grid layout
 // ------------------------------------------------------------------------------------------------------
@@ -409,6 +421,16 @@ footer a:focus,
 footer a:active {
   color: white;
   background-color: black;
+}
+footer p {
+  text-align: center;
+}
+footer p a,
+footer p a:link,
+footer p a:visited {
+  display: inline;
+  padding: 0.3em 0.1em;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: $break-large) {
