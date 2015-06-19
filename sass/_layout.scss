@@ -16,6 +16,9 @@
     padding: 2em 0;
 }
 
+
+/* Disclaimer message on index.html */
+
 .center-message .buttons {
   margin-top: 2.5em;
 }
@@ -329,24 +332,6 @@ aside.help li {
   font-size: $smaller;
 }
 
-/* Navigation in aside */
-
-aside.aside-nav {
-  display: none;
-}
-@media only screen and (min-width: $break-large) {
-  aside.aside-nav {
-    display: inline;
-  }
-}
-aside.aside-nav h2 {
-    background: transparent url(../img/ico-map.png) no-repeat 0.8em 5px;  
-    padding: 10px 0 12px 70px;
-    color: $gray;
-}
-aside.aside-nav li {
-    color: $gray;
-}
 
 /* Highlight box, ie: to advertise discovery from registration page */
 
