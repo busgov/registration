@@ -18,9 +18,10 @@ $(function() {
 var steps = new Array(
     ["Sole Trader", "sole_trader"], 
     ["Business structure", "business_structure"],
-    ["Goods and Services Tax (GST)", "gst"],
+    ["Goods and Services Tax", "gst"],
     ["Business name", "business_name"],
-    ["Other tax registrations", "other_tax"]
+    ["Other tax registrations", "other_tax"],
+    ["Finished!", "finish"]
     );
 var step = 0;
 var maxStep = 5;
