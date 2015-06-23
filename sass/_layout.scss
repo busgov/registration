@@ -188,6 +188,16 @@ body.condensed header {
   -webkit-border-radius: 2px;
   width: 100%;
 }
+.question-wrapper th {
+  background-color: $blue;
+  color: white;
+  padding: 0.75em 0.5em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.question-wrapper th.registration-type {
+  padding-left: 1em;
+}
 .question-wrapper td {
   border-bottom: 1px solid $blue-light;
   padding: 0.75em 1em 0.5em 1em;
@@ -196,69 +206,17 @@ body.condensed header {
   width: 40px;
   border-right: 1px solid $blue-light;
 }
+.question-wrapper th.cost,
+.question-wrapper td.cost {
+  text-align: right;
+}
 .question-wrapper tr:hover,
 .question-wrapper tr:active,
 .question-wrapper tr:focus {
   background-color: $blue-light;
 }
-
-
-/* Table showing results */
-
-.results-table {
-  width: 100%;
-  margin-bottom: 2em;
-}
-.results-table caption,
-.results-table th,
-.results-table td {
-  text-align: center;
-}
-.results-table caption,
-.results-table .green-tick span,
-.results-table .orange-tick span {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-.results-table th {
-  background-color: $blue;
-  color: white;
-  padding: 0.75em 0.5em;
-  margin-bottom: 1em
-}
-.results-table td {
-  padding: 0.6em 0.5em;
-  border-bottom: 1px solid $blue-pale;
-  background-color: $blue-paler;
-}
-.results-table th.registration-type,
-.results-table td.registration-type {
-  text-align: left;
-}
-.results-table .green-tick,
-.results-table .orange-tick {
-  background: $blue-paler url(../img/ico-tick.png) no-repeat 50% 50%;
-  width: 22px;
-  height: 22px;
-}
-.results-table .orange-tick {
-  background: $blue-paler url(../img/ico-tick-orange.png) no-repeat 50% 50%;
-}
-.results-table .results-alert {
-  border-bottom: 1px solid white;
-  background-color: $blue-pale;
-}
-.results-table .results-alert-message {
-  background: $results-alert-bg url(../img/ico-help-small.png) no-repeat 0.6em 0.7em;
-  text-align: left;
-  font-size: $smaller;
-  padding-left: 35px;
+.results-alert-message {
+  background-color: $results-alert-bg;
 }
 
 

@@ -64,6 +64,13 @@
   box-shadow: 0 0 2px 0 rgba(47,45,43,.75);
 }
 
+/* Cancel text to accompany positive action buttons */
+.command-link {
+  margin-left: 1em;
+  line-height: 2.5em;
+  font-size: $smaller;
+}
+
 
 // Form elements
 // ------------------------------------------------------------------------------------------------------

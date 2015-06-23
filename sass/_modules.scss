@@ -133,6 +133,12 @@ nav li a:active {
 .clearfix { 
   zoom: 1 
 }
+.smaller {
+  font-size: $smaller;
+}
+.smallest {
+  font-size: $smallest;
+}
 
 .visuallyhidden {
     border: 0;
