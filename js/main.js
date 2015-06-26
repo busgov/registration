@@ -58,8 +58,9 @@ function loadQuestionHelp()
 {
   var templateDirectory = "templates/"
   $("#heading").html(steps[step][0]);
+  $("#heading").focus();
   $("#stepNo").html(displayStepNumber);
-  var percentCompleted = displayStepNumber / maxStep * 100;
+  var percentCompleted = Math.round(displayStepNumber / maxStep * 100/5)*5;
   $("#percentCompleted").html(percentCompleted);
   if(percentCompleted == 0)
   {
@@ -87,6 +88,7 @@ function applyStyle()
   new jQueryCollapse($(".showhide"), {
     open: function() {
       this.slideDown(150);
+      $("#helpTopic").focus();
     },
     close: function() {
       this.slideUp(150);
@@ -155,6 +157,7 @@ function manageState(action)
         selectRadioButton(lct, "lct");
         selectRadioButton(ftc, "ftc");
         selectRadioButton(wet, "wet");
+        $("#next").show();
         break;
     }
   }
@@ -171,6 +174,7 @@ function manageState(action)
         break;
       case 2:
         soletrader = getValueFromRadioButton("soletrader");
+        maxStep = 6;
         if(soletrader == "yes")
         {
           businessStructure = null;
@@ -214,6 +218,7 @@ function manageState(action)
         wet = getValueFromRadioButton("wet");
         loadQuestionHelp();
         setTimeout(showResults, 50);
+        $("#next").hide();
         break;
     }
   }
@@ -285,7 +290,6 @@ function setValue(value, name){
 }
 function getValueFromRadioButton(name)
 {
-  console.log($('input[name='+ name + ']:checked').val());
   return $('input[name='+ name + ']:checked').val();
 }
 function getResult(registrationName, id, isSelected, reason, cost)
