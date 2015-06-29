@@ -1,27 +1,53 @@
 <legend>Select other tax registrations</legend>
-<table class="question-wrapper">
-  <tr>
-    <td class="choice"><input id="payg" name="payg" type="checkbox" value="yes"></td>
-    <td><label for="payg"><strong>PAYG</strong> - Pay as you go withholding</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="fbt" name="fbt" type="checkbox" value="yes"></td>
-    <td><label for="fbt"><strong>FBT</strong> - Fringe Benefits Tax</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="lct" name="lct" type="checkbox" value="yes"></td>
-    <td><label for="lct"><strong>LCT</strong> - Luxury Car Tax</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="ftc" name="ftc" type="checkbox" value="yes"></td>
-    <td><label for="ftc"><strong>FTC</strong> - Fuel Tax Credits</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="wet" name="wet" type="checkbox" value="yes"></td>
-    <td><label for="wet"><strong>WET</strong> - Wine Equalisation Tax</label></td>
-  </tr>
-  <tr>
-    <td class="help"><img src="img/ico-help-form.png" /></td>
-    <td class="help"><span class="toggle-nav"><a href="#help" class="cd-btn">Explain what these are</a></span></td>
-  </tr>
-</table>
+<p>One or two sentence paragraph introducing the topic. This should be concise and suggest people click the help link if they require more guidance in order to answer the question.</p>
+<div class="question-wrapper">
+  <div class="question-row">
+    <div class="question-cell help">
+      <img src="img/ico-help-form.png" />
+    </div>
+    <div class="question-cell help">
+      <span class="toggle-nav"><a href="#help" class="cd-btn">Help me understand other registration options</a></span>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="payg" name="payg" type="checkbox" value="yes">
+    </div>
+    <div class="question-cell">
+      <label for="payg"><strong>PAYG</strong> - Pay as you go withholding</label>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="fbt" name="fbt" type="checkbox" value="yes">
+    </div>
+    <div class="question-cell">
+      <label for="fbt"><strong>FBT</strong> - Fringe Benefits Tax</label>
+    </div>
+  </div>
+
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="lct" name="lct" type="checkbox" value="yes">
+    </div>
+    <div class="question-cell">
+      <label for="lct"><strong>LCT</strong> - Luxury Car Tax</label>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="ftc" name="ftc" type="checkbox" value="yes">
+    </div>
+    <div class="question-cell">
+      <label for="ftc"><strong>FTC</strong> - Fuel Tax Credits</label>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="wet" name="wet" type="checkbox" value="yes">
+    </div>
+    <div class="question-cell">
+      <label for="wet"><strong>WET</strong> - Wine Equalisation Tax</label>
+    </div>
+  </div>
+</div>

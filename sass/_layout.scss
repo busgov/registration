@@ -187,37 +187,42 @@ body.condensed header {
   border-radius: 2px;
   -webkit-border-radius: 2px;
   width: 100%;
+  display: table;
 }
-.question-wrapper th {
-  background-color: $blue;
-  color: white;
+.question-row {
+  background-color: $blue-pale;
   padding: 0.75em 0.5em;
   margin-bottom: 1em;
-  text-align: left;
+  display: table-row;
 }
-.question-wrapper th.registration-type {
-  padding-left: 1em;
-}
-.question-wrapper td {
+.question-cell {
   border-bottom: 1px solid $blue-light;
   padding: 0.75em 1em 0.5em 1em;
+  display: table-cell;
 }
-.question-wrapper td.choice {
+.question-wrapper.question-cell.registration-type {
+  padding-left: 1em;
+}
+.question-cell.choice {
   width: 40px;
   border-right: 1px solid $blue-light;
 }
-.question-wrapper th.cost,
-.question-wrapper td.cost {
+.question-cell.help {
+  vertical-align: middle;
+}
+.question-cell.cost,
+.question-cell.cost {
   text-align: right;
 }
-.question-wrapper tr:hover,
-.question-wrapper tr:active,
-.question-wrapper tr:focus {
+.question-row:hover,
+.question-row:active,
+.question-row:focus {
   background-color: $blue-light;
 }
 .results-alert-message {
   background-color: $results-alert-bg;
 }
+
 
 
 // Aside

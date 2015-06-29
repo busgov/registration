@@ -1,19 +1,36 @@
 <legend>Select registrations</legend>
-<table class="question-wrapper">
-  <tr>
-    <td class="choice"><input id="company" type="radio" name="structure" value="company"></td>
-    <td><label for="company"><strong>Company</strong> - [ context ]</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="partnership" type="radio" name="structure" value="partnership"></td>
-    <td><label for="partnership"><strong>Partnership</strong> - [ context ]</label></td>
-  </tr>
-  <tr>
-    <td class="choice"><input id="trust" type="radio" name="structure" value="trust"></td>
-    <td><label for="trust"><strong>Trust</strong> - [ context ]</label></td>
-  </tr>
-  <tr>
-    <td class="help"><img src="img/ico-help-form.png" /></td>
-    <td class="help"><span class="toggle-nav"><a href="#help" class="cd-btn">Tell me more</a></span></td>
-  </tr>
-</table>
+<p>One or two sentence paragraph introducing the topic. This should be concise and suggest people click the help link if they require more guidance in order to answer the question.</p>
+<div class="question-wrapper">
+  <div class="question-row">
+    <div class="question-cell help">
+      <img src="img/ico-help-form.png" />
+    </div>
+    <div class="question-cell help">
+      <span class="toggle-nav"><a href="#help" class="cd-btn">Help me understand business structures</a></span>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="company" type="radio" name="structure" value="company">
+    </div>
+    <div class="question-cell">
+      <label for="company"><strong>Company</strong> - [ context ]</label>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="partnership" type="radio" name="structure" value="partnership">
+    </div>
+    <div class="question-cell">
+      <label for="partnership"><strong>Partnership</strong> - [ context ]</label>
+    </div>
+  </div>
+  <div class="question-row">
+    <div class="question-cell choice">
+      <input id="trust" type="radio" name="structure" value="trust">
+    </div>
+    <div class="question-cell">
+      <label for="trust"><strong>Trust</strong> - [ context ]</label>
+    </div>
+  </div>
+</div>
