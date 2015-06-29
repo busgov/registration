@@ -60,7 +60,7 @@ function loadQuestionHelp()
   $("#heading").html(steps[step][0]);
   $("#heading").focus();
   $("#stepNo").html(displayStepNumber);
-  var percentCompleted = Math.round(displayStepNumber / maxStep * 100/5)*5;
+  var percentCompleted = Math.round((displayStepNumber-1) / (maxStep-1) * 100/5)*5;
   $("#percentCompleted").html(percentCompleted);
   if(percentCompleted == 0)
   {
