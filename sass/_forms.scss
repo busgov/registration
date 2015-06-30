@@ -29,12 +29,19 @@
   border-radius: 4px;
   color: $button-color;
   cursor: pointer;
-  line-height: 1;
+  line-height: 1em;
   padding: 0.6em 1.25em;
   text-align: center;
   text-decoration: none !important;
   white-space: nowrap;
 }
+.button-apply {
+  padding: 1em 2em 1em 2em;
+  line-height: 2.5em;
+  font-size: $largest;
+  font-weight: bold;
+}
+
 .button-secondary a,
 .button-secondary a:link,
 .button-secondary a:visited {

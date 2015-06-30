@@ -316,7 +316,7 @@ function getResult(registrationName, id, isSelected, reason, cost)
     result += '">'+ cost + '</td>  </tr>';
     if(!isSelected)
     {
-      result += '<tr><td class="results-alert-message" colspan="3"><span class="smallest">'+ reason +'</span></td></tr>';
+      result += '<tr><td class="results-alert-message" colspan="3"><span class="smaller">'+ reason +'</span></td></tr>';
     }
   return result;
 }

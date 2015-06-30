@@ -224,6 +224,41 @@ body.condensed header {
 }
 
 
+// Discovery results table
+// ------------------------------------------------------------------------------------------------------
+
+.results-table {
+  background-color: $blue-pale; 
+  padding: 0;
+  margin: 0.5em 0 1em 0; 
+  width: 100%;
+
+  th {
+    background-color: $blue;
+    color: white;
+    text-align: left;
+    padding: 0.8em 0.5em 0.8em 0.5em;
+    font-size: 110%;
+  }
+  td {
+    background-color: $blue-paler;
+    padding: 0.35em 0.5em;
+    border-bottom: 1px solid $white70;
+  }
+}
+th.choice,
+td.choice {
+  width: 40px;
+  padding-left: 0.75em;
+}
+th.cost,
+td.cost {
+ text-align: center;     
+}
+td.results-alert-message {
+  background-color: $results-alert-bg;
+}
+
 
 // Aside
 // ------------------------------------------------------------------------------------------------------
