@@ -23,10 +23,22 @@ var displayStepNumber = 0;
 var maxStep = 5;
 
 function initDiscoveryPage() {
+
     manageState();
 
-    $("#previous").click(function () { manageState("previous"); });
-    $("#next").click(function () { manageState("next"); });
+    $("#previous").click(function () {
+        $("#previous").blur();
+        manageState("previous");
+    });
+    $("#next").click(function () {
+        $("#next").blur();
+        if (!ifAnythingSelected("question") && step != 5) { // ignore step 5
+            $("#validation").show();
+            $("#heading").focus();
+            return;
+        }
+        manageState("next");
+    });
 }
 
 function initEligibilityPage() {
@@ -83,6 +95,7 @@ function applyStyle() {
 }
 
 function manageState(action) {
+    $("#validation").hide();
     if (action == "previous") {
         step--;
         displayStepNumber--;
@@ -372,4 +385,26 @@ function checkEligibility() {
 function showEligibilityTest() {
     $('#eligibilityTest').toggle();
     $('#eligibilityResult').toggle();
+}
+
+function ifAnythingSelected(containerId) {
+    var ifUserInputCount = 0;
+    $("#" + containerId + " :radio").each(function () {
+        if ($(this).is(":visible")) {
+            var ifUserInput = $(this).prop("checked");
+            if (ifUserInput) {
+                ifUserInputCount++;
+            }
+        }
+    });
+
+    //$("#" + containerId + " :checkbox").each(function () {
+    //    if ($(this).is(":visible")) {
+    //        var ifUserInput = $(this).prop("checked");
+    //        if (ifUserInput) {
+    //            ifUserInputCount++;
+    //        }
+    //    }
+    //});
+    return ifUserInputCount > 0;
 }

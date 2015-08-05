@@ -1498,3 +1498,14 @@ nav li a:active {
   padding: 0.4em 0.25em 0.5em 1.5em; }
 
 /*# sourceMappingURL=style.css.map */
+/*Validation*/
+.process-message {
+    background: #efe8ce url(../img/ico-form-alert.png) no-repeat 1em 1.25em;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 0.4em 2em 0.5em 1em;
+    margin: 1.5em 0;
+}
+.process-message h2 {
+  padding: 0 0 0 1.5em;
+  margin: 0.5em 0 1em 0; }
