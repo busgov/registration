@@ -1,0 +1,554 @@
+// ----- Modules are reusable components that can be called from multiple places
+// ------------------------------------------------------------------------------------------------------
+
+
+// Main site navigation
+// ------------------------------------------------------------------------------------------------------
+
+nav ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li a,
+nav li a:link,
+nav li a:visited {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    color: $main-nav-fg;
+    background: $main-nav-bg;
+}
+nav li a:hover,
+nav li a:focus,
+nav li a:active {
+    background: $main-nav-hover-bg;
+    color: white;
+}
+
+@media only screen and (min-width: $break-small) {
+  nav {
+    background-color: white;
+    min-height: 75px;
+  }
+  nav ul {
+    margin: 1em 0;
+    clear: both;
+  }
+  nav li a,
+  nav li a:link,
+  nav li a:visited {
+      display: inline-block;
+      float: left;
+      padding: 15px;
+      color: $main-nav-fg;
+      background: transparent;
+  }
+  nav li a:hover,
+  nav li a:focus,
+  nav li a:active {
+      background: $main-nav-hover-bg;
+      color: $main-nav-hover-fg;
+  }
+  nav li.logo span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  nav li.logo a,
+  nav li.logo a:link,
+  nav li.logo a:visited {
+      background: transparent url(../img/logo.png) no-repeat 0 0;
+      width: 194px;
+      height: 30px;
+      background-size: cover;
+      margin-top: 10px;
+  }
+  nav li.logo a:hover,
+  nav li.logo a:focus,
+  nav li.logo a:active {
+      background: transparent url(../img/logo.png) no-repeat 0 -57px;
+      background-size: cover;
+  }
+  nav li.user a,
+  nav li.user a:link,
+  nav li.user a:visited {
+      background: transparent url(../img/sprite-user.png) no-repeat 10px 10px;
+      float: right;
+      padding: 15px 15px 15px 47px;
+  }
+  nav li.user a:hover,
+  nav li.user a:focus,
+  nav li.user a:active {
+      background: $main-nav-hover-bg url(../img/sprite-user.png) no-repeat 10px -60px;
+  }
+
+}
+
+@media only screen and (min-width: $break-large) {
+  nav li.logo a,
+  nav li.logo a:link,
+  nav li.logo a:visited {
+      background: transparent url(../img/logo.png) no-repeat 0 0;
+      width: 389px;
+      height: 61px;
+      margin-top: 0;
+  }
+  nav li.logo a:hover,
+  nav li.logo a:focus,
+  nav li.logo a:active {
+      background: transparent url(../img/logo.png) no-repeat 0 -140px;
+  }
+}
+
+
+
+// Helper classes
+// ------------------------------------------------------------------------------------------------------
+
+.required {
+  font-weight: normal;
+  color: $required;
+}
+.float-right  {
+  float: right;
+}
+.right-align {
+  text-align: right;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after { 
+  clear: both 
+}
+.clearfix { 
+  zoom: 1 
+}
+.smaller {
+  font-size: $smaller;
+}
+.smallest {
+  font-size: $smallest;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+// Responsive video
+
+.video-container,
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 1em 0 1em 0;
+}
+.iframe-container {
+  padding-bottom: 35em;
+}
+.video-container iframe, 
+.video-container object, 
+.video-container embed, 
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+// Progress bar
+// ------------------------------------------------------------------------------------------------------
+
+.meter-description {
+  font-size: $smaller;
+  margin: 0 0 0.25em 0;
+  strong {
+    margin-right: 0.35em;
+  }
+}
+.meter {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 0 0 2em 0; /* Just for demo spacing */
+    background: #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px;
+}
+.meter > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(60,134,196);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(60,134,196)),
+      color-stop(1, rgb(49,121,181))
+     );
+    background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(60,134,196) 37%,
+      rgb(49,121,181) 69%
+     );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+// Expand and collapse help headings
+// ------------------------------------------------------------------------------------------------------
+
+.showhide h3 {
+  font-size: 120%;
+  margin: 0;
+  line-height: 1.4em;
+}
+.showhide h3 a,
+.showhide h3 a:link,
+.showhide h3 a:visited {
+  background: transparent url("../img/sprite-expand-collapse.png") 8px 17px no-repeat;
+  color: $blue;
+  display: block;
+  padding: 0.75em 0 0.75em 2.5em;
+  margin: 0;
+  text-decoration: none;
+}
+.showhide h3 a:hover,
+.showhide h3 a:focus,
+.showhide h3 a:active { 
+  background: black url("../img/sprite-expand-collapse.png") 8px -112px no-repeat;
+  color: white;
+}
+.showhide h3.open a,
+.showhide h3.open a:link,
+.showhide h3.open a:visited { 
+  background: #0B5394 url("../img/sprite-expand-collapse.png") 8px -240px no-repeat;
+  color: white;
+}
+.showhide h3.open a:hover,
+.showhide h3.open a:focus,
+.showhide h3.open a:active { 
+  background: black url("../img/sprite-expand-collapse.png") 8px -370px no-repeat;
+  color: white;
+}
+.showhide h3 + div { 
+	padding: 0em 0em 0.5em 0em; 
+	margin-bottom: 1em;
+	border-bottom: 8px solid $blue;
+}
+@media only screen and (min-width: $break-medium) {
+	.showhide h3 + div { 
+		padding: 0em 2em 0.5em 2.75em; 
+	}
+}
+.showhide {
+	margin-bottom: 1.5em;
+}
+
+/* Pre hide sections with JavaScript on */
+.showhide h3+div {
+  display: none;
+}
+
+
+// Slider panel
+// ------------------------------------------------------------------------------------------------------
+/* http://codyhouse.co/gem/css-slide-in-panel/ */
+
+.cd-panel {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s;
+  -moz-transition: visibility 0s 0.6s;
+  transition: visibility 0s 0.6s;
+}
+.cd-panel::after {
+  /* overlay layer */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: background 0.3s 0.3s;
+  -moz-transition: background 0.3s 0.3s;
+  transition: background 0.3s 0.3s;
+}
+.cd-panel.is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+.cd-panel.is-visible::after {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: background 0.3s 0s;
+  -moz-transition: background 0.3s 0s;
+  transition: background 0.3s 0s;
+}
+.cd-panel.is-visible .cd-panel-close::before {
+  -webkit-animation: cd-close-1 0.6s 0.3s;
+  -moz-animation: cd-close-1 0.6s 0.3s;
+}
+.cd-panel.is-visible .cd-panel-close::after {
+  -webkit-animation: cd-close-2 0.6s 0.3s;
+  -moz-animation: cd-close-2 0.6s 0.3s;
+}
+
+.cd-panel-header {
+  background-color: black;
+  position: fixed;
+  height: 60px;
+  line-height: 60px;
+  z-index: 2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  -webkit-transition: top 0.3s 0s;
+  -moz-transition: top 0.3s 0s;
+  transition: top 0.3s 0s;
+  width: 100%;
+}
+.from-right .cd-panel-header, .from-left .cd-panel-header {
+  top: -50px;
+}
+.from-right .cd-panel-header {
+  right: 0;
+}
+.from-left .cd-panel-header {
+  left: 0;
+}
+.is-visible .cd-panel-header {
+  top: 0;
+  -webkit-transition: top 0.3s 0.3s;
+  -moz-transition: top 0.3s 0.3s;
+  transition: top 0.3s 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  .cd-panel-header {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-panel-header {
+    width: 50%;
+  }
+}
+
+.cd-panel-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.cd-panel-header a,
+.cd-panel-header a:link,
+.cd-panel-header a:visited {
+  background: black url(../img/sprite-close.png) no-repeat 100% 10px;
+  color: white;
+  padding-right: 60px;
+  text-decoration: none;
+  text-align: right;
+}
+.cd-panel-header a:hover,
+.cd-panel-header a:active,
+.cd-panel-header a:focus {
+  background: black url(../img/sprite-close.png) no-repeat 100% -102px;
+}
+.cd-panel-close::before, .cd-panel-close::after {
+  /* close icon created in CSS */
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  height: 3px;
+  width: 20px;
+  background-color: #424f5c;
+  /* this fixes a bug where pseudo elements are slighty off position */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cd-panel-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cd-panel-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.no-touch .cd-panel-close:hover {
+  background-color: #424f5c;
+}
+.no-touch .cd-panel-close:hover::before, .no-touch .cd-panel-close:hover::after {
+  background-color: #ffffff;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.no-touch .cd-panel-close:hover::before {
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+  transform: rotate(220deg);
+}
+.no-touch .cd-panel-close:hover::after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.cd-panel-print a,
+.cd-panel-print a:link,
+.cd-panel-print a:visited {
+  background: transparent url(../img/sprite-print.png) no-repeat 100% 12px;
+  color: white;
+  padding-right: 60px;
+  text-decoration: none;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 55px;
+}
+.cd-panel-print a:hover,
+.cd-panel-print a:active,
+.cd-panel-print a:focus {
+  background: transparent url(../img/sprite-print.png) no-repeat 100% -100px;
+}
+
+.cd-panel-container {
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  background: white;
+  z-index: 1;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.from-right .cd-panel-container {
+  right: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+.from-left .cd-panel-container {
+  left: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+.is-visible .cd-panel-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+@media only screen and (min-width: 768px) {
+  .cd-panel-container {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-panel-container {
+    width: 50%;
+  }
+}
+
+.cd-panel-content {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 88%;
+  height: 82%;
+  padding: 0 5%;
+  overflow: auto;
+  /* smooth scrolling on touch devices */
+  -webkit-overflow-scrolling: touch;
+}
+.cd-panel-header h2 {
+  background: $blue url(../img.ico-help.png) no-repeat 0 0;
+  padding-left: 30px;
+  color: white;
+  font-size: 140%;
+  margin-top: 60px;
+  padding: 0.4em 0.25em 0.5em 1.5em;
+}
