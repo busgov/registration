@@ -42,7 +42,7 @@
                 <div class="cd-panel-header">
                     <a href="#gst-form" class="cd-panel-close">Close</a>
                     <h2 id="helpTopic">Help topics</h2>
-                    <p class="cd-panel-print"><a href="#" id="aPrint" onclick="$.print('#help');">Print</a></p>
+                    <p class="cd-panel-print"><a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a></p>
                 </div>
                 <div class="cd-panel-container">
                     <div class="cd-panel-content">
@@ -67,7 +67,7 @@
         </div><!-- footer-container -->
         <script src="js/jquery-2.1.1.js"></script>
         <script src="js/jquery.collapse.js"></script>
-        <script src="js/jquery-print.js"></script>
+        <script src="js/PrintThis.js"></script>
         <script src="js/HelpMeDecideBusinessStructure.js"></script>
         <script src="js/main.js"></script>
         <div class="proto-message">You are viewing <strong>Prototype B</strong>. <a href="../index.html">Back to index</a></div>
@@ -75,6 +75,7 @@
             jQuery(document).ready(function ($) {
                 initDiscoveryPage();
             });
+           
         </script>
     </div>
 </body>
