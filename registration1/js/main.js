@@ -196,7 +196,7 @@ function manageState(action) {
                 ftc = $.inArray("ftc", othertaxes) < 0 ? "no" : "yes";
                 wet = $.inArray("wet", othertaxes) < 0 ? "no" : "yes";
                 loadQuestionHelp();
-                setTimeout(showResults, 50);
+                setTimeout(showResults, 350);
                 $("#next").html("Start applying");
                 break;
         }
@@ -256,7 +256,7 @@ function showResults() {
 function selectRadioOrCheckbox(value, name) {
     console.log(value + " " +name);
     if (value != null) {
-        setTimeout(function () { setValue(value, name) }, 150);
+        setTimeout(function () { setValue(value, name) }, 350);
     }
 }
 function setValue(value, name) {
