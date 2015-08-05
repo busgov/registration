@@ -256,7 +256,7 @@ function showResults() {
 function selectRadioOrCheckbox(value, name) {
     console.log(value + " " +name);
     if (value != null) {
-        setTimeout(function () { setValue(value, name) }, 70);
+        setTimeout(function () { setValue(value, name) }, 150);
     }
 }
 function setValue(value, name) {
