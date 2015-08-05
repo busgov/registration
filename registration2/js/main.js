@@ -336,12 +336,12 @@ function prepareNamePage() {
     $("#name1").click(function () {
         applicationType.businessName1 = true;
         applicationType.businessName2 = false;
-        registrations.isBusinessName = true;
+        registrations.isBusinessName = false;
     });
     $("#name2").click(function () {
         applicationType.businessName2 = true;
         applicationType.businessName1 = false;
-        registrations.isBusinessName = false;
+        registrations.isBusinessName = true;
     });
 }
 
@@ -604,7 +604,19 @@ function showRegistrationsHepContent() {
     if (parseboolean(registrations.isBusinessName)) {
         $("#businessNameHelp").show();
         $("#businessNameHelpHeader").show();
+        if (applicationType.name === soleTraderName) {
+            $("#yourOwnNameInHelp").show();
+            $("#yourOwnNameInHelp1").show();
+        }
+        else if (applicationType.name === companyName) {
+            $("#theCompanyNameInHelp1").show();
+            $("#theCompanyNameInHelp").show();
+        } else if (applicationType.name === partnershipName) {
+            $("#yourPartnersNameInHelp").show();
+            $("#yourPartnersNameInHelp1").show();
+        }
     }
+
     if (parseboolean(registrations.isPAYG)) {
         $("#paygHelp").show();
         $("#paygHelpHeader").show();
@@ -649,23 +661,25 @@ function showRegistrationsHepContent() {
 /* Discovery Page*/
 function initDiscoveryPage() {
     manageState();
-    $("#previous").click(function () {
+    $("#previous").click(function() {
         $("#previous").blur();
         manageState("previous");
     });
-    $("#next").click(function () {
+    $("#next").click(function() {
         $("#next").blur();
         if (!ifAnythingSelected("questions") && step != 4) { // ignore step 4
             $("#validation").show();
             $("#heading").focus();
-            $(".scroll").click(function (event) {
+            $(".scroll").click(function(event) {
                 event.preventDefault();
                 var full_url = this.href;
                 var parts = full_url.split("#");
                 var trgt = parts[1];
                 var target_offset = $("#" + trgt).offset();
                 var target_top = target_offset.top;
-                jQuery('html, body').animate({ scrollTop: target_top }, 1200);
+                jQuery('html, body').animate({
+                    scrollTop: target_top
+                }, 1200);
             });
             return;
         }
@@ -689,8 +703,10 @@ function calculateCompletion() {
 
 
 function selectRadioButton(value, name) {
-    if (value != null) {
-        setTimeout(function () { setValue(value, name) }, 50);
+    if(value != null) {
+        setTimeout(function() {
+            setValue(value, name)
+        }, 50);
     }
 }
 
@@ -700,7 +716,7 @@ function setCheckBox(id, isChecked) {
 
 function hideElementAndClear(elementId) {
     $('#' + elementId).hide(100);
-    $('#' + elementId + ' :radio').each(function () {
+    $('#' + elementId + ' :radio').each(function() {
         $(this).prop('checked', false);
     });
 }
@@ -755,8 +771,8 @@ function processHelpMeDecide() {
 
 function ifAnythingSelected(containerId) {
     var ifUserInputCount = 0;
-    $("#" + containerId + " :radio").each(function () {
-        if ($(this).is(":visible")) {
+    $("#" + containerId + " :radio").each(function() {
+        if($(this).is(":visible")) {
             var ifUserInput = $(this).prop("checked");
             if (ifUserInput) {
                 ifUserInputCount++;
@@ -777,15 +793,25 @@ function ifAnythingSelected(containerId) {
 
 function hideValidationMessages() {
     $('input:radio').click(
-                          function () {
+                          function() {
                               $("#validation").hide(150);
                           }
-                      );
+      );
 }
 
 function returnToGivenStep(stepNumber) {
     step = stepNumber;
     manageState('previous');
+    return false;
+}
+
+function printHelp() {
+
+    $('#help').printThis({
+        //importCSS: true,
+        //printContainer: true,
+    });
+
     return false;
 }
 // End Utilities
