@@ -16,7 +16,7 @@ var steps = new Array(
     ["Goods and Services Tax", "gst"],
     ["Business name", "business_name"],
     ["Other tax registrations", "other_tax"],
-    ["Finished!", "finish"]
+    ["Registration summary", "finish"]
     );
 var step = 0;
 var displayStepNumber = 0;
@@ -32,7 +32,7 @@ function initDiscoveryPage() {
     });
     $("#next").click(function () {
         $("#next").blur();
-        if (!ifAnythingSelected("question") && step != 5) { // ignore step 5
+        if (!ifAnythingSelected("question") && !(step == 5 || step == 6)) { // ignore step 5
             $("#validation").show();
             $("#heading").focus();
             return;
@@ -42,7 +42,7 @@ function initDiscoveryPage() {
 }
 
 function initEligibilityPage() {
-    applyStyle();
+    applyStyleEligibility();
 }
 
 function loadQuestionHelp() {
@@ -68,6 +68,38 @@ function loadQuestionHelp() {
 }
 
 function applyStyle() {
+    $('.cd-btn').on('click', function (event) {
+        event.preventDefault();
+        $('.cd-panel').addClass('is-visible');
+    });
+    $('.cd-panel').on('click', function (event) {
+        if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+            $('.cd-panel').removeClass('is-visible');
+            event.preventDefault();
+        }
+    });
+
+    /* Expand collapse headings config */
+    help = new jQueryCollapse($(".showhide"), {
+        open: function () {
+            this.slideDown(150);
+            $("#helpTopic").focus();
+        },
+        close: function () {
+            this.slideUp(150);
+        }
+    });
+}
+
+function openHelp(index)
+{
+    help.close();
+    help.open(index);
+    event.preventDefault();
+    $('.cd-panel').addClass('is-visible');
+}
+
+function applyStyleEligibility() {
     $('.cd-btn').on('click', function (event) {
         var index = $("a.cd-btn").index(this);
         help.open(index);
@@ -212,6 +244,10 @@ function manageState(action) {
                 setTimeout(showResults, 350);
                 $("#next").html("Start applying");
                 break;
+            default:
+                step--;
+                displayStepNumber--;
+                break;
         }
     }
 }
@@ -228,28 +264,28 @@ function enablePreviousButton() {
 
 function showResults() {
     if (parseboolean(gst)) {
-        $('#resultTable tr:last').after(getResult("GST", "gst", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("GST", "gst", true, "", "No cost"));
     }
     if (businessStructure == "company") {
-        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 / year"));
+        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year"));
     }
     if (parseboolean(businessName)) {
-        $('#resultTable tr:last').after(getResult("Business Name", "businessname", true, "", "$34 / year"));
+        $('#resultTable tr:last').after(getResult("Business Name", "businessname", true, "", "$34 per year"));
     }
     if (parseboolean(payg)) {
-        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost"));
     }
     if (parseboolean(fbt)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "No cost"));
     }
     if (parseboolean(lct)) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "No cost"));
     }
     if (parseboolean(ftc)) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "No cost"));
     }
     if (parseboolean(wet)) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "Nil"));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "No cost"));
     }
     if ((parseboolean(ftc) || parseboolean(wet)) && !parseboolean(gst)) {
         var selectedRegistration = "";
@@ -262,7 +298,7 @@ function showResults() {
         else if (parseboolean(wet)) {
             selectedRegistration = "WET";
         }
-        $('#resultTable tr:last').after(getResult("GST", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "Nil"));
+        $('#resultTable tr:last').after(getResult("GST", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "No cost"));
     }
 }
 
@@ -407,4 +443,17 @@ function ifAnythingSelected(containerId) {
     //    }
     //});
     return ifUserInputCount > 0;
+}
+
+
+function printHelp() {
+
+    $('#help').printThis({
+        importCSS: false,
+        //printContainer: true,
+        //debug: true,
+        loadCSS: [window.location.protocol + '//' + location.host + "/registration2/css/help.css", ]
+    });
+
+    return false;
 }

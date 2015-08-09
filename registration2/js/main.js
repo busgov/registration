@@ -8,7 +8,7 @@ var businessStructure = {
 };
 
 var activity = { "name": "Activity", "helpFile": "", "contentFile": "activity_question.html" };
-var finished = { "name": "Your registrations", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
+var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
 
 var registrations = null;
 
@@ -24,7 +24,7 @@ var step = 0;
 // var displayStepNumber = 0;
 var maxStep = 5;
 var calculator = new HelpMeDecideCalculator();
-
+var isTrust = false;
 /* End of data */
 
 function initializeRegistrationOptions() {
@@ -41,6 +41,7 @@ function initializeRegistrationOptions() {
     };
 }
 function initializeApplicationType(typename) {
+    isTrust = false;
     initializeRegistrationOptions();
     switch (typename) {
         case soleTraderName:
@@ -224,23 +225,25 @@ function prepareBusinessStructurePage() {
 
     if (applicationType != null) {
 
+
+        if (!fromHelpMeDecide && applicationType.name === soleTraderName) {
+            $("#structure-sole").prop('checked', true);
+        }
+        else if (!fromHelpMeDecide && applicationType.name === partnershipName) {
+            $("#structure-partnership").prop('checked', true);
+        }
+        else if (!fromHelpMeDecide && applicationType.name === companyName) {
+            $("#structure-company").prop('checked', true);
+        }
+        else if (!fromHelpMeDecide && applicationType.name === helpMeDecide) {
+            $("#structure-not-sure").prop('checked', true);
+        }
+
         if (fromHelpMeDecide) {
             $("#decidedStructure").html(applicationType.name);
             $("#helpMeDecideResultMessage").show();
             $("#businessStructureTip").hide();
             fromHelpMeDecide = false;
-        }
-        if (applicationType.name === soleTraderName) {
-            $("#structure-sole").prop('checked', true);
-        }
-        else if (applicationType.name === partnershipName) {
-            $("#structure-partnership").prop('checked', true);
-        }
-        else if (applicationType.name === companyName) {
-            $("#structure-company").prop('checked', true);
-        }
-        else if (applicationType.name === helpMeDecide) {
-            $("#structure-not-sure").prop('checked', true);
         }
     }
 
@@ -257,6 +260,10 @@ function prepareBusinessStructurePage() {
         initializeApplicationType(companyName);
         registrations.isCompany = true;
         registrations.isTFN = true;
+    });
+
+    $("#structure-trust").on('click', function () {
+        isTrust = true;
     });
 
     $("#structure-not-sure").on('click', function () {
@@ -389,7 +396,7 @@ function prepareEmployeePage() {
             hideElementAndClear("companyFringeBenefitsToEmployee");
             applicationType.fringeBenefitDirector = true;
             registrations.isFBT = true;
-            registrations.isPAYG = true; // needs to be confirmed
+            // registrations.isPAYG = true; // needs to be confirmed
         });
 
         $("#fringeBenefitsDirectorNo").click(function () {
@@ -533,31 +540,31 @@ function prepareActivityPage() {
 function showResults() {
     var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
     if (needGST) {
-        $('#resultTable tr:last').after(getResult(" Goods &amp; Services Tax (GST)", "gst", true, "", "Free", 1));
+        $('#resultTable tr:last').after(getResult(" Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
     }
     if (parseboolean(registrations.isTFN)) {
-        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "Free", 2));
+        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "No cost", 2));
     }
     if (parseboolean(registrations.isCompany)) {
-        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 / year", 3));
+        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year", 3));
     }
     if (parseboolean(registrations.isBusinessName)) {
-        $('#resultTable tr:last').after(getResult("Business Name", "businessName", true, "", "$34 / year", 4));
+        $('#resultTable tr:last').after(getResult("Business Name", "businessName", true, "", "$34 per year", 4));
     }
     if (parseboolean(registrations.isPAYG)) {
-        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "Free", 5));
+        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost", 5));
     }
     if (parseboolean(registrations.isFBT)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "Free", 6));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "No cost", 6));
     }
     if (parseboolean(registrations.isLTC)) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "Free", 7));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "No cost", 7));
     }
     if (parseboolean(registrations.isFTC)) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "Free", 8));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "No cost", 8));
     }
     if (needGST && parseboolean(registrations.isWET)) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "Free", 9));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "No cost", 9));
     }
     if (!needGST) {
         $("#gstRecommend").show();
@@ -661,16 +668,19 @@ function showRegistrationsHepContent() {
 /* Discovery Page*/
 function initDiscoveryPage() {
     manageState();
-    $("#previous").click(function() {
+    $("#previous").click(function () {
         $("#previous").blur();
         manageState("previous");
     });
-    $("#next").click(function() {
+    $("#next").click(function () {
+        if (isTrust) {
+            window.location.href = "trust.html";
+        }
         $("#next").blur();
         if (!ifAnythingSelected("questions") && step != 4) { // ignore step 4
             $("#validation").show();
             $("#heading").focus();
-            $(".scroll").click(function(event) {
+            $(".scroll").click(function (event) {
                 event.preventDefault();
                 var full_url = this.href;
                 var parts = full_url.split("#");
@@ -703,8 +713,8 @@ function calculateCompletion() {
 
 
 function selectRadioButton(value, name) {
-    if(value != null) {
-        setTimeout(function() {
+    if (value != null) {
+        setTimeout(function () {
             setValue(value, name)
         }, 50);
     }
@@ -716,7 +726,7 @@ function setCheckBox(id, isChecked) {
 
 function hideElementAndClear(elementId) {
     $('#' + elementId).hide(100);
-    $('#' + elementId + ' :radio').each(function() {
+    $('#' + elementId + ' :radio').each(function () {
         $(this).prop('checked', false);
     });
 }
@@ -771,8 +781,8 @@ function processHelpMeDecide() {
 
 function ifAnythingSelected(containerId) {
     var ifUserInputCount = 0;
-    $("#" + containerId + " :radio").each(function() {
-        if($(this).is(":visible")) {
+    $("#" + containerId + " :radio").each(function () {
+        if ($(this).is(":visible")) {
             var ifUserInput = $(this).prop("checked");
             if (ifUserInput) {
                 ifUserInputCount++;
@@ -793,7 +803,7 @@ function ifAnythingSelected(containerId) {
 
 function hideValidationMessages() {
     $('input:radio').click(
-                          function() {
+                          function () {
                               $("#validation").hide(150);
                           }
       );
@@ -808,8 +818,10 @@ function returnToGivenStep(stepNumber) {
 function printHelp() {
 
     $('#help').printThis({
-        //importCSS: true,
+        importCSS: false,
         //printContainer: true,
+        //debug: true,
+        loadCSS: [window.location.protocol + '//' + location.host + "/registration2/css/help.css", ]
     });
 
     return false;

@@ -101,4 +101,16 @@ function applyStyle() {
 function getValueFromRadioButton(name) {
     return $('input[name=' + name + ']:checked').val();
 }
+
+function printHelp() {
+
+    $('#help').printThis({
+        importCSS: false,
+        //printContainer: true,
+        //debug: true,
+        loadCSS: [window.location.protocol + '//' + location.host + "/registration2/css/help.css", ]
+    });
+
+    return false;
+}
 // End Eligibility

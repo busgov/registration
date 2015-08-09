@@ -454,7 +454,9 @@ li {
 .process-message li,
 .form-tip li {
   background: transparent url(../img/sprite-content-bullet.png) no-repeat 5px -161px; }
-
+.form-tip p {
+    padding-left: 40px;
+}
 body.condensed h1 {
   margin: 0; }
 
@@ -1584,3 +1586,12 @@ nav li a:active {
   padding: 0.4em 0.25em 0.5em 1.5em; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* Added by paul for external site hyperlink icon */
+img.ico-external {
+  width: 10px;
+  height: 10px;
+  display: inline;
+}

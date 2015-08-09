@@ -15,28 +15,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="condensed">
-    <header class="wrapper clearfix"></header>
-    <div class="wrapper main-container clearfix">
-        <main class="cd-main-content">
-            <div class="col-2-3">
-                <h1 id="heading"></h1>
-                <p class="meter-description"><strong>Step <span id="stepNo">1</span>:</strong> <span id="percentCompleted">0</span>% complete</p>
-                <div class="meter">
-                    <span id="percentMeter" style="width: 2%"></span>
-                </div><!-- meter -->
-                <fieldset id="question"></fieldset>
-                <p class="buttons">
-                    <button type="button" id="previous" class="btn">Previous</button>
-                    <button type="button" id="next" class="btn btn-default">Next &raquo;</button>
-                </p>
-            </div><!-- col-2-3 -->
-        </main>
+    <div class="grid-container">
+        <nav class="wrapper">
+            <ul>
+                <li class="logo"><a href="home.html"><span>Business Registration home</span></a></li>
+            </ul>
+        </nav>
+        <header class="wrapper clearfix"></header>
+        <div class="wrapper main-container clearfix">
+            <h1 id="heading" autofocus>Business structure</h1>
+            <p class="meter-description"><strong>Step <span id="stepNo">1</span>:</strong> <span id="percentCompleted">0</span>% complete</p>
+            <div class="meter">
+                <span id="percentMeter" style="width: 2%"></span>
+            </div><!-- meter -->
+
+            <div id="question"></div>
+            <!--<fieldset id="additionalQuestions"></fieldset>-->
+            <p class="buttons">
+                <button type="button" id="previous" class="btn">Previous</button>
+                <button type="button" id="next" class="btn btn-default">Next &raquo;</button>
+            </p>
+        </div><!-- main-container -->
+        <!-- start help panel -->
         <div class="help" id="help">
             <div class="cd-panel from-right">
                 <div class="cd-panel-header">
                     <a href="#gst-form" class="cd-panel-close">Close</a>
                     <h2 id="helpTopic">Help topics</h2>
-                    <p class="cd-panel-print"><a href="#">Print</a></p>
+                    <p class="cd-panel-print"><a href="#" id="aPrint" onclick="return printHelp();">Print</a></p>
                 </div>
                 <div class="cd-panel-container">
                     <div class="cd-panel-content">
@@ -47,15 +53,29 @@
                 </div><!-- cd-panel-container -->
             </div><!-- cd-panel -->
         </div><!-- main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <ul>
+                    <li><a href="#">Legal notices</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">Information Publication Scheme</a></li>
+                    <li><a href="#">Site map</a></li>
+                </ul>
+            </footer>
+        </div><!-- footer-container -->
         <script src="js/jquery-2.1.1.js"></script>
         <script src="js/jquery.collapse.js"></script>
+        <script src="js/PrintThis.js"></script>
         <script src="js/main.js"></script>
         <div class="proto-message">You are viewing <strong>Prototype A</strong>. <a href="../index.html">Back to index</a></div>
+        <script>
+            jQuery(document).ready(function ($) {
+                initDiscoveryPage();
+            });
+
+        </script>
     </div>
-    <script>
-        jQuery(document).ready(function ($) {
-            initDiscoveryPage();
-        });
-    </script>
 </body>
 </html>
