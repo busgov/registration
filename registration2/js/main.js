@@ -7,7 +7,7 @@ var businessStructure = {
     "contentFile": "business_structure_question.html"
 };
 
-var activity = { "name": "Activity", "helpFile": "", "contentFile": "activity_question.html" };
+var activity = { "name": "Activity", "helpFile": "activity_help.html", "contentFile": "activity_question.html" };
 var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
 
 var registrations = null;
@@ -88,7 +88,7 @@ function loadQuestionHelp(applicationStep, callback) {
     var templateHelpDirectory = "templates/help/"
     var templateQuestionsDirectory = "templates/questions/"
     $("#heading").html(applicationStep.name);
-    $("#helpTopic").html(applicationStep.name);
+    $("#helpTopic").html("Help topics");
     $("#heading").focus();
 
     if (applicationStep.contentFile.length > 0) {
@@ -100,7 +100,18 @@ function loadQuestionHelp(applicationStep, callback) {
                     if (step === 5) {
                         index = $(this)[0].id;
                     }
-                    help.open(index);
+                    // this is for company stream -> employee help
+                    if (step === 3 && applicationType.name === companyName) {
+                        if (index === 0) {
+                            help.open(index + 1);
+                        }
+                        if (index === 2) {
+                            help.open(index - 1);
+                        }
+                    }
+                    else {
+                        help.open(index);
+                    }
                     event.preventDefault();
                     $('.cd-panel').addClass('is-visible');
                 });
@@ -518,21 +529,21 @@ function prepareActivityPage() {
     }
 
     // fuel
-    $("#ckUseFule").click(function () {
-        registrations.isFTC = $("#ckUseFule").prop('checked');
+    $("#ckUseFuel").click(function () {
+        registrations.isFTC = $("#ckUseFuel").prop('checked');
     });
 
     if (applicationType.fuel != undefined) {
-        setCheckBox("#ckUseFule", applicationType.fuel);
+        setCheckBox("#ckUseFuel", applicationType.fuel);
     }
 
     // luxury cars
-    $("#ckLuxry").click(function () {
-        registrations.isLTC = $("#ckLuxry").prop('checked');
+    $("#ckLuxury").click(function () {
+        registrations.isLTC = $("#ckLuxury").prop('checked');
     });
 
     if (applicationType.luxuryCar != undefined) {
-        setCheckBox("#ckLuxry", applicationType.luxuryCar);
+        setCheckBox("#ckLuxury", applicationType.luxuryCar);
     }
 }
 
