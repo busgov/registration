@@ -60,7 +60,7 @@
     Goods &amp; Services Tax (GST)
 </h3>
 <div id="gstHelp" style="display:none">
-    <p>You should register for GST because in <a href="" onclick="return returnToGivenStep(5);">Step 4: Business activity</a> you indicated your business plans to:</p>
+    <p>You should register for GST because in <a href="" onclick="return returnToGivenStep('activity');">Step 4: Business activity</a> you indicated your business plans to:</p>
     <ul>
         <li id="liMoreThan75k" style="display:none">
             have turnover of $75,000 or more in your first year
@@ -143,7 +143,7 @@
 </div>
 <h3 id="tfnHelpHeader" style="display:none">Tax File Number (TFN)</h3>
 <div id="tfnHelp" style="display:none">
-    <p> You should apply for a TFN because in <a href="" onclick="return returnToGivenStep(2);">Step 1: Business structures</a> you chose the <strong id="helpBusinessStructureSelected"></strong> business structure.</p>
+    <p> You should apply for a TFN because in <a href="" onclick="return returnToGivenStep('businessStructure');">Step 1: Business structures</a> you chose the <strong id="helpBusinessStructureSelected"></strong> business structure.</p>
     <p>All partnerships and companies need a TFN to deal with the Tax Office, for example to report business income and deductions.</p>
 </div>
 
@@ -184,7 +184,7 @@
     </ul>
     <strong>Find out more</strong>
 
-    <p>Read <a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/" target="_blank" >starting a company<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Australian Securities & Investments Commission website.</p>
+    <p>Read <a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/" target="_blank">starting a company<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Australian Securities & Investments Commission website.</p>
 
 </div>
 
@@ -194,7 +194,7 @@
 </h3>
 <div id="businessNameHelp" style="display:none">
     <p>
-        You should consider registering a business name because in <a href="" onclick="return returnToGivenStep(2);">Step 2: Business names</a> you chose the option to use a name that's different to <strong id="yourOwnNameInHelp" style="display:none">your own name</strong> <strong id="yourPartnersNameInHelp" style="display:none">names of the business partners</strong> <strong id="theCompanyNameInHelp" style="display:none">the company name</strong>.
+        You should consider registering a business name because in <a href="" onclick="return returnToGivenStep('name');">Step 2: Business names</a> you chose the option to use a name that's different to <strong id="yourOwnNameInHelp" style="display:none">your own name</strong> <strong id="yourPartnersNameInHelp" style="display:none">names of the business partners</strong> <strong id="theCompanyNameInHelp" style="display:none">the company name</strong>.
     </p>
     <ul>
         <li>
@@ -209,7 +209,7 @@
         Protecting your business name
     </strong>
     <p>
-        Registering a business name doesn't give you exclusive use! To stop others using your business name, you need to	<a href="http://www.ipaustralia.gov.au/get-the-right-ip/trade-marks/apply-for-a-trade-mark/" target="_blank">apply for a trade mark<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the IP Australia website.
+        Registering a business name doesn't give you exclusive use! To stop others using your business name, you need to	<a href="http://www.ipaustralia.gov.au/get-the-right-ip/trade-marks/apply-for-a-trade-mark/" target="_blank">apply for a trade mark<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the IP Australia website.
     </p>
 
 </div>
@@ -220,7 +220,7 @@
 <div id="paygHelp" style="display:none">
     <div id="divNoneCompanyPAYG" style="display:none" class="">
         <p>
-            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep(4);">Step 3: Employees</a> you indicated you plan to have employees.
+            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep('employee');">Step 3: Employees</a> you indicated you plan to have employees.
         </p>
         <strong>
             What is PAYG Withholding?
@@ -256,15 +256,15 @@
             Find out more
         </strong>
         <p>
-            Read about <a href="https://www.ato.gov.au/Business/PAYG-withholding/" target="_blank">PAYG Withholding<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Tax Office website.
+            Read about <a href="https://www.ato.gov.au/Business/PAYG-withholding/" target="_blank">PAYG Withholding<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
         </p>
     </div>
     <div id="divCompanyPAYG" style="display:none">
         <p id="paygCompanyHasEmployee" style="display:none">
-            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep(2);">Step 1: Business structures </a>you chose the company structure option and in <a href="" onclick="return returnToGivenStep(4);">Step 3: Employees</a> you indicated you plan to have employees.
+            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep('businessStructure');">Step 1: Business structures </a>you chose the company structure option and in <a href="" onclick="    return returnToGivenStep(4);">Step 3: Employees</a> you indicated you plan to have employees.
         </p>
         <p id="paygCompanyNoEmployee" style="display:none">
-            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep(2);">Step 1: Business structures </a>you chose the company structure option.
+            You should register for PAYG Withholding because in <a href="" onclick="return returnToGivenStep('businessStructure');">Step 1: Business structures </a>you chose the company structure option.
         </p>
         <strong>
             What is PAYG Withholding?
@@ -300,7 +300,7 @@
             Find out more
         </h3>
         <p>
-            Read about <a href="https://www.ato.gov.au/Business/PAYG-withholding/" target="_blank">PAYG Withholding<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Tax Office website.
+            Read about <a href="https://www.ato.gov.au/Business/PAYG-withholding/" target="_blank">PAYG Withholding<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
         </p>
 
     </div>
@@ -311,7 +311,7 @@
 </h3>
 <div id="fbtHelp" style="display:none">
     <p>
-        You should consider registering for FBT because in <u>Step 3: Employees</u> you indicated you plan to give fringe benefits to your employees.
+        You should consider registering for FBT because in <a href="#" onclick="return returnToGivenStep('employee');">Step 3: Employees</a> you indicated you plan to give fringe benefits to your employees.
     </p>
     <h3>
         What is FBT?
@@ -348,7 +348,7 @@
         Find out more
     </h3>
     <p>
-        Read about <a href="https://www.ato.gov.au/General/Fringe-benefits-tax-%28FBT%29/In-detail/Getting-started/FBT-for-small-business/?page=8" target="_blank">FBT<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the
+        Read about <a href="https://www.ato.gov.au/General/Fringe-benefits-tax-%28FBT%29/In-detail/Getting-started/FBT-for-small-business/?page=8" target="_blank">FBT<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the
         Tax Office website.
     </p>
 
@@ -362,7 +362,7 @@
 
 
     <p>
-        You should register for LCT because in <u>Step 4: Business activity</u> you indicated you plan to:
+        You should register for LCT because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to:
     </p>
     <ul>
         <li>
@@ -406,7 +406,7 @@
         Find out more
     </strong>
     <p>
-        Read about <a href="https://www.ato.gov.au/Business/Luxury-car-tax/How-LCT-works/" target="_blank">LCT<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Tax Office website.
+        Read about <a href="https://www.ato.gov.au/Business/Luxury-car-tax/How-LCT-works/" target="_blank">LCT<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
     </p>
 
 </div>
@@ -416,7 +416,7 @@
 </h3>
 <div id="ftcHelp" style="display:none">
     <p>
-        You should consider registering for FTC because in <u>Step 4: Business activity</u> you indicated you plan to use taxable fuels in your business.
+        You should consider registering for FTC because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to use taxable fuels in your business.
     </p>
     <h3>
         What is FTC?
@@ -443,7 +443,7 @@
         Find out more
     </h3>
     <p>
-        Read about <a href="https://www.ato.gov.au/General/Fringe-benefits-tax-%28FBT%29/In-detail/Getting-started/FBT-for-small-business/?page=8" target="_blank">FTC<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the
+        Read about <a href="https://www.ato.gov.au/General/Fringe-benefits-tax-%28FBT%29/In-detail/Getting-started/FBT-for-small-business/?page=8" target="_blank">FTC<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the
         Tax Office website.
     </p>
 
@@ -456,7 +456,7 @@
 <div id="wetHelp" style="display:none">
 
     <p>
-        You should consider registering for WET because in <u>Step 4: Business activity</u> you indicated you plan to:
+        You should consider registering for WET because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to:
     </p>
     <ul>
         <li>
@@ -520,7 +520,7 @@
         Find out more
     </strong>
     <p>
-        Read about <a href="https://www.ato.gov.au/Business/Wine-equalisation-tax/How-WET-works/" target="_blank">WET<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Tax Office website.
+        Read about <a href="https://www.ato.gov.au/Business/Wine-equalisation-tax/How-WET-works/" target="_blank">WET<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
     </p>
 
 </div>
@@ -600,7 +600,7 @@
         Find out more
     </h3>
     <p>
-        Read about <a href="https://www.ato.gov.au/Business/GST/How-GST-works/" target="_blank">how GST works<img class="ico-external" alt="Links to another web site" src="img/ico-external.png"></a> on the Tax Office website.
+        Read about <a href="https://www.ato.gov.au/Business/GST/How-GST-works/" target="_blank">how GST works<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
     </p>
 
 </div>

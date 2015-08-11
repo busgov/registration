@@ -1,0 +1,884 @@
+
+/* data */
+
+var businessStructure = {
+    "name": "Business structure",
+    "helpFile": "business_structure_help.html",
+    "contentFile": "business_structure_question.html"
+};
+
+var activity = { "name": "Activity", "helpFile": "activity_help.html", "contentFile": "activity_question.html" };
+var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
+var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityStep": "activity", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideResultStep": "helpMeDecideResultStep" }
+
+var helpMeDecide = {
+    "name": "Business structure - help me decide",
+    "helpFile": "helpmedecide_question_help.html",
+    "contentFile": "helpmedecide_question.html",
+    "helpMeDecideResult": {
+        "name": "Business structure",
+        "helpFile": "helpmedecide_result_help.html",
+        "contentFile": "helpmedecide_result_content.html"
+    }
+};
+
+
+var registrations = null;
+
+var applicationType = null;
+var soleTraderName = "Sole trader";
+var partnershipName = "Partnership";
+var companyName = "Company";
+
+var previousAction = "";
+var nextAction = "";
+
+var help;
+var step = 0;
+var maxStep = 5;
+var calculator = new HelpMeDecideCalculator();
+var isTrust = false;
+var isHelpMeDecidUsed = false;
+/* End of data */
+
+function initializeRegistrationOptions() {
+    registrations = {
+        "isGST": false,
+        "isPAYG": false,
+        "isFBT": false,
+        "isLCT": false,
+        "isFTC": false,
+        "isWET": false,
+        "isBusinessName": false,
+        "isCompany": false,
+        "isTFN": false
+    };
+}
+function initializeApplicationType(typename) {
+    isTrust = false;
+    initializeRegistrationOptions();
+    switch (typename) {
+        case soleTraderName:
+            applicationType = {
+                "name": soleTraderName,
+                "helpFile": "business_structure_help.html",
+                "contentFile": "business_structure_question.html",
+                "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "soleTrader_name_question.html" },
+                "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "employee_question.html" },
+                "activity": activity
+            };
+            break;
+        case partnershipName:
+            applicationType = {
+                "name": partnershipName,
+                "helpFile": "business_structure_help.html",
+                "contentFile": "business_structure_question.html",
+                "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "partnership_name_question.html" },
+                "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "employee_question.html" },
+                "activity": activity
+            };
+            break;
+        case companyName:
+            applicationType = {
+                "name": companyName,
+                "helpFile": "business_structure_help.html",
+                "contentFile": "business_structure_question.html",
+                "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "company_name_question.html" },
+                "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "company_employee_question.html" },
+                "activity": activity
+            };
+            break;
+    }
+}
+
+function loadQuestionHelp(applicationStep, callback) {
+    var templateHelpDirectory = "templates/help/"
+    var templateQuestionsDirectory = "templates/questions/"
+    $("#heading").html(applicationStep.name);
+    $("#helpTopic").html("Help topics");
+    $("#heading").focus();
+
+    if (applicationStep.contentFile.length > 0) {
+        $("#questions").load(templateQuestionsDirectory + applicationStep.contentFile + "?t=" + (new Date()).getTime(), function () {
+            setTimeout(callback, 0);
+            setTimeout(function () {
+                $('.cd-btn').on('click', function (event) {
+                    var index = $("a.cd-btn").index(this);
+                    // this is for registrations help content
+                    if (applicationStep.name === "Registration summary") {
+                        index = $(this)[0].id;
+                    }
+                    // this is for company stream -> employee help
+                    if (nextAction === actions.activityStep && applicationType.name === companyName) {
+                        if (index === 0) {
+                            help.open(index + 1);
+                        }
+                        if (index === 2) {
+                            help.open(index - 1);
+                        }
+                    }
+                    else {
+                        help.open(index);
+                    }
+                    event.preventDefault();
+                    $('.cd-panel').addClass('is-visible');
+                });
+            }, 10);
+        });
+    }
+
+    if (applicationStep.helpFile.length > 0) {
+        $("#helpFile").load(templateHelpDirectory + applicationStep.helpFile + "?t=" + (new Date()).getTime(), function () {
+            setTimeout(applyStyle, 10);
+        });
+    }
+}
+
+function applyStyle() {
+    $('.cd-panel').on('click', function (event) {
+        if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+            help.close();
+            $('.cd-panel').removeClass('is-visible');
+            event.preventDefault();
+        }
+    });
+    if (step === 5) {
+        showRegistrationsHepContent();
+    }
+    //$("#aPrint").click(function () {
+    //    $.print("#help");
+    //});
+    /* Expand collapse headings config */
+    help = new jQueryCollapse($(".showhide"), {
+        open: function () {
+            this.slideDown(150);
+            $("#helpTopic").focus();
+        },
+        close: function () {
+            this.slideUp(150);
+        }
+    });
+}
+
+
+function manageState(action) {
+    $("#validation").hide();
+
+
+    switch (action) {
+        case actions.businessStructureStep: // choose business structure
+            loadQuestionHelp(businessStructure, prepareBusinessStructurePage);
+            break;
+        case actions.helpMeDecideStep:
+            loadQuestionHelp(helpMeDecide, prepareHelpMeDecide);
+            break;
+        case actions.helpMeDecideResultStep:
+            loadQuestionHelp(helpMeDecide.helpMeDecideResult, prepareHelpMeDecideResult);
+            break;
+        case actions.businessNameStep:
+            loadQuestionHelp(applicationType.nameApplication, prepareNamePage);
+            break;
+        case actions.employeeStep:
+            loadQuestionHelp(applicationType.employee, prepareEmployeePage);
+            break;
+        case actions.activityStep:
+            loadQuestionHelp(applicationType.activity, prepareActivityPage);
+            $("#next").html("Next &raquo;");
+            break;
+        case actions.finishedStep:
+            // based on user selection, generated the registrations form (those user needs to applied will be ticked)
+            loadQuestionHelp(finished, showResults);
+            $("#next").html("Start applying");
+            break;
+    }
+}
+
+// callbacks
+
+// parepare the business structure page ---- > step 1
+function prepareBusinessStructurePage() {
+    // make sure the calculation is correct.
+    step = 1;
+    calculateCompletion();
+    previousAction = actions.eligibilityStep;
+    nextAction = actions.businessNameStep;
+    if (applicationType != null) {
+
+        if (applicationType.name === soleTraderName) {
+            $("#structure-sole").prop('checked', true);
+        }
+        else if (applicationType.name === partnershipName) {
+            $("#structure-partnership").prop('checked', true);
+        }
+        else if (applicationType.name === companyName) {
+            $("#structure-company").prop('checked', true);
+        }
+    }
+
+    if (isHelpMeDecidUsed) {
+        $("#structure-not-sure").prop('checked', true);
+        nextAction = actions.helpMeDecideStep;
+    }
+
+    $("#structure-sole").on('click', function () {
+        initializeApplicationType(soleTraderName);
+        isHelpMeDecidUsed = false;
+        calculator = new HelpMeDecideCalculator();
+    });
+
+    $("#structure-partnership").on('click', function () {
+        initializeApplicationType(partnershipName);
+        registrations.isTFN = true;
+        isHelpMeDecidUsed = false;
+        calculator = new HelpMeDecideCalculator();
+    });
+
+    $("#structure-company").on('click', function () {
+        initializeApplicationType(companyName);
+        registrations.isCompany = true;
+        registrations.isTFN = true;
+        isHelpMeDecidUsed = false;
+        calculator = new HelpMeDecideCalculator();
+    });
+
+    $("#structure-trust").on('click', function () {
+        isHelpMeDecidUsed = false;
+        calculator = new HelpMeDecideCalculator();
+        isTrust = true;
+    });
+
+    $("#structure-not-sure").on('click', function () {
+        nextAction = actions.helpMeDecideStep;
+    });
+    isHelpMeDecidUsed = true;
+}
+
+function prepareHelpMeDecide() {
+    // make sure the calculation is correct.
+    step = 1;
+    calculateCompletion();
+    previousAction = actions.businessStructureStep;
+    nextAction = actions.helpMeDecideResultStep;
+    isTrust = false;
+    // how many owners?
+    $("#radioHowManyOwners1").click(function () {
+        calculator.manyOwners = 1;
+    });
+
+    $("#radioHowManyOwners2").click(function () {
+        calculator.manyOwners = 2;
+    });
+    resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
+
+    // Do you want to separate your personal income and assets (such as your home) from your business?
+    $("#radioSeparatePersonalAsset1").click(function () {
+        calculator.separatePersonalAsset = 1;
+        $("#divExtraQuestions").show(150);
+    });
+
+    $("#radioSeparatePersonalAsset2").click(function () {
+        calculator.separatePersonalAsset = 2;
+        hideElementAndClear("divExtraQuestions");
+        calculator.businessLossReduceTax = 0;
+        calculator.mostImportant = 0;
+        calculator.planToSell = 0;
+        isTrust = false;
+    });
+    resumeRadioButtonStateOnHelpMeDecidePage($("#radioSeparatePersonalAsset1"), $("#radioSeparatePersonalAsset2"), calculator.separatePersonalAsset)
+    if (isEqual(calculator.separatePersonalAsset, 1)) {
+        $("#divExtraQuestions").show();
+    }
+    // Do you want to use any business losses to reduce tax on future profits?
+    $("#radioBusinessLossReduceTax1").click(function () {
+        calculator.businessLossReduceTax = 1;
+    });
+    $("#radioBusinessLossReduceTax2").click(function () {
+        calculator.businessLossReduceTax = 2;
+    });
+    resumeRadioButtonStateOnHelpMeDecidePage($("#radioBusinessLossReduceTax1"), $("#radioBusinessLossReduceTax2"), calculator.businessLossReduceTax)
+
+    // What is most important for your business?
+    $("#radioMostImportant1").click(function () {
+        calculator.mostImportant = 1;
+    });
+
+    $("#radioMostImportant2").click(function () {
+        calculator.mostImportant = 2;
+    });
+    resumeRadioButtonStateOnHelpMeDecidePage($("#radioMostImportant1"), $("#radioMostImportant2"), calculator.mostImportant)
+
+    // Do you plan to you sell your business or pass it on to someone?
+    $("#radioPlanToSellYourBusiness1").click(
+    function () {
+        calculator.planToSell = 1;
+    });
+    $("#radioPlanToSellYourBusiness2").click(
+    function () {
+        calculator.planToSell = 2;
+    });
+    resumeRadioButtonStateOnHelpMeDecidePage($("#radioPlanToSellYourBusiness1"), $("#radioPlanToSellYourBusiness2"), calculator.planToSell)
+
+}
+
+// prepare help me decide result page
+function prepareHelpMeDecideResult() {
+    // make sure the calculation is correct.
+    step = 1;
+    calculateCompletion();
+    previousAction = actions.helpMeDecideStep;
+    nextAction = actions.businessNameStep;
+    isHelpMeDecidUsed = true;
+    // based on caculator
+    var result = calculator.calculateWeight();
+    // decide which one to go
+    if (result === "company") {
+        initializeApplicationType(companyName);
+        registrations.isCompany = true;
+        registrations.isTFN = true;
+        $("#fieldsestCompany").show();
+    }
+    else if (result === "partnership") {
+        initializeApplicationType(partnershipName);
+        registrations.isTFN = true;
+        $("#fieldsestPartner").show();
+    }
+    else if (result === "soletrader") {
+        initializeApplicationType(soleTraderName);
+        $("#fieldsestSoleTrader").show();
+    }
+    else if (result === "trust") {
+        // the next button will go do trust page.
+        isTrust = true;
+        $("#fieldsestTrust").show();
+    }
+}
+
+// prepare the Name selection page.  ---> step 2
+function prepareNamePage() {
+    // make sure the calculation is correct.
+    step = 2;
+    calculateCompletion();
+    if (isHelpMeDecidUsed)
+        previousAction = actions.helpMeDecideResultStep;
+    else
+        previousAction = actions.businessStructureStep;
+
+    nextAction = actions.employeeStep;
+    if (applicationType != null) {
+        if (applicationType.businessName1 != undefined && applicationType.businessName1) {
+            $("#name1").prop('checked', true);
+        }
+        else if (applicationType.businessName2 != undefined && applicationType.businessName2) {
+            $("#name2").prop('checked', true);
+        }
+    }
+    $("#name1").click(function () {
+        applicationType.businessName1 = true;
+        applicationType.businessName2 = false;
+        registrations.isBusinessName = false;
+    });
+    $("#name2").click(function () {
+        applicationType.businessName2 = true;
+        applicationType.businessName1 = false;
+        registrations.isBusinessName = true;
+    });
+}
+
+// prepare the Employee page
+function prepareEmployeePage() {
+    // make sure the calculation is correct.
+    step = 3;
+    calculateCompletion();
+    previousAction = actions.businessNameStep;
+    nextAction = actions.activityStep;
+
+    // company stream
+    if (applicationType.name === companyName) {
+        // check whether user selected benefit to director or not
+        if (applicationType.fringeBenefitDirector != undefined) {
+            if (applicationType.fringeBenefitDirector) {
+                $("#fringeBenefitsDirectorYes").prop('checked', true);
+            }
+            else {
+                $("#fringeBenefitsDirectorNo").prop('checked', true);
+                $('#companyHasEmployee').show();
+            }
+        }
+
+        // check which option user has sleected
+        if ($('#companyHasEmployee').is(':visible')) {
+            if (applicationType.hasEmployee != undefined) {
+                if (applicationType.hasEmployee) {
+                    $("#companyEmployeeYes").prop('checked', true);
+                    $('#companyFringeBenefitsToEmployee').show();
+                }
+                else {
+                    $("#companyEmployeeNo").prop('checked', true);
+                }
+            }
+        }
+
+        // check whether user selected benefits to employee or not.
+        if ($('#companyFringeBenefitsToEmployee').is(':visible')) {
+            if (applicationType.fringeBenefit != undefined) {
+                $("#fringeBenefitsEmployeeYes").prop('checked', true);
+            }
+            else {
+                $("#fringeBenefitsEmployeeNo").prop('checked', true);
+            }
+        }
+
+        // company benefit director
+        $("#fringeBenefitsDirectorYes").click(function () {
+            hideElementAndClear("companyHasEmployee");
+            hideElementAndClear("companyFringeBenefitsToEmployee");
+            applicationType.fringeBenefitDirector = true;
+            registrations.isFBT = true;
+            // registrations.isPAYG = true; // needs to be confirmed
+        });
+
+        $("#fringeBenefitsDirectorNo").click(function () {
+            $("#companyHasEmployee").show(100);
+            applicationType.fringeBenefitDirector = false;
+            registrations.isFBT = false;
+        });
+
+        // company employee
+        $("#companyEmployeeYes").click(function () {
+            $("#companyFringeBenefitsToEmployee").show(100);
+            applicationType.hasEmployee = true;
+            registrations.isPAYG = true;
+        });
+
+        $("#companyEmployeeNo").click(function () {
+            hideElementAndClear("companyFringeBenefitsToEmployee");
+            applicationType.hasEmployee = false;
+            applicationType.fringeBenefit = false;
+            registrations.isPAYG = false;
+        });
+
+        // Company fringe benefits
+        $("#fringeBenefitsEmployeeYes").click(function () {
+            applicationType.fringeBenefit = true;
+            registrations.isFBT = true;
+        });
+
+        $("#fringeBenefitsEmployeeNo").click(function () {
+            applicationType.fringeBenefit = false;
+            registrations.isFBT = false;
+        });
+    }
+    else {
+        // sole trader or partnership
+        if (applicationType.hasEmployee != undefined) {
+            if (applicationType.hasEmployee) {
+                $("#employeeYes").prop('checked', true);
+                $("#fringeBenefit").show();
+            }
+            else {
+                $("#employeeNo").prop('checked', true);
+            }
+        }
+        else {
+            $("#fringeBenefit").hide();
+        }
+        if ($("#fringeBenefit").is(':visible')) {
+            if (applicationType.fringeBenefit != undefined) {
+                if (applicationType.fringeBenefit) {
+                    $("#fringeBenefitYes").prop('checked', true);
+                }
+                else {
+                    $("#fringeBenefitNo").prop('checked', true);
+                }
+            }
+        }
+        // employee
+        $("#employeeYes").click(function () {
+            $("#fringeBenefit").show(100);
+            applicationType.hasEmployee = true;
+            registrations.isPAYG = true;
+        });
+
+        $("#employeeNo").click(function () {
+            hideElementAndClear("fringeBenefit");
+            applicationType.hasEmployee = false;
+            applicationType.fringeBenefit = false;
+            registrations.isPAYG = false;
+        });
+        // fringe benefits
+        $("#fringeBenefitYes").click(function () {
+            applicationType.fringeBenefit = true;
+            registrations.isFBT = true;
+        });
+
+        $("#fringeBenefitNo").click(function () {
+            applicationType.fringeBenefit = false;
+            registrations.isFBT = false;
+        });
+    }
+}
+
+// prepare the activity page
+function prepareActivityPage() {
+    // make sure the calculation is correct.
+    step = 4;
+    calculateCompletion();
+    previousAction = actions.employeeStep;
+    nextAction = actions.finishedStep;
+
+    // turnover 75k and over
+    $("#ckTurnover75k").click(function () {
+        applicationType.turnOver75k = $("#ckTurnover75k").prop('checked');
+    });
+    if (applicationType.turnOver75k != undefined) {
+        setCheckBox("#ckTurnover75k", applicationType.turnOver75k);
+    }
+
+    // taxi
+    $("#ckTaxi").click(function () {
+        applicationType.taxi = $("#ckTaxi").prop('checked');
+   
+    });
+
+    if (applicationType.taxi != undefined) {
+        setCheckBox("#ckTaxi", applicationType.taxi);
+    }
+
+    // limo
+    $("#ckLimousine").click(function () {
+        applicationType.limo = $("#ckLimousine").prop('checked');
+        registrations.limo = applicationType.limo;
+    });
+
+    if (applicationType.limo != undefined) {
+        setCheckBox("#ckLimousine", applicationType.limo);
+    }
+
+    // wine
+    $("#ckDealInWine").click(function () {
+        registrations.isWET = $("#ckDealInWine").prop('checked');
+        applicationType.wine = $("#ckDealInWine").prop('checked');
+    });
+
+    if (applicationType.wine != undefined) {
+        setCheckBox("#ckDealInWine", applicationType.wine);
+    }
+
+    // fuel
+    $("#ckUseFuel").click(function () {
+        registrations.isFTC = $("#ckUseFuel").prop('checked');
+        applicationType.fuel = registrations.isFTC;
+    });
+
+    if (applicationType.fuel != undefined) {
+        setCheckBox("#ckUseFuel", applicationType.fuel);
+    }
+
+    // luxury cars
+    $("#ckLuxury").click(function () {
+        registrations.isLTC = $("#ckLuxury").prop('checked');
+        applicationType.luxuryCar = registrations.isLTC;
+    });
+
+    if (applicationType.luxuryCar != undefined) {
+        setCheckBox("#ckLuxury", applicationType.luxuryCar);
+    }
+}
+
+// prepare the finished page
+function showResults() {
+    // make sure the calculation is correct.
+    step = 5;
+    calculateCompletion();
+    previousAction = actions.activityStep;
+    nextAction = "";
+
+    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
+    if (needGST) {
+        $('#resultTable tr:last').after(getResult(" Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
+    }
+    if (parseboolean(registrations.isTFN)) {
+        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "No cost", 2));
+    }
+    if (parseboolean(registrations.isCompany)) {
+        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year", 3));
+    }
+    if (parseboolean(registrations.isBusinessName)) {
+        $('#resultTable tr:last').after(getResult("Business Name", "businessName", true, "", "$34 per year", 4));
+    }
+    if (parseboolean(registrations.isPAYG)) {
+        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost", 5));
+    }
+    if (parseboolean(registrations.isFBT)) {
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "No cost", 6));
+    }
+    if (parseboolean(registrations.isLTC)) {
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "No cost", 7));
+    }
+    if (parseboolean(registrations.isFTC)) {
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "No cost", 8));
+    }
+    if (needGST && parseboolean(registrations.isWET)) {
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "No cost", 9));
+    }
+    if (!needGST) {
+        $("#gstRecommend").show();
+    }
+}
+
+// show the help content for selected tax types
+function showRegistrationsHepContent() {
+    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
+    if (needGST) {
+        $('#gstHelp').show();
+        $('#gstHelpHeader').show();
+
+        // following code to switch on some help content for gst help
+        if (parseboolean(applicationType.taxi)) {
+            $("#liTaxi").show();
+        }
+
+        if (parseboolean(applicationType.turnOver75k)) {
+            $("#liMoreThan75k").show();
+        }
+
+        if (parseboolean(applicationType.limo)) {
+            $("#liLimo").show();
+        }
+
+        if (parseboolean(applicationType.isFTC)) {
+            $("#liUseFule").show();
+        }
+
+        if (parseboolean(applicationType.isLCT)) {
+            $("#liLuxuryCar").show();
+        }
+    }
+    if (parseboolean(registrations.isTFN)) {
+        $("#tfnHelp").show();
+        $("#tfnHelpHeader").show();
+        $("#helpBusinessStructureSelected").html(applicationType.name);
+    }
+    if (parseboolean(registrations.isCompany)) {
+        $("#companyHelp").show();
+        $("#companyHelpHeader").show();
+    }
+    if (parseboolean(registrations.isBusinessName)) {
+        $("#businessNameHelp").show();
+        $("#businessNameHelpHeader").show();
+        if (applicationType.name === soleTraderName) {
+            $("#yourOwnNameInHelp").show();
+            $("#yourOwnNameInHelp1").show();
+        }
+        else if (applicationType.name === companyName) {
+            $("#theCompanyNameInHelp1").show();
+            $("#theCompanyNameInHelp").show();
+        } else if (applicationType.name === partnershipName) {
+            $("#yourPartnersNameInHelp").show();
+            $("#yourPartnersNameInHelp1").show();
+        }
+    }
+
+    if (parseboolean(registrations.isPAYG)) {
+        $("#paygHelp").show();
+        $("#paygHelpHeader").show();
+        if (parseboolean(registrations.isCompany)) {
+            $("#divCompanyPAYG").show();
+            if (parseboolean(applicationType.hasEmployee)) {
+                $("#paygCompanyHasEmployee").show();
+            }
+            else {
+                $("#paygCompanyNoEmployee").show();
+            }
+        }
+        else {
+            $("#divNoneCompanyPAYG").show();
+        }
+    }
+    if (parseboolean(registrations.isFBT)) {
+        $('#fbtHelp').show();
+        $('#fbtHelpHeader').show();
+
+    }
+    if (parseboolean(registrations.isLTC)) {
+        $('#lctHelp').show();
+        $('#lctHelpHeader').show();
+    }
+    if (parseboolean(registrations.isFTC)) {
+        $('#ftcHelp').show();
+        $('#ftcHelpHeader').show();
+    }
+    if (needGST && parseboolean(registrations.isWET)) {
+        $('#wetHelp').show();
+        $('#wetHelpHeader').show();
+    }
+    if (!needGST) {
+        $('#gstHelp1').show();
+        $('#gstHelp1Header').show();
+    }
+}
+
+// end of callbacks
+
+/* Discovery Page*/
+function initDiscoveryPage() {
+    manageState(actions.businessStructureStep);
+    $("#previous").click(function () {
+        $("#previous").blur();
+        manageState(previousAction);
+        $("#heading").focus();
+    });
+    $("#next").click(function () {
+        if (isTrust) {
+            window.location.href = "trust.html";
+        }
+        $("#next").blur();
+        if (!ifAnythingSelected("questions") && step != 4) { // ignore step 4
+            $("#validation").show();
+            $("#heading").focus();
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                var full_url = this.href;
+                var parts = full_url.split("#");
+                var trgt = parts[1];
+                var target_offset = $("#" + trgt).offset();
+                var target_top = target_offset.top;
+                jQuery('html, body').animate({
+                    scrollTop: target_top
+                }, 1200);
+            });
+            return;
+        }
+        manageState(nextAction);
+    });
+}
+/* End of Discovery Page */
+
+
+// Utilities
+function calculateCompletion() {
+    $("#stepNo").html(step);
+    var percentCompleted = Math.round((step - 1) / (maxStep - 1) * 100 / 5) * 5;
+    $("#percentCompleted").html(percentCompleted);
+    if (percentCompleted == 0) {
+        percentCompleted += 2;
+    }
+    $("#percentMeter").css('width', percentCompleted + '%');
+}
+
+
+
+function selectRadioButton(value, name) {
+    if (value != null) {
+        setTimeout(function () {
+            setValue(value, name)
+        }, 50);
+    }
+}
+
+function setCheckBox(id, isChecked) {
+    $(id).prop('checked', isChecked);
+}
+
+function hideElementAndClear(elementId) {
+    $('#' + elementId).hide(100);
+    $('#' + elementId + ' :radio').each(function () {
+        $(this).prop('checked', false);
+    });
+}
+
+function setValue(value, name) {
+    $('input[name=' + name + '][value=' + value + ']').prop('checked', true);
+}
+
+
+function getResult(registrationName, id, isSelected, reason, cost, helpId) {
+    var result = '<tr>    <td class="choice ';
+    if (isSelected) {
+        result += " results-success-message";
+    }
+    else {
+        result += " results-alert-message";
+    }
+    result += '"><input id="' + id + '" type="checkbox" checked="checked"></td>    <td class="registration-type';
+    if (!isSelected) {
+        result += " results-alert-message";
+    }
+    result += '"><label for="' + id + '">' + registrationName + '</label></td>    <td class="cost';
+    if (!isSelected) {
+        result += " results-alert-message";
+    }
+    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /><span class="form-help-text">Field help</span></a></span></td></tr>';
+    if (!isSelected) {
+        result += '<tr><td class="results-alert-message" colspan="3"><span class="smaller">' + reason + '</span></td></tr>';
+    }
+    return result;
+}
+
+function parseboolean(value) {
+    return (value != undefined && value);
+}
+
+
+function ifAnythingSelected(containerId) {
+    var ifUserInputCount = 0;
+    var elementCount = 0;
+    $("#" + containerId + " :radio").each(function () {
+        if ($(this).is(":visible") && $(this).parent().parent().is(":visible")) {
+            elementCount++;
+            var ifUserInput = $(this).prop("checked");
+            if (ifUserInput) {
+                ifUserInputCount++;
+            }
+        }
+    });
+    if (previousAction === actions.helpMeDecideStep) {
+        return true;
+    }
+    // user needs to select all the options in 'help me decide' step
+    return nextAction === actions.helpMeDecideResultStep ? ifUserInputCount === elementCount / 2 : ifUserInputCount > 0;
+}
+
+function hideValidationMessages() {
+    $('input:radio').click(
+                          function () {
+                              $("#validation").hide(150);
+                          }
+      );
+}
+
+function returnToGivenStep(action) {
+    manageState(action);
+    return false;
+}
+
+function printHelp() {
+
+    $('#help').printThis({
+        importCSS: false,
+        //printContainer: true,
+        //debug: true,
+        loadCSS: [window.location.protocol + '//' + location.host + "/assets/css/help.css", ]
+    });
+
+    return false;
+}
+
+function isEqual(compareFrom, compareTo) {
+    if (compareFrom != undefined && compareFrom === compareTo) {
+        return true;
+    }
+    return false;
+}
+
+// this function is only used for help me decide section
+function resumeRadioButtonStateOnHelpMeDecidePage(radio1, radio2, stateValue) {
+
+    if (isEqual(stateValue, 1)) {
+        $(radio1).prop('checked', true);
+    }
+    else if (isEqual(stateValue, 2)) {
+        $(radio2).prop('checked', true);
+    }
+}
+// End Utilities
