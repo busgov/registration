@@ -37,7 +37,7 @@ function initDiscoveryPage() {
             window.location = "trust.html";
         }
         $(window).scrollTop($('#heading').offset().top);
-        $("#next").blur
+        $("#next").blur();
         if (!ifAnythingSelected("question") && !(step == 5 || step == 6)) { // ignore step 5
             $("#validation").show();
             $(window).scrollTop($('#validation').offset().top);
