@@ -5,23 +5,23 @@
 @font-face {
     font-family: 'open_sanslight';
     src: url('opensans-light-webfont.eot');
-    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('opensans-light-webfont.woff2') format('woff2'),
-         url('opensans-light-webfont.woff') format('woff'),
-         url('opensans-light-webfont.ttf') format('truetype'),
-         url('opensans-light-webfont.svg#open_sansregular') format('svg');
+    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-light-webfont.woff2') format('woff2'), url('opensans-light-webfont.woff') format('woff'), url('opensans-light-webfont.ttf') format('truetype'), url('opensans-light-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 .help {
     font-family: open_sanslight, helvetica, arial, sans-serif;
 }
+
 .showhide h3 a {
     color: black;
 }
+
 .showhide h3::before {
     content: "+ ";
 }
+
 .showhide h3::after {
     content: " (content not shown)";
     font-size: 80%;
@@ -30,6 +30,11 @@
 .showhide h3.open::before {
     content: "- ";
 }
+
 .showhide h3.open::after {
     content: "";
+}
+
+.showhide img.ico-external {
+    display: none;
 }

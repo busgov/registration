@@ -537,7 +537,7 @@ function prepareActivityPage() {
     // taxi
     $("#ckTaxi").click(function () {
         applicationType.taxi = $("#ckTaxi").prop('checked');
-   
+
     });
 
     if (applicationType.taxi != undefined) {
@@ -853,12 +853,18 @@ function returnToGivenStep(action) {
 }
 
 function printHelp() {
-
+    var helpCSS = "";
+    if (window.location.host === "busgov.github.io") {
+        helpCSS = window.location.protocol + '//' + location.host + "/registration/assets/css/help.css";
+    }
+    else {
+        helpCSS = window.location.protocol + '//' + location.host + "/assets/css/help.css";
+    }
     $('#help').printThis({
         importCSS: false,
         //printContainer: true,
         //debug: true,
-        loadCSS: [window.location.protocol + '//' + location.host + "/assets/css/help.css", ]
+        loadCSS: [helpCSS]
     });
 
     return false;
