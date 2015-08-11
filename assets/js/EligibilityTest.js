@@ -47,9 +47,9 @@ function showEligibilityTest() {
 
 
 function initEligibilityPage() {
-    if (document.referrer != undefined && document.referrer.indexOf("discovery.html") > 0) {
-        $('input[type=radio][value=no]').prop('checked', true);
-    }
+    //if (document.referrer != undefined && document.referrer.indexOf("discovery.html") > 0) {
+    //    $('input[type=radio][value=no]').prop('checked', true);
+    //}
     applyStyle();
 }
 
@@ -57,7 +57,8 @@ function IsValid(id) {
     if (getValueFromRadioButton(id) == undefined) {
         $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a>.</li>");
         $("#validation").show();
-         $(".scroll").click(function (event) {
+        $(window).scrollTop($('#validation').offset().top);
+        $(".scroll").click(function (event) {
             event.preventDefault();
             var full_url = this.href;
             var parts = full_url.split("#");

@@ -96,7 +96,7 @@ function loadQuestionHelp(applicationStep, callback) {
     var templateQuestionsDirectory = "templates/questions/"
     $("#heading").html(applicationStep.name);
     $("#helpTopic").html("Help topics");
-    $("#heading").focus();
+    //$("#heading").focus();
 
     if (applicationStep.contentFile.length > 0) {
         $("#questions").load(templateQuestionsDirectory + applicationStep.contentFile + "?t=" + (new Date()).getTime(), function () {
@@ -164,8 +164,10 @@ function applyStyle() {
 function manageState(action) {
     $("#validation").hide();
 
-
     switch (action) {
+        case actions.eligibilityStep:
+            window.location = "eligibility.html";
+            break;
         case actions.businessStructureStep: // choose business structure
             loadQuestionHelp(businessStructure, prepareBusinessStructurePage);
             break;
@@ -724,18 +726,19 @@ function showRegistrationsHepContent() {
 function initDiscoveryPage() {
     manageState(actions.businessStructureStep);
     $("#previous").click(function () {
+        $(window).scrollTop($('#heading').offset().top);
         $("#previous").blur();
         manageState(previousAction);
-        $("#heading").focus();
     });
     $("#next").click(function () {
         if (isTrust) {
             window.location.href = "trust.html";
         }
+        $(window).scrollTop($('#heading').offset().top);
         $("#next").blur();
         if (!ifAnythingSelected("questions") && step != 4) { // ignore step 4
             $("#validation").show();
-            $("#heading").focus();
+            $(window).scrollTop($('#validation').offset().top);
             $(".scroll").click(function (event) {
                 event.preventDefault();
                 var full_url = this.href;

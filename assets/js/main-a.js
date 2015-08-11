@@ -28,6 +28,7 @@ function initDiscoveryPage() {
     manageState();
 
     $("#previous").click(function () {
+        $(window).scrollTop($('#heading').offset().top);
         $("#previous").blur();
         manageState("previous");
     });
@@ -35,10 +36,11 @@ function initDiscoveryPage() {
         if (isTrust) {
             window.location = "trust.html";
         }
+        $(window).scrollTop($('#heading').offset().top);
         $("#next").blur
         if (!ifAnythingSelected("question") && !(step == 5 || step == 6)) { // ignore step 5
             $("#validation").show();
-            $("#heading").focus();
+            $(window).scrollTop($('#validation').offset().top);
             return;
         }
         manageState("next");
@@ -52,7 +54,7 @@ function initEligibilityPage() {
 function loadQuestionHelp() {
     var templateDirectory = "templates/"
     $("#heading").html(steps[step][0]);
-    $("#heading").focus();
+    //$("#heading").focus();
     $("#stepNo").html(displayStepNumber);
     var percentCompleted = Math.round((displayStepNumber - 1) / (maxStep - 1) * 100 / 5) * 5;
     $("#percentCompleted").html(percentCompleted);
@@ -377,7 +379,7 @@ function IsValid(id) {
     if (getValueFromRadioButton(id) == undefined) {
         $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a>.</li>");
         $("#validation").show();
-
+        $(window).scrollTop($('#validation').offset().top);
         $(".scroll").click(function (event) {
             event.preventDefault();
             var full_url = this.href;
