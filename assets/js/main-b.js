@@ -275,11 +275,15 @@ function prepareHelpMeDecide() {
     // Do you want to separate your personal income and assets (such as your home) from your business?
     $("#radioSeparatePersonalAsset1").click(function () {
         calculator.separatePersonalAsset = 1;
+        $("#helpMeDecideQ3Help").show();
+        $("#helpMeDecideQ3HelpHeader").show();
         $("#divExtraQuestions").show(150);
     });
 
     $("#radioSeparatePersonalAsset2").click(function () {
         calculator.separatePersonalAsset = 2;
+        $("#helpMeDecideQ3Help").hide();
+        $("#helpMeDecideQ3HelpHeader").hide();
         hideElementAndClear("divExtraQuestions");
         calculator.businessLossReduceTax = 0;
         calculator.mostImportant = 0;
