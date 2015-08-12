@@ -601,7 +601,7 @@ function showResults() {
 
     var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
     if (needGST) {
-        $('#resultTable tr:last').after(getResult(" Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
     }
     if (parseboolean(registrations.isTFN)) {
         $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "No cost", 2));
@@ -616,16 +616,16 @@ function showResults() {
         $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost", 5));
     }
     if (parseboolean(registrations.isFBT)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "No cost", 6));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost", 6));
     }
     if (parseboolean(registrations.isLTC)) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "No cost", 7));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "No cost", 7));
     }
     if (parseboolean(registrations.isFTC)) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "No cost", 8));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "No cost", 8));
     }
     if (needGST && parseboolean(registrations.isWET)) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "No cost", 9));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost", 9));
     }
     if (!needGST) {
         $("#gstRecommend").show();
@@ -815,7 +815,7 @@ function getResult(registrationName, id, isSelected, reason, cost, helpId) {
     if (!isSelected) {
         result += " results-alert-message";
     }
-    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /><span class="form-help-text">Field help</span></a></span></td></tr>';
+    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span></td></tr>';
     if (!isSelected) {
         result += '<tr><td class="results-alert-message" colspan="3"><span class="smaller">' + reason + '</span></td></tr>';
     }

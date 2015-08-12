@@ -55,7 +55,7 @@ function initEligibilityPage() {
 
 function IsValid(id) {
     if (getValueFromRadioButton(id) == undefined) {
-        $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a>.</li>");
+        $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a></li>");
         $("#validation").show();
         $(window).scrollTop($('#validation').offset().top);
         $(".scroll").click(function (event) {

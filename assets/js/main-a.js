@@ -281,7 +281,7 @@ function enablePreviousButton() {
 
 function showResults() {
     if (parseboolean(gst)) {
-        $('#resultTable tr:last').after(getResult("GST", "gst", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "No cost"));
     }
     if (businessStructure == "company") {
         $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year"));
@@ -293,16 +293,16 @@ function showResults() {
         $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost"));
     }
     if (parseboolean(fbt)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax", "fbt", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost"));
     }
     if (parseboolean(lct)) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax", "lct", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "No cost"));
     }
     if (parseboolean(ftc)) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits", "ftc", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "No cost"));
     }
     if (parseboolean(wet)) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax", "wet", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost"));
     }
     if ((parseboolean(ftc) || parseboolean(wet)) && !parseboolean(gst)) {
         var selectedRegistration = "";
@@ -377,7 +377,7 @@ $(document).ready(
 
 function IsValid(id) {
     if (getValueFromRadioButton(id) == undefined) {
-        $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a>.</li>");
+        $("#validation-list").append("<li><a class='scroll' href='#" + id + "'>" + $("#" + id).html() + "</a></li>");
         $("#validation").show();
         $(window).scrollTop($('#validation').offset().top);
         $(".scroll").click(function (event) {
