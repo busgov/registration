@@ -304,17 +304,24 @@ function showResults() {
     if (parseboolean(wet)) {
         $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost"));
     }
-    if ((parseboolean(ftc) || parseboolean(wet)) && !parseboolean(gst)) {
+    if ((parseboolean(ftc) || parseboolean(wet) || parseboolean(lct)) && !parseboolean(gst)) {
         var selectedRegistration = "";
-        if (parseboolean(ftc) && parseboolean(wet)) {
-            selectedRegistration = "FTC and WET";
+        //if (parseboolean(ftc) && parseboolean(wet)) {
+        //    selectedRegistration = "FTC and WET";
+        //}
+        //if (parseboolean(ftc) && parseboolean(wet)) {
+        //    selectedRegistration = "FTC and WET";
+        //}
+        if (parseboolean(lct)) {
+            selectedRegistration = "LCT, ";
         }
-        else if (parseboolean(ftc)) {
-            selectedRegistration = "FTC";
+        if (parseboolean(ftc)) {
+            selectedRegistration += "FTC, ";
         }
-        else if (parseboolean(wet)) {
-            selectedRegistration = "WET";
+        if (parseboolean(wet)) {
+            selectedRegistration += "WET, ";
         }
+        selectedRegistration = selectedRegistration.substring(0, selectedRegistration.length - 2);
         $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "No cost"));
     }
 }

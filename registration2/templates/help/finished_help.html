@@ -71,12 +71,6 @@
         <li id="liLimo" style="display:none">
             charge passengers for limousine travel
         </li>
-        <li id="liUseFule" style="display:none">
-            use taxable fuels
-        </li>
-        <li id="liLuxuryCar" style="display:none">
-            import or sell luxury cars
-        </li>
     </ul>
     <p>
         You should register for GST if you’ve just started a business and expect to have business turnover of $75,000 or more in your first year.
@@ -132,15 +126,17 @@
         <li>
             pay GST to the Tax Office (or get a GST refund).
         </li>
-        <li>
-            Find out more
-        </li>
-        <li>
-            Read about how GST works on the Tax Office website.
-        </li>
     </ul>
+    <strong>
+        Find out more
+    </strong>
+    <p>
+        Read about <a href="https://www.ato.gov.au/Business/GST/How-GST-works/">how GST works</a> on the Tax Office website.
+    </p>
+
 
 </div>
+
 <h3 id="tfnHelpHeader" style="display:none">Tax File Number (TFN)</h3>
 <div id="tfnHelp" style="display:none">
     <p> You should apply for a TFN because in <a href="" onclick="return returnToGivenStep('businessStructure');">Step 1: Business structures</a> you chose the <strong id="helpBusinessStructureSelected"></strong> business structure.</p>
@@ -188,7 +184,6 @@
 
 </div>
 
-
 <h3 id="businessNameHelpHeader" style="display:none">
     Business name
 </h3>
@@ -215,7 +210,7 @@
 </div>
 
 <h3 id="paygHelpHeader" style="display:none">
-    PAYG
+    PAYG Withholding
 </h3>
 <div id="paygHelp" style="display:none">
     <div id="divNoneCompanyPAYG" style="display:none" class="">
@@ -330,9 +325,7 @@
             work out how much FBT you have to pay
         </li>
         <li>
-            <p>
-                keep records related to the fringe benefits you provide
-            </p>
+            keep records related to the fringe benefits you provide
         </li>
         <li>
             report fringe benefits on your employees' payment summaries
@@ -341,7 +334,7 @@
             report fringe benefits in the Tax Ofice
         </li>
         <li>
-            pay the FBT to the Tax Office
+            pay the FBT to the Tax Office.
         </li>
     </ul>
     <h3>
@@ -354,31 +347,13 @@
 
 </div>
 
-
 <h3 id="lctHelpHeader" style="display:none">
     Luxury Car Tax (LCT)
 </h3>
 <div id="lctHelp" style="display:none">
-
-
     <p>
-        You should register for LCT because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to:
+        You should register for LCT because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to sell or import luxury cars.
     </p>
-    <ul>
-        <li>
-            have business turnover of $75,000 or more in your first year
-        </li>
-        <li>
-            <p>
-                [include second and third options if the user selected those as well]
-            </p>
-        </li>
-        <li>
-            <p>
-                sell or import luxury cars.
-            </p>
-        </li>
-    </ul>
     <p>
         Having a turnover of $75,000 or more means you should register for GST.
     </p>
@@ -433,7 +408,7 @@
     </p>
     <ul>
         <li>
-            work out how much you can claim on eligible fuels>
+            work out how much you can claim on eligible fuels
         </li>
         <li>
             keep records of the type and quantity of fuels, when you bought the fuels and how you used them in your business.
@@ -449,26 +424,14 @@
 
 </div>
 
-
 <h3 id="wetHelpHeader" style="display:none">
     Wine Equalisation Tax (WET)
 </h3>
 <div id="wetHelp" style="display:none">
 
     <p>
-        You should consider registering for WET because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to:
+        You should consider registering for WET because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to import or produce wines, or sell wines wholesale.
     </p>
-    <ul>
-        <li>
-            have business turnover of $75,000 or more in your first year
-        </li>
-        <li>
-            [include second and third options if the user selected those as well]
-        </li>
-        <li>
-            import or produce wines, or sell wines wholesale.
-        </li>
-    </ul>
     <p>
         Having a turnover of $75,000 or more means you should register for GST.
     </p>
@@ -522,9 +485,9 @@
     <p>
         Read about <a href="https://www.ato.gov.au/Business/Wine-equalisation-tax/How-WET-works/" target="_blank">WET<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
     </p>
-
 </div>
 
+<!-- the following help content only shows when system recommends GST-->
 <h3 id="gstHelp1Header" style="display:none">
     Goods &amp; Services Tax (GST)
 </h3>
@@ -601,6 +564,145 @@
     </h3>
     <p>
         Read about <a href="https://www.ato.gov.au/Business/GST/How-GST-works/" target="_blank">how GST works<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
+    </p>
+
+</div>
+
+<h3 id="lctHelpHeader1" style="display:none">
+    Luxury Car Tax (LCT)
+</h3>
+<div id="lctHelp1" style="display:none">
+    <p>
+        You should register for LCT because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to sell or import luxury cars.
+    </p>
+    <p>
+        Having a turnover of $75,000 or more means you should register for GST.
+    </p>
+    <p>
+        If you're registered for GST <strong>and</strong> you sell or import luxury cars, then you need to register for and pay LCT.
+    </p>
+    <h3>
+        What do I need to do?
+    </h3>
+    <p>
+        Being registered for LCT means you:
+    </p>
+    <ul>
+        <li>
+            work out the LCT payable and include it in the import or sale
+        </li>
+        <li>
+            account for LCT sales and imports in your books
+        </li>
+        <li>
+            report and pay LCT to the Tax Office.
+        </li>
+    </ul>
+    <strong>
+        Find out more
+    </strong>
+    <p>
+        Read about <a href="https://www.ato.gov.au/Business/Luxury-car-tax/How-LCT-works/" target="_blank">LCT<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
+    </p>
+
+</div>
+
+<h3 id="wetHelpHeader1" style="display:none">
+    Wine Equalisation Tax (WET)
+</h3>
+<div id="wetHelp1" style="display:none">
+    <p>
+        You should consider registering for WET because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to import or produce wines, or sell wines wholesale.
+    </p>
+    <p>
+        Having a turnover of $75,000 or more means you should register for GST.
+    </p>
+    <p>
+        You must register for WET if:
+    </p>
+    <ul>
+        <li>
+            you're registered for GST <strong>and</strong>
+        </li>
+        <li>
+            you import or produce wine or sell wines wholesale, where the wines are subject to WET.
+        </li>
+    </ul>
+    <strong>
+        What is WET?
+    </strong>
+    <p>
+        WET is a tax on the consumption of wine in Australia, and it's usually applied to the last wholesale sale - this is usually the sale to the retailer. You
+        collect the tax to give to the Tax Office.
+    </p>
+    <h3>
+        What do I need to do?
+    </h3>
+    <p>
+        Being registered for WET means you:
+    </p>
+    <ul>
+        <li>
+            work out which sales are subject to WET
+        </li>
+        <li>
+            issue tax invoices that show the WET amount
+        </li>
+        <li>
+            claim any WET credits you may be entitled to (including rebates or refunds)
+        </li>
+        <li>
+            account for WET amounts in your books
+        </li>
+        <li>
+            put aside WET you've collected
+        </li>
+        <li>
+            report WET to the Tax Office.
+        </li>
+    </ul>
+    <strong>
+        Find out more
+    </strong>
+    <p>
+        Read about <a href="https://www.ato.gov.au/Business/Wine-equalisation-tax/How-WET-works/" target="_blank">WET<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the Tax Office website.
+    </p>
+</div>
+
+<h3 id="ftcHelpHeader1" style="display:none">
+    Fuel Tax Credits
+</h3>
+<div id="ftcHelp1" style="display:none">
+    <p>
+        You should consider registering for FTC because in <a href="#" onclick="return returnToGivenStep('activity')">Step 4: Business activity</a> you indicated you plan to use taxable fuels in your business.
+    </p>
+    <h3>
+        What is FTC?
+    </h3>
+    <p>
+        If you register for FTC, you can claim credits for the fuel tax you pay on these fuels. The amount of fuel tax credits you can claim depends on the type of
+        fuel you use and what business activity you use it in.
+    </p>
+    <h3>
+        What do I need to do?
+    </h3>
+    <p>
+        Being registered for FTC means you:
+    </p>
+    <ul>
+        <li>
+            work out how much you can claim on eligible fuels
+        </li>
+        <li>
+            keep records of the type and quantity of fuels, when you bought the fuels and how you used them in your business.
+        </li>
+    </ul>
+    <h3>
+        Find out more
+    </h3>
+    <p>
+        Read about <a href="https://www.ato.gov.au/General/Fringe-benefits-tax-%28FBT%29/In-detail/Getting-started/FBT-for-small-business/?page=8" target="_blank">FTC<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> on the
+        Tax Office website.
     </p>
 
 </div>

@@ -296,6 +296,8 @@ function prepareHelpMeDecide() {
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioSeparatePersonalAsset1"), $("#radioSeparatePersonalAsset2"), calculator.separatePersonalAsset)
     if (isEqual(calculator.separatePersonalAsset, 1)) {
         $("#divExtraQuestions").show();
+        $("#helpMeDecideQ3Help").show();
+        $("#helpMeDecideQ3HelpHeader").show();
     }
     // Do you want to use any business losses to reduce tax on future profits?
     $("#radioBusinessLossReduceTax1").click(function () {
@@ -556,7 +558,6 @@ function prepareActivityPage() {
     // limo
     $("#ckLimousine").click(function () {
         applicationType.limo = $("#ckLimousine").prop('checked');
-        registrations.limo = applicationType.limo;
     });
 
     if (applicationType.limo != undefined) {
@@ -566,31 +567,28 @@ function prepareActivityPage() {
     // wine
     $("#ckDealInWine").click(function () {
         registrations.isWET = $("#ckDealInWine").prop('checked');
-        applicationType.wine = $("#ckDealInWine").prop('checked');
     });
 
-    if (applicationType.wine != undefined) {
-        setCheckBox("#ckDealInWine", applicationType.wine);
+    if (registrations.isWET != undefined) {
+        setCheckBox("#ckDealInWine", registrations.isWET);
     }
 
     // fuel
     $("#ckUseFuel").click(function () {
         registrations.isFTC = $("#ckUseFuel").prop('checked');
-        applicationType.fuel = registrations.isFTC;
     });
 
-    if (applicationType.fuel != undefined) {
-        setCheckBox("#ckUseFuel", applicationType.fuel);
+    if (registrations.isFTC != undefined) {
+        setCheckBox("#ckUseFuel", registrations.isFTC);
     }
 
     // luxury cars
     $("#ckLuxury").click(function () {
-        registrations.isLTC = $("#ckLuxury").prop('checked');
-        applicationType.luxuryCar = registrations.isLTC;
+        registrations.isLCT = $("#ckLuxury").prop('checked');
     });
 
-    if (applicationType.luxuryCar != undefined) {
-        setCheckBox("#ckLuxury", applicationType.luxuryCar);
+    if (registrations.isLCT != undefined) {
+        setCheckBox("#ckLuxury", registrations.isLCT);
     }
 }
 
@@ -602,7 +600,7 @@ function showResults() {
     previousAction = actions.activityStep;
     nextAction = "";
 
-    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
+    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
     if (needGST) {
         $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
     }
@@ -613,25 +611,63 @@ function showResults() {
         $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year", 3));
     }
     if (parseboolean(registrations.isBusinessName)) {
-        $('#resultTable tr:last').after(getResult("Business Name", "businessName", true, "", "$34 per year", 4));
+        $('#resultTable tr:last').after(getResult("Business name", "businessName", true, "", "$34 per year", 4));
     }
     if (parseboolean(registrations.isPAYG)) {
-        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost", 5));
+        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "No cost", 5));
     }
     if (parseboolean(registrations.isFBT)) {
         $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost", 6));
     }
-    if (parseboolean(registrations.isLTC)) {
+    if (parseboolean(registrations.isLCT) && needGST) {
         $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "No cost", 7));
     }
-    if (parseboolean(registrations.isFTC)) {
+    if (parseboolean(registrations.isFTC) && needGST) {
         $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "No cost", 8));
     }
-    if (needGST && parseboolean(registrations.isWET)) {
+    if (parseboolean(registrations.isWET) && needGST) {
         $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost", 9));
     }
     if (!needGST) {
         $("#gstRecommend").show();
+        $("#ckGstRecommend").click(function () {
+            if ($(this).prop('checked')) {
+                $("#lctOptional").prop('checked', true);
+                $("#wetOptional").prop('checked', true);
+                $("#ftcOptional").prop('checked', true);
+
+            }
+            else {
+                $("#lctOptional").prop('checked', false);
+                $("#wetOptional").prop('checked', false);
+                $("#ftcOptional").prop('checked', false);
+            }
+        });
+        
+        if (parseboolean(registrations.isLCT)) {
+            $("#lctOptionalRow").show();
+            $("#lctOptional").click(function () {
+                if ($(this).prop('checked')) {
+                    $("#ckGstRecommend").prop('checked', true);
+                }
+            });
+        }
+        if (parseboolean(registrations.isWET)) {
+            $("#wetOptionalRow").show();
+            $("#wetOptional").click(function () {
+                if ($(this).prop('checked')) {
+                    $("#ckGstRecommend").prop('checked', true);
+                }
+            });
+        }
+        if (parseboolean(registrations.isFTC)) {
+            $("#ftcOptionalRow").show();
+            $("#ftcOptional").click(function () {
+                if ($(this).prop('checked')) {
+                    $("#ckGstRecommend").prop('checked', true);
+                }
+            });
+        }
     }
 }
 
@@ -653,14 +689,6 @@ function showRegistrationsHepContent() {
 
         if (parseboolean(applicationType.limo)) {
             $("#liLimo").show();
-        }
-
-        if (parseboolean(applicationType.isFTC)) {
-            $("#liUseFule").show();
-        }
-
-        if (parseboolean(applicationType.isLCT)) {
-            $("#liLuxuryCar").show();
         }
     }
     if (parseboolean(registrations.isTFN)) {
@@ -704,16 +732,17 @@ function showRegistrationsHepContent() {
             $("#divNoneCompanyPAYG").show();
         }
     }
+
     if (parseboolean(registrations.isFBT)) {
         $('#fbtHelp').show();
         $('#fbtHelpHeader').show();
 
     }
-    if (parseboolean(registrations.isLTC)) {
+    if (needGST && parseboolean(registrations.isLCT)) {
         $('#lctHelp').show();
         $('#lctHelpHeader').show();
     }
-    if (parseboolean(registrations.isFTC)) {
+    if (needGST && parseboolean(registrations.isFTC)) {
         $('#ftcHelp').show();
         $('#ftcHelpHeader').show();
     }
@@ -724,6 +753,18 @@ function showRegistrationsHepContent() {
     if (!needGST) {
         $('#gstHelp1').show();
         $('#gstHelp1Header').show();
+        if (parseboolean(registrations.isFTC)) {
+            $("#ftcHelpHeader1").show();
+            $("#ftcHelp1").show();
+        }
+        if (parseboolean(registrations.isLCT)) {
+            $("#lctHelpHeader1").show();
+            $("#lctHelp1").show();
+        }
+        if (parseboolean(registrations.isWET)) {
+            $("#wetHelpHeader1").show();
+            $("#wetHelp1").show();
+        }
     }
 }
 
