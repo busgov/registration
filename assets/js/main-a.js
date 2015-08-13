@@ -315,7 +315,7 @@ function showResults() {
         else if (parseboolean(wet)) {
             selectedRegistration = "WET";
         }
-        $('#resultTable tr:last').after(getResult("GST", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "No cost"));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "No cost"));
     }
 }
 
