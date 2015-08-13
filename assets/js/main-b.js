@@ -204,8 +204,8 @@ function prepareBusinessStructurePage() {
     calculateCompletion();
     previousAction = actions.eligibilityStep;
     nextAction = actions.businessNameStep;
-    if (applicationType != null) {
 
+    if (applicationType != null) {
         if (applicationType.name === soleTraderName) {
             $("#structure-sole").prop('checked', true);
         }
@@ -225,6 +225,7 @@ function prepareBusinessStructurePage() {
     $("#structure-sole").on('click', function () {
         initializeApplicationType(soleTraderName);
         isHelpMeDecidUsed = false;
+        nextAction = actions.businessNameStep;
         calculator = new HelpMeDecideCalculator();
     });
 
@@ -233,6 +234,7 @@ function prepareBusinessStructurePage() {
         registrations.isTFN = true;
         isHelpMeDecidUsed = false;
         calculator = new HelpMeDecideCalculator();
+        nextAction = actions.businessNameStep;
     });
 
     $("#structure-company").on('click', function () {
@@ -241,6 +243,7 @@ function prepareBusinessStructurePage() {
         registrations.isTFN = true;
         isHelpMeDecidUsed = false;
         calculator = new HelpMeDecideCalculator();
+        nextAction = actions.businessNameStep;
     });
 
     $("#structure-trust").on('click', function () {
@@ -251,8 +254,8 @@ function prepareBusinessStructurePage() {
 
     $("#structure-not-sure").on('click', function () {
         nextAction = actions.helpMeDecideStep;
+        isHelpMeDecidUsed = true;
     });
-    isHelpMeDecidUsed = true;
 }
 
 function prepareHelpMeDecide() {
@@ -740,7 +743,7 @@ function initDiscoveryPage() {
         }
         $(window).scrollTop($('#heading').offset().top);
         $("#next").blur();
-        if (!ifAnythingSelected("questions") && step != 4) { // ignore step 4
+        if (!ifAnythingSelected("questions") && previousAction != actions.helpMeDecideStep && previousAction != actions.employeeStep) { // ignore step 4
             $("#validation").show();
             $(window).scrollTop($('#validation').offset().top);
             $(".scroll").click(function (event) {
