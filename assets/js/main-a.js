@@ -290,7 +290,7 @@ function showResults() {
         $('#resultTable tr:last').after(getResult("Business Name", "businessname", true, "", "$34 per year"));
     }
     if (parseboolean(payg)) {
-        $('#resultTable tr:last').after(getResult("Pay as you go (PAYG)", "payg", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "No cost"));
     }
     if (parseboolean(fbt)) {
         $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost"));
