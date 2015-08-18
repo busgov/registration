@@ -405,54 +405,28 @@ function prepareEmployeePage() {
 
     // company stream
     if (applicationType.name === companyName) {
-        // check whether user selected benefit to director or not
-        if (applicationType.fringeBenefitDirector != undefined) {
-            if (applicationType.fringeBenefitDirector) {
-                $("#fringeBenefitsDirectorYes").prop('checked', true);
+        // check which option user has selected
+        if (applicationType.hasEmployee != undefined) {
+            if (applicationType.hasEmployee) {
+                $("#companyEmployeeYes").prop('checked', true);
+                $('#companyFringeBenefitsToEmployee').show();
             }
             else {
-                $("#fringeBenefitsDirectorNo").prop('checked', true);
-                $('#companyHasEmployee').show();
-            }
-        }
-
-        // check which option user has sleected
-        if ($('#companyHasEmployee').is(':visible')) {
-            if (applicationType.hasEmployee != undefined) {
-                if (applicationType.hasEmployee) {
-                    $("#companyEmployeeYes").prop('checked', true);
-                    $('#companyFringeBenefitsToEmployee').show();
-                }
-                else {
-                    $("#companyEmployeeNo").prop('checked', true);
-                }
+                $("#companyEmployeeNo").prop('checked', true);
             }
         }
 
         // check whether user selected benefits to employee or not.
         if ($('#companyFringeBenefitsToEmployee').is(':visible')) {
             if (applicationType.fringeBenefit != undefined) {
-                $("#fringeBenefitsEmployeeYes").prop('checked', true);
-            }
-            else {
-                $("#fringeBenefitsEmployeeNo").prop('checked', true);
+                if (applicationType.fringeBenefit) {
+                    $("#fringeBenefitsEmployeeYes").prop('checked', true);
+                }
+                else {
+                    $("#fringeBenefitsEmployeeNo").prop('checked', true);
+                }
             }
         }
-
-        // company benefit director
-        $("#fringeBenefitsDirectorYes").click(function () {
-            hideElementAndClear("companyHasEmployee");
-            hideElementAndClear("companyFringeBenefitsToEmployee");
-            applicationType.fringeBenefitDirector = true;
-            registrations.isFBT = true;
-            // registrations.isPAYG = true; // needs to be confirmed
-        });
-
-        $("#fringeBenefitsDirectorNo").click(function () {
-            $("#companyHasEmployee").show(100);
-            applicationType.fringeBenefitDirector = false;
-            registrations.isFBT = false;
-        });
 
         // company employee
         $("#companyEmployeeYes").click(function () {
@@ -465,6 +439,7 @@ function prepareEmployeePage() {
             hideElementAndClear("companyFringeBenefitsToEmployee");
             applicationType.hasEmployee = false;
             applicationType.fringeBenefit = false;
+            registrations.isFBT = false;
             registrations.isPAYG = false;
         });
 
@@ -643,7 +618,7 @@ function showResults() {
                 $("#ftcOptional").prop('checked', false);
             }
         });
-        
+
         if (parseboolean(registrations.isLCT)) {
             $("#lctOptionalRow").show();
             $("#lctOptional").click(function () {
