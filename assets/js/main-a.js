@@ -112,7 +112,7 @@ function applyStyle() {
 function openHelp(index) {
     help.close();
     help.open(index);
-    event.preventDefault();
+    //event.preventDefault();
     $('.cd-panel').addClass('is-visible');
 }
 
