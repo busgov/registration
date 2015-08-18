@@ -92,8 +92,8 @@ function initializeApplicationType(typename) {
 }
 
 function loadQuestionHelp(applicationStep, callback) {
-    var templateHelpDirectory = "templates/help/"
-    var templateQuestionsDirectory = "templates/questions/"
+    var templateHelpDirectory = "templates/help/";
+    var templateQuestionsDirectory = "templates/questions/";
     $("#heading").html(applicationStep.name);
     $("#helpTopic").html("Help topics");
     //$("#heading").focus();
@@ -108,18 +108,10 @@ function loadQuestionHelp(applicationStep, callback) {
                     if (applicationStep.name === "Registration summary") {
                         index = $(this)[0].id;
                     }
-                    // this is for company stream -> employee help
                     if (nextAction === actions.activityStep && applicationType.name === companyName) {
-                        if (index === 0) {
-                            help.open(index + 1);
-                        }
-                        if (index === 2) {
-                            help.open(index - 1);
-                        }
+                        index++;
                     }
-                    else {
-                        help.open(index);
-                    }
+                    help.open(index);
                     event.preventDefault();
                     $('.cd-panel').addClass('is-visible');
                 });
@@ -145,9 +137,12 @@ function applyStyle() {
     if (step === 5) {
         showRegistrationsHepContent();
     }
-    //$("#aPrint").click(function () {
-    //    $.print("#help");
-    //});
+    // this is for company stream -> employee help
+    if (nextAction === actions.activityStep && applicationType.name !== companyName) {
+        $("#employeHelpHeader").show();
+        $("#employeHelpContent").show();
+    }
+
     /* Expand collapse headings config */
     help = new jQueryCollapse($(".showhide"), {
         open: function () {
@@ -197,7 +192,7 @@ function manageState(action) {
 
 // callbacks
 
-// parepare the business structure page ---- > step 1
+// prepare the business structure page ---- > step 1
 function prepareBusinessStructurePage() {
     // make sure the calculation is correct.
     step = 1;
@@ -255,6 +250,7 @@ function prepareBusinessStructurePage() {
     $("#structure-not-sure").on('click', function () {
         nextAction = actions.helpMeDecideStep;
         isHelpMeDecidUsed = true;
+        isTrust = false;
     });
 }
 
@@ -339,7 +335,7 @@ function prepareHelpMeDecideResult() {
     previousAction = actions.helpMeDecideStep;
     nextAction = actions.businessNameStep;
     isHelpMeDecidUsed = true;
-    // based on caculator
+    // based on calculator
     var result = calculator.calculateWeight();
     // decide which one to go
     if (result === "company") {
@@ -409,34 +405,28 @@ function prepareEmployeePage() {
         if (applicationType.hasEmployee != undefined) {
             if (applicationType.hasEmployee) {
                 $("#companyEmployeeYes").prop('checked', true);
-                $('#companyFringeBenefitsToEmployee').show();
             }
             else {
                 $("#companyEmployeeNo").prop('checked', true);
             }
         }
-
         // check whether user selected benefits to employee or not.
-        if ($('#companyFringeBenefitsToEmployee').is(':visible')) {
-            if (applicationType.fringeBenefit != undefined) {
-                if (applicationType.fringeBenefit) {
-                    $("#fringeBenefitsEmployeeYes").prop('checked', true);
-                }
-                else {
-                    $("#fringeBenefitsEmployeeNo").prop('checked', true);
-                }
+        if (applicationType.fringeBenefit != undefined) {
+            if (applicationType.fringeBenefit) {
+                $("#fringeBenefitsEmployeeYes").prop('checked', true);
+            }
+            else {
+                $("#fringeBenefitsEmployeeNo").prop('checked', true);
             }
         }
 
         // company employee
         $("#companyEmployeeYes").click(function () {
-            $("#companyFringeBenefitsToEmployee").show(100);
             applicationType.hasEmployee = true;
             registrations.isPAYG = true;
         });
 
         $("#companyEmployeeNo").click(function () {
-            hideElementAndClear("companyFringeBenefitsToEmployee");
             applicationType.hasEmployee = false;
             applicationType.fringeBenefit = false;
             registrations.isFBT = false;
