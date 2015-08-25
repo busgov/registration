@@ -108,9 +108,6 @@ function loadQuestionHelp(applicationStep, callback) {
                     if (applicationStep.name === "Registration summary") {
                         index = $(this)[0].id;
                     }
-                    if (nextAction === actions.activityStep && applicationType.name === companyName) {
-                        index++;
-                    }
                     help.open(index);
                     event.preventDefault();
                     $('.cd-panel').addClass('is-visible');
@@ -137,12 +134,7 @@ function applyStyle() {
     if (step === 5) {
         showRegistrationsHepContent();
     }
-    // this is for company stream -> employee help
-    if (nextAction === actions.activityStep && applicationType.name !== companyName) {
-        $("#employeHelpHeader").show();
-        $("#employeHelpContent").show();
-    }
-
+   
     /* Expand collapse headings config */
     help = new jQueryCollapse($(".showhide"), {
         open: function () {
@@ -158,7 +150,9 @@ function applyStyle() {
 
 function manageState(action) {
     $("#validation").hide();
-
+    if ($("#next").html() !== "Next &raquo;") {
+        $("#next").html("Next &raquo;");
+    }
     switch (action) {
         case actions.eligibilityStep:
             window.location = "eligibility.html";
@@ -864,6 +858,7 @@ function hideValidationMessages() {
 }
 
 function returnToGivenStep(action) {
+    $(".cd-panel").click();
     manageState(action);
     return false;
 }
