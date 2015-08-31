@@ -16,13 +16,15 @@
 </head>
 <body class="condensed">
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-66346016-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-66346016-1', 'auto');
+        ga('send', 'pageview');
 
     </script>
     <div class="grid-container">
@@ -34,226 +36,32 @@
         <header class="wrapper clearfix"></header>
         <div id="eligibilityTest" class="wrapper main-container clearfix">
             <h1>Registration discovery</h1>
-            <div id="validation" class="process-message process-alert validation-show" style="display:none">
-                <h2 id="validation-heading">Please select an answer for:</h2>
-                <ul id="validation-list">
-                    <li>Please select an answer from the <a href="#eligibility-question">question below</a>.</li>
-                </ul>
-            </div><!-- validation-hidden -->
-
-            <p class="intro">This tool can help you work out:</p>
+            <p>
+                Are you <strong>starting a business</strong>, or thinking about starting one?
+            </p>
+            <p class="intro">If so, this tool can help you work out:</p>
             <ul>
                 <li>the <strong>business structure</strong> that will best suit your needs</li>
                 <li>the <strong>basic business and tax registrations</strong> you should consider applying for.</li>
             </ul>
-            <h2>Is this the right tool for you?</h2>
-            <fieldset>
-                <div class="grid-row grid-row-shaded grid-row-last clearfix">
-                    <div class="grid-row">
-                        <div class="col7">
-                            <legend id="employee">Will you be working as an apprentice, trainee or an employee that is not a director or associate for this business?</legend>
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="employee-yes" name="employee" type="radio" value="yes">
-                                <label for="employee-yes">Yes</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="employee-no" name="employee" type="radio" value="no">
-                                <label for="employee-no">No</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col1 last">
-                            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-                        </div><!-- col last -->
-                    </div><!-- grid-row -->
-
-                    <div class="grid-row">
-                        <div class="col7">
-                            <legend id="overseas">Will your business only be operating overseas?</legend>
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="overseas-yes" name="overseas" type="radio" value="yes">
-                                <label for="overseas-yes">Yes</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="overseas-no" name="overseas" type="radio" value="no">
-                                <label for="overseas-no">No</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col1 last">
-                            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-                        </div><!-- col last -->
-                    </div><!-- grid-row -->
-
-
-                    <div class="grid-row">
-                        <div class="col7">
-                            <legend id="other">Are you starting a non-profit organisation or self-managed super fund?</legend>
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="other-yes" name="other" type="radio" value="yes">
-                                <label for="other-yes">Yes</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col2">
-                            <div class="form-row">
-                                <input id="other-no" name="other" type="radio" value="no">
-                                <label for="other-no">No</label>
-                            </div><!-- form-row -->
-                        </div><!-- col -->
-                        <div class="col1 last">
-                            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-                        </div><!-- col last -->
-                    </div><!-- grid-row -->
-                </div>
-            </fieldset>
+            <h2> Legal things we need to say…</h2>
+            <!--<fieldset>
+                <div class="grid-row grid-row-shaded grid-row-last clearfix">-->
+            <p>
+                Business decisions should not be entered into lightly. Many factors can affect your decisions including your finances, legal requirements, industry group and your own personal circumstances. While we make every effort to ensure that this tool is accurate and up to date, it can’t possibly take all your circumstances into account – so please treat it as a guide only.
+            </p>
+            <p>
+                Before you make any decisions based on the information in this tool, consider seeking independent professional advice. This tool is not a legal professional, so we can’t guarantee or accept legal liability as a result of using this tool.
+            </p>
+            <!--</div>
+            </fieldset>-->
 
             <p class="buttons">
-                <button type="button" class="btn btn-default" onclick="checkEligibility();">Ok, let's go</button>
+                <button type="button" class="btn btn-default" onclick="window.location = 'registration-discovery.html'">Ok, let's go</button>
             </p>
         </div><!-- main-container -->
-        <!-- start help panel -->
-        <div class="help" id="help">
-            <div class="cd-panel from-right">
-                <div class="cd-panel-header">
-                    <a href="#gst-form" class="cd-panel-close">Close</a>
-                    <h2 id="helpTopic">Help topics</h2>
-                    <p class="cd-panel-print"><a href="#" onclick="return printHelp();">Print</a></p>
-                </div>
-                <div class="cd-panel-container">
-                    <div class="cd-panel-content">
-                        <div id="helpFile" class="showhide">
-                            <h3>Employees</h3>
-                            <div>
-                                <p>You’re an employee if you’re working as an apprentice, a trainee, a labourer, or trade assistant.</p>
-                                <p>Generally, employees:</p>
-                                <ul>
-                                    <li>are supervised by an employer</li>
-                                    <li>are required to carry out their work in a particular way</li>
-                                    <li>earn a wage or salary</li>
-                                    <li>are entitled to paid leave</li>
-                                    <li>work set hours on a permanent, fixed term or casual basis</li>
-                                    <li>can’t subcontract work tasks given to them.</li>
-                                </ul>
-                                <p>Employees are different to contractors, who set up businesses to hire out their services. </p>
-                                <p>For more:</p>
-                                <ul>
-                                    <li>Read about the <a href="https://www.ato.gov.au/Individuals/Working/Employee-or-contractor---what-s-the-difference/" target="_blank">differences between contractors and employees<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a> on the Tax Office website.</li>
-                                    <li>Check out our <a href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" target="_blank">Independent contractors decision tool<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.</li>
-                                    <li><a href="https://www.ato.gov.au/About-ATO/About-us/Contact-us/" target="_blank">Contact the Tax Office<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>. You can book a <a href="https://www.ato.gov.au/Business/Register-for-an-assistance-visit/" target="_blank">free assistance visit<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>, or call them on 13 28 66.</li>
-                                </ul>
-                            </div>
-                            <h3>Location of your business</h3>
-                            <div>
-                                <p>Your business is operating overseas if <strong>your main business operations</strong> are overseas and you are not trading goods and services in Australia.</p>
-                                <p>Having overseas customers, or importing or exporting goods internationally, <strong>doesn’t</strong> mean your business is operating overseas.</p>
-                                <p>
-                                    In this context Australia means:
-                                    <ul>
-                                        <li>states and internal territories of Australia</li>
-                                        <li>
-                                            the following external territories:
-                                            <ul>
-                                                <li>Norfolk Island</li>
-                                                <li>the Coral Sea Islands Territory</li>
-                                                <li>the Territory of Ashmore and Cartier Islands</li>
-                                                <li>the Territory of Christmas Island</li>
-                                                <li>the Territory of Cocos (Keeling) Islands</li>
-                                                <li>the Territory of Heard Island and the McDonald Islands</li>
-                                            </ul>
-                                        </li>
-                                        <li>Australia's territorial waters (including the territorial waters surrounding the external Territories)</li>
-                                        <li>much of the waters contained in Australia's exclusive economic zone</li>
-                                        <li>the airspace above and the sea-bed and subsoil beneath Australia's waters.</li>
-                                    </ul>
-                                </p>
-                            </div>
-                            <h3>Non-profit organisations and self-managed super funds</h3>
-                            <div>
-                                <h4>Non-profit organisations</h4>
-                                <p>A non-profit (also known as not-for-profit) organisation does not operate for the profit or gain of its individual members, whether these gains would have been direct or indirect. This applies both while the organisation is operating and when it winds up.</p>
-                                <p>A non-profit organisation does not mean that the organisation that hasn't made a profit. A non-profit organisation can still make a profit, but this profit must be used to carry out its purposes and must not be distributed to owners, members or other private people.</p>
-                                <p>Due to the broad range of considerations that will affect how you register your not-for-profit organisation, the registration discovery tool does not cater for non-profit organisations. Visit the ATO website for more information on <a href="https://www.ato.gov.au/non-profit/getting-started/registering/" target="_blank">registering a non-profit organisation<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.</p>
-                                <p>Once you understand which registrations you need for your non-profit organisation you can complete those registrations using the <a href="../registrations.html">Ready to register</a> service.</p>
-                                <h4>Self-managed super funds</h4>
-                                <p>Self-managed super funds are a way of saving for your retirement. Most people contribute to a super fund that’s already been set up.</p>
-                                <p>If you set up a self-managed super fund, you’re in charge. This means you decide where the fund invests its money and you are responsible for meeting super and tax laws.</p>
-                                <p>Due to the broad range of considerations that will affect how you register your self-managed super fund, the registration discovery tool does not cater for Self-managed super funds. Visit the ATO website for more information on <a href="https://www.ato.gov.au/Super/Self-managed-super-funds/" target="_blank">Self-managed super funds<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.</p>
-                                <p>Once you understand which registrations you need for your non-profit organisation you can complete those registrations using the <a href="../registrations.html">Ready to register</a> service.</p>
-                            </div>
-                        </div><!-- showhide -->
-                    </div><!-- cd-panel-content -->
-                </div><!-- cd-panel-container -->
-            </div><!-- cd-panel -->
-        </div>
-        <div id="eligibilityResult" class="wrapper main-container clearfix" style="display:none;">
-            <h1>Registration discovery</h1>
-            <div class="process-message process-alert validation-show">
-                <h2 id="validation-heading">This guide isn’t for you</h2>
-                <div id="eligibilityResultEmployee">
-                    <h3>Apprentices, trainees and other employees</h3>
-                    <p>You don’t need to get an Australian Business Number to work as an employee!</p>
-                    <p>Employees are different to contractors, who set up businesses to hire out their services. </p>
-                    <p>If you’re not sure whether you’re an employee or contractor, try our <a href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" target="_blank">Independent contractors decision tool<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.</p>
-                    <div class="form-tip" id="businessStructureTip">
-                        <p>
-                            If your employer is asking you to register as a contractor when you’re really an employee, you can <a href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" target="_blank">report the business to the Tax Office<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.
-                        </p>
-                    </div>
-                </div>
-                <div id="eligibilityResultOverseas">
-                    <h3>Overseas businesses</h3>
-                    <p>We don’t cover overseas businesses in this guide!</p>
-                    <p>If your overseas business will sell goods or services in Australia, contact the Tax Office for guidance on what taxes you need to register for.</p>
-                    <p>You can come back to our website to register for taxes, if required.</p>
-                    <div class="form-tip" id="businessStructureTip">
-                        <p>
-                            If you’re an Australian resident, you’ll still need to pay tax on business income you earn overseas. Find out more about <a href="https://www.ato.gov.au/business/international-tax-for-business/australians-doing-business-overseas/foreign-business-income/" target="_blank">how foreign business income is taxed by the ATO<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.
-                        </p>
-                    </div>
-                </div>
-                <div id="eligibilityResultOther">
-                    <h3>Non-profit organisations and self-managed super funds</h3>
-                    <p>Non-profit organisations and self-managed super funds are complex to set up and you’ll need time and the right skills to do it properly. It's best to see a qualiﬁed, licensed professional to help you decide.</p>
-                    <ul>
-                        <li>Visit the Tax Office website for more info if you’re <a href="https://www.ato.gov.au/Super/Self-managed-super-funds/Thinking-about-self-managed-super/" target="_blank">thinking about self-managed super<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a> or starting a non-profit organisation</li>
-                        <li>Once you’re ready to go, come back to our website to register your self-managed super fund.</li>
-                    </ul>
-                </div>
-            </div><!-- validation -->
-            <p class="buttons">
-                <button type="button" class="btn btn-default" onclick="showEligibilityTest();">Back to questions</button>
-            </p>
-        </div><!-- main-container -->
-        <div class="footer-container">
-            <footer class="wrapper">
-                <ul>
-                    <li><a href="#">Legal notices</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                    <li><a href="#">Glossary</a></li>
-                    <li><a href="#">Information Publication Scheme</a></li>
-                    <li><a href="#">Site map</a></li>
-                </ul>
-            </footer>
-        </div><!-- footer-container -->
-        <script src="../assets/js/jquery-2.1.1.js"></script>
-        <script src="../assets/js/jquery.collapse.js"></script>
-        <script src="../assets/js/PrintThis.js"></script>
-        <script src="../assets/js/EligibilityTest.js"></script>
+
     </div>
     <div class="proto-message">You are viewing <strong>Prototype B</strong>. <a href="../index.html">Back to index</a></div>
-
-    <script>
-        jQuery(document).ready(function ($) {
-            initEligibilityPage();
-        });
-    </script>
 </body>
 </html>
