@@ -194,11 +194,12 @@ footer p a:visited {
 // Iconography
 // ------------------------------------------------------------------------------------------------------
 
-.tip {
+/*.tip {
   background: transparent url(../img/ico-tip-26.png) no-repeat 0 0;
   min-height: 30px;
   padding: 0 0 0 35px; 
 }
+*/
 
 
 
@@ -259,6 +260,9 @@ footer p a:visited {
   display: table-cell;
   text-align: right;
 }
+.result-cell button {
+  margin-right: 1em;
+}
 .result-icon {
   text-align: right;
   margin: 0 0.5em;
@@ -270,14 +274,19 @@ footer p a:visited {
 }
 .result-title {
   text-align: left;
-  font-weight: bold;
   line-height: 1.2em;
   width: 100%;
+  font-style: italic;
+}
+.result-title strong {
+  font-weight: bold;
+  font-style: normal;
 }
 .result-duration {
   padding-right: 0.5em;
   font-size: 1.15rem;
   width: 100px;
+  width: 130px;
   display: inline-block;
 }
 .result-duration select {

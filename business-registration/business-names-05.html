@@ -41,38 +41,61 @@
                 </ul>
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
-            <p>Enter a name to check its availability. Some names may require manual validation based on <a href="">business naming rules</a>. You can register multiple business names to protect your brand.</p>
+            
+            <div class="result-container">
+              <div class="result-row">
+                <div class="result-icon">
+                  <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+                </div><!-- result-icon -->
+                <div class="result-cell result-title">
+                   <p><strong>Bob's Whitegoods Repairs</strong> - requires validation (<a href="#">What's this?</a>)</p>
+                </div><!-- result-cell -->
+                <div class="result-cell result-duration">
+                  <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                  <select id="registration-duration">
+                      <option value="1" selected="selected">1 year $33</option>
+                      <option value="2">3 years</option>
+                  </select>                  
+                </div><!-- result-cell -->
+                <div class="result-cell result-status">
+                  <p>Added</p>
+                </div><!-- result-status -->
+                <div class="result-cell result-remove">
+                  <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                </div><!-- result-cell -->
+              </div><!-- result-row -->
+            </div>
+
+            <div class="result-container">
+              <div class="result-row">
+                <div class="result-icon">
+                  <img src="assets/img/ico-tick-green.png" alt="Success" />
+                </div><!-- result-icon -->
+                <div class="result-cell result-title">
+                   <p><strong>Bob's Plumbing</strong> - is available</p>
+                </div><!-- result-cell -->
+                <div class="result-cell result-duration">
+                  <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                  <select id="registration-duration">
+                      <option value="1" selected="selected">1 year $33</option>
+                      <option value="2">3 years</option>
+                  </select>                  
+                </div><!-- result-cell -->
+                <div class="result-cell result-status">
+                  <p>Added</p>
+                </div><!-- result-status -->
+                <div class="result-cell result-remove">
+                  <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                </div><!-- result-cell -->
+              </div><!-- result-row -->
+            </div>
+
+            <h2>Add another business name?</h2>
             <div class="card clearfix">
                 <div class="form-row">
                     <label for="name-search">Search for name</label><br />
-                    <input id="name-search" class="larger" type="text" value="Enter new or reserved name"> <button type="button" class="btn btn-default" onclick="location.href='business-names-01.html'">Check</button>
+                    <input id="name-search" type="text" value="Enter new or reserved name"> <button type="button" class="btn btn-default btn-small">Check</button>
                 </div><!-- form-row -->
-                <div class="pricing">
-                  <div class="grid-container">
-                    <div class="grid-row">
-                      <div class="col3">
-                        <h2>Business name costs</h2>
-                        <div class="col6">
-                          <p>1 year<br />
-                          <strong>$33</strong>
-                        </div>
-                        <div class="col6 last">
-                          <p>3 years<br />
-                          <strong>$78</strong>
-                        </div>
-                      </div>
-                      <div class="col3 last">
-                        <!--
-                        <h2>Company names</h2>
-                        <div class="col12 last">
-                          <p>1 year<br />
-                          <strong>$499</strong>
-                        </div>
-                        -->
-                      </div>                          
-                    </div><!-- grid-row -->
-                  </div><!-- grid-container -->
-                </div><!-- pricing -->
             </div><!-- card -->
 
         </main>
@@ -82,7 +105,7 @@
     <div class="controls-container">
         <div class="controls-content">
             <div class="wrapper">
-                <button type="button" class="btn" onclick="location.href='eligibility.html'">Previous</button>
+                <button type="button" class="btn" onclick="location.href='business-names-04.html'">Previous</button>
                 <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
                 <button type="button" class="btn btn-save" onclick="location.href='#'">Save for later</button>
             </div><!-- wrapper --> 
