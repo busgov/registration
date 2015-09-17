@@ -561,31 +561,31 @@ function showResults() {
 
     var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
     if (needGST) {
-        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "No cost", 1));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "Free", 1));
     }
     if (parseboolean(registrations.isTFN)) {
-        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "No cost", 2));
+        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "Free", 2));
     }
     if (parseboolean(registrations.isCompany)) {
-        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year", 3));
+        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$463 for 1 year", 3));
     }
     if (parseboolean(registrations.isBusinessName)) {
-        $('#resultTable tr:last').after(getResult("Business name", "businessName", true, "", "$34 per year", 4));
+        $('#resultTable tr:last').after(getResult("Business name", "businessName", true, "", "$34 for 1 year or $79 for 3 years", 4));
     }
     if (parseboolean(registrations.isPAYG)) {
-        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "No cost", 5));
+        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "Free", 5));
     }
     if (parseboolean(registrations.isFBT)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost", 6));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "Free", 6));
     }
     if (parseboolean(registrations.isLCT) && needGST) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "No cost", 7));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "Free", 7));
     }
     if (parseboolean(registrations.isFTC) && needGST) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "No cost", 8));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "Free", 8));
     }
     if (parseboolean(registrations.isWET) && needGST) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost", 9));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "Free", 9));
     }
     if (!needGST) {
         $("#gstRecommend").show();

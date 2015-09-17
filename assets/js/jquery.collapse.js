@@ -48,7 +48,7 @@
     Collapse.prototype = {
         handleClick: function (e, state) {
             e.preventDefault();
-            var state = state || "toggle"
+            var state = state || "toggle";
             var sections = this.sections,
               l = sections.length;
             while (l--) {
@@ -66,19 +66,26 @@
             if (isFinite(eq)) return this.sections[eq].open();
             $.each(this.sections, function (i, section) {
                 section.open();
-            })
+            });
         },
         close: function (eq) {
             if (isFinite(eq)) return this.sections[eq].close();
             $.each(this.sections, function (i, section) {
                 section.close();
-            })
+            });
+        },
+        closeOther: function (eq) {
+            $.each(this.sections, function (i, section) {
+                if (i != eq) {
+                    section.close();
+                }
+            });
         },
         toggle: function (eq) {
             if (isFinite(eq)) return this.sections[eq].toggle();
             $.each(this.sections, function (i, section) {
                 section.toggle();
-            })
+            });
         }
     };
 
@@ -100,12 +107,12 @@
         var state = parent.states[this._index()];
 
         if (state === 0) {
-            this.close(true)
+            this.close(true);
         }
         else if (this.$summary.is(".open") || state === 1) {
             this.open(true);
         } else {
-            this.close(true)
+            this.close(true);
         }
     }
 
@@ -120,7 +127,7 @@
             var _this = this;
             if (_this.options.accordion && !bypass) {
                 $.each(_this.parent.sections, function (i, section) {
-                    section.close()
+                    section.close();
                 });
             }
             _this._changeState("open", bypass);
@@ -129,7 +136,6 @@
             return $.inArray(this, this.parent.sections);
         },
         _changeState: function (state, bypass) {
-
             var _this = this;
             _this.isOpen = state == "open";
             if ($.isFunction(_this.options[state]) && !bypass) {
@@ -138,10 +144,10 @@
                 _this.$details[_this.isOpen ? "show" : "hide"]();
             }
 
-            _this.$summary.toggleClass("open", state != "close")
-            _this.$details.attr("aria-hidden", state == "close");
-            _this.$summary.attr("aria-expanded", state == "open");
-            _this.$summary.trigger(state == "open" ? "opened" : "closed", _this);
+            _this.$summary.toggleClass("open", state !== "close");
+            _this.$details.attr("aria-hidden", state === "close");
+            _this.$summary.attr("aria-expanded", state === "open");
+            _this.$summary.trigger(state === "open" ? "opened" : "closed", _this);
             if (_this.parent.db) {
                 _this.parent.db.write(_this._index(), _this.isOpen);
             }

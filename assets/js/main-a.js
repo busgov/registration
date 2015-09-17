@@ -281,28 +281,28 @@ function enablePreviousButton() {
 
 function showResults() {
     if (parseboolean(gst)) {
-        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "Free"));
     }
     if (businessStructure == "company") {
-        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$500 per year"));
+        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$463 for 1 year"));
     }
     if (parseboolean(businessName)) {
-        $('#resultTable tr:last').after(getResult("Business Name", "businessname", true, "", "$34 per year"));
+        $('#resultTable tr:last').after(getResult("Business Name", "businessname", true, "", "$34 for 1 year or $79 for 3 years"));
     }
     if (parseboolean(payg)) {
-        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "Free"));
     }
     if (parseboolean(fbt)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "Free"));
     }
     if (parseboolean(lct)) {
-        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "Free"));
     }
     if (parseboolean(ftc)) {
-        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Fuel Tax Credits (FTC)", "ftc", true, "", "Free"));
     }
     if (parseboolean(wet)) {
-        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "No cost"));
+        $('#resultTable tr:last').after(getResult("Wine Equalisation Tax (WET)", "wet", true, "", "Free"));
     }
     if ((parseboolean(ftc) || parseboolean(wet) || parseboolean(lct)) && !parseboolean(gst)) {
         var selectedRegistration = "";
@@ -322,7 +322,7 @@ function showResults() {
             selectedRegistration += "WET, ";
         }
         selectedRegistration = selectedRegistration.substring(0, selectedRegistration.length - 2);
-        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "No cost"));
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", false, "We've also checked GST because you selected <strong>yes</strong> for " + selectedRegistration + " which requires you to be registered for GST.", "Free"));
     }
 }
 
