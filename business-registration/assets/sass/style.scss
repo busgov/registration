@@ -1,0 +1,53 @@
+// CSS will be compiled in the following order
+// ------------------------------------------------------------------------------------------------------
+
+@import "variables";
+// ----- Variables is where reusable attributes are declared, such as colours and font cascades.
+// Widths
+// Colours
+// Padding and radius
+// Typography
+// Mixins
+
+
+@import "normalize";
+// ----- From HTML5 Boilerplate
+
+
+@import "typography";
+// ----- Typography handles basic type properties such as colours and sizing
+// Hyperlinks
+// Font styling
+// Headings
+// Responsive font sizing
+
+
+@import "layout";
+// ----- Layout is containers and ways of joining modules together
+// Layout containers
+// Header
+// Footer
+// system messaging
+// Iconography
+// Feature treatment for pricing on business names page
+// Business name results
+
+
+@import "grid";
+// ----- One% CSS Grid - 12 Columns Fluid CSS Grid System
+// Main container for all
+// Small devices
+
+
+@import "forms";
+// ----- Buttons and form controls
+// Buttons 
+// form elements
+// Group of buttons for navigating regsitration steps
+
+
+@import "modules";
+// ----- Modules are reusable components that can be called from multiple places
+// Main site navigation
+// Registration progress bar
+// Helper classes

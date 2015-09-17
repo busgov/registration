@@ -1,0 +1,11 @@
+    <div class="system-message">
+        <div class="grid-container clearfix">
+            <div class="col10">
+                <p>This is a system message.</p>
+            </div><!-- col -->
+            <div class="col2 last">
+                <button></button>
+            </div><!-- col -->
+        </div><!-- grid -->
+    </div><!-- system-message -->
+s

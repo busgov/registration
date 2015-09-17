@@ -1,0 +1,226 @@
+// ----- Modules are reusable components that can be called from multiple places
+// ------------------------------------------------------------------------------------------------------
+
+
+// Main site navigation
+// ------------------------------------------------------------------------------------------------------
+
+
+// Registration progress bar
+// ------------------------------------------------------------------------------------------------------
+
+.progress-container {
+  display: none;
+}
+@media only screen and (min-width: $break-medium) {
+  .progress-container {
+    position: relative;
+    min-height: 80px;
+    display: block;
+  }
+}
+ul.section-nav {
+  padding: 0;
+  margin: 0;
+  top: -13px;
+  left: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+}
+ul.section-nav li {
+  background: transparent url(../img/sprite-steps.png) no-repeat 50% 5px;
+  display: inline-block;
+  line-height: 1.2em;
+  padding: 0;
+  text-align: center;
+  width: 16%;
+  font-size: $smaller;
+  min-height: 60px;
+  z-index: 100;
+}
+ul.section-nav li.done {
+  background: transparent url(../img/sprite-steps.png) no-repeat 50% -498px; 
+}
+ul.section-nav li.active {
+  background: transparent url(../img/sprite-steps.png) no-repeat 50% -250px;  
+  font-weight: bold;
+}
+ul.section-nav li span {
+  color: white;
+  font-family: $font-heading;
+  font-weight: bold;
+  font-size: 150%;
+  line-height: 60px
+}
+
+ul.section-nav li a,
+ul.section-nav li a:link,
+ul.section-nav li a:visited {
+  color: $brand-blue;
+  text-decoration: none;
+}
+ul.section-nav li a:hover,
+ul.section-nav li a:focus,
+ul.section-nav li a:active {
+  background-color: transparent;
+  color: black;
+}
+
+.progress-bar {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 2em 0 2em 0; /* Just for demo spacing */
+    background: #ccc;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    padding: 6px;
+    z-index: 50;
+}
+.progress-bar > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10x;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(60,134,196);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(60,134,196)),
+      color-stop(1, rgb(49,121,181))
+     );
+    background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(60,134,196) 37%,
+      rgb(49,121,181) 69%
+     );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+// Helper classes
+// ------------------------------------------------------------------------------------------------------
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after { 
+  clear: both 
+}
+.clearfix { 
+  zoom: 1 
+}
+.smaller {
+  font-size: $smaller;
+}
+.smallest {
+  font-size: $smallest;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.card {
+  background: rgba(249,249,249,1);
+  background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(238,238,238,1)));
+  background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
+  background: -o-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
+  background: -ms-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
+  background: linear-gradient(to bottom, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
+  padding: 1em;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin: 1em 0;
+}
+.microcopy {
+  color: $gray-dark;
+  line-height: 1;
+}
+.field-note {
+  color: #999; 
+  font-size: 90%; 
+  font-style: italic;
+}
+.toc {
+  background-color: $brand-blue;
+  padding: 0.25em 1em 1em 1em;
+}
+.toc h1 {
+  color: white;
+}
+.toc li,
+.toc li a,
+.toc li a:link,
+.toc li a:visited {
+  color: white;
+  padding: 0.15em 0.25em;
+  text-decoration: none;
+}
+.toc li a:hover,
+.toc li a:focus,
+.toc li a:active {
+  background-color: white;
+  color: black;
+}
+
+
+
+// Responsive video
+
+.video-container,
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 1em 0 1em 0;
+}
+.iframe-container {
+  padding-bottom: 35em;
+}
+.video-container iframe, 
+.video-container object, 
+.video-container embed, 
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,197 @@
+// ----- Buttons and form controls
+// ------------------------------------------------------------------------------------------------------
+
+
+// Buttons
+// ------------------------------------------------------------------------------------------------------
+
+
+.btn {
+  background-color: white;
+  border: 1px solid $button-start-color;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: $button-start-color;
+  cursor: pointer;
+  line-height: 1em;
+  padding: 0.72em 1em;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+  margin-right: 0.5em;
+}
+
+
+/* The default button is more visually distinctive and should only appear once on the page */
+
+.btn-default {
+  background: rgba(79,143,230,1);
+  background: -moz-linear-gradient(top, rgba(79,143,230,1) 0%, rgba(54,122,179,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(79,143,230,1)), color-stop(100%, rgba(54,122,179,1)));
+  background: -webkit-linear-gradient(top, rgba(79,143,230,1) 0%, rgba(54,122,179,1) 100%);
+  background: -o-linear-gradient(top, rgba(79,143,230,1) 0%, rgba(54,122,179,1) 100%);
+  background: -ms-linear-gradient(top, rgba(79,143,230,1) 0%, rgba(54,122,179,1) 100%);
+  background: linear-gradient(to bottom, rgba(79,143,230,1) 0%, rgba(54,122,179,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f8fe6', endColorstr='#367ab3', GradientType=0 );
+  color: $button-color;
+  border: 1px solid $button-start-color;
+  font-weight: bold;  
+  margin-right: 0;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: $button-bg-hover;
+  border: 1px solid $button-bg-hover;
+  color: $button-color;
+  -webkit-box-shadow: 0 0 2px 0 rgba(47,45,43,.5);
+  box-shadow: 0 0 2px 0 rgba(47,45,43,.75);
+}
+.btn-small {
+  padding: 0.5em 0.75em;
+  font-weight: normal;  
+}
+fieldset .btn {
+  padding: 0.25em 0.5em;
+  margin-left: 0.25em;
+  font-weight: normal; 
+  font-size: 70%;   
+}
+button[disabled], html input[disabled] {
+  cursor: default;
+  color: $button-disabled;
+}
+.btn-disabled, .btn[disabled], fieldset[disabled] .btn {
+    border: 1px solid $button-disabled-border;
+    background: white;
+    color: $button-disabled;
+    cursor: not-allowed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none;
+}
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  background: white;
+  border: 1px solid $button-disabled-border;
+  color: $button-disabled;
+}
+
+
+/* Custom save button with exit icon */
+
+.btn-save {
+  background-color: white;
+  background: white url(../img/sprite-exit.png) no-repeat 8px 14px;
+  color: $brand-blue;
+  border: none;
+  font-weight: normal;  
+  margin: 0 0 0 0.5em;
+  float: right;
+  padding: 0.6em 0.5em 0.6em 1.5em;
+}
+.btn-save:hover,
+.btn-save:focus,
+.btn-save:active {
+  background: black url(../img/sprite-exit.png) no-repeat 8px -144px;
+}
+
+
+/* Custom added button with less padding */
+
+.btn-added {
+  background: #FFFFD0;
+  border: 1px solid #cccccc;
+  color: #636563;
+  padding: 0.5em 0.5em;
+  font-size: 1.15rem;
+}
+
+
+/* Custom remove button with cross icon */
+
+.btn-remove {
+  background: #eeeeee url(../img/sprite-remove.png) no-repeat 50% 0;
+  border: 1px solid #cccccc;
+  font-weight: normal;
+  min-height: 38px;
+  width: 38px;
+}
+.btn-remove:hover,
+.btn-remove:focus,
+.btn-remove:active {
+  background: black url(../img/sprite-remove.png) no-repeat 50% -281px;
+}
+
+
+// Form elements
+// ------------------------------------------------------------------------------------------------------
+
+.form-row {
+  clear: both;
+  margin: 0 0 0.25em 0;
+}
+@media only screen and (min-width: $break-large) {
+  label.input-right {
+    display: block;
+    text-align: right;
+  }
+}
+
+input:hover,
+input:focus,
+input:active {
+  background-color: $input-focus;
+  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+input, select, textarea {
+  font-family: $font-light;
+  line-height: 1;
+  padding: 0.35em 0.25em;
+}
+input[type=text],
+input[type=date],
+input[type=tel],
+input[type=email],
+input[type=number],
+textarea,
+select {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #666666;
+  border: 1px solid #BBBBBB !important;
+  width: 100%;
+  max-width: 24em;
+  margin: 0.4em 0.25em 0.4em 0;
+}
+input[type=date],
+input[type=tel],
+input[type=number] {
+  width: 10em;
+}
+input[type=checkbox],
+input[type=radio] {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+  margin: 0.4em 0.25em 0.4em 0;
+}
+input.larger {
+  padding: 0.57em 0.5em;  
+}
+
