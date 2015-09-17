@@ -1,0 +1,351 @@
+// ----- Layout is containers and ways of joining modules together
+// ------------------------------------------------------------------------------------------------------
+
+
+// Layout containers
+// ------------------------------------------------------------------------------------------------------
+
+body {
+    margin: 0 auto;
+    max-width: $content-max-width;
+}
+.wrapper {
+    width: 94%;
+    margin: 0 3%;
+}
+.wrapper-main {
+  margin-bottom: 100px;
+}
+
+
+// Header
+// ------------------------------------------------------------------------------------------------------
+
+header {
+  border-bottom: 10px solid $brand-blue;
+}
+header {
+  background-color: white;
+}
+header .brand {
+  margin: 1em 0;
+}
+header .brand span::before { 
+  content: "\00AB  ";
+}
+header .brand a,
+header .brand a:link,
+header .brand a:visited {
+    display: block;
+    padding: 15px;
+    background: $brand-blue;
+    color: white;
+    text-decoration: none;
+}
+header .brand a:hover,
+header .brand a:focus,
+header .brand a:active {
+    background: $brand-hover-bg;
+    color: $brand-hover-fg;
+}
+
+@media only screen and (min-width: $break-small) {
+  header .brand span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  header .brand a,
+  header .brand a:link,
+  header .brand a:visited {
+      background: transparent url(../img/brand.png) no-repeat 0 0;
+      width: 300px;
+      height: 20px;
+      background-size: cover;
+      margin-top: 0;
+  }
+  header .brand a:hover,
+  header .brand a:focus,
+  header .brand a:active {
+      background: transparent url(../img/brand.png) no-repeat 0 -116px;
+      background-size: cover;
+  }
+}
+
+@media only screen and (min-width: $break-large) {
+
+  header .brand a,
+  header .brand a:link,
+  header .brand a:visited {
+      background: transparent url(../img/brand.png) no-repeat 0 0;
+      width: 400px;
+      height: 30px;
+      margin-top: 0;
+  }
+  header .brand a:hover,
+  header .brand a:focus,
+  header .brand a:active {
+      background: transparent url(../img/brand.png) no-repeat 0 -140px;
+  }
+}
+
+
+// Group of buttons for navigating regsitration steps
+// ------------------------------------------------------------------------------------------------------
+
+.controls-container {
+  background: transparent url(../img/bg-controls.png) repeat-x 0 0;
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 20px;
+}
+.controls-content {
+    background-color: white;
+    padding: 15px 0 15px 0;
+    margin: 0 auto;
+    max-width: $content-max-width;
+}
+
+
+// Footer
+// ------------------------------------------------------------------------------------------------------
+
+footer {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+footer ul {
+    background: $bg-footer;
+    margin: 0;
+    padding: 0;
+}
+footer li {
+    list-style-type: none;
+    font-size: $smaller;
+    margin: 0;
+    padding: 0;
+}
+footer a,
+footer a:link,
+footer a:visited {
+  color: $gray;
+  background-color: transparent;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+}
+footer a:hover,
+footer a:focus,
+footer a:active {
+  color: white;
+  background-color: black;
+}
+footer p {
+  text-align: center;
+}
+footer p a,
+footer p a:link,
+footer p a:visited {
+  display: inline;
+  padding: 0.3em 0.1em;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: $break-medium) {
+    footer {
+      margin: 2em 0 0 0;
+    }
+    footer li {
+        display: inline-block;
+        padding: 0.1em 0;
+        margin: 0.4em 0.5em 0.4em 0.5em;
+    }
+    footer li:last-child {
+        margin: 0.4em 0 0.4em 0.5em;
+    }
+}
+
+
+// System messaging
+// ------------------------------------------------------------------------------------------------------
+
+.system-message {
+  background: $system-message-bg;
+  padding: 0.5em 1em;
+}
+.system-message p {
+  background: transparent url(../img/ico-system.png) no-repeat 0 0;
+  min-height: 38px;
+  padding: 0.25em 0 0 45px;
+}
+
+
+// Iconography
+// ------------------------------------------------------------------------------------------------------
+
+/*.tip {
+  background: transparent url(../img/ico-tip-26.png) no-repeat 0 0;
+  min-height: 30px;
+  padding: 0 0 0 35px; 
+}
+*/
+
+
+
+// Feature treatment for pricing on business names page
+// ------------------------------------------------------------------------------------------------------
+
+.pricing {
+  margin: 2em 0 0 0;
+  text-align: center;
+}
+.pricing h2 {
+  color: white;
+  text-transform: uppercase;
+  background-color: #666;
+  padding: 0.5em;
+  font-size: 70%;
+  margin: 0 0 1em 0;
+}
+.pricing strong {
+  font-size: 120%;
+  font-family: $font-heading;
+  font-weight: bold;
+}
+.pricing .col6 {
+  border-right: 1px solid white;
+}
+.pricing .col6.last {
+  border: 0;
+}
+
+
+// Business name results
+// ------------------------------------------------------------------------------------------------------
+
+.result-container {
+  background-color: $gray-bg;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 0 0 0.25em 0;
+  margin: 0.5em 0 0 0;
+  display: table;
+  width: 100%;
+}
+.result-success {
+  background-color: $success-bg;
+}
+.result-amber {
+  background-color: $amber-bg;
+}
+.result-row input {
+  display: inline-block;
+}
+.result-row {
+  display: table-row;
+}
+.result-cell {
+  display: table-cell;
+  text-align: right;
+}
+.result-cell button {
+  margin-right: 1em;
+}
+.result-icon {
+  text-align: right;
+  margin: 0 0.5em;
+  padding: 0;
+  width: 50px;
+}
+.result-icon img {
+  vertical-align: middle;
+}
+.result-title {
+  text-align: left;
+  line-height: 1.2em;
+  width: 100%;
+  font-style: italic;
+}
+.result-title strong {
+  font-weight: bold;
+  font-style: normal;
+}
+.result-duration {
+  padding-right: 0.5em;
+  font-size: 1.15rem;
+  width: 100px;
+  width: 130px;
+  display: inline-block;
+}
+.result-duration select {
+  border: 1px solid red #cccccc;
+}
+.result-status p {
+  background: rgba(255,255,255,.75);
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: #636563;
+  margin: 0 0.5em 0 0;
+  line-height: 1.4em;
+  font-size: 1.15rem;
+  padding: 0.3em 0.5em 0.5em 0.5em;
+}
+.result-added {
+  width: 85px;
+}
+.result-remove {
+  width: 40px;
+}
+
+
+// Collapsable sections within each main registration step
+// ------------------------------------------------------------------------------------------------------
+
+.sub-section-container h2 {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: $gray-bg;
+  padding: 0.4em 0.5em 0.4em 0;
+  font-size: 1.5rem;
+}
+.sub-section-container h2 span {
+  -webkit-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
+  background: $brand-blue url(../img/sprite-expand-collapse.png) no-repeat 10px -119px;
+  font-size: 80%;
+  color: white;
+  padding: 0.6em 0.75em 0.55em 2.75em;
+}
+.sub-section-container h2 a,
+.sub-section-container h2 a:link,
+.sub-section-container h2 a:visited {
+  background-color: transparent;
+  color: black;
+  text-decoration: none; 
+}
+.sub-section-container h2 a:hover,
+.sub-section-container h2 a:focus,
+.sub-section-container h2 a:active {
+}
+.sub-section-open.sub-section-container h2 span {
+    background: black url(../img/sprite-expand-collapse.png) no-repeat 10px -377px;
+}
+.sub-section-content {
+  display: none;
+}
+.sub-section-open .sub-section-content  {
+  display: block;
+}
