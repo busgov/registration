@@ -134,7 +134,7 @@ function applyStyle() {
     if (step === 5) {
         showRegistrationsHepContent();
     }
-   
+
     /* Expand collapse headings config */
     help = new jQueryCollapse($(".showhide"), {
         open: function () {
@@ -496,6 +496,33 @@ function prepareActivityPage() {
     previousAction = actions.employeeStep;
     nextAction = actions.finishedStep;
 
+    $(":checkbox").click(function () {
+        if (this.id !== 'ckNone') {
+            if ($("#ckNone").prop("checked")) {
+                $("#ckNone").trigger("click");
+            }
+        } else {
+            {
+                if ($("#ckNone").prop("checked")) {
+                    applicationType.noneOfAbove = true;
+                    $(":checkbox").each(function (i, element) {
+                        if (element.id !== "ckNone" && $(element).prop('checked')) {
+                            $(element).trigger('click');
+                        }
+                    });
+                }
+            }
+        }
+    });
+    // none of the above
+    $("#ckNone").click(function () {
+        applicationType.noneOfAbove = $("#ckNone").prop('checked');
+    });
+
+    if (applicationType.noneOfAbove !== undefined) {
+        setCheckBox("#ckNone", applicationType.noneOfAbove);
+    }
+
     // turnover 75k and over
     $("#ckTurnover75k").click(function () {
         applicationType.turnOver75k = $("#ckTurnover75k").prop('checked');
@@ -507,7 +534,6 @@ function prepareActivityPage() {
     // taxi
     $("#ckTaxi").click(function () {
         applicationType.taxi = $("#ckTaxi").prop('checked');
-
     });
 
     if (applicationType.taxi != undefined) {
