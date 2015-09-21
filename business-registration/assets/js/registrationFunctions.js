@@ -43,3 +43,18 @@ function initialiseRegistrationCollapse(speed, openTheFristSection) {
     });
     return section;
 }
+
+function toggleElementAndClear(elementId) {
+    if ($("#" + elementId).is(":visible")) {
+        $('#' + elementId).slideUp();
+        $('#' + elementId + ' :radio').each(function () {
+            $(this).prop('checked', false);
+        });
+        $('#' + elementId + " :input").each(function () {
+            $(this).val("");
+        });
+    } else {
+        $('#' + elementId).slideDown();
+    }
+    
+}

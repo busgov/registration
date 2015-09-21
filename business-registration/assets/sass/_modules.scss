@@ -114,6 +114,31 @@ ul.section-nav li a:active {
 }
 
 
+// Styling content within forms
+// ------------------------------------------------------------------------------------------------------
+
+.no-margin-top {
+  margin-top: 0;
+}
+.microcopy {
+  color: $gray-dark;
+  line-height: 1;
+}
+.field-note {
+  color: #999; 
+  font-size: 90%; 
+  font-style: italic;
+}
+
+/* Yellow animated fade */
+.yellow-fade {
+   background: $yellow-fade;
+   transition: background 1s ease-in-out;
+   -moz-transition: background 1s ease-in-out;
+   -webkit-transition: background 1s ease-in-out;
+}
+
+
 // Helper classes
 // ------------------------------------------------------------------------------------------------------
 
@@ -167,15 +192,8 @@ ul.section-nav li a:active {
   border-radius: 6px;
   margin: 1em 0;
 }
-.microcopy {
-  color: $gray-dark;
-  line-height: 1;
-}
-.field-note {
-  color: #999; 
-  font-size: 90%; 
-  font-style: italic;
-}
+
+/* Table of contents for style guide */
 .toc {
   background-color: $brand-blue;
   padding: 0.25em 1em 1em 1em;
