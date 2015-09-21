@@ -114,23 +114,6 @@ ul.section-nav li a:active {
 }
 
 
-// Styling content within forms
-// ------------------------------------------------------------------------------------------------------
-
-.no-margin-top {
-  margin-top: 0;
-}
-.microcopy {
-  color: $gray-dark;
-  line-height: 1;
-}
-.field-note {
-  color: #999; 
-  font-size: 90%; 
-  font-style: italic;
-}
-
-
 // Helper classes
 // ------------------------------------------------------------------------------------------------------
 
@@ -184,8 +167,15 @@ ul.section-nav li a:active {
   border-radius: 6px;
   margin: 1em 0;
 }
-
-/* Table of contents for style guide */
+.microcopy {
+  color: $gray-dark;
+  line-height: 1;
+}
+.field-note {
+  color: #999; 
+  font-size: 90%; 
+  font-style: italic;
+}
 .toc {
   background-color: $brand-blue;
   padding: 0.25em 1em 1em 1em;

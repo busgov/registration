@@ -143,10 +143,6 @@ button[disabled], html input[disabled] {
   clear: both;
   margin: 0 0 0.25em 0;
 }
-.form-row-line {
-  border-bottom: 1px solid $brand-bg;
-  padding: 2em 0;
-}
 @media only screen and (min-width: $break-large) {
   label.input-right {
     display: block;
