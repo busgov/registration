@@ -1230,6 +1230,53 @@ input[type=radio] {
 input.larger {
   padding: 0.57em 0.5em; }
 
+/* line 206, ../sass/_forms.scss */
+#radio-toggle label {
+  float: left;
+  width: 100px;
+  margin: 0.5em 0;
+  background-color: #EFEFEF;
+  border-radius: 4px;
+  padding: 0;
+  border: 1px solid #D0D0D0;
+  overflow: auto; }
+
+/* line 216, ../sass/_forms.scss */
+#radio-toggle label.label-left {
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  border-right: 0; }
+
+/* line 221, ../sass/_forms.scss */
+#radio-toggle label.label-right {
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0; }
+
+/* line 225, ../sass/_forms.scss */
+#radio-toggle label:hover {
+  background-color: #fff; }
+
+/* line 228, ../sass/_forms.scss */
+#radio-toggle label span {
+  text-align: center;
+  padding: 10px 0px;
+  display: block;
+  cursor: pointer; }
+
+/* line 234, ../sass/_forms.scss */
+#radio-toggle label input {
+  position: absolute;
+  top: -20px; }
+
+/* line 238, ../sass/_forms.scss */
+#radio-toggle input:checked + span {
+  -webkit-box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.1);
+  background: #3679b3;
+  color: #FFFFFF;
+  border-color: #2366a1; }
+
 /* line 12, ../sass/_modules.scss */
 .progress-container {
   display: none; }
@@ -1347,35 +1394,56 @@ ul.section-nav li a:active {
   font-style: italic; }
 
 /* Yellow animated fade */
-/* line 134, ../sass/_modules.scss */
-.yellow-fade {
-  background: yellow;
-  transition: background 1s ease-in-out;
-  -moz-transition: background 1s ease-in-out;
-  -webkit-transition: background 1s ease-in-out; }
+@-webkit-keyframes fade {
+  from {
+    background-color: #fffe9b; }
+  to {
+    background-color: #e4e5e5; } }
+@-moz-keyframes fade {
+  from {
+    background-color: #fffe9b; }
+  to {
+    background-color: #e4e5e5; } }
+@keyframes fade {
+  from {
+    background-color: #fffe9b; }
+  to {
+    background-color: #e4e5e5; } }
+/* line 139, ../sass/_modules.scss */
+.fade-in {
+  background-color: #e4e5e5;
+  -webkit-animation-name: fade;
+  -moz-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
-/* line 145, ../sass/_modules.scss */
+/* line 156, ../sass/_modules.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table; }
 
-/* line 149, ../sass/_modules.scss */
+/* line 160, ../sass/_modules.scss */
 .clearfix:after {
   clear: both; }
 
-/* line 152, ../sass/_modules.scss */
+/* line 163, ../sass/_modules.scss */
 .clearfix {
   zoom: 1; }
 
-/* line 155, ../sass/_modules.scss */
+/* line 166, ../sass/_modules.scss */
 .smaller {
   font-size: 90%; }
 
-/* line 158, ../sass/_modules.scss */
+/* line 169, ../sass/_modules.scss */
 .smallest {
   font-size: 80%; }
 
-/* line 161, ../sass/_modules.scss */
+/* line 172, ../sass/_modules.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1386,7 +1454,7 @@ ul.section-nav li a:active {
   position: absolute;
   width: 1px; }
 
-/* line 171, ../sass/_modules.scss */
+/* line 182, ../sass/_modules.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1396,7 +1464,7 @@ ul.section-nav li a:active {
   position: static;
   width: auto; }
 
-/* line 181, ../sass/_modules.scss */
+/* line 192, ../sass/_modules.scss */
 .card {
   background: #f9f9f9;
   background: -moz-linear-gradient(top, #f9f9f9 0%, #eeeeee 100%);
@@ -1412,16 +1480,16 @@ ul.section-nav li a:active {
   margin: 1em 0; }
 
 /* Table of contents for style guide */
-/* line 197, ../sass/_modules.scss */
+/* line 208, ../sass/_modules.scss */
 .toc {
   background-color: #3179b5;
   padding: 0.25em 1em 1em 1em; }
 
-/* line 201, ../sass/_modules.scss */
+/* line 212, ../sass/_modules.scss */
 .toc h1 {
   color: white; }
 
-/* line 204, ../sass/_modules.scss */
+/* line 215, ../sass/_modules.scss */
 .toc li,
 .toc li a,
 .toc li a:link,
@@ -1430,14 +1498,14 @@ ul.section-nav li a:active {
   padding: 0.15em 0.25em;
   text-decoration: none; }
 
-/* line 212, ../sass/_modules.scss */
+/* line 223, ../sass/_modules.scss */
 .toc li a:hover,
 .toc li a:focus,
 .toc li a:active {
   background-color: white;
   color: black; }
 
-/* line 223, ../sass/_modules.scss */
+/* line 234, ../sass/_modules.scss */
 .video-container,
 .iframe-container {
   position: relative;
@@ -1447,11 +1515,11 @@ ul.section-nav li a:active {
   overflow: hidden;
   margin: 1em 0 1em 0; }
 
-/* line 232, ../sass/_modules.scss */
+/* line 243, ../sass/_modules.scss */
 .iframe-container {
   padding-bottom: 35em; }
 
-/* line 235, ../sass/_modules.scss */
+/* line 246, ../sass/_modules.scss */
 .video-container iframe,
 .video-container object,
 .video-container embed,

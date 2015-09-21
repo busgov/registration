@@ -137,13 +137,11 @@
                             <div class="col4">
                                 <label for="gender" class="input-right">Gender</label>
                             </div><!-- col -->
-                            <div class="col2">
-                                <input id="gender1" name="gender" type="radio">
-                                <label for="gender1">Male</label>
-                            </div>
-                            <div class="col6 last">
-                                <input id="gender2" name="gender" type="radio">
-                                <label for="gender2">Female</label>
+                            <div class="col8 last">
+                                <div id="radio-toggle">
+                                    <label class="on label-left" for="on"><input id="on" type="radio" name="gender"><span>Male</span></label>
+                                    <label class="off label-right" for="off"><input id="off" type="radio" name="gender"><span>Female</span></label>
+                                </div>
                             </div><!-- col -->
                         </div><!-- grid-row -->
 
@@ -158,11 +156,11 @@
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="address-suggest" type="text" placeholder="Start typing address">
-                                <p><a href="" id="manual" >Can't find address</a></p>
+                                <p><a href="" id="manual">Can't find address</a></p>
                             </div><!-- col -->
                         </div><!-- grid-row -->
-
-                        <div id="manualAddress">
+                       
+                        <div class="grid-container" id="manualAddress" style="display: none">
                             <div class="grid-row">
                                 <div class="col4">
                                     <label for="address-line1" class="input-right">Address line 1</label>
@@ -287,17 +285,25 @@
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
-    <script src="assets/js/registrationFunctions.js"></script>
+    <script src="assets/js/RegistrationFunctions.js"></script>
     <script>
 
         $(document).ready(function () {
             /* Expand collapse headings config */
-            initialiseRegistrationCollapse(150, true);
+            initialiseRegistrationCollapse(200, true);
 
             $("#auth").click(function () {
                 toggleElementAndClear("authFieldset");
             }
             );
+
+            $("#manual").click(function (e) {
+                e.preventDefault();
+                $("#address-suggest").hide();
+                $(this).hide();
+                $("#manualAddress").slideDown();
+                
+            });
         });
     </script>
 </body>

@@ -131,11 +131,22 @@ ul.section-nav li a:active {
 }
 
 /* Yellow animated fade */
-.yellow-fade {
-   background: $yellow-fade;
-   transition: background 1s ease-in-out;
-   -moz-transition: background 1s ease-in-out;
-   -webkit-transition: background 1s ease-in-out;
+
+@-webkit-keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+@-moz-keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+@keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+
+.fade-in {
+    background-color: $gray-bg;
+    -webkit-animation-name: fade;
+    -moz-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
 }
 
 

@@ -199,3 +199,48 @@ input.larger {
   padding: 0.57em 0.5em;  
 }
 
+
+// Restyled radio buttons
+// ------------------------------------------------------------------------------------------------------
+
+#radio-toggle label {
+  float:left;
+  width:100px;
+  margin: 0.5em 0;
+  background-color:#EFEFEF;
+  border-radius:4px;
+  padding: 0;
+  border:1px solid #D0D0D0;
+  overflow:auto;       
+}
+#radio-toggle label.label-left {
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+}
+#radio-toggle label.label-right {
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+#radio-toggle label:hover {
+  background-color:#fff;
+}
+#radio-toggle label span {
+  text-align:center;
+  padding:10px 0px;
+  display:block;
+  cursor: pointer;
+}
+#radio-toggle label input {
+  position:absolute;
+  top:-20px;
+}
+#radio-toggle input:checked + span {
+  -webkit-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+  background: #3679b3;
+  color: #FFFFFF;
+  border-color: #2366a1;
+}
+
