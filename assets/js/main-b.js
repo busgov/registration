@@ -498,7 +498,7 @@ function prepareActivityPage() {
 
     $(":checkbox").click(function () {
         if (this.id !== 'ckNone') {
-            if ($("#ckNone").prop("checked")) {
+            if ($("#ckNone").prop("checked") && $(this).prop("checked")) {
                 $("#ckNone").trigger("click");
             }
         } else {

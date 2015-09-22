@@ -52,7 +52,7 @@ function initEligibilityPage() {
 }
 
 function loadQuestionHelp() {
-    var templateDirectory = "templates/"
+    var templateDirectory = "templates/";
     $("#heading").html(steps[step][0]);
     //$("#heading").focus();
     $("#stepNo").html(displayStepNumber);
@@ -82,7 +82,7 @@ function loadQuestionHelp() {
             });
         }
     });
-    $("#helpFile").load(templateDirectory + steps[step][1] + "_help.html?t=" + dformat, function () { setTimeout(applyStyle, 0); });
+    $("#helpFile").load(templateDirectory + steps[step][1] + "_help.html?t=" + dformat, function () { setTimeout(applyStyle, 10); });
 }
 
 function applyStyle() {
