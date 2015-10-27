@@ -100,6 +100,9 @@ h3 {
 p {
   font-family: $font-light;
 }
+p.intro {
+  font-size: $larger;
+}
 li {
   padding: 0.15em 0;
   font-family: $font-light;
@@ -115,6 +118,114 @@ ul.lines li {
   margin: 0;
   padding: 0.25em 0;
   font-size: 90%;
+}
+
+
+// Tables
+// ------------------------------------------------------------------------------------------------------
+
+table {
+    border-spacing: 0;
+    width: 100%;    
+    border: solid $table-lines 1px;
+    /*
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px $table-lines; 
+    -moz-box-shadow: 0 1px 1px $table-lines; 
+    box-shadow: 0 1px 1px $table-lines; 
+    */
+    margin-bottom: 2em;        
+}
+caption {
+  background: transparent url(../img/ico-ticks.png) no-repeat 0 0;
+  padding: 0.25em 0 0 55px;
+  min-height: 45px;
+  text-align: left;
+  font-size: 130%;
+  margin: 0.5em 0;
+  font-weight: normal;
+}
+caption span {
+  font-size: 70%;
+}
+caption span button {
+  margin-bottom: 0.5em;
+  margin-left: 0.25em;
+}
+tr:hover {
+    background: $blue-paler;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}       
+td, 
+th {
+    border-left: 1px solid $table-lines;
+    border-top: 1px solid $table-lines;
+    padding: 1em 0.5em 1em 1em;
+    text-align: left;    
+}
+th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    border-top: none;
+}
+td {
+  font-weight: normal;
+}
+
+
+/* Confirmation screen table */
+main.confirmation caption {
+  background: none;
+  border-top: 6px solid $brand-blue;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 1em 0 0 0;
+}
+main.confirmation td,
+main.confirmation th {
+    padding: 0.5em 0.5em 0.5em 1em; 
+    vertical-align: top;
+}
+main.confirmation td:first-child {
+  border-top: 0;
+}
+main.confirmation td.field-name {
+  width: 35%;
+  text-align: right;
+}
+main.confirmation td.input-value {
+  width: 65%;
+}
+td.centre,
+th.centre {
+  text-align: center;
+}
+
+
+// Confirmation layout
+// ------------------------------------------------------------------------------------------------------
+
+.confirmation-heading {
+  border-top: 1px solid $blue-light;
+  margin: 2em 0 0 0;
+}
+.confirmation-heading h2 {
+  background-color: white;
+  padding-top: 0 !important;
+}
+.confirmation-heading button {
+  float: right;
 }
 
 

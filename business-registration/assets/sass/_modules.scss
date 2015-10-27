@@ -24,7 +24,7 @@ ul.section-nav {
   margin: 0;
   top: -13px;
   left: 0;
-  z-index: 100;
+  /*z-index: 100;*/
   position: absolute;
   width: 100%;
 }
@@ -37,7 +37,7 @@ ul.section-nav li {
   width: 16%;
   font-size: $smaller;
   min-height: 60px;
-  z-index: 100;
+  z-index: 10;
 }
 ul.section-nav li.done {
   background: transparent url(../img/sprite-steps.png) no-repeat 50% -498px; 
@@ -78,7 +78,7 @@ ul.section-nav li a:active {
     -webkit-border-radius: 15px;
     border-radius: 15px;
     padding: 6px;
-    z-index: 50;
+    /*z-index: 50;*/
 }
 .progress-bar > span {
     display: block;
@@ -118,16 +118,30 @@ ul.section-nav li a:active {
 // ------------------------------------------------------------------------------------------------------
 
 .no-margin-top {
-  margin-top: 0;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  line-height: 1;
+}
+.no-margin {
+  margin: 0 !important;
 }
 .microcopy {
   color: $gray-dark;
   line-height: 1;
 }
 .field-note {
-  color: #999; 
+  color: $lightest-gray; 
   font-size: 90%; 
   font-style: italic;
+  line-height: 1em;
+}
+legend .field-note {
+  font-size: 80%; 
+  display: block;
+  font-style: normal; 
+  line-height: normal;
+  font-family: $font-light;
+  margin: 1em 0 0 0;
 }
 
 /* Yellow animated fade */
@@ -188,7 +202,9 @@ ul.section-nav li a:active {
     position: static;
     width: auto;
 }
-
+.nowrap {
+  white-space: nowrap;
+}
 .card {
   background: rgba(249,249,249,1);
   background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(238,238,238,1) 100%);
@@ -228,6 +244,94 @@ ul.section-nav li a:active {
 }
 
 
+// System messaging
+// ------------------------------------------------------------------------------------------------------
+
+.system-message {
+  /* background: $blue-paler url(../img/ico-chat.png) no-repeat 16px 1.75em; */
+  background-color: $blue-paler;
+  padding: 1em 1em 0.5em 1em;
+  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+.system-message .icon {
+  display: none;
+}
+.system-message img {
+  max-width: 50px;
+  vertical-align: middle;
+}
+.system-message .close p a,
+.system-message .close p a:link,
+.system-message .close p a:visited {
+  background: transparent url(../img/sprite-close.png) no-repeat 5px 5px;
+  color: $brand-blue;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 10px 14px 50px;
+}
+.system-message .close p a:hover,
+.system-message .close p a:focus,
+.system-message .close p a:active {
+  background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 5px -107px;
+  color: $brand-hover-fg;
+}
+
+@media only screen and (min-width: $break-medium) {
+  .system-message .close p a,
+  .system-message .close p a:link,
+  .system-message .close p a:visited {
+    background: transparent url(../img/sprite-close.png) no-repeat 100% 5px;
+    padding: 10px 55px 14px 10px;
+  }
+  .system-message .close p a:hover,
+  .system-message .close p a:focus,
+  .system-message .close p a:active {
+    background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 100% -107px;
+  }
+  .system-message-content {
+    background: transparent url(../img/ico-chat.png) no-repeat 0 0.5em;
+    padding: 0.25em 0 0 55px;
+  }
+  .system-message .close {
+    text-align: right;
+  }
+}
+
+
+// Print
+// ------------------------------------------------------------------------------------------------------
+
+.print a,
+.print a:link,
+.print a:visited {
+  background: transparent url(../img/ico-print.png) no-repeat 5px 0;
+  padding: 0 5px 10px 45px;
+}
+@media only screen and (min-width: $break-large) {
+  .print a,
+  .print a:link,
+  .print a:visited {
+    background: transparent url(../img/sprite-print.png) no-repeat 7px 5px;
+    display: inline-block;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    float: right;
+    padding: 8px 7px 15px 53px;
+    margin-top: -90px;
+  }
+}
+.print a:hover,
+.print a:active,
+.print a:focus {
+    background: black url(../img/sprite-print.png) no-repeat 7px -108px;
+}
+
+
 
 // Responsive video
 
@@ -252,4 +356,475 @@ ul.section-nav li a:active {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+/* check these for usage */
+
+              .form-help {
+                  margin: 0.4em 0 0.4em 0;
+                  line-height: 1em;
+              }
+
+              .form-help img {
+                  display: inline;
+                  width: 34px;
+                  height: 34px;
+                  margin: 0 0 1.25em 0;
+                  vertical-align: middle;
+              }
+
+              .form-help a:hover,
+              .form-help a:focus,
+              .form-help a:active {
+                  background-color: transparent;
+                  color: black;
+              }
+
+              .form-help-text {
+                  margin: 0 0 0 0.5em;
+                  line-height: 2.25em;
+              }
+
+
+// Slide out help panel
+// ------------------------------------------------------------------------------------------------------
+
+/* http://codyhouse.co/gem/css-slide-in-panel/ */
+.cd-panel {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    -webkit-transition: visibility 0s 0.6s;
+    -moz-transition: visibility 0s 0.6s;
+    transition: visibility 0s 0.6s;
+}
+
+    .cd-panel::after {
+        /* overlay layer */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        -webkit-transition: background 0.3s 0.3s;
+        -moz-transition: background 0.3s 0.3s;
+        transition: background 0.3s 0.3s;
+    }
+
+    .cd-panel.is-visible {
+        visibility: visible;
+        -webkit-transition: visibility 0s 0s;
+        -moz-transition: visibility 0s 0s;
+        transition: visibility 0s 0s;
+    }
+
+    .cd-panel.is-visible::after {
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-transition: background 0.3s 0s;
+        -moz-transition: background 0.3s 0s;
+        transition: background 0.3s 0s;
+    }
+
+    .cd-panel.is-visible .cd-panel-close::before {
+        -webkit-animation: cd-close-1 0.6s 0.3s;
+        -moz-animation: cd-close-1 0.6s 0.3s;
+    }
+
+    .cd-panel.is-visible .cd-panel-close::after {
+        -webkit-animation: cd-close-2 0.6s 0.3s;
+        -moz-animation: cd-close-2 0.6s 0.3s;
+    }
+
+.cd-panel-header {
+    background-color: black;
+    position: fixed;
+    height: 60px;
+    line-height: 60px;
+    z-index: 2;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    -webkit-transition: top 0.3s 0s;
+    -moz-transition: top 0.3s 0s;
+    transition: top 0.3s 0s;
+    width: 100%;
+}
+
+.from-right .cd-panel-header, .from-left .cd-panel-header {
+    top: -50px;
+}
+
+.from-right .cd-panel-header {
+    right: 0;
+}
+
+.from-left .cd-panel-header {
+    left: 0;
+}
+
+.is-visible .cd-panel-header {
+    top: 0;
+    -webkit-transition: top 0.3s 0.3s;
+    -moz-transition: top 0.3s 0.3s;
+    transition: top 0.3s 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-panel-header {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-panel-header {
+        width: 50%;
+    }
+}
+
+.cd-panel-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cd-panel-header a,
+.cd-panel-header a:link,
+.cd-panel-header a:visited {
+    background: black url(../img/sprite-close.png) no-repeat 100% 10px;
+    color: white;
+    padding-right: 60px;
+    text-decoration: none;
+    text-align: right;
+}
+
+    .cd-panel-header a:hover,
+    .cd-panel-header a:active,
+    .cd-panel-header a:focus {
+        background: black url(../img/sprite-close.png) no-repeat 100% -102px;
+    }
+
+.cd-panel-close::before, .cd-panel-close::after {
+    /* close icon created in CSS */
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    height: 3px;
+    width: 20px;
+    background-color: #424f5c;
+    /* this fixes a bug where pseudo elements are slighty off position */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cd-panel-close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cd-panel-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.no-touch .cd-panel-close:hover {
+    background-color: #424f5c;
+}
+
+    .no-touch .cd-panel-close:hover::before, .no-touch .cd-panel-close:hover::after {
+        background-color: #ffffff;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+    .no-touch .cd-panel-close:hover::before {
+        -webkit-transform: rotate(220deg);
+        -moz-transform: rotate(220deg);
+        -ms-transform: rotate(220deg);
+        -o-transform: rotate(220deg);
+        transform: rotate(220deg);
+    }
+
+    .no-touch .cd-panel-close:hover::after {
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+
+.cd-panel-print a,
+.cd-panel-print a:link,
+.cd-panel-print a:visited {
+    background: transparent url(../img/sprite-print.png) no-repeat 100% 12px;
+    color: white;
+    padding-right: 60px;
+    text-decoration: none;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 55px;
+}
+
+    .cd-panel-print a:hover,
+    .cd-panel-print a:active,
+    .cd-panel-print a:focus {
+        background: transparent url(../img/sprite-print.png) no-repeat 100% -100px;
+    }
+
+.cd-panel-container {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    top: 0;
+    background: white;
+    z-index: 1;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.from-right .cd-panel-container {
+    right: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.from-left .cd-panel-container {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.is-visible .cd-panel-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-panel-container {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .cd-panel-container {
+        width: 50%;
+    }
+}
+
+.cd-panel-content {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 88%;
+    height: 82%;
+    padding: 0 5%;
+    overflow: auto;
+    /* smooth scrolling on touch devices */
+    -webkit-overflow-scrolling: touch;
+}
+
+.cd-panel-header h2 {
+    background: #367ab3 url(../img.ico-help.png) no-repeat 0 0;
+    padding-left: 30px;
+    color: white;
+    font-size: 140%;
+    margin-top: 60px;
+    padding: 0.4em 0.25em 0.5em 1.5em;
+}
+
+.showhide h3 {
+  font-size: 120%;
+  margin: 0;
+  line-height: 1.4em; }
+
+.showhide h3 a,
+.showhide h3 a:link,
+.showhide h3 a:visited {
+  background: transparent url("../img/sprite-expand-collapse.png") 8px 17px no-repeat;
+  color: #367ab3;
+  display: block;
+  padding: 0.75em 0 0.75em 2.5em;
+  margin: 0;
+  text-decoration: none; }
+
+.showhide h3 a:hover,
+.showhide h3 a:focus,
+.showhide h3 a:active {
+  background: black url("../img/sprite-expand-collapse.png") 8px -112px no-repeat;
+  color: white; }
+
+.showhide h3.open a,
+.showhide h3.open a:link,
+.showhide h3.open a:visited {
+  background: #0B5394 url("../img/sprite-expand-collapse.png") 8px -240px no-repeat;
+  color: white; }
+
+.showhide h3.open a:hover,
+.showhide h3.open a:focus,
+.showhide h3.open a:active {
+  background: black url("../img/sprite-expand-collapse.png") 8px -370px no-repeat;
+  color: white; }
+
+.showhide h3 + div {
+  padding: 0em 0em 0.5em 0em;
+  margin-bottom: 1em;
+  border-bottom: 8px solid #367ab3; }
+
+@media only screen and (min-width: 768px) {
+  .showhide h3 + div {
+    padding: 0em 2em 0.5em 2.75em; } }
+.showhide {
+  margin-bottom: 1.5em; }
+
+/* Pre hide sections with JavaScript on */
+.showhide h3 + div {
+  display: none; }
+
+
+// Megamenu /* http://terrillthompson.com/tests/menus/accessible-mega-menu/test.html */
+// ------------------------------------------------------------------------------------------------------
+
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.nav-menu {
+  display: block;
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 15; 
+}
+
+/* first descendant link within a top level navigation item */
+.nav-item > a,
+.nav-item > a:link {
+    background: transparent url(../img/ico-account.png) no-repeat 10px 5px;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    float: right;
+    display: inline-block;
+    padding: 0.5em 0.5em 0.75em 48px;
+    margin: 0 0 -1px 0;
+}
+
+
+/* open state of first descendant link within a top level navigation item */
+.nav-item > a.open {
+    /* background-color: #fff; */
+    border-bottom: none;
+    z-index: 1;
+}
+
+/* sub-navigation panel */
+.sub-nav {
+    background-color: $brand-blue;
+    -webkit-border-radius: 5px 0 5px 5px;
+    border-radius: 5px 0 5px 5px;
+    position: absolute;
+    display: none;
+    top: 2.8em;
+    right: 0;
+    margin-top: -1px;
+    padding: 0.5em;
+    width: 200px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+
+/* sub-navigation panel open state */
+.sub-nav.open {
+    display: block;
+}
+
+/* list of items within sub-navigation panel */
+.sub-nav ul {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+/* list item within sub-navigation panel */
+.sub-nav li {
+    list-style-type: none;  
+}
+.sub-nav li a,
+.sub-nav li a:link {
+    color: white;
+    display: block;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    width: 100%;
+    text-decoration: none;
+}  
+.sub-nav li a:hover,
+.sub-nav li a:focus,
+.sub-nav li a:active  {
+}
+
+@media only screen and (min-width: $break-large) {
+  .nav-item > a,
+  .nav-item > a:link {
+      background: transparent url(../img/ico-account.png) no-repeat 10px 8px;
+      padding: 0.5em 0.5em 0.5em 48px;
+  }
+  .sub-nav {
+      top: 2.55em;
+  }
+  .sub-nav li a,
+  .sub-nav li a:link {
+      font-size: 90%;
+  } 
+}
+
+/* focus/open states of first descendant link within a top level navigation item */
+.nav-item > a.open,
+.nav-item > a:hover,
+.nav-item > a:focus,
+.nav-item > a:active {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
 }

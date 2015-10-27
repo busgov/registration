@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Business name search | Business Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,7 +16,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="Business Registration"/>
+    <meta name="application-name" content="Business Registration" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
 </head>
@@ -25,32 +26,32 @@
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
-        
+
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
                     <span id="progress-percent" style="width: 23%"></span>
                 </div><!-- meter -->
                 <ul class="section-nav">
-                    <li class="done"><a href="eligibility.html"><span>1</span><br>Eligibility<br> check</a></li>
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Entitlement<br> check</a></li>
                     <li class="active"><span>2</span><br>Business<br> name</li>
                     <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Tax<br> roles</li>
+                    <li><span>4</span><br>Taxation<br>details</li>
                     <li><span>5</span><br>Confirm<br> application</li>
                     <li><span>6</span><br>Payment<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
-            
+
             <div class="result-container result-alert fade-in">
-              <div class="result-row">
-                <div class="result-icon">
-                  <img src="assets/img/ico-alert-red.png" alt="Alert" />
-                </div><!-- result-icon -->
-                <div class="result-cell result-title">
-                  <p><strong>Canberra plumbing</strong> - is not available</p>
-                </div><!-- result-cell -->
-              </div><!-- result-row -->
+                <div class="result-row">
+                    <div class="result-icon">
+                        <img src="assets/img/ico-alert28.png" alt="Alert" />
+                    </div><!-- result-icon -->
+                    <div class="result-cell result-title">
+                        <p><strong>Canberra plumbing</strong> - is not available</p>
+                    </div><!-- result-cell -->
+                </div><!-- result-row -->
             </div><!-- result-container -->
 
             <div class="card clearfix">
@@ -61,32 +62,32 @@
             </div><!-- card -->
 
             <div class="result-container">
-              <div class="result-row">
-                <div class="result-icon">
-                  <img src="assets/img/ico-tick-green.png" alt="Success" />
-                </div><!-- result-icon -->
-                <div class="result-cell result-title">
-                   <p><strong>Bob's Plumbing</strong> - is available</p>
-                </div><!-- result-cell -->
-                <div class="result-cell result-duration">
-                  <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                  <select id="registration-duration">
-                      <option value="1" selected="selected">1 year $33</option>
-                      <option value="2">3 years</option>
-                  </select>                  
-                </div><!-- result-cell -->
-                <div class="result-cell result-status">
-                  <p>Added</p>
-                </div><!-- result-status -->
-                <div class="result-cell result-remove">
-                  <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                </div><!-- result-cell -->
-              </div><!-- result-row -->
+                <div class="result-row">
+                    <div class="result-icon">
+                        <img src="assets/img/ico-tick-green.png" alt="Success" />
+                    </div><!-- result-icon -->
+                    <div class="result-cell result-title">
+                        <p><strong>Bob's Plumbing</strong> - is available</p>
+                    </div><!-- result-cell -->
+                    <div class="result-cell result-duration">
+                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                        <select id="registration-duration">
+                            <option value="1" selected="selected">1 year $33</option>
+                            <option value="2">3 years</option>
+                        </select>
+                    </div><!-- result-cell -->
+                    <div class="result-cell result-status">
+                        <p>Added</p>
+                    </div><!-- result-status -->
+                    <div class="result-cell result-remove">
+                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                    </div><!-- result-cell -->
+                </div><!-- result-row -->
             </div>
 
         </main>
-        
-    </div><!-- wrapper -->    
+
+    </div><!-- wrapper -->
 
     <div class="controls-container">
         <div class="controls-content">
@@ -94,11 +95,18 @@
                 <button type="button" class="btn" onclick="location.href='business-names-02.html'">Previous</button>
                 <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
                 <button type="button" class="btn btn-save" onclick="location.href='#'">Save for later</button>
-            </div><!-- wrapper --> 
+            </div><!-- wrapper -->
         </div><!-- controls-content -->
     </div><!-- controls-container -->
+    <div class="saveforlater" id="saveForLater">
 
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-
+    </div>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initSaveForLater();
+        });
+    </script>
 </body>
 </html>

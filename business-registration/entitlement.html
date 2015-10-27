@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Business name search | Business Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,57 +16,797 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="Business Registration"/>
+    <meta name="application-name" content="Business Registration" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
 </head>
 <body>
     <div class="wrapper wrapper-main">
-
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
-        
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
-                    <span id="progress-percent" style="width: 25%"></span>
+                    <span id="progress-percent" style="width: 8%"></span>
                 </div><!-- meter -->
                 <ul class="section-nav">
-                    <li class="done"><a href="business-name-results-03.html"><span>1</span><br>Business<br> names</a></li>
-                    <li class="active"><span>2</span><br>Entitlement<br> check</li>
+                    <li class="active"><span>1</span><br>Entitlement<br> check</li>
+                    <li><span>2</span><br>Business<br> name</li>
                     <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Registration<br> forms</li>
+                    <li><span>4</span><br>Taxation<br>details</li>
                     <li><span>5</span><br>Confirm<br> application</li>
                     <li><span>6</span><br>Payment<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">Entitlement check <span>(Step 2 of 6)</span></h1>
-            <p>...</p>           
+            <h1 id="heading" tabindex="-1">1. Entitlement check <span>(Step 1 of 6)</span></h1>
+            <p>All fields are required unless marked as optional.</p>
+            <div class="sub-section-container  sub-section-open">
+                <h2>
+                    <span>1.1</span> ABN entitlement
+                </h2>
+                <div class="sub-section-content">
+                    <p>
+                        Before you continue, we need to first check that you’re entitled to an ABN.
+                    </p>
+                    <fieldset id="fieldsetCompanyAbn" style="display: none">
+                        <legend class="larger col12" id="fieldSetCompany">
+                            What type of company do you need an ABN for?
+                        </legend>
+                        <br />
+                        <label for="rdPublicCompany">
+                            <input id="rdPublicCompany" name="long-labels" type="radio">
+                            Australian public company
+                        </label><br />
+                        <label for="rdPrivateCompany">
+                            <input id="rdPrivateCompany" name="long-labels" type="radio">
+                            Australian private company
+                        </label>
+                        <br />
+                        <label for="rdOtherCompany">
+                            <input id="rdOtherCompany" name="long-labels" type="radio">
+                            other type of company
+                        </label>
+                        <div id="divGoToPOI" class="col10 card" style="display: none">
+                            <br />
+                            <div class="col1">&nbsp;</div>
+                            <p> You are entitled for ABN application, go to POI in step 1.2</p>
+                        </div>
+                    </fieldset>
+                    <fieldset id="fieldsetAbn" class="col12" style="display: none">
+                        <legend class="larger col12">
+                            Why do you need an ABN?
+                        </legend>
+                        <div class="col4 ">
+                            <p>
+                                <strong>
+                                    Individual
+                                </strong>
+                            </p>
+                            <div class="col15">
+                                <input id="rdIndividual1" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdIndividual1" class="col9">
+                                    To work as an apprentice, trade assistant, or labourer
+                                </label>
+                            </div>
 
+                            <div class="col12 last">
+                                <input id="rdIndividual2" class="col2" name="abnFor" type="radio">
+                                <label for="rdIndividual2" class="col9 last">
+                                    To run a business as a sole trader
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col5">
+                            <p>
+                                <strong>
+                                    Company
+                                </strong>
+                            </p>
+                            <div class="col12">
+
+                                <input id="rdPublic" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdPublic" class="col9">
+                                    Australian public company
+                                </label>
+                            </div>
+                            <div class="col12">
+                                <input id="rdPrivate" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdPrivate" class="col9">
+                                    Australian private company
+                                </label>
+                            </div>
+                            <div class="col12 last">
+                                <input id="rdOther" class="col2" name="abnFor" type="radio">
+                                <label for="rdOther" class="col9">
+                                    Other type of company
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col3 last">
+                            <p>
+                                <strong>
+                                    Other
+                                </strong>
+                            </p>
+                            <div class="col12">
+                                <input id="rdPartnership" name="abnFor" class="col2" type="radio">
+                                <label for="rdPartnership" class="col9">
+                                    Partnership
+                                </label>
+                            </div>
+                            <div class="col12">
+                                <input id="rdTrust" class="col2" name="abnFor" type="radio">
+                                <label for="rdTrust" class="col9">
+                                    Trust
+                                </label>
+                            </div>
+                            <div class="col12 last">
+                                <input id="rdSuperfund" class="col2" name="abnFor" type="radio">
+                                <label for="rdSuperfund" class="col9">
+                                    Super fund
+                                </label>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="divApprenticeMsg" class="col10 card" style="display: none">
+                            <p>
+                                <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
+                            </p>
+                            <p>
+                                If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
+                            </p>
+                            <p>
+                                If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
+                            </p>
+                        </div>
+                    </fieldset>
+                    <div class="col10 card" id="divGoToCompanyRegistration" style="display: none;">
+                        <div class="col1">&nbsp;</div>
+                        <div class="col10">
+                            <p>
+                                You need to register a <strong id="strongCompanyType">public</strong> company to apply for an ABN!
+                            </p>
+                            <div class="grid-row grid-row-block clearfix">
+                                <div class="col1">
+                                    <input type="radio" id="rdHaveCompany" name="Compay" />
+                                </div>
+                                <div class="col11 last">
+                                    <label for="rdHaveCompany">
+                                        I have registered a company
+                                    </label>
+                                    <br />
+                                    <label for="acn" class="input-left">
+                                        ACN number:
+                                    </label> &nbsp;
+                                    <input type="number" id="acn" />
+                                </div>
+                            </div>
+
+                            <div class="grid-row grid-row-block grid-row-last clearfix">
+                                <div class="col1">
+                                    <input type="radio" id="rdAddCompany" name="Compay" />
+                                </div>
+                                <div class="col11 last">
+                                    <label for="rdAddCompany">
+                                        I'd like to register a company
+                                    </label>
+                                </div>
+                            </div>
+                            <p>
+                                Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                            </p>
+                        </div>
+                        <div class="col10 showhide-target card" style="display: none">
+                            <p>
+                                You need to register a <strong>private</strong> company to apply for an ABN!
+                            </p>
+                            <p>
+                                <label for="ckAddPrivateCompany">
+                                    <input type="checkbox" id="ckAddPrivateCompany" class="addCompany" />&nbsp; company registration
+                                </label>
+                            </p>
+                            <p>
+                                <label for="ckHavePrivateCompany">
+                                    <input type="checkbox" id="ckHavePrivateCompany" />&nbsp; I already have a company
+                                </label>
+                            </p>
+                            <p>
+                                Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <fieldset id="fieldsetCompanyType" class="col11" style="display: none">
+                        <legend class="larger">What type of company?</legend>
+                        <div class="col11">
+                            <br />
+                            <div class="col5 padding5">
+                                <label for="rdCompanyBody" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyBody" name="incorporated" />
+                                    &nbsp;Body corporate
+                                </label>
+                                <label for="rdCompanySole" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanySole" name="incorporated" />
+                                    &nbsp;Corporation sole
+                                </label>
+                                <label for="rdCompanyForeign" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyForeign" name="incorporated" />
+                                    &nbsp;Foreign company
+                                </label>
+                                <label for="rdCompanyAssociation" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyAssociation" name="incorporated" />
+                                    &nbsp;Incorporated Association
+                                </label>
+                            </div>
+                            <div class="col5 padding5">
+                                <label for="rdCompanyStrata" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyStrata" name="incorporated" />
+                                    &nbsp;Strata title
+                                </label>
+                                <label for="rdCompanyCooperative" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyCooperative" name="incorporated" />
+                                    &nbsp;Co-operative
+                                </label>
+                                <label for="rdCompanyUnIncorpAssociation" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyUnIncorpAssociation" name="incorporated" />
+                                    &nbsp;Unincorporated association
+                                </label>
+                                <label for="rdCompanyOtherUnincorp" class="col10 nopadding">
+                                    <input type="radio" id="rdCompanyOtherUnincorp" name="incorporated" />
+                                    &nbsp;None of these
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="fieldsetAbnEligibility" class="col11"></fieldset>
+                    <div class="form-row col11">
+                        <p>
+                            <a href="#"><strong>Next:</strong> 1.2 Proof of identity</a>
+                        </p>
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+            <div class="sub-section-container">
+                <h2>
+                    <span>1.2</span> Proof of identity
+                </h2>
+                <div class="sub-section-content">
+                    <fieldset id="fieldsetProofOfIdentity">
+                        <legend class="margin4 larger">Your details</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="name1" class="input-right">Given name</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="name1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="othername" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="othername" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="name2" class="input-right">Family name</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="name2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="dob" class="input-right">Date of birth</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input type="date" id="dob">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="gender" class="input-right">Gender</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="on"><input id="on" type="radio" name="gender"><span>Male</span></label>
+                                    <label class="off label-right" for="off"><input id="off" type="radio" name="gender"><span>Female</span></label>
+                                </div>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                    </fieldset>
+                    <fieldset id="fieldsetPOIAddress">
+                        <legend class="margin4 larger">How do you want to prove your identity? <br />
+                        <span class="field-note">We require either your tax file number (TFN) or your home address. Providing your TFN is the quickest way to prove your identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter your home address</a> if you prefer.</span></legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="tfn" class="input-right">
+                                    Tax File Number<br />
+                                </label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="tfn" type="number">
+                                <p class="microcopy">
+                                    <a href="#" class="showhide-trigger" id="backToTfn" style="display: none">Back to TFN</a>
+                                </p>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row showhide-target" style="display: none">
+                            <div class="col4">
+                                <label for="address-suggest" class="input-right">Home address</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+
+                                <input id="address-suggest" type="text" placeholder="Start typing address">
+                                <p>
+                                    <a href="#" id="manual" class="showhide-trigger-1">Can't find address</a>
+                                </p>
+                                <p>
+                                    <a href="#" id="addressSearch" class="showhide-trigger-1" style="display: none">Back to address search</a>
+                                </p>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-container showhide-target-1" id="divManualAddress" style="display: none">
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line1" class="input-right">Address line 1</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line1" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line2" class="input-right">Address line 2</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line2" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="suburb" class="input-right">Suburb</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="suburb" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="postcode" class="input-right">Postcode</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="postcode" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div><!-- manualAddress -->
+                    </fieldset>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
         </main>
-        
-        <footer>
-            <ul>
-                <li><a href="#">Legal notices</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Site map</a></li>
-            </ul>
-        </footer>
-
-    </div><!-- wrapper --> 
+    </div><!-- wrapper -->
 
     <div class="controls-container">
         <div class="controls-content">
             <div class="wrapper">
-                <button type="button" class="btn" onclick="location.href='business-name-results-03.html'">Previous</button>
-                <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+                <button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
+                <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Continue to step 2</button>
                 <button type="button" class="btn btn-save" onclick="location.href='#'">Save for later</button>
-            </div><!-- wrapper --> 
+            </div><!-- wrapper -->
         </div><!-- controls-content -->
     </div><!-- controls-container -->
+    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
 
+                    </div><!-- showhide -->
+                </div><!-- cd-panel-content -->
+            </div><!-- cd-panel-container -->
+        </div><!-- cd-panel -->
+    </div>
+
+    <div class="saveforlater" id="saveForLater">
+
+    </div>
     <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script type="text/javascript">
+        //var help;
+        var isGst = false;
+        var isCompany = false;
+        var isStarted = false;
+        var isUnincorpAssociation = false;
+        var inAustraliaMatters = false;
+        $(document).ready(function () {
+            // load save for later content
+            initSaveForLater();
+
+            // detect whether company or gst selected
+            var urlQueryStrings = getUrlVars();
+            if (urlQueryStrings.type != undefined) {
+                if (urlQueryStrings.type.indexOf("co") >= 0) {
+                    isCompany = true;
+                }
+                if (urlQueryStrings.type.indexOf("gst") >= 0) {
+                    isGst = true;
+                }
+            }
+            // determine whether this is a company entitlement or not
+            if (isCompany) {
+                $("#fieldsetCompanyAbn").slideDown();
+            } else {
+                $("#fieldsetAbn").slideDown();
+            }
+
+            $("#fieldsetPOIAddress").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                toggleIds: "tfn;useHomeAddress;backToTfn",
+                clearOthers: false,
+                toggleSlideSameElement: true,
+                slideUpCallback: function () {
+                    if ($("#addressSearch").is(":visible")) {
+                        $("#addressSearch").trigger("click");
+                    }
+                }
+            });
+            $("#fieldsetPOIAddress").registerToggleSlide({
+                triggerClass: ".showhide-trigger-1",
+                targetClass: ".showhide-target-1",
+                toggleIds: "address-suggest;manual;addressSearch",
+                clearOthers: false,
+                toggleSlideSameElement: true
+            });
+            initialiseRegistrationCollapse(150, true);
+            // for what do you need an ABN for.
+            $("#fieldsetAbn").find(":radio").click(function () {
+
+                // partnership
+                if (this.id === "rdPartnership") {
+
+                    loadEntitlementQuestions("entitlement/entitlement-partnership-content.html", true, function () { inAustraliaMatters = true; });
+                    loadEntitlementHlep("entitlement/entitlement-partnership-help.html");
+                };
+                // sole trader
+                if (this.id === "rdIndividual2") {
+                    inAustraliaMatters = true;
+                    loadEntitlementQuestions("entitlement/entitlement-soletrader-content.html", true, function () { inAustraliaMatters = true; });
+                    loadEntitlementHlep("entitlement/entitlement-soletrader-help.html");
+                };
+
+                // super fund & trust (not yet implemented)
+                if (this.id === "rdTrust" || this.id === "rdSuperfund") {
+                    $("#fieldsetAbnEligibility").html("Not implemented yet.");
+                }
+
+                // Company public or private clicked
+                if (this.id === "rdPublic" || this.id === "rdPrivate") {
+                    $("#divGoToCompanyRegistration").slideDown();
+                    $("#strongCompanyType").html("public");
+                    this.id === "rdPublic" ? $("#strongCompanyType").html("public") : $("#strongCompanyType").html("private");
+                    $("#fieldsetAbnEligibility").html("");
+                } else {
+                    if ($("#divGoToCompanyRegistration").is(":visible")) {
+                        $("#divGoToCompanyRegistration").slideUp();
+                        clearElement($("#divGoToCompanyRegistration"));
+                    }
+                }
+                // Company other
+                if (this.id === "rdOther") {
+                    isCompany = true;
+                    $("#fieldsetAbnEligibility").slideUp();
+                    $("#fieldsetCompanyType").slideDown();
+                    jQuery('html, body').animate({ scrollTop: $('#fieldsetCompanyType').offset().top }, 1200);
+                    clearElement($("#divGoToCompanyRegistration"));
+                } else {
+                    $("#fieldsetCompanyType").slideUp();
+                    clearElement($("#fieldsetCompanyType"));
+                }
+
+                // To work as an apprentice, trade assistant, or labourer
+                if (this.id === "rdIndividual1") {
+                    $("#divApprenticeMsg").slideDown();
+                    $("#fieldsetAbnEligibility").html("");
+                } else {
+                    if ($("#divApprenticeMsg").is(":visible"))
+                        $("#divApprenticeMsg").slideUp();
+                }
+            });
+
+            // for company type
+            $("#fieldsetCompanyAbn").find(":radio").click(function () {
+                if (this.id === "rdPublicCompany" || this.id === "rdPrivateCompany") {
+                    //$("#divGoToCompanyRegistration").slideDown();
+                    //jQuery('html, body').animate({ scrollTop: $('#divGoToCompanyRegistration').offset().top }, 1200);
+                    $("#fieldsetCompanyType").slideUp();
+                } else {
+                    $("#fieldsetCompanyType").slideDown();
+                    jQuery('html, body').animate({ scrollTop: $('#fieldsetCompanyType').offset().top }, 1200);
+                    $("#divGoToCompanyRegistration").slideUp();
+                    clearElement($("#divGoToCompanyRegistration"));
+                }
+            });
+
+            // for company entitlement.
+            $("#fieldsetCompanyType").find(":radio").click(function () {
+                jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
+                var callBackFunction = null;
+                isUnincorpAssociation = false;
+
+                if (this.id === "rdCompanyBody") {
+                    callBackFunction = function () {
+                        $("#divEstablished").show();
+                    }
+                }
+
+                if (this.id === "rdCompanySole") {
+                    callBackFunction = function () {
+                        $("#lbCorpOrSole").html("corporation sole");
+                        $("#divEstablished").show();
+                    }
+                }
+
+                if (this.id === "rdCompanyStrata") {
+                    callBackFunction = function () {
+                        $("#divRegistered").show();
+                    }
+                }
+                if (this.id === "rdCompanyCooperative") {
+
+                    callBackFunction = function () {
+                        $("#lbStrataCoop").html("Co-operative");
+                        $("#divRegistered").show();
+                    }
+                }
+                if (this.id === "rdCompanyAssociation") {
+                    callBackFunction = function () {
+                        $("#divIncorporatedWithJurisdiction").show();
+                    }
+                }
+                if (this.id === "rdCompanyUnIncorpAssociation") {
+                    callBackFunction = function () {
+                        $("#divBizStart").show();
+                        $("#pIncorporateAssociation").show();
+                        $("#divWhereYourBusinessOperate").show();
+                        $("#divWhatYouWillDo").hide();
+                        $("#fieldsetAbnEligibility").slideDown();
+                        isUnincorpAssociation = true;
+                        inAustraliaMatters = true;
+                    }
+                }
+                if (this.id === "rdCompanyForeign") {
+                    callBackFunction = function () {
+                        $("#divAsic").show();
+                        $("#divWhereYourBusinessOperate").show();
+                        $("#fieldsetAbnEligibility").slideDown();
+                        inAustraliaMatters = true;
+                    };
+                }
+
+                if (this.id === "rdCompanyOtherUnincorp") {
+                    callBackFunction = function () {
+                        $(".validation").hide();
+                        $("#divWhatYouWillDo").hide();
+                        $("#divNoneOfTheAboveComTypeNotEntitled").slideDown();
+                    }
+                }
+
+                loadEntitlementQuestions("entitlement/entitlement-company-content.html", true, callBackFunction);
+                loadEntitlementHlep("entitlement/entitlement-company-help.html");
+            });
+        });
+
+        function initialiseLogicForEntitlement() {
+            /* Expand collapse headings config */
+
+            isStarted = false;
+            inAustraliaMatters = false;
+            isUnincorpAssociation = false;
+            // where you run your business
+            $('[id^=whereBusinessWillOperate]').click(function () {
+                // jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
+                if (this.id === "whereBusinessWillOperate1") {
+                    clearElement("#divBusinessActivity");
+                    $("#divNoneOfActivityInAustralia").hide();
+                    $("#divBusinessActivity").slideUp();
+                } else {
+                    if (isGst) {
+                        $("#pGst").show();
+                    } else {
+                        $("#pNoGst").show();
+                    }
+                    $("#divEligible").hide();
+                    $("#divBusinessActivity").slideDown();
+                }
+            });
+
+            // what your business dose
+            $('[id^=whatBusinessWillDo]').click(function () {
+                //jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
+                if (this.id === "whatBusinessWillDoNone") {
+                    $("#divEligible").hide();
+                    clearElement("#divWhereYourBusinessOperate");
+                    $("#divNoneOfAbove").show();
+                    clearElement("#divBusinessActivity");
+                    $("#divBusinessActivity").slideUp();
+                    $("#divNoneOfActivityInAustralia").hide();
+                } else {
+                    $("#divNoneOfAbove").hide();
+                }
+            });
+
+            // do you do any following activity
+            $("#rdAnyActivityYes").click(function () {
+                $("#divNoneOfActivityInAustralia").hide();
+            });
+            $("#rdAnyActivityNo").click(function () {
+                $("#divNoneOfActivityInAustralia").show();
+                $(".abnEntitled").hide();
+            });
+
+            // business started yet
+            $("#rdStarted").click(function () {
+                $("#divNotStartedMessage").hide();
+                isStarted = true;
+            });
+            $("#rdNo").click(function () {
+                isStarted = false;
+                $("#divNotStartedMessage").show();
+                clearElement("#divWhatYouWillDo");
+                clearElement("#divBusinessActivity");
+                clearElement("#divWhereYourBusinessOperate");
+                $("#divNoneOfActivityInAustralia").hide();
+                $("#divNoneOfAbove").hide();
+            });
+
+            $("#divHiddenCompanyQuesitons").find(":radio").click(function () {
+                // if foreign company not registered with ASIC
+                if (this.id === "rdAsicNo") {
+                    $("#divForeignCompanyNotEntitled").slideDown();
+                }
+                // if foreign company registered with ASIC
+                if (this.id === "rdAsicYes") {
+                    $("#divForeignCompanyNotEntitled").hide();
+                }
+
+                // association
+                if (this.id === "rdAssociationStarted") {
+                    $("#divNotStartedMessage").hide();
+                }
+
+                if (this.id === "rdAssociationNotStarted") {
+                    $("#divNotStartedMessage").show();
+                }
+
+                // strata title or cooperative
+                if (this.id === "rdRegisteredYes") {
+                    $("#divRegisteredNotEntitled").hide();
+                }
+                if (this.id === "rdRegisteredNo") {
+                    $("#divRegisteredNotEntitled").show();
+                }
+
+                // sole and body
+                if (this.id === "rdEstablishedYes") {
+                    $("#divEstablishedNotEntitled").hide();
+                }
+                if (this.id === "rdEstablishedNo") {
+                    $("#divEstablishedNotEntitled").show();
+
+                }
+                // incorporation association
+                if (this.id === "rdIncorporatedYes") {
+                    $("#divrdIncorporatedNotEntitled").hide();
+                }
+
+                if (this.id === "rdIncorporatedNo") {
+                    $("#divrdIncorporatedNotEntitled").show();
+                }
+
+                if (this.value === "1") {
+                    isStarted = true;
+                } else if (this.value === "0") {
+                    isStarted = false;
+                    $(".abnEntitled").hide();
+                    clearElement($("#divWhatYouWillDo"));
+                    clearElement($("#divWhereYourBusinessOperate"));
+                    clearElement($("#divBusinessActivity"));
+                    $("#divNoneOfActivityInAustralia").hide();
+                    $("#divEligible").hide();
+                    $("#divNoneOfAbove").hide();
+                }
+            });
+
+            $("#fieldsetAbnEligibility").find(":radio").click(function () {
+
+                var isInAustralia = $("#whereBusinessWillOperate1").prop("checked");
+                var noneOfBusinessWillDo = false;
+                var willDoSomeBusiness = false;
+                var isAnyActivityAssociateWithAus = $("#rdAnyActivityYes").prop("checked");
+                $("#divWhatYouWillDo").find(":radio").each(function (i, item) {
+                    if ($(item).prop("checked")) {
+                        if (item.id === "whatBusinessWillDoNone") {
+                            noneOfBusinessWillDo = true;
+                        } else {
+                            willDoSomeBusiness = true;
+                        }
+                    }
+                });
+                if (isStarted && (willDoSomeBusiness || isUnincorpAssociation)) {
+                    if (inAustraliaMatters) {
+                        if (isInAustralia || isAnyActivityAssociateWithAus) {
+                            $("#divEligible").show();
+                            jQuery('html, body').animate({ scrollTop: $('#divEligible').offset().top }, 1200);
+                        }
+                    } else {
+                        $("#divEligible").show();
+                        jQuery('html, body').animate({ scrollTop: $('#divEligible').offset().top }, 1200);
+                    }
+
+                } else {
+                    $("#divEligible").hide();
+                    jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
+                }
+            });
+        }
+
+        function loadEntitlementQuestions(url, autoSlideDown, callBack) {
+            if (autoSlideDown === undefined) {
+                autoSlideDown = true;
+            }
+            if (autoSlideDown) {
+                $("#fieldsetAbnEligibility").load(url + "?t=" + (new Date()).getTime(), function () {
+                    setTimeout(initialiseLogicForEntitlement, 0);
+                    if (callBack !== undefined && callBack !== null) {
+                        setTimeout(callBack, 0);
+                    }
+                }).slideDown();
+            } else {
+                $("#fieldsetAbnEligibility").load(url + "?t=" + (new Date()).getTime(), function () {
+                    if (callBack !== undefined && callBack !== null) {
+                        setTimeout(callBack, 0);
+                    }
+                    setTimeout(initialiseLogicForEntitlement, 10);
+                });
+            }
+
+        }
+
+        function loadEntitlementHlep(url) {
+            $("#helpFile").load(url + "?t=" + (new Date()).getTime(), function () {
+                setTimeout(initHelp, 10);
+            });
+        }
+
+        function fieldsetAbnEligibilityClear() {
+            clearElement("#divWhatYouWillDo");
+            clearElement("#divBusinessActivity");
+            clearElement("#fieldsetAbnEligibility");
+            clearElement("#divWhereYourBusinessOperate");
+            $("#divNoneOfActivityInAustralia").hide();
+            $("#divEligible").hide();
+            $("#divNoneOfAbove").hide();
+        }
+    </script>
 </body>
 </html>

@@ -12,10 +12,13 @@ body {
 .wrapper {
     width: 94%;
     margin: 0 3%;
+    position: relative;
 }
+/* Using this for fixing controls
 .wrapper-main {
   margin-bottom: 100px;
 }
+*/
 
 
 // Header
@@ -41,6 +44,7 @@ header .brand a:visited {
     background: $brand-blue;
     color: white;
     text-decoration: none;
+    width: 40%;
 }
 header .brand a:hover,
 header .brand a:focus,
@@ -78,7 +82,6 @@ header .brand a:active {
 }
 
 @media only screen and (min-width: $break-large) {
-
   header .brand a,
   header .brand a:link,
   header .brand a:visited {
@@ -101,11 +104,13 @@ header .brand a:active {
 .controls-container {
   background: transparent url(../img/bg-controls.png) repeat-x 0 0;
   clear: both;
+  /*
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
+  */
   padding-top: 20px;
 }
 .controls-content {
@@ -177,29 +182,16 @@ footer p a:visited {
 }
 
 
-// System messaging
-// ------------------------------------------------------------------------------------------------------
-
-.system-message {
-  background: $system-message-bg;
-  padding: 0.5em 1em;
-}
-.system-message p {
-  background: transparent url(../img/ico-system.png) no-repeat 0 0;
-  min-height: 38px;
-  padding: 0.25em 0 0 45px;
-}
-
-
 // Iconography
 // ------------------------------------------------------------------------------------------------------
 
-/*.tip {
-  background: transparent url(../img/ico-tip-26.png) no-repeat 0 0;
-  min-height: 30px;
-  padding: 0 0 0 35px; 
+.registration-tip {
+  background: $process-alert url(../img/ico-tip-26.png) no-repeat 1em 1em;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 0.4em 2em 0.25em 3em;
+  margin: 0 0 1.5em 0;
 }
-*/
 
 
 
@@ -243,6 +235,18 @@ footer p a:visited {
   margin: 0.5em 0 0 0;
   display: table;
   width: 100%;
+}
+.result-container.validation {
+  padding: 1em;
+}
+.result-container.validation img {
+  max-width: 36px;
+  margin: 1em 0 0 1em;
+}
+
+main.confirmation .result-container {
+  background-color: white;
+  border: 1px solid $gray-bg;
 }
 .result-success {
   background-color: $success-bg;
@@ -311,6 +315,36 @@ footer p a:visited {
 }
 
 
+// Dashboard styling
+// ------------------------------------------------------------------------------------------------------
+
+table .registration {
+  width: 70%;
+}
+table .status {
+  width: 30%;
+}
+table .details {
+  width: 15%;
+}
+td.status-done {
+  background: transparent url(../img/ico-status-done.png) no-repeat 0.5em 0.8em;
+  padding-left: 50px;
+}
+td.status-waiting {
+  background: transparent url(../img/ico-status-amber.png) no-repeat 0.5em 0.8em;
+  padding-left: 50px;
+}
+td.status-delete {
+  background: transparent url(../img/ico-delete.png) no-repeat 0.5em 0.8em;
+  padding-left: 50px;
+}
+td.incomplete {
+  background: transparent url(../img/ico-exclamation-orange.png) no-repeat 0.5em 0.7em;
+  padding-left: 55px;
+}
+
+
 // Collapsable sections within each main registration step
 // ------------------------------------------------------------------------------------------------------
 
@@ -339,6 +373,12 @@ footer p a:visited {
 .sub-section-container h2 a:hover,
 .sub-section-container h2 a:focus,
 .sub-section-container h2 a:active {
+  display: block;
+}
+.sub-section-container h2:hover,
+.sub-section-container h2:focus,
+.sub-section-container h2:active {
+  /* needs fixing for WCAG */
 }
 .sub-section-open.sub-section-container h2 span {
     background: black url(../img/sprite-expand-collapse.png) no-repeat 10px -377px;
@@ -348,4 +388,39 @@ footer p a:visited {
 }
 .sub-section-open .sub-section-content  {
   display: block;
+}
+
+
+// Select registrations
+// ------------------------------------------------------------------------------------------------------
+
+.select-registrations fieldset {
+  margin: 0 0 0.5em 0;
+}
+.select-registrations button {
+  margin: 0 0 2em 0;
+}
+.select-registrations legend {
+  font-size: 170%;
+}
+
+
+// Sideboxes on start page
+// ------------------------------------------------------------------------------------------------------
+
+.big-help-box h2,
+.sign-in-box h2 {
+  margin: 0;
+}
+.big-help-box .btn,
+.sign-in-box .btn {
+  padding: 0.25em 0.5em;
+  font-weight: normal; 
+  font-size: 85%;
+  margin: 0.5em 0 2em 0; 
+}
+.big-help-box p,
+.sign-in-box p {
+  margin: 0 0 0.5em 0; 
+  line-height: 1.2em;
 }

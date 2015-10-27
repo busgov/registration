@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Business Registration | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -18,8 +19,42 @@
     <meta name="application-name" content="Business Registration" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <style>
+        .notdone {
+            background-color: #b41919;
+            color: white;
+            padding: 0.25em 0.5em;
+            display: inline;
+            font-weight: bold;
+        }
+
+        .swatch {
+            list-style-type: none;
+            margin: 1%;
+            width: 23%;
+            float: left;
+            border-radius: 3px;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .example-grid {
+            height: 60px;
+            background: #e4e5e5;
+        }
+    </style>
 </head>
 <body>
+    <div class="system-message">
+        <div class="grid-container clearfix">
+            <div class="col10">
+                <p>This is a system message.</p>
+            </div><!-- col -->
+            <div class="col2 last">
+                <button type="button" class="bt closeSystemMessage">Dismiss</button>
+            </div><!-- col -->
+        </div><!-- grid -->
+    </div><!-- system-message -->
     <div class="wrapper">
 
         <header>
@@ -33,14 +68,14 @@
                     <li><a href="#typography" class="scroll">Typography</a></li>
                     <li><a href="#buttons" class="scroll">Buttons</a></li>
                     <li><a href="#branding" class="scroll">Branding</a></li>
-                    <li><a href="#forms" class="scroll">Form elements</a></li>
                     <li><a href="#grid" class="scroll">Grid</a></li>
                     <li><a href="#icons" class="scroll">Icons</a></li>
-                    <li><a href="#tables" class="scroll">Tables</a></li>
                     <li><a href="#highlights" class="scroll">Highlights</a></li>
                     <li><a href="#feedback" class="scroll">User feedback</a></li>
                     <li><a href="#navigation" class="scroll">Navigation</a></li>
                     <li><a href="#embedding" class="scroll">Embedded media</a></li>
+                    <li><a href="#forms" class="scroll">Form elements</a></li>
+                    <li><a href="#form-examples" class="scroll">Form examples</a></li>
                 </ol>
             </div>
 
@@ -133,6 +168,7 @@
                     </ul>
 
                     <h4>Definition List</h4>
+                    <p class="notdone">Not styled</p>
                     <dl>
                         <dt>Definition Term 1</dt>
                         <dd>Definition Description 1</dd>
@@ -141,7 +177,7 @@
                     </dl>
 
                     <h3>Tables</h3>
-
+                    <p class="notdone">Not styled</p>
                     <table cellspacing="0" cellpadding="0">
                         <caption>This is a table caption</caption>
                         <thead>
@@ -185,20 +221,244 @@
 
             <div class="sub-section-container">
                 <h2 id="buttons"><span>02</span> Buttons</h2>
+
                 <div class="sub-section-content">
-                    <p>content</p>
+                    <h3>Individual button styling</h3>
+                    <button type="button" class="btn">Regular button</button><br /><br />
+                    <button type="button" class="btn btn-default">Default action</button><br /><br />
+                    <button type="button" class="btn btn-default btn-small">Small button</button>
+                    <p>Disabled buttons</p>
+                    <button type="button" disabled="disabled" class="btn disabled">Regular button</button><br /><br />
+                    <button type="button" disabled="disabled" class="btn btn-default disabled">Default button</button><br /><br />
+                    <button type="button" disabled="disabled" class="btn btn-default btn-small disabled">Small button</button>
+                    <fieldset>
+                        <legend>Button inside a fieldset</legend>
+                    </fieldset>
+                    <p>The <code>controls-container</code> div groups the buttons for navigating through registration steps. This div should only appear once at the bottom of the screen.</p>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <div class="wrapper">
+                                <button type="button" class="btn" onclick="location.href = 'entitlement-success.html'">Previous</button>
+                                <button type="button" class="btn btn-default" onclick="location.href = 'registrations.html'">Continue to step 4</button>
+                                <button type="button" class="btn btn-save" onclick="location.href = '#'">Save for later</button>
+                            </div><!-- wrapper -->
+                        </div><!-- controls-content -->
+                    </div><!-- controls-container -->
+
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
             <div class="sub-section-container">
                 <h2 id="branding"><span>03</span> Branding</h2>
                 <div class="sub-section-content">
-                    <p>content</p>
+                    <ul>
+                        <li class="swatch" style="background-color: #3179b5; color: white">$brand-blue: <br>#3179b5</li>
+                        <li class="swatch" style="background-color: #fffe9b; color: black">$highlight-bg: <br>#fffe9b</li>
+                        <li class="swatch" style="background-color: #efe8ce; color: black">$process-alert: <br>#efe8ce</li>
+                        <li class="swatch" style="background-color: #6f6f6f; color: white">$lightest-gray: <br>#6f6f6f</li>
+                        <li class="swatch" style="background-color: #444444; color: white">$gray-dark: <br>#444444</li>
+                        <li class="swatch" style="background-color: #e4e5e5; color: black">$gray-bg: <br>#e4e5e5</li>
+                        <li class="swatch" style="background-color: #ffe066;; color: black">$system-message-bg: <br>#ffe066;</li>
+                    </ul>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+
+            <div class="sub-section-container">
+                <h2 id="grid"><span>04</span> Grid</h2>
+                <div class="sub-section-content">
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col1">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col11 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col3">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col9 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col4">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col4">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col4 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col3">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col3">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col3">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col3 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col11">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col1 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row clearfix grid-row-reveal">
+                        <div class="col6">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                        <div class="col6 last">
+                            <div class="example-grid"></div>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <p>Etc... Combinations adding up to 12. Last col must include <code>last</code></p>
+                    <p>Additional styles are available for controlling lines, padding and shading.</p>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
             <div class="sub-section-container">
-                <h2 id="forms"><span>04</span> Form elements</h2>
+                <h2 id="icons"><span>05</span> Icons</h2>
+                <div class="sub-section-content">
+                    <p class="notdone">Not styled</p>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="highlights"><span>06</span> Highlights</h2>
+                <div class="sub-section-content">
+                    <p class="notdone">Not styled</p>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="feedback"><span>07</span> User feedback</h2>
+                <div class="sub-section-content">
+
+                    <div class="result-container">
+                        <div class="result-row">
+                            <div class="result-icon">
+                                <img src="assets/img/ico-tick-gray.png" alt="Success" />
+                            </div><!-- result-icon -->
+                            <div class="result-cell result-title">
+                                <p>Bob's Plumbing</p>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-duration">
+                                <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                                <select id="registration-duration">
+                                    <option value="1" selected="selected">1 year</option>
+                                    <option value="2">3 years</option>
+                                </select>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-status">
+                                <p>Added</p>
+                            </div><!-- result-status -->
+                            <div class="result-cell result-remove">
+                                <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                            </div><!-- result-cell -->
+                        </div><!-- result-row -->
+                    </div><!-- result-container -->
+
+                    <div class="result-container result-success">
+                        <div class="result-row">
+                            <div class="result-icon">
+                                <img src="assets/img/ico-tick-green.png" alt="Success" />
+                            </div><!-- result-icon -->
+                            <div class="result-cell result-title">
+                                <p>Robert Johnson Plumbing in the Southern and Western Canberra Region</p>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-duration">
+                                <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                                <select id="registration-duration">
+                                    <option value="1" selected="selected">1 year</option>
+                                    <option value="2">3 years</option>
+                                </select>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-status">
+                                <p>Added</p>
+                            </div><!-- result-status -->
+                            <div class="result-cell result-remove">
+                                <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                            </div><!-- result-cell -->
+                        </div><!-- result-row -->
+                    </div><!-- result-container -->
+
+                    <div class="result-container result-amber">
+                        <div class="result-row">
+                            <div class="result-icon">
+                                <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+                            </div><!-- result-icon -->
+                            <div class="result-cell result-title">
+                                <p>Bob's Fridges - for review (<a href="">why?</a>)</p>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-duration">
+                                <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                                <select id="registration-duration">
+                                    <option value="1" selected="selected">1 year</option>
+                                    <option value="2">3 years</option>
+                                </select>
+                            </div><!-- result-cell -->
+                            <div class="result-cell result-status">
+                                <p>Added</p>
+                            </div><!-- result-status -->
+                            <div class="result-cell result-remove">
+                                <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                            </div><!-- result-cell -->
+                        </div><!-- result-row -->
+                    </div><!-- result-container -->
+
+
+
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="navigation"><span>08</span> Navigation</h2>
+                <div class="sub-section-content">
+                    <p class="notdone">Not styled</p>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="embedding"><span>09</span> Embedded media</h2>
+                <div class="sub-section-content">
+
+                    <h3>The Audio Element:</h3>
+                    <audio controls>
+                        <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" />
+                        <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <h3>Embedded content:</h3>
+                    <p>YouTube video (iframe):</p>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="http://www.youtube.com/embed/72uEkAWifyo?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="forms"><span>10</span> Form elements</h2>
                 <div class="sub-section-content">
 
                     <h3>Field elements</h3>
@@ -320,226 +580,127 @@
                         </datalist>
                     </p>
 
-                    <h3>Fieldset example</h3>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2 id="form-examples"><span>11</span> Form examples</h2>
+                <div class="sub-section-content">
                     <fieldset>
-                        <legend class="margin4 larger">Legend of fieldset</legend>
+                        <legend class="margin4 larger">Fieldset example 1</legend>
+                        <p class="no-margin-top margin4">Basic form fields with right aligned labels on large screens.</p>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="name1" class="input-right">Given name</label>
+                                <label for="field1" class="input-right">Field label</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="name1" type="text">
+                                <input id="field1" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
 
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="name2" class="input-right">Family name</label>
+                                <label for="question1" class="input-right">Question</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="name2" type="text">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="on"><input id="on" type="radio" name="question1"><span>Yes</span></label>
+                                    <label class="off label-right" for="off"><input id="off" type="radio" name="question1"><span>No</span></label>
+                                </div>
                             </div><!-- col -->
                         </div><!-- grid-row -->
 
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="dob" class="input-right">Date of birth</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input type="date" id="dob" />
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="gender" class="input-right">Gender</label>
-                            </div><!-- col -->
-                            <div class="col2">
-                                <input id="gender1" name="gender" type="radio">
-                                <label for="gender1">Male</label>
-                            </div>
-                            <div class="col6 last">
-                                <input id="gender2" name="gender" type="radio">
-                                <label for="gender2">Female</label>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="phone" class="input-right">Phone number</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input type="tel" id="phone" />
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="email" class="input-right">Email address</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input type="email" id="email" />
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                &nbsp;
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input type="checkbox" id="auth" />&nbsp;<label for="auth">Nominate another person to be the authorised contact.</label>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                        <div id="basic-toggle">
+                            <div class="grid-row">
+                                <div class="col4">
+                                    &nbsp;
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input type="checkbox" id="basic-toggle-label" class="showhide-trigger" />&nbsp;<label for="basic-toggle-label">Click here to trigger basic toggle</label>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row showhide-target" style="display: none">
+                                <div class="col4">
+                                    &nbsp;
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <p>Additional content</p>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div><!-- basic-toggle -->
                     </fieldset>
 
+                    <fieldset id="long-labels">
+                        <legend class="larger">Fieldset example 2</legend>
+                        <p class="no-margin-top">A left aligned form with longer labels</p>
 
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                        <div class="grid-row grid-row-block clearfix">
+                            <div class="col1">
+                                <input id="long-labels1" class="showhide-trigger" name="long-labels" type="radio">
+                            </div><!-- col -->
+                            <div class="col11 last">
+                                <label for="long-labels1">
+                                    <strong>Option one</strong><br>
+                                    With some extra context here to describe the choice.
+                                </label>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="showhide-target"></div>
 
-            <div class="sub-section-container">
-                <h2 id="grid"><span>05</span> Grid</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                        <div class="grid-row grid-row-block clearfix">
+                            <div class="col1">
+                                <input id="long-labels2" class="showhide-trigger" name="long-labels" type="radio">
+                            </div><!-- col -->
+                            <div class="col11 last">
+                                <label for="long-labels2">
+                                    <strong>Option two</strong><br>
+                                    If a user selects this option an additional question is presented.
+                                </label>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
 
-            <div class="sub-section-container">
-                <h2 id="icons"><span>06</span> Icons</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                        <div class="grid-row grid-row-reveal clearfix showhide-target" id="long-label-div" style="display:none">
+                            <div class="col1">&nbsp;</div><!-- col -->
+                            <div class="col4">
+                                <p><label for="long-labels3">Additional question for option two</label></p>
+                            </div><!-- col -->
+                            <div class="col7 last">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="long-labels3-on"><input id="long-labels3-on" type="radio" name="long-labels3"><span>Yes</span></label>
+                                    <label class="off label-right" for="long-labels3-off"><input id="long-labels3-off" type="radio" name="long-labels3"><span>No</span></label>
+                                </div>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
 
-            <div class="sub-section-container">
-                <h2 id="tables"><span>07</span> Tables</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                        <div class="grid-row grid-row-block grid-row-last clearfix">
+                            <div class="col1">
+                                <input id="long-labels4" class="showhide-trigger" name="long-labels" type="radio">
+                            </div><!-- col -->
+                            <div class="col11 last">
+                                <label for="long-labels4">
+                                    <strong>Option three</strong><br>
+                                    With some extra context here to describe the choice.
+                                </label>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
 
-            <div class="sub-section-container">
-                <h2 id="highlights"><span>08</span> Highlights</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                    </fieldset>
 
-            <div class="sub-section-container">
-                <h2 id="feedback"><span>09</span> User feedback</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                    <fieldset>
+                        <legend class="larger">Fieldset example 3</legend>
+                        <p class="no-margin-top">When labels are long</p>
+                        <div class="grid-row grid-row-block clearfix">
+                            <p><label for="longer-labels">Right aligning a long label is hard to read. Only short labels should be right aligned. Various border and padding classes can be used to transition between right and left aligned label/input groups.</label></p>
+                            <input id="longer-labels-1" type="radio" name="longer-labels">&nbsp;<label class="label-left" for="longer-labels-1">These options are broken by a break for readibility</label><br />
+                            <input id="longer-labels-2" type="radio" name="longer-labels">&nbsp;<label class="label-right" for="longer-labels-2">Second radio option</label>
+                        </div><!-- grid-row -->
 
-            <div class="sub-section-container">
-                <h2 id="navigation"><span>10</span> Navigation</h2>
-                <div class="sub-section-content">
-                    <p>content</p>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
-
-            <div class="result-container">
-                <div class="result-row">
-                    <div class="result-icon">
-                        <img src="assets/img/ico-tick-gray.png" alt="Success" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p>Bob's Plumbing</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
-                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
-                            <option value="1" selected="selected">1 year</option>
-                            <option value="2">3 years</option>
-                        </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-status">
-                        <p>Added</p>
-                    </div><!-- result-status -->
-                    <div class="result-cell result-remove">
-                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                    </div><!-- result-cell -->
-                </div><!-- result-row -->
-            </div><!-- result-container -->
-
-            <div class="result-container result-success">
-                <div class="result-row">
-                    <div class="result-icon">
-                        <img src="assets/img/ico-tick-green.png" alt="Success" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p>Robert Johnson Plumbing in the Southern and Western Canberra Region</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
-                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
-                            <option value="1" selected="selected">1 year</option>
-                            <option value="2">3 years</option>
-                        </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-status">
-                        <p>Added</p>
-                    </div><!-- result-status -->
-                    <div class="result-cell result-remove">
-                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                    </div><!-- result-cell -->
-                </div><!-- result-row -->
-            </div><!-- result-container -->
-
-            <div class="result-container result-amber">
-                <div class="result-row">
-                    <div class="result-icon">
-                        <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p>Bob's Fridges - for review (<a href="">why?</a>)</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
-                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
-                            <option value="1" selected="selected">1 year</option>
-                            <option value="2">3 years</option>
-                        </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-status">
-                        <p>Added</p>
-                    </div><!-- result-status -->
-                    <div class="result-cell result-remove">
-                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                    </div><!-- result-cell -->
-                </div><!-- result-row -->
-            </div><!-- result-container -->
-
-            <div class="sub-section-container">
-                <h2 id="embedding"><span>11</span> Embedded media</h2>
-                <div class="sub-section-content">
-
-                    <h3>The Audio Element:</h3>
-                    <audio controls>
-                        <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" />
-                        <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg" />
-                        Your browser does not support the audio element.
-                    </audio>
-
-                    <h3>Embedded content:</h3>
-                    <p>YouTube video (iframe):</p>
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/72uEkAWifyo?rel=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    </fieldset>                  
 
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
         </main>
-
-        <footer>
-            <ul>
-                <li><a href="#">Legal notices</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Site map</a></li>
-            </ul>
-        </footer>
 
     </div><!-- wrapper -->
 
@@ -552,13 +713,32 @@
     </div><!-- controls-container -->
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
     <script src="assets/js/RegistrationFunctions.js"></script>
     <script>
 
         $(document).ready(function () {
+            // the following code is to register the slide up/down effect. this is
+            // a customized jQuery plugin, the element that registered registerToggleSlide is
+            // actually the scope of the effect.
+            $("#basic-toggle").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: true,
+                //toggleIds: "long-label-div",
+                //toggleSlideSameElement: true
+            });
+            $("#long-labels").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: true
+            });
+
             $(window).scrollTop($('#heading').offset().top);
             /* Expand collapse headings config */
             var section = initialiseRegistrationCollapse(50);
+
             $(".scroll").click(function (event) {
                 event.preventDefault();
                 var fullUrl = this.href;
