@@ -1,0 +1,353 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper wrapper-main">
+        <header>
+            <div class="brand">
+                <a href="index.html">
+                    <span>Business Registration home</span>
+                </a>
+            </div>
+        </header>
+        <div class="wrapper main-container clearfix ">
+            <main>
+                <h1>Ready to register</h1>
+                <p class="intro">Welcome to the start page for business registration application. This page is designed for people who are ready to select which registrations they require.</p>
+                <div class="col12">
+                    <fieldset id="select-registrations">
+                        <legend class="larger col12">Select registrations</legend>
+                        <p class="col5">
+                            <input id="abn" type="checkbox" class="checkbox" value="abn">
+                            <label for="abn"><strong>ABN</strong> - Australian Business Number</label>
+                        </p>
+                        <p class="col5">
+                            <input id="gst" type="checkbox" class="checkbox" value="gst">
+                            <label for="gst"><strong>GST</strong> - Goods and Services Tax</label>
+                        </p>
+                        <p class="col5">
+                            <input id="bn" type="checkbox" class="checkbox" value="bn">
+                            <label for="bn"><strong>BN</strong> - Business Name (one or more)</label>
+                        </p>
+
+                        <p class="col5">
+                            <input id="co" type="checkbox" class="checkbox" value="co">
+                            <label for="co"><strong>Company</strong> - Australian Company</label>
+                        </p>
+
+                        <p class="col5">
+                            <input id="payg" type="checkbox" class="checkbox" value="payg">
+                            <label for="payg"><strong>PAYG</strong> - Pay as you go withholding</label>
+                        </p>
+                        <p class="col5">
+                            <input id="fbt" type="checkbox" class="checkbox" value="fbt">
+                            <label for="fbt"><strong>FBT</strong> - Fringe Benefits Tax</label>
+                        </p>
+                        <p class="col5">
+                            <input id="lct" type="checkbox" class="checkbox" value="lct">
+                            <label for="lct"><strong>LCT</strong> - Luxury Car Tax</label>
+                        </p>
+                        <p class="col5">
+                            <input id="ftc" type="checkbox" class="checkbox" value="ftc">
+                            <label for="ftc"><strong>FTC</strong> - Fuel Tax Credits</label>
+                        </p>
+                        <p class="col5">
+                            <input id="wet" type="checkbox" class="checkbox" value="wet">
+                            <label for="wet"><strong>WET</strong> - Wine Equalisation Tax</label>
+                        </p>
+                    </fieldset>
+                    <fieldset id="fieldsetCompanyAbn" style="display: none">
+                        <legend class="larger col12" id="fieldSetCompany">
+                            What type of company do you need an ABN for?
+                        </legend>
+                        <br />
+                        <label for="rdPublicCompany">
+                            <input id="rdPublicCompany" name="long-labels" type="radio">
+                            Australian public company
+                        </label><br />
+                        <label for="rdPrivateCompany">
+                            <input id="rdPrivateCompany" name="long-labels" type="radio">
+                            Australian private company
+                        </label>
+                        <br />
+                        <label for="rdOtherCompany">
+                            <input id="rdOtherCompany" name="long-labels" type="radio">
+                            other type of company
+                        </label>
+                        <div id="divGoToCompanyRegistration" class="col10 card" style="display: none">
+                            <br />
+                            <div class="col1">&nbsp;</div>
+                            <p> You are entitled for ABN application, go to POI in.</p>
+                        </div>
+                    </fieldset>
+                    <fieldset id="fieldsetAbn" class="col12" style="display: none">
+                        <legend class="larger col12">
+                            What do you need an ABN for?
+                        </legend>
+                        <div class="col4 ">
+                            <p>
+                                <strong>
+                                    Individual
+                                </strong>
+                            </p>
+                            <div class="col15">
+                                <input id="rdIndividual1" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdIndividual1" class="col9">
+                                    To work as an apprentice, trade assistant, or labourer
+                                </label>
+                            </div>
+
+                            <div class="col12 last">
+                                <input id="rdIndividual2" class="col2" name="abnFor" type="radio">
+                                <label for="rdIndividual2" class="col9 last">
+                                    To run a business as a sole trader
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col5">
+                            <p>
+                                <strong>
+                                    Company
+                                </strong>
+                            </p>
+                            <div class="col12">
+
+                                <input id="rdPublic" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdPublic" class="col9">
+                                    Australian public company
+                                </label>
+                            </div>
+                            <div class="col12">
+                                <input id="rdPrivate" name="abnFor" class="showhide-trigger col2" type="radio">
+                                <label for="rdPrivate" class="col9">
+                                    Australian private company
+                                </label>
+                            </div>
+                            <div class="col12 last">
+                                <input id="rdOther" class="col2" name="abnFor" type="radio">
+                                <label for="rdOther" class="col9">
+                                    Other type of company
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col3 last">
+                            <p>
+                                <strong>
+                                    Other
+                                </strong>
+                            </p>
+                            <div class="col12">
+                                <input id="rdPartnership" name="abnFor" class="col2" type="radio">
+                                <label for="rdPartnership" class="col9">
+                                    Partnership
+                                </label>
+                            </div>
+                            <div class="col12">
+                                <input id="rdTrust" class="col2" name="abnFor" type="radio">
+                                <label for="rdTrust" class="col9">
+                                    Trust
+                                </label>
+                            </div>
+                            <div class="col12 last">
+                                <input id="rdSuperfund" class="col2" name="abnFor" type="radio">
+                                <label for="rdSuperfund" class="col9">
+                                    Super fund
+                                </label>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="col10 showhide-target card" style="display: none">
+
+                            <p>
+                                <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
+                            </p>
+                            <p>
+                                If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
+                            </p>
+                            <p>
+                                If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
+                            </p>
+                        </div>
+                        <div class="col10 showhide-target result-container" style="display: none;">
+                            <div class="col1">&nbsp;</div>
+                            <div class="col10">
+                                <p>
+                                    You need to register a <strong>public</strong> company to apply for an ABN!
+                                </p>
+                                <div class="grid-row grid-row-block clearfix">
+                                    <div class="col1">
+                                        <input type="radio" id="rdHaveCompany" name="Compay" />
+                                    </div>
+                                    <div class="col11 last">
+                                        <label for="rdHaveCompany">
+                                            I have registered a company
+                                        </label>
+                                        <br />
+                                        <label for="acn" class="input-left">
+                                            ACN number:
+                                        </label> &nbsp;
+                                        <input type="number" id="acn" />
+                                    </div>
+                                </div>
+
+                                <div class="grid-row grid-row-block grid-row-last clearfix">
+                                    <div class="col1">
+                                        <input type="radio" id="rdAddCompany" name="Compay" />
+                                    </div>
+                                    <div class="col11 last">
+                                        <label for="rdAddCompany">
+                                            I'd like to register a company
+                                        </label>
+                                    </div>
+                                </div>
+                                <p>
+                                    Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                                </p>
+                            </div>
+                            <div class="col10 showhide-target card" style="display: none">
+                                <p>
+                                    You need to register a <strong>private</strong> company to apply for an ABN!
+                                </p>
+                                <p>
+                                    <label for="ckAddPrivateCompany">
+                                        <input type="checkbox" id="ckAddPrivateCompany" class="addCompany" />&nbsp; company registration
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="ckHavePrivateCompany">
+                                        <input type="checkbox" id="ckHavePrivateCompany" />&nbsp; I already have a company
+                                    </label>
+                                </p>
+                                <p>
+                                    Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <p class="buttons">
+                        <button type="button" id="next" class="btn btn-default">Next</button>
+                        <!--<button type="button" id="startApplying" style="display: none" class="btn btn-default">Next</button>-->
+                    </p>
+                </div><!-- col8 -->
+            </main>
+            <!-- main-container -->
+        </div><!-- col4 -->
+    </div><!-- grid-container -->
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#select-registrations").find(":checkbox").click(function () {
+                $(".result-container").each(function (i, item) {
+                    $(item).slideUp();
+                });
+
+                if ($("#abn").prop("checked") && $("#co").prop("checked")) {
+                    $("#fieldsetCompanyAbn").slideDown();
+                    if ($("#fieldsetAbn").is(":visible"))
+                        $("#fieldsetAbn").slideUp("", "", clearElement("#fieldsetAbn", ".showhide-target"));
+                }
+                else if ($("#abn").prop("checked")) {
+                    if ($("#fieldsetCompanyAbn").is(":visible"))
+                        $("#fieldsetCompanyAbn").slideUp("", "", clearElement("#fieldsetCompanyAbn", ".showhide-target"));
+                    $("#fieldsetAbn").slideDown();
+                } else if (GetCheckedItems("#select-registrations") === 0) {
+                    if ($("#fieldsetCompanyAbn").is(":visible"))
+                        $("#fieldsetCompanyAbn").slideUp("", "", clearElement("#fieldsetCompanyAbn", ".showhide-target"));
+                    if ($("#fieldsetAbn").is(":visible"))
+                        $("#fieldsetAbn").slideUp("", "", clearElement("#fieldsetAbn", ".showhide-target"));
+                }
+            });
+
+            $("#fieldsetAbn").find(":radio").click(function () {
+                if (this.id.indexOf("Company") >= 0) {
+                    return; // do nothing as this is the radio button in it child element.
+                }
+                if (!$(this).hasClass("showhide-trigger")) {
+                    $(".showhide-target").slideUp("", "", function () {
+                        clearElement(this);
+                    });
+                }
+                if (this.id === "rdPublic" || this.id === "rdPrivate") {
+                    $("#divGoToCompanyRegistration").slideDown();
+                } else {
+                    $("#divGoToCompanyRegistration").slideUp();
+                }
+            });
+
+            $("#fieldsetCompanyAbn").find(":radio").click(function () {
+                if (this.id === "rdPrivateCompany" || this.id === "rdPublicCompany") {
+                    $("#divGoToCompanyRegistration").slideDown();
+                }
+                if (this.id === "rdOtherCompany") {
+                    $("#divGoToCompanyRegistration").slideUp();
+                }
+            });
+
+            $("#next").click(function () {
+                var companyChecked = false;
+                var abnChecked = false;
+                var checkedCount = 0;
+
+                if ($("#rdPublic").prop("checked") || $("#rdPrivate").prop("checked")) {
+                    if (("#ckAddPrivateCompany").prop("checked") || ("#ckAddCompany").prop("checked")) {
+                        $("#divGoToCompanyRegistration").slideDown();
+                    } else {
+                        document.location = "entitlement-company.html";
+                    }
+                }
+                if ($("#rdOtherCompany").prop("checked") || $("#rdOther").prop("checked")) {
+                    document.location = "entitlement-company.html";
+                }
+                if ($("#rdIndividual2").prop("checked")) {
+                    document.location = "entitlement-soletrader.html";
+                }
+                if ($("#rdPartnership").prop("checked")) {
+                    document.location = "entitlement-partnership.html";
+                }
+                $("#next").blur();
+                $("#select-registrations").find(":checkbox").each(function (index, item) {
+                    if ($(item).prop("checked")) {
+                        if (item.id === "co") {
+                            companyChecked = true;
+                        }
+                        if (item.id === "abn") {
+                            abnChecked = true;
+                        }
+                        checkedCount++;
+                    }
+                });
+
+                if (checkedCount === 1 && companyChecked) {
+                    //go straight to company registration.
+                    $("#divGoToCompanyRegistration").show();
+                }
+            });
+
+            $("#fieldsetAbn").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                toggleIds: "",
+                clearOthers: true
+            });
+        });
+    </script>
+</body>
+</html>

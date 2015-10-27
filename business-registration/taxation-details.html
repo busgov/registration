@@ -1,0 +1,262 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business name search | Business Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Business Registration" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+</head>
+<body>
+    <div class="wrapper wrapper-main">
+        <header>
+            <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
+        </header>
+        <main>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span id="progress-percent" style="width: 58%"></span>
+                </div><!-- meter -->
+                <ul class="section-nav">
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Entitlement<br> check</a></li>
+                    <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
+                    <li class="done"><a href="business-details.html"><span>3</span><br>Business<br> details</a></li>
+                    <li class="active"><span>4</span><br>Taxation<br>details</li>
+                    <li><span>5</span><br>Confirm<br> application</li>
+                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                </ul>
+            </div><!-- progress-container -->
+            <h1 id="heading" tabindex="-1">4. Taxation details <span>(Step 4 of 6)</span></h1>
+            <p>All fields are required unless marked as optional.</p>
+
+            <div class="sub-section-container sub-section-open">
+                <h2><span>4.1</span> Goods and services tax (GST)</h2>
+                <div class="sub-section-content">
+                    <div id="divContact">
+                        <fieldset>
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="start-date" class="input-right">What is your date of registration for GST? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <input id="start-date" type="date" />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="turnover" class="input-right">What is your GST turnover?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_1" /> $0 to $74,999</label><br />
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_2" /> $75,000 to $149,999</label><br />
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_3" /> $150,000 to $1,999,999</label><br />
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_4" /> $2 million to $19,999,999</label><br />
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_5" /> $20 million and over</label><br />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <div class="radio-toggle">
+                                        <label class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1" /> <span>Monthly</span></label>
+                                        <label class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2" /> <span>Quarterly</span></label>
+                                        <label class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3" /> <span>Annually</span></label>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="gst-account" class="input-right">Do you intend to account for GST on a cash or non-cash (accruals) basis?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <div class="radio-toggle">
+                                        <label class="label-left" for="gst-account-cash"><input id="gst-account-cash" type="radio" name="gst-account"><span>Cash</span></label>
+                                        <label class="label-right" for="gst-account-non-cash"><input id="gst-account-non-cash" type="radio" name="gst-account"><span>Non-cash</span></label>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="import" class="input-right">Do you import goods into Australia?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="import-no"><input id="import-no" type="radio" name="import"><span>No</span></label>
+                                        <label class="off label-right" for="import-yes"><input id="import-yes" type="radio" name="import"><span>Yes</span></label>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                        </fieldset>
+                    </div>
+
+                    <div id="1" class="form-row">
+                        <p>
+                            <a href="#"><strong>Next:</strong> 4.2 Pay as you go (PAYG) withholding</a>
+                        </p>
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            <div class="sub-section-container">
+                <h2><span>4.2</span> Pay as you go (PAYG) withholding</h2>
+                <div class="sub-section-content" style="display: none">
+                    <div id="divContact">
+                        <fieldset>
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="payg-start-date" class="input-right">When will withholding commence? <span class="field-note">(dd/mm/yyyy)</span></label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <input id="payg-start-date" type="date" />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="no-of-employees" class="input-right">How many employees do you estimate you will pay? <span class="field-note">(enter a number)</span></label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <input id="no-of-employees" type="number" />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="expected-amount" class="input-right">What amount do you expect to withhold from payments to your payees each year? <span class="field-note">(enter a number)</span></label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <input id="expected-amount" type="number" />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-block clearfix">
+                                <p><label for="payg-how">How will you provide your PAYG withholding payment summary annual report to the ATO?</label></p>
+                                <input id="payg-how-1" type="radio" name="payg-how">&nbsp;<label class="label-left" for="payg-how-1">Electronically</label><br />
+                                <input id="payg-how-2" type="radio" name="payg-how">&nbsp;<label class="label-right" for="payg-how-2">Paper form supplied by the ATO</label>
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-block clearfix">
+                                <p><label for="payees-how">How will you provide payment summaries to your payees?</label></p>
+                                <input id="payees-how-1" type="radio" name="payees-how">&nbsp;<label class="label-left" for="payees-how-1">Print your own payment summaries</label><br />
+                                <input id="payees-how-2" type="radio" name="payees-how">&nbsp;<label class="label-right" for="payees-how-2">Use payment summaries supplied by the ATO</label>
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-block grid-row-last clearfix">
+                                <p><label for="residents">Will you pay royalties, dividends or interest to non-residents, or are you an investment body that will pay investment income to Australian residents?</label></p>
+                                <div class="radio-toggle">
+                                    <label class="label-left" for="residents-no"><input id="residents-no" type="radio" name="residents"><span>No</span></label>
+                                    <label class="label-right" for="residents-yes"><input id="residents-yes" type="radio" name="residents"><span>Yes</span></label>
+                                </div><!-- radio-toggle -->
+                            </div><!-- grid-row -->
+
+                        </fieldset>
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+        </main>
+
+    </div><!-- wrapper -->
+
+    <div class="controls-container">
+        <div class="controls-content">
+            <div class="wrapper">
+                <button type="button" class="btn" onclick="location.href = 'business-details.html'">Previous</button>
+                <button type="button" class="btn btn-default" onclick="location.href = 'confirm.html'">Continue to step 5</button>
+                <button type="button" class="btn btn-save" onclick="location.href = '#'">Save for later</button>
+            </div><!-- wrapper -->
+        </div><!-- controls-content -->
+    </div><!-- controls-container -->
+    <div class="saveforlater" id="saveForLater">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="h2SaveForLater">Save for later</h2>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+
+                    </div><!-- showhide -->
+                </div><!-- cd-panel-content -->
+            </div><!-- cd-panel-container -->
+        </div><!-- cd-panel -->
+    </div>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            /* Expand collapse headings config */
+            initialiseRegistrationCollapse(150, true);
+            initSaveForLater();
+            // the following code is to register the slide up/down effect. this is
+            // a customized jQuery plugin, the element that registered registerToggleSlide is
+            // actually the scope of the effect.
+            $("#fieldsetReasonForApplication").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: true
+            });
+
+            $("#divContact").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false
+            });
+
+            $("#divAbnEnddate").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false
+            });
+
+            $("#fieldsetAddress").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                toggleIds: "address-suggest;manual;addressSearch",
+                toggleSlideSameElement: true
+            });
+
+            $("#divIndustryType").registerToggleSlide({
+                event: "change",
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                matchValue: "industry01"
+            });
+
+            $("#divManualActivity").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                toggleIds: "business-activity;manaulBusinessActivity;autoBusinessActivity",
+                toggleSlideSameElement: true
+            });
+        });
+    </script>
+</body>
+</html>

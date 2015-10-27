@@ -1,0 +1,351 @@
+﻿<div id="divHiddenCompanyQuesitons">
+    <div class="result-container validation" id="divNoneOfTheAboveComTypeNotEntitled" style="display: none">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+            </div><!-- col1 -->
+            <div class="col11 last">
+                <h3>You’re not entitled to an ABN.</h3>
+                <p>
+                    Read about the types of <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/Business-structures/Company/" target="_blank">companies that are entitled to ABNs</a>.
+                </p>
+                <p>
+                    If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                </p>
+            </div><!-- result-cell -->
+        </div>
+    </div>
+    <fieldset id="divIncorporatedWithJurisdiction" style="display: none">
+        <legend class="larger">Has your association been incorporated with the relevant authority in your state or territory? </legend>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdIncorporatedYes"><input id="rdIncorporatedYes" type="radio" name="established" value="1"><span>Yes</span></label>
+            <label class="off label-right" for="rdIncorporatedNo"><input id="rdIncorporatedNo" type="radio" name="established" value="0"><span>No</span></label>
+        </div>
+        <div class="result-container validation" id="divrdIncorporatedNotEntitled" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+                </div><!-- col1 -->
+                <div class="col11 last">
+                    <h3>You’re not entitled to an ABN.</h3>
+                    <p>
+                        Before you can apply for an ABN, you must register your incorporated association with the relevant authority in your state or territory.
+                    </p>
+                    <p>
+                        If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                    </p>
+                </div><!-- result-cell -->
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset id="divEstablished" style="display: none">
+        <legend class="larger">Has it been established under common law, established under an Act of Parliament, or registered under statute? </legend>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdEstablishedYes"><input id="rdEstablishedYes" type="radio" name="established" value="1"><span>Yes</span></label>
+            <label class="off label-right" for="rdEstablishedNo"><input id="rdEstablishedNo" type="radio" name="established" value="0"><span>No</span></label>
+        </div>
+        <div class="result-container validation" id="divEstablishedNotEntitled" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+                </div><!-- col1 -->
+                <div class="col11 last">
+                    <h3>You’re not entitled to an ABN.</h3>
+                    <p>
+                        Before you can apply for an ABN, your body <label id="lbCorpOrSole">corporate</label> must be established under common law, established under an Act of Parliament, or registered under statute.
+                    </p>
+                    <p>
+                        If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                    </p>
+                </div><!-- result-cell -->
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset id="divRegistered" style="display: none">
+        <legend class="larger">Have you registered it with the relevant authority in your state or territory? </legend>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdRegisteredYes"><input id="rdRegisteredYes" type="radio" name="registered" value="1"><span>Yes</span></label>
+            <label class="off label-right" for="rdRegisteredNo"><input id="rdRegisteredNo" type="radio" name="registered" value="0"><span>No</span></label>
+        </div>
+        <div class="result-container validation" id="divRegisteredNotEntitled" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+                </div><!-- col1 -->
+                <div class="col11 last">
+                    <h3>You’re not entitled to an ABN.</h3>
+                    <p>
+                        Before you can apply for an ABN, you must register your <label id="lbStrataCoop">strata title</label> with the relevant authority in your state or territory.
+                    </p>
+                    <p>
+                        If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                    </p>
+                </div><!-- result-cell -->
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset id="divAsic" style="display: none">
+        <legend class="larger">Have you registered your company with ASIC or applied to be registered with ASIC? </legend>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdAsicYes"><input id="rdAsicYes" type="radio" name="asic" value="1"><span>Yes</span></label>
+            <label class="off label-right" for="rdAsicNo"><input id="rdAsicNo" type="radio" name="asic" value="0"><span>No</span></label>
+        </div>
+        <div id="divForeignCompanyNotEntitled" class="result-container validation" style="display: none">
+            <div class="result-row">
+                <div class="col1">
+                    <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+                </div><!-- col1 -->
+                <div class="result-cell result-title">
+                    <h3>You are not entitled for an ABN. </h3>
+                    <p>
+                        Before you can apply for an ABN, you must <a href="http://asic.gov.au/for-business/starting-a-company/how-to-start-a-company/foreign-companies/#how" target="_blank">register your foreign company</a> with ASIC.
+                    </p>
+                    <p>
+                        If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                    </p>
+                </div><!-- result-cell -->
+            </div>
+        </div>
+    </fieldset>
+    <fieldset id="divBizStart" style="display: none">
+        <legend class="larger">Have you started your association or taken steps to start it? </legend>
+        <div class="grid-row">
+            <p class="col11">If you’re just thinking about starting a business, you’re not yet entitled to an ABN. </p>
+            <div class="col1 last" style="height: 0.5em">
+                <span class="form-help">
+                    <a href="#help" class="cd-btn">
+                        <img src="assets/img/ico-help-form.png" alt="">
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="radio-toggle col11">
+            <label class="on label-left" for="rdAssociationStarted"><input id="rdAssociationStarted" type="radio" value="1" name="rdStartedYet"><span>Yes</span></label>
+            <label class="off label-right" for="rdAssociationNotStarted"><input id="rdAssociationNotStarted" type="radio" value="0" name="rdStartedYet"><span>No</span></label>
+        </div>
+        <div id="divNotStartedMessage" class="result-container validation" style="display: none">
+            <div class="grid-row">
+                <div class="col1">
+                    <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+                </div><!-- col1 -->
+                <div class="coll11 last">
+                    <strong>You’re not entitled to an ABN.</strong>
+                    <p>
+                        You need to have taken steps to set up your association (such as getting members and making association rules), to be entitled to an ABN. This shows us that you’re committed to starting your company.
+                    </p>
+                    <p>
+                        Come back when you’ve completed several steps.
+                    </p>
+                    <p>
+                        If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                    </p>
+                </div><!-- result-cell -->
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<fieldset id="divWhatYouWillDo">
+    <legend class="larger">What will your company do?</legend>
+
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDo1" name="whatBusinessWillDo" />
+        </div>
+        <div class="col10">
+            <label for="whatBusinessWillDo1">
+                <strong> Sell products or services regularly or continuously to make a profit as a business</strong>
+            </label>
+        </div>
+        <div class="col1 last">
+            <span class="form-help">
+                <a href="#help" class="cd-btn">
+                    <img src="assets/img/ico-help-form.png" alt="">
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDoRent" name="whatBusinessWillDo" />
+        </div>
+        <div class="col11 last">
+            <label for="whatBusinessWillDoRent">
+                <strong>Rent or lease out residential property regularly or continuously.</strong>
+            </label>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDoLeaseInterest" name="whatBusinessWillDo" />
+        </div>
+        <div class="col11 last">
+            <label for="whatBusinessWillDoLeaseInterest">
+                <strong>Rent, license or lease out other property regularly or continuously.</strong><br />
+                Such as land, cars, copyright or patents.
+
+            </label>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDo2" name="whatBusinessWillDo"/>
+        </div>
+        <div class="col10">
+            <label for="whatBusinessWillDo2">
+                <strong>Make one-off business deals or sales for a large profit or gain</strong><br/>
+                When we say one-off, we mean business deals or sales that aren’t part of an on-going business.
+            </label>
+        </div>
+        <div class="col1 last">
+            <span class="form-help">
+                <a href="#help" class="cd-btn">
+                    <img src="assets/img/ico-help-form.png" alt="">
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDo3" name="whatBusinessWillDo" />
+        </div>
+        <div class="col10">
+            <label for="whatBusinessWillDo3">
+                <strong>Receive tax deductible gifts</strong>
+            </label>
+        </div>
+        <div class="col1 last">
+            <span class="form-help">
+                <a href="#help" class="cd-btn">
+                    <img src="assets/img/ico-help-form.png" alt="">
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDo4" name="whatBusinessWillDo" />
+        </div>
+        <div class="col11 last">
+            <label for="whatBusinessWillDo4">
+                <strong>Run a charity</strong>
+            </label>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" id="whatBusinessWillDoNone" name="whatBusinessWillDo" />
+        </div>
+        <div class="col11 last">
+            <label for="whatBusinessWillDoNone">
+                <strong>None of the above</strong>
+            </label>
+        </div>
+    </div>
+    <div id="divNoneOfAbove" class="result-container validation" style="display: none">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+            </div><!-- col1 -->
+            <div class="col11 last">
+                <h3>You’re not entitled to an ABN.  </h3>
+                <p>You’re not entitled to an ABN because you’re not undertaking any activities that are “business-like”.</p>
+                <p>
+                    You can read more about <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/ABN-entitlement/" target="_blank">ABN entitlement </a>on the Australian Business Register website.
+                </p>
+                <p>
+                    If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                </p>
+            </div><!-- result-cell -->
+        </div>
+    </div>
+</fieldset>
+<fieldset id="divWhereYourBusinessOperate" style="display: none">
+    <legend class="larger">Where will your business operate?</legend>
+    <p id="pIncorporateAssociation" style="display: none">
+        If you run your association in Australian external territories, offshore areas or overseas, we’ll need to ask you one or two other questions.
+    </p>
+    <div class="grid-row grid-row-no-lineclearfix">
+        <div class="col1">
+            <input type="radio" id="whereBusinessWillOperate1" name="whereBusinessWillOperate" />
+        </div>
+        <div class="col11 last">
+            <label for="whereBusinessWillOperate1">
+                <strong>In Australia</strong>
+            </label>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" class="showhide-trigger" id="whereBusinessWillOperate2" name="whereBusinessWillOperate" />
+        </div>
+        <div class="col11 last">
+            <label for="whereBusinessWillOperate2">
+                <strong>In Australian external territories or offshore areas</strong>
+                <br />
+                Such as Christmas Island, Cocos Island, the Joint Petroleum Area.
+            </label>
+        </div>
+    </div>
+    <div class="grid-row grid-row-no-line clearfix">
+        <div class="col1">
+            <input type="radio" class="showhide-trigger" id="whereBusinessWillOperate3" name="whereBusinessWillOperate" />
+        </div>
+        <div class="col11 last">
+            <label for="whereBusinessWillOperate3">
+                <strong>Overseas</strong>
+            </label>
+        </div>
+    </div>
+</fieldset>
+<fieldset id="divBusinessActivity" style="display: none">
+    <legend class="larger">Will you do any of the following?</legend>
+    <ul>
+        <li>Deliver goods or make goods available in Australia to buyers</li>
+        <li>Remove goods from Australia</li>
+        <li>Supply services that are carried out in Australia</li>
+        <li>Import, install or assemble goods in Australia</li>
+    </ul>
+    <div class="radio-toggle col11">
+        <label class="on label-left" for="rdAnyActivityYes"><input id="rdAnyActivityYes" type="radio" name="rdAnyActivity"><span>Yes</span></label>
+        <label class="off label-right" for="rdAnyActivityNo"><input id="rdAnyActivityNo" type="radio" name="rdAnyActivity"><span>No</span></label>
+    </div>
+    <div id="divNoneOfActivityInAustralia" class="result-container validation" style="display: none">
+        <div class="grid-row">
+            <div class="col1">
+                <img src="assets/img/ico-exclamation-orange.png" alt="Warning">
+            </div><!-- col1 -->
+            <div class="col11 last">
+                <h3>You’re not entitled to an ABN.</h3>
+                <p>
+                    You’re not entitled to an ABN because you’re not operating in or supplying goods to Australia.
+                </p>
+                <p id="pGst" style="display: none">
+                    You can still continue with the form to register for GST.
+                </p>
+                <p id="pNoGst" style="display: none">
+                    If you’d like this decision in writing, continue to fill in and then submit this form. You’ll get a formal letter explaining how you can appeal this decision if you’re not satisfied.
+                </p>
+            </div><!-- result-cell -->
+        </div>
+    </div>
+</fieldset>
+<div class="result-container validation abnEntitled" id="divEligible" style="display: none">
+    <div class="grid-row">
+        <div class="col1">
+            <img src="assets/img/ico-tick-green.png" alt="Success">
+        </div><!-- col1 -->
+        <div class="col11 last">
+            <p>
+                <strong>You are entitled to an ABN</strong>
+            </p>
+        </div><!-- result-cell -->
+    </div>
+</div>
+
+
+
+

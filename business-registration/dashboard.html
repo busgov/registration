@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Business Registration" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="brand"><a href="index.html"><span>Home</span></a></div>
+            <nav> 
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="settings.html">Robert Johnson</a>
+                        <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#">Sign off</a></li>
+                                <li><a href="#">Account settings</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="system-message">
+                <div class="grid-row clearfix">
+                    <div class="col8 system-message-content">
+                        <p><strong>Hi Robert</strong>. This is your dashboard where you can monitor your application progress. You can update your sign in details by clicking your name at the top of the screen.</p>
+                    </div><!-- col -->
+                    <div class="col3 last">
+                        <div class="close closeSystemMessage">
+                            <p><a href="#">Dismiss<span class="visuallyhidden"> and close this message box</span></a></p>
+                        </div>
+                    </div><!-- col -->
+                </div><!-- grid-row -->
+            </div>
+        </header>
+
+        <main>
+            <h1 id="heading" tabindex="-1">My dashboard</h1>
+            <p>When all registrations are complete we'll notify you here and by email.</p>
+            <!--
+            <table>
+                <caption><strong>Registration:</strong> #QGTI149<br />
+                <span>Started 19 October 2015</caption>
+                <thead>
+                <tr>
+                    <th class="registration">Registration item</th>        
+                    <th class="status"></th>
+                </tr>
+                </thead>
+                <tr>
+                    <td class="incomplete">Application incomplete. <a href="">Return to <strong>Step 2: Business name</strong></a></td>
+                    <td class="status-delete"><a href="">Delete</a></td>
+                </tr>        
+            </table>
+            -->
+
+            <table>
+                <caption><strong>Registration:</strong> #JKWI980<br />
+                <span>Submitted 30 October 2015&nbsp; <button type="button" class="btn btn-default">Show details</button></span></caption>
+                <thead>
+                <tr>
+                    <th class="registration">Registration item</th>        
+                    <th class="status">Status</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>ABN</td>        
+                    <td class="status-done">Registered</td>
+                </tr>        
+                <tr>
+                    <td>Bob's Plumbing (<em>business name</em>)</td>        
+                    <td class="status-done">Registered</td>
+                </tr>        
+                <tr>
+                    <td>Bob's Whitegoods Repairs (<em>business name</em>)</td>        
+                    <td class="status-waiting">Waiting</td>
+                </tr>        
+                <tr>
+                    <td>GST</td>        
+                    <td class="status-waiting">Waiting</td>
+                </tr>        
+                <tr>
+                    <td>PAYG</td>        
+                    <td class="status-waiting">Waiting</td>
+                </tr>        
+            </table>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="#">Legal notices</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Glossary</a></li>
+                <li><a href="#">Site map</a></li>
+            </ul>
+        </footer>
+
+    </div><!-- wrapper -->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script>
+        $(document).ready(function() { 
+
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required 
+               to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+
+            /* css class for the hover state */
+            hoverClass: "hover",
+
+            /* css class for the focus state */
+            focusClass: "focus",
+
+            /* css class for the open state */
+            openClass: "open"
+        });
+      });
+    </script>    
+
+</body>
+</html>
