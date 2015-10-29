@@ -308,10 +308,9 @@ legend .field-note {
 .print a,
 .print a:link,
 .print a:visited {
-  background: transparent url(../img/ico-print.png) no-repeat 5px 0;
-  padding: 0 5px 10px 45px;
+  display: none;
 }
-@media only screen and (min-width: $break-large) {
+@media only screen and (min-width: $break-medium) {
   .print a,
   .print a:link,
   .print a:visited {
