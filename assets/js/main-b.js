@@ -807,7 +807,7 @@ function calculateCompletion() {
 function selectRadioButton(value, name) {
     if (value != null) {
         setTimeout(function () {
-            setValue(value, name)
+            setValue(value, name);
         }, 50);
     }
 }

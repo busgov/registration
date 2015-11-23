@@ -113,8 +113,34 @@ function initSaveForLater() {
                 $("#saveForLater").find('.cd-panel').addClass('is-visible');
             });
         }, "10");
-    });
-    
+    });    
+}
+
+function initApplicationOptions() {
+    $("#applicationOptions").load("application-options-content.html?t=" + (new Date()).getTime(), function () {
+        setTimeout(function() {
+            var applicationOptions = new jQueryCollapse($("#applicationOptions").find(".applicationoptions"), {
+                open: function () {
+                    this.slideDown(150);
+                },
+                close: function () {
+                    this.slideUp(150);
+                }
+            });
+            $("#applicationOptions").find('.cd-panel').on('click', function (event) {
+                if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+                    applicationOptions.close();
+                    $("#applicationOptions").find('.cd-panel').removeClass('is-visible');
+                    event.preventDefault();
+                }
+            });
+            $('.btn-options').on('click', function (event) {
+                applicationOptions.open();
+                event.preventDefault();
+                $("#applicationOptions").find('.cd-panel').addClass('is-visible');
+            });
+        }, "10");
+    });    
 }
 
 function GetCheckedItems(elementId) {
@@ -143,6 +169,46 @@ function getUrlVars() {
         vars[hash[0]] = hash[1];
     }
     return vars;
+}
+
+function navigationWithinPage() {
+    $(".next").click(function (event) {
+        // get the index of current button in whole list of buttons with class '.next'
+        var index = $(".next").index(this);
+        $.each($(".sub-section-container"), function (i, item) {
+            if (index === i) {
+                $(item).find("div").first().slideUp("", function () {
+                    $(item).removeClass("sub-section-open").addClass("sub-section-done"); // add class for your need.
+                });
+
+            }
+            if (i === (index + 1)) {
+                $(item).find("div").first().slideDown("", function () {
+                    $(item).addClass("sub-section-open").addClass(""); // add class for your need.;
+                });
+
+            }
+        });
+
+    });
+
+    $(".previous").click(function () {
+        // get the index of current button in whole list of buttons with class '.next'
+        var index = $(".previous").index(this);
+        $.each($(".sub-section-container"), function (i, item) {
+            if (index === i) {
+                $(item).find("div").first().slideDown("", function () {
+                    $(item).addClass("sub-section-open").addClass(""); // add class for your need.
+                });
+            }
+            if (i === (index + 1)) {
+                $(item).find("div").first().slideUp("", function () {
+                    $(item).removeClass("sub-section-open").addClass(""); // add class for your need.
+                });
+            }
+        });
+
+    })
 }
 
 /*

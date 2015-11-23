@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="wrapper wrapper-main">
-
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
@@ -44,8 +44,8 @@
             <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
             <p>All fields are required unless marked as optional.</p>
 
-            <div class="sub-section-container sub-section-open">
-                <h2><span>3.1</span> Your contact details</h2>
+            <div id="section1" class="sub-section-container sub-section-open">
+                <h2>Your contact details</h2>
                 <div class="sub-section-content">
                     <div id="divContact">
                         <fieldset>
@@ -199,17 +199,18 @@
                             </div><!-- col -->
                         </div><!-- grid-row -->
                     </fieldset>
-                    <div id="1" class="form-row">
-                        <p>
-                            <a href="#"><strong>Next:</strong> 3.2 Reason for application</a>
-                        </p>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
-            <div class="sub-section-container">
-                <h2><span>3.2</span> Reason for application</h2>
-                <div class="sub-section-content" style="display: none">
+            <div id="section2" class="sub-section-container">
+                <h2>Reason for application</h2>
+                <div class="sub-section-content">
                     <fieldset id="fieldsetReasonForApplication">
                         <legend class="larger">Australian Business Number (ABN)</legend>
                         <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
@@ -337,16 +338,18 @@
                         </div><!-- grid-row -->
 
                     </fieldset>
-                    <div class="form-row">
-                        <p><a href="#"><strong>Next:</strong> 3.3 Business activity details</a></p>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
             <div class="sub-section-container">
-                <h2><span>3.3</span> Business activity details</h2>
+                <h2>Business activity details</h2>
                 <div class="sub-section-content">
-
                     <fieldset>
                         <legend class="margin5 larger">ABN registration date</legend>
                         <div class="grid-row">
@@ -454,6 +457,14 @@
 
                     </fieldset>
 
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button>
+                            <button type="button" class="btn btn-default" onclick="location.href='taxation-details.html'">Continue to step 4</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button>
+                            <button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
+                    </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
@@ -461,41 +472,20 @@
 
     </div><!-- wrapper -->
 
-    <div class="controls-container">
-        <div class="controls-content">
-            <div class="wrapper">
-                <button type="button" class="btn" onclick="location.href = 'business-names-05.html'">Previous</button>
-                <button type="button" class="btn btn-default" onclick="location.href = 'taxation-details.html'">Continue to step 4</button>
-                <button type="button" class="btn btn-save" onclick="location.href = '#'">Save for later</button>
-            </div><!-- wrapper -->
-        </div><!-- controls-content -->
-    </div><!-- controls-container -->
-    <div class="saveforlater" id="saveForLater">
-        <div class="cd-panel from-right">
-            <div class="cd-panel-header">
-                <a href="#" class="cd-panel-close">Close</a>
-                <h2 id="h2SaveForLater">Save for later</h2>
-            </div>
-            <div class="cd-panel-container">
-                <div class="cd-panel-content">
-                    <div id="helpFile" class="showhide">
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
 
-                    </div><!-- showhide -->
-                </div><!-- cd-panel-content -->
-            </div><!-- cd-panel-container -->
-        </div><!-- cd-panel -->
-    </div>
-    
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
-    <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
     <script>
 
         $(document).ready(function () {
             /* Expand collapse headings config */
-            initialiseRegistrationCollapse(150, true);
+            navigationWithinPage();
             initSaveForLater();
+            initApplicationOptions();
             // the following code is to register the slide up/down effect. this is
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.

@@ -16,17 +16,17 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="Business Registration" />
+    <meta name="application-name" content="Business Registration"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
 </head>
 <body>
     <div class="wrapper wrapper-main">
-        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
+
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
-
+        
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
@@ -41,15 +41,16 @@
                     <li><span>6</span><br>Payment<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
+            <h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
 
+            <h2>Business names</h2>
             <div class="result-container fade-in">
                 <div class="result-row">
                     <div class="result-icon">
                         <img src="assets/img/ico-tick-green.png" alt="Success" />
                     </div><!-- result-icon -->
                     <div class="result-cell result-title">
-                        <p><strong>Bob's Plumbing</strong> - is available</p>
+                        <p><strong>Bob's Plumbing</strong> business name is currently available</p>
                     </div><!-- result-cell -->
                     <div class="result-cell result-duration">
                         <label class="visuallyhidden" for="registration-duration">Select duration:</label>
@@ -59,40 +60,49 @@
                         </select>
                     </div><!-- result-cell -->
                     <div class="result-cell result-status">
-                        <button type="button" class="btn btn-default btn-small" onclick="location.href='business-names-02.html'">Add</button>
+                        <button type="button" class="btn btn-default btn-small" onclick="location.href='company-name-04.html'">Add</button>
                     </div><!-- result-status -->
                 </div><!-- result-row -->
             </div><!-- result-container -->
-
-            <div class="tip">
-                <p><strong>Is your brand unique? Similar registered names:</strong></p>
-                <ul class="lines">
-                    <li>Bob's Gasfitting</li>
-                    <li>Bob's Plumbing Services</li>
-                    <li>Bob's Mobile Plumbing</li>
-                </ul>
-            </div><!-- tip -->
-
             <div class="card clearfix">
                 <div class="form-row">
-                    <label for="name-search">Search for a different business name</label><br />
+                    <label for="name-search">Add another business name</label><br />
                     <input id="name-search" type="text" value=""> <button type="button" class="btn btn-default btn-small">Check</button><br />
                     <a class="smaller" href="#">Have a reserved name?</a>
                 </div><!-- form-row -->
             </div><!-- card -->
+            
+            <h2>Company name</h2>
+            <div class="result-container">
+                <div class="result-row">
+                    <div class="result-icon">
+                        <img src="assets/img/ico-tick-green.png" alt="Success" />
+                    </div><!-- result-icon -->
+                    <div class="result-cell result-title">
+                        <p><strong>Johnson and Griffith Plumbers Pty Ltd</strong> - company name</p>
+                    </div><!-- result-cell -->
+                    <div class="result-cell result-status">
+                        <p>Added</p>
+                    </div><!-- result-status -->
+                    <div class="result-cell result-remove">
+                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
+                    </div><!-- result-cell -->
+                </div><!-- result-row -->
+            </div>
+            <p><a href="#">Search for a different company name</a></p>
 
         </main>
-
+        
         <div class="controls-container">
             <div class="controls-content">
-                <button type="button" class="btn previous" onclick="location.href = 'business-names.html'">Previous</button>
-                <button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+                <button type="button" class="btn" onclick="location.href='company-name-02.html'">Previous</button>
+                <button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
                 <button type="button" class="btn btn-float btn-options">Options</button>
                 <button type="button" class="btn btn-float btn-save">Save</button>
             </div><!-- controls-content -->
-        </div><!-- controls-container -->
-    </div><!-- wrapper -->
-   
+        </div>
+    </div><!-- wrapper -->    
+
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 

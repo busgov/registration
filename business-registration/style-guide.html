@@ -42,21 +42,65 @@
             height: 60px;
             background: #e4e5e5;
         }
+        .sub-section-container h2 {
+          -webkit-border-radius: 6px;
+          border-radius: 6px;
+          background: #e4e5e5;
+          padding: 0.4em 0.5em 0.4em 0;
+          font-size: 1.5rem;
+        }
+        .sub-section-container h2 span {
+          -webkit-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
+          background: #3179b5 url(assets/img/sprite-expand-collapse.png) no-repeat 10px -119px;
+          font-size: 80%;
+          color: white;
+          padding: 0.6em 0.75em 0.55em 2.75em;
+        }
+        .sub-section-container h2 a,
+        .sub-section-container h2 a:link,
+        .sub-section-container h2 a:visited {
+          background-color: transparent;
+          color: black;
+          text-decoration: none; 
+        }
+        .sub-section-container h2 a:hover,
+        .sub-section-container h2 a:focus,
+        .sub-section-container h2 a:active {
+          display: block;
+        }
+        .sub-section-container h2:hover,
+        .sub-section-container h2:focus,
+        .sub-section-container h2:active {
+          /* needs fixing for WCAG */
+        }
+        .sub-section-open.sub-section-container h2 span {
+            background: black url(assets/img/sprite-expand-collapse.png) no-repeat 10px -377px;
+        }
+        .sub-section-content {
+          display: none;
+        }
+        .sub-section-open .sub-section-content  {
+          display: block;
+        }
+
+
     </style>
 </head>
 <body>
-    <div class="system-message">
-        <div class="grid-container clearfix">
-            <div class="col10">
-                <p>This is a system message.</p>
-            </div><!-- col -->
-            <div class="col2 last">
-                <button type="button" class="bt closeSystemMessage">Dismiss</button>
-            </div><!-- col -->
-        </div><!-- grid -->
-    </div><!-- system-message -->
-    <div class="wrapper">
-
+    <div class="wrapper wrapper-main">
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
+        <div class="system-message">
+            <div class="grid-container clearfix">
+                <div class="col10">
+                    <h1>Notice <div id="date">&nbsp;</div></h1>
+                    <p>The system message can be used to display important notifications such as expected system outages or limited service availability.</p>
+                </div>
+                <div class="col2 last">
+                    <button type="button" class="closeSystemMessage">Dismiss</button>
+                </div>
+            </div>
+        </div>
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
@@ -64,6 +108,21 @@
         <main>
             <div class="toc">
                 <h1 id="heading" tabindex="-1" autofocus>Style guide</h1>
+                <div id="validationSummary" class="validation-container clearfix" style="display: none">
+                    <div class="grid-row">
+                        <div class="validation-icon">
+                            <img src="assets/img/ico-alert-red.png" alt="Error">
+                        </div>
+                        <div class="validation-message">
+                            <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+                            <ul>
+                              <li>Enter a value for <a class="skip" href="#validation-test-field1">Label for field 1</a></li>
+                              <li>Enter a value for <a class="skip" href="#validation-test-field2">Label for field 2</a></li>
+                              <li>Choose yes or no for <a class="skip" href="#validation-test-field3">Question about something</a></li>
+                              <li>Select one of the options for <a class="skip" href="#validation-test-field4">Additional features</a></li>
+                        </div>
+                    </div>
+                </div>
                 <ol>
                     <li><a href="#typography" class="scroll">Typography</a></li>
                     <li><a href="#buttons" class="scroll">Buttons</a></li>
@@ -71,7 +130,7 @@
                     <li><a href="#grid" class="scroll">Grid</a></li>
                     <li><a href="#icons" class="scroll">Icons</a></li>
                     <li><a href="#highlights" class="scroll">Highlights</a></li>
-                    <li><a href="#feedback" class="scroll">User feedback</a></li>
+                    <li><a href="#feedback" class="scroll">Validation and user feedback</a></li>
                     <li><a href="#navigation" class="scroll">Navigation</a></li>
                     <li><a href="#embedding" class="scroll">Embedded media</a></li>
                     <li><a href="#forms" class="scroll">Form elements</a></li>
@@ -84,6 +143,11 @@
                 <div class="sub-section-content">
 
                     <h1>Heading 1</h1>
+                    <p>Two variations of Open Sans are currently being used:</p>
+                    <ul>
+                      <li><strong>open_sanslight</strong> for body text</li>
+                      <li><strong>open_sansregular</strong> for headings</li>
+                    </ul>
                     <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
                     <h2>Heading 2</h2>
                     <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
@@ -177,7 +241,6 @@
                     </dl>
 
                     <h3>Tables</h3>
-                    <p class="notdone">Not styled</p>
                     <table cellspacing="0" cellpadding="0">
                         <caption>This is a table caption</caption>
                         <thead>
@@ -330,7 +393,7 @@
                         </div><!-- col -->
                     </div><!-- grid-row -->
 
-                    <p>Etc... Combinations adding up to 12. Last col must include <code>last</code></p>
+                    <p>Combinations must add up to 12 and last col include class <code>last</code></p>
                     <p>Additional styles are available for controlling lines, padding and shading.</p>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
@@ -349,10 +412,72 @@
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
-            <div class="sub-section-container">
-                <h2 id="feedback"><span>07</span> User feedback</h2>
+            <div class="sub-section-container" id="validation">
+                <h2 id="feedback"><span>07</span> Validation and user feedback</h2>
                 <div class="sub-section-content">
+                    <fieldset>
+                        <legend id="test-field" class="margin4 larger">Text fields and simple radio buttons</legend>
+                        <p class="no-margin-top margin4">A validation summary provides context and links to all errornous fields.</p>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="validation-test-field1" class="input-right"><span id="validationInline1">Label for field 1<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="validation-test-field1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="validation-test-field2" class="input-right"><span id="validationInline2">Label for field 2<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="validation-test-field2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="validation-test-field3" id="validation-test-field3" class="input-right"><span id="validationInline3">Question about something<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="on"><input id="on" type="radio" name="validation-test-field3"><span>Yes</span></label>
+                                    <label class="off label-right" for="off"><input id="off" type="radio" name="validation-test-field3"><span>No</span></label>
+                                </div>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                    </fieldset>
+                    <fieldset>
+                        <legend id="validation-test-field4" class="larger margin4"><span id="validationInline4">Additional features<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span><br />
+                        <span class="form-content">This is extra context within <code>legend</code> so it's read in forms mode.</span>
+                        </legend>
+                        <div class="grid-row grid-row-block clearfix margin4">
+                            <div class="col1">
+                                <input id="requiredRadio1" class="showhide-trigger" name="requiredRadio-radios" type="radio">
+                            </div><!-- col -->
+                            <div class="col7 last">
+                                <label for="requiredRadio1">
+                                    <strong>Option one</strong><br>
+                                    With some extra context here to describe the choice.
+                                </label>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row grid-row-block grid-row-last clearfix margin4">
+                            <div class="col1">
+                                <input id="requiredRadio2" class="showhide-trigger" name="requiredRadio-radios" type="radio">
+                            </div><!-- col -->
+                            <div class="col7 last">
+                                <label for="requiredRadio2">
+                                    <strong>Option two</strong><br>
+                                    With some extra context here to describe the choice.
+                                </label>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                    </fieldset>
+                    <div class="controls margin4">
+                        <button type="button" id="attemptToValidate" class="btn btn-default">Fire validation</button>
+                    </div>
 
+                    <h3>Search results</h3>
                     <div class="result-container">
                         <div class="result-row">
                             <div class="result-icon">
@@ -433,7 +558,16 @@
             <div class="sub-section-container">
                 <h2 id="navigation"><span>08</span> Navigation</h2>
                 <div class="sub-section-content">
-                    <p class="notdone">Not styled</p>
+                    <p>Due to the complexity of the application process (particularly company registration), the user interface has been designed to cater for <em>sections within pages</em>. Rather than bombarding the user with a long list of form controls some pages are divided into logical sections. Only one section is presented at one time. Once all sections have valid data the applicant can move onto the next step in the overall process. <a target="_blank" href="style-guide-navigation.html"><strong>Example of navigation</strong></a></p>
+
+                    <div class="sub-section-container">
+                        <h2><span>08</span> Navigation2</h2>
+                        <div class="sub-section-content">
+                            <p>Due to the complexity of the application process (particularly company registration), the user interface has been designed to cater for <em>sections within pages</em>. Rather than bombarding the user with a long list of form controls some pages are divided into logical sections. Only one section is presented at one time. Once all sections have valid data the applicant can move onto the next step in the overall process.</p>
+                        </div><!-- sub-section-content -->
+                    </div><!-- sub-section-container -->
+
+
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
@@ -695,7 +829,82 @@
                             <input id="longer-labels-2" type="radio" name="longer-labels">&nbsp;<label class="label-right" for="longer-labels-2">Second radio option</label>
                         </div><!-- grid-row -->
 
-                    </fieldset>                  
+                    </fieldset> 
+
+                    <fieldset id="fieldsetPOIAddress">
+                        <legend class="margin4 larger">How do you want to prove your identity?<br />
+                        <span class="field-note">While you can use either your Tax File Number (TFN) <strong>or</strong> your home address, providing your TFN is the quickest way to prove your identity.</legend>
+                        <div class="grid-row">
+                            <div class="col1 margin4">
+                                <input class="no-margin" type="radio" name="tfn-or-address" id="use-tfn" />
+                            </div>
+                            <div class="col7 last">
+                                <label class="no-margin" for="use-tfn"><strong>Tax File Number</strong> <span class="field-note">(recommended option)</span></label>
+                            </div><!-- col -->
+                        </div>
+                        <div class="grid-row">
+                            <div class="col5">&nbsp;</div>
+                            <div class="col7 last">
+                                <label for="enter-tfn">Enter your TFN</label>&nbsp;<input id="enter-tfn" type="number" style="width: 10em">
+                            </div>                    
+                        </div>
+                        <div class="grid-row" style="padding-top: 1.5em">
+                            <div class="col1 margin4">
+                                <input class="no-margin" type="radio" name="tfn-or-address" id="use-address" />
+                            </div>
+                            <div class="col7 last">
+                                <label class="no-margin" for="use-tfn"><strong>Use home address</strong></label>
+                            </div><!-- col -->
+                        </div>
+                        <div class="grid-row">
+                            <div class="col5">&nbsp;</div>
+                            <div class="col7 last">
+                                <label for="address-suggest">Start typing your address</label>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col5">&nbsp;</div>
+                            <div class="col7 last">
+                                <input id="address-suggest" type="text">&nbsp;<a href="#" id="manual" class="showhide-trigger-1">Can't find address</a><a href="#" id="addressSearch" class="showhide-trigger-1" style="display: none">Back to address search</a>
+                            </div><!-- col -->                        
+                        </div>
+                        <div class="grid-container showhide-target-1" id="divManualAddress" style="display: none">
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line1" class="input-right">Address line 1</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line1" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line2" class="input-right">Address line 2</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line2" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="suburb" class="input-right">Suburb</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="suburb" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="postcode" class="input-right">Postcode</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="postcode" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div><!-- manualAddress -->
+
+
+                    </fieldset>
 
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
@@ -753,6 +962,50 @@
                 section.open(index);
             });
         });
+
+        $("#attemptToValidate").click(function () {
+              $('#validationSummary').slideDown("fast");
+              $('#validationSummaryAnchor').focus();
+              $('#validationInline1').addClass('validation-inline');
+              $('#validationInline2').addClass('validation-inline');
+              $('#validationInline3').addClass('validation-inline');
+              $('#validationInline4').addClass('validation-inline');
+              $("#validation").find('img').removeClass("visuallyhidden");
+        });
+  
+        // Keyboard friendly anchor links to elements that can receive focus
+        // bind a click event to the 'skip' link
+        $(".skip").click(function(event){
+
+            // strip the leading hash and declare
+            // the content we're skipping to
+            var skipTo="#"+this.href.split('#')[1];
+
+            // Setting 'tabindex' to -1 takes an element out of normal 
+            // tab flow but allows it to be focused via javascript
+            $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+
+                // when focus leaves this element, 
+                // remove the tabindex attribute
+                $(this).removeAttr('tabindex');
+
+            }).focus(); // focus on the content container
+        });  
+
+
+        // Temporary time and date function for system message demo
+
+        document.getElementById("date").innerHTML = formatAMPM();
+        function formatAMPM() {
+        var d = new Date(),
+            minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+            hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+            ampm = d.getHours() >= 12 ? 'pm' : 'am',
+            months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        return "(" + d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear()+' '+hours+':'+minutes+ampm + ")";
+        }
+
     </script>
 </body>
 </html>

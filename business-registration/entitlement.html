@@ -22,6 +22,7 @@
 </head>
 <body>
     <div class="wrapper wrapper-main">
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
@@ -41,10 +42,8 @@
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">1. Entitlement check <span>(Step 1 of 6)</span></h1>
             <p>All fields are required unless marked as optional.</p>
-            <div class="sub-section-container  sub-section-open">
-                <h2>
-                    <span>1.1</span> ABN entitlement
-                </h2>
+            <div id="section1" class="sub-section-container sub-section-open">
+                <h2>ABN entitlement</h2>
                 <div class="sub-section-content">
                     <p>
                         Before you continue, we need to first check that you’re entitled to an ABN.
@@ -260,17 +259,17 @@
                     </fieldset>
 
                     <fieldset id="fieldsetAbnEligibility" class="col11"></fieldset>
-                    <div class="form-row col11">
-                        <p>
-                            <a href="#"><strong>Next:</strong> 1.2 Proof of identity</a>
-                        </p>
-                    </div>
+                    <div id="section1-controls" class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
+                    </div><!-- controls-container -->
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
-            <div class="sub-section-container">
-                <h2>
-                    <span>1.2</span> Proof of identity
-                </h2>
+
+            <div id="section2" class="sub-section-container">
+                <h2>Proof of identity</h2>
                 <div class="sub-section-content">
                     <fieldset id="fieldsetProofOfIdentity">
                         <legend class="margin4 larger">Your details</legend>
@@ -323,8 +322,10 @@
                         </div><!-- grid-row -->
                     </fieldset>
                     <fieldset id="fieldsetPOIAddress">
-                        <legend class="margin4 larger">How do you want to prove your identity? <br />
-                        <span class="field-note">We require either your tax file number (TFN) or your home address. Providing your TFN is the quickest way to prove your identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter your home address</a> if you prefer.</span></legend>
+                        <legend class="margin4 larger">
+                            How do you want to prove your identity? <br />
+                            <span class="field-note">We require either your tax file number (TFN) or your home address. Providing your TFN is the quickest way to prove your identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter your home address</a> if you prefer.</span>
+                        </legend>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="tfn" class="input-right">
@@ -390,20 +391,17 @@
                             </div><!-- grid-row -->
                         </div><!-- manualAddress -->
                     </fieldset>
+                    <div id="section1-controls" class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" id="btnContinue" class="btn btn-default">Continue to step 2</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
+                    </div><!-- controls-container -->
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
         </main>
     </div><!-- wrapper -->
 
-    <div class="controls-container">
-        <div class="controls-content">
-            <div class="wrapper">
-                <button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
-                <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Continue to step 2</button>
-                <button type="button" class="btn btn-save" onclick="location.href='#'">Save for later</button>
-            </div><!-- wrapper -->
-        </div><!-- controls-content -->
-    </div><!-- controls-container -->
     <div class="help" id="help">
         <div class="cd-panel from-right">
             <div class="cd-panel-header">
@@ -423,13 +421,13 @@
         </div><!-- cd-panel -->
     </div>
 
-    <div class="saveforlater" id="saveForLater">
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
 
-    </div>
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
-    <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
     <script type="text/javascript">
         //var help;
         var isGst = false;
@@ -437,10 +435,16 @@
         var isStarted = false;
         var isUnincorpAssociation = false;
         var inAustraliaMatters = false;
+        var nextStepUrl = "business-names.html";
         $(document).ready(function () {
             // load save for later content
             initSaveForLater();
+            initApplicationOptions();
+            navigationWithinPage();
 
+            $("#btnContinue").click(function() {
+                window.location = nextStepUrl;
+            });
             // detect whether company or gst selected
             var urlQueryStrings = getUrlVars();
             if (urlQueryStrings.type != undefined) {
@@ -453,6 +457,7 @@
             }
             // determine whether this is a company entitlement or not
             if (isCompany) {
+                nextStepUrl = "company-name.html";
                 $("#fieldsetCompanyAbn").slideDown();
             } else {
                 $("#fieldsetAbn").slideDown();
@@ -477,7 +482,8 @@
                 clearOthers: false,
                 toggleSlideSameElement: true
             });
-            initialiseRegistrationCollapse(150, true);
+
+            // initialiseRegistrationCollapse(150, true);
             // for what do you need an ABN for.
             $("#fieldsetAbn").find(":radio").click(function () {
 
@@ -514,11 +520,13 @@
                 // Company other
                 if (this.id === "rdOther") {
                     isCompany = true;
+                    nextStepUrl = "company-name.html";
                     $("#fieldsetAbnEligibility").slideUp();
                     $("#fieldsetCompanyType").slideDown();
                     jQuery('html, body').animate({ scrollTop: $('#fieldsetCompanyType').offset().top }, 1200);
                     clearElement($("#divGoToCompanyRegistration"));
                 } else {
+                    nextStepUrl = "business-names.html";
                     $("#fieldsetCompanyType").slideUp();
                     clearElement($("#fieldsetCompanyType"));
                 }
@@ -807,6 +815,7 @@
             $("#divEligible").hide();
             $("#divNoneOfAbove").hide();
         }
+
     </script>
 </body>
 </html>

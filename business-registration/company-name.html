@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business name search | Business Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Business Registration"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+</head>
+<body>
+    <div class="wrapper wrapper-main">
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
+        <header>
+            <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
+        </header>
+        
+        <main>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span id="progress-percent" style="width: 23%"></span>
+                </div><!-- meter -->
+                <ul class="section-nav">
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Entitlement<br> check</a></li>
+                    <li class="active"><span>2</span><br>Business<br> name</li>
+                    <li><span>3</span><br>Business<br> details</li>
+                    <li><span>4</span><br>Taxation<br>details</li>
+                    <li><span>5</span><br>Confirm<br> application</li>
+                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                </ul>
+            </div><!-- progress-container -->
+            <h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
+
+            <div id="emptySearch" class="validation-container clearfix" style="display: none">
+                <div class="grid-row">
+                    <div class="validation-icon">
+                        <img src="assets/img/ico-alert-red.png" alt="Error">
+                    </div>
+                    <div class="validation-message">
+                        <h2><a id="emptySearchAnchor" href="">Error</a></h2>
+                        <p>You must choose an option for company name before continuing to step 3.</p>
+                    </div>
+                </div>
+            </div>
+
+            <fieldset id="fieldsetPOIAddress">
+                <legend class="larger">Do you have a proposed company name?</legend>
+                <div class="grid-row">
+                    <div class="col1">
+                        <input class="no-margin" type="radio" name="names" id="names-search" checked="checked" />
+                    </div>
+                    <div class="col11 last">
+                        <label class="no-margin" for="names-search"><strong>Search for a new name</strong></label>
+                    </div><!-- col -->
+                </div>
+                <div class="grid-row">
+                    <div class="col1">&nbsp;</div>
+                    <div class="col11 last">
+                        <label for="name-search">Enter name</label><br />
+                        <input id="name-search" type="text" value="Johnson and Griffith Plumbers">
+                        <label for="name-element" class="visuallyhidden">Choose legal element</label>
+                        <select id="name-element" class="larger" style="max-width: 5em">
+                            <option selected="selected">Pty Ltd</option>
+                            <option>Pty</option>
+                            <option>Pty Ltd</option>
+                            <option>etc</option>
+                        </select>
+                        <button type="button" class="btn btn-default" style="font-size: 100%; padding: 0.5em 0.75em" id="search-btn" onclick="location.href = 'company-name-01.html'">Check</button>
+                    </div>                    
+                </div>
+
+                <div class="grid-row" style="padding-top: 1.5em">
+                    <div class="col1">
+                        <input class="no-margin" type="radio" name="names" id="names-reserved" />
+                    </div>
+                    <div class="col11 last">
+                        <label class="no-margin" for="names-reserved"><strong>Use a reserved name</strong></label>
+                    </div><!-- col -->
+                </div>
+                <div class="grid-row">
+                    <div class="col1">&nbsp;</div>
+                    <div class="col5">
+                        <label for="reserved-name">Reserved name</label><br />
+                        <input id="reserved-name" type="text" value="">
+                    </div>                    
+                    <div class="col4 last">
+                        <label for="reserved-number">Reserved number</label><br />
+                        <input id="reserved-number" type="text" value="">
+                    </div>                    
+                </div>
+
+                <div class="grid-row" style="padding-top: 1.5em">
+                    <div class="col1">
+                        <input class="no-margin" type="radio" name="names" id="names-acn" />
+                    </div>
+                    <div class="col11 last">
+                        <label class="no-margin" for="names-acn"><strong>Use ACN</strong> <span class="field-note">We'll just use the ACN generated by this application</span></label>
+                    </div><!-- col -->
+                </div>
+            </fieldset>
+
+        </main>
+        
+        <div class="controls-container">
+            <div class="controls-content">
+                <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
+                <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+            </div><!-- controls-content -->
+        </div>
+    </div><!-- wrapper -->    
+
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initSaveForLater();
+            initApplicationOptions();
+        });
+        $('#continueBtn').click(function(){
+           if($('#name-search').val() == ''){
+              $('#emptySearch').slideDown("fast");
+              $('#emptySearchAnchor').focus();
+           }
+           else (location.href='company-name-01.html');
+        });
+        $('#alreadyReserved').click(function(){
+          $('#reserved').toggle("fast");
+          $('#reserved-name').focus();
+          $(this).closest('p').hide();
+        });
+    </script>
+</body>
+</html>

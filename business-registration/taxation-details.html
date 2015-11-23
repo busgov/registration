@@ -22,6 +22,7 @@
 </head>
 <body>
     <div class="wrapper wrapper-main">
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
@@ -42,8 +43,8 @@
             <h1 id="heading" tabindex="-1">4. Taxation details <span>(Step 4 of 6)</span></h1>
             <p>All fields are required unless marked as optional.</p>
 
-            <div class="sub-section-container sub-section-open">
-                <h2><span>4.1</span> Goods and services tax (GST)</h2>
+            <div id="section1" class="sub-section-container sub-section-open">
+                <h2>Goods and services tax (GST)</h2>
                 <div class="sub-section-content">
                     <div id="divContact">
                         <fieldset>
@@ -108,18 +109,20 @@
 
                         </fieldset>
                     </div>
-
-                    <div id="1" class="form-row">
-                        <p>
-                            <a href="#"><strong>Next:</strong> 4.2 Pay as you go (PAYG) withholding</a>
-                        </p>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn" onclick="location.href='business-details.html'">Previous</button>
+                            <button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button>
+                            <button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
-            <div class="sub-section-container">
-                <h2><span>4.2</span> Pay as you go (PAYG) withholding</h2>
-                <div class="sub-section-content" style="display: none">
+            <div id="section2" class="sub-section-container">
+                <h2>Pay as you go (PAYG) withholding</h2>
+                <div class="sub-section-content">
                     <div id="divContact">
                         <fieldset>
 
@@ -172,46 +175,34 @@
 
                         </fieldset>
                     </div>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button>
+                            <button type="button" class="btn btn-default" onclick="location.href='confirm.html'">Continue to step 5</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button>
+                            <button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
+                    </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
         </main>
 
     </div><!-- wrapper -->
 
-    <div class="controls-container">
-        <div class="controls-content">
-            <div class="wrapper">
-                <button type="button" class="btn" onclick="location.href = 'business-details.html'">Previous</button>
-                <button type="button" class="btn btn-default" onclick="location.href = 'confirm.html'">Continue to step 5</button>
-                <button type="button" class="btn btn-save" onclick="location.href = '#'">Save for later</button>
-            </div><!-- wrapper -->
-        </div><!-- controls-content -->
-    </div><!-- controls-container -->
-    <div class="saveforlater" id="saveForLater">
-        <div class="cd-panel from-right">
-            <div class="cd-panel-header">
-                <a href="#" class="cd-panel-close">Close</a>
-                <h2 id="h2SaveForLater">Save for later</h2>
-            </div>
-            <div class="cd-panel-container">
-                <div class="cd-panel-content">
-                    <div id="helpFile" class="showhide">
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
 
-                    </div><!-- showhide -->
-                </div><!-- cd-panel-content -->
-            </div><!-- cd-panel-container -->
-        </div><!-- cd-panel -->
-    </div>
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
-    <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
     <script>
 
         $(document).ready(function () {
-            /* Expand collapse headings config */
-            initialiseRegistrationCollapse(150, true);
+            navigationWithinPage();
             initSaveForLater();
+            initApplicationOptions();
+
             // the following code is to register the slide up/down effect. this is
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.

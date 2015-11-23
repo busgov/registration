@@ -2,10 +2,6 @@
 // ------------------------------------------------------------------------------------------------------
 
 
-// Main site navigation
-// ------------------------------------------------------------------------------------------------------
-
-
 // Registration progress bar
 // ------------------------------------------------------------------------------------------------------
 
@@ -125,6 +121,12 @@ ul.section-nav li a:active {
 .no-margin {
   margin: 0 !important;
 }
+.margin-bottom {
+  margin-bottom: 2em;
+}
+.margin-top-075 {
+  margin-top: 0.75em;
+}
 .microcopy {
   color: $gray-dark;
   line-height: 1;
@@ -150,6 +152,10 @@ legend .field-note {
 @-moz-keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
 @keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
 
+@-webkit-keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+@-moz-keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+@keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+
 .fade-in {
     background-color: $gray-bg;
     -webkit-animation-name: fade;
@@ -161,6 +167,12 @@ legend .field-note {
     -webkit-animation-timing-function: ease-in;
     -moz-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+}
+.fade-in-inherit {
+    background-color: transparent;
+    -webkit-animation-name: fade-inherit;
+    -moz-animation-name: fade-inherit;
+    animation-name: fade-inherit;  
 }
 
 
@@ -248,53 +260,72 @@ legend .field-note {
 // ------------------------------------------------------------------------------------------------------
 
 .system-message {
-  /* background: $blue-paler url(../img/ico-chat.png) no-repeat 16px 1.75em; */
-  background-color: $blue-paler;
+  background-color: $system-message;
   padding: 1em 1em 0.5em 1em;
   -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid $blue-pale;
+  margin-top: 55px;
+}
+.system-message h1 {
+  color: white;
+  padding: 0;
+  margin: 0 0 1em 0;
+  font-size: 150%;
+}
+.system-message h1 div {
+  display: inline;
+  font-size: 60%;
+  font-family: $font-light;
+  margin-left: 0.25em;
+  letter-spacing: normal;
+}
+.system-message p,
+.system-message li {
+  color: white;  
 }
 .system-message .icon {
   display: none;
+}
+.system-message a,
+.system-message a:link,
+.system-messaged a:visited {
+  color: white;
+  text-decoration: underline;
+}
+.system-message a:hover,
+.system-message a:focus,
+.system-message a:active {
+  text-decoration: none;
 }
 .system-message img {
   max-width: 50px;
   vertical-align: middle;
 }
-.system-message .close p a,
-.system-message .close p a:link,
-.system-message .close p a:visited {
-  background: transparent url(../img/sprite-close.png) no-repeat 5px 5px;
+button.closeSystemMessage {
+  background: white url(../img/sprite-close.png) no-repeat 7px 8px;
   color: $brand-blue;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: none;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 10px 14px 50px;
+  padding: 14px 12px 16px 54px;
 }
-.system-message .close p a:hover,
-.system-message .close p a:focus,
-.system-message .close p a:active {
-  background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 5px -107px;
+button.closeSystemMessage:hover,
+button.closeSystemMessage:focus,
+button.closeSystemMessage:active {
+  background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 7px -105px;
   color: $brand-hover-fg;
 }
 
 @media only screen and (min-width: $break-medium) {
-  .system-message .close p a,
-  .system-message .close p a:link,
-  .system-message .close p a:visited {
-    background: transparent url(../img/sprite-close.png) no-repeat 100% 5px;
-    padding: 10px 55px 14px 10px;
+  .system-message {
+    background: $system-message url(../img/ico-chat.png) no-repeat 1.5em 0.8em; 
   }
-  .system-message .close p a:hover,
-  .system-message .close p a:focus,
-  .system-message .close p a:active {
-    background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 100% -107px;
-  }
-  .system-message-content {
-    background: transparent url(../img/ico-chat.png) no-repeat 0 0.5em;
-    padding: 0.25em 0 0 55px;
+  .system-message h1 {
+    margin: 0 0 1em 1.75em;
   }
   .system-message .close {
     text-align: right;
@@ -722,7 +753,7 @@ legend .field-note {
 
 nav {
   position: absolute;
-  top: 0;
+  top: 18px;
   right: 0;
 }
 .nav-menu {
@@ -745,6 +776,10 @@ nav {
     display: inline-block;
     padding: 0.5em 0.5em 0.75em 48px;
     margin: 0 0 -1px 0;
+  min-height: 40px;
+}
+.nav-item span {
+  display: none;
 }
 
 
@@ -802,6 +837,15 @@ nav {
 .sub-nav li a:focus,
 .sub-nav li a:active  {
 }
+@media only screen and (min-width: $break-medium) {
+  nav {
+    top: 47px;
+  }
+  .nav-item span {
+    display: block;
+  }
+}
+
 
 @media only screen and (min-width: $break-large) {
   .nav-item > a,
@@ -826,4 +870,71 @@ nav {
   background-color: black;
   color: white;
   text-decoration: underline;
+}
+
+
+// Validation
+// ------------------------------------------------------------------------------------------------------
+
+.validation-container {
+   background-color: $gray-bg;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 1.25em 1em 0.75em 1em;
+  margin: 0.5em 0;
+}
+.validation-icon {
+  float: left;
+  display: inline;
+  width: 40px;
+  margin: 0 1% 0 0;
+}
+.validation-inline {
+  color: $validation-red;
+}
+.validation-inline img {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+@media only screen and (min-width: $break-medium) {
+    legend span.validation-inline img {
+    position: absolute;
+    left: 0;
+  }
+}
+.validation-message {
+  float: left;
+  width: 90%;
+  margin: 0;
+}
+.validation-message p,
+.validation-message li {
+  color: black;
+}
+.validation-message p a,
+.validation-message p a:link,
+.validation-message li a,
+.validation-message li a:link {
+  color: $validation-red !important;
+}
+.validation-message h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide pseudo effects for validation heading */
+.validation-message h2 a,
+.validation-message h2 a:link,
+.validation-message h2 a:visited,
+.validation-message h2 a:hover,
+.validation-message h2 a:focus,
+.validation-message h2 a:active {
+  text-decoration: none;
+  color: $font-color;
+  background-color: transparent;
 }

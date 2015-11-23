@@ -391,7 +391,6 @@ fieldset {
   padding: 0;
 }
 
-
 legend, label {
   border: 0;
   padding: 0.65em 0 1.5em 0;
@@ -412,6 +411,23 @@ legend.larger {
 }
 legend.larger span {
   font-weight: normal;
+}
+legend span.form-content {
+  font-size: 1.15rem;
+  font-family: $font-light;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+/* Allow space for help icon when it is required beside legend */
+.has-help {
+  margin-right: 35px;
+}
+.has-help img {
+  position: absolute;
+  right: 0;
+  max-width: 34px;
 }
 
 /**

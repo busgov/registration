@@ -14,11 +14,9 @@ body {
     margin: 0 3%;
     position: relative;
 }
-/* Using this for fixing controls
 .wrapper-main {
-  margin-bottom: 100px;
+  border-top: 2px solid #3179b5;
 }
-*/
 
 
 // Header
@@ -44,7 +42,6 @@ header .brand a:visited {
     background: $brand-blue;
     color: white;
     text-decoration: none;
-    width: 40%;
 }
 header .brand a:hover,
 header .brand a:focus,
@@ -68,16 +65,48 @@ header .brand a:active {
   header .brand a:link,
   header .brand a:visited {
       background: transparent url(../img/brand.png) no-repeat 0 0;
-      width: 300px;
-      height: 20px;
+      width: 240px;
+      height: 24px;
       background-size: cover;
       margin-top: 0;
   }
   header .brand a:hover,
   header .brand a:focus,
   header .brand a:active {
-      background: transparent url(../img/brand.png) no-repeat 0 -116px;
+      background: transparent url(../img/brand.png) no-repeat 0 -86px;
       background-size: cover;
+  }
+}
+
+.sub-brand {
+  display: none;
+}
+@media only screen and (min-width: $break-medium) {
+  .sub-brand {
+      background: transparent url(../img/bg-sub-brand.png) no-repeat 0 0; 
+      display: block;
+      height: 44px;
+      color: white;
+      position: absolute;
+      right: 0;
+      font-size: 1.2rem;
+  }
+  .sub-brand a,
+  .sub-brand a:link,
+  .sub-brand a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  .sub-brand a:hover,
+  .sub-brand a:focus,
+  .sub-brand a:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .sub-brand span {
+    padding: 0 1.25em 0 5.2em;
+    margin-top: 0.3em;
+    display: block;
   }
 }
 
@@ -86,14 +115,14 @@ header .brand a:active {
   header .brand a:link,
   header .brand a:visited {
       background: transparent url(../img/brand.png) no-repeat 0 0;
-      width: 400px;
-      height: 30px;
+      width: 329px;
+      height: 40px;
       margin-top: 0;
   }
   header .brand a:hover,
   header .brand a:focus,
   header .brand a:active {
-      background: transparent url(../img/brand.png) no-repeat 0 -140px;
+      background: transparent url(../img/brand.png) no-repeat 0 -104px;
   }
 }
 
@@ -102,7 +131,7 @@ header .brand a:active {
 // ------------------------------------------------------------------------------------------------------
 
 .controls-container {
-  background: transparent url(../img/bg-controls.png) repeat-x 0 0;
+  border-top: 1px solid $gray-bg;
   clear: both;
   /*
   position: fixed;
@@ -111,7 +140,7 @@ header .brand a:active {
   right: 0;
   width: 100%;
   */
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .controls-content {
     background-color: white;
@@ -351,43 +380,25 @@ td.incomplete {
 .sub-section-container h2 {
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  background: $gray-bg;
-  padding: 0.4em 0.5em 0.4em 0;
+  background: $gray-bg url(../img/sprite-sections.png) no-repeat 0 -7px;
+  padding: 0.4em 0.5em 0.4em 60px;
   font-size: 1.5rem;
-}
-.sub-section-container h2 span {
-  -webkit-border-radius: 6px 0 0 6px;
-  border-radius: 6px 0 0 6px;
-  background: $brand-blue url(../img/sprite-expand-collapse.png) no-repeat 10px -119px;
-  font-size: 80%;
-  color: white;
-  padding: 0.6em 0.75em 0.55em 2.75em;
-}
-.sub-section-container h2 a,
-.sub-section-container h2 a:link,
-.sub-section-container h2 a:visited {
-  background-color: transparent;
-  color: black;
-  text-decoration: none; 
-}
-.sub-section-container h2 a:hover,
-.sub-section-container h2 a:focus,
-.sub-section-container h2 a:active {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
   display: block;
 }
-.sub-section-container h2:hover,
-.sub-section-container h2:focus,
-.sub-section-container h2:active {
-  /* needs fixing for WCAG */
-}
-.sub-section-open.sub-section-container h2 span {
-    background: black url(../img/sprite-expand-collapse.png) no-repeat 10px -377px;
-}
+
 .sub-section-content {
   display: none;
 }
 .sub-section-open .sub-section-content  {
   display: block;
+}
+.sub-section-open h2 {
+  background: $gray-bg url(../img/sprite-sections.png) no-repeat 0 -105px;
+}
+.sub-section-done h2 {
+  background: $gray-bg url(../img/sprite-sections.png) no-repeat 0 -197px;
 }
 
 

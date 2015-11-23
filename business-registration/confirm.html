@@ -22,11 +22,10 @@
 </head>
 <body>
     <div class="wrapper wrapper-main">
-
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
         <header>
             <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
         </header>
-
         <main class="confirmation">
             <div class="progress-container">
                 <div class="progress-bar">
@@ -271,26 +270,28 @@
             <input type="checkbox" id="declaration" class="showhide-trigger" />&nbsp;<label for="declaration">I declare that the information given on this form is true and correct.</label>
         </main>
 
-    </div><!-- wrapper -->
-
-    <div class="controls-container">
-        <div class="controls-content">
-            <div class="wrapper">
+        <div class="controls-container">
+            <div class="controls-content">
                 <button type="button" class="btn" onclick="location.href = 'taxation-details.html'">Previous</button>
                 <button type="button" class="btn btn-default" onclick="location.href = 'payment.html'">Go to payment</button>
-                <button type="button" class="btn btn-save" onclick="location.href = '#'">Save for later</button>
-            </div><!-- wrapper -->
-        </div><!-- controls-content -->
-    </div><!-- controls-container -->
-    <div class="saveforlater" id="saveForLater">
+                <button type="button" class="btn btn-float btn-options">Options</button>
+                <button type="button" class="btn btn-float btn-save">Save</button>
+            </div><!-- controls-content -->
+        </div>
+    </div><!-- wrapper -->
 
-    </div>
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            navigationWithinPage();
             initSaveForLater();
+            initApplicationOptions();
         });
     </script>
 </body>

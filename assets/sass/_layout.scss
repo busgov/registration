@@ -5,11 +5,16 @@
 // Layout containers
 // ------------------------------------------------------------------------------------------------------
 
+
 /* Wrapper prevents content from running right to the edge of view port */
 .wrapper {
     width: 94%;
     margin: 0 3%;
     clear: both;
+    position: relative;
+}
+.wrapper-main {
+  border-top: 2px solid #3179b5;
 }
 .main-container {
     padding: 2em 0;
@@ -124,6 +129,107 @@ body.condensed header {
   body.home header p {
     padding: 2em 0 2.5em 0;
     font-size: $largest;
+  }
+}
+
+
+// Branding 
+
+.brand {
+  margin: 1em 0;
+}
+.brand span::before { 
+  content: "\00AB  ";
+}
+.brand a,
+.brand a:link,
+.brand a:visited {
+    display: block;
+    padding: 15px;
+    background: $brand-blue;
+    color: white;
+    text-decoration: none;
+}
+.brand a:hover,
+.brand a:focus,
+.brand a:active {
+    background: $brand-hover-bg;
+    color: $brand-hover-fg;
+}
+
+@media only screen and (min-width: $break-small) {
+  .brand span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .brand a,
+  .brand a:link,
+  .brand a:visited {
+      background: transparent url(../img/brand.png) no-repeat 0 0;
+      width: 240px;
+      height: 24px;
+      background-size: cover;
+      margin-top: 0;
+  }
+  .brand a:hover,
+  .brand a:focus,
+  .brand a:active {
+      background: transparent url(../img/brand.png) no-repeat 0 -86px;
+      background-size: cover;
+  }
+}
+
+.sub-brand {
+  display: none;
+}
+@media only screen and (min-width: $break-medium) {
+  .sub-brand {
+      background: transparent url(../img/bg-sub-brand.png) no-repeat 0 0; 
+      display: block;
+      height: 44px;
+      color: white;
+      position: absolute;
+      right: 0;
+      font-size: 1.2rem;
+  }
+  .sub-brand a,
+  .sub-brand a:link,
+  .sub-brand a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  .sub-brand a:hover,
+  .sub-brand a:focus,
+  .sub-brand a:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .sub-brand span {
+    padding: 0 1.25em 0 5.2em;
+    margin-top: 0.3em;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: $break-large) {
+  .brand a,
+  .brand a:link,
+  .brand a:visited {
+      background: transparent url(../img/brand.png) no-repeat 0 0;
+      width: 329px;
+      height: 40px;
+      margin-top: 0;
+  }
+  .brand a:hover,
+  .brand a:focus,
+  .brand a:active {
+      background: transparent url(../img/brand.png) no-repeat 0 -104px;
   }
 }
 

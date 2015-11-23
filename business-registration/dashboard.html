@@ -23,13 +23,14 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper-main">
+        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
         <header>
-            <div class="brand"><a href="index.html"><span>Home</span></a></div>
+            <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
             <nav> 
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="settings.html">Robert Johnson</a>
+                        <a href="settings.html"><span>Robert Johnson</span></a>
                         <div class="sub-nav">
                             <ul class="sub-nav-group">
                                 <li><a href="#">Sign off</a></li>
@@ -39,20 +40,19 @@
                     </li>
                 </ul>
             </nav>
-            <div class="system-message">
-                <div class="grid-row clearfix">
-                    <div class="col8 system-message-content">
-                        <p><strong>Hi Robert</strong>. This is your dashboard where you can monitor your application progress. You can update your sign in details by clicking your name at the top of the screen.</p>
-                    </div><!-- col -->
-                    <div class="col3 last">
-                        <div class="close closeSystemMessage">
-                            <p><a href="#">Dismiss<span class="visuallyhidden"> and close this message box</span></a></p>
-                        </div>
-                    </div><!-- col -->
-                </div><!-- grid-row -->
-            </div>
         </header>
 
+        <div class="system-message">
+            <div class="grid-container clearfix">
+                <div class="col10">
+                    <h1>Welcome! <div id="date">&nbsp;</div></h1>
+                    <p><strong>Hi Robert</strong>. This is your dashboard where you can monitor your application progress. You can update your sign in details by clicking your name at the top of the screen.</p>
+                </div>
+                <div class="col2 last">
+                    <button type="button" class="closeSystemMessage">Dismiss</button>
+                </div>
+            </div>
+        </div>
         <main>
             <h1 id="heading" tabindex="-1">My dashboard</h1>
             <p>When all registrations are complete we'll notify you here and by email.</p>
