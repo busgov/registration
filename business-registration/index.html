@@ -28,79 +28,8 @@
         </header>
 
         <main>
-            <h1 id="heading" tabindex="-1">Ready to register</h1>
-            <p class="intro">This is the start page to register for an Australian business. To get started, choose the items relevant to your business then click <strong>start applying</strong>.</p>
-            <div class="grid-row">
-                <div class="col9 select-registrations">
-                    <fieldset id="select-registrations">
-                        <legend class="larger col12">Select registrations</legend>
-                        <div class="grid-row clearfix">
-                            <div class="col7">
-                                <div class="grid-row">
-                                    <input id="abn" type="checkbox" class="checkbox" value="abn">
-                                    <label for="abn"><strong>ABN</strong> - Australian Business Number</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="bn" type="checkbox" class="checkbox" value="bn">
-                                    <label for="bn"><strong>BN</strong> - Business Name ($33 per name)</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="gst" type="checkbox" class="checkbox" value="gst">
-                                    <label for="gst"><strong>GST</strong> - Goods and Services Tax</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="co" type="checkbox" class="checkbox" value="co">
-                                    <label for="co"><strong>Company</strong> - Australian Company ($463)</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="payg" type="checkbox" class="checkbox" value="payg">
-                                    <label for="payg"><strong>PAYG</strong> - Pay as you go withholding</label>
-                                </div><!-- grid-row -->
-                            </div><!-- col -->
-                            <div class="col5 last">
-                                <div class="grid-row">
-                                    <input id="fbt" type="checkbox" class="checkbox" value="fbt">
-                                    <label for="fbt"><strong>FBT</strong> - Fringe Benefits Tax</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="lct" type="checkbox" class="checkbox" value="lct">
-                                    <label for="lct"><strong>LCT</strong> - Luxury Car Tax</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="ftc" type="checkbox" class="checkbox" value="ftc">
-                                    <label for="ftc"><strong>FTC</strong> - Fuel Tax Credits</label>
-                                </div><!-- grid-row -->
-                                <div class="grid-row">
-                                    <input id="wet" type="checkbox" class="checkbox" value="wet">
-                                    <label for="wet"><strong>WET</strong> - Wine Equalisation Tax</label>
-                                </div><!-- grid-row -->
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                    </fieldset>
-                    <div class="controls-content">
-                        <button type="button" id="next" class="btn btn-default">Start applying</button>
-                    </div><!-- controls-content -->
-                </div><!-- col -->
-                <div class="col3 last">
-                    <div class="big-help-box">
-                        <h2>Not sure?</h2>
-                        <p>We’ll help create a list of suggested registrations and potential costs.</p>
-                        <p><button type="button" class="btn btn-default">Help me decide tool</button></p>
-                    </div><!-- big-help-box -->
-                    <hr />
-                    <div class="sign-in-box">
-                        <h2>My registrations</h2>
-                        <p>Return to an open application or check progress.</p>
-                        <p>
-                            <label for="signin">Application ID:</label><br />
-                            <input type="text" id="signin" />
-                        </p>
-                        <p style="margin-bottom: 2em"><button type="button" class="btn btn-default" style="margin: 0; vertical-align: middle">Sign in</button>&nbsp; <a href="" class="smallest">Forgotten ID?</a></p>
-                    </div><!-- sign-in-box -->
-                </div><!-- col -->
-            </div><!-- grid-row -->
-
-
+            <h1 id="heading" tabindex="-1">Page update notice</h1>
+            <p class="intro">This page is currently being updated and the new version will be uploaded by 5pm Monday 30th November 2015.</p>
         </main>
 
         <footer>
@@ -117,22 +46,5 @@
     <script src="assets/js/functions.js">
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#next").click(function (e) {
-                e.preventDefault();
-                var queryString = "";
-
-                if ($("#co").prop("checked") && $("#gst").prop("checked")) {
-                    queryString = "type=co,gst";
-                } else if ($("#co").prop("checked")) {
-                    queryString = "type=co";
-                } else if ($("#gst").prop("checked")) {
-                    queryString = "type=gst";
-                }
-                document.location = "entitlement.html?" + queryString;
-            });
-        });
-    </script>
 </body>
 </html>

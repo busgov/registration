@@ -419,9 +419,27 @@ td.incomplete {
 // Sideboxes on start page
 // ------------------------------------------------------------------------------------------------------
 
+.big-help-box {
+  background-color: $blue-paler;
+  border-radius: 6px;
+  padding: 1em 1em 0 1em;
+}
 .big-help-box h2,
 .sign-in-box h2 {
   margin: 0;
+}
+.sign-in-box h2 {
+  font-size: 120%;
+  margin-top: 1.5em;
+}
+.sign-in-box label {
+  font-size: 90%;
+  margin: 0;
+}
+.sign-in-box input[type=text] {
+  font-size: 90%;
+  padding: 0.2em 0.15em;
+  margin: 0.2em 0.25em 0.2em 0;
 }
 .big-help-box .btn,
 .sign-in-box .btn {

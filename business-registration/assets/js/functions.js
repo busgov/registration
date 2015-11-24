@@ -177,14 +177,16 @@ function navigationWithinPage() {
         var index = $(".next").index(this);
         $.each($(".sub-section-container"), function (i, item) {
             if (index === i) {
-                $(item).find("div").first().slideUp("", function () {
+                $(item).find("div").first().slideUp("slow", function () {
                     $(item).removeClass("sub-section-open").addClass("sub-section-done"); // add class for your need.
-                });
-
-            }
-            if (i === (index + 1)) {
-                $(item).find("div").first().slideDown("", function () {
-                    $(item).addClass("sub-section-open").addClass(""); // add class for your need.;
+                    
+                    setTimeout(function(){
+                        $(item).next(".sub-section-container").find("div").first().slideDown("slow", 
+                            function () {
+                            $(item).addClass("sub-section-open").addClass("");
+                            });
+                            },
+                            200); // add class for your need.;
                 });
 
             }
@@ -199,13 +201,13 @@ function navigationWithinPage() {
             if (index === i) {
                 $(item).find("div").first().slideDown("", function () {
                     $(item).addClass("sub-section-open").addClass(""); // add class for your need.
+                    $(item).next(".sub-section-container").find("div").first().slideUp("", 
+                        function () {
+                                     $(item).removeClass("sub-section-open").addClass(""); // add class for your need.
+                                 });
                 });
             }
-            if (i === (index + 1)) {
-                $(item).find("div").first().slideUp("", function () {
-                    $(item).removeClass("sub-section-open").addClass(""); // add class for your need.
-                });
-            }
+            
         });
 
     })
