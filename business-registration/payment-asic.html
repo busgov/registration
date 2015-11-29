@@ -3,112 +3,160 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Business name search | Business Registration</title>
+    <title>Business registration payment | Business Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
-    <meta name="description" content="Australian business registration in one place.">
-    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="Business Registration" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <meta name="description" content="">
 </head>
 <body>
-<div>
+     
+    <div id="validationSummary" class="validation-container clearfix" style="display: none">
+        <div class="grid-row">
+            <div class="validation-summary-icon">
+                <img src="assets/img/ico-alert-red.png" alt="Error">
+            </div>
+            <div class="validation-message">
+                <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+                <ul>
+                  <li><a class="skip" href="#validationCardNumber">Enter a valid card number</a></li>
+                  <li><a class="skip" href="#validationExpiryDate">Enter an expiry date</a></li>
+                  <li><a class="skip" href="#validationCardCvv">Enter a CCV number</a></li>
+            </div>
+        </div>
+    </div>
 
-    <main>
-        
-        <fieldset>
-            <legend class="larger">Enter your payment details</legend>
+    <div id="payment-form">
+        <fieldset class="no-margin">
+            <legend class="larger margin4">Enter your payment details<br />
+            <span class="field-note">All fields are required.</span></legend>
             <div class="grid-row">
-                <div class="col4">
-                    <label class="input-right">Amount:</label>
+                <div class="col4 input-right">
+                    <p class="label">Amount (AUD)</p>
                 </div>
                 <div class="col6 last">
-                    <p><strong>$66</strong>
-                    </p>
+                    <p class="label"><strong>$66</strong></p>
                 </div>
             </div>
-            <div class="grid-row">
-                <div class="col4">
-                    <label class="input-right">Cards Accepted:</label>
-                </div>
-                <div class="col6 last">
-                    <label class="col3"><img style="max-width: 87px" src="assets/img/credit-cards.png" alt="Mastercard or Visa"/></label>
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="col4">
-                    <label class="input-right">Card Number:</label>
-                </div>
-                <div class="col6 last">
-                    <input pattern="[0-9]{13,16}" title="A credit card number" required type="text" placeholder="Card Number"/>
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="col4">
-                    <label class="input-right">Expiry Date:</label>
-                </div>
-                <div class="col6 last">
-                    <div class="col3">
-                        <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
-                            <option>Month</option>
-                            <option value="01">Jan (01)</option>
-                            <option value="02">Feb (02)</option>
-                            <option value="03">Mar (03)</option>
-                            <option value="04">Apr (04)</option>
-                            <option value="05">May (05)</option>
-                            <option value="06">June (06)</option>
-                            <option value="07">July (07)</option>
-                            <option value="08">Aug (08)</option>
-                            <option value="09">Sep (09)</option>
-                            <option value="10">Oct (10)</option>
-                            <option value="11">Nov (11)</option>
-                            <option value="12">Dec (12)</option>
-                        </select>
-                    </div>
 
-                    <div class="col3 last">
-                        <select class="form-control" name="expiry-year">
-                            <option value="15">2015</option>
-                            <option value="16">2016</option>
-                            <option value="17">2017</option>
-                            <option value="18">2018</option>
-                            <option value="19">2019</option>
-                            <option value="20">2020</option>
-                            <option value="21">2021</option>
-                            <option value="22">2022</option>
-                            <option value="23">2023</option>
-                        </select>
-                    </div>
-
+            <div class="grid-row" style="padding-bottom: 4em">
+                <div class="col4 input-right">
+                    <p class="label">Cards Accepted</p>
+                </div>
+                <div class="col6 last">
+                    <p class="label"><img style="max-width: 87px" src="assets/img/credit-cards.png" alt="Mastercard or Visa"/></p>
                 </div>
             </div>
 
             <div class="grid-row">
                 <div class="col4">
-                    <label class="col-3 input-right" for="cvv">Card CVV:</label>
+                    <label class="input-right" for="card-number"><span id="validationCardNumber">Card number<img class="validation-icon visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></label>
                 </div>
-                <div class="col3 last">
-                    <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+                <div class="col6 last card-number">
+                    <input required type="text" id="card-number">
                 </div>
             </div>
         </fieldset>
 
-        <div class="controls-container">
-            <div class="controls-content">
-                <button type="button" id="btnPayment"class="btn btn-default" onclick="window.parent.location='dashboard.html'">Pay and submit application</button>&nbsp;&nbsp; <a target="_parent" href="confirm.html">Cancel and return to confirmation</a>
-            </div><!-- controls-content -->
-        </div><!-- controls-container -->
+        <div class="grid-row">
+            <fieldset id="card-date" class="no-margin">
+                <legend class="col4 input-right"><span id="validationExpiryDate">Expiry date<img class="validation-icon visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                <div class="col8 last">
+                    <select id="expiry-month" class="card-expiry">
+                        <option>Month</option>
+                        <option value="expiry-month">Month</option>
+                        <option value="01">Jan (01)</option>
+                        <option value="02">Feb (02)</option>
+                        <option value="03">Mar (03)</option>
+                        <option value="04">Apr (04)</option>
+                        <option value="05">May (05)</option>
+                        <option value="06">June (06)</option>
+                        <option value="07">July (07)</option>
+                        <option value="08">Aug (08)</option>
+                        <option value="09">Sep (09)</option>
+                        <option value="10">Oct (10)</option>
+                        <option value="11">Nov (11)</option>
+                        <option value="12">Dec (12)</option>
+                    </select>
+                    <select id="expiry-year" class="card-expiry">
+                        <option value="expiry-year">Year</option>
+                        <option value="15">2015</option>
+                        <option value="16">2016</option>
+                        <option value="17">2017</option>
+                        <option value="18">2018</option>
+                        <option value="19">2019</option>
+                        <option value="20">2020</option>
+                        <option value="21">2021</option>
+                        <option value="22">2022</option>
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div><!-- grid-row -->
 
-    </main>
-</div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="col-3 input-right" for="cvv"><span id="validationCardCvv">Card CVV<img class="validation-icon visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></label>
+            </div>
+            <div class="col3 last">
+                <input type="text" class="form-control" id="cvv">
+            </div>
+        </div>
+    </div><!-- payment-form -->
+
+    <div class="controls-container">
+        <div class="controls-content">
+            <button type="button" class="btn btn-default margin4" id="attemptToValidate">Pay and submit application</button>&nbsp;&nbsp; <a target="_parent" href="confirm.html">Cancel and return to confirmation</a>
+        </div><!-- controls-content -->
+    </div><!-- controls-container -->
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            // the following code is to register the slide up/down effect. this is
+            // a customized jQuery plugin, the element that registered registerToggleSlide is
+            // actually the scope of the effect.
+
+        });
+
+        $("#attemptToValidate").click(function () {
+            var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+            if($('#card-number').val() == ''){
+                  $('#validationSummary').slideDown("fast");
+                  $('#validationSummaryAnchor').focus();
+                  $('#validationCardNumber, #validationExpiryDate, #validationCardCvv').addClass('validation-inline');
+                  $("#payment-form").find('img').removeClass("visuallyhidden");
+            }
+            else {
+                window.open('dashboard.html', '_parent');
+            }
+        });
+
+        // Keyboard friendly anchor links to elements that can receive focus
+        // bind a click event to the 'skip' link
+        $(".skip").click(function(event){
+
+            // strip the leading hash and declare
+            // the content we're skipping to
+            var skipTo="#"+this.href.split('#')[1];
+
+            // Setting 'tabindex' to -1 takes an element out of normal 
+            // tab flow but allows it to be focused via javascript
+            $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+
+                // when focus leaves this element, 
+                // remove the tabindex attribute
+                $(this).removeAttr('tabindex');
+
+            }).focus(); // focus on the content container
+        });  
+
+    </script>
+
 </body>
 </html>

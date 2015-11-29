@@ -32,7 +32,7 @@
                     <span id="progress-percent" style="width: 58%"></span>
                 </div><!-- meter -->
                 <ul class="section-nav">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Entitlement<br> check</a></li>
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
                     <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
                     <li class="done"><a href="business-details.html"><span>3</span><br>Business<br> details</a></li>
                     <li class="active"><span>4</span><br>Taxation<br>details</li>
@@ -50,10 +50,22 @@
                         <fieldset>
                             <div class="grid-row grid-row-reveal">
                                 <div class="col6">
+                                    <label for="required" class="input-right">Are you required to register for GST?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="required-no"><input id="required-no" type="radio" name="required"><span>No</span></label>
+                                        <label class="off label-right" for="required-yes"><input id="required-yes" type="radio" name="required"><span>Yes</span></label>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
                                     <label for="start-date" class="input-right">What is your date of registration for GST? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
                                 </div><!-- col -->
                                 <div class="col6 last">
-                                    <input id="start-date" type="date" />
+                                    <input id="start-date" type="date"/>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -62,11 +74,11 @@
                                     <label for="turnover" class="input-right">What is your GST turnover?</label>
                                 </div><!-- col -->
                                 <div class="col6 last">
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_1" /> $0 to $74,999</label><br />
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_2" /> $75,000 to $149,999</label><br />
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_3" /> $150,000 to $1,999,999</label><br />
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_4" /> $2 million to $19,999,999</label><br />
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_5" /> $20 million and over</label><br />
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_1"/> $0 to $74,999</label><br/>
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_2"/> $75,000 to $149,999</label><br/>
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_3"/> $150,000 to $1,999,999</label><br/>
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_4"/> $2 million to $19,999,999</label><br/>
+                                    <label><input type="radio" class="radio" name="turnover" value="radio_5"/> $20 million and over</label><br/>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -76,9 +88,9 @@
                                 </div><!-- col -->
                                 <div class="col6 last">
                                     <div class="radio-toggle">
-                                        <label class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1" /> <span>Monthly</span></label>
-                                        <label class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2" /> <span>Quarterly</span></label>
-                                        <label class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3" /> <span>Annually</span></label>
+                                        <label class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1"/> <span>Monthly</span></label>
+                                        <label class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2"/> <span>Quarterly</span></label>
+                                        <label class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3"/> <span>Annually</span></label>
                                     </div>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
@@ -137,6 +149,26 @@
 
                             <div class="grid-row grid-row-reveal">
                                 <div class="col6">
+                                    <label for="payg-how" class="input-right">How will you provide your PAYG withholding payment summary annual report to the ATO?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <label><input id="payg-how-1" type="radio" class="radio" name="payg-how" value="radio_1" />Electronically</label><br />
+                                    <label><input id="payg-how-2" type="radio" class="radio" name="payg-how" value="radio_2" />Paper form supplied by the ATO</label><br />
+                                </div><!-- col -->                                
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal clearfix">
+                                <div class="col6">
+                                    <label for="payees-how" class="input-right">How will you provide payment summaries to your payees?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <label><input id="payees-how-1" type="radio" class="radio" name="payees-how" value="radio_1" />Print your own payment summaries</label><br />
+                                    <label><input id="payees-how-2" type="radio" class="radio" name="payees-how" value="radio_2" />Use payment summaries supplied by the ATO</label><br />
+                                </div><!-- col -->  
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal">
+                                <div class="col6">
                                     <label for="no-of-employees" class="input-right">How many employees do you estimate you will pay? <span class="field-note">(enter a number)</span></label>
                                 </div><!-- col -->
                                 <div class="col6 last">
@@ -153,24 +185,16 @@
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-block clearfix">
-                                <p><label for="payg-how">How will you provide your PAYG withholding payment summary annual report to the ATO?</label></p>
-                                <input id="payg-how-1" type="radio" name="payg-how">&nbsp;<label class="label-left" for="payg-how-1">Electronically</label><br />
-                                <input id="payg-how-2" type="radio" name="payg-how">&nbsp;<label class="label-right" for="payg-how-2">Paper form supplied by the ATO</label>
-                            </div><!-- grid-row -->
-
-                            <div class="grid-row grid-row-block clearfix">
-                                <p><label for="payees-how">How will you provide payment summaries to your payees?</label></p>
-                                <input id="payees-how-1" type="radio" name="payees-how">&nbsp;<label class="label-left" for="payees-how-1">Print your own payment summaries</label><br />
-                                <input id="payees-how-2" type="radio" name="payees-how">&nbsp;<label class="label-right" for="payees-how-2">Use payment summaries supplied by the ATO</label>
-                            </div><!-- grid-row -->
-
-                            <div class="grid-row grid-row-block grid-row-last clearfix">
-                                <p><label for="residents">Will you pay royalties, dividends or interest to non-residents, or are you an investment body that will pay investment income to Australian residents?</label></p>
-                                <div class="radio-toggle">
-                                    <label class="label-left" for="residents-no"><input id="residents-no" type="radio" name="residents"><span>No</span></label>
-                                    <label class="label-right" for="residents-yes"><input id="residents-yes" type="radio" name="residents"><span>Yes</span></label>
-                                </div><!-- radio-toggle -->
+                            <div class="grid-row clearfix">
+                                <div class="col6">
+                                    <label for="residents" class="input-right">Will you pay royalties, dividends or interest to non-residents, or are you an investment body that will pay investment income to Australian residents?</label>
+                                </div><!-- col -->
+                                <div class="col6 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="residents-no"><input id="residents-no" type="radio" name="residents"><span>No</span></label>
+                                        <label class="off label-right" for="residents-yes"><input id="residents-yes" type="radio" name="residents"><span>Yes</span></label>
+                                    </div>
+                                </div><!-- col -->
                             </div><!-- grid-row -->
 
                         </fieldset>

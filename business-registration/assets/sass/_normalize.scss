@@ -391,7 +391,7 @@ fieldset {
   padding: 0;
 }
 
-legend, label {
+legend, label, .label {
   border: 0;
   padding: 0.65em 0 1.5em 0;
   margin: 0 0.25em 0 0;
@@ -400,6 +400,9 @@ legend, label {
   text-transform: none;
   font-weight: normal;
   vertical-align: middle;
+}
+.label {
+  padding: 0.65em 0;
 }
 legend {
   display: inline-block;
@@ -420,15 +423,6 @@ legend span.form-content {
   line-height: 1em;
 }
 
-/* Allow space for help icon when it is required beside legend */
-.has-help {
-  margin-right: 35px;
-}
-.has-help img {
-  position: absolute;
-  right: 0;
-  max-width: 34px;
-}
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.

@@ -186,7 +186,7 @@ function navigationWithinPage() {
                             $(item).addClass("sub-section-open").addClass("");
                             });
                             },
-                            200); // add class for your need.;
+                            100); // add class for your need.;
                 });
 
             }
