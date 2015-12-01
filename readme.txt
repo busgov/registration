@@ -1,0 +1,1 @@
+**** Switch to the gh-pages branch to get the latest version. the master branch is no longer maintained.
