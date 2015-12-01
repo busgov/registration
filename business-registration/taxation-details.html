@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Business name search | Business Registration</title>
+    <title>Taxation details | Business Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="description" content="Australian business registration in one place.">
@@ -46,30 +46,36 @@
             <div id="section1" class="sub-section-container sub-section-open">
                 <h2>Goods and services tax (GST)</h2>
                 <div class="sub-section-content">
-                    <div id="divContact">
+                    <div id="gst-section">
                         <fieldset>
-                            <div class="grid-row grid-row-reveal">
-                                <div class="col6">
-                                    <label for="required" class="input-right">Are you required to register for GST?</label>
-                                </div><!-- col -->
-                                <div class="col6 last">
-                                    <div class="radio-toggle">
-                                        <label class="on label-left" for="required-no"><input id="required-no" type="radio" name="required"><span>No</span></label>
-                                        <label class="off label-right" for="required-yes"><input id="required-yes" type="radio" name="required"><span>Yes</span></label>
-                                    </div>
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
-
                             <div class="grid-row grid-row-reveal">
                                 <div class="col6">
                                     <label for="start-date" class="input-right">What is your date of registration for GST? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
                                 </div><!-- col -->
-                                <div class="col6 last">
+                                <div class="col5">
                                     <input id="start-date" type="date"/>
+                                </div><!-- col -->
+                                <div class="col1 last">
+                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-reveal">
+                            <div class="grid-row">
+                                <div class="col6">
+                                    <label for="required" class="input-right">Are you required to register for GST?</label>
+                                </div><!-- col -->
+                                <div class="col5">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="required-no"><input id="required-no" type="radio" name="required" value="no"><span>No</span></label>
+                                        <label class="off label-right" for="required-yes"><input id="required-yes" type="radio" name="required" value="yes"><span>Yes</span></label>
+                                    </div>
+                                </div><!-- col -->
+                                <div class="col1 last">
+                                    <a href="#help" class="cd-btn"><img class="help-icon " src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div id="turnover-section" class="grid-row grid-row-reveal">
                                 <div class="col6">
                                     <label for="turnover" class="input-right">What is your GST turnover?</label>
                                 </div><!-- col -->
@@ -82,16 +88,20 @@
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-reveal">
+                            <div id="activity-statement" class="grid-row grid-row-reveal">
                                 <div class="col6">
                                     <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
                                 </div><!-- col -->
-                                <div class="col6 last">
-                                    <div class="radio-toggle">
-                                        <label class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1"/> <span>Monthly</span></label>
-                                        <label class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2"/> <span>Quarterly</span></label>
-                                        <label class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3"/> <span>Annually</span></label>
+                                <div id="activity-statement-frequency" class="col6 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1"/> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2"/> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3"/> <span>Annually</span></label>
                                     </div>
+                                    <div id="activity-statement-frequency-2">
+                                        <p>For a GST turnover of $20 million and over your activity statements must be lodged monthly.</p>
+                                    </div>
+
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -111,11 +121,14 @@
                                 <div class="col6">
                                     <label for="import" class="input-right">Do you import goods into Australia?</label>
                                 </div><!-- col -->
-                                <div class="col6 last">
+                                <div class="col5">
                                     <div class="radio-toggle">
                                         <label class="on label-left" for="import-no"><input id="import-no" type="radio" name="import"><span>No</span></label>
                                         <label class="off label-right" for="import-yes"><input id="import-yes" type="radio" name="import"><span>Yes</span></label>
                                     </div>
+                                </div><!-- col -->
+                                <div class="col1 last">
+                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -135,7 +148,7 @@
             <div id="section2" class="sub-section-container">
                 <h2>Pay as you go (PAYG) withholding</h2>
                 <div class="sub-section-content">
-                    <div id="divContact">
+                    <div id="payg-container">
                         <fieldset>
 
                             <div class="grid-row grid-row-reveal">
@@ -213,6 +226,25 @@
 
     </div><!-- wrapper -->
 
+    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+
+                    </div><!-- showhide -->
+                </div><!-- cd-panel-content -->
+            </div><!-- cd-panel-container -->
+        </div><!-- cd-panel -->
+    </div>
+
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 
@@ -271,7 +303,58 @@
                 toggleIds: "business-activity;manaulBusinessActivity;autoBusinessActivity",
                 toggleSlideSameElement: true
             });
+
+            // Hook up GST turnover radio button event.
+            $("input[name=turnover]:radio").change(function () {
+                updateActivityLodgementFrequency();
+            });
+
+            // Hook up required to register for GST.
+            $("input[name=required]:radio").change(function () {
+                updateActivityLodgementFrequency();
+            });
+
+            // Default lodglement options.
+            updateActivityLodgementFrequency();
+
+            // Load help content
+            loadTaxationDetailsHelp("tax-details/taxdetails-gst-required-help.html");
         });
+
+        function updateActivityLodgementFrequency() {
+            var requiredToRegister = $("input[name=required]:checked").val() === "yes";
+            var twentyMillionOrOver = $("input[name=turnover]:checked").val() === "radio_5";
+
+            if (twentyMillionOrOver) {
+                // Force monthly statements
+                $("#activity-statement-frequency-1").hide();
+                $("#activity-statement-frequency-2").show();
+                return;
+            }
+
+            // Show frequency selector and hide 'only monthly' content.
+            $("#activity-statement-frequency-1").show();
+            $("#activity-statement-frequency-2").hide();
+
+            if (requiredToRegister) {
+                // Hide annual option
+                $("#asf-annually").hide();
+                $("#asf-quarterly").removeClass("label-middle");
+                $("#asf-quarterly").addClass("label-right");
+            } else {
+                // Show annual option
+                $("#asf-annually").show();
+                $("#asf-quarterly").addClass("label-middle");
+                $("#asf-quarterly").removeClass("label-right");
+            }
+        }
+
+        // Help
+        function loadTaxationDetailsHelp(url) {
+            $("#helpFile").load(url + "?t=" + (new Date()).getTime(), function () {
+                setTimeout(initHelp, 10);
+            });
+        }
     </script>
 </body>
 </html>
