@@ -107,7 +107,8 @@ function initSaveForLater() {
                 }
             });
             $("#saveForLater").find('.cd-panel').on('click', function (event) {
-                if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close')) {
+                if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ||
+                    $(event.target).is('#save-cancel') || $(event.target).is('#save-save')) {
                     saveForLater.close();
                     $("#saveForLater").find('.cd-panel').removeClass('is-visible');
                     event.preventDefault();

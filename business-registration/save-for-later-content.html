@@ -6,7 +6,55 @@
     <div class="cd-panel-container">
         <div class="cd-panel-content">
             <div id="helpFile" class="showhide">
-                <p>Display options...</p>
+                <fieldset>
+                    <legend class="larger">
+                        Save and return details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question"/><br/>
+                        <span class="form-content">Enter your details to enable save and return to this application at a later time or</span>
+                        <span class="form-content">choose to skip this step now and set it up further into your application by clicking save.</span>
+                    </legend>
+
+                    <div class="margin4">
+                        <p><input type="checkbox" id="already-setup"/>&nbsp;<label for="already-setup">I have previously set up save and return.</label>
+                        </p>
+                    </div>
+
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="email" class="input-right">Email address<span class="field-note"> (optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="email" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="password1" class="input-right">Password<span class="field-note"> (optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="password1" type="password">
+                            <a id="forgotten-password" href="" style="display: none" class="smallest">Forgotten password?</a>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                    <div id="confirm-password" class="grid-row">
+                        <div class="col4">
+                            <label for="password2" class="input-right">Confirm password<span class="field-note"> (optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="password2" type="password" style="width: 100%; max-width: 24em;">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+
+                </fieldset>
+
+                <div class="controls-container">
+                    <div class="controls-content">
+                        <button id="save-cancel" type="button" class="btn">Cancel</button>
+                        <button id="save-save" type="button" class="btn btn-default next">Save</button>
+                    </div><!-- controls-content -->
+                </div>
+
             </div><!-- showhide -->
         </div><!-- cd-panel-content -->
     </div><!-- cd-panel-container -->
