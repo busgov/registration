@@ -52,11 +52,8 @@
                                 <div class="col6">
                                     <label for="start-date" class="input-right">What is your date of registration for GST? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
                                 </div><!-- col -->
-                                <div class="col5">
+                                <div class="col6 last">
                                     <input id="start-date" type="date"/>
-                                </div><!-- col -->
-                                <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -92,7 +89,7 @@
                                 <div class="col6">
                                     <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
                                 </div><!-- col -->
-                                <div id="activity-statement-frequency" class="col6 last">
+                                <div id="activity-statement-frequency" class="col5">
                                     <div class="radio-toggle" id="activity-statement-frequency-1">
                                         <label id="asf-monthly" class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1"/> <span>Monthly</span></label>
                                         <label id="asf-quarterly" class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2"/> <span>Quarterly</span></label>
@@ -103,6 +100,10 @@
                                     </div>
 
                                 </div><!-- col -->
+                                <div class="col1 last">
+                                    <a href="#help" class="cd-btn"><img class="help-icon " src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                </div><!-- col -->
+
                             </div><!-- grid-row -->
 
                             <div class="grid-row grid-row-reveal">
@@ -128,7 +129,7 @@
                                     </div>
                                 </div><!-- col -->
                                 <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    <a href="#help" class="cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -160,7 +161,7 @@
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-reveal">
+                            <div id="payg-how" class="grid-row grid-row-reveal">
                                 <div class="col6">
                                     <label for="payg-how" class="input-right">How will you provide your PAYG withholding payment summary annual report to the ATO?</label>
                                 </div><!-- col -->
@@ -170,7 +171,7 @@
                                 </div><!-- col -->                                
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-reveal clearfix">
+                            <div id="payees-how" class="grid-row grid-row-reveal clearfix" style="display: none">
                                 <div class="col6">
                                     <label for="payees-how" class="input-right">How will you provide payment summaries to your payees?</label>
                                 </div><!-- col -->
@@ -180,7 +181,7 @@
                                 </div><!-- col -->  
                             </div><!-- grid-row -->
 
-                            <div class="grid-row grid-row-reveal">
+                            <div id="employee-number" class="grid-row grid-row-reveal" style="display: none">
                                 <div class="col6">
                                     <label for="no-of-employees" class="input-right">How many employees do you estimate you will pay? <span class="field-note">(enter a number)</span></label>
                                 </div><!-- col -->
@@ -318,7 +319,30 @@
             updateActivityLodgementFrequency();
 
             // Load help content
-            loadTaxationDetailsHelp("tax-details/taxdetails-gst-required-help.html");
+            loadHelpContent("tax-details/taxdetails-gst-help.html");
+
+            // Hook PAYG change events
+            $("input[name=payg-how]:radio").change(function () {
+                var electronically = $("input[name=payg-how]:checked").val() === "radio_1";
+
+                if (electronically) {
+                    $("#payees-how").hide();
+                    $("#employee-number").hide();
+                } else {
+                    $("#payees-how").show();
+                }                               
+            });
+
+            // Hook PAYG change events
+            $("input[name=payees-how]:radio").change(function () {
+                var print = $("input[name=payees-how]:checked").val() === "radio_1";
+
+                if (print) {
+                    $("#employee-number").hide();
+                } else {
+                    $("#employee-number").show();
+                }
+            });
         });
 
         function updateActivityLodgementFrequency() {
@@ -347,13 +371,6 @@
                 $("#asf-quarterly").addClass("label-middle");
                 $("#asf-quarterly").removeClass("label-right");
             }
-        }
-
-        // Help
-        function loadTaxationDetailsHelp(url) {
-            $("#helpFile").load(url + "?t=" + (new Date()).getTime(), function () {
-                setTimeout(initHelp, 10);
-            });
         }
     </script>
 </body>

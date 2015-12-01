@@ -63,6 +63,12 @@ function clearElement(element, classNameToBeHidden) {
     });
 }
 
+function loadHelpContent(url) {
+    $("#helpFile").load(url + "?t=" + (new Date()).getTime(), function () {
+        setTimeout(initHelp, 10);
+    });    
+}
+
 function initHelp() {
     /* Expand collapse headings config */
     var help = new jQueryCollapse($("#help").find(".showhide"), {
