@@ -91,11 +91,14 @@
                             <div class="col4">
                                 &nbsp;
                             </div><!-- col -->
-                            <div class="col8 last">
-                                <p><input type="checkbox" id="auth" class="showhide-trigger" />&nbsp;<label for="auth">Nominate another person to be an authorised contact.</label></p>
+                            <div class="col7">
+                                <input type="checkbox" id="auth" checked class="showhide-trigger" />&nbsp;<label for="auth">This person is also the authorised contact</label>
                             </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
                         </div><!-- grid-row -->
-                        <div class="showhide-target" style="display: none">
+                        <div class="showhide-target col12" style="display: none">
                             <legend class="margin4 larger">Authorised contact details</legend>
                             <div class="grid-row">
                                 <div class="col4">
@@ -149,6 +152,25 @@
                                 <input id="tfn" type="number">
                             </div><!-- col -->
                         </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="dob" class="input-right">Date of birth<br /><span class="field-note">(DD/MM/YYYY)</span></label>
+                            </div>
+                            <div class="col8 last">
+                                <input id="dob" type="date">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="gender" class="input-right">Gender</label>
+                            </div>
+                            <div class="col8 last">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="gender-male"><input id="gender-male" type="radio" name="australia"><span>Male</span></label>
+                                    <label class="off label-right" for="gender-female"><input id="gender-female" type="radio" name="australia"><span>Female</span></label>
+                                </div>
+                            </div>
+                        </div>
 
                         <!--
                         <div class="grid-row">
@@ -414,9 +436,36 @@
                                     <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div>
                             </div>
-
                         </div>
                     </fieldset>
+
+                    <div class="grid-row grid-row-padding-bottom">
+                        <fieldset id="validation-test-field3" class="no-margin">
+                            <legend class="col4 input-right"><span id="agricultural">Does the sole trader operate an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                            <div class="col8 last">
+                                <div class="col12 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="on-agricultural"><input id="on-agricultural" type="radio" name="agricultural"><span>Yes</span></label>
+                                        <label class="off label-right" for="off-agricultural"><input id="off-agricultural" type="radio" name="agricultural"><span>No</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row grid-row-padding-bottom">
+                        <fieldset id="validation-test-field3" class="no-margin">
+                            <legend class="col4 input-right"><span id="agricultural">Is the applicant an Australian resident for taxation purposes?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                            <div class="col8 last">
+                                <div class="col12 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="on-resident"><input id="on-resident" type="radio" name="resident"><span>Yes</span></label>
+                                        <label class="off label-right" for="off-resident"><input id="off-resident" type="radio" name="resident"><span>No</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div><!-- grid-row -->
 
                     <fieldset id="fieldsetAddress">
                         <legend class="margin4 larger">Business address</legend>
@@ -479,22 +528,22 @@
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="business-phone" class="input-right">Business phone</label>
+                                <label for="office-phone" class="input-right">Office phone</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="office-phone" type="phone">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="mobile-phone" class="input-right">Mobile</label>
                             </div><!-- col -->
                             <div class="col7">
-                                <input id="business-phone" type="text">
+                                <input id="mobile-phone" type="phone">
                             </div><!-- col -->
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                             </div>
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                &nbsp;
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <p class="no-margin-top"><a href="">More phone options</a></p>
-                            </div><!-- col -->
                         </div><!-- grid-row -->
                         
                     </fieldset>
