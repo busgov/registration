@@ -113,6 +113,11 @@ select[disabled]:active {
 .btn-large {
   font-size: 110% !important;
 }
+.btn-inline {
+  font-size: 100% !important; 
+  padding: 0.5em 0.75em !important;
+  font-weight: normal;
+}
 
 
 /* Add individual and organisation buttons */
@@ -253,7 +258,15 @@ input[type=phone] {
 }
 input[type=checkbox],
 input[type=radio] {
-  border-radius: 6px;
+appearance: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #fff;
+  line-height: normal;
+  line-height: 34px; 
+
+    border-radius: 6px;
   -webkit-border-radius: 6px;
   width: 34px;
   height: 34px;
@@ -265,7 +278,46 @@ input.larger {
 }
 
 
-// Restyled radio buttons
+// Image replacement styling for radios and checkboxes
+// ------------------------------------------------------------------------------------------------------
+
+.radios input[type="radio"], 
+.checkboxes input[type="checkbox"] { 
+    position: absolute; 
+    left: -999em; 
+}
+.radios label {
+  padding: 0.25em 0 0.25em 50px;
+  text-indent: -50px;
+}
+.radios label:before,
+.checkboxes label:before { 
+    display: inline-block; 
+    position: relative; 
+    top: 15px; 
+    left: 0; 
+    content:''; 
+    width: 48px; 
+    height: 41px;
+    margin: 0.2em 0;
+    background-image:url(../img/sprite-form-elements.png); 
+    background-repeat: no-repeat;
+}
+.checkboxes input[type="checkbox"] + label:before { 
+    background-position: 0 -51px;
+}
+.checkboxes input[type="checkbox"]:checked + label:before {
+    background-position: 0 4px;
+}
+.radios input[type="radio"] + label:before { 
+    background-position: -55px -51px;
+}     
+.radios input[type="radio"]:checked + label:before { 
+    background-position: -55px 4px;
+}
+
+
+// Toggle styled radio buttons
 // ------------------------------------------------------------------------------------------------------
 
 .radio-toggle label {
@@ -315,6 +367,7 @@ input.larger {
 }
 
 
+/* Adding dollar symbol to input field */
 .input-dollar {
   background: transparent url(../img/ico-dollar.png) no-repeat 0 50%;
   padding-left: 45px;

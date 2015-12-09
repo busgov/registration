@@ -48,46 +48,40 @@
             <div class="confirmation-heading">
                 <h2>Business name <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Change</button></h2>
             </div>
-            <div class="result-container">
+            <div class="cart-container">
                 <div class="result-row">
-                    <div class="result-icon">
+                    <div class="result-cell cell-icon">
                         <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p><strong>Bob's Whitegoods Repairs</strong> - requires validation (<a href="#">What's this?</a>)</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
-                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
-                            <option value="1" selected="selected">1 year $33</option>
-                            <option value="2">3 years</option>
-                        </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-remove">
-                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                    </div><!-- result-cell -->
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>Bob's Whitegoods Repairs</h2>
+                        <p>Pending manual assessment.</p>
+                    </div>
+                    <div class="result-cell cell-action">
+                        <a class="remove" href="business-names.html">Remove</a> AU$66
+                    </div>
                 </div><!-- result-row -->
-            </div>
-            <div class="result-container">
                 <div class="result-row">
-                    <div class="result-icon">
+                    <div class="result-cell cell-icon">
                         <img src="assets/img/ico-tick-green.png" alt="Success" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p><strong>Bob's Plumbing</strong> - is available</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
-                        <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
-                            <option value="1" selected="selected">1 year $33</option>
-                            <option value="2">3 years</option>
-                        </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-remove">
-                        <button type="button" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                    </div><!-- result-cell -->
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>Bob's Plumbing</h2>
+                        <p>Currently available.</p>
+                    </div>
+                    <div class="result-cell cell-action">
+                        <a class="remove" href="business-names.html">Remove</a> AU$66
+                    </div>
                 </div><!-- result-row -->
-            </div>
+            </div><!-- cart-container -->
+
+            <div class="cart-container">
+                <div class="result-row">
+                    <div class="result-cell cell-total">
+                        <p>Total payment required: AU$66</p>
+                    </div>
+                </div><!-- result-row -->
+            </div><!-- cart-container -->
 
             <div class="confirmation-heading">
                 <h2>Sole trader details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
@@ -265,19 +259,6 @@
                 </tr>
             </table>
 
-            <table>
-                <caption>Amount payable for application</caption>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th class="centre">Cost</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>Business name total</td>
-                    <td class="centre">$66</td>
-                </tr>
-            </table>
             <p>Almost done! The final payment step will open our secure gateway page. After payment you will be directed back to a <em>dashboard</em> where you can monitor progress of your application.</p>
             <input type="checkbox" id="declaration" class="showhide-trigger" />&nbsp;<label for="declaration">I declare that the information given on this form is true and correct.</label>
         </main>

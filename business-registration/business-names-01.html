@@ -43,43 +43,35 @@
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
 
-            <div class="result-container fade-in">
+            <div class="result-container">
                 <div class="result-row">
-                    <div class="result-icon">
+                    <div class="result-cell cell-icon">
                         <img src="assets/img/ico-tick-green.png" alt="Success" />
-                    </div><!-- result-icon -->
-                    <div class="result-cell result-title">
-                        <p><strong>Bob's Plumbing</strong> - is available</p>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-duration">
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>Bob's Plumbing</h2>
+                        <p>This business name is currently available.</p>
+                    </div>
+                    <div class="result-cell cell-action">
                         <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                        <select id="registration-duration">
+                        <select class="registration-duration" id="registration-duration">
                             <option value="1" selected="selected">1 year $33</option>
                             <option value="2">3 years $78</option>
                         </select>
-                    </div><!-- result-cell -->
-                    <div class="result-cell result-status">
-                        <button type="button" class="btn btn-default btn-small" onclick="location.href='business-names-02.html'">Add</button>
-                    </div><!-- result-status -->
+                        <button type="button" class="btn btn-default btn-inline" onclick="location.href='business-names-02.html'">Add this name</button> <br /><a href="business-names.html" class="smaller">Search for something else</a>
+                    </div>
                 </div><!-- result-row -->
             </div><!-- result-container -->
 
             <div class="tip">
-                <p><strong>Is your brand unique? Similar registered names:</strong></p>
-                <ul class="lines">
+                <h3>Is your brand unique?</h3>
+                <p>Here are some names already registered that may be similar to yours:</p>
+                <ul>
                     <li>Bob's Gasfitting</li>
                     <li>Bob's Plumbing Services</li>
                     <li>Bob's Mobile Plumbing</li>
                 </ul>
             </div><!-- tip -->
-
-            <div class="card clearfix">
-                <div class="form-row">
-                    <label for="name-search">Search for a different business name</label><br />
-                    <input id="name-search" type="text" value=""> <button type="button" class="btn btn-default btn-small">Check</button><br />
-                    <a class="smaller" href="#">Have a reserved name?</a>
-                </div><!-- form-row -->
-            </div><!-- card -->
 
         </main>
 
