@@ -45,6 +45,10 @@
             <h1 id="heading" tabindex="-1">3. Company details <span>(Step 3 of 6)</span></h1>
             <p>All fields are required unless marked as optional.</p>
 
+            
+
+
+
             <div id="section1" class="sub-section-container sub-section-open">
                 <h2>Company structure</h2>
                 <div class="sub-section-content">
@@ -251,6 +255,10 @@
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
+            
+
+
+
             <div id="section2" class="sub-section-container">
                 <h2>Address and location</h2>
                 <div class="sub-section-content">
@@ -369,7 +377,25 @@
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
+            
+
+
+
             <div id="section3" class="sub-section-container">
+                <h2>ABN details</h2>
+                <div class="sub-section-content">
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
+                        </div><!-- controls-content -->
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+
+
+            <div id="section4" class="sub-section-container">
                 <h2>Business associates</h2>
                 <div class="sub-section-content">
                     <div id="need-these">
@@ -411,25 +437,45 @@
                             </div><!-- result-cell -->
                         </div><!-- result-row -->
                     </div><!-- result-container -->
-                    <div id="containerIndividual1Done" class="result-container" style="display: none">
+
+
+            <div id="containerIndividual1Done" class="cart-container" style="display: none">
+                <div class="result-row fade-in fade-in-inherit">
+                    <div class="result-cell cell-icon">
+                        <img src="assets/img/ico-tick-green.png" alt="Success" />
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h3>Director added</h3>
+                    </div>
+                    <div class="result-cell cell-action">
+                        <a class="remove" href="business-names.html">Remove</a> <button type="button" class="btn btn-default btn-small">Edit</button> 
+                    </div>
+                </div><!-- result-row -->
+            </div><!-- cart-container -->
+
+
+                    <!--
+                    <div class="result-container" style="display: none">
                         <div class="result-row">
                             <div class="result-icon">
                                 <img src="assets/img/ico-tick-green.png" alt="Done" />
-                            </div><!-- result-icon -->
+                            </div>
                             <div class="result-cell result-title">
                                 <p>DIRECTOR: Robert Johnson</p>
-                            </div><!-- result-cell -->
+                            </div>
                             <div class="result-cell result-status">
                                <button type="button" class="btn btn-small">Edit</button>
-                            </div><!-- result-status -->
+                            </div>
                             <div class="result-cell result-remove">
                                 <button type="button" id="containerIndividual1Cancel" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                            </div><!-- result-cell -->
-                        </div><!-- result-row -->
-                    </div><!-- result-container -->
+                            </div>
+                        </div>
+                    </div>
+                    -->
                     <div id="controlsIndividual1" class="controls-content margin-bottom">
                         <button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
                         <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+                        <button type="button" id="btnAuthContact" class="btn btn-authorised">Add authorsied contact</button>
                     </div>
                     <div id="controlsIndividual2" class="controls-content margin-bottom" style="display: none">
                         <button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
@@ -439,22 +485,7 @@
 
                     <!-- ORGANISATION -->
                     <div id="containerOrganisation1" style="display: none">
-                        <div class="result-container">
-                            <div class="result-row">
-                                <div class="result-icon">
-                                    <img src="assets/img/ico-edit.png" alt="Editing" />
-                                </div><!-- result-icon -->
-                                <div class="result-cell result-title">
-                                    <p>Add organisation</p>
-                                </div><!-- result-cell -->
-                                <div class="result-cell result-status">
-                                   <p>Editing</p>
-                                </div><!-- result-status -->
-                                <div class="result-cell result-remove">
-                                    <button type="button" id="editingOrganisation1Cancel" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                                </div><!-- result-cell -->
-                            </div><!-- result-row -->
-                        </div><!-- result-container -->
+                        <h3>Add organisation:</h3>
                         <fieldset>
                             <legend class="margin4 has-help larger">Organisation stuff<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
                             <div class="grid-row">
@@ -475,29 +506,11 @@
 
                     <!-- DIRECTOR -->
                     <div id="containerIndividual1" style="display: none">
-                        <div class="result-container">
-                            <div class="result-row">
-                                <div class="result-icon">
-                                    <img src="assets/img/ico-edit.png" alt="Editing" />
-                                </div><!-- result-icon -->
-                                <div class="result-cell result-title">
-                                    <p>Add individual</p>
-                                </div><!-- result-cell -->
-                                <div class="result-cell result-status">
-                                   <p>Editing</p>
-                                </div><!-- result-status -->
-                                <div class="result-cell result-remove">
-                                    <button type="button" id="editingIndividual1Cancel" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                                </div><!-- result-cell -->
-                            </div><!-- result-row -->
-                        </div><!-- result-container -->
-
+                        <h3>Add individual:</h3>
                         <fieldset>
                             <legend class="margin4 has-help larger">Office held<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
                             <div class="grid-row">
-                                <div class="col4">
-                                    <label for="office-held" class="input-right"></label>
-                                </div><!-- col -->
+                                <div class="col4">&nbsp;</div>
                                 <div class="col3">
                                     <input id="director" type="checkbox">&nbsp;<label for="director">Director</label>
                                 </div><!-- col -->
@@ -684,23 +697,7 @@
 
                     <!-- SHAREHOLDER -->
                     <div id="containerIndividual2" style="display: none">
-                        <div class="result-container">
-                            <div class="result-row">
-                                <div class="result-icon">
-                                    <img src="assets/img/ico-edit.png" alt="Editing" />
-                                </div><!-- result-icon -->
-                                <div class="result-cell result-title">
-                                    <p>Add individual</p>
-                                </div><!-- result-cell -->
-                                <div class="result-cell result-status">
-                                   <p>Editing</p>
-                                </div><!-- result-status -->
-                                <div class="result-cell result-remove">
-                                    <button type="button" id="editingIndividual1Cancel" class="btn btn-remove"><span class="visuallyhidden">Remove</span></button>
-                                </div><!-- result-cell -->
-                            </div><!-- result-row -->
-                        </div><!-- result-container -->
-
+                        <h3>Add individual:</h3>
                         <fieldset>
                             <legend class="margin4 has-help larger">Office held<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
                             <div class="grid-row">
@@ -875,113 +872,106 @@
                         </div><!-- grid-row -->
                         <div class="controls-content margin-bottom"><button type="button" class="btn btn-default margin4" id="saveIndividual2">Save individual</button></div>
                     </div><!-- individual2 -->
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
-                            <button type="button" class="btn btn-float btn-options">Options</button><button type="button" class="btn btn-float btn-save">Save</button>
-                        </div><!-- controls-content -->
-                    </div>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
 
 
-            <div id="section4" class="sub-section-container">
-                <h2>Authorised contact details</h2>
-                <div class="sub-section-content">
-                    <fieldset>
-                        <legend class="margin4 has-help larger">Authorised contact details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /><br />
-                        <span class="field-note">This role can be a company entity or someone independant such as an accountant.</span></legend>
+                    <div id="containerAuthorised" style="display: none;">
+                        <fieldset>
+                            <legend class="margin4 has-help larger">Authorised contact details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /><br />
+                            <span class="field-note">This role can be a company entity or someone independant such as an accountant.</span></legend>
 
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="name1" class="input-right">Given name</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="name1" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="othername" class="input-right">Other given name <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="othername" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="name2" class="input-right">Family name</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="name2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="position" class="input-right">Position held <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="position" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="postal" class="input-right">Postal address</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="postal" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="phone" class="input-right">Phone number</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="phone" type="tel">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row">
-                            <div class="col4">
-                                &nbsp;
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <p><button type="button" class="btn btn-default">Add another number</button></p>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="phone" class="input-right">Email address</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="phone" type="email">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="agent" class="input-right">Agent resigration number <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="agent" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <fieldset class="no-margin">
-                                <legend class="col4 input-right">Officeholder or shareholder?</legend>
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="name1" class="input-right">Given name</label>
+                                </div><!-- col -->
                                 <div class="col8 last">
-                                    <div class="col12 last">
-                                        <div class="radio-toggle">
-                                            <label class="on label-left" for="on-entity"><input id="on-entity" type="radio" name="entity"><span>Yes</span></label>
-                                            <label class="off label-right" for="off-entity"><input id="off-entity" type="radio" name="entity"><span>No</span></label>
+                                    <input id="name1" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="othername" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="othername" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="name2" class="input-right">Family name</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="name2" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="position" class="input-right">Position held <span class="field-note">(optional)</span></label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="position" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="postal" class="input-right">Postal address</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="postal" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="phone" class="input-right">Phone number</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="phone" type="tel">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    &nbsp;
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <p><button type="button" class="btn btn-default">Add another number</button></p>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="phone" class="input-right">Email address</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="phone" type="email">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="agent" class="input-right">Agent resigration number <span class="field-note">(optional)</span></label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="agent" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <fieldset class="no-margin">
+                                    <legend class="col4 input-right">Officeholder or shareholder?</legend>
+                                    <div class="col8 last">
+                                        <div class="col12 last">
+                                            <div class="radio-toggle">
+                                                <label class="on label-left" for="on-entity"><input id="on-entity" type="radio" name="entity"><span>Yes</span></label>
+                                                <label class="off label-right" for="off-entity"><input id="off-entity" type="radio" name="entity"><span>No</span></label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </fieldset>
-                        </div><!-- grid-row -->
+                                </fieldset>
+                            </div><!-- grid-row -->
+                        </fieldset>
+                    </div>
 
-                    </fieldset>
+
+
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
@@ -991,7 +981,9 @@
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
+                </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
+
 
         </main>
 
@@ -1130,6 +1122,20 @@
                 $('#controlsIndividual2').toggle("fast");
                 $('#containerOrganisation1Done').addClass("fade-in");
             });
+
+
+            // add authorisaed contact 
+
+            $('#btnAuthContact').click(function(){
+              $('#controlsIndividual1').toggle("fast");
+              $('#containerAuthorised').toggle("fast");
+              // scroll to top if the page is super long
+                var targetTop = $(this).parent().offset().top;
+                jQuery('html, body').animate({
+                    scrollTop: targetTop
+                }, 800);
+            });
+            
 
 
         });

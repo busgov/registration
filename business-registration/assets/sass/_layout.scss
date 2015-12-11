@@ -284,6 +284,9 @@ h2.cart-heading {
 .cart-container .result-cell, .cart-container .cell-total  {
   border-top: 1px solid $gray-light;
 }
+.cart-container h3 {
+  font-weight: normal;
+}
 .result-cell {
   display: table-cell;
 }
