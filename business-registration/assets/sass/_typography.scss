@@ -107,18 +107,12 @@ li {
   padding: 0.15em 0;
   font-family: $font-light;
 }
-ul.lines {
-  border-top: 1px solid #cccccc;
-  margin: 1em 0 2em 0;
-  padding: 0;
+h3.line {
+  border-top: 1px solid $brand-blue;
+  margin: 1em 0 1em 0;
+  padding: 1em 0;
 }
-ul.lines li {
-  border-bottom: 1px solid #cccccc;
-  list-style-type: none;
-  margin: 0;
-  padding: 0.25em 0;
-  font-size: 90%;
-}
+
 
 
 // Tables
@@ -180,6 +174,12 @@ th.right {
 }
 td {
   font-weight: normal;
+}
+th.warning, td.warning {
+  color: $validation-red;
+}
+td.warning {
+  background-color: $pale-red;
 }
 
 

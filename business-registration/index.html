@@ -141,6 +141,17 @@
                 } else if ($("#gst").prop("checked")) {
                     queryString = "type=gst";
                 }
+
+                if ($("#abn").prop("checked")) {
+
+                if (queryString.length == 0) {
+                    queryString = "type=abn";
+                }
+                else {
+                    queryString += ",abn";
+                }
+            }
+
                 document.location = "entitlement.html?" + queryString;
             });
         });

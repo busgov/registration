@@ -141,40 +141,7 @@ select[disabled]:active {
 .btn-organisation:focus,
 .btn-organisation:active {
   background: black url(../img/sprite-add-organisation.png) no-repeat 11px -146px;
-}
-.btn-authorised {
-  background: transparent url(../img/sprite-add-authorised.png) no-repeat 11px 16px;
-  margin: 0 0 0 0.5em;
-  padding: 1em 1.5em 1em 2.5em;
-}
-.btn-authorised:hover,
-.btn-authorised:focus,
-.btn-authorised:active {
-  background: black url(../img/sprite-add-authorised.png) no-repeat 11px -144px;
-}
-
-
-
-/* Custom save button with exit icon */
-
-  /*
-  .btn-save {
-
-  background-color: white;
-  background: white url(../img/sprite-exit.png) no-repeat 8px 14px;
-  color: $brand-blue;
-  border: none;
-  font-weight: normal;  
-  margin: 0 0 0 0.5em;
-  float: right;
-  padding: 0.6em 0.5em 0.6em 1.5em;
-}
-.btn-save:hover,
-.btn-save:focus,
-.btn-save:active {
-  background: black url(../img/sprite-exit.png) no-repeat 8px -144px;
-}
-*/
+} 
 
 
 /* Custom added button with less padding */
@@ -332,7 +299,7 @@ input.larger {
 
 .radio-toggle label {
   float:left;
-  width: 120px;
+  width: 140px;
   margin: 0.5em 0;
   background-color:#EFEFEF;
   border-radius:4px;

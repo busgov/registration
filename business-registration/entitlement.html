@@ -56,48 +56,42 @@
         
             <div id="section1" class="sub-section-container sub-section-open">
                 <h2>Save and return</h2>
-                <div class="sub-section-content">
-                                            
-                <fieldset>
-                    <legend class="margin4 has-help larger">
-                        Save and return details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question"/><br/>
-                        <span class="field-note">Enter your details to enable save and return to this application at a later time or</span>
-                        <span class="field-note">choose to skip this step now and set it up further into your application by clicking save.</span>
-                    </legend>
-
-                    <div class="margin4">
-                        <p><input type="checkbox" id="already-setup" />&nbsp;<label for="already-setup">I have previously set up save and return.</label></p>
-                    </div>
-
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="email" class="input-right">Email address<span class="field-note"> (optional)</span></label>
-                        </div><!-- col -->
-                        <div class="col8 last">
-                            <input id="email" type="text">                            
-                        </div><!-- col -->
-                    </div><!-- grid-row -->
-
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="password1" class="input-right">Password<span class="field-note"> (optional)</span></label>
-                        </div><!-- col -->
-                        <div class="col8 last">
-                            <input id="password1" type="password">
-                            <a id="forgotten-password" href="" style="display: none" class="smallest">Forgotten password?</a>
-                        </div><!-- col -->
-                    </div><!-- grid-row -->
-
-                    <div id="confirm-password"class="grid-row">
-                        <div class="col4">
-                            <label for="password2" class="input-right">Confirm password<span class="field-note"> (optional)</span></label>
-                        </div><!-- col -->
-                        <div class="col8 last">
-                            <input id="password2" type="password" style="width: 100%; max-width: 24em;">
-                        </div><!-- col -->
-                    </div><!-- grid-row -->
-
-                </fieldset>
+                <div class="sub-section-content">                                            
+                    <fieldset>
+                        <legend class="margin4 has-help larger">
+                            Save and return details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question"/><br/>
+                            <span class="field-note">Enter your details to enable save and return to this application at a later time or</span>
+                            <span class="field-note">choose to skip this step now and set it up further into your application by clicking save.</span>
+                        </legend>
+                        <div class="margin4">
+                            <p><input type="checkbox" id="already-setup" />&nbsp;<label for="already-setup">I have previously set up save and return.</label></p>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="email" class="input-right">Email address<span class="field-note"> (optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="email" type="text">                            
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="password1" class="input-right">Password<span class="field-note"> (optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="password1" type="password">
+                                <a id="forgotten-password" href="" style="display: none" class="smallest">Forgotten password?</a>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div id="confirm-password"class="grid-row">
+                            <div class="col4">
+                                <label for="password2" class="input-right">Confirm password<span class="field-note"> (optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="password2" type="password" style="width: 100%; max-width: 24em;">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                    </fieldset>
                     
                     <div class="controls-container">
                         <div class="controls-content">
@@ -110,221 +104,283 @@
                 </div>
             </div>
 
+
+
             <div id="section2" class="sub-section-container">
-                <h2>ABN entitlement</h2>
+                <h2>ABN details</h2>
                 <div class="sub-section-content">
-                    <p>Before you continue, we need to first check that you’re entitled to an ABN.</p>
-                    <fieldset id="fieldsetCompanyAbn" style="display: none">
-                        <legend class="larger col12" id="fieldSetCompany">
-                            What type of company do you need an ABN for?
-                        </legend>
-                        <br />
-                        <label for="rdPublicCompany">
-                            <input id="rdPublicCompany" name="long-labels" type="radio">
-                            Australian public company
-                        </label><br />
-                        <label for="rdPrivateCompany">
-                            <input id="rdPrivateCompany" name="long-labels" type="radio">
-                            Australian private company
-                        </label>
-                        <br />
-                        <label for="rdOtherCompany">
-                            <input id="rdOtherCompany" name="long-labels" type="radio">
-                            other type of company
-                        </label>
-                        <div id="divGoToPOI" class="col10 card" style="display: none">
-                            <br />
+                    <div id="have-abn" style="display: none">
+                        <fieldset>
+                        <legend class="larger has-help">Don't need an ABN?<br /><span class="field-note">Please tell us why you opted out of registering an ABN.</legend>
+                        <div class="grid-row">
+                            <div class="col1">
+                                <input class="no-margin" type="radio" name="existing-abn" id="enter-abn" checked="checked" />
+                            </div>
+                            <div class="col10">
+                                <label class="no-margin" for="enter-abn"><strong>I already have an ABN</strong></label>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                 <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div><!-- col -->
+                        </div>
+                        <div class="grid-row">
                             <div class="col1">&nbsp;</div>
-                            <p> You are entitled for ABN application, go to POI in step 1.2</p>
+                            <div class="col5">
+                                <label for="reserved-name">Enter your ABN (or ABN reservation number)</label><br />
+                                <input id="reserved-name" type="text" value="">
+                            </div>                    
                         </div>
-                    </fieldset>
-                    <fieldset id="fieldsetAbn" class="col12" style="display: none">
-                        <legend class="larger col12">
-                            Why do you need an ABN?
-                        </legend>
-                        <div class="col4 ">
-                            <p>
-                                <strong>
-                                    Individual
-                                </strong>
-                            </p>
-                            <div class="col15">
-                                <input id="rdIndividual1" name="abnFor" class="showhide-trigger col2" type="radio">
-                                <label for="rdIndividual1" class="col9">
-                                    To work as an apprentice, trade assistant, or labourer
-                                </label>
-                            </div>
 
-                            <div class="col12 last">
-                                <input id="rdIndividual2" class="col2" name="abnFor" type="radio">
-                                <label for="rdIndividual2" class="col9 last">
-                                    To run a business as a sole trader
-                                </label>
+                        <div class="grid-row" style="padding-top: 1.5em">
+                            <div class="col1">
+                                <input class="no-margin" type="radio" name="existing-abn" id="not-required" />
                             </div>
+                            <div class="col10">
+                                <label class="no-margin" for="not-required"><strong>Business exists on Christmas Island or Cocos Island</strong></label>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                 <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div><!-- col -->
                         </div>
-                        <div class="col5">
-                            <p>
-                                <strong>
-                                    Company
-                                </strong>
-                            </p>
-                            <div class="col12">
 
-                                <input id="rdPublic" name="abnFor" class="showhide-trigger col2" type="radio">
-                                <label for="rdPublic" class="col9">
-                                    Australian public company
-                                </label>
-                            </div>
-                            <div class="col12">
-                                <input id="rdPrivate" name="abnFor" class="showhide-trigger col2" type="radio">
-                                <label for="rdPrivate" class="col9">
-                                    Australian private company
-                                </label>
-                            </div>
-                            <div class="col12 last">
-                                <input id="rdOther" class="col2" name="abnFor" type="radio">
-                                <label for="rdOther" class="col9">
-                                    Other type of company
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col3 last">
-                            <p>
-                                <strong>
-                                    Other
-                                </strong>
-                            </p>
-                            <div class="col12">
-                                <input id="rdPartnership" name="abnFor" class="col2" type="radio">
-                                <label for="rdPartnership" class="col9">
-                                    Partnership
-                                </label>
-                            </div>
-                            <div class="col12">
-                                <input id="rdTrust" class="col2" name="abnFor" type="radio">
-                                <label for="rdTrust" class="col9">
-                                    Trust
-                                </label>
-                            </div>
-                            <div class="col12 last">
-                                <input id="rdSuperfund" class="col2" name="abnFor" type="radio">
-                                <label for="rdSuperfund" class="col9">
-                                    Super fund
-                                </label>
-                            </div>
-                        </div>
-                        <br />
-                        <div id="divApprenticeMsg" class="col10 card" style="display: none">
-                            <p>
-                                <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
-                            </p>
-                            <p>
-                                If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
-                            </p>
-                            <p>
-                                If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
-                            </p>
-                        </div>
-                    </fieldset>
-                    <div class="col10 card" id="divGoToCompanyRegistration" style="display: none;">
-                        <div class="col1">&nbsp;</div>
-                        <div class="col10">
-                            <p>
-                                You need to register a <strong id="strongCompanyType">public</strong> company to apply for an ABN!
-                            </p>
-                            <div class="grid-row grid-row-block clearfix">
+                            <div class="grid-row" style="padding-top: 1.5em">
                                 <div class="col1">
-                                    <input type="radio" id="rdHaveCompany" name="Compay" />
+                                    <input class="no-margin" type="radio" name="existing-abn" id="joint-venture" />
                                 </div>
-                                <div class="col11 last">
-                                    <label for="rdHaveCompany">
-                                        I have registered a company
-                                    </label>
-                                    <br />
-                                    <label for="acn" class="input-left">
-                                        ACN number:
-                                    </label> &nbsp;
-                                    <input type="number" id="acn" />
-                                </div>
+                                <div class="col10">
+                                    <label class="no-margin" for="joint-venture"><strong>Registering a joint venture with multiple ABNs</strong></label>
+                                </div><!-- col -->
+                                <div class="col1 last">
+                                     <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                </div><!-- col -->
                             </div>
+                        </fieldset>
+                        <div class="col12" id="jointVentureDiv" style="display:none">
+                            <div class="grid-row clearfix">
+                                <div class="col4">
+                                    <label class="input-right" for="name">Extra details...</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="name" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div>
+                    </div><!-- have-abn -->
 
-                            <div class="grid-row grid-row-block grid-row-last clearfix">
-                                <div class="col1">
-                                    <input type="radio" id="rdAddCompany" name="Compay" />
-                                </div>
-                                <div class="col11 last">
-                                    <label for="rdAddCompany">
-                                        I'd like to register a company
-                                    </label>
-                                </div>
-                            </div>
-                            <p>
-                                Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
-                            </p>
-                        </div>
-                        <div class="col10 showhide-target card" style="display: none">
-                            <p>
-                                You need to register a <strong>private</strong> company to apply for an ABN!
-                            </p>
-                            <p>
-                                <label for="ckAddPrivateCompany">
-                                    <input type="checkbox" id="ckAddPrivateCompany" class="addCompany" />&nbsp; company registration
-                                </label>
-                            </p>
-                            <p>
-                                <label for="ckHavePrivateCompany">
-                                    <input type="checkbox" id="ckHavePrivateCompany" />&nbsp; I already have a company
-                                </label>
-                            </p>
-                            <p>
-                                Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
-                            </p>
-                        </div>
-                    </div>
-                    <fieldset id="fieldsetCompanyType" class="col11" style="display: none">
-                        <legend class="larger">What type of company?</legend>
-                        <div class="col11">
+                    <div id="need-abn">
+                        <p>Before you continue, we need to first check that you’re entitled to an ABN.</p>
+                        <fieldset id="fieldsetCompanyAbn" style="display: none">
+                            <legend class="larger col12" id="fieldSetCompany">
+                                What type of company do you need an ABN for?
+                            </legend>
                             <br />
-                            <div class="col5 padding5">
-                                <label for="rdCompanyBody" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyBody" name="incorporated" />
-                                    &nbsp;Body corporate
-                                </label>
-                                <label for="rdCompanySole" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanySole" name="incorporated" />
-                                    &nbsp;Corporation sole
-                                </label>
-                                <label for="rdCompanyForeign" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyForeign" name="incorporated" />
-                                    &nbsp;Foreign company
-                                </label>
-                                <label for="rdCompanyAssociation" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyAssociation" name="incorporated" />
-                                    &nbsp;Incorporated Association
-                                </label>
+                            <label for="rdPublicCompany">
+                                <input id="rdPublicCompany" name="long-labels" type="radio">
+                                Australian public company
+                            </label><br />
+                            <label for="rdPrivateCompany">
+                                <input id="rdPrivateCompany" name="long-labels" type="radio">
+                                Australian private company
+                            </label>
+                            <br />
+                            <label for="rdOtherCompany">
+                                <input id="rdOtherCompany" name="long-labels" type="radio">
+                                other type of company
+                            </label>
+                            <div id="divGoToPOI" class="col10 card" style="display: none">
+                                <br />
+                                <div class="col1">&nbsp;</div>
+                                <p> You are entitled for ABN application, go to POI in step 1.2</p>
                             </div>
-                            <div class="col5 padding5">
-                                <label for="rdCompanyStrata" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyStrata" name="incorporated" />
-                                    &nbsp;Strata title
-                                </label>
-                                <label for="rdCompanyCooperative" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyCooperative" name="incorporated" />
-                                    &nbsp;Co-operative
-                                </label>
-                                <label for="rdCompanyUnIncorpAssociation" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyUnIncorpAssociation" name="incorporated" />
-                                    &nbsp;Unincorporated association
-                                </label>
-                                <label for="rdCompanyOtherUnincorp" class="col10 nopadding">
-                                    <input type="radio" id="rdCompanyOtherUnincorp" name="incorporated" />
-                                    &nbsp;None of these
-                                </label>
+                        </fieldset>
+                        <fieldset id="fieldsetAbn" class="col12" style="display: none">
+                            <legend class="larger col12">
+                                Why do you need an ABN?
+                            </legend>
+                            <div class="col4 ">
+                                <p>
+                                    <strong>
+                                        Individual
+                                    </strong>
+                                </p>
+                                <div class="col15">
+                                    <input id="rdIndividual1" name="abnFor" class="showhide-trigger col2" type="radio">
+                                    <label for="rdIndividual1" class="col9">
+                                        To work as an apprentice, trade assistant, or labourer
+                                    </label>
+                                </div>
+
+                                <div class="col12 last">
+                                    <input id="rdIndividual2" class="col2" name="abnFor" type="radio">
+                                    <label for="rdIndividual2" class="col9 last">
+                                        To run a business as a sole trader
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col5">
+                                <p>
+                                    <strong>
+                                        Company
+                                    </strong>
+                                </p>
+                                <div class="col12">
+
+                                    <input id="rdPublic" name="abnFor" class="showhide-trigger col2" type="radio">
+                                    <label for="rdPublic" class="col9">
+                                        Australian public company
+                                    </label>
+                                </div>
+                                <div class="col12">
+                                    <input id="rdPrivate" name="abnFor" class="showhide-trigger col2" type="radio">
+                                    <label for="rdPrivate" class="col9">
+                                        Australian private company
+                                    </label>
+                                </div>
+                                <div class="col12 last">
+                                    <input id="rdOther" class="col2" name="abnFor" type="radio">
+                                    <label for="rdOther" class="col9">
+                                        Other type of company
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col3 last">
+                                <p>
+                                    <strong>
+                                        Other
+                                    </strong>
+                                </p>
+                                <div class="col12">
+                                    <input id="rdPartnership" name="abnFor" class="col2" type="radio">
+                                    <label for="rdPartnership" class="col9">
+                                        Partnership
+                                    </label>
+                                </div>
+                                <div class="col12">
+                                    <input id="rdTrust" class="col2" name="abnFor" type="radio">
+                                    <label for="rdTrust" class="col9">
+                                        Trust
+                                    </label>
+                                </div>
+                                <div class="col12 last">
+                                    <input id="rdSuperfund" class="col2" name="abnFor" type="radio">
+                                    <label for="rdSuperfund" class="col9">
+                                        Super fund
+                                    </label>
+                                </div>
+                            </div>
+                            <br />
+                            <div id="divApprenticeMsg" class="col10 card" style="display: none">
+                                <p>
+                                    <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
+                                </p>
+                                <p>
+                                    If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
+                                </p>
+                                <p>
+                                    If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
+                                </p>
+                            </div>
+                        </fieldset>
+                        <div class="col10 card" id="divGoToCompanyRegistration" style="display: none;">
+                            <div class="col1">&nbsp;</div>
+                            <div class="col10">
+                                <p>
+                                    You need to register a <strong id="strongCompanyType">public</strong> company to apply for an ABN!
+                                </p>
+                                <div class="grid-row grid-row-block clearfix">
+                                    <div class="col1">
+                                        <input type="radio" id="rdHaveCompany" name="Compay" />
+                                    </div>
+                                    <div class="col11 last">
+                                        <label for="rdHaveCompany">
+                                            I have registered a company
+                                        </label>
+                                        <br />
+                                        <label for="acn" class="input-left">
+                                            ACN number:
+                                        </label> &nbsp;
+                                        <input type="number" id="acn" />
+                                    </div>
+                                </div>
+
+                                <div class="grid-row grid-row-block grid-row-last clearfix">
+                                    <div class="col1">
+                                        <input type="radio" id="rdAddCompany" name="Compay" />
+                                    </div>
+                                    <div class="col11 last">
+                                        <label for="rdAddCompany">
+                                            I'd like to register a company
+                                        </label>
+                                    </div>
+                                </div>
+                                <p>
+                                    Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                                </p>
+                            </div>
+                            <div class="col10 showhide-target card" style="display: none">
+                                <p>
+                                    You need to register a <strong>private</strong> company to apply for an ABN!
+                                </p>
+                                <p>
+                                    <label for="ckAddPrivateCompany">
+                                        <input type="checkbox" id="ckAddPrivateCompany" class="addCompany" />&nbsp; company registration
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="ckHavePrivateCompany">
+                                        <input type="checkbox" id="ckHavePrivateCompany" />&nbsp; I already have a company
+                                    </label>
+                                </p>
+                                <p>
+                                    Not sure? Find out more about <a target="_blank" href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/ACN-or-ARBN/">registering an ABN for companies.</a>
+                                </p>
                             </div>
                         </div>
-                    </fieldset>
+                        <fieldset id="fieldsetCompanyType" class="col11" style="display: none">
+                            <legend class="larger">What type of company?</legend>
+                            <div class="col11">
+                                <br />
+                                <div class="col5 padding5">
+                                    <label for="rdCompanyBody" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyBody" name="incorporated" />
+                                        &nbsp;Body corporate
+                                    </label>
+                                    <label for="rdCompanySole" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanySole" name="incorporated" />
+                                        &nbsp;Corporation sole
+                                    </label>
+                                    <label for="rdCompanyForeign" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyForeign" name="incorporated" />
+                                        &nbsp;Foreign company
+                                    </label>
+                                    <label for="rdCompanyAssociation" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyAssociation" name="incorporated" />
+                                        &nbsp;Incorporated Association
+                                    </label>
+                                </div>
+                                <div class="col5 padding5">
+                                    <label for="rdCompanyStrata" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyStrata" name="incorporated" />
+                                        &nbsp;Strata title
+                                    </label>
+                                    <label for="rdCompanyCooperative" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyCooperative" name="incorporated" />
+                                        &nbsp;Co-operative
+                                    </label>
+                                    <label for="rdCompanyUnIncorpAssociation" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyUnIncorpAssociation" name="incorporated" />
+                                        &nbsp;Unincorporated association
+                                    </label>
+                                    <label for="rdCompanyOtherUnincorp" class="col10 nopadding">
+                                        <input type="radio" id="rdCompanyOtherUnincorp" name="incorporated" />
+                                        &nbsp;None of these
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
 
-                    <div id="fieldsetAbnEligibility" class="col12 last"></div>
+                        <div id="fieldsetAbnEligibility" class="col12 last"></div>
+                    </div><!-- need-abn -->
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
@@ -368,6 +424,7 @@
     <script type="text/javascript">
         //var help;
         var isGst = false;
+        var isAbnChecked = false;
         var isCompany = false;
         var isStarted = false;
         var isUnincorpAssociation = false;
@@ -403,6 +460,9 @@
                 if (urlQueryStrings.type.indexOf("gst") >= 0) {
                     isGst = true;
                 }
+                if (urlQueryStrings.type.indexOf("abn") >= 0) {
+                    isAbnChecked = true;
+                }
             }
             // determine whether this is a company entitlement or not
             if (isCompany) {
@@ -411,6 +471,16 @@
             } else {
                 $("#fieldsetAbn").slideDown();
             }
+
+            // determine which ABN section to display
+            if (isAbnChecked) {
+                $("#have-abn").hide();
+                $("#need-abn").show();
+            } else {
+                $("#have-abn").show();
+                $("#need-abn").hide();
+            }
+
 
             $("#fieldsetPOIAddress").registerToggleSlide({
                 triggerClass: ".showhide-trigger",
@@ -432,7 +502,17 @@
                 toggleSlideSameElement: true
             });
 
-            // initialiseRegistrationCollapse(150, true);
+            $("input[name*='existing-abn']").click(function(){
+                if(this.id=="joint-venture")
+                {
+                    $("#jointVentureDiv").slideDown();
+                }
+                else
+                {
+                    $("#jointVentureDiv").slideUp();
+                    clearElement("#jointVentureDiv");
+                }
+            });
             // for what do you need an ABN for.
             $("#fieldsetAbn").find(":radio").click(function () {
 
