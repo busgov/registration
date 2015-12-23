@@ -960,3 +960,38 @@ img.help-icon {
 .sub-section-content .validation-message h2 {
   background: none !important;
 }
+
+/* Message on gitHub prototype */
+
+.prototype {
+  background-color: black;
+  display: block;
+  padding: 0.25em 0;
+  width: 94%;
+  margin: 0 3%;
+}
+.prototype p {
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+.prototype p span {
+  color: orange;
+}
+.prototype p a,
+.prototype p a:link,
+.prototype p a:visited {
+  background-color: $brand-blue;
+  color: white;
+  text-decoration: none;
+  padding: 0 0.4em;
+  margin-left: 0.25em;
+}
+.prototype p a:hover,
+.prototype p a:focus,
+.prototype p a:active {
+  background-color: white;
+  color: black;
+  outline: none;
+  text-decoration: none;
+}
