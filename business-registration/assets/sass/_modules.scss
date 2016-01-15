@@ -42,6 +42,9 @@ ul.section-nav li.active {
   background: transparent url(../img/sprite-steps.png) no-repeat 50% -250px;  
   font-weight: bold;
 }
+ul.section-nav li.alert {
+  background: transparent url(../img/sprite-steps.png) no-repeat 50% -750px;  
+}
 ul.section-nav li span {
   color: white;
   font-family: $font-heading;

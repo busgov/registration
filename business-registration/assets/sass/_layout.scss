@@ -321,11 +321,40 @@ h2.cart-heading {
   text-align: right;
   padding-right: 1em;
 }
-.remove {
-  background: transparent url(../img/ico-remove-small.png) no-repeat 0 0;
-  padding-left: 30px;
+.remove,
+.edit {
+  background: transparent url(../img/sprite-trash.png) no-repeat 0 0;
+  padding: 0 0 10px 40px;
   text-align: left;
-  margin-right: 1em;
+  margin: 0 0.5em 0 0;
+}
+.edit {
+  background: transparent url(../img/sprite-edit.png) no-repeat 0 0;
+}
+.remove:hover,
+.remove:focus,
+.remove:active,
+.edit:hover,
+.edit:focus,
+.edit:active {
+  background: transparent url(../img/sprite-trash.png) no-repeat 0 -79px;
+  color: black;
+ }
+.edit:hover,
+.edit:focus,
+.edit:active {
+  background: transparent url(../img/sprite-edit.png) no-repeat 0 -79px;
+}
+.remove span,
+.edit span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 .subtotal {
   font-weight: bold;

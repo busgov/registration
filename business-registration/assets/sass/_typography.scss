@@ -97,6 +97,9 @@ h3 {
   font-size: 120%;
   margin: 1em 0 0.5em 0;
 }
+h3.larger {
+  font-size: 130%; 
+}
 p {
   font-family: $font-light;
 }
@@ -144,6 +147,10 @@ caption {
 caption span {
   font-size: 70%;
 }
+caption span.alert {
+  background: transparent url(../img/ico-alert-small.png) no-repeat 0 0;
+  padding: 1px 0 3px 30px;
+}
 caption span button {
   margin-bottom: 0.5em;
   margin-left: 0.25em;
@@ -176,10 +183,10 @@ td {
   font-weight: normal;
 }
 th.warning, td.warning {
-  color: $validation-red;
+  color: $validation-warning;
 }
 td.warning {
-  background-color: $pale-red;
+  background-color: $validation-warning-bg;
 }
 
 

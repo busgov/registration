@@ -194,20 +194,20 @@
                             </div>
                         </div>
                     </fieldset>
+                    
 
-                    <div class="margin4">
-                        <h3 class="has-help">Business associates<a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></h3>
-                        <p>Add business associates using the buttons below. You require:</p>
-                        <ul>
-                            <li id="needDirector"><strong>at least one director</strong> with an Australian residential address</li>
-                            <li id="needOrganisation"><strong>at least one shareholder</strong></li>
-                            <li id="needAuthorisedContact"><strong>at least one authorised contact</strong></li>
-                        </ul>
-                        <p>Individuals can fulfill multiple roles. For example, a director can also be the authorised contact.</p>
-                        <div id="addEntity1" class="controls-content margin-bottom">
-                            <button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
-                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-                        </div>
+                    <hr />
+                    <h3 class="has-help larger">Business associates<a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></h3>
+                    <p>Add business associates using the buttons below. You require:</p>
+                    <ul>
+                        <li id="needDirector"><strong>at least one director</strong> with an Australian residential address</li>
+                        <li id="needOrganisation"><strong>at least one shareholder</strong></li>
+                        <li id="needAuthorisedContact"><strong>at least one authorised contact</strong></li>
+                    </ul>
+                    <p>Individuals can fulfill multiple roles. For example, a director can also be the authorised contact.</p>
+                    <div id="addEntity1" class="controls-content margin-bottom">
+                        <button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
+                        <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
                     </div>
 
                     <!-- DIRECTOR -->
@@ -215,7 +215,7 @@
                         <h3 class="margin4 line">Details for individual 1:</h3>
                         <fieldset>
                             <legend class="margin4 has-help larger">Office held<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
-                            <div class="grid-row">
+                            <div class="grid-row checkboxes">
                                 <div class="col4">&nbsp;</div>
                                 <div class="col3">
                                     <input id="director" checked type="checkbox">&nbsp;<label for="director">Director</label>
@@ -224,7 +224,7 @@
                                     <input id="secretary" type="checkbox">&nbsp;<label for="secretary">Secretary</label>
                                 </div><!-- col -->
                             </div>
-                            <div class="grid-row">
+                            <div class="grid-row checkboxes">
                                 <div class="col4">&nbsp;</div>
                                 <div class="col3">
                                     <input id="officer" type="checkbox">&nbsp;<label for="officer">Public officer</label>
@@ -233,10 +233,10 @@
                                     <input id="shareholder" type="checkbox">&nbsp;<label for="shareholder">Shareholder</label>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
-                            <div class="grid-row">
+                            <div class="grid-row checkboxes">
                                 <div class="col4">&nbsp;</div>
                                 <div class="col8 last">
-                                    <input id="authorisedContact" checked type="checkbox">&nbsp;<label for="officer">Authorised contact</label>
+                                    <input id="authorisedContact" checked type="checkbox">&nbsp;<label for="authorisedContact">Authorised contact</label>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
                         </fieldset>
@@ -357,27 +357,222 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <div class="margin4">
-                            <div class="validation-container clearfix">
-                                <div class="grid-row">
-                                    <div class="validation-summary-icon">
-                                        <img src="assets/img/ico-exclamation-orange.png" alt="Alert">
+                        <div class="margin4 controls-content margin-bottom">
+                            <button type="button" id="btnsaveIndividual1" class="btn btn-default">Save individual</button>
+                        </div>                        
+                    </div><!-- individual 1 -->
+
+                    <div id="individual1Saved" style="display: none">
+                        <div class="cart-container">
+                            <div class="result-row fade-in fade-in-inherit">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Robert Johnson</h3>
+                                    <p>Saved as director and authorised contact</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                        </div><!-- cart-container -->
+                        <div id="addEntity2" class="controls-content margin-top-075 margin-bottom">
+                            <button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
+                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+                        </div>
+                    </div>
+
+                    <div id="individual2Saved" style="display: none">
+                        <div class="cart-container">
+                            <div class="result-row fade-in fade-in-inherit">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Vic Firth</h3>
+                                    <p>Saved as shareholder</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                            <div class="result-row">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Robert Johnson</h3>
+                                    <p>Saved as director and authorised contact</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                        </div><!-- cart-container -->
+                        <div id="addEntity3" class="controls-content margin-top-075 margin-bottom">
+                            <button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
+                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+                        </div>
+                    </div>
+
+
+                    <!-- SHAREHOLDER -->
+                    <div id="containerIndividual2" style="display: none">
+                        <h3 class="margin4 line">Details for individual 2:</h3>
+                        <fieldset>
+                            <legend class="margin4 has-help larger">Office held<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
+                            <div class="grid-row checkboxes">
+                                <div class="col4">&nbsp;</div>
+                                <div class="col3">
+                                    <input id="director" type="checkbox">&nbsp;<label for="director">Director</label>
+                                </div><!-- col -->
+                                <div class="col5 last">
+                                    <input id="secretary" type="checkbox">&nbsp;<label for="secretary">Secretary</label>
+                                </div><!-- col -->
+                            </div>
+                            <div class="grid-row checkboxes">
+                                <div class="col4">&nbsp;</div>
+                                <div class="col3">
+                                    <input id="officer" type="checkbox">&nbsp;<label for="officer">Public officer</label>
+                                </div><!-- col -->
+                                <div class="col5 last">
+                                    <input id="shareholder" checked type="checkbox">&nbsp;<label for="shareholder">Shareholder</label>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row checkboxes">
+                                <div class="col4">&nbsp;</div>
+                                <div class="col8 last">
+                                    <input id="authorisedContact" type="checkbox">&nbsp;<label for="authorisedContact">Authorised contact</label>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </fieldset>
+                        <div class="grid-row grid-row-reveal">
+                            <fieldset class="no-margin">
+                                <legend class="col4 input-right has-help">Does this person require an AUSkey?<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
+                                <div class="col8 last">
+                                    <div class="col12 last">
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="on-auskey"><input id="on-auskey" type="radio" name="auskey"><span>Yes</span></label>
+                                            <label class="off label-right" for="off-auskey"><input id="off-auskey" type="radio" name="auskey" checked><span>No</span></label>
+                                        </div>
                                     </div>
-                                    <div class="validation-message">
-                                        <h2><a id="validationSummaryAnchor" href="">Almost there, just need to add:</a></h2>
-                                        <ul>
-                                            <li><strong>at least one shareholder</strong></li>
-                                        </ul>
+                                </div>
+                            </fieldset>
+                        </div><!-- grid-row -->
+                        <fieldset>
+                            <legend class="margin4 larger">Individual details</legend>
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="individual1-given" class="input-right">Given name</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="individual1-given" value="Vic" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="individual1-other" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="individual1-family" class="input-right">Family name</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="individual1-family" value="Firth" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="gender" class="input-right">Gender</label>
+                                </div>
+                                <div class="col8 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="gender-male"><input id="gender-male" type="radio" name="gender" checked><span>Male</span></label>
+                                        <label class="off label-middle" for="gender-female"><input id="gender-female" type="radio" name="gender"><span>Female</span></label>
+                                        <label class="off label-right" for="gender-undetermined"><input id="gender-undetermined" type="radio" name="gender"><span>Undetermined</span></label>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="addEntity2" class="margin4 controls-content margin-bottom">
-                            <button type="button" class="btn btn-individual">Add individual</button>
-                            <button type="button" class="btn btn-organisation">Add organisation</button>
-                        </div>
 
-                    </div><!-- individual 1 -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    &nbsp;
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input type="checkbox" id="former-name" checked />&nbsp;<label for="former-name">The person has no former name</label>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </fieldset>
+
+                        <fieldset id="fieldsetPOIAddress" class="margin-bottom-075">
+                            <legend class="margin4 larger">
+                                Proof of identity<br />
+                                <span class="field-note">We require either the person's tax file number (TFN) or home address. Providing a TFN is the quickest way to prove identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter a home address</a> if you prefer.</span>
+                            </legend>
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="tfn" class="input-right">
+                                        Tax File Number<br />
+                                    </label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="tfn" type="number" value="123456789">
+                                    <p class="microcopy">
+                                        <a href="#" class="showhide-trigger" id="backToTfn" style="display: none">Back to TFN</a>
+                                    </p>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="dob" class="input-right">
+                                        Date of birth<br />
+                                        <span class="field-note">(DD/MM/YYYY)</span>
+                                    </label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="dob" type="date" value="01/01/1970">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="country" class="input-right">Country of birth</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <select id="country">
+                                        <option selected="selected" value="australia">Australia</option>
+                                        <option value="noneAustralia">Choose this for non AU behavior...</option>
+                                    </select>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div id="australianBirthLocation" class="col12">
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="birthSuburb" class="input-right">Suburb of birth<br /><span class="field-note">Start typing then select from the list</span></label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="birthSuburb" type="text" value="2902 - Kambah - ACT">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="margin4 controls-content margin-bottom">
+                            <button type="button" id="btnsaveIndividual2" class="btn btn-default">Save individual</button>
+                        </div>
+                    </div><!-- shareholder -->
+
+
+
+
+
 
                     <div class="controls-container">
                         <div class="controls-content">
@@ -531,218 +726,227 @@
 
 
             <div id="section4" class="sub-section-container">
-                <h2>Share allocation</h2>
+                <h2>Shares</h2>
                 <div class="sub-section-content">
-                    <fieldset class="no-margin">
-                        <legend class="margin4 larger">Assign shares to the company<br /><span class="field-note">You need to specify the total paid and unpaid shares for the <strong>company</strong> before allocating to business associates.</span></legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="company-share" class="input-right">Share class/type</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <select id="company-share">
-                                    <option selected="selected">-- Select share type --</option>
-                                    <option>Create custom share type</option>
-                                    <option>A - A</option>
-                                    <option>B - B</option>
-                                    <option>EMP - employee's</option>
-                                    <option>FOU - founder's</option>
-                                    <option>LG  - life governor's</option>
-                                    <option>MAN - management</option>
-                                    <option>ORD - ordinary</option>
-                                    <option>RED - redeemable</option>
-                                    <option>SPE - special</option>
-                                    <option>PRF - preference</option>
-                                    <option>CUMP -cumulative preference</option>
-                                    <option>NCP - non-cumulative preference</option>
-                                    <option>REDP - redeemable preference</option>
-                                    <option>NRP - non-redeemable preference</option>
-                                    <option>CRP - cumulative redeemable preference</option>
-                                    <option>NCRP - non-cumulative redeemable preference</option>
-                                    <option>PARP - participative preference</option>
-                                </select>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-num" class="input-right">Number of shares</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-num" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-paid" class="input-right">Amount paid per share</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-paid" class="input-dollar" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-unpaid" class="input-right">Amount unpaid per share</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-unpaid" class="input-dollar" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                    </fieldset>
-                    <div class="grid-row">
-                        <fieldset class="no-margin">
-                            <legend class="col4 input-right">Are these shares help on behalf of another individual, organisation or trust?</legend>
-                            <div class="col8 last">
-                                <div class="col12 last">
-                                    <div class="radio-toggle">
-                                        <label class="on label-left" for="on-behalf"><input id="on-behalf" type="radio" name="behalf"><span>Yes</span></label>
-                                        <label class="off label-right" for="off-behalf"><input id="off-behalf" type="radio" name="behalf"><span>No</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="no-margin">
-                            <legend class="col4 input-right">Are any of these shares issued other than for cash?</legend>
-                            <div class="col8 last">
-                                <div class="col12 last">
-                                    <div class="radio-toggle">
-                                        <label class="on label-left" for="on-other-cash"><input id="on-other-cash" type="radio" name="other-cash"><span>Yes</span></label>
-                                        <label class="off label-right" for="off-other-cash"><input id="off-other-cash" type="radio" name="other-cash"><span>No</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div><!-- grid-row -->
-                    <p class="no-margin-top"><button type="button" class="btn btn-default btn-small margin4">Add another share class</button></p>
-                    <table>
-                        <caption>Company share summary</caption>
-                        <thead>
-                            <tr>
-                                <th style="width: 25%">Share class/type</th>
-                                <th style="width: 25%">Total number of shares</th>
-                                <th style="width: 25%">Total paid</th>
-                                <th style="width: 25%">Total unpaid</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ORD</td>
-                                <td>2000</td>
-                                <td>$0.50</td>
-                                <td>$2.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <fieldset class="no-margin">
-                        <legend class="margin4 larger">Allocate shares to business associates<br /><span class="field-note">Share amounts must total amount specified in company share summary</span></legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="selectAssociate" class="input-right">Select business associate</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <select id="selectAssociate">
-                                    <option selected="selected">Robert Johnson (director, authorised contact)</option>
-                                    <option>Assign more shares</option>
-                                </select>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="company-share" class="input-right">Share class/type</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <select id="company-share">
-                                    <option selected="selected">-- Select share type --</option>
-                                    <option>Create custom share type</option>
-                                    <option>A - A</option>
-                                    <option>B - B</option>
-                                    <option>EMP - employee's</option>
-                                    <option>FOU - founder's</option>
-                                    <option>LG  - life governor's</option>
-                                    <option>MAN - management</option>
-                                    <option>ORD - ordinary</option>
-                                    <option>RED - redeemable</option>
-                                    <option>SPE - special</option>
-                                    <option>PRF - preference</option>
-                                    <option>CUMP - cumulative preference</option>
-                                    <option>NCP - non-cumulative preference</option>
-                                    <option>REDP - redeemable preference</option>
-                                    <option>NRP - non-redeemable preference</option>
-                                    <option>CRP - cumulative redeemable preference</option>
-                                    <option>NCRP - non-cumulative redeemable preference</option>
-                                    <option>PARP - participative preference</option>
-                                </select>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-num" class="input-right">Number of shares</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-num" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-paid" class="input-right">Amount paid per share</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-paid" class="input-dollar" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="share-unpaid" class="input-right">Amount unpaid per share</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="share-unpaid" class="input-dollar" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                    </fieldset>
-                    <div class="margin4">
-                        <div class="validation-container clearfix">
+                    <div id="containerAssignShares1">
+                        <fieldset class="no-margin" id="assign-shares">
+                            <legend class="margin4 larger">Assign shares to the company<br /><span class="field-note">You need to specify the total paid and unpaid shares for the <strong>company</strong> before allocating to business associates.</span></legend>
                             <div class="grid-row">
-                                <div class="validation-summary-icon">
-                                    <img src="assets/img/ico-exclamation-orange.png" alt="Alert">
+                                <div class="col4">
+                                    <label for="company-share" class="input-right">Share class/type</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <select id="company-share">
+                                        <option selected="selected">-- Select share type --</option>
+                                        <option>Create custom share type</option>
+                                        <option>A - A</option>
+                                        <option>B - B</option>
+                                        <option>EMP - employee's</option>
+                                        <option>FOU - founder's</option>
+                                        <option>LG  - life governor's</option>
+                                        <option>MAN - management</option>
+                                        <option>ORD - ordinary</option>
+                                        <option>RED - redeemable</option>
+                                        <option>SPE - special</option>
+                                        <option>PRF - preference</option>
+                                        <option>CUMP -cumulative preference</option>
+                                        <option>NCP - non-cumulative preference</option>
+                                        <option>REDP - redeemable preference</option>
+                                        <option>NRP - non-redeemable preference</option>
+                                        <option>CRP - cumulative redeemable preference</option>
+                                        <option>NCRP - non-cumulative redeemable preference</option>
+                                        <option>PARP - participative preference</option>
+                                    </select>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="share-num" class="input-right">Number of shares</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="share-num" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="share-paid" class="input-right">Amount paid per share</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="share-paid" class="input-dollar" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="share-unpaid" class="input-right">Amount unpaid per share</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="share-unpaid" class="input-dollar" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </fieldset>
+                        <div class="grid-row">
+                            <fieldset class="no-margin">
+                                <legend class="col4 input-right">Are these shares help on behalf of another individual, organisation or trust?</legend>
+                                <div class="col8 last">
+                                    <div class="col12 last">
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="on-behalf"><input id="on-behalf" type="radio" name="behalf"><span>Yes</span></label>
+                                            <label class="off label-right" for="off-behalf"><input id="off-behalf" type="radio" name="behalf"><span>No</span></label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="validation-message">
-                                    <h2><a id="validationSummaryAnchor" href="">Almost there, please check:</a></h2>
-                                    <ul>
-                                        <li><strong>Total number of shares</strong> equals shares allocated to company</li>
-                                    </ul>
+                            </fieldset>
+                            <fieldset class="no-margin">
+                                <legend class="col4 input-right">Are any of these shares issued other than for cash?</legend>
+                                <div class="col8 last">
+                                    <div class="col12 last">
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="on-other-cash"><input id="on-other-cash" type="radio" name="other-cash"><span>Yes</span></label>
+                                            <label class="off label-right" for="off-other-cash"><input id="off-other-cash" type="radio" name="other-cash"><span>No</span></label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </fieldset>
+                        </div><!-- grid-row -->
+                        <p class="no-margin-top"><button type="button" id="btnAddShareClass" class="btn btn-default btn-small margin4">Assign shares</button></p>
+                    </div><!-- containerAssignShares1 -->
+
+                    <div id="share-summary" style="display: none">
+                        <table>
+                            <caption>Summary of shares assigned to the company</caption>
+                            <thead>
+                                <tr>
+                                    <th style="width: 23%">Share class/type</th>
+                                    <th style="width: 23%">Total number of shares</th>
+                                    <th style="width: 22%">Total paid</th>
+                                    <th style="width: 22%">Total unpaid</th>
+                                    <th style="width: 10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ORD</td>
+                                    <td>2000</td>
+                                    <td>$0.50</td>
+                                    <td>$2.00</td>
+                                    <td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="no-margin-top"><button type="button" class="btn btn-small">Assign more shares</button></p>
+                        <hr />
                     </div>
-                    <p class="no-margin-top"><button type="button" class="btn btn-default btn-small margin4">Allocate more shares</button></p>
-                    <table>
-                        <caption>Share allocation summary</caption>
-                        <thead>
-                            <tr>
-                                <th style="width: 20%">Shareholder</th>
-                                <th style="width: 10%">Share class/type</th>
-                                <th style="width: 10%" class="warning">No. of shares</th>
-                                <th style="width: 10%">$ paid per share</th>
-                                <th style="width: 10%">$ unpaid per share</th>
-                                <th style="width: 10%">Total paid</th>
-                                <th style="width: 10%">Total unpaid</th>
-                                <th style="width: 10%">Fully paid?</th>
-                                <th style="width: 10%">Beneficially held?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Robert Johnson</td>
-                                <td>ORD</td>
-                                <td class="warning">1500</td>
-                                <td>$0.50</td>
-                                <td>$1.50</td>
-                                <td>$1.00</td>
-                                <td>$2.00</td>
-                                <td>Yes</td>
-                                <td>No</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+
+                    <div id="allocate-shares" style="display: none">
+                        <div id="containerAllocateShares1">
+                            <fieldset class="no-margin">
+                                <legend class="margin4 larger">Allocate shares to business associates<br /><span class="field-note">Share amounts must total amount specified in company share summary</span></legend>
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="selectAssociate" class="input-right">Select business associate</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <select id="selectAssociate">
+                                            <option selected="selected">Vic Firth (shareholder)</option>
+                                            <option selected="selected">Robert Johnson (director, authorised contact)</option>
+                                            <option>Assign more shares</option>
+                                        </select>
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="company-share" class="input-right">Share class/type</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <select id="company-share">
+                                            <option selected="selected">-- Select share type --</option>
+                                            <option>Create custom share type</option>
+                                            <option>A - A</option>
+                                            <option>B - B</option>
+                                            <option>EMP - employee's</option>
+                                            <option>FOU - founder's</option>
+                                            <option>LG  - life governor's</option>
+                                            <option>MAN - management</option>
+                                            <option>ORD - ordinary</option>
+                                            <option>RED - redeemable</option>
+                                            <option>SPE - special</option>
+                                            <option>PRF - preference</option>
+                                            <option>CUMP - cumulative preference</option>
+                                            <option>NCP - non-cumulative preference</option>
+                                            <option>REDP - redeemable preference</option>
+                                            <option>NRP - non-redeemable preference</option>
+                                            <option>CRP - cumulative redeemable preference</option>
+                                            <option>NCRP - non-cumulative redeemable preference</option>
+                                            <option>PARP - participative preference</option>
+                                        </select>
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="share-num" class="input-right">Number of shares</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="share-num" type="number">
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="share-paid" class="input-right">Amount paid per share</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="share-paid" class="input-dollar" type="number">
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="share-unpaid" class="input-right">Amount unpaid per share</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="share-unpaid" class="input-dollar" type="number">
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                            </fieldset>
+                            <p class="no-margin-top"><button id="btnAllocateShares" type="button" class="btn btn-default btn-small margin4">Allocate shares</button></p>
+                        </div><!-- containerAllocateShares1 -->
+                        <div id="share-allocation-summary" style="display: none">
+                            <table>
+                                <caption>Summary of shares allocated to business associates<br />
+                                <span class="alert">The number of shares allocated to associates must equal the number of shares assigned to the company</span></caption>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20%">Shareholder</th>
+                                        <th style="width: 11%">Share class/type</th>
+                                        <th style="width: 11%" class="warning">No. of shares</th>
+                                        <th style="width: 8%">$ paid per share</th>
+                                        <th style="width: 8%">$ unpaid per share</th>
+                                        <th style="width: 8%">Total paid</th>
+                                        <th style="width: 8%">Total unpaid</th>
+                                        <th style="width: 8%">Fully paid?</th>
+                                        <th style="width: 8%">Beneficially held?</th>
+                                        <th style="width: 10%"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Robert Johnson</td>
+                                        <td>ORD</td>
+                                        <td class="warning">1500</td>
+                                        <td>$0.50</td>
+                                        <td>$1.50</td>
+                                        <td>$1.00</td>
+                                        <td>$2.00</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="no-margin-top"><button type="button" class="btn btn-small">Allocate more shares</button></p>
+                        </div>
+                    </div><!-- allocate shares -->
+
+
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
@@ -789,7 +993,6 @@
 
 
             // Add director
-
             $('#btnIndividual1').click(function () {
                 $('#addEntity1').toggle("fast");
                 $('#containerIndividual1').toggle("fast");
@@ -800,33 +1003,20 @@
                 }, 800);
             });
 
-            $('#saveIndividual').click(function () {
+            // Save director
+            $('#btnsaveIndividual1').click(function () {
                 $('#containerIndividual1').toggle("fast");
-                $('#containerIndividual1Done').toggle("fast");
-                $('#controlsIndividual1').toggle("fast");
-                $('#needDirector').toggle("fast");
-                $('#containerIndividual1Done').addClass("fade-in");
-            });
-
-            $('#containerIndividual1Cancel').click(function () {
-                $('#containerIndividual1Done').toggle("fast");
-                $('#needDirector').toggle("fast");
-            });
-
-            $('#editingIndividual1Cancel').click(function () {
-                $('#containerIndividual1').toggle("fast");
-                $('#controlsIndividual1').toggle("fast");
-            });
-
-            $('#containerIndividual2Cancel').click(function () {
-                $('#containerIndividual2').toggle("fast");
+                $('#individual1Saved').toggle("fast");
+                // scroll to top if the page is super long
+                var targetTop = $(this).parent().offset().top;
+                jQuery('html, body').animate({
+                    scrollTop: targetTop
+                }, 800);
             });
 
 
             // Add shareholder
-
             $('#btnIndividual2').click(function () {
-                $('#controlsIndividual2').toggle("fast");
                 $('#containerIndividual2').toggle("fast");
                 // scroll to top if the page is super long
                 var targetTop = $(this).parent().offset().top;
@@ -835,13 +1025,31 @@
                 }, 800);
             });
 
-            $('#saveIndividual2').click(function () {
+            // Save shareholder
+            $('#btnsaveIndividual2').click(function () {
                 $('#containerIndividual2').toggle("fast");
-                $('#containerIndividual2Done').toggle("fast");
-                $('#controlsIndividual2').toggle("fast");
-                $('#need-these').toggle("fast");
-                $('#containerIndividual2Done').addClass("fade-in");
+                $('#individual1Saved').hide();
+                $('#individual2Saved').toggle("fast");
+                // scroll to top if the page is super long
+                var targetTop = $(this).parent().offset().top;
+                jQuery('html, body').animate({
+                    scrollTop: targetTop
+                }, 800);
             });
+
+            // Assign shares
+            $('#btnAddShareClass').click(function () {
+                $('#share-summary').toggle("fast");
+                $('#allocate-shares').toggle("fast");
+                $('#containerAssignShares1').toggle("fast");
+            });
+
+            // Allocate shares
+            $('#btnAllocateShares').click(function () {
+                $('#share-allocation-summary').toggle("fast");
+                $('#containerAllocateShares1').toggle("fast");
+            });
+
 
             // add authorisaed contact
 

@@ -192,12 +192,28 @@ select[disabled]:active {
 input:hover,
 input:focus,
 input:active,
+textarea:hover,
+textarea:focus,
+textarea:active,
 select:hover,
 select:focus,
 select:active {
   background-color: $input-focus;
   -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+input[disabled]:hover,
+input[disabled]:focus,
+input[disabled]:active,
+textarea[disabled]:hover,
+textarea[disabled]:focus,
+textarea[disabled]:active,
+select[disabled]:hover,
+select[disabled]:focus,
+select[disabled]:active {
+  background-color: $bg-disabled;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 /* Prevent square behind circle */
 input[type=radio]:hover,
@@ -217,6 +233,9 @@ input[type=tel],
 input[type=email],
 input[type=number],
 input[type=phone],
+input[type=password],
+input[type=url],
+input[type=search],
 textarea,
 select {
   -webkit-border-radius: 4px;
@@ -279,6 +298,10 @@ input.larger {
     margin: 0.2em 0;
     background-image:url(../img/sprite-form-elements.png); 
     background-repeat: no-repeat;
+}
+.checkboxes label:hover { 
+    background-position: 0 -51px;
+    cursor: pointer;
 }
 .checkboxes input[type="checkbox"] + label:before { 
     background-position: 0 -51px;
