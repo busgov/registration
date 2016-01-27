@@ -52,7 +52,7 @@
                 <h2>Business name <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Change</button></h2>
             </div>
             <div class="cart-container">
-                <div class="result-row">
+                <div class="result-row" id="businessName1">
                     <div class="result-cell cell-icon">
                         <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
                     </div>
@@ -60,20 +60,22 @@
                         <h2>Bob's Whitegoods Repairs</h2>
                         <p>Pending manual assessment.</p>
                     </div>
-                    <div class="result-cell cell-action">
-                        <a class="remove" href="">Remove</a> AU$33
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $33</span>
+                        <a class="remove margin-left-075 no-margin-right" style="text-align: right" href="javascript:void(0);" id="linkOne"><span>Remove</span></a>
                     </div>
                 </div><!-- result-row -->
                 <div class="result-row">
-                    <div class="result-cell cell-icon"> 
+                    <div class="result-cell cell-icon">
                         <img src="assets/img/ico-tick-green.png" alt="Success" />
                     </div>
                     <div class="result-cell cell-detail">
                         <h2>Bob's Plumbing</h2>
-                        <p>Currently available.</p>
+                        <p>Business name added.</p>
                     </div>
-                    <div class="result-cell cell-action">
-                        <a class="remove" href="">Remove</a> AU$33
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $33</span>
+                        <a class="remove margin-left-075 no-margin-right" href="javascript:void(0);" id="linkTwo"><span>Remove</span></a>
                     </div>
                 </div><!-- result-row -->
             </div><!-- cart-container -->
@@ -275,6 +277,20 @@
             </div><!-- controls-content -->
         </div>
     </div><!-- wrapper -->
+    <div id="dialogOne" style="display:none;">
+        <h1>Confirm remove</h1> 
+        <p>Are you sure you want to remove this business name?</p> 
+        <input type="button" class="btn btn-default" id="btnRemoveName1" value="Yes, remove" /> 
+        <a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogOne");'>Cancel</a>
+    </div>
+
+    <div id="dialogTwo" style="display:none;">
+        <h1>Confirm remove</h1> 
+        <p>Are you sure you want to remove this business name?</p>
+        <p>At least one business name is required. If you remove this one you will be directed back to the business name search page.</p> 
+        <input type="button" class="btn btn-default" id="btnRemoveName2" onclick="location.href='business-names.html'" value="Yes, remove" /> 
+        <a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogTwo");'>Cancel</a>
+    </div>
 
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
@@ -289,6 +305,19 @@
             initSaveForLater();
             initApplicationOptions();
         });
+
+        $('#btnRemoveName1').click(function () {
+            visionaustralia.closeDialog("dialogOne");
+            $('#businessName1').toggle("fast");
+        });
+
     </script>
+    <script type="text/javascript" src="assets/js/vadialog.js"></script> 
+    <script type="text/javascript">
+            visionaustralia.addDialog("linkOne", "dialogOne"); 
+    </script> 
+    <script type="text/javascript">
+            visionaustralia.addDialog("linkTwo", "dialogTwo"); 
+    </script>     
 </body>
 </html>

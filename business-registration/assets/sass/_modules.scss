@@ -177,6 +177,9 @@ ul.section-nav li a:active {
 .no-margin {
   margin: 0 !important;
 }
+.no-margin-right {
+  margin-right: 0 !important;
+}
 .margin-bottom {
   margin-bottom: 2em;
 }
@@ -188,6 +191,9 @@ ul.section-nav li a:active {
 }
 .margin-left-075 {
   margin-left: 0.75em;
+}
+.no-padding {
+  padding: 0 !important;
 }
 .microcopy {
   color: $gray-dark;
