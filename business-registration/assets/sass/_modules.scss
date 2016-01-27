@@ -113,7 +113,60 @@ ul.section-nav li a:active {
 }
 
 
-// Styl4ing content within forms
+// Modal confirmation message
+// ------------------------------------------------------------------------------------------------------
+
+.vashadow {
+  background-color: black;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+}
+
+.vadialog {
+  background: white;
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  left:50%;
+  top:50%;
+  padding: 35px 40px 40px 40px;
+  width: 300px;
+}
+.vadialog h1 {
+  font-size: 130%;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.vaCloseButton {
+  float:right;
+  color:#999999;
+  border:none;
+  /*padding:0;
+  margin-right:-20px;
+  margin-top:0;*/
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  background: white;
+  cursor:pointer;
+}
+
+.vaCloseButton:focus{
+  outline:2px solid #999999;
+}
+
+.vaOffscreen{
+  position:absolute;
+  left:-9999px;
+}
+
+
+// Styling content within forms
 // ------------------------------------------------------------------------------------------------------
 
 .no-margin-top {
@@ -132,6 +185,9 @@ ul.section-nav li a:active {
 }
 .margin-bottom-075 {
   margin-bottom: 0.75em;
+}
+.margin-left-075 {
+  margin-left: 0.75em;
 }
 .microcopy {
   color: $gray-dark;

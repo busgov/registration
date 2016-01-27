@@ -57,8 +57,8 @@
                         <p>Company name added.</p>
                     </div>
                     <div class="result-cell cell-action">
-                        <a class="remove" href="business-names.html">Remove</a>
                         <span class="subtotal">AU $499</span>
+                        <a class="remove margin-left-075" href="javascript:void(0);" id="linkOne"><span>Remove</span></a>
                     </div>
                 </div><!-- result-row -->
             </div><!-- cart-container -->
@@ -74,7 +74,13 @@
             </div><!-- controls-content -->
         </div>
     </div><!-- wrapper -->    
-
+    <div id="dialogOne" style="display:none;">
+        <h1>Confirm remove</h1> 
+        <p>Are you sure you want to remove this company name? You will be returned to the company name search screen.</p> 
+        <input type="button" class="btn btn-default" value="Yes, remove" onclick="location.href='company-name.html'"/> 
+        <a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogOne");'>Cancel</a>
+    </div>
+    
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 
@@ -88,5 +94,9 @@
             initApplicationOptions();
         });
     </script>
+    <script type="text/javascript" src="assets/js/vadialog.js"></script> 
+    <script type="text/javascript">
+            visionaustralia.addDialog("linkOne", "dialogOne"); 
+    </script> 
 </body>
 </html>
