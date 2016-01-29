@@ -24,11 +24,19 @@
 	border-top: 1px solid $blue-pale-border;	
 	padding: 1em;
 }
+.grid-row-lines {
+	border-bottom: 1px solid $blue-pale-border;	
+	border-top: 1px solid $blue-pale-border;
+	padding: 1.5em 0;	
+}
 .grid-row-reveal {
 	padding: 1em;
 }
-.grid-row-padding-bottom {
-	padding-bottom: 1em;
+.grid-row-no-line-bottom {
+	border-bottom: 0;
+}
+.grid-row-no-line-top {
+	border-top: 0;
 }
 .grid-row-no-line {
 	padding: 1em 0 0.25em 0;

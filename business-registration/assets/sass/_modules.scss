@@ -195,6 +195,12 @@ ul.section-nav li a:active {
 .no-padding {
   padding: 0 !important;
 }
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+ .padding-top-bottom {
+  padding: 1.5em 0;
+}
 .microcopy {
   color: $gray-dark;
   line-height: 1;
@@ -322,30 +328,6 @@ legend .field-note {
 }
 
 
-/* Table of contents for style guide */
-.toc {
-  background-color: $brand-blue;
-  padding: 0.25em 1em 1em 1em;
-}
-.toc h1 {
-  color: white;
-}
-.toc li,
-.toc li a,
-.toc li a:link,
-.toc li a:visited {
-  color: white;
-  padding: 0.15em 0.25em;
-  text-decoration: none;
-}
-.toc li a:hover,
-.toc li a:focus,
-.toc li a:active {
-  background-color: white;
-  color: black;
-}
-
-
 // System messaging
 // ------------------------------------------------------------------------------------------------------
 
@@ -362,13 +344,6 @@ legend .field-note {
   padding: 0;
   margin: 0 0 1em 0;
   font-size: 150%;
-}
-.system-message h1 div {
-  display: inline;
-  font-size: 60%;
-  font-family: $font-light;
-  margin-left: 0.25em;
-  letter-spacing: normal;
 }
 .system-message p,
 .system-message li {

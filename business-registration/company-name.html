@@ -60,7 +60,7 @@
 
             <fieldset id="fieldsetPOIAddress">
                 <legend class="larger has-help">Do you have a proposed company name?<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></legend>
-                <div class="grid-row">
+                <div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix">
                     <div class="col1">
                         <input class="no-margin" type="radio" name="names" id="names-search" checked="checked" />
                     </div>
@@ -68,14 +68,15 @@
                         <label class="no-margin" for="names-search"><strong>Create a new name</strong></label>
                     </div><!-- col -->
                 </div>
-                <div class="grid-row">
+                <div class="grid-row" style="padding-bottom: 5.5em">
                     <div class="col1">&nbsp;</div>
                     <div class="col11 last">
                         <label for="name-search">Enter name</label><br />
                         <input id="name-search" type="text" value="Johnson and Griffith Plumbers">
                         <label for="name-element" class="visuallyhidden">Choose legal element</label>
-                        <select id="name-element" class="larger" style="max-width: 5em">
-                            <option selected="selected">Pty Ltd</option>
+                        <select id="name-element" class="larger" style="max-width: 12em;">
+                            <option selected="selected">Select element type</option>
+                            <option>Pty Ltd</option>
                             <option>Pty</option>
                             <option>Pty Ltd</option>
                             <option>etc</option>
@@ -84,7 +85,7 @@
                     </div>                    
                 </div>
 
-                <div class="grid-row" style="padding-top: 1.5em">
+                <div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix">
                     <div class="col1">
                         <input class="no-margin" type="radio" name="names" id="names-reserved" />
                     </div>
@@ -92,19 +93,8 @@
                         <label class="no-margin" for="names-reserved"><strong>Use a reserved name</strong></label>
                     </div><!-- col -->
                 </div>
-                <div class="grid-row">
-                    <div class="col1">&nbsp;</div>
-                    <div class="col5">
-                        <label for="reserved-name">Reserved name</label><br />
-                        <input id="reserved-name" type="text" value="">
-                    </div>                    
-                    <div class="col4 last">
-                        <label for="reserved-number">Reserved number</label><br />
-                        <input id="reserved-number" type="text" value="">
-                    </div>                    
-                </div>
 
-                <div class="grid-row" style="padding-top: 1.5em">
+                <div class="grid-row grid-row-lines clearfix">
                     <div class="col1">
                         <input class="no-margin" type="radio" name="names" id="names-acn" />
                     </div>
