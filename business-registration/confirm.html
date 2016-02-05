@@ -47,7 +47,7 @@
             <div class="print">
                 <p><a href="" onclick="window.print();">Print</a></p>
             </div><!-- print -->
-
+           
             <div class="confirmation-heading">
                 <h2>Business name <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Change</button></h2>
             </div>
@@ -71,10 +71,23 @@
                     </div>
                     <div class="result-cell cell-detail">
                         <h2>Bob's Plumbing</h2>
-                        <p>Business name added.</p>
+                        <p>Business name available.</p>
                     </div>
                     <div class="result-cell cell-action no-padding">
                         <span class="subtotal">AU $33</span>
+                        <a class="remove margin-left-075 no-margin-right" href="javascript:void(0);" id="linkTwo"><span>Remove</span></a>
+                    </div>
+                </div><!-- result-row -->
+                <div class="result-row">
+                    <div class="result-cell cell-icon">
+                        <img src="assets/img/ico-tick-green.png" alt="Success" />
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>JOHNSON PLUMBERS PTY PTD</h2>
+                        <p>Company name available.</p>
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $464</span>
                         <a class="remove margin-left-075 no-margin-right" href="javascript:void(0);" id="linkTwo"><span>Remove</span></a>
                     </div>
                 </div><!-- result-row -->
@@ -83,59 +96,74 @@
             <div class="cart-container">
                 <div class="result-row">
                     <div class="result-cell cell-total">
-                        <p>Total payment required: AU$66</p>
+                        <p>Total payment required: <strong>AU $530</strong></p>
                     </div>
                 </div><!-- result-row -->
             </div><!-- cart-container -->
 
             <div class="confirmation-heading">
-                <h2>Sole trader details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+                <h2>Business associates <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
             </div>
             <table>
-                <thead class="visuallyhidden">
-                    <tr>
-                        <th>Field item</th>
-                        <th>Input value</th>
-                    </tr>
-                </thead>
                 <tr>
-                    <th class="right">Sole trader</th>
-                    <th>&nbsp;</th>
+                    <th class="field-name right">Name</th>
+                    <td class="input-value">Robert Johnson</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Given name</td>
-                    <td class="input-value">Robert</td>
+                    <th class="field-name right">Office held</th>
+                    <td class="input-value">Director, Authorised contact</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Family name</td>
-                    <td class="input-value">Johnson</td>
+                    <th class="field-name right">Residenital address</th>
+                    <td class="input-value">8 William Harrelson Dr, South Somewhere - 2000 - NSW</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Date of birth</td>
-                    <td class="input-value">16/06/1970</td>
+                    <th class="field-name right">Email address</th>
+                    <td class="input-value">robert.johnson@ispname.com.au</td>
+                </tr>
+            </table> 
+            <table>
+                <tr>
+                    <th class="field-name right">Name</th>
+                    <td class="input-value">Michael Johnson</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Email address</td>
-                    <td class="input-value">rjnson@ispname.com.au</td>
+                    <th class="field-name right">Office held</th>
+                    <td class="input-value">Shareholder</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Gender</td>
-                    <td class="input-value">Male</td>
+                    <th class="field-name right">Residenital address</th>
+                    <td class="input-value">2/11 Preston St, McInnes - 2000 - NSW</td>
                 </tr>
                 <tr>
-                    <td class="field-name">Tax file number</td>
-                    <td class="input-value">203761904</td>
-                </tr>
-                <tr>
-                    <th class="right">Authorised contact</th>
-                    <th>&nbsp;</th>
-                </tr>
-                <tr>
-                    <td class="field-name">As above</td>
-                    <td class="input-value"></td>
+                    <th class="field-name right">Email address</th>
+                    <td class="input-value">michael.johnson100@ispname.com.au</td>
                 </tr>
             </table>
 
+                      
+            <div class="confirmation-heading">
+                <h2>Share allocation <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+            </div>
+            <table>
+                <tr>
+                    <th style="width: 25%">Shareholder</th>
+                    <th style="width: 15%">Share class/type</th>
+                    <th style="width: 15%">No. of shares</th>
+                    <th style="width: 15%">$ paid per share</th>
+                    <th style="width: 15%">$ unpaid per share</th>
+                    <th style="width: 15%">Beneficially held?</th>
+                </tr>
+                <tr>
+                    <td>Michael Johnson</td>
+                    <td>ORD</td>
+                    <td>10000</td>
+                    <td>$10.00</td>
+                    <td>$5.00</td>
+                    <td>No</td>
+                </tr>
+            </table>
+            
             <div class="confirmation-heading">
                 <h2>Business details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
             </div>
@@ -264,8 +292,8 @@
                 </tr>
             </table>
 
-            <p>Almost done! The final payment step will open our secure gateway page. After payment you will be directed back to a <em>dashboard</em> where you can monitor progress of your application.</p>
-            <input type="checkbox" id="declaration" class="showhide-trigger" />&nbsp;<label for="declaration">I declare that the information given on this form is true and correct.</label>
+            <h3>--- Declaration section being developed ---</h3>
+
         </main>
 
         <div class="controls-container">

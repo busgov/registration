@@ -254,27 +254,26 @@ input[type=phone] {
 }
 input[type=checkbox],
 input[type=radio] {
-appearance: none;
   border: none;
   border-radius: 0;
   box-shadow: none;
   background-color: #fff;
   line-height: normal;
   line-height: 34px; 
-
-    border-radius: 6px;
+  border-radius: 6px;
   -webkit-border-radius: 6px;
   width: 34px;
   height: 34px;
   vertical-align: middle;
   margin: 0.4em 0.25em 0.4em 0;
 }
+
 input.larger {
   padding: 0.57em 0.5em;  
 }
 
 
-// Image replacement styling for radios and checkboxes
+// OLD --------------- Image replacement styling for radios and checkboxes
 // ------------------------------------------------------------------------------------------------------
 
 .radios input[type="radio"], 
@@ -283,7 +282,7 @@ input.larger {
     left: -999em; 
 }
 .radios label {
-  padding: 0.25em 0 0.25em 50px;
+  /*padding: 0.25em 0 0.25em 50px;*/
   text-indent: -50px;
 }
 .radios label:before,
@@ -291,10 +290,11 @@ input.larger {
     display: inline-block; 
     position: relative; 
     top: 15px; 
+    top: 0; 
     left: 0; 
     content:''; 
     width: 48px; 
-    height: 41px;
+    padding: 0 0 40px 0;
     margin: 0.2em 0;
     background-image:url(../img/sprite-form-elements.png); 
     background-repeat: no-repeat;
@@ -372,4 +372,124 @@ input.larger {
   background: transparent url(../img/ico-dollar.png) no-repeat 0 50%;
   padding-left: 45px;
   width: 100%;
+}
+
+
+// Image replacements for radio and checkboxes
+// ------------------------------------------------------------------------------------------------------
+/* http://www.thecssninja.com/css/custom-inputs-using-css */
+
+/* Hiding originals */
+p > input[type="checkbox"],
+p > input[type="radio"] {
+  padding: 0;
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  float: left;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.custom-controls p > label { 
+  line-height: 38px; 
+  color: $gray-dark; 
+  padding: 5px 0 14px 48px;
+  -moz-transition: color 1s ease; 
+  -o-transition: color 1s ease; 
+  -webkit-transition: color 1s ease; 
+  transition: color 1s ease; 
+}
+
+p > input:hover + label, p > input:focus + label,
+p > input + label:hover, p > input:focus + label { 
+  color: #000; 
+}
+
+p > input + label {
+  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
+  height: 34px;
+}
+p > input[type=radio] + label { 
+  background-position: 0 -386px;
+}
+
+/* Checked styles */
+p > input[type=radio]:checked + label { 
+  background-position: 0 -577px;
+}
+p > input[type=checkbox]:checked + label { 
+  background-position: 0 -192px; 
+}
+p > input[type=checkbox]:hover:checked + label,
+p > input[type=checkbox]:focus:checked + label,
+p > input[type=checkbox]:checked + label:hover,
+p > input[type=checkbox]:focus:checked + label { 
+  background-position: 0 -240px; 
+}
+p > input[type=radio]:hover:checked + label,
+p > input[type=radio]:focus:checked + label,
+p > input[type=radio]:checked + label:hover,
+p > input[type=radio]:focus:checked + label { 
+  background-position: 0 -625px; 
+}
+
+/* Hover & Focus styles */
+p > input[type=checkbox]:hover + label,
+p > input[type=checkbox]:focus + label,
+p > input[type=checkbox] + label:hover { 
+  background-position: 0 -48px;
+}
+p > input[type=radio]:hover + label,
+p > input[type=radio]:focus + label,
+p > input[type=radio] + label:hover { 
+  background-position: 0 -434px; 
+}
+
+/* Active styles */
+p > input[type=checkbox]:active + label,
+p > input[type=checkbox] + label:hover:active { 
+  background-position: 0 -96px; 
+}
+p > input[type=radio]:active + label,
+p > input[type=radio] + label:hover:active { 
+  background-position: 0 -482px;
+}
+p > input[type=checkbox]:active:checked + label,
+p > input[type=checkbox]:checked + label:hover:active {
+  background-position: 0 -288px;
+}
+p > input[type=radio]:active:checked + label,
+p > input[type=radio]:checked + label:hover:active { 
+  background-position: 0 -673px; 
+}
+
+/* Disabled styles */
+p > input[type=checkbox]:disabled + label,
+p > input[type=checkbox]:hover:disabled + label,
+p > input[type=checkbox]:focus:disabled + label,
+p > input[type=checkbox]:disabled + label:hover,
+p > input[type=checkbox]:disabled + label:hover:active { 
+  background-position: 0 -145px; 
+}
+p > input[type=radio]:disabled + label,
+p > input[type=radio]:hover:disabled + label,
+p > input[type=radio]:focus:disabled + label,
+p > input[type=radio]:disabled + label:hover,
+p > input[type=radio]:disabled + label:hover:active {
+  background-position: 0 -528px; 
+}
+p > input[type=checkbox]:disabled:checked + label,
+p > input[type=checkbox]:hover:disabled:checked + label,
+p > input[type=checkbox]:focus:disabled:checked + label,
+p > input[type=checkbox]:disabled:checked + label:hover,
+p > input[type=checkbox]:disabled:checked + label:hover:active { 
+  background-position: 0 -336px; 
+}
+p > input[type=radio]:disabled:checked + label,
+p > input[type=radio]:hover:disabled:checked + label,
+p > input[type=radio]:focus:disabled:checked + label,
+p > input[type=radio]:disabled:checked + label:hover,
+p > input[type=radio]:disabled:checked + label:hover:active { 
+  background-position: 0 -719px; 
 }

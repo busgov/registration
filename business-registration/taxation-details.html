@@ -79,12 +79,12 @@
                                 <div class="col6">
                                     <label for="turnover" class="input-right">What is your GST turnover?</label>
                                 </div><!-- col -->
-                                <div class="col6 last">
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_1"/> $0 to $74,999</label><br/>
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_2"/> $75,000 to $149,999</label><br/>
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_3"/> $150,000 to $1,999,999</label><br/>
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_4"/> $2 million to $19,999,999</label><br/>
-                                    <label><input type="radio" class="radio" name="turnover" value="radio_5"/> $20 million and over</label><br/>
+                                <div class="col6 last custom-controls">
+                                    <p><input type="radio" name="turnover" id="radio_1" /><label for="radio_1">$0 to $74,999</label></p>
+                                    <p><input type="radio" name="turnover" id="radio_2"/><label for="radio_2">$75,000 to $149,999</label></p>
+                                    <p><input type="radio" name="turnover" id="radio_3" /><label for="radio_3">$150,000 to $1,999,999</label></p>
+                                    <p><input type="radio" name="turnover" id="radio_4" /><label for="radio_4">$2 million to $19,999,999</label></p>
+                                    <p><input type="radio" name="turnover" id="radio_5" /><label for="radio_5">$20 million and over</label></p>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -94,9 +94,9 @@
                                 </div><!-- col -->
                                 <div id="activity-statement-frequency" class="col5">
                                     <div class="radio-toggle" id="activity-statement-frequency-1">
-                                        <label id="asf-monthly" class="label-left" for="radio_1"><input type="radio" name="statements" id="radio_1"/> <span>Monthly</span></label>
-                                        <label id="asf-quarterly" class="label-middle" for="radio_2"><input type="radio" name="statements" id="radio_2"/> <span>Quarterly</span></label>
-                                        <label id="asf-annually" class="label-right" for="radio_3"><input type="radio" name="statements" id="radio_3"/> <span>Annually</span></label>
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
                                     </div>
                                     <div id="activity-statement-frequency-2">
                                         <p>For a GST turnover of $20 million and over your activity statements must be lodged monthly.</p>
@@ -168,9 +168,9 @@
                                 <div class="col6">
                                     <label for="payg-how" class="input-right">How will you provide your PAYG withholding payment summary annual report to the ATO?</label>
                                 </div><!-- col -->
-                                <div class="col6 last">
-                                    <label><input id="payg-how-1" type="radio" class="radio" name="payg-how" value="radio_1" />Electronically</label><br />
-                                    <label><input id="payg-how-2" type="radio" class="radio" name="payg-how" value="radio_2" />Paper form supplied by the ATO</label><br />
+                                <div class="col6 last custom-controls">
+                                    <p><input id="payg-how-1" type="radio" class="radio" name="payg-how" value="radio_1" /><label for="payg-how-1">Electronically</label></p>
+                                    <p><input id="payg-how-2" type="radio" class="radio" name="payg-how" value="radio_2" /><label for="payg-how-2">Paper form supplied by the ATO</label></p>
                                 </div><!-- col -->                                
                             </div><!-- grid-row -->
 

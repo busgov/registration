@@ -201,6 +201,15 @@ ul.section-nav li a:active {
  .padding-top-bottom {
   padding: 1.5em 0;
 }
+
+/* use push right when content beside radio or checkbox needs to wrap */
+.push-right {
+  margin: 0 0 0 30px; 
+  padding: 0; 
+  display: inline-block; 
+  line-height: 1.4em; 
+  vertical-align: top;
+}
 .microcopy {
   color: $gray-dark;
   line-height: 1;
@@ -935,9 +944,25 @@ img.help-icon {
 .validation-summary-icon {
   float: left;
   display: inline;
-  max-width: 35px;
-  margin-right: 15px;
 }
+.validation-summary-icon img {
+  width: 24px;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+@media only screen and (min-width: $break-medium) {
+  .validation-summary-icon img {
+    width: 30px;
+    margin: 0 10px 0 0;
+  }
+}
+@media only screen and (min-width: $break-large) {
+  .validation-summary-icon img {
+    width: 36px;
+    margin: 0 12px 0 0;
+  }
+}
+
 .validation-icon {
   max-width: 28px;
 }

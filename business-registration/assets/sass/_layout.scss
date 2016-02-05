@@ -293,19 +293,42 @@ h2.cart-heading {
 .cell-total {
   text-align: right;
   width: 100%;
-  font-weight: bold;
   padding-right: 1em;
   background: transparent url(../img/bg-fade-down.png) repeat-x 0 0;
 }
+.cell-total p strong {
+  font-weight: bold;
+  font-family: $font-heading;  
+}
 .cell-icon {
-  width: 56px;
+  width: 36px;
   text-align: right;
 }
 .cell-icon img {
   padding: 0 10px;
-  width: 36px;
+  width: 24px;
   vertical-align: bottom;
 }
+
+@media only screen and (min-width: $break-medium) {
+  .cell-icon {
+    width: 46px;
+    text-align: right;
+  }
+  .cell-icon img {
+    width: 28px;
+  }
+}
+@media only screen and (min-width: $break-large) {
+  .cell-icon {
+    width: 56px;
+    text-align: right;
+  }
+  .cell-icon img {
+    width: 32px;
+  }
+}
+
 .cell-detail {
   width: 55%;
   text-align: left
@@ -453,6 +476,13 @@ td.incomplete {
 }
 .sub-section-done h2 {
   background: $gray-bg url(../img/sprite-sections.png) no-repeat 0 -197px;
+}
+
+.sub-section-container .result-container h2,
+.cart-container h2,
+.validation-message h2 {
+  background: none;
+  padding: 0 0 0.5em 0;
 }
 
 

@@ -206,11 +206,14 @@ main.confirmation th {
 main.confirmation td:first-child {
   border-top: 0;
 }
-main.confirmation td.field-name {
+main.confirmation .field-name {
   width: 35%;
   text-align: right;
 }
-main.confirmation td.input-value {
+main.confirmation th.field-name {
+  background: none;
+}
+main.confirmation .input-value {
   width: 65%;
 }
 td.centre,

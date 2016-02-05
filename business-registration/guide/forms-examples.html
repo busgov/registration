@@ -26,7 +26,6 @@
             <p><a href="forms.html">Back to form elements.</a></p>
         </div>
 
-
         <fieldset>
             <legend class="margin4 larger">Fieldset example 1</legend>
             <p class="no-margin-top margin4">Basic form fields with right aligned labels on large screens.</p>
@@ -53,17 +52,16 @@
 
             <div id="basic-toggle">
                 <div class="grid-row">
-                    <div class="col4">
-                        &nbsp;
-                    </div><!-- col -->
-                    <div class="col8 last">
-                        <input type="checkbox" id="basic-toggle-label" class="showhide-trigger" />&nbsp;<label for="basic-toggle-label">Click here to trigger basic toggle</label>
+                    <div class="col4">&nbsp;</div>
+                    <div class="col8 last custom-controls">
+                        <p>
+                            <input type="checkbox" id="basic-toggle-label" class="showhide-trigger" />
+                            <label for="basic-toggle-label">Click here to trigger basic toggle</label>
+                        </p>
                     </div><!-- col -->
                 </div><!-- grid-row -->
                 <div class="grid-row showhide-target" style="display: none">
-                    <div class="col4">
-                        &nbsp;
-                    </div><!-- col -->
+                    <div class="col4">&nbsp;</div>
                     <div class="col8 last">
                         <p>Additional content</p>
                     </div><!-- col -->
@@ -71,148 +69,54 @@
             </div><!-- basic-toggle -->
         </fieldset>
 
-        <fieldset id="long-labels">
+        <fieldset id="fieldsetReasonForApplication">
             <legend class="larger">Fieldset example 2</legend>
             <p class="no-margin-top">A left aligned form with longer labels</p>
-
-            <div class="grid-row grid-row-block clearfix">
-                <div class="col1">
-                    <input id="long-labels1" class="showhide-trigger" name="long-labels" type="radio">
-                </div><!-- col -->
-                <div class="col11 last">
-                    <label for="long-labels1">
-                        <strong>Option one</strong><br>
-                        With some extra context here to describe the choice.
-                    </label>
-                </div><!-- col -->
-            </div><!-- grid-row -->
-            <div class="showhide-target"></div>
-
-            <div class="grid-row grid-row-block clearfix">
-                <div class="col1">
-                    <input id="long-labels2" class="showhide-trigger" name="long-labels" type="radio">
-                </div><!-- col -->
-                <div class="col11 last">
-                    <label for="long-labels2">
-                        <strong>Option two</strong><br>
-                        If a user selects this option an additional question is presented.
-                    </label>
-                </div><!-- col -->
+            <div class="grid-row grid-row-block clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
+                        <label for="new-business">
+                            <span class="push-right">
+                                <strong>Main choice 1</strong><br />
+                                Important extra context as part of label element. Selecting this triggers progressive disclosure.
+                            </span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                </div>
             </div><!-- grid-row -->
 
-            <div class="grid-row grid-row-reveal clearfix showhide-target" id="long-label-div" style="display:none">
-                <div class="col1">&nbsp;</div><!-- col -->
-                <div class="col4">
-                    <p><label for="long-labels3">Additional question for option two</label></p>
-                </div><!-- col -->
-                <div class="col7 last">
+            <div class="grid-row padding-bottom-1 clearfix showhide-target" id="new-business-check" style="display:none">
+                <div class="col1">&nbsp;</div>
+                <div class="col11 last">
+                    <p class="no-margin-top"><label for="australia">Additional question requiring single word answer</label></p>
                     <div class="radio-toggle">
-                        <label class="on label-left" for="long-labels3-on"><input id="long-labels3-on" type="radio" name="long-labels3"><span>Yes</span></label>
-                        <label class="off label-right" for="long-labels3-off"><input id="long-labels3-off" type="radio" name="long-labels3"><span>No</span></label>
+                        <label class="on label-left" for="australia-yes"><input id="australia-yes" type="radio" name="australia"><span>Yes</span></label>
+                        <label class="off label-right" for="australia-no"><input id="australia-no" type="radio" name="australia"><span>No</span></label>
                     </div>
                 </div><!-- col -->
             </div><!-- grid-row -->
 
-            <div class="grid-row grid-row-block grid-row-last clearfix">
-                <div class="col1">
-                    <input id="long-labels4" class="showhide-trigger" name="long-labels" type="radio">
+            <div class="grid-row grid-row-block grid-row-last clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="radio02" class="showhide-trigger" name="radiogroup1" type="radio">
+                        <label for="radio02">
+                            <span class="push-right">
+                                <strong>Main choice 2</strong><br />
+                                Important extra context as part of label element. Selecting this clears progressive disclosure option from choice 1.
+                            </span>
+                        </label>
+                    </p>
                 </div><!-- col -->
-                <div class="col11 last">
-                    <label for="long-labels4">
-                        <strong>Option three</strong><br>
-                        With some extra context here to describe the choice.
-                    </label>
-                </div><!-- col -->
+                <div class="col1 last padding-top-bottom">
+                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                </div>
             </div><!-- grid-row -->
-
         </fieldset>
-
-        <fieldset>
-            <legend class="larger">Fieldset example 3</legend>
-            <p class="no-margin-top">When labels are long</p>
-            <div class="grid-row grid-row-block clearfix">
-                <p><label for="longer-labels">Right aligning a long label is hard to read. Only short labels should be right aligned. Various border and padding classes can be used to transition between right and left aligned label/input groups.</label></p>
-                <input id="longer-labels-1" type="radio" name="longer-labels">&nbsp;<label class="label-left" for="longer-labels-1">These options are broken by a break for readibility</label><br />
-                <input id="longer-labels-2" type="radio" name="longer-labels">&nbsp;<label class="label-right" for="longer-labels-2">Second radio option</label>
-            </div><!-- grid-row -->
-
-        </fieldset> 
-
-        <fieldset id="fieldsetPOIAddress">
-            <legend class="margin4 larger">How do you want to prove your identity?<br />
-            <span class="field-note">While you can use either your Tax File Number (TFN) <strong>or</strong> your home address, providing your TFN is the quickest way to prove your identity.</legend>
-            <div class="grid-row">
-                <div class="col1 margin4">
-                    <input class="no-margin" type="radio" name="tfn-or-address" id="use-tfn" />
-                </div>
-                <div class="col7 last">
-                    <label class="no-margin" for="use-tfn"><strong>Tax File Number</strong> <span class="field-note">(recommended option)</span></label>
-                </div><!-- col -->
-            </div>
-            <div class="grid-row">
-                <div class="col5">&nbsp;</div>
-                <div class="col7 last">
-                    <label for="enter-tfn">Enter your TFN</label>&nbsp;<input id="enter-tfn" type="number" style="width: 10em">
-                </div>                    
-            </div>
-            <div class="grid-row" style="padding-top: 1.5em">
-                <div class="col1 margin4">
-                    <input class="no-margin" type="radio" name="tfn-or-address" id="use-address" />
-                </div>
-                <div class="col7 last">
-                    <label class="no-margin" for="use-tfn"><strong>Use home address</strong></label>
-                </div><!-- col -->
-            </div>
-            <div class="grid-row">
-                <div class="col5">&nbsp;</div>
-                <div class="col7 last">
-                    <label for="address-suggest">Start typing your address</label>
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="col5">&nbsp;</div>
-                <div class="col7 last">
-                    <input id="address-suggest" type="text">&nbsp;<a href="#" id="manual" class="showhide-trigger-1">Can't find address</a><a href="#" id="addressSearch" class="showhide-trigger-1" style="display: none">Back to address search</a>
-                </div><!-- col -->                        
-            </div>
-            <div class="grid-container showhide-target-1" id="divManualAddress" style="display: none">
-                <div class="grid-row">
-                    <div class="col4">
-                        <label for="address-line1" class="input-right">Address line 1</label>
-                    </div><!-- col -->
-                    <div class="col8 last">
-                        <input id="address-line1" type="text">
-                    </div><!-- col -->
-                </div><!-- grid-row -->
-                <div class="grid-row">
-                    <div class="col4">
-                        <label for="address-line2" class="input-right">Address line 2</label>
-                    </div><!-- col -->
-                    <div class="col8 last">
-                        <input id="address-line2" type="text">
-                    </div><!-- col -->
-                </div><!-- grid-row -->
-                <div class="grid-row">
-                    <div class="col4">
-                        <label for="suburb" class="input-right">Suburb</label>
-                    </div><!-- col -->
-                    <div class="col8 last">
-                        <input id="suburb" type="text">
-                    </div><!-- col -->
-                </div><!-- grid-row -->
-                <div class="grid-row">
-                    <div class="col4">
-                        <label for="postcode" class="input-right">Postcode</label>
-                    </div><!-- col -->
-                    <div class="col8 last">
-                        <input id="postcode" type="number">
-                    </div><!-- col -->
-                </div><!-- grid-row -->
-            </div><!-- manualAddress -->
-
-
-        </fieldset>
-
 
     </div><!-- wrapper -->
 
@@ -221,5 +125,12 @@
     <script src="../assets/js/jquery-toggleslide.js"></script>
     <script src="../assets/js/functions.js"></script>
     <script src="../assets/js/RegistrationFunctions.js"></script>
+    <script>
+        $("#fieldsetReasonForApplication").registerToggleSlide({
+            triggerClass: ".showhide-trigger",
+            targetClass: ".showhide-target",
+            clearOthers: true
+        });
+    </script>
 </body>
 </html>

@@ -86,16 +86,22 @@
                                 <input type="email" id="email" value="rjohnson@emailprovider.com.au" />
                             </div><!-- col -->
                         </div><!-- grid-row -->
-                        <div class="margin4">
-                            <p><input type="checkbox" id="email-notify" checked />&nbsp;<label for="email-notify">Send registration status updates to this address</label></p>
+                        <div class="margin4 custom-controls">
+                            <p>
+                                <input type="checkbox" id="email-notify" checked />
+                                <label for="email-notify">Send registration status updates to this address</label>
+                            </p>
                         </div>
                     <div id="authFieldset">
                         <div class="grid-row">
                             <div class="col4">
                                 &nbsp;
                             </div><!-- col -->
-                            <div class="col7">
-                                <input type="checkbox" id="auth" checked class="showhide-trigger" />&nbsp;<label for="auth">This person is also the authorised contact</label><br />
+                            <div class="col7 custom-controls">
+                                <p>
+                                    <input type="checkbox" id="auth" checked class="showhide-trigger" />
+                                    <label for="auth">This person is also the authorised contact</label>
+                                </p>
                                 <p><button type="button" class="btn btn-default">Add another contact</button></p>
                             </div><!-- col -->
                             <div class="col1 last">
@@ -226,35 +232,32 @@
                         <legend class="larger">Australian Business Number (ABN)</legend>
                         <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
 
-                        <div class="grid-row grid-row-block clearfix">
-                            <div class="col1">
-                                <input id="radio01" id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
-                            </div><!-- col -->
-                            <div class="col10">
-                                <label for="radio01">
-                                    <strong>New business in Australia</strong><br>
-                                    You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.
-                                </label>
-                            </div><!-- col -->
+                        <div class="grid-row grid-row-block clearfix custom-controls">
+                            <div class="col11">
+                                <p>
+                                    <input id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
+                                    <label for="new-business">
+                                        <span class="push-right">
+                                            <strong>New business in Australia</strong><br />
+                                            You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.
+                                        </span>
+                                    </label>
+                                </p>
+                            </div>                       
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
                             </div>
                         </div><!-- grid-row -->
 
-                        <div class="grid-row grid-row-reveal clearfix showhide-target" id="new-business-check" style="display:none">
-                            <div class="col1">
-                                <p>&nbsp;</p>
-                            </div><!-- col -->
-                            <div class="col10 last">
+                        <div class="grid-row padding-bottom-1 clearfix showhide-target" id="new-business-check" style="display:none">
+                            <div class="col1">&nbsp;</div>
+                            <div class="col11 last">
                                 <p class="no-margin-top"><label for="australia">Is this your first time in business in Australia?</label></p>
                                 <div class="radio-toggle">
                                     <label class="on label-left" for="australia-yes"><input id="australia-yes" type="radio" name="australia"><span>Yes</span></label>
                                     <label class="off label-right" for="australia-no"><input id="australia-no" type="radio" name="australia"><span>No</span></label>
                                 </div>
                             </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
                         </div><!-- grid-row -->
 
                         <div class="grid-row grid-row-block clearfix">
@@ -408,11 +411,12 @@
                         </div><!-- grid-row -->
                         <div id="divAbnEnddate">
                             <div class="grid-row">
-                                <div class="col4">
-                                    &nbsp;
-                                </div><!-- col -->
-                                <div class="col8 last">
-                                    <p><input id="end-date-yes" type="checkbox" class="showhide-trigger" />&nbsp;<label for="end-date-yes">Business activity will cease within 3 months of start date</label></p>
+                                <div class="col4">&nbsp;</div>
+                                <div class="col8 last custom-controls">
+                                    <p>
+                                        <input id="end-date-yes" type="checkbox" class="showhide-trigger" />
+                                        <label for="end-date-yes">Business activity will cease within 3 months of start date</label>
+                                    </p>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
 
@@ -518,9 +522,12 @@
                                 </div><!-- col -->
                             </div><!-- grid-row -->
                         </div><!-- manualAddress -->
-                        <div class="grid-row">
+                        <div class="grid-row custom-controls">
                             <div class="margin4">
-                                <p><input type="checkbox" id="address-same" />&nbsp;<label for="postal">My postal address is different</label></p>
+                                <p>
+                                    <input type="checkbox" id="address-same" />
+                                    <label for="address-same">My postal address is different</label>
+                                </p>
                             </div>
                         </div><!-- grid-row -->
                         <div class="grid-row">
