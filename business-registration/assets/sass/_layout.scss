@@ -420,34 +420,70 @@ main.confirmation .result-container {
 
 
 
-
 // Dashboard styling
 // ------------------------------------------------------------------------------------------------------
 
-table .registration {
-  width: 70%;
+.dashboard-message {
+  background-color: $brand-blue;
+  padding: 1em;
 }
-table .status {
-  width: 30%;
+.dashboard-message { 
+    h1 {
+      background: transparent url(../img/ico-chat.png) no-repeat 0 0; 
+      font-size: 150%;
+      margin: 0;
+      padding: 5px 0 5px 50px;
+    }
+    h1, p {
+      color: white;
+    }
 }
-table .details {
-  width: 15%;
+
+.dashboard-container {
+  background-color: $table-th;
+  padding: 1em 1em 0.25em 1em;
+  margin-top: 2em;
+  -webkit-border-radius: $large-border-radius;
+  border-radius: $large-border-radius;
 }
-td.status-done {
-  background: transparent url(../img/ico-status-done.png) no-repeat 0.5em 0.8em;
-  padding-left: 50px;
-}
-td.status-waiting {
-  background: transparent url(../img/ico-status-amber.png) no-repeat 0.5em 0.8em;
-  padding-left: 50px;
-}
-td.status-delete {
-  background: transparent url(../img/ico-delete.png) no-repeat 0.5em 0.8em;
-  padding-left: 50px;
-}
-td.incomplete {
-  background: transparent url(../img/ico-exclamation-orange.png) no-repeat 0.5em 0.7em;
-  padding-left: 55px;
+.dashboard-container {
+    td {
+      vertical-align: top;
+    }
+    th {
+      background-color: white;
+      border-bottom: 2px solid $table-th;
+      padding: 1.5em 0.5em 1.5em 1em;
+    }
+    th:first-child {
+      -webkit-border-radius: $medium-border-radius 0 0 0;
+      border-radius: $medium-border-radius 0 0 0;
+    }
+    th:last-child {
+      -webkit-border-radius: 0 $medium-border-radius 0 0;
+      border-radius: 0 $medium-border-radius 0 0;
+    }
+    .status-item {
+      width: 25%;
+    }
+    .status-detail {
+      width: 40%;
+    }
+    .status-information {
+      width: 35%;
+    }
+    .registered {
+      background: white url(../img/sprite-registration-status.png) no-repeat 1em 10px; 
+      padding-left: 55px;
+    }
+    .waiting {
+      background: white url(../img/sprite-registration-status.png) no-repeat 1em -100px; 
+      padding-left: 55px;
+    }
+    .declined {
+      background: white url(../img/sprite-registration-status.png) no-repeat 1em -212px; 
+      padding-left: 55px;
+    }
 }
 
 

@@ -272,6 +272,14 @@ legend .field-note {
 .clearfix { 
   zoom: 1 
 }
+.help-small {
+  background: white url(../img/sprite-help-small.png) no-repeat 1em 11px; 
+  padding-left: 55px;
+}
+.download {
+  background: white url(../img/sprite-download.png) no-repeat 1em 11px; 
+  padding-left: 55px;
+}
 .smaller {
   font-size: $smaller;
 }
@@ -398,10 +406,16 @@ button.closeSystemMessage:active {
   .system-message {
     background: $system-message url(../img/ico-chat.png) no-repeat 1.5em 0.8em; 
   }
+  .system-message-content {
+    float: left;
+    width: 75%;
+  }
   .system-message h1 {
     margin: 0 0 1em 1.75em;
   }
-  .system-message .close {
+  button.closeSystemMessage {
+    float: right;
+    margin: 0 0 0 2em;
     text-align: right;
   }
 }
@@ -843,13 +857,13 @@ nav {
     border-radius: 5px 0 5px 5px;
     position: absolute;
     display: none;
-    top: 2.8em;
+    top: 3.2em;
     right: 0;
     margin-top: -1px;
     padding: 0.5em;
     width: 200px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
 }
 
 
@@ -900,7 +914,7 @@ nav {
       padding: 0.5em 0.5em 0.5em 48px;
   }
   .sub-nav {
-      top: 2.55em;
+      top: 3.2em;
   }
   .sub-nav li a,
   .sub-nav li a:link {

@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
 function CloseSystemMessage() {
     $(".closeSystemMessage").click(function () {
         console.log("in close");
+        $(".dashboard-message").slideUp();
         $(".system-message").slideUp();
     });
 }

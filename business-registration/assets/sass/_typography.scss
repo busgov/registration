@@ -123,22 +123,15 @@ h3.line {
 
 table {
     border-spacing: 0;
+    border: 1px solid $table-lines;
     width: 100%;    
-    border: solid $table-lines 1px;
-    /*
+    margin-bottom: 2em;        
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 1px 1px $table-lines; 
-    -moz-box-shadow: 0 1px 1px $table-lines; 
-    box-shadow: 0 1px 1px $table-lines; 
-    */
-    margin-bottom: 2em;        
+    border-radius: 6px;  
 }
+
 caption {
-  background: transparent url(../img/ico-ticks.png) no-repeat 0 0;
-  padding: 0.25em 0 0 55px;
-  min-height: 45px;
   text-align: left;
   font-size: 130%;
   margin: 0.5em 0;
@@ -154,33 +147,25 @@ caption span.alert {
 caption span button {
   margin-bottom: 0.5em;
   margin-left: 0.25em;
-}
-/*
-tr:hover {
-    background: $blue-paler;
-    -o-transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;     
-} 
-*/      
+}  
 td, 
 th {
-    border-left: 1px solid $table-lines;
-    border-top: 1px solid $table-lines;
-    padding: 1em 0.5em 1em 1em;
+    padding: 0.75em 0.5em 0.75em 1em;
     text-align: left;    
 }
 th {
-    background-color: $blue-paler;
+    background-color: $table-th;
     border-top: none;
 }
 th.right {
   text-align: right;
 }
 td {
-  font-weight: normal;
+  border-bottom: 1px solid $table-lines;
+  background-color: white;
+}
+.no-border-bottom {
+  border-bottom: 0;
 }
 th.warning, td.warning {
   color: $validation-warning;
@@ -202,11 +187,13 @@ main.confirmation td,
 main.confirmation th {
     padding: 0.5em 0.5em 0.5em 1em; 
     vertical-align: top;
+    font-size: $smaller;
 }
 main.confirmation td:first-child {
   border-top: 0;
 }
 main.confirmation .field-name {
+  border-right: 1px solid $table-lines;
   width: 35%;
   text-align: right;
 }
