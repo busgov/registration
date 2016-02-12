@@ -2,6 +2,9 @@
 Styling for SOBRS Style guide
 ==================================================== */
 
+h3 {
+    margin-top: 2em;
+}
 .notdone {
     background-color: #b41919;
     color: white;
