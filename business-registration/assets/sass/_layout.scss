@@ -437,6 +437,18 @@ main.confirmation .result-container {
     h1, p {
       color: white;
     }
+    a,
+    a:link,
+    a:visited {
+      color: white;
+      background-color: transparent;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: white;
+      background-color: black;
+    }
 }
 
 .dashboard-container {
@@ -464,25 +476,30 @@ main.confirmation .result-container {
       border-radius: 0 $medium-border-radius 0 0;
     }
     .status-item {
-      width: 25%;
+      width: 27%;
     }
     .status-detail {
-      width: 40%;
+      width: 43%;
     }
     .status-information {
-      width: 35%;
+      width: 30%;
     }
     .registered {
       background: white url(../img/sprite-registration-status.png) no-repeat 1em 10px; 
-      padding-left: 55px;
+      padding-left: 57px;
     }
     .waiting {
       background: white url(../img/sprite-registration-status.png) no-repeat 1em -100px; 
-      padding-left: 55px;
+      padding-left: 57px;
     }
     .declined {
       background: white url(../img/sprite-registration-status.png) no-repeat 1em -212px; 
-      padding-left: 55px;
+      padding-left: 57px;
+    }
+    .controls {
+      float: right; 
+      margin-top: -25px; 
+      line-height: 30px;
     }
 }
 
