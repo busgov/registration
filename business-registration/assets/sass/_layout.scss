@@ -127,19 +127,12 @@ header .brand a:active {
 }
 
 
-// Group of buttons for navigating regsitration steps
+// Group of buttons for navigating registration steps
 // ------------------------------------------------------------------------------------------------------
 
 .controls-container {
   border-top: 1px solid $gray-bg;
   clear: both;
-  /*
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  */
   padding-top: 10px;
 }
 .controls-content {
@@ -147,6 +140,19 @@ header .brand a:active {
     padding: 15px 0 15px 0;
     margin: 0 auto;
     max-width: $content-max-width;
+}
+
+/* Full clear for button appearing under form elements, eg: search button under dashboard filters */
+.controls-clear {
+  clear: both;
+  margin-top: 4em;
+}
+
+
+// Filter container for application search
+// ------------------------------------------------------------------------------------------------------
+.filter-container {
+  padding-top: 1em;
 }
 
 
@@ -496,11 +502,20 @@ main.confirmation .result-container {
       background: white url(../img/sprite-registration-status.png) no-repeat 1em -212px; 
       padding-left: 57px;
     }
+}
+
+/* Controls are the edit and delete buttons for non complete applications on dashboard */
+.controls {
+  margin-top: 10px; 
+  line-height: 30px;
+  display: block;
+}
+@media only screen and (min-width: $break-medium) {
     .controls {
       float: right; 
       margin-top: -25px; 
-      line-height: 30px;
-    }
+      display: inline;
+  }
 }
 
 

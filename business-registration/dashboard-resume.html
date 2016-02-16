@@ -31,87 +31,107 @@
             </nav>
         </header>
 
-        <div class="dashboard-message clearfix">
-            <div class="system-message-content">
-                <h1>Resume application?</h1>
-                <p>Application #A234FU is not complete. Would you like to <a href="">resume</a> from last saved page?</p>
+        <div id="application-A204FN">
+                <div class="dashboard-message clearfix">
+                    <div class="system-message-content">
+                        <h1>Resume application?</h1>
+                        <p>Application #A204FN is not complete. Would you like to <a href="">resume</a> from last saved page?</p>
+                    </div>
+                    <button type="button" class="closeSystemMessage">Dismiss</button>
+                </div>
+
+                <div class="dashboard-container">
+                    <table>
+                        <caption>Application status: <strong>#A204FN</strong><br /><span>Not submitted</span><span class="controls"><a href="" class="edit">Resume</a>&nbsp;<a href="javascript:void(0);" id="linkOne" class="remove">Delete</a></span></caption>
+                        <thead>
+                            <tr>
+                                <th class="status-item">Registration item</th>
+                                <th class="status-detail">Detail</th>
+                                <th class="status-information">Information</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
+                            <td>Rockhollow</td>
+                            <td>Application not submitted</td>
+                        </tr>
+                        <tr>
+                            <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
+                            <td>Fauxstones</td>
+                            <td>Application not submitted</td>
+                        </tr>
+                        <tr>
+                            <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
+                            <td>BoulderRollers</td>
+                            <td>Application not submitted</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!-- application-A204FN -->
+
+            <div class="dashboard-message clearfix" id="messageNoApplications" style="display: none">
+                <div class="system-message-content">
+                    <h1>No applications</h1>
+                    <p>Would you like to <a href="index.html">start a new application</a>?</p>
+                </div>
             </div>
-            <button type="button" class="closeSystemMessage">Dismiss</button>
+
+            <footer>
+                <ul>
+                    <li><a href="#">Legal notices</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">Site map</a></li>
+                </ul>
+            </footer>
+
+        </div><!-- wrapper -->    
+        <div id="dialogOne" style="display:none;">
+            <h1>Confirm delete</h1>
+            <p>Are you sure you want to delete application #A204FN?</p>
+            <input type="button" class="btn btn-default" id="btnRemoveApplication" value="Yes, delete" />
+            <a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogOne");'>Cancel</a>
         </div>
-
-        <div class="dashboard-container">
-            <table>
-                <caption>Application status: <strong>#A234FU</strong><br /><span>Not submitted</span><span class="controls"><a href="" class="edit">Resume</a>&nbsp;<a href="" class="remove">Delete</a></span></caption>
-                <thead>
-                    <tr>
-                        <th class="status-item">Registration item</th>
-                        <th class="status-detail">Detail</th>
-                        <th class="status-information">Information</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
-                    <td>Rockhollow</td>
-                    <td>Application not submitted</td>
-                </tr>
-                <tr>
-                    <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
-                    <td>Fauxstones</td>
-                    <td>Application not submitted</td>
-                </tr>
-                <tr>
-                    <td class="waiting"><span class="visuallyhidden">Not submitted - </span>Business name</td>
-                    <td>BoulderRollers</td>
-                    <td>Application not submitted</td>
-                </tr>
-            </table>
-        </div>    
-
-        <footer>
-            <ul>
-                <li><a href="#">Legal notices</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Site map</a></li>
-            </ul>
-        </footer>
-
-    </div><!-- wrapper -->    
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="assets/js/vadialog.js"></script>
+    <script>
+    /* Settings menu as found on dashboard */
+    $("nav").accessibleMegaMenu({
+        /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+        uuidPrefix: "accessible-megamenu",
+        /* css class used to define the megamenu styling */
+        menuClass: "nav-menu",
+        /* css class for a top-level navigation item in the megamenu */
+        topNavItemClass: "nav-item",
+        /* css class for a megamenu panel */
+        panelClass: "sub-nav",
+        /* css class for a group of items within a megamenu panel */
+        panelGroupClass: "sub-nav-group",
+        /* css class for the hover state */
+        hoverClass: "hover",
+        /* css class for the focus state */
+        focusClass: "focus",
+        /* css class for the open state */
+        openClass: "open"
+    });
+    </script>
+
+
+
     <script>
         $(document).ready(function () {
-            $("nav").accessibleMegaMenu({
-                /* prefix for generated unique id attributes, which are required
-                    to indicate aria-owns, aria-controls and aria-labelledby */
-                uuidPrefix: "accessible-megamenu",
-
-                /* css class used to define the megamenu styling */
-                menuClass: "nav-menu",
-
-                /* css class for a top-level navigation item in the megamenu */
-                topNavItemClass: "nav-item",
-
-                /* css class for a megamenu panel */
-                panelClass: "sub-nav",
-
-                /* css class for a group of items within a megamenu panel */
-                panelGroupClass: "sub-nav-group",
-
-                /* css class for the hover state */
-                hoverClass: "hover",
-
-                /* css class for the focus state */
-                focusClass: "focus",
-
-                /* css class for the open state */
-                openClass: "open"
+            /* Delete confirmation */
+            visionaustralia.addDialog("linkOne", "dialogOne");
+            $('#btnRemoveApplication').click(function () {
+                visionaustralia.closeDialog("dialogOne");
+                $('#application-A204FN').toggle("fast");
+                $('#messageNoApplications').toggle("fast");
             });
         });
     </script>
-
 </body>
 </html>
