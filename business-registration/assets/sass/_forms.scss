@@ -190,6 +190,9 @@ select[disabled]:active {
   padding: 2em 0;
 }
 @media only screen and (min-width: $break-large) {
+  .input-left {
+    display: block; 
+  }
   .input-right {
     display: block;
     text-align: right;
