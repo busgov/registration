@@ -169,19 +169,17 @@ ul.section-nav li a:active {
 // Styling content within forms
 // ------------------------------------------------------------------------------------------------------
 
+/* margin overrides */
+.no-margin {
+  margin: 0 !important;
+}
 .no-margin-top {
   margin-top: 0 !important;
   padding-top: 0 !important;
   line-height: 1;
 }
-.no-margin {
-  margin: 0 !important;
-}
 .no-margin-right {
   margin-right: 0 !important;
-}
-.no-padding-bottom {
-  padding-bottom: 0 !important;
 }
 .margin-bottom {
   margin-bottom: 2em;
@@ -195,6 +193,8 @@ ul.section-nav li a:active {
 .margin-left-075 {
   margin-left: 0.75em;
 }
+
+/* padding overrides */
 .no-padding {
   padding: 0 !important;
 }
@@ -204,9 +204,16 @@ ul.section-nav li a:active {
 .padding-bottom-1 {
   padding-bottom: 1em;
 }
- .padding-top-bottom {
+.padding-right-1 {
+  padding-right: 1em !important;
+}
+.padding-top-bottom {
   padding: 1.5em 0;
 }
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
 
 /* use push right when content beside radio or checkbox needs to wrap */
 .push-right {
