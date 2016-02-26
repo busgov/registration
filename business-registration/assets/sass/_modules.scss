@@ -169,7 +169,7 @@ ul.section-nav li a:active {
 // Styling content within forms
 // ------------------------------------------------------------------------------------------------------
 
-/* margin overrides */
+/* margin ov4errides */
 .no-margin {
   margin: 0 !important;
 }
@@ -212,6 +212,11 @@ ul.section-nav li a:active {
 }
 .no-padding-bottom {
   padding-bottom: 0 !important;
+}
+
+/* border overrides */
+.no-border-bottom {
+  border-bottom: none;
 }
 
 

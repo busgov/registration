@@ -495,6 +495,12 @@ main.confirmation .result-container {
       -webkit-border-radius: 0 $medium-border-radius 0 0;
       border-radius: 0 $medium-border-radius 0 0;
     }
+    p {
+      margin: 0;
+    }
+    td {
+      line-height: 1.8em;
+    }
     .status-item {
       width: 27%;
     }
