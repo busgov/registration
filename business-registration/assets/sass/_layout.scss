@@ -33,7 +33,7 @@ body {
     padding-top: 0.5em;
   }
   nav {
-    top: 24px;
+    top: 19px;
   }
 }
 .feature-wrapper {
@@ -42,18 +42,20 @@ body {
 .feature-wrapper {
   h1 {
     color: $brand-blue;
-    font-size: 350%;
+    font-size: 200%;
     padding: 0.25em 0;
+    margin: 0.25em 0 0 0;
   }
   .byline {
-    font-size: $largest;
-    margin-top: 0;
+    font-size: $larger;
+    margin: 0 0 0.5em 0;
+    padding: 0;
   }
   button {
     margin-bottom: 1em;
   }
   .grid-row {
-    margin-bottom: 6em;
+    margin-bottom: 3em;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; 
@@ -71,8 +73,8 @@ body {
   background-color: $black75;
   border-radius: $medium-border-radius;
   -webkit-border-radius: $medium-border-radius;
-  padding: 2.5em 2em 1em 2em;
-  margin: 1.5em 0.5em 0 0.5em;
+  padding: 1.5em 1em 1em 1em;
+  margin: 1em 0.5em 0 0.5em;
   color: white;
   font-size: $larger;
 }
@@ -80,6 +82,30 @@ body {
 .feature-box p a:link,
 .feature-box p a:visited {
     color: white;
+}
+
+@media only screen and (min-width: $break-medium) {
+  .feature-home nav {
+    top: 24px;
+  }
+  .feature-wrapper {
+    h1 {
+      color: $brand-blue;
+      font-size: 350%;
+      margin: 0.5em 0 0.25em 0;
+      padding: 0;
+    }
+  }
+  .byline {
+    font-size: $largest;
+  }
+  .feature-box {
+    padding: 2.5em 2em 1em 2em;
+    margin: 1.5em 0.5em 0 0.5em;
+  }
+  .grid-row {
+    margin-bottom: 6em;
+  }
 }
 
 
