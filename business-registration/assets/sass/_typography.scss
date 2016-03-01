@@ -157,7 +157,8 @@ th {
     background-color: $table-th;
     border-top: none;
 }
-th.right {
+th.right,
+p.right {
   text-align: right;
 }
 td {

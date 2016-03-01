@@ -19,6 +19,75 @@ body {
 }
 
 
+// Layout for feature home page
+// ------------------------------------------------------------------------------------------------------
+
+.feature-home {
+  background: white url(../img/bg-home.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+.feature-home {
+  p.logo {
+    width: 100%;
+    max-width: 317px;
+    padding-top: 0.5em;
+  }
+  nav {
+    top: 24px;
+  }
+}
+.feature-wrapper {
+  text-align: center;
+}
+.feature-wrapper {
+  h1 {
+    color: $brand-blue;
+    font-size: 350%;
+    padding: 0.25em 0;
+  }
+  .byline {
+    font-size: $largest;
+    margin-top: 0;
+  }
+  button {
+    margin-bottom: 1em;
+  }
+  .grid-row {
+    margin-bottom: 6em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .col6 {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.feature-box {
+  background-color: $black75;
+  border-radius: $medium-border-radius;
+  -webkit-border-radius: $medium-border-radius;
+  padding: 2.5em 2em 1em 2em;
+  margin: 1.5em 0.5em 0 0.5em;
+  color: white;
+  font-size: $larger;
+}
+.feature-box p a,
+.feature-box p a:link,
+.feature-box p a:visited {
+    color: white;
+}
+
+
+.feature-wrapper footer {
+  background-color: $white70;
+}
+
+
 // Header
 // ------------------------------------------------------------------------------------------------------
 
@@ -161,12 +230,14 @@ header .brand a:active {
 
 footer {
   clear: both;
+  background-color: $bg-footer;
+  border-radius: $small-border-radius;
+  -webkit-border-radius: $small-border-radius;
   margin: 0;
   padding: 0;
   text-align: left;
 }
 footer ul {
-    background: $bg-footer;
     margin: 0;
     padding: 0;
 }

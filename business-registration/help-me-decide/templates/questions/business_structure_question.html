@@ -1,0 +1,95 @@
+﻿<fieldset>
+    <legend class="larger">What business structure do you plan to use?</legend>
+    <div class="form-tip" id="businessStructureTip">
+        <p>You can employ staff no matter what business structure you use</p>
+    </div><!-- form-tip -->
+
+    <div class="form-tip" id="helpMeDecideResultMessage" style="display:none">
+        <p style="margin-left:2.3em;">
+            Based on your answers, the <strong id="decidedStructure"></strong> structure might be the most appropriate structure for your current circumstances.
+        </p>
+        <p>If you are unsure about this, please see a qualified, licensed professional to help you decide.</p>
+    </div><!-- form-tip -->
+
+    <div id="validation" class="process-message process-alert validation-show" style="display:none">
+        <h2 id="validation-heading">Important</h2>
+        <p>Please select one of the following options:</p>
+        <ul id="validation-list">
+            <li><a href="#structure-sole" class="scroll">Sole trader</a></li>
+            <li><a href="#structure-partnership" class="scroll">Partnership</a></li>
+            <li><a href="#structure-company" class="scroll">Company</a></li>
+            <li><a href="#structure-trust" class="scroll">Trust</a></li>
+            <li><a href="#structure-not-sure" class="scroll">I'm not sure - help me decide</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-sole" name="structure" type="radio">
+                <label for="structure-sole">Sole trader</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>You own the business on your own. You're responsible for all decisions and losses in your business, and you report the business income in your personal tax return. </p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-partnership" name="structure" type="radio">
+                <label for="structure-partnership">Partnership</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>You and your partners own the business together, and share responsibility for decisions and losses in the business. You each report your share of the business income in your personal tax returns.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-company" name="structure" type="radio">
+                <label for="structure-company">Company</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>A company is a separate legal entity from you, and has at least one shareholder (owner) and one director (who runs the business). Income and losses belong to the company.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+    <div class="grid-row grid-row-shaded clearfix">
+        <div class="col3">
+            <div class="form-row">
+                <input id="structure-trust" name="structure" type="radio">
+                <label for="structure-trust">Trust</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col8">
+            <p>Your business is held and controlled for the benefit of others (the beneficiaries). A trustee is responsible for everything in the trust, including income and losses.</p>
+        </div><!-- col -->
+        <div class="col1 last">
+            <span class="form-help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+    <div class="grid-row grid-row-shaded clearfix grid-row-last">
+        <div class="col11">
+            <div class="form-row">
+                <input id="structure-not-sure" name="structure" type="radio">
+                <label for="structure-not-sure">I'm not sure - help me decide</label>
+            </div><!-- form-row -->
+        </div><!-- col -->
+        <div class="col1 last">
+
+        </div><!-- col last -->
+    </div><!-- grid-row -->
+</fieldset>
