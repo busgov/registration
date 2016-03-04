@@ -22,9 +22,23 @@
 </head>
 <body>
     <div class="wrapper wrapper-main">
-        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
-        <header>
-            <div class="brand"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+        <header class="clearfix">
+            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="settings.html"><span>Settings</span></a>
+                        <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#">Set up save</a></li>
+                                <li><a href="#">Start a new application</a></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -125,9 +139,8 @@
 
     </div><!-- wrapper -->
     <script src="assets/js/jquery-1.11.3.min.js"></script>
-    <script src="assets/js/functions.js">
-    </script>
-
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#next").click(function (e) {
@@ -155,6 +168,27 @@
                 document.location = "entitlement.html?" + queryString;
             });
         });
+
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
     </script>
+
 </body>
 </html>

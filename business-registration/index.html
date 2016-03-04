@@ -13,17 +13,20 @@
 </head>
 <body class="feature-home">
     <div class="wrapper wrapper-main">
-        <header>
-            <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
-            <nav>
+        <header class="clearfix">
+            <div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="settings.html"><span>Sign in</span></a>
-                        <div class="sub-nav">
+                        <a href="#" class="btn-options"><span>Sign in</span></a>
+                        <!--
+                            <div class="sub-nav">
                             <ul class="sub-nav-group">
                                 <li><a href="#">this is being redesigned...</a></li>
                             </ul>
                         </div>
+                        -->
                     </li>
                 </ul>
             </nav>
@@ -50,6 +53,7 @@
             </div>
             <footer>
                 <ul>
+                    <li><a href="style-guide.html">Style guide</a></li>
                     <li><a href="#">Legal notices</a></li>
                     <li><a href="#">Accessibility</a></li>
                     <li><a href="#">Glossary</a></li>
@@ -58,15 +62,22 @@
             </footer>
         </div>
 
+        <div class="applicationoptions" id="applicationOptions"></div>
     </div><!-- wrapper -->
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
     <script src="assets/js/clipboard.min.js"></script>
     <script>
-        var clipboard = new Clipboard('.btn-copy');
+        $(document).ready(function () {
+            initApplicationOptions();
+        });
+
+            
+         var clipboard = new Clipboard('.btn-copy');
 
         clipboard.on('success', function (e) {
             console.log(e);
@@ -75,9 +86,8 @@
         clipboard.on('error', function (e) {
             console.log(e);
         });
-    </script>
-    <script>
-        /* Settings menu as found on dashboard */
+
+        /* Drop down settings menu */
         $("nav").accessibleMegaMenu({
             /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
             uuidPrefix: "accessible-megamenu",

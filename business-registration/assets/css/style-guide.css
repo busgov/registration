@@ -2,6 +2,10 @@
 Styling for SOBRS Style guide
 ==================================================== */
 
+header .sub-brand {
+  margin-top: 18px;
+}
+
 h3 {
     margin-top: 2em;
 }

@@ -32,9 +32,9 @@ body {
     max-width: 317px;
     padding-top: 0.5em;
   }
-  nav {
+  /*nav {
     top: 19px;
-  }
+  }*/
 }
 .feature-wrapper {
   text-align: center;
@@ -53,6 +53,8 @@ body {
   }
   button {
     margin-bottom: 1em;
+    font-size: 110%;
+    padding: 0.9em 1.25em;
   }
   .grid-row {
     margin-bottom: 3em;
@@ -85,9 +87,9 @@ body {
 }
 
 @media only screen and (min-width: $break-medium) {
-  .feature-home nav {
+  /*.feature-home nav {
     top: 24px;
-  }
+  }*/
   .feature-wrapper {
     h1 {
       color: $brand-blue;
@@ -119,34 +121,70 @@ body {
 
 header {
   border-bottom: 10px solid $brand-blue;
-}
-header {
   background-color: white;
+  height: 75px;
 }
-header .brand {
-  margin: 1em 0;
-}
-header .brand span::before { 
+
+/* Application heading */
+
+header .sub-brand span::before { 
   content: "\00AB  ";
 }
-header .brand a,
-header .brand a:link,
-header .brand a:visited {
+header .sub-brand a,
+header .sub-brand a:link,
+header .sub-brand a:visited {
+    border-radius: $small-border-radius;
+    -webkit-border-radius: $small-border-radius;
     display: block;
     padding: 15px;
     background: $brand-blue;
+    margin-top: 10px;
     color: white;
     text-decoration: none;
 }
-header .brand a:hover,
-header .brand a:focus,
-header .brand a:active {
+header .sub-brand a:hover,
+header .sub-brand a:focus,
+header .sub-brand a:active {
     background: $brand-hover-bg;
     color: $brand-hover-fg;
 }
 
+/* Gov logo */
+
+header .gov {
+  display: none;  
+}
 @media only screen and (min-width: $break-small) {
-  header .brand span {
+  header .sub-brand span::before { 
+    content: "";
+  }
+  header .sub-brand {
+      margin-top: 5px;
+      float: right;
+  }
+  header .sub-brand a,
+  header .sub-brand a:link,
+  header .sub-brand a:visited {
+      display: inline-block;
+      padding: 0 0 20px 0;
+      margin: 0;
+      font-size: 120%;
+      background: transparent;
+      color: $brand-blue;
+      text-decoration: none;
+  }
+  header .sub-brand a:hover,
+  header .sub-brand a:focus,
+  header .sub-brand a:active {
+      background: transparent;
+      color: black;
+      text-decoration: underline;
+  }
+  header .gov {
+    display: block;
+    margin-top: 12px;
+  }
+  header .gov span {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -156,68 +194,45 @@ header .brand a:active {
     position: absolute;
     width: 1px;
   }
-  header .brand a,
-  header .brand a:link,
-  header .brand a:visited {
+  header .gov a,
+  header .gov a:link,
+  header .gov a:visited {
       background: transparent url(../img/brand.png) no-repeat 0 0;
-      width: 240px;
-      height: 24px;
-      background-size: cover;
-      margin-top: 0;
-  }
-  header .brand a:hover,
-  header .brand a:focus,
-  header .brand a:active {
-      background: transparent url(../img/brand.png) no-repeat 0 -86px;
-      background-size: cover;
-  }
-}
-
-.sub-brand {
-  display: none;
-}
-@media only screen and (min-width: $break-medium) {
-  .sub-brand {
-      background: transparent url(../img/bg-sub-brand.png) no-repeat 0 0; 
       display: block;
-      height: 44px;
-      color: white;
-      position: absolute;
-      right: 0;
-      font-size: 1.2rem;
+      width: 240px;
+      height: 50px;
+      background-size: cover;
+      margin-top: 0;
   }
-  .sub-brand a,
-  .sub-brand a:link,
-  .sub-brand a:visited {
-    color: white;
-    text-decoration: none;
-  }
-  .sub-brand a:hover,
-  .sub-brand a:focus,
-  .sub-brand a:active {
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  .sub-brand span {
-    padding: 0 1.25em 0 5.2em;
-    margin-top: 0.3em;
-    display: block;
+  header .gov a:hover,
+  header .gov a:focus,
+  header .gov a:active {
+      background: transparent url(../img/brand.png) no-repeat 0 -76px;
+      background-size: cover;
   }
 }
 
-@media only screen and (min-width: $break-large) {
-  header .brand a,
-  header .brand a:link,
-  header .brand a:visited {
-      background: transparent url(../img/brand.png) no-repeat 0 0;
-      width: 329px;
-      height: 40px;
-      margin-top: 0;
+@media only screen and (min-width: $break-medium) {
+  header {
+    height: 95px;
   }
-  header .brand a:hover,
-  header .brand a:focus,
-  header .brand a:active {
+  header .gov a,
+  header .gov a:link,
+  header .gov a:visited {
+      width: 329px;
+      height: 70px;
+  }
+  header .gov a:hover,
+  header .gov a:focus,
+  header .gov a:active {
       background: transparent url(../img/brand.png) no-repeat 0 -104px;
+      background-size: cover;
+  }
+  header .sub-brand a,
+  header .sub-brand a:link,
+  header .sub-brand a:visited {
+      padding: 5px 0 20px 0;
+      font-size: 160%;
   }
 }
 

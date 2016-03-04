@@ -3,31 +3,33 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting started | Business Registration</title>
+    <title>Getting started - Business Registration | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="description" content="Australian business registration in one place.">
-    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
     <meta name="application-name" content="Business Registration" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png"/>
+    <style>
+    </style>
 </head>
 <body>
-    <div class="prototype">
-        <p><span>Demonstration only</span>. This is a non functional prototype and information presented here is only for the purpose of testing concepts. The website and the content may change at anytime during testing. <a href="mailto:sobrsfeedback@industry.gov.au">Send feedback</a></p>
-    </div>
     <div class="wrapper wrapper-main">
-        <div class="sub-brand"><span><a href="index.html">Business registration</a></span></div>
-        <header>
-            <div class="brand"><a href="index.html"><span>Business Registration home</span></a></div>
+        <header class="clearfix">
+            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="settings.html"><span>Settings</span></a>
+                        <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#" class="btn-save">Save and exit</a></li>
+                                <li><a href="#">Start a new application</a></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
             <div class="progress-container">
@@ -104,8 +106,6 @@
                         <div class="controls-content">
                             <button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
                             <button type="button" class="btn btn-default next">Next</button>
-                            <button type="button" class="btn btn-float btn-options">Options</button>
-                            <button type="button" class="btn btn-float btn-save">Save</button>
                         </div><!-- controls-content -->
                     </div>
                 </div>
@@ -356,8 +356,6 @@
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
                             <button type="button" class="btn btn-default" id="btnContinue">Continue to step 2</button>
-                            <button type="button" class="btn btn-float btn-options">Options</button>
-                            <button type="button" class="btn btn-float btn-save">Save</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -392,6 +390,7 @@
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
     <script type="text/javascript">
         //var help;
         var isGst = false;
@@ -816,6 +815,25 @@
             $("#divNoneOfAbove").hide();
         }
 
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
     </script>
 </body>
 </html>

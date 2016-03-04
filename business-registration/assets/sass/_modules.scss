@@ -113,6 +113,62 @@ ul.section-nav li a:active {
 }
 
 
+// Help me decide progress bar
+// ------------------------------------------------------------------------------------------------------
+
+.meter-description {
+  font-size: $smaller;
+  margin: 0 0 0.25em 0;
+  strong {
+    margin-right: 0.35em;
+  }
+}
+.meter {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 0 0 2em 0; /* Just for demo spacing */
+    background: #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px;
+}
+.meter > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(60,134,196);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(60,134,196)),
+      color-stop(1, rgb(49,121,181))
+     );
+    background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(60,134,196) 37%,
+      rgb(49,121,181) 69%
+     );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
 // Modal confirmation message
 // ------------------------------------------------------------------------------------------------------
 
@@ -290,16 +346,6 @@ legend .field-note {
 .clearfix { 
   zoom: 1 
 }
-/*
-.help-small {
-  background: white url(../img/sprite-help-small.png) no-repeat 1em 11px; 
-  padding-left: 55px;
-}
-.download {
-  background: white url(../img/sprite-download.png) no-repeat 1em 11px; 
-  padding-left: 55px;
-}
-*/
 .smaller {
   font-size: $smaller;
 }
@@ -847,19 +893,29 @@ nav {
 
 /* first descendant link within a top level navigation item */
 .nav-item > a,
-.nav-item > a:link {
-    background: transparent url(../img/ico-account.png) no-repeat 10px 5px;
-    -webkit-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
-    position: relative;
-    float: right;
-    display: inline-block;
-    padding: 0.5em 0.5em 0.75em 48px;
-    margin: 0 0 -1px 0;
+.nav-item > a:link,
+.nav-item > a:visited {
+  background: transparent url(../img/ico-account.png) no-repeat 8px 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  float: right;
+  display: inline-block;
+  padding: 0.5em 0 0.75em 48px;
+  margin: 0 0 -1px 0;
   min-height: 40px;
+  text-decoration: none;
+  color: $brand-blue;
 }
 .nav-item span {
   display: none;
+}
+.nav-item > a:hover,
+.nav-item > a:focus,
+.nav-item > a:active {
+  background-color: transparent;
+  color: black;
+  text-decoration: underline;
 }
 
 
@@ -877,7 +933,7 @@ nav {
     border-radius: 5px 0 5px 5px;
     position: absolute;
     display: none;
-    top: 3.2em;
+    top: 2.7em;
     right: 0;
     margin-top: -1px;
     padding: 0.5em;
@@ -905,7 +961,8 @@ nav {
     list-style-type: none;  
 }
 .sub-nav li a,
-.sub-nav li a:link {
+.sub-nav li a:link,
+.sub-nav li a:visited {
     color: white;
     display: block;
     margin: 0;
@@ -916,28 +973,41 @@ nav {
 .sub-nav li a:hover,
 .sub-nav li a:focus,
 .sub-nav li a:active  {
+  text-decoration: underline;
+  background-color: inherit;
 }
-@media only screen and (min-width: $break-medium) {
+@media only screen and (min-width: $break-small) {
   nav {
-    top: 47px;
+    top: 28px;
+  }
+  .nav-item > a,
+  .nav-item > a:link,
+  .nav-item > a:visited {
+    background: transparent url(../img/ico-account.png) no-repeat 12px 5px;
   }
   .nav-item span {
     display: block;
   }
 }
 
-
+@media only screen and (min-width: $break-medium) {
+  nav {
+    top: 40px;
+  }
+}
 @media only screen and (min-width: $break-large) {
   .nav-item > a,
-  .nav-item > a:link {
-      background: transparent url(../img/ico-account.png) no-repeat 10px 8px;
+  .nav-item > a:link,
+  .nav-item > a:visited {
+      background: transparent url(../img/ico-account.png) no-repeat 12px 8px;
       padding: 0.5em 0.5em 0.5em 48px;
   }
   .sub-nav {
       top: 3.2em;
   }
   .sub-nav li a,
-  .sub-nav li a:link {
+  .sub-nav li a:link,
+  .sub-nav li a:visited {
       font-size: 90%;
   } 
 }
@@ -947,9 +1017,6 @@ nav {
 .nav-item > a:hover,
 .nav-item > a:focus,
 .nav-item > a:active {
-  background-color: black;
-  color: white;
-  text-decoration: underline;
 }
 
 
@@ -959,12 +1026,17 @@ nav {
 /* Allow space for help icon when it is required beside legend */
 
 .has-help {
-  margin-right: 36px;
+  /*width: 90%;
+  FIX THIS
+  */
 }
 img.help-icon {
   position: absolute;
   right: 0;
   max-width: 34px;
+}
+legend img.help-icon {
+  margin-top: -35px;
 }
 
 .validation-container {
