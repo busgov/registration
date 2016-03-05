@@ -152,8 +152,8 @@ function applyStyle() {
 
 function manageState(action) {
     $("#validation").hide();
-    if ($("#next").html() !== "Next &raquo;") {
-        $("#next").html("Next &raquo;");
+    if ($("#next").html() !== "Next") {
+        $("#next").html("Next");
     }
     switch (action) {
         case actions.eligibilityStep:
@@ -176,7 +176,7 @@ function manageState(action) {
             break;
         case actions.activityStep:
             loadQuestionHelp(applicationType.activity, prepareActivityPage);
-            $("#next").html("Next &raquo;");
+            $("#next").html("Next");
             break;
         case actions.finishedStep:
             // based on user selection, generated the registrations form (those user needs to applied will be ticked)
@@ -267,7 +267,7 @@ function prepareHelpMeDecide() {
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
 
-    // Do you want to separate your personal income and assets (such as your home) from your business?
+    // Will you hold and control an asset for the benefit of others?
     $("#radioSeparatePersonalAsset1").click(function () {
         calculator.separatePersonalAsset = 1;
         $("#helpMeDecideQ3Help").show();
@@ -797,10 +797,10 @@ function initDiscoveryPage() {
 function calculateCompletion() {
     $("#stepNo").html(step);
     var percentCompleted = Math.round((step - 1) / (maxStep - 1) * 100 / 5) * 5;
-    $("#percentCompleted").html(percentCompleted);
     if (percentCompleted == 0) {
-        percentCompleted += 2;
+        percentCompleted += 5;
     }
+    $("#percentCompleted").html(percentCompleted);
     $("#percentMeter").css('width', percentCompleted + '%');
 }
 
@@ -830,7 +830,7 @@ function setValue(value, name) {
 }
 
 
-function getResult(registrationName, id, isSelected, reason, cost, helpId) {
+/*function getResult(registrationName, id, isSelected, reason, cost, helpId) {
     var result = '<tr>    <td class="choice ';
     if (isSelected) {
         result += " results-success-message";
@@ -849,6 +849,20 @@ function getResult(registrationName, id, isSelected, reason, cost, helpId) {
     result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span></td></tr>';
     if (!isSelected) {
         result += '<tr><td class="results-alert-message" colspan="3"><span class="smaller">' + reason + '</span></td></tr>';
+    }
+    return result;
+}
+*/
+
+function getResult(registrationName, id, isSelected, reason, cost, helpId) {
+    var result = '<tr><td><p><input id="' + id + '" type="checkbox" checked="checked"><label for="' + id + '">' + registrationName + '</label></p></td>';
+    result += '<td class="cost';
+    if (!isSelected) {
+        result += " results-alert-message";
+    }
+    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span></td></tr>';
+    if (!isSelected) {
+        result += '<tr><td class="results-alert-message" colspan="2"><span class="smaller">' + reason + '</span></td></tr>';
     }
     return result;
 }

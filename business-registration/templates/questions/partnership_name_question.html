@@ -1,38 +1,46 @@
-﻿<fieldset>
-    <legend class="larger col11">What name would you like your business to trade under?</legend>
-    <div class="col1 last">
-        <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+﻿<div id="validation" class="validation-container clearfix" style="display: none">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="../assets/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" href="">Important</a></h2>
+            <p>Please select one of the below options.</p>
+        </div>
     </div>
-    <div class="form-tip">
-        <p>This is the name that your business will be known by your customers and suppliers</p>
-    </div><!-- form-tip -->
-    <div id="validation" class="process-message process-alert validation-show" style="display:none">
-        <h2 id="validation-heading">Important</h2>
+</div>
 
-        <p>Please select one of the below options.</p>
-        <!--<ul id="validation-list"></ul>-->
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col4">
-            <div class="form-row">
+<fieldset>
+    <legend class="larger col11 has-help">Do you need to register your business name?<a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+
+    <div class="grid-row grid-row-block clearfix custom-controls">
+        <div class="col11">
+            <p>
                 <input id="name1" name="name" type="radio">
-                <label for="name1">The names of all the partners</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-        <div class="col7">
-            <p> For example: Stephen White & George Black, S. White & G. Black, etc</p>
-        </div><!-- col -->
+                <label for="name1">
+                    <span class="push-right">
+                        <strong>Yes</strong><br />
+                        You need to register your business name if it's different to the names of all the partners. For example, if the names of the partners are Stephen White & George Black, and you want to use the name Black & White Accountants as your business name, you need to register it.
+                    </span>
+                </label>
+            </p>
+        </div>
+        <div class="col1 last padding-top-bottom">
+        </div>
     </div><!-- grid-row -->
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col4">
-            <div class="form-row">
+    <div class="grid-row grid-row-last grid-row-block clearfix custom-controls">
+        <div class="col11">
+            <p>
                 <input id="name2" name="name" type="radio">
-                <label for="name2">Something else</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-        <div class="col7">
-            <p> For example: Shine Accountants, White & Black Accountants, etc</p>
-        </div><!-- col -->
+                <label for="name2">
+                    <span class="push-right">
+                        <strong>No</strong><br />
+                        You don't need to register your business name if you're using the names of all the partners.  For example, if the combined name of all the partners is Stephen White & George Black, and you want to use it (or a shortened form such as S. White & G. Black) as your business name, you don't need to register it.  
+                    </span>
+                </label>
+            </p>
+        </div>
+        <div class="col1 last padding-top-bottom">
+        </div>
     </div><!-- grid-row -->
-
 </fieldset>

@@ -1,59 +1,70 @@
 ﻿<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Business Registration | business.gov.au</title>
-    <meta name="description" content="Australian business registration in one place.">
+    <title>Trust - Business Registration | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
 </head>
-<body class="condensed">
-    <div class="grid-container wrapper">
-        <div class="wrapper wrapper-main">
-            <div class="sub-brand"><span><a href="home.html">Business registration</a></span></div>
-            <div class="brand"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-        </div>
-        <header class="wrapper clearfix"></header>
-        <div class="wrapper main-container clearfix">
-            <h1>Trust</h1>
-            <div class="process-message process-alert validation-show">
-                <h2 id="validation-heading">This guide isn’t for you</h2>
-                <p>Trusts are complex to set up and you’ll need time and the right skills to do it properly. It's best to see a qualiﬁed, licensed professional to help you understand what’s involved. </p>
-                <ul>
-                    <li>
-                        Visit the Tax Office website for information if you’re thinking about <a href="https://www.ato.gov.au/business/starting-your-own-business/choosing-your-business-structure/trust/" target="_blank">starting a trust<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.
-                    </li>
-                    <li>
-                        Once you’re ready to go, come back to our website to <a href="../registration1/registrations.html">register your business</a>.
+<body id="top">
+    <div class="wrapper wrapper-main">
+        <header class="clearfix">
+            <div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="btn-options"><span>Sign in</span></a>
                     </li>
                 </ul>
-            </div><!-- validation -->
+            </nav>
+        </header>
+        <div class="wrapper main-container clearfix">
+            <h1>To set up a trust, consider seeking professional advice</h1>
+            <p>Trusts are complex to set up and you’ll need time and the right skills to do it properly. It's best to see a qualiﬁed, licensed professional to help you understand what’s involved. </p>
+            <ul>
+                <li>Visit the Tax Office website for information if you’re thinking about <a href="https://www.ato.gov.au/business/starting-your-own-business/choosing-your-business-structure/trust/" target="_blank">starting a trust<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png" /></a>.
+                </li>
+                <li>Once you’re ready to go, come back to our website to <a href="../registration1/registrations.html">register your business</a>.
+                </li>
+            </ul>
             <p class="buttons">
                 <button type="button" class="btn btn-default" onclick="location.href = 'registration-discovery.html'">Back to questions</button>
             </p>
         </div><!-- main-container -->
-        <div class="footer-container">
-            <footer class="wrapper">
-                <ul>
-                    <li><a href="#">Legal notices</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                    <li><a href="#">Glossary</a></li>
-                    <li><a href="#">Information Publication Scheme</a></li>
-                    <li><a href="#">Site map</a></li>
-                </ul>
-            </footer>
-        </div><!-- footer-container -->
-    </div>
-    <div class="proto-message">You are viewing <strong>Prototype B</strong>. <a href="../index.html">Back to index</a></div>
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/jquery.collapse.js"></script>
-    <script src="js/main.js"></script>
+        <div class="applicationoptions" id="applicationOptions"></div>
+        <footer>
+            <ul>
+                <li><a href="#">Legal notices</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Glossary</a></li>
+                <li><a href="#">Site map</a></li>
+            </ul>
+        </footer>
+    </div><!-- wrapper -->
+
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/jquery.collapse.js"></script>
+    <script src="../assets/js/jquery-toggleslide.js"></script>
+    <script src="../assets/js/functions.js"></script>
+    <script src="../assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script>
+        $(document).ready(function () {
+            initApplicationOptions();
+        });
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66346016-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>

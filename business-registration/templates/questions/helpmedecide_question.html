@@ -1,59 +1,63 @@
-﻿
-<p>
-    Tell us how you want to run your business and we’ll suggest which business structure may suit your needs.
-</p>
-<div id="validation" class="process-message process-alert validation-show" style="display:none">
-    <h2 id="validation-heading">Important</h2>
-
-    <p>You will need to answer all the questions below so we can help you decide.</p>
-    <!--<ul id="validation-list"></ul>-->
+﻿<div id="validation" class="validation-container clearfix" style="display: none">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="../assets/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" href="">Important</a></h2>
+            <p>You will need to answer all the questions below so we can help you decide.</p>
+        </div>
+    </div>
 </div>
-<div class="grid-row grid-row-shaded">
+
+<p>Tell us how you want to run your business and we'll suggest which business structure may suit your needs.</p>
+
+<div class="grid-row grid-row-block no-padding-bottom clearfix custom-controls">
     <fieldset>
         <legend class="col5">How many owners will your business have?</legend>
         <div class="col3">
-            <div class="form-row">
+            <p>
                 <input id="radioHowManyOwners1" name="radioHowManyOwners" type="radio">
                 <label for="radioHowManyOwners1">One (just me)</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-        <div class="col3">
-            <div class="form-row">
+            </p>
+        </div>
+        <div class="col3 last">
+            <p>
                 <input id="radioHowManyOwners2" name="radioHowManyOwners" type="radio">
                 <label for="radioHowManyOwners2">Two or more</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-        </div><!-- col last -->
+            <a href="#help" class="cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+        </div>
     </fieldset>
 </div><!-- grid-row -->
 
-
-<div class="grid-row grid-row-shaded clearfix">
-    <fieldset>
-        <legend class="col5">Do you want to separate your personal income and assets (such as your home) from your business?</legend>
+<div class="grid-row grid-row-block no-padding-bottom clearfix custom-controls">
+    <fieldset class="margin-bottom-075">
+        <legend class="col5">Will you hold and control an asset for the benefit of others?</legend>
         <div class="col3">
-            <div class="form-row">
+            <p>
                 <input id="radioSeparatePersonalAsset1" name="radioSeparatePersonalAsset" type="radio">
                 <label for="radioSeparatePersonalAsset1">Yes</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-        <div class="col3">
-            <div class="form-row">
+            </p>
+        </div>
+        <div class="col3 last">
+            <p>
                 <input id="radioSeparatePersonalAsset2" name="radioSeparatePersonalAsset" type="radio">
                 <label for="radioSeparatePersonalAsset2">No</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-        </div><!-- col last -->
+            <a href="#help" class="cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+        </div>
     </fieldset>
 </div><!-- grid-row -->
+
 
 <div id="divExtraQuestions" style="display:none">
     <div class="grid-row grid-row-shaded clearfix">
-        <fieldset>
+        <fieldset class="margin-bottom-075">
             <legend class="col5">Do you want to use any business losses to reduce tax on future profits?</legend>
             <div class="col3">
                 <div class="form-row">

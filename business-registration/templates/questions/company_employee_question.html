@@ -1,51 +1,35 @@
-﻿<div id="validation" class="process-message process-alert validation-show" style="display: none">
-    <h2 id="validation-heading">Important</h2>
-    <p>Please select one of the below options.</p>
-    <!--<ul id="validation-list"></ul>-->
+﻿<div id="validation" class="validation-container clearfix" style="display: none">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="../assets/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" href="">Important</a></h2>
+            <p>Please select one of the below options.</p>
+        </div>
+    </div>
 </div>
 
-<fieldset id="companyHasEmployee">
-    <legend class="larger col11">Will your company have employees? (include directors who will get a wage or director’s fees for their work)</legend>
-    <div class="col1 last">
-        <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="companyEmployeeYes" name="companyEmployee" type="radio">
-                <label for="companyEmployeeYes">Yes</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="companyEmployeeNo" name="companyEmployee" type="radio">
-                <label for="companyEmployeeNo">No</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-</fieldset>
+<div class="grid-row grid-row-block clearfix custom-controls">
+    <fieldset id="companyHasEmployee">
+        <legend class="col6 has-help">Will your company have employees, or directors who will get a wage or director’s fees for their work?<a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+        <div class="col6 last">
+            <div class="radio-toggle">
+                <label class="on label-left" for="companyEmployeeYes"><input id="companyEmployeeYes" type="radio" name="companyEmployee"><span>Yes</span></label>
+                <label class="off label-right" for="companyEmployeeNo"><input id="companyEmployeeNo" type="radio" name="companyEmployee"><span>No</span></label>
+            </div>
+        </div>
+    </fieldset>
+</div><!-- grid-row -->
 
-<fieldset>
-    <legend class="larger col11">Do you plan to offer fringe benefits to these employees or directors, such as a work car for private use?</legend>
-    <div class="col1 last">
-        <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="fringeBenefitsEmployeeYes" name="fringeBenefitsEmployee" type="radio">
-                <label for="fringeBenefitsEmployeeYes">Yes</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="fringeBenefitsEmployeeNo" name="fringeBenefitsEmployee" type="radio">
-                <label for="fringeBenefitsEmployeeNo">No</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-</fieldset>
+<div class="grid-row grid-row-block clearfix custom-controls">
+    <fieldset id="companyHasEmployee">
+        <legend class="col6 has-help">Will you give fringe benefits to employees or directors to reward them for their work, such as a work car for private use? <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+        <div class="col6 last">
+            <div class="radio-toggle">
+                <label class="on label-left" for="fringeBenefitsEmployeeYes"><input id="fringeBenefitsEmployeeYes" type="radio" name="fringeBenefitsEmployee"><span>Yes</span></label>
+                <label class="off label-right" for="fringeBenefitsEmployeeNo"><input id="fringeBenefitsEmployeeNo" type="radio" name="fringeBenefitsEmployee"><span>No</span></label>
+            </div>
+        </div>
+    </fieldset>
+</div><!-- grid-row -->

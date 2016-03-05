@@ -1,94 +1,93 @@
-﻿<fieldset id="activityFieldset">
-    <legend class="larger">Do you expect your business to do any of the following?</legend>
-    <div id="questionHelp">
-        <p>This helps us work out whether your business should register for any taxes.</p>
+﻿<div id="validation" class="validation-container clearfix" style="display: none">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="../assets/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" href="">Important</a></h2>
+            <p>Please select one of the below options.</p>
+        </div>
     </div>
-    <div id="validation" class="process-message process-alert validation-show" style="display:none">
-        <h2 id="validation-heading">Important</h2>
+</div>
 
-        <p>Please select one of the below options.</p>
-        <!--<ul id="validation-list"></ul>-->
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
+<fieldset id="activityFieldset">
+    <legend class="larger">Do you expect your business to do any of the following?<br /><span class="field-note">This helps us work out whether your business should register for any taxes.</span></legend>
+
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckTurnover75k" name="ckTurnover75k" type="checkbox">
+            <p>
+                <input id="ckTurnover75k" type="checkbox">
                 <label for="ckTurnover75k">Have business turnover of $75,000 or more in your first year</label>
-            </div><!-- form-row -->
-            
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded clearfix">
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckTaxi" name="ckTaxi" type="checkbox">
-                <label for="ckTaxi">Charge passengers for taxi services  </label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            <p>
+                <input id="ckTaxi" type="checkbox">
+                <label for="ckTaxi">Charge passengers for taxi services</label>
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded clearfix">
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckLimousine" name="ckLimousine" type="checkbox">
+            <p>
+                <input id="ckLimousine" type="checkbox">
                 <label for="ckLimousine">Charge passengers for limousine travel</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded clearfix">
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckDealInWine" name="ckDealInWine" type="checkbox">
+            <p>
+                <input id="ckDealInWine" type="checkbox">
                 <label for="ckDealInWine">Import or sell wines</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded clearfix">
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckUseFuel" name="ckUseFuel" type="checkbox">
+            <p>
+                <input id="ckUseFuel" type="checkbox">
                 <label for="ckUseFuel">Use taxable fuels in factories, equipment, machinery or heavy vehicles</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded grid-row-last clearfix">
+    <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckLuxury" name="employee" type="checkbox">
+            <p>
+                <input id="ckLuxury" type="checkbox">
                 <label for="ckLuxury">Import or sell luxury cars</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            </p>
+        </div>
         <div class="col1 last">
-            <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
+            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-
-    <div class="grid-row grid-row-shaded grid-row-last clearfix">
+    <div class="grid-row grid-row-block grid-row-last clearfix custom-controls">
         <div class="col11">
-            <div class="form-row">
-                <input id="ckNone" name="ckNone" type="checkbox">
-                <label for="ckNone">None of the above</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
+            <p>
+                <input id="ckNone" type="checkbox">
+                <label for="ckNone"><strong>None of the above</strong></label>
+            </p>
+        </div>
+        <div class="col1 last">
+        </div>
     </div><!-- grid-row -->
 
 </fieldset>

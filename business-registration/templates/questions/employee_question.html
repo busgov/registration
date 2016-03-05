@@ -4,100 +4,32 @@
             <img src="../assets/img/ico-alert-red.png" alt="Error">
         </div>
         <div class="validation-message">
-            <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+            <h2><a id="validationSummaryAnchor" href="">Important</a></h2>
             <p>Please select one of the below options.</p>
         </div>
     </div>
 </div>
 
-<fieldset>
-    <legend class="larger col11 has-help">Do you need to register your business name?<a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
-    
-    <div class="grid-row grid-row-block clearfix custom-controls">
-        <div class="col11">
-            <p>
-                <input id="name1" name="name" type="radio">
-                <label for="name1">
-                    <span class="push-right">
-                        <strong>Yes</strong><br />
-                        You need to register your business name if it's different to your own name. For example, if your name is Sally Chang, and you want to use the name Accurate Accountants as your business name, you need to register it. 
-                    </span>
-                </label>
-            </p>
+<div class="grid-row grid-row-block clearfix custom-controls">
+    <fieldset>
+        <legend class="col6 has-help">Do you plan to have employees? (don't include independent contractors) <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+        <div class="col6 last">
+            <div class="radio-toggle">
+                <label class="on label-left" for="employeeYes"><input id="employeeYes" type="radio" name="employee"><span>Yes</span></label>
+                <label class="off label-right" for="employeeNo"><input id="employeeNo" type="radio" name="employee"><span>No</span></label>
+            </div>
         </div>
-        <div class="col1 last padding-top-bottom">            
+    </fieldset>
+</div><!-- grid-row -->
+
+<div class="grid-row grid-row-block clearfix custom-controls" id="fringeBenefit" style="display:none">
+    <fieldset>
+        <legend class="col6 has-help">Do you plan to offer fringe benefits to your employees, such as a work car for private use? <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+        <div class="col6 last">
+            <div class="radio-toggle">
+                <label class="on label-left" for="fringeBenefitYes"><input id="fringeBenefitYes" type="radio" name="fringeBenefit"><span>Yes</span></label>
+                <label class="off label-right" for="fringeBenefitNo"><input id="fringeBenefitNo" type="radio" name="fringeBenefit"><span>No</span></label>
+            </div>
         </div>
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-last grid-row-block clearfix custom-controls">
-        <div class="col11">
-            <p>
-                <input id="name2" name="name" type="radio">
-                <label for="name2">
-                    <span class="push-right">
-                        <strong>No</strong><br />
-                        You don't need to register your business name if you're using your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don't need to register it.
-                    </span>
-                </label>
-            </p>
-        </div>
-        <div class="col1 last padding-top-bottom">
-        </div>
-    </div><!-- grid-row -->
-</fieldset>
-
-
-
-
-
-<fieldset>
-    <legend class="larger col11">Do you plan to have employees? (don't include independent contractors)</legend>
-    <div class="col1 last">
-        <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
-    </div>
-    <p>&nbsp;</p>
-    <div id="validation" class="process-message process-alert validation-show" style="display:none">
-        <h2 id="validation-heading">Important</h2>
-        <p>Please select one of the below options.</p>
-        <!--<ul id="validation-list"></ul>-->
-        <p></p>
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="employeeYes" name="employee" type="radio">
-                <label for="employeeYes">Yes</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="employeeNo" name="employee" type="radio">
-                <label for="employeeNo">No</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-</fieldset>
-
-<fieldset id="fringeBenefit" style="display:none">
-    <legend class="larger col11">Do you plan to offer fringe benefits to your employees, such as a work car for private use?</legend>
-    <div class="col1 last">
-        <span class="form-help outside-grid"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Open help" /></a></span>
-    </div>
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="fringeBenefitYes" name="fringeBenefit" type="radio">
-                <label for="fringeBenefitYes">Yes</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-shaded clearfix">
-        <div class="col12">
-            <div class="form-row">
-                <input id="fringeBenefitNo" name="fringeBenefit" type="radio">
-                <label for="fringeBenefitNo">No</label>
-            </div><!-- form-row -->
-        </div><!-- col -->
-    </div><!-- grid-row -->
-</fieldset>
+    </fieldset>
+</div><!-- grid-row -->
