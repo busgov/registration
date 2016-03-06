@@ -22,7 +22,7 @@
                         <a href="settings.html"><span>Settings</span></a>
                         <div class="sub-nav">
                             <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and exit</a></li>
+                                <li><a href="#" class="btn-save">Save and return</a></li>
                                 <li><a href="#">Start a new application</a></li>
                                 <li><a href="#">Sign out</a></li>
                             </ul>
@@ -51,7 +51,7 @@
             <div id="section1" class="sub-section-container sub-section-open">
                 <h2>Save and return</h2>
                 <div class="sub-section-content">                                            
-                    <div id="validationSummary" class="validation-container clearfix">
+                    <div id="validationSummary" class="validation-container clearfix" style="display: none">
                         <div class="grid-row">
                             <div class="validation-summary-icon">
                                 <img src="assets/img/ico-alert-red.png" alt="Error">
@@ -66,35 +66,33 @@
                             </div>
                         </div>
                     </div>
+                    <p>Enter your details to enable returning to this application later or skip this now and find the option under the <em>settings</em> menu.</p>
+                    <div class="custom-controls">
+                        <p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
+                    </div>
+                    <hr />
                     <fieldset>
-                        <legend class="margin4 has-help larger">
-                            Save and return details<img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question"/><br/>
-                            <span class="field-note">Enter your details to enable save and return to this application at a later time or</span>
-                            <span class="field-note">choose to skip this step now and set it up further into your application by clicking save.</span>
-                        </legend>
-                        <div class="margin4 custom-controls">
-                            <p><input type="checkbox" id="already-setup" />&nbsp;<label for="already-setup">I have previously set up save and return.</label></p>
-                        </div>
+                        <legend>To set up <em>save and return</em>, please provide the following required details:</legend>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="email" class="input-right">Email address<span class="field-note"> (optional)</span></label>
+                                <label for="email" class="input-right">Email address</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="email" type="text">                            
+                                <input id="email" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="password1" class="input-right">Password<span class="field-note"> (optional)</span></label>
+                                <label for="password1" class="input-right">Password</label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="password1" type="password">
                                 <a id="forgotten-password" href="" style="display: none" class="smallest">Forgotten password?</a>
                             </div><!-- col -->
                         </div><!-- grid-row -->
-                        <div id="confirm-password"class="grid-row">
+                        <div id="confirm-password" class="grid-row">
                             <div class="col4">
-                                <label for="password2" class="input-right">Confirm password<span class="field-note"> (optional)</span></label>
+                                <label for="password2" class="input-right">Confirm password</label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="password2" type="password" style="width: 100%; max-width: 24em;">
@@ -127,7 +125,7 @@
                                     </p>
                                 </div>
                                 <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div>
                             <div class="grid-row">
@@ -146,7 +144,7 @@
                                     </p>
                                 </div><!-- col -->
                                 <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div>
 
@@ -158,7 +156,7 @@
                                     </p>
                                 </div>
                                 <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div>
                         </fieldset>
