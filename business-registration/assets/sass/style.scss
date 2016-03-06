@@ -1,4 +1,4 @@
-// CSS will be compiled in the following order
+// CSS will be compiled in the following order. The order SASS files are compiled is important for inheritance.
 // ------------------------------------------------------------------------------------------------------
 
 @import "variables";
@@ -9,10 +9,8 @@
 // Typography
 // Mixins
 
-
 @import "normalize";
-// ----- From HTML5 Boilerplate
-
+// ----- Tweaked from normalize.css v3.0.2 | MIT License | git.io/normalize
 
 @import "typography";
 // ----- Typography handles basic type properties such as colours and sizing
@@ -23,9 +21,8 @@
 // Confirmation layout
 // Responsive font sizing
 
-
 @import "layout";
-// ----- Layout is containers and ways of joining modules together
+// ----- Layout can use predefined modules to build page layout. It is also for declaring structural elements and custom classes.
 // Layout containers
 // Layout for feature home page
 // Header
@@ -37,22 +34,19 @@
 // Business name results
 // Sideboxes on start page
 
-
 @import "grid";
 // ----- 	12 column grid framework
 // Main container for all
 // Small devices
 
-
 @import "forms";
-// ----- Buttons and form controls
+// ----- Default styling for buttons, fields, inputs and custom checkboxes and radiobuttons
 // Buttons 
 // form elements
 // Restyled radio buttons
 
-
 @import "modules";
-// ----- Modules are reusable components that can be called from multiple places
+// ----- Modules are reusable components or classes that are called from multiple places in the application.
 // Registration progress bar
 // Help me decide progress bar
 // Styling content within forms

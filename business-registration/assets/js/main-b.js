@@ -257,13 +257,17 @@ function prepareHelpMeDecide() {
     previousAction = actions.businessStructureStep;
     nextAction = actions.helpMeDecideResultStep;
     isTrust = false;
-    // how many owners?
+
+    // How many owners will your business have?
     $("#radioHowManyOwners1").click(function () {
         calculator.manyOwners = 1;
+        hideElementAndClear("divExtraQuestionsForHowManyOwners");
+        hideElementAndClear("divExtraQuestionsForHoldAssets");
     });
 
     $("#radioHowManyOwners2").click(function () {
         calculator.manyOwners = 2;
+        $("#divExtraQuestionsForHowManyOwners").show();
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
 
@@ -272,14 +276,17 @@ function prepareHelpMeDecide() {
         calculator.separatePersonalAsset = 1;
         $("#helpMeDecideQ3Help").show();
         $("#helpMeDecideQ3HelpHeader").show();
-        $("#divExtraQuestions").show(150);
+        hideElementAndClear("divExtraQuestionsForHowManyOwners");
+        hideElementAndClear("divExtraQuestionsForHoldAssets");
+        /*$("#divExtraQuestions").show(150);*/
+        isTrust = true;
     });
 
     $("#radioSeparatePersonalAsset2").click(function () {
         calculator.separatePersonalAsset = 2;
         $("#helpMeDecideQ3Help").hide();
         $("#helpMeDecideQ3HelpHeader").hide();
-        hideElementAndClear("divExtraQuestions");
+        $("#divExtraQuestionsForHoldAssets").show();
         calculator.businessLossReduceTax = 0;
         calculator.mostImportant = 0;
         calculator.planToSell = 0;
@@ -287,7 +294,7 @@ function prepareHelpMeDecide() {
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioSeparatePersonalAsset1"), $("#radioSeparatePersonalAsset2"), calculator.separatePersonalAsset)
     if (isEqual(calculator.separatePersonalAsset, 1)) {
-        $("#divExtraQuestions").show();
+        /*$("#divExtraQuestions").show();*/
         $("#helpMeDecideQ3Help").show();
         $("#helpMeDecideQ3HelpHeader").show();
     }
