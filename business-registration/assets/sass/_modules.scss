@@ -1029,14 +1029,16 @@ nav {
   margin-right: 36px;
 }
 img.help-icon {
-  position: absolute;
-  right: 0;
   max-width: 34px;
+  float: right;
 }
-legend img.help-icon {
-  margin-top: -35px;
+@media only screen and (min-width: $break-medium) {
+  img.help-icon {
+    position: absolute;
+    float: none;
+    right: 0;
+  }
 }
-
 .validation-container {
    background-color: $gray-bg;
   -moz-border-radius: 6px;
