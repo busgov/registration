@@ -261,13 +261,16 @@ function prepareHelpMeDecide() {
     // How many owners will your business have?
     $("#radioHowManyOwners1").click(function () {
         calculator.manyOwners = 1;
-        hideElementAndClear("divExtraQuestionsForHowManyOwners");
+        $("#divExtraQuestionsForHowManyOwnersJustMe").show();
+        hideElementAndClear("divExtraQuestionsForHowManyOwnersTwoOrMore");
         hideElementAndClear("divExtraQuestionsForHoldAssets");
     });
 
     $("#radioHowManyOwners2").click(function () {
         calculator.manyOwners = 2;
-        $("#divExtraQuestionsForHowManyOwners").show();
+        $("#divExtraQuestionsForHowManyOwnersTwoOrMore").show();
+        hideElementAndClear("divExtraQuestionsForHowManyOwnersJustMe");
+        hideElementAndClear("divExtraQuestionsForHoldAssets");
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
 

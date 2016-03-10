@@ -10,62 +10,108 @@
     </div>
 </div>
 
-<!--<p>Tell us how you want to run your business and we'll suggest which business structure may suit your needs.</p>-->
-<p><span style="background-color: red; color: white; font-weight: bold; text-transform: uppercase">This section is still being developed</span></p>
 <div class="grid-row grid-row-block clearfix custom-controls">
-    <fieldset>
-        <legend class="col6 has-help">How many owners will your business have? <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
-        <div class="col6 last">
+    <fieldset class="no-margin">
+        <legend class="col6">How many owners will your business have?</legend>
+        <div class="col5 last">
             <div class="radio-toggle">
                 <label class="on label-left" for="radioHowManyOwners1"><input id="radioHowManyOwners1" type="radio" name="radioHowManyOwners"><span>One (just me)</span></label>
                 <label class="off label-right" for="radioHowManyOwners2"><input id="radioHowManyOwners2" type="radio" name="radioHowManyOwners"><span>Two or more</span></label>
             </div>
         </div>
+        <div class="col1 last">
+            <a href="#help" class="cd-btn"><img class="help-icon margin-top-075" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+        </div>
     </fieldset>
 </div><!-- grid-row -->
 
 <div class="grid-row grid-row-block grid-row-last clearfix custom-controls">
-    <fieldset>
-        <legend class="col6 has-help">Will you hold and control an asset for the benefit of others? <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
-        <div class="col6 last">
+    <fieldset class="no-margin">
+        <legend class="col6">Will you hold and control an asset for the benefit of others?</legend>
+        <div class="col5">
             <div class="radio-toggle">
                 <label class="on label-left" for="radioSeparatePersonalAsset1"><input id="radioSeparatePersonalAsset1" type="radio" name="radioSeparatePersonalAsset"><span>Yes</span></label>
                 <label class="off label-right" for="radioSeparatePersonalAsset2"><input id="radioSeparatePersonalAsset2" type="radio" name="radioSeparatePersonalAsset"><span>No</span></label>
             </div>
         </div>
+        <div class="col1 last">
+            <a href="#help" class="cd-btn"><img class="help-icon margin-top-075" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+        </div>
     </fieldset>
-</div><!-- grid-row -->
+</div>
 
-<div id="divExtraQuestionsForHowManyOwners" style="display: none">
-    <p>Answer the following questions with the most suitable option for the type of business you want to set up. Based on your answers, the structure with the most characteristics selected might be the structure best suited to your needs. If you are still undecided on which business structure to choose, talk to a business advisor or accountant about your circumstances.</p>
+<div id="divExtraQuestionsForHowManyOwnersJustMe" style="display: none">
+    <p>Based on your answers, we have narrowed down the list of business structures for you. Compare the list of characteristics for the remaining structures below to help you decide which business you would prefer to set up.</p>
     <table class="results-table custom-controls">
         <tr>
-            <th>Partnership</th>
-            <th>Company</th>
-            <th><span class="visuallyhidden">Help</span></th>
+            <th style="width: 46%"><span class="visuallyhidden">Characteristic</span></th>
+            <th style="width: 23%">Sole trader</th>
+            <th style="width: 23%">Company</th>
+            <th style="width: 8%"><span class="visuallyhidden">Help</span></th>
         </tr>
         <tr>
-            <td colspan="2">
+            <td>Business decisions are made by:</td>
+            <td>You</td>
+            <td>Directors</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>Setting up your business will cost:</td>
+            <td>$33+</td>
+            <td>$382+</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>Setting up your business will be:</td>
+            <td>Easy</td>
+            <td>More complex</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>Switching business structures will be:</td>
+            <td>Easy</td>
+            <td>More difficult</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>The money earned belongs to:</td>
+            <td>You</td>
+            <td>Company</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>Losses are the responsibility of the:</td>
+            <td>Sole trader</td>
+            <td>Company and directors</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>The risk to my personal assets are:</td>
+            <td>High</td>
+            <td>Low (Shareholders) to Medium (Directors)</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td>The tax rate that applies to income is:</td>
+            <td>Individual tax rate</td>
+            <td>30%, Small business (28.5%)</td>
+            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
+        </tr>
+        <tr>
+            <td class="shaded">
                 <fieldset>
-                    <legend>Who makes business decisions?</legend>
+                    <legend>Which business structure would you prefer to set up?</legend>
                 </fieldset>
             </td>
-            <td><a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>
-                <p><input id="businessDecisions1" type="radio" name="businessDecisions"><label for="businessDecisions1">Partners</label></p>
-            </td>
-            <td>
-                <p><input id="businessDecisions2" type="radio" name="businessDecisions"><label for="businessDecisions2">Directors</label></p>
-            </td>
-            <td>&nbsp;</td>
+            <td class="shaded"><p><input id="chooseStructureSoleTrader" type="radio" name="chooseStructure"><label for="chooseStructureSoleTrader">Sole trader</label></p></td>
+            <td class="shaded"><p><input id="chooseStructureCompany" type="radio" name="chooseStructure"><label for="chooseStructureCompany">Company</label></p></td>
+            <td class="shaded">&nbsp;</td>
         </tr>
     </table>
 </div>
 
-<div id="divExtraQuestionsForHoldAssets" style="display: none">
-    divExtraQuestionsForHoldAssets
+<div id="divExtraQuestionsForHowManyOwnersTwoOrMore" style="display: none">
+    Two or more comparison table
 </div>
 
     <div id="divExtraQuestions" style="display:none">

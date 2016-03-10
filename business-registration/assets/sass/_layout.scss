@@ -799,7 +799,27 @@ main.confirmation .result-container {
 
 // Help me decide styling
 // ------------------------------------------------------------------------------------------------------
-
-.results-table td {
-  padding: 0 1em !important;
+ 
+.results-table {
+  border: none !important;
+  th {
+    background-color: white;
+    border: 0;
+    border-bottom: 2px solid $table-lines;
+    font-size: 140%;
+    font-weight: bold;
+  }
+  td, th {
+    padding-left: 10px;
+  }
+  fieldset, legend {
+    margin: 0;
+    padding: 0;
+  }
+  .help {
+    text-align: right;
+  }
+  .shaded {
+    background-color: $blue-paler;
+  }
 }
