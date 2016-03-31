@@ -9,19 +9,40 @@ var businessStructure = {
 
 var activity = { "name": "Activity", "helpFile": "activity_help.html", "contentFile": "activity_question.html" };
 var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
-var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityStep": "activity", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideResultStep": "helpMeDecideResultStep" }
+var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityStep": "activity", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideSelectStep": "helpMeDecideSelect", "helpMeDecideResultStep": "helpMeDecideResultStep" }
 
 var helpMeDecide = {
     "name": "Business structure - help me decide",
     "helpFile": "helpmedecide_question_help.html",
     "contentFile": "helpmedecide_question.html",
     "helpMeDecideResult": {
-        "name": "Business structure",
-        "helpFile": "helpmedecide_result_help.html",
-        "contentFile": "helpmedecide_result_content.html"
+    	"name": "Business structure",
+    	"helpFile": "helpmedecide_result_content.html",
+    	"contentFile": "helpmedecide_result_content.html"
     }
 };
 
+var soleTraderOrCompany = {
+	"name": "Choose a structure",
+	"helpFile": "soleTraderOrCompany_help.html",
+	"contentFile": "soleTraderOrCompany_content.html",
+	"soleTraderOrCompanyResult": {
+		"name": "Business structure",
+		"helpFile": "soleTrader_help.html",
+		"contentFile": "soleTrader_content.html"
+	}
+};
+
+var partnershipOrCompany = {
+	"name": "Choose a structure",
+	"helpFile": "partnershipOrCompany_help.html",
+	"contentFile": "partnershipOrCompany_content.html",
+	"partnershipOrCompanyResult": {
+		"name": "Business structure",
+		"helpFile": "partnership_help.html",
+		"contentFile": "partnership_content.html"
+	}
+};
 
 var registrations = null;
 
@@ -32,12 +53,16 @@ var companyName = "Company";
 
 var previousAction = "";
 var nextAction = "";
+var currentAction = "";
 
 var help;
 var step = 0;
 var maxStep = 5;
 var calculator = new HelpMeDecideCalculator();
-var isTrust = false;
+var isTrust = false,
+    isCompany = false,
+    isPartnership = false,
+    isSoleTrader = false;
 var isHelpMeDecidUsed = false;
 /* End of data */
 
@@ -109,9 +134,15 @@ function loadQuestionHelp(applicationStep, callback) {
                         index = $(this)[0].id;
                     }
                     help.open(index);
+                    var heading = $('#helpFile h3')[index];
                     event.preventDefault();
                     $('.cd-panel').addClass('is-visible');
-                    $('#settings').toggle();
+                    $('#settings').toggle(function () {
+                    	// move open topic to top:
+	                    $('.cd-panel-content').animate({
+	                    	scrollTop: heading.offsetTop
+	                    }, 200);
+	                });
                 });
             }, 10);
         });
@@ -134,7 +165,7 @@ function applyStyle() {
         }
     });
     if (step === 5) {
-        showRegistrationsHepContent();
+        showRegistrationsHelpContent();
     }
 
     /* Expand collapse headings config */
@@ -155,6 +186,8 @@ function manageState(action) {
     if ($("#next").html() !== "Next") {
         $("#next").html("Next");
     }
+    // set current action:
+    currentAction = action;
     switch (action) {
         case actions.eligibilityStep:
             window.location = "eligibility.html";
@@ -165,8 +198,23 @@ function manageState(action) {
         case actions.helpMeDecideStep:
             loadQuestionHelp(helpMeDecide, prepareHelpMeDecide);
             break;
+        case actions.helpMeDecideSelectStep:
+        	if (isTrust) {
+        		currentAction = actions.helpMeDecideResultStep;
+        		loadQuestionHelp(helpMeDecide.helpMeDecideResult, prepareHelpMeDecideResult);
+        	}
+        	else if (calculator.manyOwners == 1) {
+				// sole trader or company
+				loadQuestionHelp(soleTraderOrCompany, prepareHelpMeDecideSelect);
+			}
+			else
+			{
+				// partnership or company
+				loadQuestionHelp(partnershipOrCompany, prepareHelpMeDecideSelect);
+			}
+            break;
         case actions.helpMeDecideResultStep:
-            loadQuestionHelp(helpMeDecide.helpMeDecideResult, prepareHelpMeDecideResult);
+        	loadQuestionHelp(helpMeDecide.helpMeDecideResult, prepareHelpMeDecideResult);
             break;
         case actions.businessNameStep:
             loadQuestionHelp(applicationType.nameApplication, prepareNamePage);
@@ -176,12 +224,22 @@ function manageState(action) {
             break;
         case actions.activityStep:
             loadQuestionHelp(applicationType.activity, prepareActivityPage);
-            $("#next").html("Next");
+            // $("#next").html("Next");
             break;
         case actions.finishedStep:
             // based on user selection, generated the registrations form (those user needs to applied will be ticked)
             loadQuestionHelp(finished, showResults);
             $("#next").html("Start applying");
+//            $("#next").off('click');
+//            $("#next").click(function() {
+//            	queryStr = "?type=";
+//            	var first = true;
+//            	$("input[type=checkbox]:checked").each(function(i, item) {
+//            		first?first=false:queryStr+=',';
+//            		queryStr += item.id;
+//            	});
+//            	location.href = "../register.html" + queryStr;
+//            });
             break;
     }
 }
@@ -255,41 +313,55 @@ function prepareHelpMeDecide() {
     step = 1;
     calculateCompletion();
     previousAction = actions.businessStructureStep;
-    nextAction = actions.helpMeDecideResultStep;
+    nextAction = actions.helpMeDecideSelectStep;
     isTrust = false;
+    isCompany = false;
+    isPartnership = false;
+    isSoleTrader = false;
 
     // How many owners will your business have?
     $("#radioHowManyOwners1").click(function () {
         calculator.manyOwners = 1;
-        $("#divExtraQuestionsForHowManyOwnersJustMe").show();
-        hideElementAndClear("divExtraQuestionsForHowManyOwnersTwoOrMore");
-        hideElementAndClear("divExtraQuestionsForHoldAssets");
+    	if  (calculator.separatePersonalAsset != 1) {
+	        $("#div-just-me").show();
+    	    $("#div-two-or-more").hide();
+    	}
     });
 
     $("#radioHowManyOwners2").click(function () {
         calculator.manyOwners = 2;
-        $("#divExtraQuestionsForHowManyOwnersTwoOrMore").show();
-        hideElementAndClear("divExtraQuestionsForHowManyOwnersJustMe");
-        hideElementAndClear("divExtraQuestionsForHoldAssets");
+        if (calculator.separatePersonalAsset != 1) {
+	        $("#div-two-or-more").show();
+    	    $("#div-just-me").hide();
+    	}
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
 
     // Will you hold and control an asset for the benefit of others?
     $("#radioSeparatePersonalAsset1").click(function () {
         calculator.separatePersonalAsset = 1;
-        $("#helpMeDecideQ3Help").show();
-        $("#helpMeDecideQ3HelpHeader").show();
-        hideElementAndClear("divExtraQuestionsForHowManyOwners");
-        hideElementAndClear("divExtraQuestionsForHoldAssets");
-        /*$("#divExtraQuestions").show(150);*/
-        isTrust = true;
+        $("#div-hold-control-asset").show();
+        $("#div-just-me").hide();
+        $("#div-two-or-more").hide();
+       isTrust = true;
     });
 
     $("#radioSeparatePersonalAsset2").click(function () {
         calculator.separatePersonalAsset = 2;
-        $("#helpMeDecideQ3Help").hide();
-        $("#helpMeDecideQ3HelpHeader").hide();
-        $("#divExtraQuestionsForHoldAssets").show();
+        $("#div-hold-control-asset").hide();
+        switch (calculator.manyOwners) {
+        	case 1:
+		        $("#div-just-me").show();
+    		    $("#div-two-or-more").hide();
+    		    break;
+    		case 2:
+    	        $("#div-just-me").hide();
+		  	    $("#div-two-or-more").show();
+		  	    break;
+		  	default:
+		        $("#div-just-me").hide();
+	    	    $("#div-two-or-more").hide();
+	    }
         calculator.businessLossReduceTax = 0;
         calculator.mostImportant = 0;
         calculator.planToSell = 0;
@@ -333,36 +405,66 @@ function prepareHelpMeDecide() {
 
 }
 
+// prepare help me decide select page
+function prepareHelpMeDecideSelect() {
+	step = 1;
+	calculateCompletion();
+	previousAction = actions.helpMeDecideStep;
+	nextAction = actions.helpMeDecideResultStep;
+	
+	$("#chooseStructureSoleTrader").click(function() {
+		isSoleTrader = true;
+		isTrust = false;
+		isCompany = false;
+		isPartnership = false;
+	});
+	$("#chooseStructurePartnership").click(function() {
+		isSoleTrader = false;
+		isTrust = false;
+		isCompany = false;
+		isPartnership = true;
+	});
+	$("#chooseStructureCompany").click(function() {
+		isSoleTrader = false;
+		isTrust = false;
+		isCompany = true;
+		isPartnership = false;
+	});
+}
+
 // prepare help me decide result page
 function prepareHelpMeDecideResult() {
     // make sure the calculation is correct.
     step = 1;
     calculateCompletion();
-    previousAction = actions.helpMeDecideStep;
+    if (isTrust)
+	    previousAction = actions.helpMeDecideStep;
+	else
+		previousAction = actions.helpMeDecideSelectStep;
     nextAction = actions.businessNameStep;
     isHelpMeDecidUsed = true;
+    
     // based on calculator
-    var result = calculator.calculateWeight();
+    // var result = calculator.calculateWeight();
     // decide which one to go
-    if (result === "company") {
+    if (isCompany) {
         initializeApplicationType(companyName);
         registrations.isCompany = true;
         registrations.isTFN = true;
-        $("#fieldsestCompany").show();
+        $("#fieldsetCompany").show();
     }
-    else if (result === "partnership") {
+    else if (isPartnership) {
         initializeApplicationType(partnershipName);
         registrations.isTFN = true;
-        $("#fieldsestPartner").show();
+        $("#fieldsetPartner").show();
     }
-    else if (result === "soletrader") {
+    else if (isSoleTrader) {
         initializeApplicationType(soleTraderName);
-        $("#fieldsestSoleTrader").show();
+        $("#fieldsetSoleTrader").show();
     }
-    else if (result === "trust") {
-        // the next button will go do trust page.
+    else if (isTrust) {
         isTrust = true;
-        $("#fieldsestTrust").show();
+        $("#fieldsetTrust").show();
     }
 }
 
@@ -388,12 +490,12 @@ function prepareNamePage() {
     $("#name1").click(function () {
         applicationType.businessName1 = true;
         applicationType.businessName2 = false;
-        registrations.isBusinessName = false;
+        registrations.isBusinessName = true;
     });
     $("#name2").click(function () {
         applicationType.businessName2 = true;
         applicationType.businessName1 = false;
-        registrations.isBusinessName = true;
+        registrations.isBusinessName = false;
     });
 }
 
@@ -597,24 +699,24 @@ function showResults() {
     previousAction = actions.activityStep;
     nextAction = "";
 
-    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
-    if (needGST) {
-        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "Free", 1));
-    }
     if (parseboolean(registrations.isTFN)) {
-        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "Free", 2));
+        $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "Free", 1));
     }
     if (parseboolean(registrations.isCompany)) {
-        $('#resultTable tr:last').after(getResult("Company", "company", true, "", "$463 for 1 year", 3));
+        $('#resultTable tr:last').after(getResult("Company", "co", true, "", "$463 for 1 year", 2));
     }
     if (parseboolean(registrations.isBusinessName)) {
-        $('#resultTable tr:last').after(getResult("Business name", "businessName", true, "", "$34 for 1 year or $79 for 3 years", 4));
+        $('#resultTable tr:last').after(getResult("Business name", "bn", true, "", "$34 for 1 year or $79 for 3 years", 3));
     }
     if (parseboolean(registrations.isPAYG)) {
-        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "Free", 5));
+        $('#resultTable tr:last').after(getResult("Pay As You Go (PAYG) Withholding", "payg", true, "", "Free", 4));
     }
     if (parseboolean(registrations.isFBT)) {
-        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "Free", 6));
+        $('#resultTable tr:last').after(getResult("Fringe Benefits Tax (FBT)", "fbt", true, "", "Free", 5));
+    }
+    var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
+    if (needGST) {
+        $('#resultTable tr:last').after(getResult("Goods &amp; Services Tax (GST)", "gst", true, "", "Free", 6));
     }
     if (parseboolean(registrations.isLCT) && needGST) {
         $('#resultTable tr:last').after(getResult("Luxury Car Tax (LCT)", "lct", true, "", "Free", 7));
@@ -669,7 +771,7 @@ function showResults() {
 }
 
 // show the help content for selected tax types
-function showRegistrationsHepContent() {
+function showRegistrationsHelpContent() {
     var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
     if (needGST) {
         $('#gstHelp').show();
@@ -718,15 +820,15 @@ function showRegistrationsHepContent() {
         $("#paygHelpHeader").show();
         if (parseboolean(registrations.isCompany)) {
             $("#divCompanyPAYG").show();
-            if (parseboolean(applicationType.hasEmployee)) {
-                $("#paygCompanyHasEmployee").show();
-            }
-            else {
-                $("#paygCompanyNoEmployee").show();
-            }
+//            if (parseboolean(applicationType.hasEmployee)) {
+//                $("#paygCompanyHasEmployee").show();
+//            }
+//            else {
+//                $("#paygCompanyNoEmployee").show();
+//            }
         }
         else {
-            $("#divNoneCompanyPAYG").show();
+            $("#divNonCompanyPAYG").show();
         }
     }
 
@@ -777,13 +879,26 @@ function initDiscoveryPage() {
     });
     $("#next").click(function () {
         if (isTrust) {
-            window.location.href = "trust.html";
+        	if (currentAction == actions.businessStructureStep || currentAction == actions.helpMeDecideResultStep) {
+            	window.location.href = "trust.html";
+            }
+        }
+        if (currentAction == actions.finishedStep) {
+        	// finished selecting, start applying...
+           	var queryStr = "?type=";
+           	var first = true;
+           	$("input[type=checkbox]:checked").each(function(i, item) {
+           		first?first=false:queryStr+=',';
+           		queryStr += item.id;
+           	});
+           	location.href = "../register.html" + queryStr;
         }
         $(window).scrollTop($('#heading').offset().top);
         $("#next").blur();
-        if (!ifAnythingSelected("questions") && previousAction != actions.helpMeDecideStep && previousAction != actions.employeeStep) { // ignore step 4
+        if (!ifAnythingSelected("questions") && previousAction != actions.helpMeDecideStep
+        	 && previousAction != actions.helpMeDecideSelectStep && previousAction != actions.employeeStep) { // ignore step 4
             $("#validation").show();
-            $(window).scrollTop($('#validation').offset().top);
+            $(window).scrollTop($('#validation').offset().top);ß
             $(".scroll").click(function (event) {
                 event.preventDefault();
                 var full_url = this.href;
@@ -814,8 +929,6 @@ function calculateCompletion() {
     $("#percentMeter").css('width', percentCompleted + '%');
 }
 
-
-
 function selectRadioButton(value, name) {
     if (value != null) {
         setTimeout(function () {
@@ -839,7 +952,6 @@ function setValue(value, name) {
     $('input[name=' + name + '][value=' + value + ']').prop('checked', true);
 }
 
-
 /*function getResult(registrationName, id, isSelected, reason, cost, helpId) {
     var result = '<tr>    <td class="choice ';
     if (isSelected) {
@@ -856,7 +968,7 @@ function setValue(value, name) {
     if (!isSelected) {
         result += " results-alert-message";
     }
-    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span></td></tr>';
+    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../img/ico-help-form.png" alt="" /></a></span></td></tr>';
     if (!isSelected) {
         result += '<tr><td class="results-alert-message" colspan="3"><span class="smaller">' + reason + '</span></td></tr>';
     }
@@ -880,7 +992,6 @@ function getResult(registrationName, id, isSelected, reason, cost, helpId) {
 function parseboolean(value) {
     return (value != undefined && value);
 }
-
 
 function ifAnythingSelected(containerId) {
     var ifUserInputCount = 0;
@@ -918,10 +1029,10 @@ function returnToGivenStep(action) {
 function printHelp() {
     var helpCSS = "";
     if (window.location.host === "busgov.github.io") {
-        helpCSS = window.location.protocol + '//' + location.host + "/registration/assets/css/help.css";
+        helpCSS = window.location.protocol + '//' + location.host + "/registration/css/help.css";
     }
     else {
-        helpCSS = window.location.protocol + '//' + location.host + "/assets/css/help.css";
+        helpCSS = window.location.protocol + '//' + location.host + "/css/help.css";
     }
     $('#help').printThis({
         importCSS: false,
