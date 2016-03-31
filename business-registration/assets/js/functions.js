@@ -196,12 +196,8 @@ function navigationWithinPage() {
                     $(item).removeClass("sub-section-open").addClass("sub-section-done"); // add class for your need.
                     
                     setTimeout(function(){
-                        $(item).next(".sub-section-container").find("div").first().slideDown("slow", 
-                            function () {
-                            $(item).addClass("sub-section-open").addClass("");
-                            });
-                            },
-                            100); // add class for your need.;
+                        $(item).next(".sub-section-container").addClass("sub-section-open").find("div").first().slideDown("slow"); 
+                    }, 100); // add class for your need.;
                 });
 
             }
@@ -214,12 +210,8 @@ function navigationWithinPage() {
         var index = $(".previous").index(this);
         $.each($(".sub-section-container"), function (i, item) {
             if (index === i) {
-                $(item).find("div").first().slideDown("", function () {
-                    $(item).addClass("sub-section-open").addClass(""); // add class for your need.
-                    $(item).next(".sub-section-container").find("div").first().slideUp("", 
-                        function () {
-                                     $(item).removeClass("sub-section-open").addClass(""); // add class for your need.
-                                 });
+                $(item).removeClass("sub-section-done").addClass("sub-section-open").find("div").first().slideDown("", function () {
+                    $(item).next(".sub-section-container").removeClass("sub-section-open").find("div").first().slideUp();
                 });
             }
             
