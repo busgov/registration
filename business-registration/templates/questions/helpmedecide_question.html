@@ -10,6 +10,8 @@
     </div>
 </div>
 
+<p>Tell us how you want to run your business and we'll suggest which business structure may suit your needs.</p>
+
 <div class="grid-row grid-row-block clearfix custom-controls">
     <fieldset class="no-margin">
         <legend class="col6">How many owners will your business have?</legend>
@@ -40,142 +42,12 @@
     </fieldset>
 </div>
 
-<div id="divExtraQuestionsForHowManyOwnersJustMe" style="display: none">
-    <p>Based on your answers, we have narrowed down the list of business structures for you. Compare the list of characteristics for the remaining structures below to help you decide which business you would prefer to set up.</p>
-    <table class="results-table custom-controls">
-        <tr>
-            <th style="width: 46%"><span class="visuallyhidden">Characteristic</span></th>
-            <th style="width: 23%">Sole trader</th>
-            <th style="width: 23%">Company</th>
-            <th style="width: 8%"><span class="visuallyhidden">Help</span></th>
-        </tr>
-        <tr>
-            <td>Business decisions are made by:</td>
-            <td>You</td>
-            <td>Directors</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>Setting up your business will cost:</td>
-            <td>$33+</td>
-            <td>$382+</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>Setting up your business will be:</td>
-            <td>Easy</td>
-            <td>More complex</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>Switching business structures will be:</td>
-            <td>Easy</td>
-            <td>More difficult</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>The money earned belongs to:</td>
-            <td>You</td>
-            <td>Company</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>Losses are the responsibility of the:</td>
-            <td>Sole trader</td>
-            <td>Company and directors</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>The risk to my personal assets are:</td>
-            <td>High</td>
-            <td>Low (Shareholders) to Medium (Directors)</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td>The tax rate that applies to income is:</td>
-            <td>Individual tax rate</td>
-            <td>30%, Small business (28.5%)</td>
-            <td class="help"><a href="#help" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="Help with question" /></a></td>
-        </tr>
-        <tr>
-            <td class="shaded">
-                <fieldset>
-                    <legend>Which business structure would you prefer to set up?</legend>
-                </fieldset>
-            </td>
-            <td class="shaded"><p><input id="chooseStructureSoleTrader" type="radio" name="chooseStructure"><label for="chooseStructureSoleTrader">Sole trader</label></p></td>
-            <td class="shaded"><p><input id="chooseStructureCompany" type="radio" name="chooseStructure"><label for="chooseStructureCompany">Company</label></p></td>
-            <td class="shaded">&nbsp;</td>
-        </tr>
-    </table>
+<div id="div-just-me" style="display: none">
+	<p>If you want to own the business on your own, you can choose a sole trader or a company structure, but not a partnership.</p>
 </div>
-
-<div id="divExtraQuestionsForHowManyOwnersTwoOrMore" style="display: none">
-    Two or more comparison table
+<div id="div-two-or-more" style="display: none">
+	<p>If your business will have two or more owners, you can choose a partnership or company structure - but not a sole trader.</p>
 </div>
-
-    <div id="divExtraQuestions" style="display:none">
-        <div class="grid-row grid-row-shaded clearfix">
-            <fieldset class="margin-bottom-075">
-                <legend class="col5">Do you want to use any business losses to reduce tax on future profits?</legend>
-                <div class="col3">
-                    <div class="form-row">
-                        <input id="radioBusinessLossReduceTax1" name="radioBusinessLossReduceTax" type="radio">
-                        <label for="radioBusinessLossReduceTax1">Yes</label>
-                    </div><!-- form-row -->
-                </div><!-- col -->
-                <div class="col3">
-                    <div class="form-row">
-                        <input id="radioBusinessLossReduceTax2" name="radioBusinessLossReduceTax" type="radio">
-                        <label for="radioBusinessLossReduceTax2">No</label>
-                    </div><!-- form-row -->
-                </div><!-- col -->
-                <div class="col1 last">
-                    <span class="form-help"><a href="#help-structure" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span>
-                </div><!-- col last -->
-            </fieldset>
-        </div><!-- grid-row -->
-
-        <div class="grid-row grid-row-shaded clearfix">
-            <fieldset>
-                <legend class="col5">What is most important for your business?</legend>
-                <div class="col6">
-                    <div>
-                        <div class="form-row">
-                            <input id="radioMostImportant1" name="radioMostImportant" type="radio">
-                            <label for="radioMostImportant1">Investing profits back into the business</label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="form-row">
-                            <input id="radioMostImportant2" name="radioMostImportant" type="radio">
-                            <label for="radioMostImportant2">Protecting the business assets</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col1 last">
-
-                </div>
-            </fieldset>
-        </div>
-        <div class="grid-row grid-row-shaded grid-row-last clearfix">
-            <fieldset>
-                <legend class="col5">Do you plan to sell your business or pass it on to someone? </legend>
-                <div class="col3">
-                    <div class="form-row">
-                        <input id="radioPlanToSellYourBusiness1" name="radioPlanToSellYourBusiness" type="radio">
-                        <label for="radioPlanToSellYourBusiness1">Yes</label>
-                    </div><!-- form-row -->
-                </div><!-- col -->
-                <div class="col3">
-                    <div class="form-row">
-                        <input id="radioPlanToSellYourBusiness2" name="radioPlanToSellYourBusiness" type="radio">
-                        <label for="radioPlanToSellYourBusiness2">No</label>
-                    </div><!-- form-row -->
-                </div><!-- col -->
-                <div class="col1 last">
-
-                </div><!-- col last -->
-            </fieldset>
-        </div><!-- grid-row -->
-    </div>
+<div id="div-hold-control-asset" style="display: none">
+	<p>If you answered 'Yes' it means you (individual or business) will manage an asset (estate, property or business) that you want to protect on behalf of beneficiaries (people who receive profits from the asset). Trusts are complex to set up and you'll need time and the right skills to do it properly. It's best to see a qualified, licensed professional to help you understand what's involved.</p>
+</div>
