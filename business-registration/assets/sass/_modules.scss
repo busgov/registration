@@ -352,7 +352,8 @@ legend .field-note {
 .smallest {
   font-size: $smallest;
 }
-.visuallyhidden {
+.visuallyhidden,
+img.visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -363,7 +364,9 @@ legend .field-note {
     width: 1px;
 }
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:focus,
+img.visuallyhidden.focusable:active,
+img.visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -487,6 +490,19 @@ button.closeSystemMessage:active {
 }
 
 
+// Compare pros / cons panel
+// ------------------------------------------------------------------------------------------------------
+
+.compare-wrapper {
+    background-color: #e8f0f8;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 1.25em 1em 0.75em 1em;
+    margin: 0.5em 0
+}
+
+
 // Print
 // ------------------------------------------------------------------------------------------------------
 
@@ -514,7 +530,6 @@ button.closeSystemMessage:active {
 .print a:focus {
     background: black url(../img/sprite-print.png) no-repeat 7px -108px;
 }
-
 
 
 // Responsive video
@@ -816,7 +831,7 @@ button.closeSystemMessage:active {
 }
 
 .cd-panel-header h2 {
-    background: #367ab3 url(../img.ico-help.png) no-repeat 0 0;
+    background: #367ab3 url(../img/ico-help-form.png) no-repeat 0 0;
     padding-left: 30px;
     color: white;
     font-size: 140%;
@@ -871,6 +886,11 @@ button.closeSystemMessage:active {
 /* Pre hide sections with JavaScript on */
 .showhide h3 + div {
   display: none; }
+  
+/* help button in table */
+td.help a.cd-btn:hover {
+	background-color: transparent;	
+}
 
 
 // Megamenu /* http://terrillthompson.com/tests/menus/accessible-mega-menu/test.html */
