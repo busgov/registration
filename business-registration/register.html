@@ -51,7 +51,7 @@
                         <div class="grid-row clearfix">
                             <div class="col7">
                                 <p>
-                                    <input id="abn" type="checkbox" checked value="abn">
+                                    <input id="abn" type="checkbox" value="abn">
                                     <label for="abn">Australian Business Number (ABN)</label>
                                 </p>
                                 <p>
@@ -59,15 +59,15 @@
                                     <label for="bn">Business Name</label>
                                 </p>
                                 <p>
-                                    <input id="gst" type="checkbox" checked value="gst">
+                                    <input id="gst" type="checkbox" value="gst">
                                     <label for="gst">Goods and Services Tax (GST)</label>
                                 </p>
                                 <p>
-                                    <input id="co" type="checkbox" checked value="co">
+                                    <input id="co" type="checkbox" value="co">
                                     <label for="co">Australian Company</label>
                                 </p>
                                 <p>
-                                    <input id="payg" type="checkbox" checked value="payg">
+                                    <input id="payg" type="checkbox" value="payg">
                                     <label for="payg">Pay as you go withholding (PAYG)</label>
                                 </p>
                                 <p>
@@ -143,6 +143,14 @@
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+        
+        	var qryStr = getUrlVars();
+        	if (qryStr.type !== undefined) {
+        		$(qryStr.type.split(',')).each(function(i, str) {
+        			$('#' + str).prop('checked', true);
+        		});
+        	}
+        
             $("#next").click(function (e) {
                 e.preventDefault();
                 var queryString = "";
