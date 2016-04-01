@@ -7,9 +7,10 @@ var businessStructure = {
     "contentFile": "business_structure_question.html"
 };
 
-var activity = { "name": "Activity", "helpFile": "activity_help.html", "contentFile": "activity_question.html" };
+var activity_gst = { "name": "Activity", "helpFile": "activity_gst_help.html", "contentFile": "activity_gst_question.html" };
+var activity_tax = { "name": "Activity (continued)", "helpFile": "activity_tax_help.html", "contentFile": "activity_tax_question.html" };
 var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
-var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityStep": "activity", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideSelectStep": "helpMeDecideSelect", "helpMeDecideResultStep": "helpMeDecideResultStep" }
+var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityGSTStep": "activityGST", "activityTaxStep": "activityTax", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideSelectStep": "helpMeDecideSelect", "helpMeDecideResultStep": "helpMeDecideResultStep" }
 
 var helpMeDecide = {
     "name": "Business structure - help me decide",
@@ -57,7 +58,7 @@ var currentAction = "";
 
 var help;
 var step = 0;
-var maxStep = 5;
+var maxStep = 6;
 var calculator = new HelpMeDecideCalculator();
 var isTrust = false,
     isCompany = false,
@@ -90,7 +91,6 @@ function initializeApplicationType(typename) {
                 "contentFile": "business_structure_question.html",
                 "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "soleTrader_name_question.html" },
                 "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "employee_question.html" },
-                "activity": activity
             };
             break;
         case partnershipName:
@@ -100,7 +100,6 @@ function initializeApplicationType(typename) {
                 "contentFile": "business_structure_question.html",
                 "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "partnership_name_question.html" },
                 "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "employee_question.html" },
-                "activity": activity
             };
             break;
         case companyName:
@@ -110,7 +109,6 @@ function initializeApplicationType(typename) {
                 "contentFile": "business_structure_question.html",
                 "nameApplication": { "name": "Business name", "helpFile": "name_help.html", "contentFile": "company_name_question.html" },
                 "employee": { "name": "Employees", "helpFile": "employee_help.html", "contentFile": "company_employee_question.html" },
-                "activity": activity
             };
             break;
     }
@@ -222,8 +220,12 @@ function manageState(action) {
         case actions.employeeStep:
             loadQuestionHelp(applicationType.employee, prepareEmployeePage);
             break;
-        case actions.activityStep:
-            loadQuestionHelp(applicationType.activity, prepareActivityPage);
+        case actions.activityGSTStep:
+            loadQuestionHelp(activity_gst, prepareActivityGSTPage);
+            // $("#next").html("Next");
+            break;
+        case actions.activityTaxStep:
+            loadQuestionHelp(activity_tax, prepareActivityTaxPage);
             // $("#next").html("Next");
             break;
         case actions.finishedStep:
@@ -318,21 +320,38 @@ function prepareHelpMeDecide() {
     isCompany = false;
     isPartnership = false;
     isSoleTrader = false;
+    
+    // set initial tip state:
+    if (calculator.separatePersonalAsset == 1 || calculator.manyOwners > 0) {
+    	$("#div-structure-tip").show();
+    	if (calculator.separatePersonalAsset == 1) {
+    		$("#tip-hold-control-asset").show();
+    	} else if (calculator.manyOwners == 1) {
+	        $("#tip-just-me").show();
+	    } else {
+    	    $("#tip-two-or-more").show();
+    	}
+    }
+
 
     // How many owners will your business have?
     $("#radioHowManyOwners1").click(function () {
         calculator.manyOwners = 1;
     	if  (calculator.separatePersonalAsset != 1) {
-	        $("#div-just-me").show();
-    	    $("#div-two-or-more").hide();
+	        $("#div-structure-tip").show();
+	        $("#tip-hold-control-asset").hide();
+	        $("#tip-just-me").show();
+    	    $("#tip-two-or-more").hide();
     	}
     });
 
     $("#radioHowManyOwners2").click(function () {
         calculator.manyOwners = 2;
         if (calculator.separatePersonalAsset != 1) {
-	        $("#div-two-or-more").show();
-    	    $("#div-just-me").hide();
+	        $("#div-structure-tip").show();
+	        $("#tip-hold-control-asset").hide();
+	        $("#tip-two-or-more").show();
+    	    $("#tip-just-me").hide();
     	}
     });
     resumeRadioButtonStateOnHelpMeDecidePage($("#radioHowManyOwners1"), $("#radioHowManyOwners2"), calculator.manyOwners)
@@ -340,27 +359,27 @@ function prepareHelpMeDecide() {
     // Will you hold and control an asset for the benefit of others?
     $("#radioSeparatePersonalAsset1").click(function () {
         calculator.separatePersonalAsset = 1;
-        $("#div-hold-control-asset").show();
-        $("#div-just-me").hide();
-        $("#div-two-or-more").hide();
+        $("#div-structure-tip").show();
+        $("#tip-hold-control-asset").show();
+        $("#tip-just-me").hide();
+        $("#tip-two-or-more").hide();
        isTrust = true;
     });
 
     $("#radioSeparatePersonalAsset2").click(function () {
         calculator.separatePersonalAsset = 2;
-        $("#div-hold-control-asset").hide();
+        $("#tip-hold-control-asset").hide();
         switch (calculator.manyOwners) {
         	case 1:
-		        $("#div-just-me").show();
-    		    $("#div-two-or-more").hide();
+		        $("#tip-just-me").show();
+    		    $("#tip-two-or-more").hide();
     		    break;
     		case 2:
-    	        $("#div-just-me").hide();
-		  	    $("#div-two-or-more").show();
+    	        $("#tip-just-me").hide();
+		  	    $("#tip-two-or-more").show();
 		  	    break;
 		  	default:
-		        $("#div-just-me").hide();
-	    	    $("#div-two-or-more").hide();
+		        $("#div-structure-tip").hide();
 	    }
         calculator.businessLossReduceTax = 0;
         calculator.mostImportant = 0;
@@ -505,7 +524,7 @@ function prepareEmployeePage() {
     step = 3;
     calculateCompletion();
     previousAction = actions.businessNameStep;
-    nextAction = actions.activityStep;
+    nextAction = actions.activityGSTStep;
 
     // company stream
     if (applicationType.name === companyName) {
@@ -602,13 +621,13 @@ function prepareEmployeePage() {
     }
 }
 
-// prepare the activity page
-function prepareActivityPage() {
+// prepare the activity GST page
+function prepareActivityGSTPage() {
     // make sure the calculation is correct.
     step = 4;
     calculateCompletion();
     previousAction = actions.employeeStep;
-    nextAction = actions.finishedStep;
+    nextAction = actions.activityTaxStep;
 
     $(":checkbox").click(function () {
         if (this.id !== 'ckNone') {
@@ -618,7 +637,7 @@ function prepareActivityPage() {
         } else {
             {
                 if ($("#ckNone").prop("checked")) {
-                    applicationType.noneOfAbove = true;
+                    applicationType.noneOfAbove1 = true;
                     $(":checkbox").each(function (i, element) {
                         if (element.id !== "ckNone" && $(element).prop('checked')) {
                             $(element).trigger('click');
@@ -630,17 +649,19 @@ function prepareActivityPage() {
     });
     // none of the above
     $("#ckNone").click(function () {
-        applicationType.noneOfAbove = $("#ckNone").prop('checked');
+        applicationType.noneOfAbove1 = $("#ckNone").prop('checked');
+		checkGST();
     });
-
-    if (applicationType.noneOfAbove !== undefined) {
-        setCheckBox("#ckNone", applicationType.noneOfAbove);
+    if (applicationType.noneOfAbove1 !== undefined) {
+        setCheckBox("#ckNone", applicationType.noneOfAbove1);
     }
 
     // turnover 75k and over
     $("#ckTurnover75k").click(function () {
         applicationType.turnOver75k = $("#ckTurnover75k").prop('checked');
+        checkGST();
     });
+
     if (applicationType.turnOver75k != undefined) {
         setCheckBox("#ckTurnover75k", applicationType.turnOver75k);
     }
@@ -648,6 +669,7 @@ function prepareActivityPage() {
     // taxi
     $("#ckTaxi").click(function () {
         applicationType.taxi = $("#ckTaxi").prop('checked');
+        checkGST();
     });
 
     if (applicationType.taxi != undefined) {
@@ -657,15 +679,84 @@ function prepareActivityPage() {
     // limo
     $("#ckLimousine").click(function () {
         applicationType.limo = $("#ckLimousine").prop('checked');
+        checkGST();
     });
 
     if (applicationType.limo != undefined) {
         setCheckBox("#ckLimousine", applicationType.limo);
     }
+    
+    // set initial tip/help status:
+    checkGST();
+}
+
+function checkGST() {
+	if (applicationType.noneOfAbove1) {
+		$('#div-gst-tip').show();
+		$('#div-gst-register').hide();
+		$('#div-gst-optional').show();
+		$('#gstOptionalHelpHeader').show();
+		$('#gstOptionalHelp').show();
+		$('#gstRegisterHelpHeader').hide();
+		$('#gstRegisterHelp').hide();
+	} else if ($('#activityFieldset input:checkbox:checked').length > 0) {
+		$('#div-gst-tip').show();
+		$('#div-gst-register').show();
+		$('#div-gst-optional').hide();
+		$('#gstRegisterHelpHeader').show();
+		$('#gstRegisterHelp').show();
+	} else {
+		$('#div-gst-tip').hide();
+		$('#gstRegisterHelpHeader').hide();
+		$('#gstRegisterHelp').hide();
+		$('#gstOptionalHelpHeader').hide();
+		$('#gstOptionalHelp').hide();
+	}
+}
+
+// prepare the activity Tax page
+function prepareActivityTaxPage() {
+    // make sure the calculation is correct.
+    step = 5;
+    calculateCompletion();
+    previousAction = actions.activityGSTStep;
+    nextAction = actions.finishedStep;
+
+    $(":checkbox").click(function () {
+        if (this.id !== 'ckNone') {
+            if ($("#ckNone").prop("checked") && $(this).prop("checked")) {
+                $("#ckNone").trigger("click");
+            }
+        } else {
+            {
+                if ($("#ckNone").prop("checked")) {
+                    applicationType.noneOfAbove2 = true;
+                    $(":checkbox").each(function (i, element) {
+                        if (element.id !== "ckNone" && $(element).prop('checked')) {
+                            $(element).trigger('click');
+                        }
+                    });
+                }
+            }
+        }
+    });
+    // none of the above
+    $("#ckNone").click(function () {
+        applicationType.noneOfAbove2 = $("#ckNone").prop('checked');
+        if ($("#ckNone").prop('checked')) {
+        	$('#div-gst-tip').hide();
+        }
+        
+    });
+
+    if (applicationType.noneOfAbove2 !== undefined) {
+        setCheckBox("#ckNone", applicationType.noneOfAbove2);
+    }
 
     // wine
     $("#ckDealInWine").click(function () {
         registrations.isWET = $("#ckDealInWine").prop('checked');
+        checkTaxes();
     });
 
     if (registrations.isWET != undefined) {
@@ -675,6 +766,7 @@ function prepareActivityPage() {
     // fuel
     $("#ckUseFuel").click(function () {
         registrations.isFTC = $("#ckUseFuel").prop('checked');
+        checkTaxes();
     });
 
     if (registrations.isFTC != undefined) {
@@ -684,19 +776,71 @@ function prepareActivityPage() {
     // luxury cars
     $("#ckLuxury").click(function () {
         registrations.isLCT = $("#ckLuxury").prop('checked');
+        checkTaxes();
     });
 
     if (registrations.isLCT != undefined) {
         setCheckBox("#ckLuxury", registrations.isLCT);
     }
+    
+	// set initial tip/help status:
+    checkTaxes();
+}
+
+function checkTaxes() {
+	if (!applicationType.noneOfAbove2 && $('#activityFieldset input:checkbox:checked').length > 0) {
+		var haveGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
+       	$('#div-gst-tip').show();
+		$('#extra-ftc').hide();
+       	if (haveGST) {
+       		$('#tip-no-gst').hide();
+       		$('#tip-have-gst').show();
+       	} else {
+       		$('#tip-no-gst').show();
+       		$('#tip-have-gst').hide();
+       	}
+		if (registrations.isWET) {
+			$('#tip-wet').show();
+			$('#wetHelpHeader').show();
+			// $('#wetHelp').show();
+		} else {
+			$('#tip-wet').hide();
+			$('#wetHelpHeader').hide();
+			//$('#wetHelp').hide();
+		}
+		if (registrations.isFTC) {
+			$('#tip-ftc').show();
+			if (!haveGST) {
+				$('#extra-ftc').show();
+			}
+			$('#ftcHelpHeader').show();
+			//$('#ftcHelp').show();
+		} else {
+			$('#tip-ftc').hide();
+			$('#extra-ftc').hide();
+			$('#ftcHelpHeader').hide();
+			//$('#ftcHelp').hide();
+		}
+		if (registrations.isLCT) {
+			$('#tip-lct').show();
+			$('#lctHelpHeader').show();
+			//$('#lctHelp').show();
+		} else {
+			$('#tip-lct').hide();
+			$('#lctHelpHeader').hide();
+			//$('#lctHelp').hide();
+		}
+	}
+	else
+		$('#div-gst-tip').hide();
 }
 
 // prepare the finished page
 function showResults() {
     // make sure the calculation is correct.
-    step = 5;
+    step = 6;
     calculateCompletion();
-    previousAction = actions.activityStep;
+    previousAction = actions.activityTaxStep;
     nextAction = "";
 
     if (parseboolean(registrations.isTFN)) {
@@ -896,9 +1040,10 @@ function initDiscoveryPage() {
         $(window).scrollTop($('#heading').offset().top);
         $("#next").blur();
         if (!ifAnythingSelected("questions") && previousAction != actions.helpMeDecideStep
-        	 && previousAction != actions.helpMeDecideSelectStep && previousAction != actions.employeeStep) { // ignore step 4
+        	 && previousAction != actions.helpMeDecideSelectStep && previousAction != actions.employeeStep
+        	 && previousAction != actions.activityGSTStep) { // ignore step 4
             $("#validation").show();
-            $(window).scrollTop($('#validation').offset().top);ß
+            $(window).scrollTop($('#validation').offset().top);
             $(".scroll").click(function (event) {
                 event.preventDefault();
                 var full_url = this.href;
