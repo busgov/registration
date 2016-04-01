@@ -119,11 +119,20 @@ function loadQuestionHelp(applicationStep, callback) {
     var templateQuestionsDirectory = "../templates/questions/";
     $("#heading").html(applicationStep.name);
     $("#helpTopic").html("Help topics");
+    $('#next').prop('disabled', true);
+    $('#previous').prop('disabled', true);
     //$("#heading").focus();
 
 	// clear content and display loading gif:
 	$('#questions').html('<div style="width: 100%; height:200px;"><img src="../assets/img/ico-loading.gif" style="display: block; margin: 75px auto;"></div>');
 
+	// load help first to hopefully minimise any timing issues:
+    if (applicationStep.helpFile.length > 0) {
+        $("#helpFile").load(templateHelpDirectory + applicationStep.helpFile + "?t=" + (new Date()).getTime(), function () {
+            setTimeout(applyStyle, 10);
+        });
+    }
+    
     if (applicationStep.contentFile.length > 0) {
         $("#questions").load(templateQuestionsDirectory + applicationStep.contentFile + "?t=" + (new Date()).getTime(), function () {
             setTimeout(callback, 0);
@@ -146,14 +155,11 @@ function loadQuestionHelp(applicationStep, callback) {
 	                });
                 });
             }, 10);
+			$('#next').prop('disabled', false);
+			$('#previous').prop('disabled', false);
         });
     }
 
-    if (applicationStep.helpFile.length > 0) {
-        $("#helpFile").load(templateHelpDirectory + applicationStep.helpFile + "?t=" + (new Date()).getTime(), function () {
-            setTimeout(applyStyle, 10);
-        });
-    }
 }
 
 function applyStyle() {
