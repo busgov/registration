@@ -336,8 +336,13 @@ footer p a:visited {
   background: $process-alert url(../img/ico-tip-26.png) no-repeat 1em 1em;
   border-radius: 6px;
   -webkit-border-radius: 6px;
-  padding: 0.4em 2em 0.25em 3em;
+  padding: 0.1em 2em 0.25em 3em;
   margin: 0 0 1.5em 0;
+}
+
+.grid-row + .registration-tip
+{
+	margin-top: 1.5em;
 }
 
 .alert-tip {
