@@ -11,7 +11,7 @@
 </div>
 
 <fieldset id="activityFieldset">
-    <legend class="larger">Do you expect your business to do any of the following?<br /><span class="field-note">This helps us work out whether your business should register for any taxes.</span></legend>
+    <legend class="larger">Do you expect your business to do any of the following?<br /><span class="field-note">This helps us work out if you should register for GST.</span></legend>
 
     <div class="grid-row grid-row-block clearfix custom-controls">
         <div class="col11">
@@ -46,39 +46,6 @@
             <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
-    <div class="grid-row grid-row-block clearfix custom-controls">
-        <div class="col11">
-            <p>
-                <input id="ckDealInWine" type="checkbox">
-                <label for="ckDealInWine">Wholesale or produce wine in Australia</label>
-            </p>
-        </div>
-        <div class="col1 last">
-            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
-        </div>
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-block clearfix custom-controls">
-        <div class="col11">
-            <p>
-                <input id="ckUseFuel" type="checkbox">
-                <label for="ckUseFuel">Use taxable fuels in factories, equipment, machinery or heavy vehicles</label>
-            </p>
-        </div>
-        <div class="col1 last">
-            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
-        </div>
-    </div><!-- grid-row -->
-    <div class="grid-row grid-row-block clearfix custom-controls">
-        <div class="col11">
-            <p>
-                <input id="ckLuxury" type="checkbox">
-                <label for="ckLuxury">Import or sell luxury cars</label>
-            </p>
-        </div>
-        <div class="col1 last">
-            <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
-        </div>
-    </div><!-- grid-row -->
     <div class="grid-row grid-row-block grid-row-last clearfix custom-controls">
         <div class="col11">
             <p>
@@ -89,5 +56,20 @@
         <div class="col1 last">
         </div>
     </div><!-- grid-row -->
+	
+	<div id="div-gst-tip" class="registration-tip clearfix" style="display: none">
+		<div id="div-gst-register" style="display: none">
+			<p>Based on your answer, you should register for:</p>
+			<ul>
+				<li><strong>Goods &amp; Services Tax (GST)</strong> <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></li>
+			</ul>
+		</div>
+		<div id="div-gst-optional" style="display: none">
+			<p>Based on your answer, you:</p>
+			<ul>
+				<li><strong>don't have to</strong> register for <strong>Goods &amp; Services Tax (GST)</strong> <a href="#help" class=" cd-btn"><img class="help-icon" src="../assets/img/ico-help-form.png" alt="Help with question" /></a></li>
+			</ul>
+		</div>
+	</div>
 
 </fieldset>
