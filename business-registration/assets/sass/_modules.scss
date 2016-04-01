@@ -887,11 +887,13 @@ button.closeSystemMessage:active {
 .showhide h3 + div {
   display: none; }
   
-/* help button in table */
-td.help a.cd-btn:hover {
+/* help button in table and registration tip block */
+td.help a.cd-btn:hover,
+.registration-tip ul li a.cd-btn:hover,
+td.help a.cd-btn:focus,
+.registration-tip ul li a.cd-btn:focus {
 	background-color: transparent;	
 }
-
 
 // Megamenu /* http://terrillthompson.com/tests/menus/accessible-mega-menu/test.html */
 // ------------------------------------------------------------------------------------------------------
@@ -1052,6 +1054,13 @@ img.help-icon {
   max-width: 34px;
   float: right;
 }
+
+.registration-tip ul li img.help-icon {
+	position:relative;
+	right: auto;
+	vertical-align: middle;
+}
+
 @media only screen and (min-width: $break-medium) {
   img.help-icon {
     position: absolute;
