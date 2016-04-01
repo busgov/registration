@@ -121,6 +121,9 @@ function loadQuestionHelp(applicationStep, callback) {
     $("#helpTopic").html("Help topics");
     //$("#heading").focus();
 
+	// clear content and display loading gif:
+	$('#questions').html('<div style="width: 100%; height:200px;"><img src="../assets/img/ico-loading.gif" style="display: block; margin: 75px auto;"></div>');
+
     if (applicationStep.contentFile.length > 0) {
         $("#questions").load(templateQuestionsDirectory + applicationStep.contentFile + "?t=" + (new Date()).getTime(), function () {
             setTimeout(callback, 0);
