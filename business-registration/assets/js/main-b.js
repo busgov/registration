@@ -696,7 +696,7 @@ function prepareActivityGSTPage() {
     }
     
     // set initial tip/help status:
-    checkGST();
+    window.setTimeout(checkGST, 10);
 }
 
 function checkGST() {
@@ -793,7 +793,7 @@ function prepareActivityTaxPage() {
     }
     
 	// set initial tip/help status:
-    checkTaxes();
+    window.setTimeout(checkTaxes, 10);
 }
 
 function checkTaxes() {
