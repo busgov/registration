@@ -129,7 +129,8 @@ function loadQuestionHelp(applicationStep, callback) {
 	// load help first to hopefully minimise any timing issues:
     if (applicationStep.helpFile.length > 0) {
         $("#helpFile").load(templateHelpDirectory + applicationStep.helpFile + "?t=" + (new Date()).getTime(), function () {
-            setTimeout(applyStyle, 10);
+            // setTimeout(applyStyle, 10);
+            applyStyle();
         });
     }
     
