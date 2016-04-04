@@ -1046,6 +1046,7 @@ function initDiscoveryPage() {
            		queryStr += item.id;
            	});
            	location.href = "../register.html" + queryStr;
+           	return;
         }
         $(window).scrollTop($('#heading').offset().top);
         $("#next").blur();
