@@ -124,7 +124,7 @@ function loadQuestionHelp(applicationStep, callback) {
     //$("#heading").focus();
 
 	// clear content and display loading gif:
-	$('#questions').html(); // '<div style="width: 100%; height:200px;"><img src="../assets/img/ico-loading.gif" style="display: block; margin: 75px auto;"></div>');
+	$('#questions').html(''); // '<div style="width: 100%; height:200px;"><img src="../assets/img/ico-loading.gif" style="display: block; margin: 75px auto;"></div>');
 
 	// load help first to hopefully minimise any timing issues:
     if (applicationStep.helpFile.length > 0) {
