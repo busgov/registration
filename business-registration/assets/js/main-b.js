@@ -172,9 +172,6 @@ function applyStyle() {
             event.preventDefault();
         }
     });
-    if (step === 5) {
-        showRegistrationsHelpContent();
-    }
 
     /* Expand collapse headings config */
     help = new jQueryCollapse($(".showhide"), {
@@ -922,13 +919,16 @@ function showResults() {
             });
         }
     }
+    
+    showRegistrationsHelpContent();
+
 }
 
 // show the help content for selected tax types
 function showRegistrationsHelpContent() {
     var needGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo) || parseboolean(applicationType.isFTC) || parseboolean(applicationType.isLCT));
     if (needGST) {
-        $('#gstHelp').show();
+        // $('#gstHelp').show();
         $('#gstHelpHeader').show();
 
         // following code to switch on some help content for gst help
@@ -945,16 +945,16 @@ function showRegistrationsHelpContent() {
         }
     }
     if (parseboolean(registrations.isTFN)) {
-        $("#tfnHelp").show();
+        // $("#tfnHelp").show();
         $("#tfnHelpHeader").show();
         $("#helpBusinessStructureSelected").html(applicationType.name);
     }
     if (parseboolean(registrations.isCompany)) {
-        $("#companyHelp").show();
+        // $("#companyHelp").show();
         $("#companyHelpHeader").show();
     }
     if (parseboolean(registrations.isBusinessName)) {
-        $("#businessNameHelp").show();
+        // $("#businessNameHelp").show();
         $("#businessNameHelpHeader").show();
         if (applicationType.name === soleTraderName) {
             $("#yourOwnNameInHelp").show();
@@ -970,7 +970,7 @@ function showRegistrationsHelpContent() {
     }
 
     if (parseboolean(registrations.isPAYG)) {
-        $("#paygHelp").show();
+        // $("#paygHelp").show();
         $("#paygHelpHeader").show();
         if (parseboolean(registrations.isCompany)) {
             $("#divCompanyPAYG").show();
@@ -987,36 +987,36 @@ function showRegistrationsHelpContent() {
     }
 
     if (parseboolean(registrations.isFBT)) {
-        $('#fbtHelp').show();
+        // $('#fbtHelp').show();
         $('#fbtHelpHeader').show();
 
     }
     if (needGST && parseboolean(registrations.isLCT)) {
-        $('#lctHelp').show();
+        // $('#lctHelp').show();
         $('#lctHelpHeader').show();
     }
     if (needGST && parseboolean(registrations.isFTC)) {
-        $('#ftcHelp').show();
+        // $('#ftcHelp').show();
         $('#ftcHelpHeader').show();
     }
     if (needGST && parseboolean(registrations.isWET)) {
-        $('#wetHelp').show();
+        // $('#wetHelp').show();
         $('#wetHelpHeader').show();
     }
     if (!needGST) {
-        $('#gstHelp1').show();
+        // $('#gstHelp1').show();
         $('#gstHelp1Header').show();
         if (parseboolean(registrations.isFTC)) {
             $("#ftcHelpHeader1").show();
-            $("#ftcHelp1").show();
+            // $("#ftcHelp1").show();
         }
         if (parseboolean(registrations.isLCT)) {
             $("#lctHelpHeader1").show();
-            $("#lctHelp1").show();
+            // $("#lctHelp1").show();
         }
         if (parseboolean(registrations.isWET)) {
             $("#wetHelpHeader1").show();
-            $("#wetHelp1").show();
+            // $("#wetHelp1").show();
         }
     }
 }
