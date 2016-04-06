@@ -860,15 +860,13 @@ function checkTaxes() {
 			$('#ftc-gst').hide();
 			$('#ftcHelpHeader').toggle(registrations.isFTC);
 		} else {
-      		if (registrations.isWET || registrations.isFTC || registrations.isLCT ) {
+      		if (registrations.isWET || registrations.isLCT ) {
 				$('#tips-part1').show();
 				$('#tip-no-gst').show();
 				$('#tip-have-gst').hide();
 				$('#tip-wet').toggle(registrations.isWET);
-				$('#tip-ftc').toggle(registrations.isFTC);
 				$('#tip-lct').toggle(registrations.isLCT);
 				$('#wetHelpHeader').toggle(registrations.isWET);
-				$('#ftcHelpHeader').toggle(registrations.isFTC);
 				$('#lctHelpHeader').toggle(registrations.isLCT);
 			} else {
 				$('#tips-part1').hide();
