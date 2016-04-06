@@ -844,22 +844,46 @@ function checkTaxes() {
 	if (!applicationType.noneOfAbove2 && $('#activityFieldset input:checkbox:checked').length > 0) {
 		var haveGST = (parseboolean(applicationType.taxi) || parseboolean(applicationType.turnOver75k) || parseboolean(applicationType.limo));
        	$('#div-gst-tip').show();
-		$('#extra-ftc').hide();
        	if (haveGST) {
-       		$('#tip-no-gst').hide();
-       		$('#tip-have-gst').show();
-       	} else {
-       		$('#tip-no-gst').show();
-       		$('#tip-have-gst').hide();
-       	}
+       		if (registrations.isWET || registrations.isLCT) {
+				$('#tips-part1').show();
+				$('#tip-no-gst').hide();
+				$('#tip-have-gst').show();
+				$('#tip-wet').toggle(registrations.isWET);
+				$('#tip-lct').toggle(registrations.isLCT);
+				$('#wetHelpHeader').toggle(registrations.isWET);
+				$('#lctHelpHeader').toggle(registrations.isLCT);
+			} else {
+				$('#tips-part1').hide();
+			}
+			$('#tips-part2').toggle(registrations.isFTC);
+			$('#ftc-gst').hide();
+			$('#ftcHelpHeader').toggle(registrations.isFTC);
+		} else {
+      		if (registrations.isWET || registrations.isFTC || registrations.isLCT ) {
+				$('#tips-part1').show();
+				$('#tip-no-gst').show();
+				$('#tip-have-gst').hide();
+				$('#tip-wet').toggle(registrations.isWET);
+				$('#tip-ftc').toggle(registrations.isFTC);
+				$('#tip-lct').toggle(registrations.isLCT);
+				$('#wetHelpHeader').toggle(registrations.isWET);
+				$('#ftcHelpHeader').toggle(registrations.isFTC);
+				$('#lctHelpHeader').toggle(registrations.isLCT);
+			} else {
+				$('#tips-part1').hide();
+			}
+			$('#tips-part2').toggle(registrations.isFTC);
+			$('#ftc-gst').toggle(registrations.isFTC);
+			$('#ftcHelpHeader').toggle(registrations.isFTC);
+		}
+/*
 		if (registrations.isWET) {
 			$('#tip-wet').show();
 			$('#wetHelpHeader').show();
-			// $('#wetHelp').show();
 		} else {
 			$('#tip-wet').hide();
 			$('#wetHelpHeader').hide();
-			//$('#wetHelp').hide();
 		}
 		if (registrations.isFTC) {
 			$('#tip-ftc').show();
@@ -882,7 +906,7 @@ function checkTaxes() {
 			$('#tip-lct').hide();
 			$('#lctHelpHeader').hide();
 			//$('#lctHelp').hide();
-		}
+		} */
 	}
 	else
 		$('#div-gst-tip').hide();
