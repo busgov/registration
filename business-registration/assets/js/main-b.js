@@ -924,7 +924,7 @@ function showResults() {
         $('#resultTable tr:last').after(getResult("Tax File Number (TFN)", "tfn", true, "", "Free", 1));
     }
     if (parseboolean(registrations.isCompany)) {
-        $('#resultTable tr:last').after(getResult("Company", "co", true, "", "$463 for 1 year", 2));
+        $('#resultTable tr:last').after(getResult("Company", "co", true, "", "up to $463 for 1 year", 2));
     }
     if (parseboolean(registrations.isBusinessName)) {
         $('#resultTable tr:last').after(getResult("Business name", "bn", true, "", "$34 for 1 year or $79 for 3 years", 3));
