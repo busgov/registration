@@ -20,14 +20,14 @@
                 <label for="name1">
                     <span class="push-right">
                         <strong>Yes</strong><br />
-                        You need to register your business name if it's different to your own name.<br>
+                        You need to register your business name if it's different to your own name.<br><br>
                         For example, if your name is Sally Chang, and you want to use the name Accurate Accountants as your business name, you need to register it. 
                     </span>
                 </label>
             </p>
         </div>
         <div class="col1 last padding-top-bottom">            
-			<a href="#help" class="cd-btn"><img class="help-icon margin-top-075" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
+			<a id="name-btn" href="#help" class="cd-btn"><img class="help-icon margin-top-075" src="../assets/img/ico-help-form.png" alt="Help with question" /></a>
         </div>
     </div><!-- grid-row -->
     <div class="grid-row grid-row-last grid-row-block clearfix custom-controls">
@@ -37,7 +37,7 @@
                 <label for="name2">
                     <span class="push-right">
                         <strong>No</strong><br />
-                        You don't need to register your business name if you're using your own name.<br>
+                        You don't need to register your business name if you're using your own name.<br><br>
                         For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don't need to register it.
                     </span>
                 </label>
@@ -48,3 +48,8 @@
         </div>
     </div><!-- grid-row -->
 </fieldset>
+
+<div id="div-name-tip" class="registration-tip" style="display: none">
+	<p>Registering a business name costs $34 for 1 year, and $79 for 3 years.</p>
+	<p>Registering a business name doesn't stop other businesses from using it for their products or services! Find out how you can <a href="http://asic.gov.au/for-business/registering-a-business-name/before-you-start/how-to-protect-your-business-name/" target="_blank">protect your business name<img class="ico-external" alt="Links to another web site" src="../assets/img/ico-external.png"></a> <img class="help-icon inline" onclick="$('#name-btn').click();" src="../assets/img/ico-help-form.png" alt="Help with question" /></p>
+</div>

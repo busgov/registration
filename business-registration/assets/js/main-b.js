@@ -554,6 +554,7 @@ function prepareNamePage() {
     if (applicationType != null) {
         if (applicationType.businessName1 != undefined && applicationType.businessName1) {
             $("#name1").prop('checked', true);
+            $('#div-name-tip').show();
         }
         else if (applicationType.businessName2 != undefined && applicationType.businessName2) {
             $("#name2").prop('checked', true);
@@ -563,11 +564,13 @@ function prepareNamePage() {
         applicationType.businessName1 = true;
         applicationType.businessName2 = false;
         registrations.isBusinessName = true;
+        $('#div-name-tip').show();
     });
     $("#name2").click(function () {
         applicationType.businessName2 = true;
         applicationType.businessName1 = false;
         registrations.isBusinessName = false;
+        $('#div-name-tip').hide();
     });
 }
 
@@ -578,6 +581,8 @@ function prepareEmployeePage() {
     calculateCompletion();
     previousAction = actions.businessNameStep;
     nextAction = actions.activityGSTStep;
+
+    checkEmployeeTips();
 
     // company stream
     if (applicationType.name === companyName) {
@@ -604,6 +609,7 @@ function prepareEmployeePage() {
         $("#companyEmployeeYes").click(function () {
             applicationType.hasEmployee = true;
             registrations.isPAYG = true;
+	        checkEmployeeTips();
         });
 
         $("#companyEmployeeNo").click(function () {
@@ -611,17 +617,20 @@ function prepareEmployeePage() {
             applicationType.fringeBenefit = false;
             registrations.isFBT = false;
             registrations.isPAYG = false;
-        });
+            checkEmployeeTips();
+	    });
 
         // Company fringe benefits
         $("#fringeBenefitsEmployeeYes").click(function () {
             applicationType.fringeBenefit = true;
             registrations.isFBT = true;
+	        checkEmployeeTips();
         });
 
         $("#fringeBenefitsEmployeeNo").click(function () {
             applicationType.fringeBenefit = false;
             registrations.isFBT = false;
+	        checkEmployeeTips();
         });
     }
     else {
@@ -653,6 +662,7 @@ function prepareEmployeePage() {
             $("#fringeBenefit").show(100);
             applicationType.hasEmployee = true;
             registrations.isPAYG = true;
+	        checkEmployeeTips();
         });
 
         $("#employeeNo").click(function () {
@@ -660,18 +670,36 @@ function prepareEmployeePage() {
             applicationType.hasEmployee = false;
             applicationType.fringeBenefit = false;
             registrations.isPAYG = false;
-        });
+	         checkEmployeeTips();
+       });
         // fringe benefits
         $("#fringeBenefitYes").click(function () {
             applicationType.fringeBenefit = true;
             registrations.isFBT = true;
+	        checkEmployeeTips();
         });
 
         $("#fringeBenefitNo").click(function () {
             applicationType.fringeBenefit = false;
             registrations.isFBT = false;
+        	checkEmployeeTips();
         });
     }
+}
+
+function checkEmployeeTips() {
+	if (parseboolean(applicationType.hasEmployee) ||
+		parseboolean(applicationType.fringeBenefit)) {
+		$('#div-employees-tip').show();
+		$('#tip-payg').toggle(parseboolean(applicationType.hasEmployee));
+		$('#tip-fbt').toggle(parseboolean(applicationType.fringeBenefit));
+		$('#help-payg').toggle(parseboolean(applicationType.hasEmployee));
+		$('#help-fbt').toggle(parseboolean(applicationType.fringeBenefit));
+	} else {
+		$('#div-employees-tip').hide();
+		$('#help-payg').hide();
+		$('#help-fbt').hide();
+	}
 }
 
 // prepare the activity GST page
