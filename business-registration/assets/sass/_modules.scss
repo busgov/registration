@@ -1055,6 +1055,10 @@ img.help-icon {
   float: right;
 }
 
+/* allow for inline icon for registration tips */
+.registration-tip ul li a.cd-btn {
+	margin-left: .2em;
+}
 .registration-tip ul li img.help-icon {
 	position:relative;
 	right: auto;
