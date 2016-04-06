@@ -1059,10 +1059,16 @@ img.help-icon {
 .registration-tip ul li a.cd-btn {
 	margin-left: .2em;
 }
-.registration-tip ul li img.help-icon {
+.registration-tip ul li img.help-icon,
+.registration-tip img.help-icon.inline {
 	position:relative;
 	right: auto;
 	vertical-align: middle;
+}
+
+.registration-tip img.inline {
+	margin-left: .2em;
+	cursor: pointer;
 }
 
 @media only screen and (min-width: $break-medium) {
