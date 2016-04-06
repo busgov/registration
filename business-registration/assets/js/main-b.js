@@ -262,7 +262,7 @@ function prepareBusinessStructurePage() {
     calculateCompletion();
     previousAction = actions.eligibilityStep;
     nextAction = actions.businessNameStep;
-
+    
     if (applicationType != null) {
         if (applicationType.name === soleTraderName) {
             $("#structure-sole").prop('checked', true);
@@ -273,6 +273,8 @@ function prepareBusinessStructurePage() {
         else if (applicationType.name === companyName) {
             $("#structure-company").prop('checked', true);
         }
+
+        setBusStructTipStatus();
     }
 
     if (isHelpMeDecidUsed) {
@@ -285,6 +287,7 @@ function prepareBusinessStructurePage() {
         isHelpMeDecidUsed = false;
         nextAction = actions.businessNameStep;
         calculator = new HelpMeDecideCalculator();
+        setBusStructTipStatus();
     });
 
     $("#structure-partnership").on('click', function () {
@@ -293,7 +296,8 @@ function prepareBusinessStructurePage() {
         isHelpMeDecidUsed = false;
         calculator = new HelpMeDecideCalculator();
         nextAction = actions.businessNameStep;
-    });
+        setBusStructTipStatus();
+   });
 
     $("#structure-company").on('click', function () {
         initializeApplicationType(companyName);
@@ -302,20 +306,62 @@ function prepareBusinessStructurePage() {
         isHelpMeDecidUsed = false;
         calculator = new HelpMeDecideCalculator();
         nextAction = actions.businessNameStep;
+        setBusStructTipStatus();
     });
 
     $("#structure-trust").on('click', function () {
         isHelpMeDecidUsed = false;
         calculator = new HelpMeDecideCalculator();
         isTrust = true;
-    });
+        applicationType = null;
+        setBusStructTipStatus();
+   });
 
     $("#structure-not-sure").on('click', function () {
         nextAction = actions.helpMeDecideStep;
         isHelpMeDecidUsed = true;
         isTrust = false;
-    });
+        applicationType = null;
+        setBusStructTipStatus();
+   });
 }
+
+function setBusStructTipStatus() {
+	if (applicationType == null) {
+		$('#div-bus-tip').hide();
+		$('#help-abn').hide();
+		$('#help-tfn').hide();
+		$('#help-company').hide();
+		return;
+	}
+
+	// base options:
+	$('#div-bus-tip').show();
+	$('#item-tfn').hide();
+	$('#item-company').hide();
+	$('#tip-soletrader').hide();
+	$('#tip-company').hide();
+	$('#help-abn').show();
+	$('#help-tfn').hide();
+	$('#help-company').hide();
+	
+	switch (applicationType.name) {
+		case soleTraderName:
+			$('#tip-soletrader').show();
+			break;
+		/* these cases are cumulative */
+		case companyName:		
+			$('#item-company').show();
+			$('#tip-company').show();
+			$('#help-company').show();			
+		case partnershipName:
+			$('#item-tfn').show();
+			$('#help-tfn').show();
+			break;
+	}
+}
+
+
 
 function prepareHelpMeDecide() {
     // make sure the calculation is correct.
