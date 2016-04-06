@@ -857,7 +857,7 @@ function checkTaxes() {
 				$('#tips-part1').hide();
 			}
 			$('#tips-part2').toggle(registrations.isFTC);
-			$('#ftc-gst').hide();
+			$('#ftc-no-gst').hide();
 			$('#ftcHelpHeader').toggle(registrations.isFTC);
 		} else {
       		if (registrations.isWET || registrations.isLCT ) {
@@ -872,7 +872,7 @@ function checkTaxes() {
 				$('#tips-part1').hide();
 			}
 			$('#tips-part2').toggle(registrations.isFTC);
-			$('#ftc-gst').toggle(registrations.isFTC);
+			$('#ftc-no-gst').toggle(registrations.isFTC);
 			$('#ftcHelpHeader').toggle(registrations.isFTC);
 		}
 /*
