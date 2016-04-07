@@ -272,8 +272,8 @@ input[type=radio] {
   line-height: 34px; 
   border-radius: 6px;
   -webkit-border-radius: 6px;
-  width: 34px;
-  height: 34px;
+//  width: 34px;
+//  height: 34px;
   vertical-align: middle;
   margin: 0.4em 0.25em 0.4em 0;
 }
@@ -343,52 +343,61 @@ input.larger {
 // Toggle styled radio buttons
 // ------------------------------------------------------------------------------------------------------
 
-.radio-toggle label {
-  float:left;
-  width: 140px;
-  margin: 0.5em 0;
-  background-color:#EFEFEF;
-  border-radius:4px;
-  padding: 0;
-  border: 1px solid #D0D0D0;
-  overflow:auto;       
-}
-.radio-toggle label.label-left {
-  -webkit-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-  border-right: 0;
-}
-.radio-toggle label.label-right {
-  -webkit-border-radius: 0 4px 4px 0;
-  border-radius: 0 4px 4px 0;
-}
-.radio-toggle label.label-middle {
-  border-left: 1px solid #D0D0D0;
-  border-right: 0;
-  border-radius: 0;
-}
-.radio-toggle label:hover {
-  background-color:#fff;
-}
-.radio-toggle label span {
-  text-align:center;
-  padding: 10px 0;
-  display:block;
-  cursor: pointer;
-}
-.radio-toggle label input {
-  position:absolute;
-  left: -900px;
-}
-.radio-toggle input:checked + span {
-  -webkit-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
-  -moz-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
-  background: #3679b3;
-  color: #FFFFFF;
-  border-color: #2366a1;
-}
+.radio-toggle {
 
+	label {
+		float:left;
+		width: 140px;
+		margin: 0.5em 0;
+		background-color:#EFEFEF;
+		border-radius:4px;
+		padding: 0;
+		border: 1px solid #D0D0D0;
+		overflow:auto;       
+
+		&.label-left {
+		  -webkit-border-radius: 4px 0 0 4px;
+		  border-radius: 4px 0 0 4px;
+		  border-right: 0;
+		}
+		
+		&.label-right {
+			-webkit-border-radius: 0 4px 4px 0;
+			border-radius: 0 4px 4px 0;
+		}
+
+		&.label-middle {
+			border-left: 1px solid #D0D0D0;
+			border-right: 0;
+			border-radius: 0;
+		}
+
+		&:hover {
+			background-color:#fff;
+		}
+
+		span {
+			text-align:center;
+			padding: 10px 0;
+			display:block;
+			cursor: pointer;
+		}
+		
+		input {
+			position:absolute;
+			left: -900px;
+		}
+	}
+		
+	input:checked + span {
+		-webkit-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+		-moz-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+		box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+		background: #3679b3;
+		color: #FFFFFF;
+		border-color: #2366a1;
+	}
+}
 
 /* Adding dollar symbol to input field */
 .input-dollar {
@@ -402,117 +411,130 @@ input.larger {
 // ------------------------------------------------------------------------------------------------------
 /* http://www.thecssninja.com/css/custom-inputs-using-css */
 
-/* Hiding originals */
-p > input[type="checkbox"],
-p > input[type="radio"] {
-  padding: 0;
-  margin: 0;
-  height: 16px;
-  width: 16px;
-  float: left;
-  position: absolute;
-  left: 0;
-  opacity: 0;
-}
-.custom-controls p > label { 
-  line-height: 38px; 
-  color: $gray-dark; 
-  padding: 5px 0 14px 48px;
-  -moz-transition: color 1s ease; 
-  -o-transition: color 1s ease; 
-  -webkit-transition: color 1s ease; 
-  transition: color 1s ease; 
-}
+.custom-controls {
+	p {
+		/* ensure hidden elements stay with label */
+		position: relative;
 
-p > input:hover + label, p > input:focus + label,
-p > input + label:hover, p > input:focus + label { 
-  color: #000; 
-}
+		/* Hiding originals */
+		> input[type="checkbox"],
+		> input[type="radio"] {
+			padding: 0;
+			margin: 0;
+			height: 16px;
+			width: 16px;
+			float: left;
+			position: absolute;
+			left: 0;
+			opacity: 0;
 
-p > input + label {
-  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
-  height: 34px;
-}
-p > input[type=radio] + label { 
-  background-position: 0 -386px;
-}
+			/* set background sprite */
+			+ label {
+			  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
+			  height: 34px;
+			}
+		}
 
-/* Checked styles */
-p > input[type=radio]:checked + label { 
-  background-position: 0 -577px;
-}
-p > input[type=checkbox]:checked + label { 
-  background-position: 0 -192px; 
-}
-p > input[type=checkbox]:hover:checked + label,
-p > input[type=checkbox]:focus:checked + label,
-p > input[type=checkbox]:checked + label:hover,
-p > input[type=checkbox]:focus:checked + label { 
-  background-position: 0 -240px; 
-}
-p > input[type=radio]:hover:checked + label,
-p > input[type=radio]:focus:checked + label,
-p > input[type=radio]:checked + label:hover,
-p > input[type=radio]:focus:checked + label { 
-  background-position: 0 -625px; 
-}
+		> label { 
+		  line-height: 38px; 
+		  color: $gray-dark; 
+		  padding: 5px 0 14px 48px;
+		  -moz-transition: color 1s ease; 
+		  -o-transition: color 1s ease; 
+		  -webkit-transition: color 1s ease; 
+		  transition: color 1s ease; 
+		}
 
-/* Hover & Focus styles */
-p > input[type=checkbox]:hover + label,
-p > input[type=checkbox]:focus + label,
-p > input[type=checkbox] + label:hover { 
-  background-position: 0 -48px;
-}
-p > input[type=radio]:hover + label,
-p > input[type=radio]:focus + label,
-p > input[type=radio] + label:hover { 
-  background-position: 0 -434px; 
-}
+		> input:hover + label, > input:focus + label,
+		> input + label:hover, > input + label:focus { 
+		  color: #000; 
+		}
 
-/* Active styles */
-p > input[type=checkbox]:active + label,
-p > input[type=checkbox] + label:hover:active { 
-  background-position: 0 -96px; 
-}
-p > input[type=radio]:active + label,
-p > input[type=radio] + label:hover:active { 
-  background-position: 0 -482px;
-}
-p > input[type=checkbox]:active:checked + label,
-p > input[type=checkbox]:checked + label:hover:active {
-  background-position: 0 -288px;
-}
-p > input[type=radio]:active:checked + label,
-p > input[type=radio]:checked + label:hover:active { 
-  background-position: 0 -673px; 
-}
+		/* checkbox styles */
+		> input[type=checkbox] {
+		
+			/* Hover & Focus styles */
+			&:hover + label, &:focus + label, + label:hover { 
+			  background-position: 0 -48px;
+			}
 
-/* Disabled styles */
-p > input[type=checkbox]:disabled + label,
-p > input[type=checkbox]:hover:disabled + label,
-p > input[type=checkbox]:focus:disabled + label,
-p > input[type=checkbox]:disabled + label:hover,
-p > input[type=checkbox]:disabled + label:hover:active { 
-  background-position: 0 -145px; 
-}
-p > input[type=radio]:disabled + label,
-p > input[type=radio]:hover:disabled + label,
-p > input[type=radio]:focus:disabled + label,
-p > input[type=radio]:disabled + label:hover,
-p > input[type=radio]:disabled + label:hover:active {
-  background-position: 0 -528px; 
-}
-p > input[type=checkbox]:disabled:checked + label,
-p > input[type=checkbox]:hover:disabled:checked + label,
-p > input[type=checkbox]:focus:disabled:checked + label,
-p > input[type=checkbox]:disabled:checked + label:hover,
-p > input[type=checkbox]:disabled:checked + label:hover:active { 
-  background-position: 0 -336px; 
-}
-p > input[type=radio]:disabled:checked + label,
-p > input[type=radio]:hover:disabled:checked + label,
-p > input[type=radio]:focus:disabled:checked + label,
-p > input[type=radio]:disabled:checked + label:hover,
-p > input[type=radio]:disabled:checked + label:hover:active { 
-  background-position: 0 -719px; 
+			/* Checked styles */
+			&:checked {
+
+				+ label { 
+				  background-position: 0 -192px; 
+				}
+
+				&:hover + label, &:focus + label, + label:hover, + label:focus { 
+				  background-position: 0 -240px; 
+				}
+			}
+
+			/* Active styles */
+			&:active + label, + label:hover:active { 
+			  background-position: 0 -96px; 
+			}
+						
+			&:active:checked + label, &:checked + label:hover:active {
+			  background-position: 0 -288px;
+			}
+
+			/* Disabled styles */
+			&:disabled {
+				+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active { 
+				  background-position: 0 -145px; 
+				}
+
+				&:checked {
+					+ label, + label:hover, + label:hover:active, &:hover + label, &:focus + label { 
+					  background-position: 0 -336px; 
+					}
+				}
+			}
+		}
+
+		/* radio button styles */
+		> input[type=radio] {
+			+ label { 
+			  background-position: 0 -386px;
+			}
+
+			/* Hover & Focus styles */
+			&:hover + label, &:focus + label, + label:hover { 
+			  background-position: 0 -434px; 
+			}
+
+			/* Checked styles */
+			&:checked {
+				+ label { 
+				  background-position: 0 -577px;
+				}
+
+				&:hover + label, &:focus + label, + label:hover, + label:focus { 
+				  background-position: 0 -625px; 
+				}
+
+			}
+
+			/* Active styles */
+			&:active + label, + label:hover:active { 
+			  background-position: 0 -482px;
+			}
+			&:active:checked + label, &:checked + label:hover:active { 
+			  background-position: 0 -673px; 
+			}
+
+			/* Disabled styles */
+			&:disabled {
+				+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active {
+				  background-position: 0 -528px; 
+				}
+				&:checked {
+					+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active { 
+				  background-position: 0 -719px; 
+				}
+			}
+			}
+		}
+	}
 }
