@@ -521,6 +521,13 @@ button.closeSystemMessage:active {
 	fieldset {
 		font-size: 80%;
 		margin-bottom: 0.5em;
+	
+		p.tick:before {
+			content: '\2713';
+			color: green;
+			font-weight: bold;
+			margin-right: 5px;
+		}
 	}
 }
 
