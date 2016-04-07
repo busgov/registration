@@ -283,6 +283,11 @@ ul.section-nav li a:active {
   display: inline-block; 
   line-height: 1.4em; 
   vertical-align: top;
+  
+  &.list-item {
+     margin-left: 108px;
+     // TODO: add bullet icon
+  }
 }
 .microcopy {
   color: $gray-dark;
