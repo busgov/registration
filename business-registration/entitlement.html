@@ -109,8 +109,6 @@
                 </div>
             </div>
 
-
-
             <div id="section2" class="sub-section-container">
                 <h2>ABN details</h2>
                 <div class="sub-section-content">
@@ -200,11 +198,11 @@
                                 <h3>Individual</h3>
                                 <p>
                                     <input id="rdIndividual1" name="abnFor" class="showhide-trigger" type="radio">
-                                    <label for="rdIndividual1">To work as an apprentice, trade assistant, or labourer</label>
+                                    <label for="rdIndividual1"><span class="push-right-min">To work as an apprentice, trade assistant, or labourer</span></label>
                                 </p>
                                 <p>
                                     <input id="rdIndividual2" name="abnFor" type="radio">
-                                    <label for="rdIndividual2">To run a business as a sole trader</label>
+                                    <label for="rdIndividual2"><span class="push-right-min">To run a business as a sole trader</span></label>
                                 </p>
                             </div>
                             <div class="col4">
@@ -257,30 +255,33 @@
                                 <p>
                                     You need to register a <strong id="strongCompanyType">public</strong> company to apply for an ABN!
                                 </p>
-                                <div class="grid-row grid-row-block clearfix">
-                                    <div class="col1">
-                                        <input type="radio" id="rdHaveCompany" name="Compay" />
-                                    </div>
-                                    <div class="col11 last">
-                                        <label for="rdHaveCompany">
-                                            I have registered a company
-                                        </label>
-                                        <br />
-                                        <label for="acn" class="input-left">
-                                            ACN number:
-                                        </label> &nbsp;
-                                        <input type="number" id="acn" />
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div>
+										<p>
+											<input type="radio" id="rdHaveCompany" name="Compay" />
+											<label for="rdHaveCompany">
+												I have registered a company
+											</label>
+                                        </p>
+									</div>
+									<div class="col4">
+										<label for="acn" class="input-right">
+											ACN number:
+										</label>
+									</div>
+									<div class="col8 last">
+										<input type="number" id="acn" />
                                     </div>
                                 </div>
 
-                                <div class="grid-row grid-row-block grid-row-last clearfix">
-                                    <div class="col1">
-                                        <input type="radio" id="rdAddCompany" name="Compay" />
-                                    </div>
-                                    <div class="col11 last">
-                                        <label for="rdAddCompany">
-                                            I'd like to register a company
-                                        </label>
+                                <div class="grid-row grid-row-block grid-row-last custom-controls clearfix">
+                                    <div class="col12 last">
+										<p>
+											<input type="radio" id="rdAddCompany" name="Compay" />
+											<label for="rdAddCompany">
+												I'd like to register a company
+											</label>
+										</p>
                                     </div>
                                 </div>
                                 <p>
@@ -645,7 +646,7 @@
                 }
             });
 
-            // what your business dose
+            // what your business does
             $('[id^=whatBusinessWillDo]').click(function () {
                 //jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
                 if (this.id === "whatBusinessWillDoNone") {
