@@ -283,11 +283,14 @@ ul.section-nav li a:active {
   display: inline-block; 
   line-height: 1.4em; 
   vertical-align: top;
-  
-  &.list-item {
-     margin-left: 108px;
-     // TODO: add bullet icon
-  }
+}
+/* same as push-right, but without additional margin */
+.push-right-min {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 1.4em;
+  vertical-align: top;
 }
 .microcopy {
   color: $gray-dark;
@@ -515,12 +518,36 @@ button.closeSystemMessage:active {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
-    padding: 1em 1em 0.75em 1em;
-    margin: 0.5em 0;
+    padding: 1em 2em 0.75em 2em;
+    margin: 0.5em 0 1em 0;
 
 	fieldset {
-		font-size: 80%;
 		margin-bottom: 0.5em;
+		font-size: 80%;
+		
+		.indent {
+			margin-left: 2em;
+		}
+		
+		label {
+			font-family: open_sanslight,helvetica,arial,sans-serif;
+		}
+		
+		span.list-item:before {
+			content: "\25cf";
+			font-size: 80%;
+			margin-right:20px;
+			margin-left:-30px;
+		}
+		
+		span.list-item {
+			margin-left: 4em;
+			display: block;
+		
+			&:last-child {
+				margin-bottom: -1em;
+			}
+		}
 	
 		p.tick:before {
 			content: '\2713';
