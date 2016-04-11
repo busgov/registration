@@ -53,12 +53,25 @@
                 <h2>Business name <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Change</button></h2>
             </div>
             <div class="cart-container">
+                <div class="result-row" id="businessName1">
+                    <div class="result-cell cell-icon">
+                        <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>Bob's Whitegoods Repairs</h2>
+                        <p>Pending manual assessment.</p>
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $34</span>
+                        <a class="remove margin-left-075 no-margin-right" style="text-align: right" href="javascript:void(0);" id="linkOne"><span>Remove</span></a>
+                    </div>
+                </div><!-- result-row -->
                 <div class="result-row">
                     <div class="result-cell cell-icon">
                         <img src="assets/img/ico-tick-green.png" alt="Success" />
                     </div>
                     <div class="result-cell cell-detail">
-                        <h2>Fred's Consulting Services</h2>
+                        <h2>Bob's Plumbing</h2>
                         <p>Business name available.</p>
                     </div>
                     <div class="result-cell cell-action no-padding">
@@ -66,44 +79,89 @@
                         <a class="remove margin-left-075 no-margin-right" href="javascript:void(0);" id="linkTwo"><span>Remove</span></a>
                     </div>
                 </div><!-- result-row -->
+                <div class="result-row">
+                    <div class="result-cell cell-icon">
+                        <img src="assets/img/ico-tick-green.png" alt="Success" />
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <h2>JOHNSON PLUMBERS PTY PTD</h2>
+                        <p>Company name available.</p>
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $464</span>
+                    </div>
+                </div><!-- result-row -->
             </div><!-- cart-container -->
 
             <div class="cart-container">
                 <div class="result-row">
                     <div class="result-cell cell-total">
-                        <p>Total payment required: <strong>AU $34</strong></p>
+                        <p>Total payment required: <strong>AU $530</strong></p>
                     </div>
                 </div><!-- result-row -->
             </div><!-- cart-container -->
 
             <div class="confirmation-heading">
-                <h2>Sole trader details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+                <h2>Business associates <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
             </div>
             <table>
                 <tr>
                     <th class="field-name right">Name</th>
-                    <td class="input-value">Fred Charlesworth</td>
+                    <td class="input-value">Robert Johnson</td>
+                </tr>
+                <tr>
+                    <th class="field-name right">Office held</th>
+                    <td class="input-value">Director, Authorised contact</td>
                 </tr>
                 <tr>
                     <th class="field-name right">Residenital address</th>
                     <td class="input-value">8 William Harrelson Dr, South Somewhere - 2000 - NSW</td>
                 </tr>
                 <tr>
-                    <th class="field-name right">Email address</th>
-                    <td class="input-value">fred.charlesworth@ispname.com.au</td>
+                    <th class="field-name right no-border-bottom">Email address</th>
+                    <td class="input-value no-border-bottom">robert.johnson@ispname.com.au</td>
                 </tr>
-				<tr>
-					<th class="field-name right">TFN</th>
-					<td class="input-value">123 456 789</td>
-				</tr>
-				<tr>
-					<th class="field-name right">Date of birth</th>
-					<td class="input-value">08 April 1967</td>
-				</tr>
-				<tr>
-					<th class="field-name right no-border-bottom">Gender</th>
-					<td class="input-value no-border-bottom">Male</td>
-				</tr>
+            </table>
+            <table>
+                <tr>
+                    <th class="field-name right">Name</th>
+                    <td class="input-value">Michael Johnson</td>
+                </tr>
+                <tr>
+                    <th class="field-name right">Office held</th>
+                    <td class="input-value">Shareholder</td>
+                </tr>
+                <tr>
+                    <th class="field-name right">Residenital address</th>
+                    <td class="input-value">2/11 Preston St, McInnes - 2000 - NSW</td>
+                </tr>
+                <tr>
+                    <th class="field-name right no-border-bottom">Email address</th>
+                    <td class="input-value no-border-bottom">michael.johnson100@ispname.com.au</td>
+                </tr>
+            </table>
+
+
+            <div class="confirmation-heading">
+                <h2>Share allocation <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+            </div>
+            <table>
+                <tr>
+                    <th style="width: 25%">Shareholder</th>
+                    <th style="width: 15%">Share class/type</th>
+                    <th style="width: 15%">No. of shares</th>
+                    <th style="width: 15%">$ paid per share</th>
+                    <th style="width: 15%">$ unpaid per share</th>
+                    <th style="width: 15%">Beneficially held?</th>
+                </tr>
+                <tr>
+                    <td class="no-border-bottom">Michael Johnson</td>
+                    <td class="no-border-bottom">ORD</td>
+                    <td class="no-border-bottom">10000</td>
+                    <td class="no-border-bottom">$10.00</td>
+                    <td class="no-border-bottom">$5.00</td>
+                    <td class="no-border-bottom">No</td>
+                </tr>
             </table>
 
             <div class="confirmation-heading">
@@ -118,15 +176,15 @@
                 </thead>
                 <tr>
                     <td class="field-name">Business address line 1</td>
-                    <td class="input-value">997 Daley Road</td>
+                    <td class="input-value">1000 Potters Ln</td>
                 </tr>
                 <tr>
                     <td class="field-name">Suburb</td>
-                    <td class="input-value">Bacon Pines</td>
+                    <td class="input-value">Werami</td>
                 </tr>
                 <tr>
                     <td class="field-name">Postcode</td>
-                    <td class="input-value">2292</td>
+                    <td class="input-value">1234</td>
                 </tr>
                 <tr>
                     <td class="field-name">Country</td>
@@ -134,7 +192,7 @@
                 </tr>
                 <tr>
                     <td class="field-name no-border-bottom">Business phone number</td>
-                    <td class="input-value no-border-bottom">+61 987 654 321</td>
+                    <td class="input-value no-border-bottom">+61 123 456 789</td>
                 </tr>
             </table>
 
@@ -154,15 +212,15 @@
                 </tr>
                 <tr>
                     <td class="field-name">ABN start date</td>
-                    <td class="input-value">01 May 2016</td>
+                    <td class="input-value">01 December 2015</td>
                 </tr>
                 <tr>
                     <td class="field-name">Industry type</td>
-                    <td class="input-value">Information Technology</td>
+                    <td class="input-value">Electricity, gas, water and waste</td>
                 </tr>
                 <tr>
                     <td class="field-name no-border-bottom">Main activity</td>
-                    <td class="input-value no-border-bottom">IT Consulting Services</td>
+                    <td class="input-value no-border-bottom">Plumbing</td>
                 </tr>
             </table>
 
@@ -178,11 +236,11 @@
                 </thead>
                 <tr>
                     <td class="field-name">GST start date</td>
-                    <td class="input-value">01 May 2016</td>
+                    <td class="input-value">01 December 2015</td>
                 </tr>
                 <tr>
                     <td class="field-name">Estimated turnover</td>
-                    <td class="input-value">$150,000 to $199,999</td>
+                    <td class="input-value">$0 to $74,999</td>
                 </tr>
                 <tr>
                     <td class="field-name">Launch activity statements</td>
@@ -198,11 +256,47 @@
                 </tr>
             </table>
 
+            <div class="confirmation-heading">
+                <h2>Pay as you go (PAYG) withholding <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+            </div>
+            <table>
+                <thead class="visuallyhidden">
+                    <tr>
+                        <th>Field item</th>
+                        <th>Input value</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="field-name">Withholding start date</td>
+                    <td class="input-value">01 December 2015</td>
+                </tr>
+                <tr>
+                    <td class="field-name">Number of employees</td>
+                    <td class="input-value">1</td>
+                </tr>
+                <tr>
+                    <td class="field-name">Amount withholding from payees</td>
+                    <td class="input-value">$15,000</td>
+                </tr>
+                <tr>
+                    <td class="field-name">Method for providing summary to the ATO</td>
+                    <td class="input-value">Electronically</td>
+                </tr>
+                <tr>
+                    <td class="field-name">Method for providing summary to payees</td>
+                    <td class="input-value">Use summaries provided by ATO</td>
+                </tr>
+                <tr>
+                    <td class="field-name no-border-bottom">Paying royalties, dividends or interest to non-residents or investment income</td>
+                    <td class="input-value no-border-bottom">No</td>
+                </tr>
+            </table>
+
            <div class="confirmation-heading">
                 <h2>Declaration</h2>
             </div>
 			<div class="declaration-container">
-				<!-- div class="grid-row clearfix">
+				<div class="grid-row clearfix">
 					<div class="col4">
 						<label for="declaree" class="input-left">Who is making the declaration?</label>
 					</div>
@@ -210,75 +304,62 @@
 						<select id="declaree">
 							<option value="1" selected>Isabella McGrath (lodger)</option>
 							<option value="2">Robert Johnson (director)</option>
-							<option value="3">Michael Johnson (secretary)</option>
 						</select>
 					</div>
-				</div -->
+				</div>
 				<div class="declaration-wrapper">
 					<fieldset>
 						<legend class="larger no-padding-bottom">Australian Securities and Investments Commission (ASIC)</legend>
+						<div class="grid-row agent">
+							<p>You must be authorised by the applicant to make each of the declarations on behalf of the applicant and to submit this application.<br>
+							See <a href="http://www.asic.gov.au/asic/ASIC.NSF/byHeadline/Authorised%20lodgers%20for%20business%20names" target="_blank">who may be authorised to lodge an application to register a business name<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> for more information.</p>
+						</div>
 						<div class="grid-row">
-							<h3>Authority</h3>
-							<p>If you are not the applicant, you must be authorised by the applicant to make each of the declarations on behalf of the applicant and to submit this application.</p>
-							<p>See <a href="http://www.asic.gov.au/asic/ASIC.NSF/byHeadline/Authorised%20lodgers%20for%20business%20names" target="_blank">who may be authorised to lodge an application to register a business name<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> for more information.</p>
+							<p>I declare that:</p>
 						</div>
 						<div class="grid-row">
 							<ul>
+								<li class="applicant">I am the applicant (the proposed business name holder)</li>
 								<li>This application is submitted under, and is compliant with, the terms and conditions of the <a href="http://asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">ASIC Electronic Lodgment Protocol<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a></li>
 								<li>To the best of my knowledge, the information supplied in this application is complete and accurate (it is an offence to provide false or misleading information to ASIC).</li>
+								<li class="agent">I am lodging this application on behalf of the applicant (the proposed business name holder) and am authorised to:
+									<ul>
+										<li>submit this application for lodgment on behalf of the applicant under the terms and conditions of the ASIC Electronic Lodgment Protocol; and</li>
+										<li>make each of the above declarations on behalf of the applicant after making all due and proper enquiries.</li>
+									</ul>
+								</li>
 							</ul>
-						</div>
-						<div class="grid-row">
-							<h3>Declaration</h3>
-							<p>Please select one.</p>
-						
-						</div>
-						<div class="indent">
-							<div class="grid-row">
-								<p>I declare that:</p>
-							</div>
-							<div class="grid-row margin-left-075">
-								<input type="radio" name="dec-grp-1" id="dec-1" />
-								<label for="dec-1" name="dec-grp-1">I am the applicant (the proposed business name holder)</label><br>
-								<input type="radio" name="dec-grp-1" id="dec-2" />
-								<label for="dec-2" name="dec-grp-1">I am lodging this application on behalf of the applicant (the proposed business name holder) and am authorised to:<br />
-										<span class="list-item">submit this application for lodgment on behalf of the applicant under the terms and conditions of the ASIC Electronic Lodgment Protocol; and</span>
-										<span class="list-item">make each of the above declarations on behalf of the applicant after making all due and proper enquiries.</span>
-									</span>
-								</label>
-							</div>
 						</div>
 						<div class="grid-row">
 							<p>ASIC may contact the applicant or the lodging party (if any) if there are any questions regarding this application for registration of a business name.</p>
 						</div>
 						<div class="grid-row">
 							<h3>Eligibility</h3>
-							<p>The applicant must declare that the following statements are true to confirm eligibility to register a business name. If either of these statements are untrue your application will be forwarded to an ASIC staff member to determine whether you are eligible under the Business Names Registration Act 2011.</p>
-							<p>If you are not the applicant you must be authorised by the applicant to make either of these declarations on behalf of the applicant:</p>
+							<p>The applicant must declare that the following statements are true to confirm eligibility to register a business name. If either of these statements are untrue your application will be forwarded to an ASIC staff member to determine whether you are eligible under the <a href="#"><em>Business Names Registration Act 2011</em><img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</p>
+							<p class="agent">If you are not the applicant you must be authorised by the applicant to make either of these declarations on behalf of the applicant:</p>
 						</div>
-						<div class="indent">
+						<div class="grid-row">
 							<p>Declaration by applicant of eligibility to hold a business name:</p>
-							<div class="grid-row margin-left-075">
-								<input type="checkbox" id="eligibility-1" />
-								<label for="eligibility-1">I am not disqualified from managing corporations under section 206B(1) of the Corporations Act 2001; and</label><br>
-								<input type="checkbox" id="eligibility-2" />
-								<label for="eligibility-2">Within the last 5 years I have not been:<br />
-										<span class="list-item">convicted of, or</span>
-										<span class="list-item">released from prison after being convicted of, and serving a term of imprisonment for, any of the  criminal offences referred to in section 32(1) (c) or (d) of the Business Names Registration Act 2011</span>
-									</span>
-								</label>
-							</div>
+						</div>
+						<div class="grid-row margin-left-075">
+							<input type="checkbox" id="eligibility-1" />
+							<label for="eligibility-1">I am not disqualified from managing corporations under section 206B(1) of the <a href="#"><em>Corporations Act 2001</em><img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>; and</label><br>
+							<input type="checkbox" id="eligibility-2" />
+							<label for="eligibility-2">Within the last 5 years I have not been:<br />
+									<span class="list-item">convicted of, or</span>
+									<span class="list-item">released from prison after being convicted of, and serving a term of imprisonment for, any of the  criminal offences referred to in section 32(1) (c) or (d) of the <a href="#"><em>Business Names Registration Act 2011</em><img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a></span>
+								</span>
+							</label>
 						</div>
 					</fieldset>
 					<fieldset>
 						<legend class="larger no-padding-bottom">Australian Taxation Office (ATO)</legend>
 						<div class="grid-row">
-							<p><strong>I declare that:</strong></p>
-							<ul>
+							<p>I declare that:</p>
+							<ul class="applicant">
 								<li>The information in this application is true and correct.</li>
 							</ul>
-							<p><strong>OR I declare that:</strong></p>
-							<ul>
+							<ul class="agent">
 								<li>This document has been prepared in accordance with information supplied by the entity.</li>
 								<li>I have received a declaration in writing from the entity stating that the information is true and correct.</li>
 								<li>I am authorised by the entity to give this document to the Commissioner of Taxation or Registrar of the Australian Business Register.</li>
@@ -355,7 +436,21 @@
             visionaustralia.closeDialog("dialogOne");
             $('#businessName1').toggle("fast");
         });
+		
+		$('.applicant').hide();
 
+		$('#declaree').change(function toggleDeclaration() {
+			switch ($('#declaree option:selected').index()) {
+				case 0:
+					$('.applicant').hide();
+					$('.agent').show();
+					break;
+				case 1:
+					$('.applicant').show();
+					$('.agent').hide();
+					break;
+			}
+		});
     </script>
     <script type="text/javascript" src="assets/js/vadialog.js"></script> 
     <script type="text/javascript">
