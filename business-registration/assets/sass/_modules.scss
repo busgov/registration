@@ -529,6 +529,14 @@ button.closeSystemMessage:active {
 			margin-left: 2em;
 		}
 		
+		.grid-row {
+			margin-bottom: 1em;
+		}
+		
+		h3 {
+			font-size: 100%;
+		}
+		
 		label {
 			font-family: open_sanslight,helvetica,arial,sans-serif;
 		}
@@ -544,7 +552,7 @@ button.closeSystemMessage:active {
 			display: block;
 		
 			&:last-child {
-				margin-bottom: -1em;
+				margin-bottom: -1.5em;
 			}
 		}
 	
