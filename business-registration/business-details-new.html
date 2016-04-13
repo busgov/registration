@@ -1,0 +1,1069 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business details | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper wrapper-main">
+        <header class="clearfix">
+            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="settings.html"><span>Settings</span></a>
+                        <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#" class="btn-save">Save and return</a></li>
+                                <li><a href="#">Start a new application</a></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="confirmation">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span id="progress-percent" style="width: 40%"></span>
+                </div><!-- meter -->
+                <ul class="section-nav">
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+                    <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
+                    <li class="active"><span>3</span><br>Business<br> details</li>
+                    <li><span>4</span><br>Taxation<br>details</li>
+                    <li><span>5</span><br>Confirm<br> application</li>
+                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                </ul>
+            </div><!-- progress-container -->
+            <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
+            <p>All fields are required unless marked as optional.</p>
+
+            
+            <!-- START SECTION 1 -->
+            <div id="section1" class="sub-section-container sub-section-open">
+                <h2>Sole trader details</h2>
+                <div class="sub-section-content">
+                    <fieldset class="margin-bottom-075">
+                        <legend class="margin4 larger">Your details</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-given" class="input-right">Given name</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="individual1-given" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="individual1-other" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-family" class="input-right">Family name</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="individual1-family" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-dob" class="input-right">Date of birth</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="individual1-dob" type="date">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-country" class="input-right">Country of birth</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="individual1-country" >
+									<option selected>Australia</option>
+									<option>Canada</option>
+									<option>Indonesia</option>
+									<option>New Zealand</option>
+									<option>etc</option>
+								</select>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-state" class="input-right">State or territory of birth</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="individual1-state" >
+									<option>Please select...</option>
+									<option>Australian Capital Territory</option>
+									<option>New South Wales</option>
+									<option>Queensland</option>
+									<option>etc</option>
+								</select>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="individual1-place" class="input-right">Place of birth</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input type="text" id="individual1-place" />
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                &nbsp;
+                            </div><!-- col -->
+                            <div class="col7 custom-controls">
+                                <p>
+                                    <input type="checkbox" id="auth" checked class="showhide-trigger" />
+                                    <label for="auth">This person is also the authorised contact</label>
+                                </p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+					</fieldset>
+					<!-- div id="authtable" style="display: none;">
+                        <table>
+							<caption>Authorised contacts</caption>
+                             <thead>
+                                <tr>
+                                    <th style="width: 10%">Tax agent</th>
+                                    <th style="width: 15%">Name</th>
+                                    <th style="width: 10%">Language</th>
+                                    <th style="width: 15%">Relationship</th>
+                                    <th style="width: 20%">Contact Nos</th>
+                                    <th style="width: 20%">Email</th>
+									<th style="width: 10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="authtablebody">
+                            </tbody>
+                        </table>
+                    </div -->
+					<div id="altauthtable" class="confirmation" style="display: none">
+						<h3 class="margin4">Authorised contacts</h3>
+					</div>
+					<div id="authform" class="showhide-target col12" style="display: none">
+						<fieldset class="margin-bottom-075">
+							<legend class="margin4 larger">Authorised contact details</legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="accountant" class="input-right">Tax agent number <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="accountant" type="number">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="name1" class="input-right">Given name</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="name1" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="name2" class="input-right">Family name</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="name2" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="language" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="relationship" class="input-right">Relationship <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="relationship" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="mobile" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="bushours" class="input-right">Business hours phone</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="bushours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="afterhours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="email" class="input-right">Email</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="email" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							&nbsp;
+						</div><!-- col -->
+						<div class="col7 custom-controls">
+							<p><button id="auth-btn" type="button" class="btn btn-default btn-add">Add another contact</button></p>
+						</div>
+					</div>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                        </div><!-- controls-content -->
+                    </div>
+				</div>
+			</div>
+				
+
+			<!-- START SECTION 2 -->
+			<div id="section2" class="sub-section-container">
+				<h2>Proof of identity</h2>
+                <div class="sub-section-content">
+                    <fieldset id="fieldsetPOIAddress">
+                        <legend class="hidden">Proof of identity</legend>
+						<div class="grid-row">
+							<div class="col4">
+								<p>&nbsp;</p>
+							</div>
+							<div class="col8 last">
+								<p>We require either the person's tax file number (TFN) or home address.</p>
+								<p>Providing a TFN is the quickest way to prove identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter a home address</a> if you prefer.</p>
+							</div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="tfn" class="input-right">Tax File Number</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="tfn" type="number">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="dob" class="input-right">Date of birth<br /><span class="field-note">(DD/MM/YYYY)</span></label>
+                            </div>
+                            <div class="col8 last">
+                                <input id="dob" type="date">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="gender" class="input-right">Gender</label>
+                            </div>
+                            <div class="col8 last">
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="gender-male"><input id="gender-male" type="radio" name="gender"><span>Male</span></label>
+                                    <label class="off label-middle" for="gender-female"><input id="gender-female" type="radio" name="gender"><span>Female</span></label>
+                                    <label class="off label-right" for="gender-undetermined"><input id="gender-undetermined" type="radio" name="gender"><span>Undetermined</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                        </div><!-- controls-content -->
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+			
+			<!-- START SECTION 3 -->
+			<div id="section3" class="sub-section-container">
+				<h2>Your contact details</h2>
+				<div class="sub-section-content">
+					<fieldset class="margin-bottom-075">
+						<legend class="larger margin4">Residential address</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addrline1" class="input-right">Address line 1</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addrline1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addrline2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addrline2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="suburb1" class="input-right">Suburb</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="suburb1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="state1" class="input-right">State</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="state1" >
+									<option>Please select...</option>
+									<option>Australian Capital Territory</option>
+									<option>New South Wales</option>
+									<option>Queensland</option>
+									<option>etc</option>
+								</select>
+							</div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="postcode1" class="input-right">Postcode</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="postcode1" type="number">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="country1" class="input-right">Country <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="country1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+					<div class="grid-row custom-controls">
+						<div class="col4">
+							<p>&nbsp;</p>
+						</div><!-- col -->
+						<div class="col8 last">
+							<p>
+								<input id="diffpostaladdr" type="checkbox">
+								<label for="diffpostaladdr">My postal address is different</label>
+							</p>
+						</div><!-- col -->
+					</div><!-- grid-row -->
+					<fieldset id="postaladdr" class="margin-bottom-075" style="display: none">
+						<legend class="larger margin4">Postal address</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addr3line1" class="input-right">Address line 1</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addr3line1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addr3line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addr3line2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="suburb3" class="input-right">Suburb</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="suburb3" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="state3" class="input-right">State</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="state3" >
+									<option>Please select...</option>
+									<option>Australian Capital Territory</option>
+									<option>New South Wales</option>
+									<option>Queensland</option>
+									<option>etc</option>
+								</select>
+							</div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="postcode3" class="input-right">Postcode</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="postcode3" type="number">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="country3" class="input-right">Country <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="country3" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+					<div class="grid-row custom-controls">
+						<div class="col4">
+							<p>&nbsp;</p>
+						</div><!-- col -->
+						<div class="col8 last">
+							<p>
+								<input id="diffbusaddr" type="checkbox">
+								<label for="diffbusaddr">My business address is different</label>
+							</p>
+						</div><!-- col -->
+					</div><!-- grid-row -->
+					<fieldset id="busaddr" class="margin-bottom-075" style="display: none">
+						<legend class="larger margin4">Business address</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addr2line1" class="input-right">Address line 1</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addr2line1" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addr2line2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="suburb2" class="input-right">Suburb</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="suburb2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="state2" class="input-right">State</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="state2" >
+									<option>Please select...</option>
+									<option>Australian Capital Territory</option>
+									<option>New South Wales</option>
+									<option>Queensland</option>
+									<option>etc</option>
+								</select>
+							</div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="postcode2" class="input-right">Postcode</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="postcode2" type="number">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="country2" class="input-right">Country <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="country2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+					<fieldset>
+						<legend class="larger margin4">Contact details</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="contactphone" class="input-right">Phone <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="contactphone" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="contactemail" class="input-right">Email</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="contactemail" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+					<fieldset>
+						<legend class="hidden">Main business activity</legend>
+						<div class="grid-row">
+                            <div class="col4">
+                                <label for="busactivity" class="input-right">Choose your main business activity<br>
+								<span class="field-note">(Start typing and choose from the options presented)</span></label>
+                            </div><!-- col -->
+							<div class="col8 last">
+								<input id="busactivity" type="text">
+								<button type="button" class="btn">search</button>
+							</div>
+						</div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="contactactivity" class="input-right">Selected activity</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="contactactivity" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                        </div><!-- controls-content -->
+                    </div>
+				</div>
+			</div>
+
+            <!-- START SECTION 4 -->
+            <div id="section4" class="sub-section-container">
+                <h2>Reason for application</h2>
+                <div class="sub-section-content">
+                    <fieldset id="fieldsetReasonForApplication">
+                        <legend class="larger">Australian Business Number (ABN)</legend>
+                        <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
+
+                        <div class="grid-row grid-row-block clearfix custom-controls">
+                            <div class="col11">
+                                <p>
+                                    <input id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
+                                    <label for="new-business">
+                                        <span class="push-right">
+                                            <strong>New business in Australia</strong><br />
+                                            You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.
+                                        </span>
+                                    </label>
+                                </p>
+                            </div>                       
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row padding-bottom-1 clearfix showhide-target" id="new-business-check" style="display:none">
+                            <div class="col1">&nbsp;</div>
+                            <div class="col11 last">
+                                <p class="no-margin-top"><label for="australia">Is this your first time in business in Australia?</label></p>
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="australia-yes"><input id="australia-yes" type="radio" name="australia"><span>Yes</span></label>
+                                    <label class="off label-right" for="australia-no"><input id="australia-no" type="radio" name="australia"><span>No</span></label>
+                                </div>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+									<input id="radio02" class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio02">
+                                        <span class="push-right">
+											<strong>Investment purposes</strong><br>
+											For example, if you earn income as a result of an investment.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-reveal clearfix showhide-target" id="new-investment-check" style="display:none">
+                            <div class="col1">
+                                <p>&nbsp;</p>
+                            </div><!-- col -->
+                            <div class="col10 last">
+                                <p class="no-margin-top"><label for="australia2">Is this your first time in business in Australia?</label></p>
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="investment-yes"><input id="investment-yes" type="radio" name="australia2"><span>Yes</span></label>
+                                    <label class="off label-right" for="investment-no"><input id="investment-no" type="radio" name="australia2"><span>No</span></label>
+                                </div>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+									<input id="radio03"  class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio03">
+										<span class="push-right">
+											<strong>Bought existing business</strong><br>
+											You have bought or taken over an existing business.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+	                                <input id="radio04" class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio04">
+										<span class="push-right">
+											<strong>Contractor or subcontractor</strong><br>
+											You are contracting or subcontracting your services.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+	                                <input id="radio05"  class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio05">
+										<span class="push-right">
+											<strong>To receive payment for services</strong><br>
+											You need an ABN to receive payment for services.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+									<input id="radio06"  class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio06">
+										<span class="push-right">
+											<strong>Recommended business</strong><br>
+											You have recommended a business as a sole trader.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+									<input id="radio07"  class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio07">
+										<span class="push-right">
+											<strong>Change in business structure</strong><br>
+											The legal structure of your business has changed. For example, from a partership to a sole trader.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row grid-row-block grid-row-last custom-controls clearfix">
+                            <div class="col11">
+                            	<p>
+									<input id="radio08"  class="showhide-trigger" name="radiogroup1" type="radio">
+									<label for="radio08">
+										<span class="push-right">
+											<strong>Other circumstances</strong><br>
+											Only select this option of none of the above apply.
+										</span>
+									</label>
+								</p>
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+                    </fieldset>
+
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                        </div><!-- controls-content -->
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+            
+            <!-- START SECTION 5 -->
+            <div id="section5" class="sub-section-container">
+                <h2>Business activity details</h2>
+                <div class="sub-section-content">
+                    <fieldset>
+                        <legend class="margin4 larger">ABN registration</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="start-date" class="input-right">Select ABN <strong>start</strong> date <span class="field-note">(dd/mm/yyyy)</span></label>
+                            </div><!-- col -->
+                            <div class="col7">
+                                <input id="start-date" type="date" />
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+                        <div id="divAbnEnddate">
+                            <div class="grid-row">
+                                <div class="col4">&nbsp;</div>
+                                <div class="col8 last custom-controls">
+                                    <p>
+                                        <input id="end-date-yes" type="checkbox" class="showhide-trigger" />
+                                        <label for="end-date-yes">Business activity will cease within 3 months of start date</label>
+                                    </p>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="grid-row grid-row-reveal clearfix showhide-target" style="display:none">
+                                <div class="col4">
+                                    <label for="end-date" class="input-right">Select ABN <strong>end</strong> date <span class="field-note">(dd/mm/yyyy)</span></label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="end-date" type="date" />
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div>
+
+                        <div id="divManualActivity">
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="business-activity" class="input-right">
+                                        Choose your main business activity<br />
+                                        <span class="field-note">(choose from the options presented)</span>
+                                    </label>
+                                </div>
+                                <div class="col7">
+                                    <input id="business-activity" type="text" placeholder="Start typing activity">
+                                </div>
+                                <div class="col1 last">
+                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="grid-row grid-row-padding-bottom">
+                        <fieldset id="validation-test-field3" class="no-margin">
+                            <legend class="col4 input-right"><span id="agricultural">Does the sole trader operate an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                            <div class="col8 last">
+                                <div class="col12 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="on-agricultural"><input id="on-agricultural" type="radio" name="agricultural"><span>Yes</span></label>
+                                        <label class="off label-right" for="off-agricultural"><input id="off-agricultural" type="radio" name="agricultural"><span>No</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div><!-- grid-row -->
+
+                    <div class="grid-row grid-row-padding-bottom">
+                        <fieldset id="validation-test-field3" class="no-margin">
+                            <legend class="col4 input-right"><span id="agricultural">Is the applicant an Australian resident for taxation purposes?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                            <div class="col8 last">
+                                <div class="col12 last">
+                                    <div class="radio-toggle">
+                                        <label class="on label-left" for="on-resident"><input id="on-resident" type="radio" name="resident"><span>Yes</span></label>
+                                        <label class="off label-right" for="off-resident"><input id="off-resident" type="radio" name="resident"><span>No</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div><!-- grid-row -->
+
+                    <fieldset id="fieldsetAddress">
+                        <legend class="margin4 larger">Business address</legend>
+                        <div class="grid-row no-margin">
+                            <div class="col4">
+                                <label for="address-suggest" class="input-right">Business address<br /><span class="field-note">(choose from the options presented)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="address-suggest" type="text">
+                                <p><a href="" id="manual" class="showhide-trigger">Can't find address</a></p>
+                                <p><a href="" id="addressSearch" class="showhide-trigger" style="display: none">Back to address search</a></p>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-container showhide-target" id="manualAddress" style="display: none">
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line1" class="input-right">Address line 1</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line1" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="address-line2" class="input-right">Address line 2</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="address-line2" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="suburb" class="input-right">Suburb</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="suburb" type="text">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                            <div class="grid-row">
+                                <div class="col4">
+                                    <label for="postcode" class="input-right">Postcode</label>
+                                </div><!-- col -->
+                                <div class="col8 last">
+                                    <input id="postcode" type="number">
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+                        </div><!-- manualAddress -->
+                        <div class="grid-row custom-controls">
+                            <div class="margin4">
+                                <p>
+                                    <input type="checkbox" id="address-same" />
+                                    <label for="address-same">My postal address is different</label>
+                                </p>
+                            </div>
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                &nbsp;
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <p><button type="button" class="btn btn-default">Add another address</button></p>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="office-phone" class="input-right">Office phone</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="office-phone" type="phone">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="mobile-phone" class="input-right">Mobile</label>
+                            </div><!-- col -->
+                            <div class="col7">
+                                <input id="mobile-phone" type="phone">
+                            </div><!-- col -->
+                            <div class="col1 last">
+                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                            </div>
+                        </div><!-- grid-row -->
+                        
+                    </fieldset>
+
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button>
+                            <button type="button" class="btn btn-default" onclick="location.href='taxation-details.html'">Continue to step 4</button>
+                        </div><!-- controls-content -->
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+
+        </main>
+
+    </div><!-- wrapper -->
+
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script>
+		var authstate = 0;
+
+        $(document).ready(function () {
+            /* Expand collapse headings config */
+            navigationWithinPage();
+            initSaveForLater();
+            initApplicationOptions();
+            // the following code is to register the slide up/down effect. this is
+            // a customized jQuery plugin, the element that registered registerToggleSlide is
+            // actually the scope of the effect.
+			
+			$('#auth-btn').click(function() {
+			/*
+				switch(authstate) {
+					case 0:
+						$('#authform').show();
+						authstate = 1;
+						break;
+					case 1:
+						$('#authform input').val('');
+						$('#authtable').show();
+						$('#authtablebody').append("<tr><td>123456</td><td>Justin Johnson</td><td>&nbsp;</td><td>Accountant</td><td>m: 0455 555 555<br>bh: 6100 0000<br>ah: 6199 9999</td>"
+									+ "<td>jjohnson@accountant.com</td>" 
+									+ '<td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>'
+									+ "</tr>");
+						break;
+				
+				} */
+				if (authstate == 0) {
+					$('#authform').show();
+					authstate = 1;
+					return;
+				}
+
+				var table = "<table><tbody>";
+
+				if ($('#accountant').val())
+					table += '<tr><th class="field-name right">Taxt agent number</th><td class="input-value">' + $('#accountant').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Name</th><td class="input-value">';
+				table += $('#name1').val() + " " + $('#name2').val() + '</td></tr>';
+
+				if ($('#language').val())
+					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
+
+				if ($('#relationship').val())
+					table += '<tr><th class="field-name right">Relationship</th><td class="input-value">' + $('#relationship').val() + '</td></tr>';
+
+				if ($('#mobile').val())
+					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
+
+
+				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#bushours').val() + '</td></tr>';
+
+				if ($('#afterhours').val())
+					table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#afterhours').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#email').val() + '</td></tr>';
+				
+				table += "</tbody></table>";
+				
+				$('#altauthtable').append(table).show();
+				$('#authform input').val('');
+			});
+			
+			$('#diffbusaddr').click(function() {
+				$('#busaddr').toggle($('#diffbusaddr').prop('checked'));
+			});
+			$('#diffpostaladdr').click(function() {
+				$('#postaladdr').toggle($('#diffpostaladdr').prop('checked'));
+			});
+			
+//            $("#basic-toggle").registerToggleSlide({
+//                triggerClass: ".showhide-trigger",
+//                targetClass: ".showhide-target",
+//                clearOthers: false
+//            });
+
+            $("#fieldsetReasonForApplication").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: true
+            });
+
+            $("#divContact").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false
+            });
+
+            $("#divAbnEnddate").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false
+            });
+
+            $("#fieldsetAddress").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                toggleIds: "address-suggest;manual;addressSearch",
+                toggleSlideSameElement: true
+            });
+
+            $("#divIndustryType").registerToggleSlide({
+                event: "change",
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                matchValue: "industry01"
+            });
+
+            $("#divManualActivity").registerToggleSlide({
+                triggerClass: ".showhide-trigger",
+                targetClass: ".showhide-target",
+                clearOthers: false,
+                toggleIds: "business-activity;manaulBusinessActivity;autoBusinessActivity",
+                toggleSlideSameElement: true
+            });
+        });
+
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+    </script>
+</body>
+</html>
