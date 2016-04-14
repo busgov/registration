@@ -32,7 +32,7 @@
             </nav>
         </header>
 
-        <main class="confirmation">
+        <main>
             <div class="progress-container">
                 <div class="progress-bar">
                     <span id="progress-percent" style="width: 40%"></span>
@@ -108,7 +108,7 @@
                             </div><!-- col -->
                             <div class="col8 last">
 								<select id="individual1-state" >
-									<option>Please select...</option>
+									<option value="">Please select...</option>
 									<option>Australian Capital Territory</option>
 									<option>New South Wales</option>
 									<option>Queensland</option>
@@ -131,7 +131,7 @@
                             <div class="col7 custom-controls">
                                 <p>
                                     <input type="checkbox" id="auth" checked class="showhide-trigger" />
-                                    <label for="auth">This person is also the authorised contact</label>
+                                    <label for="auth">This person is also an authorised contact</label>
                                 </p>
                             </div><!-- col -->
                             <div class="col1 last">
@@ -139,134 +139,14 @@
                             </div>
                         </div><!-- grid-row -->
 					</fieldset>
-					<!-- div id="authtable" style="display: none;">
-                        <table>
-							<caption>Authorised contacts</caption>
-                             <thead>
-                                <tr>
-                                    <th style="width: 10%">Tax agent</th>
-                                    <th style="width: 15%">Name</th>
-                                    <th style="width: 10%">Language</th>
-                                    <th style="width: 15%">Relationship</th>
-                                    <th style="width: 20%">Contact Nos</th>
-                                    <th style="width: 20%">Email</th>
-									<th style="width: 10%"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="authtablebody">
-                            </tbody>
-                        </table>
-                    </div -->
-					<div id="altauthtable" class="confirmation" style="display: none">
-						<h3 class="margin4">Authorised contacts</h3>
-					</div>
-					<div id="authform" class="showhide-target col12" style="display: none">
-						<fieldset class="margin-bottom-075">
-							<legend class="margin4 larger">Authorised contact details</legend>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="accountant" class="input-right">Tax agent number <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="accountant" type="number">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="name1" class="input-right">Given name</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="name1" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="name2" class="input-right">Family name</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="name2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="language" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="relationship" class="input-right">Relationship <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="relationship" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="mobile" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="bushours" class="input-right">Business hours phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="bushours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="afterhours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="email" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="email" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-					</div>
-					<div class="grid-row">
-						<div class="col4">
-							&nbsp;
-						</div><!-- col -->
-						<div class="col7 custom-controls">
-							<p><button id="auth-btn" type="button" class="btn btn-default btn-add">Add another contact</button></p>
-						</div>
-					</div>
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button type="button" class="btn btn-default next">Next</button>
-                        </div><!-- controls-content -->
-                    </div>
-				</div>
-			</div>
-				
-
-			<!-- START SECTION 2 -->
-			<div id="section2" class="sub-section-container">
-				<h2>Proof of identity</h2>
-                <div class="sub-section-content">
                     <fieldset id="fieldsetPOIAddress">
-                        <legend class="hidden">Proof of identity</legend>
+                        <legend class="margin4 larger">Proof of identity</legend>
 						<div class="grid-row">
 							<div class="col4">
 								<p>&nbsp;</p>
 							</div>
 							<div class="col8 last">
-								<p>We require either the person's tax file number (TFN) or home address.</p>
-								<p>Providing a TFN is the quickest way to prove identity, but you can <a href="#" id="useHomeAddress" class="showhide-trigger">enter a home address</a> if you prefer.</p>
+								<p>In order to proceed with your application, we will need to confirm your identity. Providing your TFN is the quickest way to prove your identity.</p>
 							</div>
                         <div class="grid-row">
                             <div class="col4">
@@ -276,74 +156,112 @@
                                 <input id="tfn" type="number">
                             </div><!-- col -->
                         </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="dob" class="input-right">Date of birth<br /><span class="field-note">(DD/MM/YYYY)</span></label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="dob" type="date">
-                            </div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="gender" class="input-right">Gender</label>
-                            </div>
-                            <div class="col8 last">
-                                <div class="radio-toggle">
-                                    <label class="on label-left" for="gender-male"><input id="gender-male" type="radio" name="gender"><span>Male</span></label>
-                                    <label class="off label-middle" for="gender-female"><input id="gender-female" type="radio" name="gender"><span>Female</span></label>
-                                    <label class="off label-right" for="gender-undetermined"><input id="gender-undetermined" type="radio" name="gender"><span>Undetermined</span></label>
-                                </div>
-                            </div>
-                        </div>
-
                     </fieldset>
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
-			
+				</div>
+			</div>
+				
 			<!-- START SECTION 3 -->
 			<div id="section3" class="sub-section-container">
-				<h2>Your contact details</h2>
+				<h2>Business location details</h2>
 				<div class="sub-section-content">
-					<fieldset class="margin-bottom-075">
+					<!--fieldset class="margin-bottom-075">
 						<legend class="larger margin4">Residential address</legend>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="addrline1" class="input-right">Address line 1</label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="addrline1" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                            </div>
+                        </div>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="addrline2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="addrline2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                            </div>
+                        </div>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="suburb1" class="input-right">Suburb</label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="suburb1" type="text">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="state1" class="input-right">State</label>
+                            </div>
+                            <div class="col8 last">
+								<select id="state1" >
+									<option vlaue="">Please select...</option>
+									<option>Australian Capital Territory</option>
+									<option>New South Wales</option>
+									<option>Queensland</option>
+									<option>etc</option>
+								</select>
+							</div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="postcode1" class="input-right">Postcode</label>
+                            </div>
+                            <div class="col8 last">
+                                <input id="postcode1" type="number">
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="country1" class="input-right">Country <span class="field-note">(optional)</span></label>
+                            </div>
+                            <div class="col8 last">
+                                <input id="country1" type="text">
+                            </div>
+                        </div>
+					</fieldset -->
+					<fieldset id="busaddr" class="margin-bottom-075">
+						<legend class="larger margin4">Main business address</legend>
+						<div class="grid-row">
+							<p class="margin4">Your main business location must be a physical address.</p>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="addr2line1" class="input-right">Address line 1</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="addr2line1" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="state1" class="input-right">State</label>
+                                <label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
                             </div><!-- col -->
                             <div class="col8 last">
-								<select id="state1" >
-									<option>Please select...</option>
+                                <input id="addr2line2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="suburb2" class="input-right">Suburb</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="suburb2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="state2" class="input-right">State</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+								<select id="state2" >
+									<option value="">Please select...</option>
 									<option>Australian Capital Territory</option>
 									<option>New South Wales</option>
 									<option>Queensland</option>
@@ -353,18 +271,37 @@
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="postcode1" class="input-right">Postcode</label>
+                                <label for="postcode2" class="input-right">Postcode</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="postcode1" type="number">
+                                <input id="postcode2" type="number">
                             </div><!-- col -->
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="country1" class="input-right">Country <span class="field-note">(optional)</span></label>
+                                <label for="country2" class="input-right">Country</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="country1" type="text">
+                                <input id="country2" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+					</fieldset>
+					<fieldset class="margin-bottom-075">
+						<legend class="larger margin4">Contact details</legend>
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="contactphone" class="input-right">Phone <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="contactphone" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="contactemail" class="input-right">Email <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="contactemail" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
 					</fieldset>
@@ -411,7 +348,7 @@
                             </div><!-- col -->
                             <div class="col8 last">
 								<select id="state3" >
-									<option>Please select...</option>
+									<option value="">Please select...</option>
 									<option>Australian Capital Territory</option>
 									<option>New South Wales</option>
 									<option>Queensland</option>
@@ -429,107 +366,21 @@
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="country3" class="input-right">Country <span class="field-note">(optional)</span></label>
+                                <label for="country3" class="input-right">Country</label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="country3" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
 					</fieldset>
-					<div class="grid-row custom-controls">
-						<div class="col4">
-							<p>&nbsp;</p>
-						</div><!-- col -->
-						<div class="col8 last">
-							<p>
-								<input id="diffbusaddr" type="checkbox">
-								<label for="diffbusaddr">My business address is different</label>
-							</p>
-						</div><!-- col -->
-					</div><!-- grid-row -->
-					<fieldset id="busaddr" class="margin-bottom-075" style="display: none">
-						<legend class="larger margin4">Business address</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr2line1" class="input-right">Address line 1</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr2line1" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr2line2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="suburb2" class="input-right">Suburb</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="suburb2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="state2" class="input-right">State</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-								<select id="state2" >
-									<option>Please select...</option>
-									<option>Australian Capital Territory</option>
-									<option>New South Wales</option>
-									<option>Queensland</option>
-									<option>etc</option>
-								</select>
-							</div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="postcode2" class="input-right">Postcode</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="postcode2" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="country2" class="input-right">Country <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="country2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-					</fieldset>
-					<fieldset>
-						<legend class="larger margin4">Contact details</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="contactphone" class="input-right">Phone <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="contactphone" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="contactemail" class="input-right">Email</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="contactemail" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-					</fieldset>
-					<fieldset>
+
+					<!-- fieldset class="margin-bottom-075">
 						<legend class="hidden">Main business activity</legend>
 						<div class="grid-row">
                             <div class="col4">
                                 <label for="busactivity" class="input-right">Choose your main business activity<br>
 								<span class="field-note">(Start typing and choose from the options presented)</span></label>
-                            </div><!-- col -->
+                            </div>
 							<div class="col8 last">
 								<input id="busactivity" type="text">
 								<button type="button" class="btn">search</button>
@@ -538,12 +389,122 @@
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="contactactivity" class="input-right">Selected activity</label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="contactactivity" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-					</fieldset>
+                            </div>
+                        </div>
+					</fieldset -->
+					<div id="add-bus-addr" class="contacts" style="display: none">
+						<h3 class="margin4">Additional business locations</h3>
+					</div>
+					<div id="additional-bus" style="display: none">
+						<fieldset id="busaddr4" class="margin-bottom-075">
+							<legend class="larger margin4">Additional business address</legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="addr4line1" class="input-right">Address line 1</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="addr4line1" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="addr4line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="addr4line2" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="suburb4" class="input-right">Suburb</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="suburb4" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="state4" class="input-right">State</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<select id="state4" >
+										<option value="">Please select...</option>
+										<option>Australian Capital Territory</option>
+										<option>New South Wales</option>
+										<option>Queensland</option>
+										<option>etc</option>
+									</select>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="postcode4" class="input-right">Postcode</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="postcode4" type="number">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="country4" class="input-right">Country <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="country4" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+						<fieldset>
+							<legend class="larger margin4">Contact details</legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="contactphone4" class="input-right">Phone <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="contactphone4" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="contactemail4" class="input-right">Email <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="contactemail4" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+						<fieldset>
+							<legend class="hidden">Main business activity</legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="busactivity2" class="input-right">Choose your main business activity at this location<br>
+									<span class="field-note">(Start typing and choose from the options presented)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="busactivity2" type="text">
+									<button type="button" class="btn">search</button>
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="contactactivity2" class="input-right">Selected activity</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="contactactivity2" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							&nbsp;
+						</div><!-- col -->
+						<div class="col7 custom-controls">
+							<p><button id="busaddr-btn" type="button" class="btn btn-default btn-add">Add another business address</button></p>
+						</div>
+					</div>
 
                     <div class="controls-container">
                         <div class="controls-content">
@@ -553,6 +514,198 @@
 				</div>
 			</div>
 
+			<!-- START SECTION 2 -->
+			<div id="section2" class="sub-section-container">
+				<h2>Authorised contacts</h2>
+                <div class="sub-section-content">
+					<div id="you-auth">
+						<fieldset class="margin-bottom-075">
+							<legend class="margin4 larger">Your contact details</legend>
+							<div class="grid-row">
+								<div class="grid-row">
+									<p class="margin4">You indicated that you will be an authorised contact. You will need to provide additional contact details here.</p>
+								</div>
+								<div class="col4">
+									<label for="you-name" class="input-right">Name</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-name" type="text" disabled>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-mobile" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-bushours" class="input-right">Business hours phone</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-bushours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-afterhours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-email" class="input-right">Email</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-email" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-language" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-language" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="you-position" class="input-right">Position held</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<select id="you-position" >
+										<option value="">Please select...</option>
+										<option>Position 1</option>
+										<option>Position 2</option>
+										<option>Position 3</option>
+										<option>etc</option>
+									</select>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+						<div class="grid-row">
+							<div class="col4">
+								&nbsp;
+							</div><!-- col -->
+							<div class="col7 custom-controls">
+								<p><button id="auth-btn1" type="button" class="btn btn-default btn-add">Add another contact</button></p>
+							</div>
+						</div>
+					</div>
+					<div id="altauthtable" class="contacts" style="display: none">
+						<h3 class="margin4">Contact details</h3>
+					</div>
+					<div id="authform" class="showhide-target col12" style="display: none">
+						<fieldset class="margin-bottom-075">
+							<legend class="margin4 larger">New contact details</legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="name1" class="input-right">Given name</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="name1" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="name2" class="input-right">Family name</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="name2" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="mobile" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="bushours" class="input-right">Business hours phone</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="bushours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="afterhours" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="email" class="input-right">Email</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="email" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+														<div class="grid-row">
+								<div class="col4">
+									<label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="language" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="otherlang" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="position" class="input-right">Position held</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<select id="position" >
+										<option value="">Please select...</option>
+										<option>Position 1</option>
+										<option>Position 2</option>
+										<option>Position 3</option>
+										<option>etc</option>
+									</select>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+						</fieldset>
+					</div>
+					<div id="add-auth2" class="grid-row" style="display: none">
+						<div class="col4">
+							&nbsp;
+						</div><!-- col -->
+						<div class="col7 custom-controls">
+							<p><button id="auth-btn" type="button" class="btn btn-default btn-add">Add another contact</button></p>
+						</div>
+					</div>
+                    <div class="controls-container">
+                        <div class="controls-content">
+                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                        </div><!-- controls-content -->
+                    </div>
+                </div><!-- sub-section-content -->
+            </div><!-- sub-section-container -->
+			
             <!-- START SECTION 4 -->
             <div id="section4" class="sub-section-container">
                 <h2>Reason for application</h2>
@@ -610,7 +763,7 @@
                             <div class="col1">
                                 <p>&nbsp;</p>
                             </div><!-- col -->
-                            <div class="col10 last">
+                            <div class="col10">
                                 <p class="no-margin-top"><label for="australia2">Is this your first time in business in Australia?</label></p>
                                 <div class="radio-toggle">
                                     <label class="on label-left" for="investment-yes"><input id="investment-yes" type="radio" name="australia2"><span>Yes</span></label>
@@ -637,7 +790,21 @@
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                             </div>
-                        </div><!-- grid-row -->
+						</div><!-- grid-row -->
+
+						<div class="grid-row grid-row-reveal clearfix showhide-target" style="display: none;">
+							<div class="col1">
+								<p>&nbsp;</p>
+							</div>
+							<div class="col11 last">
+								<p>
+									<label for="prev-abn">What is the previous owner's ABN</label>
+								</p>
+								<p>
+									<input id="prev-abn" type="text">
+								</p>
+							</div><!-- col -->
+						</div><!-- grid-row -->
 
                         <div class="grid-row grid-row-block custom-controls clearfix">
                             <div class="col11">
@@ -654,6 +821,17 @@
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                             </div>
+                        </div><!-- grid-row -->
+
+                        <div class="grid-row padding-bottom-1 clearfix showhide-target" style="display:none">
+                            <div class="col1">&nbsp;</div>
+                            <div class="col11 last">
+                                <p class="no-margin-top"><label for="contractor">Is this your first time as a contractor or subcontractor?</label></p>
+                                <div class="radio-toggle">
+                                    <label class="on label-left" for="contractor-yes"><input id="contractor-yes" type="radio" name="contractor"><span>Yes</span></label>
+                                    <label class="off label-right" for="contractor-no"><input id="contractor-no" type="radio" name="contractor"><span>No</span></label>
+                                </div>
+                            </div><!-- col -->
                         </div><!-- grid-row -->
 
                         <div class="grid-row grid-row-block custom-controls clearfix">
@@ -725,6 +903,16 @@
                         </div><!-- grid-row -->
                     </fieldset>
 
+					<div class="grid-row padding-bottom-1 clearfix showhide-target">
+						<div class="col12 last">
+							<p class="no-margin-top"><label for="self-employed">Is this the first time you will be self-employed?</label></p>
+							<div class="radio-toggle">
+								<label class="on label-left" for="self-yes"><input id="self-yes" type="radio" name="self-employed"><span>Yes</span></label>
+								<label class="off label-right" for="self-no"><input id="self-no" type="radio" name="self-employed"><span>No</span></label>
+							</div>
+						</div><!-- col -->
+					</div><!-- grid-row -->
+
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
@@ -738,14 +926,35 @@
             <div id="section5" class="sub-section-container">
                 <h2>Business activity details</h2>
                 <div class="sub-section-content">
-                    <fieldset>
+					<fieldset>
+						<legend class="hidden">Main business activity</legend>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="main-activity" class="input-right">Choose your main business activity<br>
+								<span class="field-note">(Start typing and choose from the options presented)</span></label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="main-activity" type="text">
+								<button type="button" class="btn">search</button>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="activity-contact" class="input-right">Selected activity</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="activity-contact" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+					</fieldset>
+                   <fieldset>
                         <legend class="margin4 larger">ABN registration</legend>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="start-date" class="input-right">Select ABN <strong>start</strong> date <span class="field-note">(dd/mm/yyyy)</span></label>
+                                <label for="abn-start-date" class="input-right">Commencement date of activity</label>
                             </div><!-- col -->
                             <div class="col7">
-                                <input id="start-date" type="date" />
+                                <input id="abn-start-date" type="date" />
                             </div><!-- col -->
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
@@ -764,29 +973,12 @@
 
                             <div class="grid-row grid-row-reveal clearfix showhide-target" style="display:none">
                                 <div class="col4">
-                                    <label for="end-date" class="input-right">Select ABN <strong>end</strong> date <span class="field-note">(dd/mm/yyyy)</span></label>
+                                    <label for="end-date" class="input-right">End date of activity</label>
                                 </div><!-- col -->
                                 <div class="col8 last">
                                     <input id="end-date" type="date" />
                                 </div><!-- col -->
                             </div><!-- grid-row -->
-                        </div>
-
-                        <div id="divManualActivity">
-                            <div class="grid-row">
-                                <div class="col4">
-                                    <label for="business-activity" class="input-right">
-                                        Choose your main business activity<br />
-                                        <span class="field-note">(choose from the options presented)</span>
-                                    </label>
-                                </div>
-                                <div class="col7">
-                                    <input id="business-activity" type="text" placeholder="Start typing activity">
-                                </div>
-                                <div class="col1 last">
-                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                                </div>
-                            </div>
                         </div>
                     </fieldset>
 
@@ -804,7 +996,7 @@
                         </fieldset>
                     </div><!-- grid-row -->
 
-                    <div class="grid-row grid-row-padding-bottom">
+                    <!-- div class="grid-row grid-row-padding-bottom">
                         <fieldset id="validation-test-field3" class="no-margin">
                             <legend class="col4 input-right"><span id="agricultural">Is the applicant an Australian resident for taxation purposes?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
                             <div class="col8 last">
@@ -816,54 +1008,54 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </div><!-- grid-row -->
+                    </div --><!-- grid-row -->
 
-                    <fieldset id="fieldsetAddress">
+                    <!-- fieldset id="fieldsetAddress">
                         <legend class="margin4 larger">Business address</legend>
                         <div class="grid-row no-margin">
                             <div class="col4">
                                 <label for="address-suggest" class="input-right">Business address<br /><span class="field-note">(choose from the options presented)</span></label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="address-suggest" type="text">
                                 <p><a href="" id="manual" class="showhide-trigger">Can't find address</a></p>
                                 <p><a href="" id="addressSearch" class="showhide-trigger" style="display: none">Back to address search</a></p>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                            </div>
+                        </div>
                         <div class="grid-container showhide-target" id="manualAddress" style="display: none">
                             <div class="grid-row">
                                 <div class="col4">
                                     <label for="address-line1" class="input-right">Address line 1</label>
-                                </div><!-- col -->
+                                </div>
                                 <div class="col8 last">
                                     <input id="address-line1" type="text">
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
+                                </div>
+                            </div>
                             <div class="grid-row">
                                 <div class="col4">
                                     <label for="address-line2" class="input-right">Address line 2</label>
-                                </div><!-- col -->
+                                </div>
                                 <div class="col8 last">
                                     <input id="address-line2" type="text">
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
+                                </div>
+                            </div>
                             <div class="grid-row">
                                 <div class="col4">
                                     <label for="suburb" class="input-right">Suburb</label>
-                                </div><!-- col -->
+                                </div>
                                 <div class="col8 last">
                                     <input id="suburb" type="text">
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
+                                </div>
+                            </div>
                             <div class="grid-row">
                                 <div class="col4">
                                     <label for="postcode" class="input-right">Postcode</label>
-                                </div><!-- col -->
+                                </div>
                                 <div class="col8 last">
                                     <input id="postcode" type="number">
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
-                        </div><!-- manualAddress -->
+                                </div>
+                            </div>
+                        </div>
                         <div class="grid-row custom-controls">
                             <div class="margin4">
                                 <p>
@@ -871,36 +1063,36 @@
                                     <label for="address-same">My postal address is different</label>
                                 </p>
                             </div>
-                        </div><!-- grid-row -->
+                        </div>
                         <div class="grid-row">
                             <div class="col4">
                                 &nbsp;
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <p><button type="button" class="btn btn-default">Add another address</button></p>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                            </div>
+                        </div>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="office-phone" class="input-right">Office phone</label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col8 last">
                                 <input id="office-phone" type="phone">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+                            </div>
+                        </div>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="mobile-phone" class="input-right">Mobile</label>
-                            </div><!-- col -->
+                            </div>
                             <div class="col7">
                                 <input id="mobile-phone" type="phone">
-                            </div><!-- col -->
+                            </div>
                             <div class="col1 last">
                                 <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                             </div>
-                        </div><!-- grid-row -->
+                        </div>
                         
-                    </fieldset>
+                    </fieldset -->
 
                     <div class="controls-container">
                         <div class="controls-content">
@@ -935,6 +1127,61 @@
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.
 			
+			function authEvent() {
+				if ($('#auth').prop('checked')) {
+					$('#you-name').val($('#individual1-given').val() + ' ' + $('#individual1-family').val());
+					$('#you-auth').show();
+					$('#add-auth2').hide();
+					authstate = 0;
+				} else {
+					$('#you-auth').hide();
+					$('#authform').show();
+					$('#add-auth2').show();
+					authstate = 1;
+				}
+			}
+			
+			$('#individual1-given').blur(authEvent);
+			$('#individual1-family').blur(authEvent);
+			$('#auth').click(authEvent);
+			
+			$('#auth-btn1').click(function() {
+				var table = '<table style="display: none;"><tbody>';
+
+				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle"><strong>' + $('#you-name').val() + '</strong><span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+
+				if ($('#you-mobile').val())
+					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#you-mobile').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-bushours').val() + '</td></tr>';
+
+				if ($('#you-afterhours').val())
+					table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#you-afterhours').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#you-email').val() + '</td></tr>';
+				
+				if ($('#you-language').val())
+					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-language').val() + '</td></tr>';
+
+				if ($('#you-otherlang').val())
+					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-otherlang').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-position').val() + '</td></tr>';
+				table += "</tbody></table>";
+				
+				table = $(table);
+				$('#you-auth').toggle('fast', function() {
+					$('#altauthtable').show().append(table);
+					table.toggle('fast', function() {
+						$('#authform').toggle('fast');
+						$('#add-auth2').show();
+					});
+				});
+				
+				$('#auth-btn').html("Add another contact");
+				authstate = 1;
+			});
+			
 			$('#auth-btn').click(function() {
 			/*
 				switch(authstate) {
@@ -953,28 +1200,25 @@
 				
 				} */
 				if (authstate == 0) {
-					$('#authform').show();
+					$('#authform').toggle('fast', function() {
+						var targetTop = $(this).offset().top;
+						// alert(targetTop);
+						$('html, body').animate({
+							scrollTop: targetTop
+						}, 800);
+					});
+
 					authstate = 1;
 					return;
 				}
 
-				var table = "<table><tbody>";
+				var table = '<table style="display: none;"><tbody>';
 
-				if ($('#accountant').val())
-					table += '<tr><th class="field-name right">Taxt agent number</th><td class="input-value">' + $('#accountant').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Name</th><td class="input-value">';
-				table += $('#name1').val() + " " + $('#name2').val() + '</td></tr>';
-
-				if ($('#language').val())
-					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
-
-				if ($('#relationship').val())
-					table += '<tr><th class="field-name right">Relationship</th><td class="input-value">' + $('#relationship').val() + '</td></tr>';
+				table += '<tr><th class="field-name right middle">Name</th><td class="input-value">';
+				table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
 
 				if ($('#mobile').val())
 					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
-
 
 				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#bushours').val() + '</td></tr>';
 
@@ -983,17 +1227,75 @@
 
 				table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#email').val() + '</td></tr>';
 				
+				if ($('#language').val())
+					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
+
+				if ($('#otherlang').val())
+					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#otherlang').val() + '</td></tr>';
+
+				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#position').val() + '</td></tr>';
 				table += "</tbody></table>";
 				
-				$('#altauthtable').append(table).show();
+				table = $(table);
+				$('#altauthtable').show().append(table);
+				table.toggle('fast');
 				$('#authform input').val('');
 			});
 			
+			var busaddrstate = 0;
+			
+			$('#busaddr-btn').click(function() {
+				if (busaddrstate == 0) {
+					$('#additional-bus').toggle('fast', function() {
+						var targetTop = $(this).offset().top;
+						$('html, body').animate({
+							scrollTop: targetTop
+						}, 800);
+					});
+
+					busaddrstate = 1;
+					return;
+				}
+
+				var table = '<table style="display: none;"><tbody>';
+
+				table += '<tr><th class="field-name right middle">Address</th><td class="input-value">' + $('#addr4line1').val();
+				if ($('#addr4line2').val() != "")
+					table += ' ' + $('#addr4line2').val();
+				table += '<span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+
+				table += '<tr><th class="field-name right">Suburb</th><td class="input-value">' + $('#suburb4').val() + '</td></tr>';
+				table += '<tr><th class="field-name right">State</th><td class="input-value">' + $('#state4').val() + '</td></tr>';
+				table += '<tr><th class="field-name right">Postcode</th><td class="input-value">' + $('#postcode4').val() + '</td></tr>';
+				table += '<tr><th class="field-name right">Country</th><td class="input-value">' + $('#country4').val() + '</td></tr>';
+
+				if ($('#contactphone4').val())
+					table += '<tr><th class="field-name right">Contact phone</th><td class="input-value">' + $('#contactphone4').val() + '</td></tr>';
+
+				if ($('#contactemail4').val())
+					table += '<tr><th class="field-name right">Contact email</th><td class="input-value">' + $('#contactemail4').val() + '</td></tr>';
+				
+				table += '<tr><th class="field-name right">Main business activity</th><td class="input-value">' + $('#contactactivity2').val() + '</td></tr>';
+				
+				table += "</tbody></table>";
+				
+				table = $(table);
+				$('#add-bus-addr').show().append(table);
+				$('#busaddr4 input').val('');
+				table.toggle('fast', function() {
+					var targetTop = $('#additional-bus').offset().top;
+					$('html, body').animate({
+						scrollTop: targetTop
+					}, 800);
+				});
+
+			});
+			
 			$('#diffbusaddr').click(function() {
-				$('#busaddr').toggle($('#diffbusaddr').prop('checked'));
+				$('#busaddr').toggle('fast'); //, $('#diffbusaddr').prop('checked'));
 			});
 			$('#diffpostaladdr').click(function() {
-				$('#postaladdr').toggle($('#diffpostaladdr').prop('checked'));
+				$('#postaladdr').toggle('fast'); // $('#diffpostaladdr').prop('checked'), 'fast');
 			});
 			
 //            $("#basic-toggle").registerToggleSlide({
