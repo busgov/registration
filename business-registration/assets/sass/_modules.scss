@@ -6,64 +6,66 @@
 // ------------------------------------------------------------------------------------------------------
 
 .progress-container {
-  display: none;
-}
-@media only screen and (min-width: $break-medium) {
-  .progress-container {
-    position: relative;
-    min-height: 80px;
-    display: block;
-  }
-}
-ul.section-nav {
-  padding: 0;
-  margin: 0;
-  top: -13px;
-  left: 0;
-  /*z-index: 100;*/
-  position: absolute;
-  width: 100%;
-}
-ul.section-nav li {
-  background: transparent url(../img/sprite-steps.png) no-repeat 50% 5px;
-  display: inline-block;
-  line-height: 1.2em;
-  padding: 0;
-  text-align: center;
-  width: 16%;
-  font-size: $smaller;
-  min-height: 60px;
-  z-index: 10;
-}
-ul.section-nav li.done {
-  background: transparent url(../img/sprite-steps.png) no-repeat 50% -498px; 
-}
-ul.section-nav li.active {
-  background: transparent url(../img/sprite-steps.png) no-repeat 50% -250px;  
-  font-weight: bold;
-}
-ul.section-nav li.alert {
-  background: transparent url(../img/sprite-steps.png) no-repeat 50% -750px;  
-}
-ul.section-nav li span {
-  color: white;
-  font-family: $font-heading;
-  font-weight: bold;
-  font-size: 150%;
-  line-height: 60px
+	display: none;
+
+	@media only screen and (min-width: $break-medium) {
+		position: relative;
+		min-height: 80px;
+		display: block;
+	}
 }
 
-ul.section-nav li a,
-ul.section-nav li a:link,
-ul.section-nav li a:visited {
-  color: $brand-blue;
-  text-decoration: none;
-}
-ul.section-nav li a:hover,
-ul.section-nav li a:focus,
-ul.section-nav li a:active {
-  background-color: transparent;
-  color: black;
+ul.section-nav {
+	padding: 0;
+	margin: 0;
+	top: -13px;
+	left: 0;
+	/*z-index: 100;*/
+	position: absolute;
+	width: 100%;
+
+	li {
+		background: transparent url(../img/sprite-steps.png) no-repeat 50% 5px;
+		display: inline-block;
+		line-height: 1.2em;
+		padding: 0;
+		text-align: center;
+		width: 16%;
+		font-size: $smaller;
+		min-height: 60px;
+		z-index: 10;
+
+		&.done {
+			background: transparent url(../img/sprite-steps.png) no-repeat 50% -498px; 
+		}
+
+		&.active {
+			background: transparent url(../img/sprite-steps.png) no-repeat 50% -250px;  
+			font-weight: bold;
+		}
+		
+		&.alert {
+			background: transparent url(../img/sprite-steps.png) no-repeat 50% -750px;  
+		}
+
+		span {
+			color: white;
+			font-family: $font-heading;
+			font-weight: bold;
+			font-size: 150%;
+			line-height: 60px
+		}
+
+		a, a:link, a:visited {
+			color: $brand-blue;
+			text-decoration: none;
+		}
+		
+		a:hover, a:focus, a:active {
+			background-color: transparent;
+			color: black;
+		}
+	}
 }
 
 .progress-bar {
@@ -78,40 +80,39 @@ ul.section-nav li a:active {
     border-radius: 15px;
     padding: 6px;
     /*z-index: 50;*/
-}
-.progress-bar > span {
-    display: block;
-    height: 100%;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-bottom-left-radius: 10x;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: rgb(60,134,196);
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, rgb(60,134,196)),
-      color-stop(1, rgb(49,121,181))
-     );
-    background-image: -moz-linear-gradient(
-      center bottom,
-      rgb(60,134,196) 37%,
-      rgb(49,121,181) 69%
-     );
 
-    position: relative;
-    overflow: hidden;
+	> span {
+		display: block;
+		height: 100%;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-bottom-left-radius: 10x;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		background-color: rgb(60,134,196);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(60,134,196)),
+			color-stop(1, rgb(49,121,181))
+		);
+		background-image: -moz-linear-gradient(
+			center bottom,
+			rgb(60,134,196) 37%,
+			rgb(49,121,181) 69%
+		);
+		position: relative;
+		overflow: hidden;
+	}
 }
-
 
 // Help me decide progress bar
 // ------------------------------------------------------------------------------------------------------
@@ -123,6 +124,7 @@ ul.section-nav li a:active {
     margin-right: 0.35em;
   }
 }
+
 .meter {
     height: 20px;  /* Can be anything */
     position: relative;
@@ -134,100 +136,99 @@ ul.section-nav li a:active {
     -webkit-border-radius: 6px;
     border-radius: 6px;
     padding: 6px;
-}
-.meter > span {
-    display: block;
-    height: 100%;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    -webkit-border-top-left-radius: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -moz-border-radius-topleft: 6px;
-    -moz-border-radius-bottomleft: 6px;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    background-color: rgb(60,134,196);
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, rgb(60,134,196)),
-      color-stop(1, rgb(49,121,181))
-     );
-    background-image: -moz-linear-gradient(
-      center bottom,
-      rgb(60,134,196) 37%,
-      rgb(49,121,181) 69%
-     );
 
-    position: relative;
-    overflow: hidden;
+	> span {
+		display: block;
+		height: 100%;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		-webkit-border-top-left-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		-moz-border-radius-bottomleft: 6px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		background-color: rgb(60,134,196);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(60,134,196)),
+			color-stop(1, rgb(49,121,181))
+		);
+		background-image: -moz-linear-gradient(
+			center bottom,
+			rgb(60,134,196) 37%,
+			rgb(49,121,181) 69%
+		);
+		position: relative;
+		overflow: hidden;
+	}
 }
-
 
 // Modal confirmation message
 // ------------------------------------------------------------------------------------------------------
 
 .vashadow {
-  background-color: black;
-  opacity: 0.6;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height:100%;
+	background-color: black;
+	opacity: 0.6;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
 }
 
 .vadialog {
-  background: white;
-  border-radius: 10px;
-  display: none;
-  position: fixed;
-  left:50%;
-  top:50%;
-  padding: 35px 40px 40px 40px;
-  width: 300px;
-}
-.vadialog h1 {
-  font-size: 130%;
-  margin: 0;
-  padding: 0 0 10px 0;
+	background: white;
+	border-radius: 10px;
+	display: none;
+	position: fixed;
+	left:50%;
+	top:50%;
+	padding: 35px 40px 40px 40px;
+	width: 300px;
+
+	h1 {
+		font-size: 130%;
+		margin: 0;
+		padding: 0 0 10px 0;
+	}
 }
 
 .vaCloseButton {
-  float:right;
-  color:#999999;
-  border:none;
-  /*padding:0;
-  margin-right:-20px;
-  margin-top:0;*/
-  position: absolute;
-  right: 10px;
-  top: 27px;
-  background: white;
-  cursor:pointer;
-}
+	float:right;
+	color:#999999;
+	border:none;
+	/*padding:0;
+	margin-right:-20px;
+	margin-top:0;*/
+	position: absolute;
+	right: 10px;
+	top: 27px;
+	background: white;
+	cursor:pointer;
 
-.vaCloseButton:focus{
-  outline:2px solid #999999;
+	&:focus{
+		outline:2px solid #999999;
+	}
 }
 
 .vaOffscreen{
-  position:absolute;
-  left:-9999px;
+	position:absolute;
+	left:-9999px;
 }
-
 
 // Styling content within forms
 // ------------------------------------------------------------------------------------------------------
 
-/* margin ov4errides */
+/* margin overrides */
 .no-margin {
-  margin: 0 !important;
+	margin: 0 !important;
 }
 .no-margin-top {
   margin-top: 0 !important;
@@ -344,16 +345,20 @@ legend .field-note {
 // Helper classes
 // ------------------------------------------------------------------------------------------------------
 
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after { 
-  clear: both 
-}
 .clearfix { 
-  zoom: 1 
+	
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+
+	&:after { 
+		clear: both 
+	}
+
+	zoom: 1;
 }
+
 .smaller {
   font-size: $smaller;
 }
@@ -370,18 +375,20 @@ img.visuallyhidden {
     padding: 0;
     position: absolute;
     width: 1px;
+
+	&.focusable {
+	
+		&:focus, &:active {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
 }
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus,
-img.visuallyhidden.focusable:active,
-img.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -403,100 +410,103 @@ img.visuallyhidden.focusable:focus {
 /* Round pils */
 
 .pil {
-  text-decoration: none;
-  color: #333333;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 0 15px;
-  line-height: 32px;
-  height: auto;
-  display: inline-block;
-  text-align: center;
-  background-color: #DDDDDD;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-}
-.pil:hover {
-  background-color: white;
-}
+	text-decoration: none;
+	color: #333333;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 15px;
+	line-height: 32px;
+	height: auto;
+	display: inline-block;
+	text-align: center;
+	background-color: #DDDDDD;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
 
+	&:hover {
+		background-color: white;
+	}
+}
 
 // System messaging
 // ------------------------------------------------------------------------------------------------------
 
 .system-message {
-  background-color: $system-message;
-  padding: 1em 1em 0.5em 1em;
-  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
-  border-bottom: 2px solid $blue-pale;
-  margin-top: 55px;
+	background-color: $system-message;
+	padding: 1em 1em 0.5em 1em;
+	-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid $blue-pale;
+	margin-top: 55px;
+
+	h1 {
+		color: white;
+		padding: 0;
+		margin: 0 0 1em 0;
+		font-size: 150%;
+	}
+
+	p, li {
+		color: white;  
+	}
+	
+	.icon {
+		display: none;
+	}
+
+	a, a:link, a:visited {
+		color: white;
+		text-decoration: underline;
+	}
+
+	a:hover, a:focus, a:active {
+		text-decoration: none;
+	}
+	
+	img {
+		max-width: 50px;
+		vertical-align: middle;
+	}
 }
-.system-message h1 {
-  color: white;
-  padding: 0;
-  margin: 0 0 1em 0;
-  font-size: 150%;
-}
-.system-message p,
-.system-message li {
-  color: white;  
-}
-.system-message .icon {
-  display: none;
-}
-.system-message a,
-.system-message a:link,
-.system-messaged a:visited {
-  color: white;
-  text-decoration: underline;
-}
-.system-message a:hover,
-.system-message a:focus,
-.system-message a:active {
-  text-decoration: none;
-}
-.system-message img {
-  max-width: 50px;
-  vertical-align: middle;
-}
+
 button.closeSystemMessage {
-  background: white url(../img/sprite-close.png) no-repeat 7px 8px;
-  color: $brand-blue;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 14px 12px 16px 54px;
-}
-button.closeSystemMessage:hover,
-button.closeSystemMessage:focus,
-button.closeSystemMessage:active {
-  background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 7px -105px;
-  color: $brand-hover-fg;
+	background: white url(../img/sprite-close.png) no-repeat 7px 8px;
+	color: $brand-blue;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	padding: 14px 12px 16px 54px;
+
+	&:hover, &:focus, &:active {
+		background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 7px -105px;
+		color: $brand-hover-fg;
+	}
 }
 
 @media only screen and (min-width: $break-medium) {
-  .system-message {
-    background: $system-message url(../img/ico-chat.png) no-repeat 1.5em 0.8em; 
-  }
-  .system-message-content {
-    float: left;
-    width: 75%;
-  }
-  .system-message h1 {
-    margin: 0 0 1em 1.75em;
-  }
-  button.closeSystemMessage {
-    float: right;
-    margin: 0 0 0 2em;
-    text-align: right;
-  }
-}
+	.system-message {
+		background: $system-message url(../img/ico-chat.png) no-repeat 1.5em 0.8em;
+		
+		h1 {
+			margin: 0 0 1em 1.75em;
+		}
+	}
 
+	.system-message-content {
+		float: left;
+		width: 75%;
+	}
+	
+	button.closeSystemMessage {
+		float: right;
+		margin: 0 0 0 2em;
+		text-align: right;
+	}
+}
 
 // Compare pros / cons panel
 // ------------------------------------------------------------------------------------------------------
@@ -565,36 +575,31 @@ button.closeSystemMessage:active {
 	}
 }
 
-
-
 // Print
 // ------------------------------------------------------------------------------------------------------
 
-.print a,
-.print a:link,
-.print a:visited {
-  display: none;
-}
-@media only screen and (min-width: $break-medium) {
-  .print a,
-  .print a:link,
-  .print a:visited {
-    background: transparent url(../img/sprite-print.png) no-repeat 7px 5px;
-    display: inline-block;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    float: right;
-    padding: 8px 7px 15px 53px;
-    margin-top: -90px;
-  }
-}
-.print a:hover,
-.print a:active,
-.print a:focus {
-    background: black url(../img/sprite-print.png) no-repeat 7px -108px;
-}
+.print {
+	
+	a, a:link, a:visited {
+		
+		display: none;
 
+		@media only screen and (min-width: $break-medium) {
+			background: transparent url(../img/sprite-print.png) no-repeat 7px 5px;
+			display: inline-block;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			float: right;
+			padding: 8px 7px 15px 53px;
+			margin-top: -90px;
+		}
+	}
+
+	a:hover, a:active, a:focus {
+		background: black url(../img/sprite-print.png) no-repeat 7px -108px;
+	}
+}
 
 // Responsive video
 
@@ -621,11 +626,11 @@ button.closeSystemMessage:active {
   height: 100%;
 }
 
-
 // Slide out help panel
 // ------------------------------------------------------------------------------------------------------
 
 /* http://codyhouse.co/gem/css-slide-in-panel/ */
+
 .cd-panel {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -637,9 +642,8 @@ button.closeSystemMessage:active {
     -webkit-transition: visibility 0s 0.6s;
     -moz-transition: visibility 0s 0.6s;
     transition: visibility 0s 0.6s;
-}
 
-    .cd-panel::after {
+	&::after {
         /* overlay layer */
         position: absolute;
         top: 0;
@@ -653,29 +657,33 @@ button.closeSystemMessage:active {
         transition: background 0.3s 0.3s;
     }
 
-    .cd-panel.is-visible {
+    &.is-visible {
         visibility: visible;
         -webkit-transition: visibility 0s 0s;
         -moz-transition: visibility 0s 0s;
         transition: visibility 0s 0s;
-    }
 
-    .cd-panel.is-visible::after {
-        background: rgba(0, 0, 0, 0.6);
-        -webkit-transition: background 0.3s 0s;
-        -moz-transition: background 0.3s 0s;
-        transition: background 0.3s 0s;
-    }
+		&::after {
+			background: rgba(0, 0, 0, 0.6);
+			-webkit-transition: background 0.3s 0s;
+			-moz-transition: background 0.3s 0s;
+			transition: background 0.3s 0s;
+		}
 
-    .cd-panel.is-visible .cd-panel-close::before {
-        -webkit-animation: cd-close-1 0.6s 0.3s;
-        -moz-animation: cd-close-1 0.6s 0.3s;
-    }
+		.cd-panel-close {
 
-    .cd-panel.is-visible .cd-panel-close::after {
-        -webkit-animation: cd-close-2 0.6s 0.3s;
-        -moz-animation: cd-close-2 0.6s 0.3s;
-    }
+			&::before {
+				-webkit-animation: cd-close-1 0.6s 0.3s;
+				-moz-animation: cd-close-1 0.6s 0.3s;
+			}
+
+			&::after {
+				-webkit-animation: cd-close-2 0.6s 0.3s;
+				-moz-animation: cd-close-2 0.6s 0.3s;
+			}
+		}
+	}
+}
 
 .cd-panel-header {
     background-color: black;
@@ -688,37 +696,54 @@ button.closeSystemMessage:active {
     -moz-transition: top 0.3s 0s;
     transition: top 0.3s 0s;
     width: 100%;
-}
 
-.from-right .cd-panel-header, .from-left .cd-panel-header {
-    top: -50px;
-}
+	.from-right &, .from-left & {
+		top: -50px;
+	}
 
-.from-right .cd-panel-header {
-    right: 0;
-}
+	.from-right & {
+		right: 0;
+	}
 
-.from-left .cd-panel-header {
-    left: 0;
-}
+	.from-left & {
+		left: 0;
+	}
 
-.is-visible .cd-panel-header {
-    top: 0;
-    -webkit-transition: top 0.3s 0.3s;
-    -moz-transition: top 0.3s 0.3s;
-    transition: top 0.3s 0.3s;
-}
-
-@media only screen and (min-width: 768px) {
-    .cd-panel-header {
+	@media only screen and (min-width: 768px) {
         width: 70%;
     }
-}
 
-@media only screen and (min-width: 1170px) {
-    .cd-panel-header {
-        width: 50%;
+	@media only screen and (min-width: 1170px) {
+		width: 50%;
+	}
+
+	.is-visible & {
+		top: 0;
+		-webkit-transition: top 0.3s 0.3s;
+		-moz-transition: top 0.3s 0.3s;
+		transition: top 0.3s 0.3s;
+	}
+
+	a, a:link, a:visited {
+		background: black url(../img/sprite-close.png) no-repeat 100% 10px;
+		color: white;
+		padding-right: 60px;
+		text-decoration: none;
+		text-align: right;
+	}
+
+	a:hover, a:active, a:focus {
+        background: black url(../img/sprite-close.png) no-repeat 100% -102px;
     }
+	
+	h2 {
+		background: #367ab3 url(../img/ico-help-form.png) no-repeat 0 0;
+		padding-left: 30px;
+		color: white;
+		font-size: 140%;
+		margin-top: 60px;
+		padding: 0.4em 0.25em 0.5em 1.5em;
+	}
 }
 
 .cd-panel-close {
@@ -727,101 +752,86 @@ button.closeSystemMessage:active {
     right: 0;
     height: 100%;
     overflow: hidden;
+ 
+	&::before, &::after {
+		/* close icon created in CSS */
+		position: absolute;
+		top: 22px;
+		left: 20px;
+		height: 3px;
+		width: 20px;
+		background-color: #424f5c;
+		/* this fixes a bug where pseudo elements are slighty off position */
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	&::before {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.no-touch & {
+		&:hover {
+			background-color: #424f5c;
+		}
+
+		&:hover::before, &:hover::after {
+			background-color: #ffffff;
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			transition-property: transform;
+			-webkit-transition-duration: 0.3s;
+			-moz-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+		}
+
+		&:hover::before {
+			-webkit-transform: rotate(220deg);
+			-moz-transform: rotate(220deg);
+			-ms-transform: rotate(220deg);
+			-o-transform: rotate(220deg);
+			transform: rotate(220deg);
+		}
+
+		&:hover::after {
+			-webkit-transform: rotate(135deg);
+			-moz-transform: rotate(135deg);
+			-ms-transform: rotate(135deg);
+			-o-transform: rotate(135deg);
+			transform: rotate(135deg);
+		}
+	}
 }
 
-.cd-panel-header a,
-.cd-panel-header a:link,
-.cd-panel-header a:visited {
-    background: black url(../img/sprite-close.png) no-repeat 100% 10px;
-    color: white;
-    padding-right: 60px;
-    text-decoration: none;
-    text-align: right;
-}
+.cd-panel-print {
 
-    .cd-panel-header a:hover,
-    .cd-panel-header a:active,
-    .cd-panel-header a:focus {
-        background: black url(../img/sprite-close.png) no-repeat 100% -102px;
-    }
+	a, a:link, a:visited {
+		background: transparent url(../img/sprite-print.png) no-repeat 100% 12px;
+		color: white;
+		padding-right: 60px;
+		text-decoration: none;
+		text-align: right;
+		position: absolute;
+		right: 0;
+		top: 55px;
+	}
 
-.cd-panel-close::before, .cd-panel-close::after {
-    /* close icon created in CSS */
-    position: absolute;
-    top: 22px;
-    left: 20px;
-    height: 3px;
-    width: 20px;
-    background-color: #424f5c;
-    /* this fixes a bug where pseudo elements are slighty off position */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.cd-panel-close::before {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.cd-panel-close::after {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.no-touch .cd-panel-close:hover {
-    background-color: #424f5c;
-}
-
-    .no-touch .cd-panel-close:hover::before, .no-touch .cd-panel-close:hover::after {
-        background-color: #ffffff;
-        -webkit-transition-property: -webkit-transform;
-        -moz-transition-property: -moz-transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.3s;
-        -moz-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-    }
-
-    .no-touch .cd-panel-close:hover::before {
-        -webkit-transform: rotate(220deg);
-        -moz-transform: rotate(220deg);
-        -ms-transform: rotate(220deg);
-        -o-transform: rotate(220deg);
-        transform: rotate(220deg);
-    }
-
-    .no-touch .cd-panel-close:hover::after {
-        -webkit-transform: rotate(135deg);
-        -moz-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-        -o-transform: rotate(135deg);
-        transform: rotate(135deg);
-    }
-
-.cd-panel-print a,
-.cd-panel-print a:link,
-.cd-panel-print a:visited {
-    background: transparent url(../img/sprite-print.png) no-repeat 100% 12px;
-    color: white;
-    padding-right: 60px;
-    text-decoration: none;
-    text-align: right;
-    position: absolute;
-    right: 0;
-    top: 55px;
-}
-
-    .cd-panel-print a:hover,
-    .cd-panel-print a:active,
-    .cd-panel-print a:focus {
+    a:hover, a:active, a:focus {
         background: transparent url(../img/sprite-print.png) no-repeat 100% -100px;
     }
+}
 
 .cd-panel-container {
     position: fixed;
@@ -839,45 +849,41 @@ button.closeSystemMessage:active {
     -webkit-transition-delay: 0.3s;
     -moz-transition-delay: 0.3s;
     transition-delay: 0.3s;
-}
 
-.from-right .cd-panel-container {
-    right: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    -moz-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    -o-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-}
+	.from-right & {
+		right: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		-moz-transform: translate3d(100%, 0, 0);
+		-ms-transform: translate3d(100%, 0, 0);
+		-o-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
 
-.from-left .cd-panel-container {
-    left: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -o-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-}
+	.from-left & {
+		left: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		-moz-transform: translate3d(-100%, 0, 0);
+		-ms-transform: translate3d(-100%, 0, 0);
+		-o-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
 
-.is-visible .cd-panel-container {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    transition-delay: 0s;
-}
+	.is-visible & {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition-delay: 0s;
+		-moz-transition-delay: 0s;
+		transition-delay: 0s;
+	}
 
-@media only screen and (min-width: 768px) {
-    .cd-panel-container {
+	@media only screen and (min-width: 768px) {
         width: 70%;
-    }
-}
+	}
 
-@media only screen and (min-width: 1170px) {
-    .cd-panel-container {
+	@media only screen and (min-width: 1170px) {
         width: 50%;
     }
 }
@@ -894,63 +900,55 @@ button.closeSystemMessage:active {
     -webkit-overflow-scrolling: touch;
 }
 
-.cd-panel-header h2 {
-    background: #367ab3 url(../img/ico-help-form.png) no-repeat 0 0;
-    padding-left: 30px;
-    color: white;
-    font-size: 140%;
-    margin-top: 60px;
-    padding: 0.4em 0.25em 0.5em 1.5em;
+.showhide {
+	margin-bottom: 1.5em;
+
+	h3 {
+		font-size: 120%;
+		margin: 0;
+		line-height: 1.4em;
+
+		a, a:link, a:visited {
+			background: transparent url("../img/sprite-expand-collapse.png") 8px 17px no-repeat;
+			color: #367ab3;
+			display: block;
+			padding: 0.75em 0 0.75em 2.5em;
+			margin: 0;
+			text-decoration: none;
+		}
+
+		a:hover, a:focus, a:active {
+			background: black url("../img/sprite-expand-collapse.png") 8px -112px no-repeat;
+			color: white;
+		}
+		
+		&.open {
+		
+			a, a:link, a:visited {
+				background: #0B5394 url("../img/sprite-expand-collapse.png") 8px -240px no-repeat;
+				color: white;
+			}
+
+			a:hover, a:focus, a:active {
+				background: black url("../img/sprite-expand-collapse.png") 8px -370px no-repeat;
+				color: white;
+			}
+		}
+
+		+ div {
+			padding: 0em 0em 0.5em 0em;
+			margin-bottom: 1em;
+			border-bottom: 8px solid #367ab3;
+
+			@media only screen and (min-width: 768px) {
+				padding: 0em 2em 0.5em 2.75em;
+			}
+			/* Pre hide sections with JavaScript on */
+			display: none;
+		}
+	}
 }
 
-.showhide h3 {
-  font-size: 120%;
-  margin: 0;
-  line-height: 1.4em; }
-
-.showhide h3 a,
-.showhide h3 a:link,
-.showhide h3 a:visited {
-  background: transparent url("../img/sprite-expand-collapse.png") 8px 17px no-repeat;
-  color: #367ab3;
-  display: block;
-  padding: 0.75em 0 0.75em 2.5em;
-  margin: 0;
-  text-decoration: none; }
-
-.showhide h3 a:hover,
-.showhide h3 a:focus,
-.showhide h3 a:active {
-  background: black url("../img/sprite-expand-collapse.png") 8px -112px no-repeat;
-  color: white; }
-
-.showhide h3.open a,
-.showhide h3.open a:link,
-.showhide h3.open a:visited {
-  background: #0B5394 url("../img/sprite-expand-collapse.png") 8px -240px no-repeat;
-  color: white; }
-
-.showhide h3.open a:hover,
-.showhide h3.open a:focus,
-.showhide h3.open a:active {
-  background: black url("../img/sprite-expand-collapse.png") 8px -370px no-repeat;
-  color: white; }
-
-.showhide h3 + div {
-  padding: 0em 0em 0.5em 0em;
-  margin-bottom: 1em;
-  border-bottom: 8px solid #367ab3; }
-
-@media only screen and (min-width: 768px) {
-  .showhide h3 + div {
-    padding: 0em 2em 0.5em 2.75em; } }
-.showhide {
-  margin-bottom: 1.5em; }
-
-/* Pre hide sections with JavaScript on */
-.showhide h3 + div {
-  display: none; }
-  
 /* help button in table and registration tip block */
 td.help a.cd-btn:hover,
 .registration-tip ul li a.cd-btn:hover,
@@ -962,54 +960,78 @@ td.help a.cd-btn:focus,
 // Megamenu /* http://terrillthompson.com/tests/menus/accessible-mega-menu/test.html */
 // ------------------------------------------------------------------------------------------------------
 
-
 nav {
-  position: absolute;
-  top: 18px;
-  right: 0;
+	position: absolute;
+	top: 18px;
+	right: 0;
+
+	@media only screen and (min-width: $break-small) {
+		top: 28px;
+	}
+
+	@media only screen and (min-width: $break-medium) {
+		top: 40px;
+	}
 }
+
 .nav-menu {
-  display: block;
-  position: relative;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  z-index: 15; 
+	display: block;
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	z-index: 15; 
 }
 
 /* first descendant link within a top level navigation item */
-.nav-item > a,
-.nav-item > a:link,
-.nav-item > a:visited {
-  background: transparent url(../img/ico-account.png) no-repeat 8px 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
-  position: relative;
-  float: right;
-  display: inline-block;
-  padding: 0.5em 0 0.75em 48px;
-  margin: 0 0 -1px 0;
-  min-height: 40px;
-  text-decoration: none;
-  color: $brand-blue;
-}
-.nav-item span {
-  display: none;
-}
-.nav-item > a:hover,
-.nav-item > a:focus,
-.nav-item > a:active {
-  background-color: transparent;
-  color: black;
-  text-decoration: underline;
-}
+.nav-item {
 
+	> a {
 
-/* open state of first descendant link within a top level navigation item */
-.nav-item > a.open {
-    /* background-color: #fff; */
-    border-bottom: none;
-    z-index: 1;
+		&, &:link, &:visited {
+			background: transparent url(../img/ico-account.png) no-repeat 8px 0;
+			-webkit-border-radius: 5px 5px 0 0;
+			border-radius: 5px 5px 0 0;
+			position: relative;
+			float: right;
+			display: inline-block;
+			padding: 0.5em 0 0.75em 48px;
+			margin: 0 0 -1px 0;
+			min-height: 40px;
+			text-decoration: none;
+			color: $brand-blue;
+
+			@media only screen and (min-width: $break-small) {
+				background: transparent url(../img/ico-account.png) no-repeat 12px 5px;
+			}
+
+			@media only screen and (min-width: $break-large) {
+				background: transparent url(../img/ico-account.png) no-repeat 12px 8px;
+				padding: 0.5em 0.5em 0.5em 48px;
+			}
+		}
+
+		&:hover, &:focus, &:active {
+			background-color: transparent;
+			color: black;
+			text-decoration: underline;
+		}
+
+		/* open state of first descendant link within a top level navigation item */
+		&.open {
+			/* background-color: #fff; */
+			border-bottom: none;
+			z-index: 1;
+		}
+	}
+	
+	span {
+		display: none;
+
+		@media only screen and (min-width: $break-small) {
+			display: block;
+		}
+	}
 }
 
 /* sub-navigation panel */
@@ -1026,85 +1048,51 @@ nav {
     width: 200px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
     box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
-}
 
+	@media only screen and (min-width: $break-large) {
+		top: 3.2em;
+	}
+  
+	/* sub-navigation panel open state */
+	&.open {
+		display: block;
+	}
 
-/* sub-navigation panel open state */
-.sub-nav.open {
-    display: block;
-}
+	/* list of items within sub-navigation panel */
+	ul {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+	}
 
-/* list of items within sub-navigation panel */
-.sub-nav ul {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0;
-    padding: 0;
-}
+	/* list item within sub-navigation panel */
+	li {
+		list-style-type: none;  
 
-/* list item within sub-navigation panel */
-.sub-nav li {
-    list-style-type: none;  
-}
-.sub-nav li a,
-.sub-nav li a:link,
-.sub-nav li a:visited {
-    color: white;
-    display: block;
-    margin: 0;
-    padding: 0.25em 0.5em;
-    width: 100%;
-    text-decoration: none;
-}  
-.sub-nav li a:hover,
-.sub-nav li a:focus,
-.sub-nav li a:active  {
-  text-decoration: underline;
-  background-color: inherit;
-}
-@media only screen and (min-width: $break-small) {
-  nav {
-    top: 28px;
-  }
-  .nav-item > a,
-  .nav-item > a:link,
-  .nav-item > a:visited {
-    background: transparent url(../img/ico-account.png) no-repeat 12px 5px;
-  }
-  .nav-item span {
-    display: block;
-  }
-}
+		a {
+		
+			&, &:link, &:visited {
+				color: white;
+				display: block;
+				margin: 0;
+				padding: 0.25em 0.5em;
+				width: 100%;
+				text-decoration: none;
 
-@media only screen and (min-width: $break-medium) {
-  nav {
-    top: 40px;
-  }
+				@media only screen and (min-width: $break-large) {
+					font-size: 90%;
+				}
+			}
+			
+			&:hover, &:focus, &:active  {
+				text-decoration: underline;
+				background-color: inherit;
+			}
+			
+		}
+	}
 }
-@media only screen and (min-width: $break-large) {
-  .nav-item > a,
-  .nav-item > a:link,
-  .nav-item > a:visited {
-      background: transparent url(../img/ico-account.png) no-repeat 12px 8px;
-      padding: 0.5em 0.5em 0.5em 48px;
-  }
-  .sub-nav {
-      top: 3.2em;
-  }
-  .sub-nav li a,
-  .sub-nav li a:link,
-  .sub-nav li a:visited {
-      font-size: 90%;
-  } 
-}
-
-/* focus/open states of first descendant link within a top level navigation item */
-.nav-item > a.open,
-.nav-item > a:hover,
-.nav-item > a:focus,
-.nav-item > a:active {
-}
-
 
 // Validation
 // ------------------------------------------------------------------------------------------------------
@@ -1120,19 +1108,23 @@ img.help-icon {
 }
 
 /* allow for inline icon for registration tips */
-.registration-tip ul li a.cd-btn {
-	margin-left: .2em;
-}
-.registration-tip ul li img.help-icon,
-.registration-tip img.help-icon.inline {
-	position:relative;
-	right: auto;
-	vertical-align: middle;
-}
+.registration-tip {
 
-.registration-tip img.inline {
-	margin-left: .2em;
-	cursor: pointer;
+	ul li a.cd-btn {
+		margin-left: .2em;
+	}
+
+	ul li img.help-icon,
+	img.help-icon.inline {
+		position:relative;
+		right: auto;
+		vertical-align: middle;
+	}
+
+	img.inline {
+		margin-left: .2em;
+		cursor: pointer;
+	}
 }
 
 @media only screen and (min-width: $break-medium) {
@@ -1142,130 +1134,126 @@ img.help-icon {
     right: 0;
   }
 }
+
 .validation-container {
-   background-color: $gray-bg;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  padding: 1.25em 1em 0.75em 1em;
-  margin: 0.5em 0;
+	background-color: $gray-bg;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 1.25em 1em 0.75em 1em;
+	margin: 0.5em 0;
 }
+
 .validation-summary-icon {
-  float: left;
-  display: inline;
-}
-.validation-summary-icon img {
-  width: 24px;
-  margin: 0 6px 0 0;
-  vertical-align: middle;
-}
-@media only screen and (min-width: $break-medium) {
-  .validation-summary-icon img {
-    width: 30px;
-    margin: 0 10px 0 0;
-  }
-}
-@media only screen and (min-width: $break-large) {
-  .validation-summary-icon img {
-    width: 36px;
-    margin: 0 12px 0 0;
-  }
+	float: left;
+	display: inline;
+
+	img {
+		width: 24px;
+		margin: 0 6px 0 0;
+		vertical-align: middle;
+
+		@media only screen and (min-width: $break-medium) {
+			width: 30px;
+			margin: 0 10px 0 0;
+		}
+
+		@media only screen and (min-width: $break-large) {
+			width: 36px;
+			margin: 0 12px 0 0;
+		}
+	}
 }
 
 .validation-icon {
   max-width: 28px;
 }
+
 .validation-inline {
   color: $validation-red;
-}
-.validation-inline img {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  float: left;
-  margin: 0 5px 0 0;
-  vertical-align: middle;
-}
-@media only screen and (min-width: $break-medium) {
-    legend span.validation-inline img {
-    position: absolute;
-    left: 0;
-  }
-}
-.validation-message {
-  float: left;
-  width: 90%;
-  margin: 0;
-}
-.validation-message p,
-.validation-message li {
-  color: black;
-}
-.validation-message p a,
-.validation-message p a:link,
-.validation-message li a,
-.validation-message li a:link {
-  color: $validation-red !important;
-}
-.validation-message p a:hover,
-.validation-message p a:active,
-.validation-message p a:focus,
-.validation-message li a:hover,
-.validation-message li a:active,
-.validation-message li a:focus {
-  color: white !important;
-}
-.validation-message h2 {
-  margin: 0;
-  padding: 0;
+
+	img {
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		float: left;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+	}
 }
 
-/* Hide pseudo effects for validation heading */
-.validation-message h2 a,
-.validation-message h2 a:link,
-.validation-message h2 a:visited,
-.validation-message h2 a:hover,
-.validation-message h2 a:focus,
-.validation-message h2 a:active {
-  text-decoration: none;
-  color: $font-color;
-  background-color: transparent;
+@media only screen and (min-width: $break-medium) {
+    legend span.validation-inline img {
+		position: absolute;
+		left: 0;
+	}
 }
-.sub-section-content .validation-message h2 {
-  background: none !important;
+
+.validation-message {
+	float: left;
+	width: 90%;
+	margin: 0;
+
+	p, li {
+		color: black;
+
+		a, a:link {
+			color: $validation-red !important;
+		}
+		
+		a:hover, a:active, a:focus {
+			color: white !important;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0;
+
+		/* Hide pseudo effects for validation heading */
+		a, a:link, a:visited, a:hover, a:focus, a:active {
+			text-decoration: none;
+			color: $font-color;
+			background-color: transparent;
+		}
+		
+		.sub-section-content & {
+			background: none !important;
+		}
+	}
 }
 
 /* Message on gitHub prototype */
 
 .prototype {
-  background-color: black;
-  display: block;
-  padding: 0.25em 0;
-  width: 94%;
-  margin: 0 3%;
-}
-.prototype p {
-  color: white;
-  font-weight: bold;
-  padding: 0.5em 1em;
-}
-.prototype p span {
-  color: orange;
-}
-.prototype p a,
-.prototype p a:link,
-.prototype p a:visited {
-  background-color: $brand-blue;
-  color: white;
-  text-decoration: none;
-  padding: 0 0.4em;
-  margin-left: 0.25em;
-}
-.prototype p a:hover,
-.prototype p a:focus,
-.prototype p a:active {
-  background-color: white;
-  color: black;
-  outline: none;
-  text-decoration: none;
+	background-color: black;
+	display: block;
+	padding: 0.25em 0;
+	width: 94%;
+	margin: 0 3%;
+
+	p {
+		color: white;
+		font-weight: bold;
+		padding: 0.5em 1em;
+
+		span {
+			color: orange;
+		}
+
+		a, a:link, a:visited {
+			background-color: $brand-blue;
+			color: white;
+			text-decoration: none;
+			padding: 0 0.4em;
+			margin-left: 0.25em;
+		}
+		
+		a:hover, a:focus, a:active {
+			background-color: white;
+			color: black;
+			outline: none;
+			text-decoration: none;
+		}
+	}
 }

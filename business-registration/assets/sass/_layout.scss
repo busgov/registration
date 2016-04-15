@@ -339,14 +339,6 @@ footer {
 	margin-top: 1.5em;
 }
 
-.alert-tip {
-    background: #efe8ce url(../img/ico-alert28.png) no-repeat 1em 1em;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    padding: 0.1em 2em 0.25em 3em;
-    margin: 0 0 1.5em 0
-}
-
 // Feature treatment for pricing on business names page
 // ------------------------------------------------------------------------------------------------------
 
@@ -545,7 +537,6 @@ select.registration-duration {
   border: 1px solid red #cccccc;
   width: 130px;
 }
-
 
 .result-container {
 	&.validation {

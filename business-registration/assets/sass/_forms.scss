@@ -2,6 +2,17 @@
 // ------------------------------------------------------------------------------------------------------
 
 
+// Accessibility style - hide element from view, but leave in flow for screen readers:
+//
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 // Buttons
 // ------------------------------------------------------------------------------------------------------
 
@@ -326,16 +337,16 @@ input.larger {
     background-position: 0 -51px;
     cursor: pointer;
 }
-.checkboxes input[type="checkbox"] + label:before { 
+.checkboxes input[type="checkbox"] ~ label:before { 
     background-position: 0 -51px;
 }
-.checkboxes input[type="checkbox"]:checked + label:before {
+.checkboxes input[type="checkbox"]:checked ~ label:before {
     background-position: 0 4px;
 }
-.radios input[type="radio"] + label:before { 
+.radios input[type="radio"] ~ label:before { 
     background-position: -55px -51px;
 }     
-.radios input[type="radio"]:checked + label:before { 
+.radios input[type="radio"]:checked ~ label:before { 
     background-position: -55px 4px;
 }
 
@@ -445,8 +456,8 @@ input.larger {
 		  transition: color 1s ease; 
 		}
 
-		> input:hover + label, > input:focus + label,
-		> input + label:hover, > input + label:focus { 
+		> input:hover ~ label, > input:focus ~ label,
+		> input ~ label:hover, > input ~ label:focus { 
 		  color: #000; 
 		}
 
@@ -454,39 +465,39 @@ input.larger {
 		> input[type=checkbox] {
 		
 			/* Hover & Focus styles */
-			&:hover + label, &:focus + label, + label:hover { 
+			&:hover ~ label, &:focus ~ label, ~ label:hover { 
 			  background-position: 0 -48px;
 			}
 
 			/* Checked styles */
 			&:checked {
 
-				+ label { 
+				~ label { 
 				  background-position: 0 -192px; 
 				}
 
-				&:hover + label, &:focus + label, + label:hover, + label:focus { 
+				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
 				  background-position: 0 -240px; 
 				}
 			}
 
 			/* Active styles */
-			&:active + label, + label:hover:active { 
+			&:active ~ label, ~ label:hover:active { 
 			  background-position: 0 -96px; 
 			}
 						
-			&:active:checked + label, &:checked + label:hover:active {
+			&:active:checked ~ label, &:checked ~ label:hover:active {
 			  background-position: 0 -288px;
 			}
 
 			/* Disabled styles */
 			&:disabled {
-				+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active { 
+				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
 				  background-position: 0 -145px; 
 				}
 
 				&:checked {
-					+ label, + label:hover, + label:hover:active, &:hover + label, &:focus + label { 
+					~ label, ~ label:hover, ~ label:hover:active, &:hover ~ label, &:focus ~ label { 
 					  background-position: 0 -336px; 
 					}
 				}
@@ -495,42 +506,42 @@ input.larger {
 
 		/* radio button styles */
 		> input[type=radio] {
-			+ label { 
+			~ label { 
 			  background-position: 0 -386px;
 			}
 
 			/* Hover & Focus styles */
-			&:hover + label, &:focus + label, + label:hover { 
+			&:hover ~ label, &:focus ~ label, ~ label:hover { 
 			  background-position: 0 -434px; 
 			}
 
 			/* Checked styles */
 			&:checked {
-				+ label { 
+				~ label { 
 				  background-position: 0 -577px;
 				}
 
-				&:hover + label, &:focus + label, + label:hover, + label:focus { 
+				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
 				  background-position: 0 -625px; 
 				}
 
 			}
 
 			/* Active styles */
-			&:active + label, + label:hover:active { 
+			&:active ~ label, ~ label:hover:active { 
 			  background-position: 0 -482px;
 			}
-			&:active:checked + label, &:checked + label:hover:active { 
+			&:active:checked ~ label, &:checked ~ label:hover:active { 
 			  background-position: 0 -673px; 
 			}
 
 			/* Disabled styles */
 			&:disabled {
-				+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active {
+				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active {
 				  background-position: 0 -528px; 
 				}
 				&:checked {
-					+ label, &:hover + label, &:focus + label, + label:hover, + label:hover:active { 
+					~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
 				  background-position: 0 -719px; 
 				}
 			}

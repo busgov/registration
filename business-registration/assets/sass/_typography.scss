@@ -177,38 +177,54 @@ td.warning {
 
 
 /* Confirmation screen table */
-main.confirmation caption {
-  background: none;
-  border-top: 6px solid $brand-blue;
-  font-size: 150%;
-  font-weight: bold;
-  padding: 1em 0 0 0;
-}
-main.confirmation td,
-main.confirmation th {
-    padding: 0.5em 0.5em 0.5em 1em; 
-    vertical-align: top;
-    font-size: $smaller;
-}
-main.confirmation td:first-child {
-  border-top: 0;
-}
-main.confirmation .field-name {
-  border-right: 1px solid $table-lines;
-  width: 35%;
-  text-align: right;
-}
-main.confirmation th.field-name {
-  background: none;
-}
-main.confirmation .input-value {
-  width: 65%;
-}
-td.centre,
-th.centre {
-  text-align: center;
-}
+main.confirmation, .contacts {
 
+	caption {
+		background: none;
+		border-top: 6px solid $brand-blue;
+		font-size: 150%;
+		font-weight: bold;
+		padding: 1em 0 0 0;
+	}
+	
+	td, th {
+		padding: 0.5em 0.5em 0.5em 1em; 
+		vertical-align: top;
+		font-size: $smaller;
+
+		&.centre {
+			text-align: center;
+		}
+		
+		&.middle {
+			line-height: 2em;
+			vertical-align: middle;
+		}
+	}
+	
+	td:first-child {
+		border-top: 0;
+	}
+	
+	.field-name {
+		border-right: 1px solid $table-lines;
+		width: 35%;
+		text-align: right;
+	}
+	
+	th.field-name {
+		background: none;
+	}
+	
+	td.larger
+	{
+		font-size: 1.2em;
+	}
+	
+	.input-value {
+		width: 65%;
+	}
+}
 
 // Confirmation layout
 // ------------------------------------------------------------------------------------------------------
