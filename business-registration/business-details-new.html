@@ -35,18 +35,18 @@
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
-                    <span id="progress-percent" style="width: 40%"></span>
+                    <span id="progress-percent" style="width: 36%"></span>
                 </div><!-- meter -->
-                <ul class="section-nav">
+                <ul class="section-nav-4">
                     <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
-                    <li class="active"><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                    <!--li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li -->
+                    <li class="active"><span>2</span><br>Business<br> details</li>
+                    <!-- li><span>4</span><br>Taxation<br>details</li -->
+                    <li><span>3</span><br>Confirm<br> application</li>
+                    <li><span>4</span><br>Payment<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">3. Business details <span>(Step 3 of 6)</span></h1>
+            <h1 id="heading" tabindex="-1">3. Business details <span>(Step 2 of 4)</span></h1>
             <p>All fields are required unless marked as optional.</p>
 
             
@@ -90,42 +90,6 @@
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="individual1-country" class="input-right">Country of birth</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-								<select id="individual1-country" >
-									<option selected>Australia</option>
-									<option>Canada</option>
-									<option>Indonesia</option>
-									<option>New Zealand</option>
-									<option>etc</option>
-								</select>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="individual1-state" class="input-right">State or territory of birth</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-								<select id="individual1-state" >
-									<option value="">Please select...</option>
-									<option value="ACT">Australian Capital Territory</option>
-									<option value="NSW">New South Wales</option>
-									<option value="QLD">Queensland</option>
-									<option>etc</option>
-								</select>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="individual1-place" class="input-right">Place of birth</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input type="text" id="individual1-place" />
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
                                 &nbsp;
                             </div><!-- col -->
                             <div class="col7 custom-controls">
@@ -148,9 +112,10 @@
 							<div class="col8 last">
 								<p>In order to proceed with your application, we will need to confirm your identity. Providing your TFN is the quickest way to prove your identity.</p>
 							</div>
+						</div>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="tfn" class="input-right">Tax File Number</label>
+                                <label for="tfn" class="input-right">Tax File Number <span class="field-note">(optional)</span></label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="tfn" type="number">
@@ -231,6 +196,7 @@
 						<legend class="larger margin4">Main business address</legend>
 						<div class="grid-row">
 							<p class="margin4">Your main business location must be a physical address.</p>
+						</div>
                         <div class="grid-row">
                             <div class="col4">
                                 <label for="addr2line1" class="input-right">Address line 1</label>
@@ -396,11 +362,11 @@
                         </div>
 					</fieldset -->
 					<div id="add-bus-addr" class="contacts" style="display: none">
-						<h3 class="margin4">Additional business locations</h3>
+						<h3 class="margin4">Additional business addresses</h3>
 					</div>
 					<div id="additional-bus" style="display: none">
 						<fieldset id="busaddr4" class="margin-bottom-075">
-							<legend class="larger margin4">Additional business address</legend>
+							<legend class="larger margin4">Add business address</legend>
 							<div class="grid-row">
 								<div class="col4">
 									<label for="addr4line1" class="input-right">Address line 1</label>
@@ -508,7 +474,7 @@
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button id="bus-addr-prev" type="button" class="btn previous">Previous</button><button id="bus-addr-next" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
 				</div>
@@ -700,7 +666,7 @@
 					</div>
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button id="contact-prev" type="button" class="btn previous">Previous</button><button id="contact-next" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -1097,7 +1063,7 @@
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
-                            <button type="button" class="btn btn-default" onclick="location.href='taxation-details.html'">Continue to step 4</button>
+                            <button type="button" class="btn btn-default" onclick="location.href='confirm-soletrader-new.html'">Continue to step 4</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -1171,13 +1137,13 @@
 				table += "</tbody></table>";
 				
 				table = $(table);
-				$('#you-auth').toggle('fast', function() {
+				$('#you-auth').hide('fast', function() {
 					$('#altauthtable').show().append(table);
-					table.toggle('fast', function() {
-						$('#authform').toggle('fast', function() {
+					table.show('fast', function() {
+						$('#authform').show('fast', function() {
 							$('#add-auth2').show();
 							var targetTop = $(this).offset().top;
-							$('html body').animate({
+							$('html, body').animate({
 								scrollTop: targetTop
 							}, 400);
 							$('#name1').focus();
@@ -1207,10 +1173,9 @@
 				
 				} */
 				if (authstate == 0) {
-					$('#authform').toggle('fast', function() {
+					$('#authform').show('fast', function() {
 						var targetTop = $(this).offset().top;
-						// alert(targetTop);
-						$('html body').animate({
+						$('html, body').animate({
 							scrollTop: targetTop
 						}, 400);
 						$('#name1').focus();
@@ -1251,27 +1216,101 @@
 
 				var targetTop = $('#authform').offset().top - 20;
 				$('#altauthtable').show().append(table);
-				$("html body").animate({
+				$("html, body").animate({
 					scrollTop: targetTop
 					}, 400, null, function() {
 						$('#authform input').val('');
-						table.toggle('fast', function() {
+						$('#authform select').selectedIndex = 0;
+						table.show('fast', function() {
 							var targetTop = $('#authform').offset().top;
-							$('html body').delay(400).animate({
+							$('html, body').delay(400).animate({
 								scrollTop: targetTop
 							}, 400);
 							$('#name1').focus();
 						});
 				});
 			});
+
+			$('#contact-prev, #contact-next').click(function() {
+			
+				if ($('#you-auth:visible')) {
+					if ($('#you-position').val() == "")
+						return;
+
+					var table = '<table style="position: relative;"><tbody>';
+
+					table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger"><strong>' + $('#you-name').val() + '</strong>';
+					table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+
+					if ($('#you-mobile').val())
+						table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#you-mobile').val() + '</td></tr>';
+
+					table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-bushours').val() + '</td></tr>';
+
+					if ($('#you-afterhours').val())
+						table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#you-afterhours').val() + '</td></tr>';
+
+					table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#you-email').val() + '</td></tr>';
+					
+					if ($('#you-language').val())
+						table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-language').val() + '</td></tr>';
+
+					if ($('#you-otherlang').val())
+						table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-otherlang').val() + '</td></tr>';
+
+					table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-position').val() + '</td></tr>';
+					table += "</tbody></table>";
+					
+					$('#altauthtable').show().append(table);
+					$('#you-auth').hide();
+					
+					authstate = 0;
+				}
+				
+				if ($('authform:visible')) {
+					if ($('#name1').val() != "") {
+						var table = '<table style="position: relative;"><tbody>';
+
+						table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger">';
+						table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+
+						if ($('#mobile').val())
+							table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
+
+						table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#bushours').val() + '</td></tr>';
+
+						if ($('#afterhours').val())
+							table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#afterhours').val() + '</td></tr>';
+
+						table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#email').val() + '</td></tr>';
+						
+						if ($('#language').val())
+							table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
+
+						if ($('#otherlang').val())
+							table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#otherlang').val() + '</td></tr>';
+
+						table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#position').val() + '</td></tr>';
+						table += "</tbody></table>";
+						
+						$('#altauthtable').show().append(table);
+						$('#authform input').val('');
+						$('#authform select').selectedIndex = 0;
+						$('#authform').hide();
+					} else if ($('#altauthtable:visible'))
+						$('#authform').hide();
+					
+					authstate = 0;
+				}
+			});
 			
 			var busaddrstate = 0;
 			
 			$('#busaddr-btn').click(function() {
 				if (busaddrstate == 0) {
-					$('#additional-bus').toggle('fast', function() {
+					$('#additional-bus').show('fast', function() {
 						var targetTop = $('#busaddr4').offset().top;
-						$('html body').animate({
+						$('html, body').animate({
 							scrollTop: targetTop
 						}, 400);
 						$('#addr4line1').focus();
@@ -1304,18 +1343,53 @@
 				table = $(table);
 				var targetTop = $('#busaddr4').offset().top - 20;
 				$('#add-bus-addr').show().append(table);
-				$("html body").animate({
+				$("html, body").animate({
 					scrollTop: targetTop
 					}, 400, null, function() {
 						$('#additional-bus input').val('');
-						table.toggle('fast', function() {
+						$('#additional-bus select').selectedIndex = 0;
+						table.show('fast', function() {
 							var targetTop = $('#additional-bus').offset().top;
-							$('html body').delay(400).animate({
+							$('html, body').delay(400).animate({
 								scrollTop: targetTop
 							}, 400);
 							$('#addr4line1').focus();
 						});
 				});
+			});
+			
+			$('#bus-addr-prev, #bus-addr-next').click(function() {
+			
+				$('#additional-bus').hide();
+				busaddrstate = 0;
+				
+				if ($('#addr4line1').val() == "")
+					return;
+				
+				var table = '<table style="position: relative;"><tbody>';
+
+				table += '<tr><th class="field-name right">Address</th><td class="input-value">' + $('#addr4line1').val();
+				if ($('#addr4line2').val() != "")
+					table += '<br>' + $('#addr4line2').val();
+
+				table += '<br>' + $('#suburb4').val() + ' ' + $('#state4').val() + ' ' + $('#postcode4').val();
+				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+				table += '<tr><th class="field-name right">Country</th><td class="input-value">' + $('#country4').val() + '</td></tr>';
+
+				if ($('#contactphone4').val())
+					table += '<tr><th class="field-name right">Contact phone</th><td class="input-value">' + $('#contactphone4').val() + '</td></tr>';
+
+				if ($('#contactemail4').val())
+					table += '<tr><th class="field-name right">Contact email</th><td class="input-value">' + $('#contactemail4').val() + '</td></tr>';
+				
+				table += '<tr><th class="field-name right">Main business activity</th><td class="input-value">' + $('#contactactivity2').val() + '</td></tr>';
+				
+				table += "</tbody></table>";
+				
+				$('#add-bus-addr').show().append(table);
+				$('#additional-bus input').val('');
+				$('#additional-bus select').selectedIndex = 0;
+				
 			});
 			
 			$('#diffbusaddr').click(function() {
