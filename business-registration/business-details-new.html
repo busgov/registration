@@ -109,9 +109,9 @@
                             <div class="col8 last">
 								<select id="individual1-state" >
 									<option value="">Please select...</option>
-									<option>Australian Capital Territory</option>
-									<option>New South Wales</option>
-									<option>Queensland</option>
+									<option value="ACT">Australian Capital Territory</option>
+									<option value="NSW">New South Wales</option>
+									<option value="QLD">Queensland</option>
 									<option>etc</option>
 								</select>
                             </div><!-- col -->
@@ -262,9 +262,9 @@
                             <div class="col8 last">
 								<select id="state2" >
 									<option value="">Please select...</option>
-									<option>Australian Capital Territory</option>
-									<option>New South Wales</option>
-									<option>Queensland</option>
+									<option value="ACT">Australian Capital Territory</option>
+									<option value="NSW">New South Wales</option>
+									<option value="QLD">Queensland</option>
 									<option>etc</option>
 								</select>
 							</div><!-- col -->
@@ -305,7 +305,7 @@
                             </div><!-- col -->
                         </div><!-- grid-row -->
 					</fieldset>
-					<div class="grid-row custom-controls">
+					<div class="grid-row custom-controls margin-bottom-1">
 						<div class="col4">
 							<p>&nbsp;</p>
 						</div><!-- col -->
@@ -349,9 +349,9 @@
                             <div class="col8 last">
 								<select id="state3" >
 									<option value="">Please select...</option>
-									<option>Australian Capital Territory</option>
-									<option>New South Wales</option>
-									<option>Queensland</option>
+									<option value="ACT">Australian Capital Territory</option>
+									<option value="NSW">New South Wales</option>
+									<option value="QLD">Queensland</option>
 									<option>etc</option>
 								</select>
 							</div><!-- col -->
@@ -432,9 +432,9 @@
 								<div class="col8 last">
 									<select id="state4" >
 										<option value="">Please select...</option>
-										<option>Australian Capital Territory</option>
-										<option>New South Wales</option>
-										<option>Queensland</option>
+										<option value="ACT">Australian Capital Territory</option>
+										<option value="NSW">New South Wales</option>
+										<option value="QLD">Queensland</option>
 										<option>etc</option>
 									</select>
 								</div><!-- col -->
@@ -984,7 +984,7 @@
 
                     <div class="grid-row grid-row-padding-bottom">
                         <fieldset id="validation-test-field3" class="no-margin">
-                            <legend class="col4 input-right"><span id="agricultural">Does the sole trader operate an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                            <legend class="col4 input-right"><span id="agricultural">Will you be operating an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
                             <div class="col8 last">
                                 <div class="col12 last">
                                     <div class="radio-toggle">
@@ -1146,9 +1146,10 @@
 			$('#auth').click(authEvent);
 			
 			$('#auth-btn1').click(function() {
-				var table = '<table style="display: none;"><tbody>';
+				var table = '<table style="position: relative; display: none;"><tbody>';
 
-				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle"><strong>' + $('#you-name').val() + '</strong><span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger"><strong>' + $('#you-name').val() + '</strong>';
+				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
 
 				if ($('#you-mobile').val())
 					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#you-mobile').val() + '</td></tr>';
@@ -1173,8 +1174,14 @@
 				$('#you-auth').toggle('fast', function() {
 					$('#altauthtable').show().append(table);
 					table.toggle('fast', function() {
-						$('#authform').toggle('fast');
-						$('#add-auth2').show();
+						$('#authform').toggle('fast', function() {
+							$('#add-auth2').show();
+							var targetTop = $(this).offset().top;
+							$('html body').animate({
+								scrollTop: targetTop
+							}, 400);
+							$('#name1').focus();
+						})
 					});
 				});
 				
@@ -1203,19 +1210,20 @@
 					$('#authform').toggle('fast', function() {
 						var targetTop = $(this).offset().top;
 						// alert(targetTop);
-						$('html, body').animate({
+						$('html body').animate({
 							scrollTop: targetTop
-						}, 800);
+						}, 400);
+						$('#name1').focus();
 					});
 
 					authstate = 1;
 					return;
 				}
 
-				var table = '<table style="display: none;"><tbody>';
+				var table = '<table style="position: relative; display: none;"><tbody>';
 
-				table += '<tr><th class="field-name right middle">Name</th><td class="input-value">';
-				table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger">';
+				table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
 
 				if ($('#mobile').val())
 					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
@@ -1237,9 +1245,24 @@
 				table += "</tbody></table>";
 				
 				table = $(table);
+				//$('#altauthtable').show().append(table);
+				//table.toggle('fast');
+				//$('#authform input').val('');
+
+				var targetTop = $('#authform').offset().top - 20;
 				$('#altauthtable').show().append(table);
-				table.toggle('fast');
-				$('#authform input').val('');
+				$("html body").animate({
+					scrollTop: targetTop
+					}, 400, null, function() {
+						$('#authform input').val('');
+						table.toggle('fast', function() {
+							var targetTop = $('#authform').offset().top;
+							$('html body').delay(400).animate({
+								scrollTop: targetTop
+							}, 400);
+							$('#name1').focus();
+						});
+				});
 			});
 			
 			var busaddrstate = 0;
@@ -1247,26 +1270,25 @@
 			$('#busaddr-btn').click(function() {
 				if (busaddrstate == 0) {
 					$('#additional-bus').toggle('fast', function() {
-						var targetTop = $(this).offset().top;
-						$('html, body').animate({
+						var targetTop = $('#busaddr4').offset().top;
+						$('html body').animate({
 							scrollTop: targetTop
-						}, 800);
+						}, 400);
+						$('#addr4line1').focus();
 					});
 
 					busaddrstate = 1;
 					return;
 				}
 
-				var table = '<table style="display: none;"><tbody>';
+				var table = '<table style="position: relative; display: none;"><tbody>';
 
-				table += '<tr><th class="field-name right middle">Address</th><td class="input-value">' + $('#addr4line1').val();
+				table += '<tr><th class="field-name right">Address</th><td class="input-value">' + $('#addr4line1').val();
 				if ($('#addr4line2').val() != "")
-					table += ' ' + $('#addr4line2').val();
-				table += '<span style="float: right"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
+					table += '<br>' + $('#addr4line2').val();
 
-				table += '<tr><th class="field-name right">Suburb</th><td class="input-value">' + $('#suburb4').val() + '</td></tr>';
-				table += '<tr><th class="field-name right">State</th><td class="input-value">' + $('#state4').val() + '</td></tr>';
-				table += '<tr><th class="field-name right">Postcode</th><td class="input-value">' + $('#postcode4').val() + '</td></tr>';
+				table += '<br>' + $('#suburb4').val() + ' ' + $('#state4').val() + ' ' + $('#postcode4').val();
+				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
 				table += '<tr><th class="field-name right">Country</th><td class="input-value">' + $('#country4').val() + '</td></tr>';
 
 				if ($('#contactphone4').val())
@@ -1280,15 +1302,20 @@
 				table += "</tbody></table>";
 				
 				table = $(table);
+				var targetTop = $('#busaddr4').offset().top - 20;
 				$('#add-bus-addr').show().append(table);
-				$('#busaddr4 input').val('');
-				table.toggle('fast', function() {
-					var targetTop = $('#additional-bus').offset().top;
-					$('html, body').animate({
-						scrollTop: targetTop
-					}, 800);
+				$("html body").animate({
+					scrollTop: targetTop
+					}, 400, null, function() {
+						$('#additional-bus input').val('');
+						table.toggle('fast', function() {
+							var targetTop = $('#additional-bus').offset().top;
+							$('html body').delay(400).animate({
+								scrollTop: targetTop
+							}, 400);
+							$('#addr4line1').focus();
+						});
 				});
-
 			});
 			
 			$('#diffbusaddr').click(function() {
