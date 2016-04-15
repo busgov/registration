@@ -195,9 +195,14 @@ function navigationWithinPage() {
                 $(item).find("div").first().slideUp("slow", function () {
                     $(item).removeClass("sub-section-open").addClass("sub-section-done"); // add class for your need.
                     
-                    setTimeout(function(){
-                        $(item).next(".sub-section-container").addClass("sub-section-open").find("div").first().slideDown("slow"); 
-                    }, 100); // add class for your need.;
+//                    setTimeout(function(){
+                        $(item).next(".sub-section-container").addClass("sub-section-open").find("div").first().slideDown("slow", function() {
+							var targetTop = $(this).prev().offset().top;
+							$('html, body').animate({
+								scrollTop: targetTop
+							}, 500);
+						}); 
+ //                   }, 100); // add class for your need.;
                 });
 
             }
@@ -210,8 +215,13 @@ function navigationWithinPage() {
         var index = $(".previous").index(this);
         $.each($(".sub-section-container"), function (i, item) {
             if (index === i) {
-                $(item).removeClass("sub-section-done").addClass("sub-section-open").find("div").first().slideDown("", function () {
-                    $(item).next(".sub-section-container").removeClass("sub-section-open").find("div").first().slideUp();
+				$(item).next(".sub-section-container").removeClass("sub-section-open").find("div").first().slideUp("slow", function() {
+					$(item).removeClass("sub-section-done").addClass("sub-section-open").find("div").first().slideDown("slow", function () {
+						var targetTop = $(this).prev().offset().top;
+						$('html, body').animate({
+							scrollTop: targetTop
+						}, 500);
+					});
                 });
             }
             
