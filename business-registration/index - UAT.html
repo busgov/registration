@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+    </style>
+</head>
+<body class="feature-home">
+    <div class="wrapper wrapper-main">
+        <header class="clearfix">
+            <div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="btn-options"><span>Sign in</span></a>
+                        <!--
+                            <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#">this is being redesigned...</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+		<div class="dashboard-message clearfix">
+			<div class="system-message-content">
+				<h1>Test system</h1>
+				<p>You currently viewing an instance of the SOBRS web site that has been activated for user acceptance testing. This is not a production system, and any activities carried out in this environment will not result in any live application lodgements.</p>
+				<p>For more information about when the new web site will be available, see <a href="#">business.gov.au</a>.</p>
+			</div>
+			<button type="button" class="closeSystemMessage">Dismiss</button>
+		</div>
+		<div><p style="float: right; padding: 2px 10px; margin-top: -17px; margin-right: 10px; color: #FFF; background-color: #3179b5; font-size: 0.8em; border-radius: 10px"><strong>UAT</strong></p></div>
+
+		<div class="feature-wrapper">
+
+            <h1>Business registration</h1>
+            <p class="byline">Your business and tax registrations in one place</p>
+            <div class="grid-row">
+                <div class="col6">
+                    <div class="feature-box">
+                        <button class="btn btn-default" onclick="location.href='help-me-decide/eligibility.html'">Help me decide</button>
+                        <p>Not sure what business registrations you may need? Answer a few questions and we can help you decide.</p>
+                    </div>
+                </div>
+                <div class="col6 last">
+                    <div class="feature-box">
+                        <button class="btn btn-default" onclick="location.href='register.html'">Ready to register</button>
+                        <p>Have all the information you need and ready to register? Apply for your main business and tax registrations here!</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <ul>
+                    <li><a href="style-guide.html">Style guide</a></li>
+                    <li><a href="#">Legal notices</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">Site map</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <div class="applicationoptions" id="applicationOptions"></div>
+    </div><!-- wrapper -->
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            initApplicationOptions();
+        });
+
+            
+         var clipboard = new Clipboard('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+    </script>
+</body>
+</html>
