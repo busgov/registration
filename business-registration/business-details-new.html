@@ -54,6 +54,22 @@
             <div id="section1" class="sub-section-container sub-section-open">
                 <h2>Sole trader details</h2>
                 <div class="sub-section-content">
+					<div id="validation1" class="validation-container clearfix" style="display: none;">
+						<div class="grid-row">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+								<ul>
+									<li id="val1a">Enter a value for field <a href="#individual1-given">Given name</a></li>
+									<li id="val1b">Enter a value for field <a href="#individual1-family">Family name</a></li>
+									<li id="val1c">Enter a value for field <a href="#individual1-dob">Date of birth</a></li>
+									<li id="val1d">Enter a value for field <a href="#tfn">Tax file number</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
                     <fieldset class="margin-bottom-075">
                         <legend class="margin4 larger">Your details</legend>
                         <div class="grid-row">
@@ -115,7 +131,7 @@
 						</div>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="tfn" class="input-right">Tax File Number <span class="field-note">(optional)</span></label>
+                                <label for="tfn" class="input-right">Tax File Number</label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="tfn" type="number">
@@ -125,16 +141,58 @@
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button id="next1" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
 				</div>
 			</div>
 				
-			<!-- START SECTION 3 -->
-			<div id="section3" class="sub-section-container">
+			<!-- START SECTION 2 -->
+			<div id="section2" class="sub-section-container">
 				<h2>Business location details</h2>
 				<div class="sub-section-content">
+					<div id="validation2" class="validation-container clearfix" style="display: none;">
+						<div class="grid-row">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+								<div id="mainaddr-val" style="display: none;">
+									<h3>Main business address:</h3>
+									<ul>
+										<li id="val2a">Enter a value for field <a href="#addr2line1">Address line 1</a></li>
+										<li id="val2b">Enter a value for field <a href="#suburb2">Suburb</a></li>
+										<li id="val2c">Enter a value for field <a href="#state2">State</a></li>
+										<li id="val2d">Enter a value for field <a href="#postcode2">Postcode</a></li>
+										<li id="val2e">Enter a value for field <a href="#contactemail">Contact email</a></li>
+										<li id="val2f">Enter a value for field <a href="#contactphone">Contact phone</a></li>
+									</ul>
+								</div>
+								<div id="postal-val" style="display: none;">
+									<h3>Postal address:</h3>
+									<ul>
+										<li id="val2g">Enter a value for field <a href="#addr3line1">Address line 1</a></li>
+										<li id="val2h">Enter a value for field <a href="#suburb3">Suburb</a></li>
+										<li id="val2i">Enter a value for field <a href="#state3">State</a></li>
+										<li id="val2j">Enter a value for field <a href="#postcode3">Postcode</a></li>
+									</ul>
+								</div>
+								<div id="addbus-val" style="display: none;">
+									<h3>Additional business address:</h3>
+									<ul>
+										<li id="val2k">Enter a value for field <a href="#addr4line1">Address line 1</a></li>
+										<li id="val2l">Enter a value for field <a href="#suburb4">Suburb</a></li>
+										<li id="val2m">Enter a value for field <a href="#state4">State</a></li>
+										<li id="val2n">Enter a value for field <a href="#postcode4">Postcode</a></li>
+										<li id="val2o">Enter a value for field <a href="#conactemail4">Email</a></li>
+										<li id="val2p">Enter a value for field <a href="#contactphone4">Phone</a></li>
+										<li id="val2q">Enter a value for field <a href="#contactactivity2">Activity</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 					<!--fieldset class="margin-bottom-075">
 						<legend class="larger margin4">Residential address</legend>
                         <div class="grid-row">
@@ -247,27 +305,33 @@
                             <div class="col4">
                                 <label for="country2" class="input-right">Country</label>
                             </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="country2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
+							<div class="col8 last">
+								<select id="country2">
+									<option>Australia</option>
+									<option>Indonesia</option>
+									<option>New Zealand</option>
+									<option>United States of America</option>
+									<option>etc</option>
+								</select>
+							</div><!-- col -->
+                       </div><!-- grid-row -->
 					</fieldset>
 					<fieldset class="margin-bottom-075">
 						<legend class="larger margin4">Contact details</legend>
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="contactphone" class="input-right">Phone <span class="field-note">(optional)</span></label>
+                                <label for="contactemail" class="input-right">Email</span></label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="contactphone" type="text">
+                                <input id="contactemail" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="contactemail" class="input-right">Email <span class="field-note">(optional)</span></label>
+                                <label for="contactphone" class="input-right">Phone</label>
                             </div><!-- col -->
                             <div class="col8 last">
-                                <input id="contactemail" type="text">
+                                <input id="contactphone" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
 					</fieldset>
@@ -334,9 +398,15 @@
                             <div class="col4">
                                 <label for="country3" class="input-right">Country</label>
                             </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="country3" type="text">
-                            </div><!-- col -->
+							<div class="col8 last">
+								<select id="country3">
+									<option>Australia</option>
+									<option>Indonesia</option>
+									<option>New Zealand</option>
+									<option>United States of America</option>
+									<option>etc</option>
+								</select>
+							</div><!-- col -->
                         </div><!-- grid-row -->
 					</fieldset>
 
@@ -426,18 +496,18 @@
 							<legend class="larger margin4">Contact details</legend>
 							<div class="grid-row">
 								<div class="col4">
-									<label for="contactphone4" class="input-right">Phone <span class="field-note">(optional)</span></label>
+									<label for="contactemail4" class="input-right">Email</label>
 								</div><!-- col -->
 								<div class="col8 last">
-									<input id="contactphone4" type="text">
+									<input id="contactemail4" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 							<div class="grid-row">
 								<div class="col4">
-									<label for="contactemail4" class="input-right">Email <span class="field-note">(optional)</span></label>
+									<label for="contactphone4" class="input-right">Phone</label>
 								</div><!-- col -->
 								<div class="col8 last">
-									<input id="contactemail4" type="text">
+									<input id="contactphone4" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 						</fieldset>
@@ -480,10 +550,38 @@
 				</div>
 			</div>
 
-			<!-- START SECTION 2 -->
-			<div id="section2" class="sub-section-container">
+			<!-- START SECTION 3 -->
+			<div id="section3" class="sub-section-container">
 				<h2>Authorised contacts</h2>
                 <div class="sub-section-content">
+					<div id="validation3" class="validation-container clearfix" style="display: none;">
+						<div class="grid-row">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+								<div id="you-val" style="display: none;">
+									<h3>Your contact details:</h3>
+									<ul>
+										<li id="val3a">Enter a value for field <a href="#you-email">Email</a></li>
+										<li id="val3b">Enter a value for field <a href="#you-bushours">Phone</a></li>
+										<li id="val3c">Enter a value for field <a href="#you-position">Position held</a></li>
+									</ul>
+								</div>
+								<div id="newcontact-val" style="display: none;">
+									<h3>New contact details:</h3>
+									<ul>
+										<li id="val3d">Enter a value for field <a href="#name1">Given name</a></li>
+										<li id="val3e">Enter a value for field <a href="#name2">Family name</a></li>
+										<li id="val3f">Enter a value for field <a href="#email">Email</a></li>
+										<li id="val3g">Enter a value for field <a href="#bushours">Phone</a></li>
+										<li id="val3h">Enter a value for field <a href="#position">Position held</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div id="you-auth">
 						<fieldset class="margin-bottom-075">
 							<legend class="margin4 larger">Your contact details</legend>
@@ -500,10 +598,10 @@
 							</div><!-- grid-row -->
 							<div class="grid-row">
 								<div class="col4">
-									<label for="you-mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
+									<label for="you-email" class="input-right">Email</label>
 								</div><!-- col -->
 								<div class="col8 last">
-									<input id="you-mobile" type="text">
+									<input id="you-email" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 							<div class="grid-row">
@@ -514,20 +612,32 @@
 									<input id="you-bushours" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
-							<div class="grid-row">
+							<div id="mobile-field" class="grid-row" style="display: none;">
 								<div class="col4">
-									<label for="you-afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
+									<label for="you-mobile" class="input-right">Mobile</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="you-mobile" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row custom-controls margin-bottom-1">
+								<div class="col4">
+									<p>&nbsp;</p>
+								</div><!-- col -->
+								<div class="col8 last">
+									<p>
+										<input id="afterhours-cb" type="checkbox">
+										<label for="afterhours-cb">Use a different number after hours</label>
+									</p>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+
+							<div id="you-ah-field" class="grid-row" style="display: none;">
+								<div class="col4">
+									<label for="you-afterhours" class="input-right">After hours phone</label>
 								</div><!-- col -->
 								<div class="col8 last">
 									<input id="you-afterhours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="you-email" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-email" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 							<div class="grid-row">
@@ -538,12 +648,12 @@
 									<input id="you-language" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
-							<div class="grid-row">
+							<div id="you-otherlang-field" class="grid-row" style="display: none;">
 								<div class="col4">
 									<label for="you-otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
 								</div><!-- col -->
 								<div class="col8 last">
-									<input id="you-language" type="text">
+									<input id="you-otherlang" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 							<div class="grid-row">
@@ -594,10 +704,10 @@
 							</div><!-- grid-row -->
 							<div class="grid-row">
 								<div class="col4">
-									<label for="mobile" class="input-right">Mobile <span class="field-note">(optional)</span></label>
+									<label for="email" class="input-right">Email</label>
 								</div><!-- col -->
 								<div class="col8 last">
-									<input id="mobile" type="text">
+									<input id="email" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
 							<div class="grid-row">
@@ -608,9 +718,28 @@
 									<input id="bushours" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
-							<div class="grid-row">
+							<div id="contact-mobile" class="grid-row" style="display: none;">
 								<div class="col4">
-									<label for="afterhours" class="input-right">After hours phone <span class="field-note">(optional)</span></label>
+									<label for="mobile" class="input-right">Mobile</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="mobile" type="text">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row custom-controls margin-bottom-1">
+								<div class="col4">
+									<p>&nbsp;</p>
+								</div><!-- col -->
+								<div class="col8 last">
+									<p>
+										<input id="cont-afterhours-cb" type="checkbox">
+										<label for="cont-afterhours-cb">Use a different number after hours</label>
+									</p>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div id="contact-ah-field" class="grid-row" style="display: none;">
+								<div class="col4">
+									<label for="afterhours" class="input-right">After hours phone</label>
 								</div><!-- col -->
 								<div class="col8 last">
 									<input id="afterhours" type="text">
@@ -618,21 +747,13 @@
 							</div><!-- grid-row -->
 							<div class="grid-row">
 								<div class="col4">
-									<label for="email" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="email" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-														<div class="grid-row">
-								<div class="col4">
 									<label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
 								</div><!-- col -->
 								<div class="col8 last">
 									<input id="language" type="text">
 								</div><!-- col -->
 							</div><!-- grid-row -->
-							<div class="grid-row">
+							<div id="other-pref-lang" class="grid-row" style="display: none;">
 								<div class="col4">
 									<label for="otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
 								</div><!-- col -->
@@ -676,7 +797,21 @@
             <div id="section4" class="sub-section-container">
                 <h2>Reason for application</h2>
                 <div class="sub-section-content">
-                    <fieldset id="fieldsetReasonForApplication">
+ 					<div id="validation4" class="validation-container clearfix" style="display: none;">
+						<div class="grid-row">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+								<ul>
+									<li id="val4a">Please select a value for <a class="skip" href="#fieldsetReasonForApplication">why you need an ABN</a></li>
+									<li id="val4b">Please select a value for: <a class="skip" href="#firsttime-selfemployed">Is this the first time you will be self-employed?</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<fieldset id="fieldsetReasonForApplication">
                         <legend class="larger">Australian Business Number (ABN)</legend>
                         <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
 
@@ -871,17 +1006,19 @@
 
 					<div class="grid-row padding-bottom-1 clearfix showhide-target">
 						<div class="col12 last">
-							<p class="no-margin-top"><label for="self-employed">Is this the first time you will be self-employed?</label></p>
-							<div class="radio-toggle">
-								<label class="on label-left" for="self-yes"><input id="self-yes" type="radio" name="self-employed"><span>Yes</span></label>
-								<label class="off label-right" for="self-no"><input id="self-no" type="radio" name="self-employed"><span>No</span></label>
-							</div>
+							<fieldset id="firsttime-selfemployed">
+								<legend>Is this the first time you will be self-employed?</legend>
+								<div class="radio-toggle">
+									<label class="on label-left" for="self-yes"><input id="self-yes" type="radio" name="self-employed"><span>Yes</span></label>
+									<label class="off label-right" for="self-no"><input id="self-no" type="radio" name="self-employed"><span>No</span></label>
+								</div>
+							</fieldset>
 						</div><!-- col -->
 					</div><!-- grid-row -->
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn previous">Previous</button><button id="reason-next" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -892,6 +1029,21 @@
             <div id="section5" class="sub-section-container">
                 <h2>Business activity details</h2>
                 <div class="sub-section-content">
+ 					<div id="validation5" class="validation-container clearfix" style="display: none;">
+						<div class="grid-row">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+								<ul>
+									<li id="val5a">Enter a value for field <a class="skip" href="#activity-contact">Activity</a></li>
+									<li id="val5b">Enter a value for field  <a class="skip" href="#abn-start-date">Commencement date of activity</a></li>
+									<li id="val5c">Select a value for <a class="skip" href="#validation-test-field3">Will you be operating an agricultural property?</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 					<fieldset>
 						<legend class="hidden">Main business activity</legend>
 						<div class="grid-row">
@@ -1063,7 +1215,7 @@
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
-                            <button type="button" class="btn btn-default" onclick="location.href='confirm-soletrader-new.html'">Continue to step 4</button>
+                            <button id="activity-next" type="button" class="btn btn-default" onclick="// location.href='confirm-soletrader-new.html'">Continue to step 4</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -1086,12 +1238,361 @@
 
         $(document).ready(function () {
             /* Expand collapse headings config */
-            navigationWithinPage();
+            //navigationWithinPage();
             initSaveForLater();
             initApplicationOptions();
             // the following code is to register the slide up/down effect. this is
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.
+			
+			$('#individual1-given').focus();
+			
+			// Validation functions:
+			$('#next1').click(function(e) {
+				var valid = true;
+				$('#val1a').toggle($('#individual1-given').val() == "")
+				$('label[for="individual1-given"]').toggleClass('validation-inline', $('#individual1-given').val() == "");
+				$('#val1b').toggle($('#individual1-family').val() == "")
+				$('label[for="individual1-family"]').toggleClass('validation-inline', $('#individual1-family').val() == "");
+				$('#val1c').toggle($('#individual1-dob').val() == "")
+				$('label[for="individual1-dob"]').toggleClass('validation-inline', $('#individual1-dob').val() == "");
+				$('#val1d').toggle($('#tfn').val() == "")
+				$('label[for="tfn"]').toggleClass('validation-inline', $('#tfn').val() == "");
+				if ($('#individual1-given').val() == "" ||
+					$('#individual1-family').val() == "" ||
+					$('#individual1-dob').val() == "" ||
+					$('#tfn').val() == "") {
+					$('#validation1').show()
+				} else {
+					$('#validation1').hide();
+					return true;
+				}
+				var targetTop = $('#section1').offset().top;
+				$('html, body').animate({
+					scrollTop: targetTop
+				}, 400);
+				e.preventDefault();
+				return false;
+			});
+
+			$('#bus-addr-next, #busaddr-btn').click(function (e) {
+				var valid = true;
+
+				// Main business address:
+				
+				// display individual messages:
+				$('#val2a').toggle($('#addr2line1').val() == "");
+				$('label[for="addr2line1"]').toggleClass('validation-inline', $('#addr2line1').val() == "");
+				$('#val2b').toggle($('#suburb2').val() == "");
+				$('label[for="suburb2"]').toggleClass('validation-inline', $('#suburb2').val() == "");
+				$('#val2c').toggle($('#state2').val() == "");
+				$('label[for="state2"]').toggleClass('validation-inline', $('#state2').val() == "");
+				$('#val2d').toggle($('#postcode2').val() == "");
+				$('label[for="postcode2"]').toggleClass('validation-inline', $('#postcode2').val() == "");
+				$('#val2e').toggle($('#contactemail').val() == "");
+				$('label[for="contactemail"]').toggleClass('validation-inline', $('#contactemail').val() == "");
+				$('#val2f').toggle($('#contactphone').val() == "");
+				$('label[for="contactphone"]').toggleClass('validation-inline', $('#contactphone').val() == "");
+
+				if ($('#addr2line1').val() == "" ||
+					$('#suburb2').val() == "" ||
+					$('#state2').val() == "" ||
+					$('#postcode2').val() == "" ||
+					$('#contactemail').val() == "" ||
+					$('#contactphone').val() == "") {
+					valid = false;
+					$('#mainaddr-val').show();
+				} else {
+					$('#mainaddr-val').hide();
+				}
+				
+				// Postal address:
+				if ($('#postaladdr').is(':visible')) {
+
+						$('label[for="addr3line1"]').toggleClass('validation-inline', $('#addr3line1').val() == "");
+						$('label[for="suburb3"]').toggleClass('validation-inline', $('#suburb3').val() == "");
+						$('label[for="state3"]').toggleClass('validation-inline', $('#state3').val() == "");
+						$('label[for="postcode3"]').toggleClass('validation-inline', $('#postcode3').val() == "");
+				
+					if ($('#addr3line1').val() == "" ||
+						$('#suburb3').val() == "" ||
+						$('#state3').val() == "" ||
+						$('#postcode3').val() == "") {
+						valid = false;
+						// display individual messages:
+						$('#val2g').toggle($('#addr3line1').val() == "");
+						$('#val2h').toggle($('#suburb3').val() == "");
+						$('#val2i').toggle($('#state3').val() == "");
+						$('#val2j').toggle($('#postcode3').val() == "");
+						$('#postal-val').show();
+					} else {
+						$('#postal-val').hide();
+					}
+				} else {
+					$('#postal-val').hide();
+				}
+
+				// Additional business address:
+				if ($('#additional-bus').is(':visible')) {
+
+						$('label[for="addr4line1"]').toggleClass('validation-inline', $('#addr4line1').val() == "");
+						$('label[for="suburb4"]').toggleClass('validation-inline', $('#suburb4').val() == "");
+						$('label[for="state4"]').toggleClass('validation-inline', $('#state4').val() == "");
+						$('label[for="postcode4"]').toggleClass('validation-inline', $('#postcode4').val() == "");
+						$('label[for="contactemail4"]').toggleClass('validation-inline', $('#contactemail4').val() == "");
+						$('label[for="contactphone4"]').toggleClass('validation-inline', $('#contactphone4').val() == "");
+						$('label[for="contactactivity2"]').toggleClass('validation-inline', $('#contactactivity2').val() == "");
+				
+					if ($('#addr4line1').val() == "" &&
+						$('#suburb4').val() == "" &&
+						$('#state4').val() == "" &&
+						$('#postcode4').val() == "" &&
+						$('#contactemail4').val() == "" &&
+						$('#contactphone4').val() == "" &&
+						$('#contactactivity2').val() == "" &&
+						$(e.target).is('#bus-addr-next'))
+						{
+						$('label[for="addr4line1"]').toggleClass('validation-inline', false);
+						$('label[for="suburb4"]').toggleClass('validation-inline', false);
+						$('label[for="state4"]').toggleClass('validation-inline', false);
+						$('label[for="postcode4"]').toggleClass('validation-inline', false);
+						$('label[for="contactemail4"]').toggleClass('validation-inline', false);
+						$('label[for="contactphone4"]').toggleClass('validation-inline', false);
+						$('label[for="contactactivity2"]').toggleClass('validation-inline', false);
+						$('#addbus-val').hide();
+					} else if ($('#addr4line1').val() == "" ||
+						$('#suburb4').val() == "" ||
+						$('#state4').val() == "" ||
+						$('#postcode4').val() == "" ||
+						$('#contactemail4').val() == "" ||
+						$('#contactphone4').val() == "" ||
+						$('#contactactivity2').val() == "") {
+						valid = false;
+						// display individual messages:
+						$('#val2k').toggle($('#addr4line1').val() == "");
+						$('#val2l').toggle($('#suburb4').val() == "");
+						$('#val2m').toggle($('#state4').val() == "");
+						$('#val2n').toggle($('#postcode4').val() == "");
+						$('#val2o').toggle($('#contactemail4').val() == "");
+						$('#val2p').toggle($('#contactphone4').val() == "");
+						$('#val2q').toggle($('#contactactivity2').val() == "");
+						$('#addbus-val').show();
+					} else {
+						$('#addbus-val').hide();
+					}
+				} else {
+					$('#addbus-val').hide();
+				}
+				
+				if (!valid) {
+					$('#validation2').show();
+					var targetTop = $('#section2').offset().top;
+					$('html, body').animate({
+						scrollTop: targetTop
+					}, 400);
+					e.preventDefault();
+					return false;
+				} else {
+					$('#validation2').hide();
+				}
+			});
+
+			$('#contact-next, #auth-btn, #auth-btn1').click(function (e) {
+				var valid = true;
+
+				// Your contact details:
+				if ($('#you-auth').is(":visible")) {					
+					// display individual messages:
+					$('#val3a').toggle($('#you-email').val() == "");
+					$('label[for="you-email"]').toggleClass('validation-inline', $('#you-email').val() == "");
+					$('#val3b').toggle($('#you-bushours').val() == "");
+					$('label[for="you-bushours"]').toggleClass('validation-inline', $('#you-bushours').val() == "");
+					$('#val3c').toggle($('#you-position').val() == "");
+					$('label[for="you-position"]').toggleClass('validation-inline', $('#you-position').val() == "");
+
+					if ($('#you-email').val() == "" ||
+						$('#you-bushours').val() == "" ||
+						$('#you-position').val() == "") {
+						valid = false;
+						$('#you-val').show()
+					} else {
+						$('#you-val').hide();
+					}
+				} else {
+					$('#you-val').hide();
+				}
+				
+				// New contact details:
+				if ($('#authform').is(':visible')) {
+
+					// display individual messages:
+					$('#val3d').toggle($('#name1').val() == "");
+					$('label[for="name1"]').toggleClass('validation-inline', $('#name1').val() == "");
+					$('#val3e').toggle($('#name2').val() == "");
+					$('label[for="name2"]').toggleClass('validation-inline', $('#name2').val() == "");
+					$('#val3f').toggle($('#email').val() == "");
+					$('label[for="email"]').toggleClass('validation-inline', $('#email').val() == "");
+					$('#val3g').toggle($('#bushours').val() == "");
+					$('label[for="bushours"]').toggleClass('validation-inline', $('#bushours').val() == "");
+					$('#val3h').toggle($('#position').val() == "");
+					$('label[for="position"]').toggleClass('validation-inline', $('#position').val() == "");
+	
+					if ($('#name1').val() == "" &&
+						$('#name2').val() == "" &&
+						$('#email').val() == "" &&
+						$('#bushours').val() == "" &&
+						$('#position').val() == "" && 
+						$('#altauthtable').is(':visible') &&
+						$(e.target).is('#contact-next')) {
+						$('label[for="name1"]').toggleClass('validation-inline', false);
+						$('label[for="name2"]').toggleClass('validation-inline', false);
+						$('label[for="email"]').toggleClass('validation-inline', false);
+						$('label[for="bushours"]').toggleClass('validation-inline', false);
+						$('label[for="position"]').toggleClass('validation-inline', false);
+						$('#newcontact-val').hide();
+					} else if ($('#name1').val() == "" ||
+						$('#name2').val() == "" ||
+						$('#email').val() == "" ||
+						$('#bushours').val() == "" ||
+						$('#position').val() == "") {
+						$('#newcontact-val').show();
+						valid = false;
+					} else {
+						$('#newcontact-val').hide();
+					}
+				} else {
+					$('#newcontact-val').hide();
+				}
+				
+				if (!valid) {
+					$('#validation3').show();
+					var targetTop = $('#section3').offset().top;
+					$('html, body').animate({
+						scrollTop: targetTop
+					}, 400);
+					e.preventDefault();
+					return false;
+				} else {
+					$('#validation3').hide();
+				}
+			});
+			
+			$('#reason-next').click(function(e) {
+				var valid = true;
+				$('#fieldsetReasonForApplication legend+p').toggleClass('validation-inline', $('#fieldsetReasonForApplication input[type=radio]:checked').length == 0);
+				$('#firsttime-selfemployed legend').toggleClass('validation-inline', $('#firsttime-selfemployed input[type=radio]:checked').length == 0);
+				if ($('#fieldsetReasonForApplication input[type=radio]:checked').length == 0 ||
+					$('#firsttime-selfemployed input[type=radio]:checked').length == 0) {
+					$('#validation4').show()
+				} else {
+					$('#validation4').hide();
+					return true;
+				}
+				$('#val4a').toggle($('#fieldsetReasonForApplication input[type=radio]:checked').length == 0);
+				$('#val4b').toggle($('#firsttime-selfemployed input[type=radio]:checked').length == 0);
+				var targetTop = $('#section4').offset().top;
+				$('html, body').animate({
+					scrollTop: targetTop
+				}, 400);
+				e.preventDefault();
+				return false;
+			});
+
+			$('#activity-next').click(function(e) {
+				var valid = true;
+				$('label[for="activity-contact"').toggleClass('validation-inline', $('#activity-contact').val() == "");
+				$('label[for="abn-start-date"').toggleClass('validation-inline', $('#abn-start-date').val() == "");
+				$('#validation-test-field3 legend').toggleClass('validation-inline', $('#validation-test-field3 input[type=radio]:checked').length == 0);
+				if ($('#activity-contact').val() == "" ||
+					$('#abn-start-date').val() == "" ||
+					$('#validation-test-field3 input[type=radio]:checked').length == 0) {
+					$('#validation5').show()
+				} else {
+					location.href = 'confirm-soletrader-new.html';
+					return true;
+				}
+				$('#val5a').toggle($('#activity-contact').val() == "");
+				$('#val5b').toggle($('#abn-start-date').val() == "");
+				$('#val5c').toggle($('#validation-test-field3 input[type=radio]:checked').length == 0);
+				var targetTop = $('#section5').offset().top;
+				$('html, body').animate({
+					scrollTop: targetTop
+				}, 400);
+				e.preventDefault();
+				return false;
+			});
+			
+			$('#you-bushours').blur(function() {
+				if (!$(this).val().match("^04|^614")) {
+					$('#mobile-field').show('fast', function() {
+						window.setTimeout(function() {
+							if ($('#afterhours-cb').is(':focus'))
+								$('#you-mobile').focus();
+						}, 10);
+					});
+				} else {
+					window.setTimeout(function() {
+						if ($('#you-mobile').is(':focus'))
+							$('#afterhours-cb').focus();
+						$('#mobile-field').hide('fast');
+					}, 10);
+				}
+			});
+			
+			$('#afterhours-cb').click(function() {
+				if ($('#afterhours-cb').is(':checked')) {
+					$('#you-ah-field').show('fast');
+				} else {
+					$('#you-ah-field').hide('fast');
+				}
+			});
+			
+			$('#bushours').blur(function() {
+				if (!$(this).val().match("^04|^614")) {
+					$('#contact-mobile').show('fast', function() {
+						window.setTimeout(function() {
+							if ($('#cont-afterhours-cb').is(':focus'))
+								$('#mobile').focus();
+						}, 10);
+					});
+				} else {
+					window.setTimeout(function() {
+						if ($('#mobile').is(':focus'))
+							$('#cont-afterhours-cb').focus();
+						$('#mobile').hide('fast');
+					}, 10);
+				}
+			});
+			
+			$('#cont-afterhours-cb').click(function() {
+				if ($('#cont-afterhours-cb').is(':checked')) {
+					$('#contact-ah-field').show('fast');
+				} else {
+					$('#you-ah-field').hide('fast');
+				}
+			});
+
+			$('#you-language').blur(function() {
+				if ($(this).val() != "") {
+					$('#you-otherlang-field').show('fast', function() {
+						window.setTimeout(function() {
+							if ($('#you-position').is(':focus'))
+								$('#you-otherlang').focus();
+						}, 10);
+					});
+				}
+			});
+
+			$('#language').blur(function() {
+				if ($(this).val() != "") {
+					$('#other-pref-lang').show('fast', function() {
+						window.setTimeout(function() {
+							if ($('#position').is(':focus'))
+								$('#otherlang').focus();
+						}, 10);
+					});
+				}
+			});
 			
 			function authEvent() {
 				if ($('#auth').prop('checked')) {
@@ -1111,7 +1612,11 @@
 			$('#individual1-family').blur(authEvent);
 			$('#auth').click(authEvent);
 			
-			$('#auth-btn1').click(function() {
+			$('#auth-btn1').click(function(event) {
+			
+				if (event.isDefaultPrevented())
+					return;
+
 				var table = '<table style="position: relative; display: none;"><tbody>';
 
 				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger"><strong>' + $('#you-name').val() + '</strong>';
@@ -1155,7 +1660,11 @@
 				authstate = 1;
 			});
 			
-			$('#auth-btn').click(function() {
+			$('#auth-btn').click(function(event) {
+			
+				if (event.isDefaultPrevented())
+					return;
+
 			/*
 				switch(authstate) {
 					case 0:
@@ -1219,8 +1728,7 @@
 				$("html, body").animate({
 					scrollTop: targetTop
 					}, 400, null, function() {
-						$('#authform input').val('');
-						$('#authform select').selectedIndex = 0;
+						$('#authform input, #authform select').val('');
 						table.show('fast', function() {
 							var targetTop = $('#authform').offset().top;
 							$('html, body').delay(400).animate({
@@ -1231,9 +1739,10 @@
 				});
 			});
 
-			$('#contact-prev, #contact-next').click(function() {
+			$('#contact-nextzz').click(function() {
 			
-				if ($('#you-auth:visible')) {
+				// currently disabled - don't automatically add to table...
+				if ($('#you-auth').is(':visible')) {
 					if ($('#you-position').val() == "")
 						return;
 
@@ -1267,7 +1776,7 @@
 					authstate = 0;
 				}
 				
-				if ($('authform:visible')) {
+				if ($('#authform').is(':visible')) {
 					if ($('#name1').val() != "") {
 						var table = '<table style="position: relative;"><tbody>';
 
@@ -1294,19 +1803,24 @@
 						table += "</tbody></table>";
 						
 						$('#altauthtable').show().append(table);
-						$('#authform input').val('');
-						$('#authform select').selectedIndex = 0;
+						$('#authform input, #authform select').val('');
 						$('#authform').hide();
-					} else if ($('#altauthtable:visible'))
+					} else if ($('#altauthtable').is(':visible'))
 						$('#authform').hide();
 					
 					authstate = 0;
 				}
 			});
 			
+			$('#contact-prev').click(function() {
+				$('#validation3').hide();
+			});
+			
 			var busaddrstate = 0;
 			
-			$('#busaddr-btn').click(function() {
+			$('#busaddr-btn').click(function(event) {
+				if (event.isDefaultPrevented())
+					return;
 				if (busaddrstate == 0) {
 					$('#additional-bus').show('fast', function() {
 						var targetTop = $('#busaddr4').offset().top;
@@ -1346,8 +1860,7 @@
 				$("html, body").animate({
 					scrollTop: targetTop
 					}, 400, null, function() {
-						$('#additional-bus input').val('');
-						$('#additional-bus select').selectedIndex = 0;
+						$('#additional-bus input, #additional-bus select').val('');
 						table.show('fast', function() {
 							var targetTop = $('#additional-bus').offset().top;
 							$('html, body').delay(400).animate({
@@ -1358,7 +1871,12 @@
 				});
 			});
 			
-			$('#bus-addr-prev, #bus-addr-next').click(function() {
+			$('#bus-addr-nextZZ').click(function(event) {
+			
+				// currently disabled - don't automatically add to table...
+			
+				if (event.isDefaultPrevented())
+					return;
 			
 				$('#additional-bus').hide();
 				busaddrstate = 0;
@@ -1387,9 +1905,12 @@
 				table += "</tbody></table>";
 				
 				$('#add-bus-addr').show().append(table);
-				$('#additional-bus input').val('');
-				$('#additional-bus select').selectedIndex = 0;
+				$('#additional-bus input, #additional-bus select').val('');
 				
+			});
+			
+			$('#bus-addr-prev').click(function() {
+				$('#validation2').hide();
 			});
 			
 			$('#diffbusaddr').click(function() {
@@ -1446,6 +1967,9 @@
                 toggleIds: "business-activity;manaulBusinessActivity;autoBusinessActivity",
                 toggleSlideSameElement: true
             });
+			
+			navigationWithinPage();
+
         });
 
         /* Drop down settings menu */
