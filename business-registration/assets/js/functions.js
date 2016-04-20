@@ -188,6 +188,8 @@ function getUrlVars() {
 
 function navigationWithinPage() {
     $(".next").click(function (event) {
+		if (event.isDefaultPrevented())
+			return;
         // get the index of current button in whole list of buttons with class '.next'
         var index = $(".next").index(this);
         $.each($(".sub-section-container"), function (i, item) {
@@ -210,7 +212,9 @@ function navigationWithinPage() {
 
     });
 
-    $(".previous").click(function () {
+    $(".previous").click(function (event) {
+		if (event.isDefaultPrevented())
+			return;
         // get the index of current button in whole list of buttons with class '.next'
         var index = $(".previous").index(this);
         $.each($(".sub-section-container"), function (i, item) {
