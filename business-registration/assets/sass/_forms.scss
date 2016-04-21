@@ -306,6 +306,150 @@ input.larger {
   }
 }
 
+// input type=file styles
+
+input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+	left: -9999px;
+    z-index: -1;
+	
+	@media screen and (max-width: 960px) and (min-width: 768px) {
+		.col6 & + label, .col5 & + label {
+			
+			span {
+				min-height: 1.4em;
+			}
+			
+			strong {
+				display: block;
+			}
+		}
+	}
+
+	
+	+ label {
+		max-width: 100%;
+		font-family: open_sanslight,helvetica,arial,sans-serif;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+		display: inline-block;
+		overflow: hidden;
+		color: #666;
+		border: 1px solid #bbb;
+		background-color: #fff;
+		border-radius: 4px;
+		padding: 0;
+		
+		svg {
+			width: 1em;
+			height: 1em;
+			vertical-align: middle;
+			fill: currentColor;
+			margin-top: -0.25em;
+			margin-right: 0.25em;
+		}
+		
+		span, strong {
+			padding: 0.5rem 1.2rem;
+		}
+		
+		span {
+			width: 215px;
+			display: inline-block;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			vertical-align: top;
+		}
+		
+		strong {
+			height: 100%;
+			color: #fff;
+			background: linear-gradient(to bottom, #4f8fe6 0%, #367ab3 100%);
+			display: inline-block;
+		}
+	}
+
+	&:focus + label, + label:hover, &.has-focus + label {
+		background-color: #fff79b;
+		-webkit-box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+		box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+		border-color: #666;
+		
+		strong {
+			background: #000;
+		}
+	}
+	
+	&:disabled + label {
+		background-color: #ebebe4;
+		
+		strong {
+			background: #888;
+		}
+	}
+}
+
+input[type=file] + label {
+
+	@media screen and (min-width: $break-medium) and (max-width: $break-large) {
+		.col6 & {
+	
+			span {
+				min-height: 1.4em;
+			}
+			
+			strong {
+				display: block;
+			}
+		
+		}
+	}
+
+	@media screen and (min-width: $break-medium) and (max-width: $break-wide) {
+		.col5 & {
+	
+			span {
+				min-height: 1.4em;
+			}
+			
+			strong {
+				display: block;
+			}
+		}
+	}
+		
+	@media screen and (min-width: $break-medium) {
+		.col1 &, .col2 &, .col3 &, .col4 & {
+				
+			span {
+				min-height: 1.4em;
+			}
+			
+			strong {
+				display: block;
+			}
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+	
+		span {
+			min-height: 1.4em;
+		}
+		
+		strong {
+			display: block;
+		}
+	}
+
+}
+
 
 // OLD --------------- Image replacement styling for radios and checkboxes
 // ------------------------------------------------------------------------------------------------------
