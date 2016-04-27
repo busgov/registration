@@ -481,7 +481,7 @@ h2.cart-heading {
   }
 }
 
-.remove, .edit {
+.remove, .edit, .close {
 	background: transparent url(../img/sprite-trash.png) no-repeat 0 0;
 	padding: 0 0 0 40px;
 	height: 40px;
@@ -515,6 +515,13 @@ h2.cart-heading {
 	}
 }
 
+.close {
+	background: transparent url(../img/sprite-close-black.png) no-repeat 0 0;
+	
+	&:hover, &:focus, &:active {
+		background: transparent url(../img/sprite-close-black.png) no-repeat 0 -79px;
+	}
+}
 .subtotal {
   font-weight: bold;
   padding-left: 1em;
@@ -629,6 +636,11 @@ select.registration-duration {
 		background: white url(../img/sprite-registration-status.png) no-repeat 1em -212px; 
 		padding-left: 57px;
 	}
+    .problem {
+  		background: white url(../img/sprite-registration-status.png) no-repeat 1em -326px; 
+		padding-left: 57px;
+	}
+
 }
 
 /* Dashboard pagination. Inherits cart-container table layout */
