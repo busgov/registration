@@ -131,14 +131,25 @@
                     </div><!-- result-row -->
                 </div><!-- cart-container -->
 
-                <div class="card clearfix">
-                    <h3>Add another business name?</h3>
-                    <p>Enter a name to check its availability. Some names may require manual validation based on <a href="#">business naming rules</a>. You can register multiple business names to protect your brand.</p>
-                    <p>
-                        <label for="name-search">Search for name</label><br />
-                        <input id="name-search" type="text" value="Bob's Whitegoods Repairs'"> <button type="button" onclick="location.href = 'business-names-07.html#name-check'" class="btn btn-default btn-small">Check</button>
-                    </p>
-                </div>
+                <div id="name-check" class="result-container margin-bottom-075">
+                    <div class="result-row">
+                        <div class="result-cell cell-icon">
+                            <img src="assets/img/ico-question-orange.png" alt="unknown" />
+                        </div>
+                        <div class="result-cell cell-detail">
+                            <h3>Bob's Whitegoods Repairs</h3>
+                            <p>We are unable to check the availability of your name at this time.<br />You can add the name but availability will need to be checked again before you submit your application.</p>
+                        </div>
+                        <div class="result-cell cell-action">
+                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
+                            <select class="registration-duration" id="registration-duration">
+                                <option value="1" selected="selected">1 year $33</option>
+                                <option value="2">3 years $78</option>
+                            </select>
+                            <button type="button" class="btn btn-default btn-inline" onclick="location.href='business-names-08.html'">Add this name</button>
+                        </div>
+                    </div><!-- result-row -->
+                </div><!-- result-container -->
             </div>
         </main>
 
