@@ -70,12 +70,46 @@
 
             <div class="tip">
                 <h3>Is your brand unique?</h3>
-                <p>Here are some names already registered that may be similar to yours:</p>
-                <ul>
-                    <li>Bob's Gasfitting</li>
-                    <li>Bob's Plumbing Services</li>
-                    <li>Bob's Mobile Plumbing</li>
-                </ul>
+                <p>There may be names already registered that are similar to yours. Here are the closest three:</p>
+                <div id="small-list">
+                    <ul>
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                    </ul>
+                    <p>Show me <a id="trigger" href="#">the rest</a>.</p>
+                </div>
+                <div id="the-rest" style="display: none;">
+                    <ul id="full-list">
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                        <li>Bob's Gasfitting</li>
+                        <li>Bob's Plumbing Services</li>
+                        <li>Bob's Mobile Plumbing</li>
+                    </ul>
+                    <p>
+                        <label for="count">Next time show me&nbsp;
+                        <select style="width: 60px;">
+                            <option>1</option>
+                            <option>2</option>
+                            <option selected>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>...</option>
+                            <option>all</option>
+                        </select>&nbsp;similar names.</label>
+                    </p>
+                </div>
             </div><!-- tip -->
 
         </main>
@@ -120,6 +154,11 @@
             initSaveForLater();
             initApplicationOptions();
         });
+
+        $('#trigger').click(function () {
+            $('#small-list').hide();
+            $('#the-rest').show('fast');
+        })
     </script>
 </body>
 </html>
