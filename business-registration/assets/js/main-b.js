@@ -1016,7 +1016,7 @@ function showResults() {
         }
     }
     
-    showRegistrationsHelpContent();
+    setTimeout(showRegistrationsHelpContent, 1);
 
 }
 
@@ -1028,7 +1028,7 @@ function showRegistrationsHelpContent() {
         $('#gstHelpHeader').show();
 
         // following code to switch on some help content for gst help
-        if (parseboolean(applicationType.taxi)) {
+/*        if (parseboolean(applicationType.taxi)) {
             $("#liTaxi").show();
         }
 
@@ -1038,12 +1038,12 @@ function showRegistrationsHelpContent() {
 
         if (parseboolean(applicationType.limo)) {
             $("#liLimo").show();
-        }
+        } */
     }
     if (parseboolean(registrations.isTFN)) {
         // $("#tfnHelp").show();
         $("#tfnHelpHeader").show();
-        $("#helpBusinessStructureSelected").html(applicationType.name);
+        // $("#helpBusinessStructureSelected").html(applicationType.name);
     }
     if (parseboolean(registrations.isCompany)) {
         // $("#companyHelp").show();
@@ -1052,7 +1052,7 @@ function showRegistrationsHelpContent() {
     if (parseboolean(registrations.isBusinessName)) {
         // $("#businessNameHelp").show();
         $("#businessNameHelpHeader").show();
-        if (applicationType.name === soleTraderName) {
+/*        if (applicationType.name === soleTraderName) {
             $("#yourOwnNameInHelp").show();
             $("#yourOwnNameInHelp1").show();
         }
@@ -1062,7 +1062,7 @@ function showRegistrationsHelpContent() {
         } else if (applicationType.name === partnershipName) {
             $("#yourPartnersNameInHelp").show();
             $("#yourPartnersNameInHelp1").show();
-        }
+        } */
     }
 
     if (parseboolean(registrations.isPAYG)) {
