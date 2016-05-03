@@ -78,6 +78,30 @@
             </select>
         </p>
 
+    <hr />
+
+    <h3>File input field</h3>
+    <p>Input [type=file] standard:</p>
+    <p>
+        <input type="file" id="file1" />
+        <label for="file1"><span></span> <strong>Choose a file&hellip;</strong></label>
+    </p>
+    <p>disabled:</p>
+    <p>
+        <input type="file" id="file2" disabled />
+        <label for="file2"><span>datafile.txt</span> <strong>Choose a file&hellip;</strong></label>
+    </p>
+    <p>Compact mode is automatically switched on when there is not enough room to display the button alongside the control. Compact mode can also be set manually by adding the class "compact" to the input element.</p>
+    <p>
+        <input type="file" id="file3" class="compact" />
+        <label for="file3"><span></span> <strong>Choose a file&hellip;</strong></label>
+    </p>
+
+    <p>compact disabled:</p>
+    <p>
+        <input type="file" id="file4" class="compact" disabled />
+        <label for="file4"><span>datafile.txt</span> <strong>Choose a file&hellip;</strong></label>
+    </p>
 
     <hr />
     <h3>Custom radio and checkboxes</h3>
@@ -149,6 +173,7 @@
     </div><!-- wrapper -->
 
     <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/file-inputs.js"></script>
 
 </body>
 </html>
