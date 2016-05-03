@@ -118,7 +118,7 @@
                             <div class="grid-row">
                                 <div class="col11">
                                     <p>
-                                        <input class="no-margin" type="radio" name="existing-abn" id="enter-abn" checked="checked" />
+                                        <input class="no-margin" type="radio" name="existing-abn" id="enter-abn" />
                                         <label class="no-margin" for="enter-abn"><strong>I already have an ABN</strong></label>
                                     </p>
                                 </div>
@@ -126,15 +126,56 @@
                                     <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div>
-                            <div class="grid-row">
+                            <div id="enter-existing-abn" class="grid-row" style="display: none;">
                                 <div class="col1">&nbsp;</div>
-                                <div class="col5">
-                                    <label for="reserved-name">Enter your ABN (or ABN reservation number)</label><br />
-                                    <input id="reserved-name" type="text" value="">
+                                <div class="col7 last">
+                                    <label for="reserved-name">Enter your ABN</label><br />
+                                    <input id="reserved-name" type="text" value=""> <button type="button" class="btn btn-inline">Validate</button>
                                 </div>
                             </div>
 
-                            <div class="grid-row" style="padding-top: 1.5em">
+                            <div class="grid-row">
+                                <div class="col11">
+                                    <p>
+                                        <input class="no-margin" type="radio" name="existing-abn" id="abn-reference" />
+                                        <label class="no-margin" for="abn-reference"><strong>I have an ABN reference number</strong></label>
+                                    </p>
+                                </div>
+                                <div class="col1 last">
+                                    <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                </div><!-- col -->
+                            </div>
+                            <div id="abn-ref" style="display: none;">
+                                <div class="grid-row">
+                                    <div class="col1">&nbsp;</div>
+                                    <div class="col7 last">
+                                        <label for="reserved-name">Enter your ABN reference number</label><br />
+                                        <input id="reserved-name" type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="grid-row">
+                                    <div class="col1">&nbsp;</div>
+                                    <div class="col10 margin-top-075">
+                                        <fieldset>
+                                            <label for="BusinessNameDetails_EntityTypeId">Which type of entity is the applicant?</label>
+                                            <div>
+                                                <input id="etIndividual" name="entity-types" type="radio">
+                                                <label for="etIndividual">Individual</label><br />
+                                                <input id="etPartnership" name="entity-types" type="radio" value="2">
+                                                <label for="etPartnership">Partnership</label><br />
+                                                <input id="etTrust" name="entity-types" type="radio">
+                                                <label for="etTrust">Trust</label><br />
+                                                <input id="etCompany" name="entity-types" type="radio">
+                                                <label for="etCompany">Company</label><br />
+                                                <input id="etSuper" name="entity-types" type="radio">
+                                                <label for="etSuper">Superannuation</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid-row">
                                 <div class="col11">
                                     <p>
                                         <input class="no-margin" type="radio" name="existing-abn" id="not-required" />
@@ -145,8 +186,29 @@
                                     <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div>
-
-                            <div class="grid-row" style="padding-top: 1.5em">
+                            <div id="coco-entity" class="grid-row" style="display: none;">
+                                <div class="col1">&nbsp;</div>
+                                <div class="col11 last">
+                                    <fieldset class="col11 last">
+                                        <legend>Which type of entity is the applicant?</legend>
+                                        <div class="radio-toggle">
+                                            <label class="label-left" for="coIndividual">
+                                                <input id="coIndividual" name="cocoType" type="radio">
+                                                <span>Individual</span>
+                                            </label>
+                                            <label class="label-middle" for="coCompany">
+                                                <input id="coCompany" name="cocoType" type="radio">
+                                                <span>Company</span>
+                                            </label>
+                                            <label class="label-right" for="coOrganisation">
+                                                <input id="coOrganisation" name="cocoType" type="radio">
+                                                <span>Organisation</span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="grid-row">
                                 <div class="col11">
                                     <p>
                                         <input class="no-margin" type="radio" name="existing-abn" id="joint-venture" />
@@ -170,6 +232,43 @@
 
                     <div id="need-abn">
                         <p>Before you continue, we need to first check that you’re entitled to an ABN.</p>
+                        <fieldset id="fieldsetAbn" class="col12 custom-controls" style="display: none">
+                            <legend class="larger">For taxation purposes, which type of entity is the applicant?</legend>
+                            <div class="col12 last">
+                                <p>
+                                    <input id="rdIndividual" name="abnFor" class="showhide-trigger" type="radio">
+                                    <label for="rdIndividual">Individual</label>
+                                </p>
+                                <p>
+                                    <input id="rdPartnership" name="abnFor" type="radio">
+                                    <label for="rdPartnership">Partnership</label>
+                                </p>
+                                <p>
+                                    <input id="rdTrust" name="abnFor" type="radio">
+                                    <label for="rdTrust">Trust</label>
+                                </p>
+                                <p>
+                                    <input id="rdCompany" name="abnFor" class="showhide-trigger" type="radio">
+                                    <label for="rdCompany">Company</label>
+                                </p>
+                                <p>
+                                    <input id="rdSuperfund" name="abnFor" type="radio">
+                                    <label for="rdSuperfund">Super fund</label>
+                                </p>
+                            </div>
+
+                            <!-- div id="divApprenticeMsg" class="col10 card" style="display: none">
+                                <p>
+                                    <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
+                                </p>
+                                <p>
+                                    If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
+                                </p>
+                                <p>
+                                    If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
+                                </p>
+                            </div -->
+                        </fieldset>
                         <fieldset id="fieldsetCompanyAbn" style="display: none" class="custom-controls">
                             <legend class="larger col12" id="fieldSetCompany">What type of company do you need an ABN for?</legend>
                             <div class="grid-row">
@@ -190,63 +289,6 @@
                                     <div class="col1">&nbsp;</div>
                                     <p> You are entitled for ABN application, go to POI in step 1.2</p>
                                 </div>
-                            </div>
-                        </fieldset>
-                        <fieldset id="fieldsetAbn" class="col12 custom-controls" style="display: none">
-                            <legend class="larger">Why do you need an ABN?</legend>
-                            <div class="col4">
-                                <h3>Individual</h3>
-                                <p>
-                                    <input id="rdIndividual1" name="abnFor" class="showhide-trigger" type="radio">
-                                    <label for="rdIndividual1"><span class="push-right-min">To work as an apprentice, trade assistant, or labourer</span></label>
-                                </p>
-                                <p>
-                                    <input id="rdIndividual2" name="abnFor" type="radio">
-                                    <label for="rdIndividual2"><span class="push-right-min">To run a business as a sole trader</span></label>
-                                </p>
-                            </div>
-                            <div class="col4">
-                                <h3>Company</h3>
-                                <p>
-                                    <input id="rdPublic" name="abnFor" class="showhide-trigger" type="radio">
-                                    <label for="rdPublic">Australian public company</label>
-                                </p>
-                                <p>
-                                    <input id="rdPrivate" name="abnFor" class="showhide-trigger" type="radio">
-                                    <label for="rdPrivate">Australian private company</label>
-                                </p>
-                                <p>
-                                    <input id="rdOther" class="col2" name="abnFor" type="radio">
-                                    <label for="rdOther">Other type of company</label>
-                                </p>
-                            </div>
-
-                            <div class="col4 last">
-                                <h3>Other</h3>
-                                <p>
-                                    <input id="rdPartnership" name="abnFor" type="radio">
-                                    <label for="rdPartnership">Partnership</label>
-                                </p>
-                                <p>
-                                    <input id="rdTrust" name="abnFor" type="radio">
-                                    <label for="rdTrust">Trust</label>
-                                </p>
-                                <p>
-                                    <input id="rdSuperfund" name="abnFor" type="radio">
-                                    <label for="rdSuperfund">Super fund</label>
-                                </p>
-                            </div>
-
-                            <div id="divApprenticeMsg" class="col10 card" style="display: none">
-                                <p>
-                                    <strong>You don’t need an ABN to work as an apprentice, trade assistant, or labourer. </strong>You work under the direction of your employer, so you’re actually an employee.
-                                </p>
-                                <p>
-                                    If your employer is asking you to register as a contractor when you’re really an employee, you can <a target="_blank" href="https://www.ato.gov.au/Business/Employee-or-contractor/In-detail/Report-a-business-incorrectly-treating-employees-as-contractors/How-to-report-a-business-incorrectly-treating-employees-as-contractors/" class="ico-external">report the business to the Tax Office.</a>
-                                </p>
-                                <p>
-                                    If you’re not sure whether you’re an employee or not, try the Tax Office’s <a target="_blank" href="https://www.ato.gov.au/Calculators-and-tools/Employee-or-contractor/" class="ico-external">Employee/contractor decision tool.</a>
-                                </p>
                             </div>
                         </fieldset>
                         <div class="col10 card" id="divGoToCompanyRegistration" style="display: none;">
@@ -399,6 +441,7 @@
         var isUnincorpAssociation = false;
         var inAustraliaMatters = false;
         var nextStepUrl = "business-names.html";
+
         $(document).ready(function () {
             // load save for later content
             initSaveForLater();
@@ -471,17 +514,33 @@
                 toggleSlideSameElement: true
             });
 
-            $("input[name*='existing-abn']").click(function(){
-                if(this.id=="joint-venture")
-                {
-                    $("#jointVentureDiv").slideDown();
+            $("input[name*='existing-abn']").click(function () {
+                if (this.id == 'enter-abn') {
+                    $('#enter-existing-abn').show('fast');
+                } else {
+                    $('#enter-existing-abn').hide('fast');
                 }
-                else
-                {
-                    $("#jointVentureDiv").slideUp();
-                    clearElement("#jointVentureDiv");
+                if (this.id == 'abn-reference') {
+                    $('#abn-ref').show('fast');
+                } else {
+                    $('#abn-ref').hide('fast');
                 }
+                if (this.id == "not-required") {
+                    $('#coco-entity').show('fast');
+                } else {
+                    $('#coco-entity').hide('fast');
+                }
+                //if (this.id == "joint-venture")
+                //{
+                //    $("#jointVentureDiv").show('fast');
+                //}
+                //else
+                //{
+                //    $("#jointVentureDiv").hide('fast');
+                //    // clearElement("#jointVentureDiv");
+                //}
             });
+
             // for what do you need an ABN for.
             $("#fieldsetAbn").find(":radio").click(function () {
 
@@ -490,16 +549,58 @@
 
                     loadEntitlementQuestions("entitlement/entitlement-partnership-content.html", true, function () { inAustraliaMatters = true; });
                     loadEntitlementHlep("entitlement/entitlement-partnership-help.html");
+                    var offset = $('#fieldsetAbnEligibility').offset().top;
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 400);
                 };
                 // sole trader
-                if (this.id === "rdIndividual2") {
+                if (this.id === "rdIndividual") {
                     inAustraliaMatters = true;
                     loadEntitlementQuestions("entitlement/entitlement-soletrader-content.html", true, function () { inAustraliaMatters = true; });
                     loadEntitlementHlep("entitlement/entitlement-soletrader-help.html");
+                    var offset = $('#fieldsetAbnEligibility').offset().top;
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 400);
                 };
 
+                // trust
+                if (this.id === 'rdTrust') {
+                    inAustraliaMatters = true;
+                    loadEntitlementQuestions("entitlement/entitlement-trust-content.html", false, function () { inAustraliaMatters = true; });
+                    loadEntitlementHlep("entitlement/entitlement-trust-help.html");
+                    var offset = $('#fieldsetAbnEligibility').offset().top;
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 400);
+                }
+
+                // company
+                if (this.id === 'rdCompany') {
+                    inAustraliaMatters = true;
+                    loadEntitlementQuestions("entitlement/entitlement-company-content.html", false, function () { inAustraliaMatters = true; });
+                    loadEntitlementHlep("entitlement/entitlement-company-help.html");
+                    var offset = $('#fieldsetAbnEligibility').offset().top;
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 400);
+                }
+
+                // superannuation
+                if (this.id === 'rdSuperfund') {
+                    loadEntitlementQuestions("entitlement/entitlement-super-content.html", false, function () { inAustraliaMatters = true; });
+                    loadEntitlementHlep("entitlement/entitlement-super-help.html");
+                    var offset = $('#fieldsetAbnEligibility').offset().top;
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 400);
+                }
+
+                return;
+
                 // super fund & trust (not yet implemented)
-                if (this.id === "rdTrust" || this.id === "rdSuperfund") {
+                if (this.id === "rdSuperfund") {
                     $("#fieldsetAbnEligibility").html("Not implemented yet.");
                 }
 
@@ -529,15 +630,7 @@
                     clearElement($("#fieldsetCompanyType"));
                 }
 
-                // To work as an apprentice, trade assistant, or labourer
-                if (this.id === "rdIndividual1") {
-                    $("#divApprenticeMsg").slideDown();
-                    $("#fieldsetAbnEligibility").html("");
-                } else {
-                    if ($("#divApprenticeMsg").is(":visible"))
-                        $("#divApprenticeMsg").slideUp();
-                }
-            });
+             });
 
             // for company type
             $("#fieldsetCompanyAbn").find(":radio").click(function () {
@@ -622,7 +715,7 @@
             });
         });
 
-        function initialiseLogicForEntitlement() {
+       function initialiseLogicForEntitlement() {
             /* Expand collapse headings config */
 
             isStarted = false;
@@ -661,28 +754,578 @@
                 }
             });
 
-            // do you do any following activity
+            // sole trader questions:
+            $('input[name=act-in-australia]').click(function () {
+                clearActivity();
+                if (this.id == 'in-australia-yes') {
+                    $('#divIndirectTaxZone').hide();
+                    $('#divGSTOnly').hide();
+                    $('#divNotEntitled1').hide();
+                    $('input[name=rdIndirectTax]').prop('checked', false);
+                    $('input[name=rdGSTOnly]').prop('checked', false);
+                    $('#divEligible1').hide();
+                    // go on
+                    $('#divStartedBusiness').show(function () {
+                        $('html, body').animate({ scrollTop: $('#divStartedBusiness').offset().top });
+                    });
+
+                } else {
+                    clearElement("#divStartedBusiness");
+                    $("#divNotStartedMessage").hide();
+                    $('#divStartedBusiness').hide();
+                    $('#divIndirectTaxZone').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divIndirectTaxZone').offset().top });
+                    });
+                    $('#divGSTOnly').hide();
+                    $('#divNotEntitled1').hide();
+                    $('#divEligible1').hide();
+                }
+            });
+
+            $('input[name=rdIndirectTax]').click(function () {
+                clearActivity();
+                if (this.id == 'rdIndirectTaxYes') {
+                    $('#divGSTOnly').hide('fast');
+                    $('input[name=rdGSTOnly]').prop('checked', false);
+                    $('#divNotEntitled1').hide();
+                    $('#divEligible1').hide();
+                    // go on
+                    $('#divStartedBusiness').show(function () {
+                        $('html, body').animate({ scrollTop: $('#divStartedBusiness').offset().top });
+                    });
+                } else {
+                    clearElement("#divStartedBusiness");
+                    $("#divNotStartedMessage").hide();
+                    $('#divStartedBusiness').hide();
+                    $('#divGSTOnly').show(function () {
+                        $('html, body').animate({ scrollTop: $('#divGSTOnly').offset().top });
+                    });
+                }
+            });
+
+            $('input[name=rdGSTOnly]').click(function () {
+                clearActivity();
+                if (this.id == 'rdGSTOnlyYes') {
+                    $('#divNotEntitled1').hide('fast', function() {
+                        $('#divEligible1').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible1').offset().top });
+                        });
+                    });
+                } else {
+                    $('#divEligible1').hide('fast', function () {
+                        $('#divNotEntitled1').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEntitled1').offset().top });
+                        });
+                    });
+                }
+            });
+
+           // business started yet
+            $("#rdStartedYes").click(function () {
+                $("#divNotStartedMessage").hide();
+                $('#divBusinessFunction').show('fast', function () {
+                    $('html, body').animate({ scrollTop: $('#divBusinessFunction').offset().top });
+                });
+                isStarted = true;
+            });
+            $("#rdStartedNo").click(function () {
+                isStarted = false;
+                $('#divBusinessFunction').hide();
+                clearElement("#divBusinessFunction");
+                $("#divNotStartedMessage").show('fast');
+                // $("#divNoneOfActivityInAustralia").hide();
+                // $("#divNoneOfAbove").hide();
+            });
+
+            function clearActivity() {
+                $('#divNotEntitledApprentice').hide();
+                $('#divFormOfBusiness, #divNotEntitledBusiness').hide();
+                $('#divRenting, #divNotEntitledRenting').hide();
+                $('#divLicence, #divNotEntitledLicence').hide();
+                $('#divCommercial, #divNotEntitledCommercial').hide();
+                $('#divEligible2').hide();
+                clearElement('#divBusinessFunction');
+                // $.map(['#divFormOfBusiness', '#divRenting', '#divLicence', '#divCommercial'], clearElement);
+                $('#divBusinessFunction').hide();
+            }
+
+           // Nature of activity
+            $('input[name=whatBusinessWillDo]').click(function () {
+                $('#divNotEntitledApprentice').hide();
+                $('#divFormOfBusiness, #divNotEntitledBusiness').hide();
+                $('#divRenting, #divNotEntitledRenting').hide();
+                $('#divLicence, #divNotEntitledLicence').hide();
+                $('#divCommercial, #divNotEntitledCommercial').hide();
+                $('#divEligible2').hide();
+                $.map(['#divFormOfBusiness', '#divRenting', '#divLicence', '#divCommercial'], clearElement);
+                switch (this.id) {
+                    case 'whatBusinessWillDoApprentice':
+                        $('#divNotEntitledApprentice').show('fast');
+                        $('html, body').animate({ scrollTop: $('#divNotEntitledApprentice').offset().top }, 1200);
+                        break;
+                    case 'whatBusinessWillDoBusiness':
+                        $('#divFormOfBusiness').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divFormOfBusiness').offset().top }, 1200);
+                        });
+                        break;
+                    case 'whatBusinessWillDoRent':
+                        $('#divRenting').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divRenting').offset().top }, 1200);
+                        });
+                        break;
+                    case 'whatBusinessWillDoLicence':
+                        $('#divLicence').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divLicence').offset().top }, 1200);
+                        });
+                        break;
+                    case 'whatBusinessWillDoCommercial':
+                        $('#divCommercial').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divCommercial').offset().top }, 1200);
+                        });
+                        break;
+                    case 'whatBusinessWillDoGift':
+                    case 'whatBusinessWillDoCharity':
+                        $('#divEligible2').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible2').offset().top }, 1200);
+                        });
+                        break;
+                }
+            });
+           
+            $('input[name=rdRunBusiness]').click(function () {
+                if (this.id == 'rdRunBusinessYes') {
+                    $('#divNotEntitledBusiness').hide('fast', function () {
+                        $('#divEligible2').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible2').offset().top }, 1200);
+                        });
+                    });
+                } else {
+                    $('#divEligible2').hide('fast', function () {
+                        $('#divNotEntitledBusiness').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEntitledBusiness').offset().top }, 1200);
+                        });
+                    });
+                }
+            });
+           
+            $('input[name=rdRenting]').click(function () {
+                if (this.id == 'rdRentingYes') {
+                    $('#divNotEntitledRenting').hide('fast', function () {
+                        $('#divEligible2').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible2').offset().top }, 1200);
+                        });
+                    });
+                } else {
+                    $('#divEligible2').hide('fast', function () {
+                        $('#divNotEntitledRenting').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEntitledRenting').offset().top }, 1200);
+                        });
+                    });
+                }
+            });
+           
+            $('input[name=rdLicence]').click(function () {
+                if (this.id == 'rdLicenceYes') {
+                    $('#divNotEntitledLicence').hide('fast', function () {
+                        $('#divEligible2').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible2').offset().top }, 1200);
+                        });
+                    });
+                } else {
+                    $('#divEligible2').hide('fast', function () {
+                        $('#divNotEntitledLicence').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEntitledLicence').offset().top }, 1200);
+                        });
+                    });
+                }
+            });
+           
+            $('input[name=rdCommercial]').click(function () {
+                if (this.id == 'rdCommercialYes') {
+                    $('#divNotEntitledCommercial').hide('fast', function () {
+                        $('#divEligible2').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divEligible2').offset().top }, 1200);
+                        });
+                    });
+                } else {
+                    $('#divEligible2').hide('fast', function () {
+                        $('#divNotEntitledCommercial').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEntitledCommercial').offset().top }, 1200);
+                        });
+                    });
+                }
+            });
+
+           // Partnership questions:
+            $('input[name=rdTypeOfPartnership]').click(function () {
+                $('#divInAustralia').show('fast', function() {
+                    $('html, body').animate({ scrollTop: $('#divInAustralia').offset().top }, 1200);
+                });
+            });
+
+           // Trust questions:
+            $('input[name=trustType]').click(function () {
+                if (this.id == 'trustDeceasedEstate') {
+                    $('#divTrustDeed').hide();
+                    $('#divEstate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divEstate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divEstate').hide();
+                    $('#divTrustDeed').show('fast', function () {
+                      $('html, body').animate({ scrollTop: $('#divTrustDeed').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdExecutor]').click(function () {
+                if (this.id == 'rdExecutorYes') {
+                    $('#divNotEligibleContinuing').hide();
+                    $('#divNotEligibleExecutor').hide();
+                    $('#divEligibleEstate').hide();
+                    clearElement('#divContinuing');
+                    $('#divContinuing').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divContinuing').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divContinuing').hide();
+                    $('#divNotEligibleContinuing').hide();
+                    $('#divEligibleEstate').hide();
+                    $('#divNotEligibleExecutor').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleExecutor').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdFinalise]').click(function () {
+                if (this.id == 'rdFinaliseYes') {
+                    $('#divNotEligibleContinuing').hide();
+                    $('#divNotEligibleExecutor').hide();
+                    $('#divEligibleEstate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divEligibleEstate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divNotEligibleContinuing').hide();
+                    $('#divEligibleEstate').hide();
+                    $('#divNotEligibleExecutor').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleExecutor').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdDeed]').click(function () {
+                if (this.id == 'rdDeedYes') {
+                    $('#divNotEligibleDeed').hide();
+                    $('#divWhereYourBusinessOperate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divWhereYourBusinessOperate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divWhereYourBusinessOperate').hide();
+                    $('#divNotEligibleDeed').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleDeed').offset().top }, 1200);
+                    });
+                }
+            });
+
+            // company questions
+            $('input[name=coType]').click(function () {
+                $('#divCorporate').hide();
+                clearElement('#divCorporate');
+                $('#divNotEligibleCorp').hide();
+                $('#publicCo').hide(); $('#privateCo').show();
+                $('#divEligibleCorp').hide();
+                $('#divTrustDeed').hide();
+                clearElement('#divTrustDeed');
+                $('#divCoopStrata').hide();
+                clearElement('#divCoopStrata');
+                $('#divNotEligibleCoopStrata').hide();
+                $('.coop-elt').hide(); $('.strata-elt').show();
+                $('#divWhereYourBusinessOperate').hide();
+                clearElement('#divWhereYourBusinessOperate');
+                $('#divStartedBusiness').hide();
+                clearElement('#divStartedBusiness');
+                $('#divUnincorp').hide();
+                clearElement('#divUnincorp');
+                $('#divNotEligibleUnincorp').hide();
+                $('#divOtherIncorporated').hide();
+                clearElement('#divOtherIncorporated');
+                
+                switch (this.id) {
+                    case 'coPublic':
+                        $('#publicCo').show(); $('#privateCo').hide();
+                    case 'coPrivate':
+                        $('#divCorporate').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divCorporate').offset().top }, 1200);
+                        });
+                        break;
+                    case 'coUnitTrust':
+                    case 'coFirstHomeSaver':
+                    case 'coPublicTrading':
+                        $('#divTrustDeed').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divTrustDeed').offset().top }, 1200);
+                        });
+                        break;
+                    case 'coCoop':
+                        $('.coop-elt').show(); $('.strata-elt').hide();
+                    case 'coStrata':
+                        $('#divCoopStrata').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divCoopStrata').offset().top }, 1200);
+                        });
+                        break;
+                    case 'coPartnership':
+                        $('#divWhereYourBusinessOperate').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divWhereYourBusinessOperate').offset().top }, 1200);
+                        });
+                        break;
+                    case 'coUnincorp':
+                        $('#divUnincorp').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divUnincorp').offset().top }, 1200);
+                        });
+                        break;
+                    case 'coOtherInc':
+                        $('#divOtherIncorporated').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divOtherIncorporated').offset().top }, 1200);
+                        });
+                        break;
+                }
+            });
+
+            $('input[name=rdRegistered').click(function () {
+                if (this.id == 'rdRegisteredYes') {
+                    $('#divNotEligibleCorp').hide();
+                    $('#divEligibleCorp').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divEligibleCorp').offset().top });
+                    });
+                } else {
+                    $('#divEligibleCorp').hide();
+                    $('#divNotEligibleCorp').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleCorp').offset().top });
+                    });
+                }
+            });
+
+            $('input[name=rdCoopStrata').click(function () {
+                if (this.id == 'rdCoopStrataYes') {
+                    $('#divNotEligibleCoopStrata').hide();
+                    $('#divWhereYourBusinessOperate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divWhereYourBusinessOperate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divWhereYourBusinessOperate').hide();
+                    $('#divNotEligibleCoopStrata').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleCoopStrata').offset().top });
+                    });
+                }
+            });
+
+            $('input[name=rdUnincorp').click(function () {
+                if (this.id == 'rdUnincorpYes') {
+                    $('#divNotEligibleUnincorp').hide();
+                    $('#divWhereYourBusinessOperate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divWhereYourBusinessOperate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divWhereYourBusinessOperate').hide();
+                    $('#divNotEligibleUnincorp').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleUnincorp').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=otherType]').click(function () {
+                $('#divNotEligibleOther').hide();
+                $('#other-msgs div').hide();
+                $('#otherQuestion').hide();
+                $('#otherQuestion h3').hide();
+                clearElement('#otherQuestion');
+                switch (this.id) {
+                    case 'otherNone':
+                        $('#msgNone').show();
+                        $('#divNotEligibleOther').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divNotEligibleOther').offset().top }, 1200);
+                        });
+                        break;
+                    case 'otherBodyCorp':
+                        $('#otherBodyCorpQ').show();
+                        $('#msgBodyCorp').show();
+                        break;
+                    case 'otherSole':
+                        $('#otherSoleQ').show();
+                        $('#msgSole').show();
+                        break;
+                    case 'otherForeign':
+                        $('#otherForeignQ').show();
+                        $('#msgForeign').show();
+                        break;
+                    case 'otherAssociation':
+                        $('#otherAssociationQ').show();
+                        $('#msgAssociation').show();
+                        break;
+                }
+                if (this.id != 'otherNone') {
+                    $('#otherQuestion').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#otherQuestion').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdOther').click(function () {
+                if (this.id == 'rdOtherYes') {
+                    $('#divNotEligibleOther').hide();
+                    $('#divWhereYourBusinessOperate').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divWhereYourBusinessOperate').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divWhereYourBusinessOperate').hide();
+                    $('#divNotEligibleOther').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleOther').offset().top }, 1200);
+                    });
+                }
+            });
+
+            var reverse = false;
+
+           // superannuation
+            $('input[name=superType]').click(function () {
+                $('#divNotEligibleSuper').hide();
+                $('#divEligibleSuper').hide();
+                $('#other-msgs div').hide();
+                $('#superQuestion').hide();
+                $('#superQuestion h3').hide();
+                clearElement('#superQuestion');
+                $('#divATORegulated').hide();
+                clearElement('#divATORegulated');
+                reverse = false;
+                switch (this.id) {
+                    case 'superATO':
+                        $('#divATORegulated').show('fast', function () {
+                            $('html, body').animate({ scrollTop: $('#divATORegulated').offset().top }, 1200);
+                        });
+                        break;
+                    case 'superAPRA':
+                        $('#APRAQ').show();
+                        $('#msgAPRA').show();
+                        break;
+                    case 'superNonReg':
+                        reverse = true;
+                        $('#nonRegQ').show();
+                        $('#msgNonReg').show();
+                        break;
+                    case 'superPooled':
+                        $('#pooledQ').show();
+                        $('#msgPooled').show();
+                        break;
+                    case 'superDeposit':
+                        $('#depositQ').show();
+                        $('#msgDeposit').show();
+                        break;
+                }
+                if (this.id != 'superATO') {
+                    $('#superQuestion').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#superQuestion').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdSuper').click(function () {
+                if ((this.id == 'rdSuperYes' && !reverse) || (this.id == 'rdSuperNo' && reverse)) {
+                    $('#divNotEligibleSuper').hide();
+                    $('#divEligibleSuper').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divEligibleSuper').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divEligibleSuper').hide();
+                    $('#divNotEligibleSuper').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleSuper').offset().top }, 1200);
+                    });
+                }
+            });
+
+            function resetATORegulate(from) {
+                switch (from) {
+                    case 'all':
+                    case 'continuing':
+                        $('#divTerm').hide();
+                        clearElement('#divTerm');
+                    case 'term':
+                        $('#divAssetsValue').hide();
+                        clearElement('#divAssetsValue');
+                    case 'assets':
+                        $('#divGoverning').hide();
+                        clearElement('#divGoverning');
+                    case 'governing':
+                        $('#divEligibleATO').hide();
+                        $('#divNotEligibleATO').hide();
+                }
+            }
+
+            $('input[name=rdContinuing]').click(function () {
+                resetATORegulate('continuing')
+                if (this.id == 'rdContinuingYes') {
+                    $('#divTerm').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divTerm').offset().top }, 1200);
+                    })
+                } else {
+                    $('#ato-msgs div').hide();
+                    $('#msgContinuing').show();
+                    $('#divNotEligibleATO').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleATO').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdTerm]').click(function () {
+                resetATORegulate('term')
+                if (this.id == 'rdTermYes') {
+                    $('#divAssetsValue').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divAssetsValue').offset().top }, 1200);
+                    })
+                } else {
+                    $('#ato-msgs div').hide();
+                    $('#msgTerm').show();
+                    $('#divNotEligibleATO').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleATO').offset().top }, 1200);
+                    });
+                }
+            });
+
+            $('input[name=rdAssets]').click(function () {
+                resetATORegulate('assets')
+                if (this.id == 'rdZero') {
+                    $('#ato-msgs div').hide();
+                    $('#msgNoAssets').show();
+                    $('#divNotEligibleATO').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleATO').offset().top }, 1200);
+                    });
+                } else {
+                    $('#divGoverning').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divGoverning').offset().top }, 1200);
+                    })
+                }
+            });
+
+            $('input[name=rdGoverning]').click(function () {
+                resetATORegulate('governing')
+                if (this.id == 'rdGoverningYes') {
+                    $('#divEligibleATO').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divEligibleATO').offset().top }, 1200);
+                    })
+                } else {
+                    $('#ato-msgs div').hide();
+                    $('#msgGoverning').show();
+                    $('#divNotEligibleATO').show('fast', function () {
+                        $('html, body').animate({ scrollTop: $('#divNotEligibleATO').offset().top }, 1200);
+                    });
+                }
+            });
+
+           // do you do any following activity
             $("#rdAnyActivityYes").click(function () {
                 $("#divNoneOfActivityInAustralia").hide();
             });
             $("#rdAnyActivityNo").click(function () {
                 $("#divNoneOfActivityInAustralia").show();
                 $(".abnEntitled").hide();
-            });
-
-            // business started yet
-            $("#rdStarted").click(function () {
-                $("#divNotStartedMessage").hide();
-                isStarted = true;
-            });
-            $("#rdNo").click(function () {
-                isStarted = false;
-                $("#divNotStartedMessage").show();
-                clearElement("#divWhatYouWillDo");
-                clearElement("#divBusinessActivity");
-                clearElement("#divWhereYourBusinessOperate");
-                $("#divNoneOfActivityInAustralia").hide();
-                $("#divNoneOfAbove").hide();
             });
 
             $("#divHiddenCompanyQuesitons").find(":radio").click(function () {
@@ -771,7 +1414,7 @@
 
                 } else {
                     $("#divEligible").hide();
-                    jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
+                    // jQuery('html, body').animate({ scrollTop: $(this).offset().top }, 1200);
                 }
             });
         }
