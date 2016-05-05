@@ -317,20 +317,6 @@ input[type=file] {
 	left: -9999px;
     z-index: -1;
 	
-	@media screen and (max-width: 960px) and (min-width: 768px) {
-		.col6 & + label, .col5 & + label {
-			
-			span {
-				min-height: 1.4em;
-			}
-			
-			strong {
-				display: block;
-			}
-		}
-	}
-
-	
 	+ label {
 		max-width: 100%;
 		font-family: open_sanslight,helvetica,arial,sans-serif;
@@ -355,11 +341,11 @@ input[type=file] {
 		}
 		
 		span, strong {
-			padding: 0.5rem 1.2rem;
+			padding: 0.5rem 0.5rem;
 		}
 		
 		span {
-			width: 215px;
+			width: 240px;
 			display: inline-block;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -368,12 +354,24 @@ input[type=file] {
 		}
 		
 		strong {
+            padding-left: 31px;
 			height: 100%;
 			color: #fff;
-			background: linear-gradient(to bottom, #4f8fe6 0%, #367ab3 100%);
+            background: url(../img/upload.png) no-repeat 5px center, linear-gradient(to bottom, #4f8fe6 0%, #367ab3 100%);
 			display: inline-block;
 		}
 	}
+
+    &.compact + label {
+
+        span {
+			min-height: 1.4em;
+		}
+			
+		strong {
+			display: block;
+		}
+    	}
 
 	&:focus + label, + label:hover, &.has-focus + label {
 		background-color: #fff79b;
@@ -382,7 +380,7 @@ input[type=file] {
 		border-color: #666;
 		
 		strong {
-			background: #000;
+			background: #000 url(../img/upload.png) no-repeat 5px center;
 		}
 	}
 	
@@ -390,64 +388,63 @@ input[type=file] {
 		background-color: #ebebe4;
 		
 		strong {
-			background: #888;
+			background: #888 url(../img/upload.png) no-repeat 5px center;
 		}
 	}
-}
 
-input[type=file] + label {
+    & + label {
 
-	@media screen and (min-width: $break-medium) and (max-width: $break-large) {
-		.col6 & {
+	    @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+		    .col6 & {
 	
-			span {
-				min-height: 1.4em;
-			}
+			    span {
+				    min-height: 1.4em;
+			    }
 			
-			strong {
-				display: block;
-			}
+			    strong {
+				    display: block;
+			    }
 		
-		}
-	}
+		    }
+	    }
 
-	@media screen and (min-width: $break-medium) and (max-width: $break-wide) {
-		.col5 & {
+	    @media screen and (min-width: $break-medium) and (max-width: $break-wide) {
+		    .col5 & {
 	
-			span {
-				min-height: 1.4em;
-			}
+			    span {
+				    min-height: 1.4em;
+			    }
 			
-			strong {
-				display: block;
-			}
-		}
-	}
+			    strong {
+				    display: block;
+			    }
+		    }
+	    }
 		
-	@media screen and (min-width: $break-medium) {
-		.col1 &, .col2 &, .col3 &, .col4 & {
+	    @media screen and (min-width: $break-medium) {
+		    .col1 &, .col2 &, .col3 &, .col4 & {
 				
-			span {
-				min-height: 1.4em;
-			}
+			    span {
+				    min-height: 1.4em;
+			    }
 			
-			strong {
-				display: block;
-			}
-		}
-	}
+			    strong {
+				    display: block;
+			    }
+		    }
+	    }
 	
-	@media screen and (max-width: 480px) {
+	    @media screen and (max-width: 480px) {
 	
-		span {
-			min-height: 1.4em;
-		}
+		    span {
+			    min-height: 1.4em;
+		    }
 		
-		strong {
-			display: block;
-		}
-	}
-
+		    strong {
+			    display: block;
+		    }
+	    }
+    }
 }
 
 
