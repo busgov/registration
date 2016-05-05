@@ -89,6 +89,12 @@ button[disabled], html input[disabled] {
   cursor: default;
   color: $button-disabled;
 }
+input[readonly], input[readonly]:hover, input[readonly]:focus, input[readonly]:active {
+    color:$button-disabled;
+    background-color: $bg-disabled;
+    box-shadow: none;
+}
+
 select[disabled] {
   border: 1px solid #ccc !important;
 }
@@ -580,26 +586,23 @@ input[type=file] {
 			left: 0;
 			opacity: 0;
 
+            &:hover ~ label, &:focus ~ label,
+            ~ label:hover, ~ label:focus {
+                color: #000;
+            }
+
 			/* set background sprite */
-			+ label {
+			~ label {
 			  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
 			  height: 34px;
+		      line-height: 38px; 
+		      color: $gray-dark; 
+		      padding: 5px 0 14px 48px;
+		      -moz-transition: color 1s ease; 
+		      -o-transition: color 1s ease; 
+		      -webkit-transition: color 1s ease; 
+		      transition: color 1s ease; 
 			}
-		}
-
-		> label { 
-		  line-height: 38px; 
-		  color: $gray-dark; 
-		  padding: 5px 0 14px 48px;
-		  -moz-transition: color 1s ease; 
-		  -o-transition: color 1s ease; 
-		  -webkit-transition: color 1s ease; 
-		  transition: color 1s ease; 
-		}
-
-		> input:hover ~ label, > input:focus ~ label,
-		> input ~ label:hover, > input ~ label:focus { 
-		  color: #000; 
 		}
 
 		/* checkbox styles */
@@ -683,9 +686,9 @@ input[type=file] {
 				}
 				&:checked {
 					~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
-				  background-position: 0 -719px; 
-				}
-			}
+				      background-position: 0 -719px; 
+				    }
+			    }
 			}
 		}
 	}

@@ -1131,6 +1131,11 @@ img.help-icon {
 	}
 }
 
+/* postion at top when wrapped in paragraph */
+p img.help-icon {
+    top: 0;
+}
+
 @media only screen and (min-width: $break-medium) {
   img.help-icon {
     position: absolute;
