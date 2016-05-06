@@ -97,27 +97,48 @@
         <table cellspacing="0" cellpadding="0">
             <caption>This is a table caption</caption>
             <thead>
-                <tr>
-                    <th>Table Header 1</th>
-                    <th>Table Header 2</th>
-                    <th>Table Header 3</th>
-                </tr>
+            <tr>
+                <th>Table Header 1</th>
+                <th>Table Header 2</th>
+                <th>Table Header 3</th>
+            </tr>
             </thead>
             <tbody>
+            <tr>
+                <td>Division 1</td>
+                <td>Division 2</td>
+                <td>Division 3</td>
+            </tr>
+            <tr class="even">
+                <td>Division 1</td>
+                <td>Division 2</td>
+                <td>Division 3</td>
+            </tr>
+            <tr>
+                <td>Division 1</td>
+                <td>Division 2</td>
+                <td>Division 3</td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="data-table" class="compact">
+            <caption>Horizontal compact data table</caption>
+            <tbody>
                 <tr>
-                    <td>Division 1</td>
-                    <td>Division 2</td>
-                    <td>Division 3</td>
-                </tr>
-                <tr class="even">
-                    <td>Division 1</td>
-                    <td>Division 2</td>
-                    <td>Division 3</td>
+                    <th class="field-name right">Table Header 1</th>
+                    <td class="input-value">Table data 1</td>
                 </tr>
                 <tr>
-                    <td>Division 1</td>
-                    <td>Division 2</td>
-                    <td>Division 3</td>
+                    <th class="field-name right">Table Header 2</th>
+                    <td class="input-value">Table data 2</td>
+                </tr>
+                <tr>
+                    <th class="field-name right">Table Header 3</th>
+                    <td class="input-value">Table data 3</td>
+                </tr>
+                <tr>
+                    <th class="field-name right no-border-bottom">Table Header 4</th>
+                    <td class="input-value no-border-bottom">Table data 4</td>
                 </tr>
             </tbody>
         </table>
