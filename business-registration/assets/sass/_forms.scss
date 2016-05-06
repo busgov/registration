@@ -2,17 +2,6 @@
 // ------------------------------------------------------------------------------------------------------
 
 
-// Accessibility style - hide element from view, but leave in flow for screen readers:
-//
-.hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
 // Buttons
 // ------------------------------------------------------------------------------------------------------
 

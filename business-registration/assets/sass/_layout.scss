@@ -439,7 +439,7 @@ h2.cart-heading {
 		img {
 			display: inline-block;
 			padding: 0 10px;
-			width: 28px;
+			width: 28px !important;
 			vertical-align: bottom;
 		}
 	}
@@ -482,7 +482,9 @@ h2.cart-heading {
 }
 
 .remove, .edit, .close {
-	background: transparent url(../img/sprite-trash.png) no-repeat 0 0;
+	background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
 	padding: 0 0 0 40px;
 	height: 40px;
 	display: inline-block;
@@ -491,8 +493,8 @@ h2.cart-heading {
 	vertical-align: middle;
 
 	&:hover, &:focus, &:active {
-		background: transparent url(../img/sprite-trash.png) no-repeat 0 -79px;
-		color: black;
+		background-position: 0 -79px;
+		background-color: transparent;
 	}
 
 	span {
@@ -507,21 +509,18 @@ h2.cart-heading {
 	}
 }
 
+.remove {
+    background-image: url(../img/sprite-trash.png);
+}
+
 .edit {
-	background: transparent url(../img/sprite-edit.png) no-repeat 0 0;
-	
-	&:hover, &:focus, &:active {
-		background: transparent url(../img/sprite-edit.png) no-repeat 0 -79px;
-	}
+	background-image: url(../img/sprite-edit.png);
 }
 
 .close {
-	background: transparent url(../img/sprite-close-black.png) no-repeat 0 0;
-	
-	&:hover, &:focus, &:active {
-		background: transparent url(../img/sprite-close-black.png) no-repeat 0 -79px;
-	}
+	background-image: url(../img/sprite-close-black.png);
 }
+
 .subtotal {
   font-weight: bold;
   padding-left: 1em;

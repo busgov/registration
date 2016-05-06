@@ -283,18 +283,10 @@ ul.section-nav-4 li {
 
 /* use push right when content beside radio or checkbox needs to wrap */
 .push-right {
-  margin: 0 0 0 30px; 
+  margin: 0 0 0 5px; 
   padding: 0; 
   display: inline-block; 
   line-height: 1.4em; 
-  vertical-align: top;
-}
-/* same as push-right, but without additional margin */
-.push-right-min {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  line-height: 1.4em;
   vertical-align: top;
 }
 .microcopy {
@@ -629,6 +621,7 @@ button.closeSystemMessage {
   width: 100%;
   height: 100%;
 }
+
 
 // Slide out help panel
 // ------------------------------------------------------------------------------------------------------
