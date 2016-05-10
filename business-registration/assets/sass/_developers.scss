@@ -36,7 +36,6 @@
 		      -o-transition: color 1s ease; 
 		      -webkit-transition: color 1s ease;
 		      transition: color 1s ease;
-			  border: 1px solid transparent;
 			}
 		}
 
@@ -55,7 +54,7 @@
 			}
 			
 			&:focus ~ label, & ~ label:focus {
-				border-color: #02bfe7;
+				outline: 1px solid #02bfe7;
 			}
 
 			/* Checked styles */
