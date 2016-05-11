@@ -409,11 +409,11 @@
 
         $('#auskey').click(function () {
             if (this.checked) {
-                $('.auskey').removeClass('exclude');
-                $('.no-auskey').addClass('exclude');
+                $('.auskey').show();
+                $('.no-auskey').hide();
             } else {
-                $('.auskey').addClass('exclude');
-                $('.no-auskey').removeClass('exclude');
+                $('.auskey').hide();
+                $('.no-auskey').show();
             }
         });
 		
