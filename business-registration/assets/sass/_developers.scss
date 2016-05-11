@@ -40,17 +40,17 @@
 		}
 
 		> input[type=checkbox] ~ label {
-			background: url(../img/sprite-custom-checkboxes.png) 10px 5px no-repeat;
+			background: url(../img/sprite-custom-checkboxes.png) 10px 6px no-repeat;
 		}
 		> input[type=radio] ~ label { 
-			  background: url(../img/sprite-custom-radios.png) 10px 5px no-repeat;
+			  background: url(../img/sprite-custom-radios.png) 10px 6px no-repeat;
 		}
 		
 		> input[type=checkbox], > input[type=radio] {
 		
 			/* Hover & Focus styles */
 			&:hover ~ label, &:focus ~ label, ~ label:hover { 
-			  background-position: 10px -99px;
+			  background-position: 10px -98px;
 			}
 			
 			&:focus ~ label, & ~ label:focus {
@@ -61,34 +61,34 @@
 			&:checked {
 
 				~ label { 
-				  background-position: 10px -406px;
+				  background-position: 10px -405px;
 				  font-weight: bold;
 				}
 
 				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
-				  background-position: 10px -509px; 
+				  background-position: 10px -508px; 
 				}
 			}
 
 			/* Active styles */
 			&:active ~ label, ~ label:hover:active { 
-			  background-position: 10px -200px;
+			  background-position: 10px -199px;
 			  border-color: #02bfe7;
 			}
 						
 			&:active:checked ~ label, &:checked ~ label:hover:active {
-			  background-position: 10px -610px;
+			  background-position: 10px -609px;
 			}
 
 			/* Disabled styles */
 			&:disabled {
 				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
-				  background-position: 10px -304px; 
+				  background-position: 10px -303px; 
 				}
 
 				&:checked {
 					~ label, ~ label:hover, ~ label:hover:active, &:hover ~ label, &:focus ~ label { 
-					  background-position: 10px -714px; 
+					  background-position: 10px -713px; 
 					}
 				}
 			}
