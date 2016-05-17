@@ -96,6 +96,155 @@
 	}
 }
 
+.custom-controls3 {
+	p {
+		/* ensure hidden elements stay with label */
+		position: relative;
+		margin-bottom: 0.5em;
+
+		/* Hiding originals */
+		> input[type="checkbox"],
+		> input[type="radio"] {
+			padding: 0;
+			margin: 0;
+			height: 16px;
+			width: 16px;
+			float: left;
+			position: absolute;
+			left: 0;
+			opacity: 0;
+			
+			~ label {
+			  display: block;
+			  //line-height: 38px;
+		      color: $gray-dark; 
+		      padding: 9px 5px 9px 55px;
+			  min-height: 27px;
+		      -moz-transition: color 1s ease; 
+		      -o-transition: color 1s ease; 
+		      -webkit-transition: color 1s ease; 
+		      transition: color 1s ease; 			
+			}
+
+            &:hover ~ label, &:focus ~ label,
+            ~ label:hover, ~ label:focus {
+                color: #000;
+            }
+
+			/* set background sprite */
+			~ label:before {
+			  position: absolute;
+			  top: 3px;
+			  left: 3px;
+			  content: '';
+			  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
+			  width: 40px;
+			  height: 40px;
+			  cursor: pointer;
+			}
+			
+			&:checked ~ label {
+			  font-weight: bold;
+			}
+		}
+
+		/* checkbox styles */
+		> input[type=checkbox] {
+		
+			/* Hover & Focus styles */
+			&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before { 
+			  background-position: 0 -48px;
+			}
+			
+			&:focus ~ label, & ~ label:focus {
+				outline: 1px solid #02bfe7;
+			}
+
+			/* Checked styles */
+			&:checked {
+
+				~ label:before { 
+				  background-position: 0 -193px; 
+				}
+
+				&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:focus:before { 
+				  background-position: 0 -240px; 
+				}
+			}
+
+			/* Active styles */
+			&:active ~ label:before, ~ label:hover:active:before { 
+			  background-position: 0 -96px; 
+			}
+						
+			&:active:checked ~ label:before, &:checked ~ label:hover:active:before {
+			  background-position: 0 -288px;
+			}
+
+			/* Disabled styles */
+			&:disabled {
+				~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before { 
+				  background-position: 0 -145px; 
+				}
+
+				&:checked {
+					~ label:before, ~ label:hover:before, ~ label:hover:active:before, &:hover ~ label:before, &:focus ~ label:before { 
+					  background-position: 0 -336px; 
+					}
+				}
+			}
+		}
+
+		/* radio button styles */
+		> input[type=radio] {
+			~ label:before { 
+			  background-position: 0 -385px;
+			}
+
+			/* Hover & Focus styles */
+			&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before { 
+			  background-position: 0 -434px; 
+			}
+			
+			&:focus ~ label, & ~ label:focus {
+				outline: 1px solid #02bfe7;
+			}
+
+			/* Checked styles */
+			&:checked {
+				~ label:before { 
+				  background-position: 0 -576px;
+				}
+
+				&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:focus:before { 
+				  background-position: 0 -624px; 
+				}
+
+			}
+
+			/* Active styles */
+			&:active ~ label:before, ~ label:hover:active:before { 
+			  background-position: 0 -480px;
+			}
+			&:active:checked ~ label:before, &:checked ~ label:hover:active:before { 
+			  background-position: 0 -673px; 
+			}
+
+			/* Disabled styles */
+			&:disabled {
+				~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before {
+				  background-position: 0 -529px; 
+				}
+				&:checked {
+					~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before { 
+				      background-position: 0 -720px; 
+				    }
+			    }
+			}
+		}
+	}
+}
+
 .validation-summary-valid {
     display: none;
 }
