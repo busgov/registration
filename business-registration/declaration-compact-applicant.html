@@ -177,7 +177,7 @@
 						<li>Goods and Services Tax (GST)</li>
 						<li>AUSkey</li>
 					</ul>
-					<p>The lodger is submiting the application on behalf of the applicant</p>
+					<p>The lodger of the application is the applicant (the proposed business name holder)</p>
 				</div>
                 <!-- div>
 					<p>Use the following controls to include/exclude an Auskey, or to change who is lodging the application.</p>
@@ -202,7 +202,7 @@
             </div>
 
         <div class="confirmation-heading">
-                <h2>Declaration <em style="font-family: open_sansregular,helvetica,arial,sans-serif; font-size: smaller">for authorised person</em></h2>
+                <h2>Declaration <em style="font-family: open_sanslight,helvetica,arial,sans-serif; font-size: 75%">for applicant</em></h2>
             </div>
 			<div id="declaration" class="declaration-container hide-exclusions">
 				<!-- div class="grid-row clearfix">
@@ -218,7 +218,7 @@
 					</div>
 				</div -->
 				<div class="declaration-wrapper">
-				    <fieldset class="business-name custom-controls3">
+				    <fieldset class="business-name custom-controls3" style="font-size: 100%">
 				        <legend class="larger no-padding-bottom">I declare that:</legend>
 						<div class="indent">
 							<div class="grid-row">
@@ -227,38 +227,28 @@
 									<label for="authorised">I am the applicant.</label>
 								</p>
 								<p>
-									<input type="checkbox" id="true-and-correct" />
-									<label for="true-and-correct">To the best of my knowledge, the information in this application and annexures are true and correct at the time of signing.</label>
+									<input type="checkbox" id="company-registration" />
+									<label for="company-registration">I apply for the registration of a company on the basis of the information in this form and any attachments. I have the necessary written consents and agreements referred to in this application concerning the members and officeholders and I shall give the consents and agreements to the company after the company becomes registered.</label>
 								</p>
-							</div>
-							<div class="grid-row">
 								<p>
 									<input type="checkbox" id="not-disqualified" />
-									<label for="not-disqualified">I am not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act 2001</em><img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.*</label>
+									<label for="not-disqualified">I am not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act</em> 2001<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.*</label>
 								</p>
-							</div>
-							<div class="grid-row">
 								<p>
 									<input type="checkbox" id="convictions" />
-									<label for="convictions">Within the last 5 years I have not been:
-										<span class="dotpoint">convicted of, or</span><br />
-										<span class="dotpoint">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act 2011</em><img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.*</li>
+									<label for="convictions">Within the last 5 years I have not been:<br />
+										<span class="dot-point">convicted of, or</span><br />
+										<span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.*</li>
 									</label>
 								</p>
-							</div>
-							<div class="grid-row">
 								<p>
 									<input type="checkbox" id="abn-holder" />
 									<label for="abn-holder">I understand that ABN holders are required by law to notify the <a href="https://abr.gov.au/For-Business%2c-Super-funds---Charities/Updating-or-cancelling-your-ABN/Update-your-ABN-details/" target-="_blank">Australian Business Register (ABR) Registrar<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> of any changes to their details within 28 days after becoming aware of the change.</label>
 								</p>
-							</div>
-							<div class="grid-row">
 								<p>
 									<input type="checkbox" id="asic-conditions" />
 									<label for="asic-conditions">This application is submitted under, and is compliant with, the terms and conditions of the <a href="http://www.asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">Australian Securities and Investments Commission (ASIC) Electronic Lodgement Protocol<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</label>
 								</p>
-							</div>
-							<div class="grid-row">
 								<p>
 									<input type="checkbox" id="auskey" />
 									<label for="auskey">I am the person identified as an associate eligible for an AUSkey in this application and I declare that:<br />
@@ -267,16 +257,20 @@
 										<span class="dot-point">Notices about this AUSkey application and that AUSkey may be sent to the email address recorded for the business on the ABR.</span>
 									</label>
 								</p>
+								<p>
+									<input type="checkbox" id="true-and-correct" />
+									<label for="true-and-correct">To the best of my knowledge, the information in this application and annexures are true and correct at the time of signing.</label>
+								</p>
 							</div>
 						</div>
 				    </fieldset>
 					<div class="grid-row" style="font-size: 80%">
 						<p style="font-size: small">*If either of these statements are untrue your application will be forwarded to an ASIC staff member to determine whether you are eligible under the Business Names Registration Act 2011.</p>
 					</div>
-					<div class="grid-row" style="font-size: 80%">
+					<div class="grid-row">
 						<p><strong>Please note:</strong> The ATO and ASIC may contact the applicant or the lodging party (if any) if there are any questions regarding this application. It is an offence to provide false or misleading information to ASIC and ATO. Making a false or misleading statement to the ATO may also result in a penalty.</p>
 					</div>
-				    <div class="grid-row" style="font-size: 80%">
+				    <div class="grid-row">
 				        <h3>Privacy</h3>
 				        <p>The information provided to ASIC <span class="addition">, the ABR and the ATO</span> in this form may include personal information. Please refer to the <a href="http://www.asic.gov.au/privacy">ASIC privacy policy<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> <span class="addition">, the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website">ABR privacy policy<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> and the <a href="http://www.ato.gov.au/About-ATO/Access,-accountability-and-reporting/In-detail/Privacy-notices/Privacy-policy/">ATO privacy policy<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a></span> for more information about how we handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p>
 				    </div>
@@ -403,6 +397,14 @@
             visionaustralia.closeDialog("dialogOne");
             $('#businessName1').toggle("fast");
         });
+		
+		$("input[type=checkbox]").click(function() {
+			if ($(":checked").length == 8)
+				$("#next").prop("disabled", false);
+			else
+				$("#next").prop("disabled", true);
+		});
+
 
     </script>
     <script type="text/javascript" src="assets/js/vadialog.js"></script> 
