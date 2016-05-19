@@ -175,7 +175,6 @@
 						<li>Company</li>
 						<li>Australian Business Number (ABN)</li>
 						<li>Goods and Services Tax (GST)</li>
-						<li>AUSkey</li>
 					</ul>
 					<p>The lodger is submiting the application on behalf of the applicant</p>
 				</div>
@@ -259,13 +258,6 @@
 										<span class="dot-point">convicted of, or</span><br />
 										<span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</li>
 									</label>
-								</p>
-							</div>
-							<div class="grid-row">
-								<h3>AUSkey</h3>
-								<p>
-									<input type="checkbox" id="auskey" />
-									<label for="auskey">I am the person identified as an associate eligible for an AUSkey in this application. This application is for an AUSkey to be held by me for that business. I understand the terms and conditions associated with that AUSkey. Notices about this AUSkey application, and that AUSkey, may be sent to the email address recorded for the business on the Australian Business Register.</label>
 								</p>
 							</div>
 							<div class="grid-row">
@@ -396,7 +388,7 @@
         });
 		
 		$("input[type=checkbox]").click(function() {
-			if ($(":checked").length == 8)
+			if ($(":checked").length == 7)
 				$("#next").prop("disabled", false);
 			else
 				$("#next").prop("disabled", true);
