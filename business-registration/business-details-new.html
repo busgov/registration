@@ -527,20 +527,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="you-ah-field" class="grid-row" style="display: none;">
-                            <div class="col4">
-                                <label for="you-afterhours" class="input-right">After hours phone</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="you-afterhours" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
                         <div id="mobile-field" class="grid-row" style="display: none;">
                             <div class="col4">
                                 <label for="you-mobile" class="input-right">Mobile</label>
                             </div><!-- col -->
                             <div class="col8 last">
                                 <input id="you-mobile" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div id="you-ah-field" class="grid-row" style="display: none;">
+                            <div class="col4">
+                                <label for="you-afterhours" class="input-right">After hours phone</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-afterhours" type="text">
                             </div><!-- col -->
                         </div><!-- grid-row -->
                         <div class="grid-row">
@@ -635,20 +635,20 @@
                             </p>
                         </div>
                     </div --><!-- grid-row -->
-                    <div id="contact-ah-field" class="grid-row" style="display: none;">
-                        <div class="col4">
-                            <label for="afterhours" class="input-right">After hours phone</label>
-                        </div><!-- col -->
-                        <div class="col8 last">
-                            <input id="afterhours" type="text">
-                        </div><!-- col -->
-                    </div><!-- grid-row -->
                     <div id="contact-mobile" class="grid-row" style="display: none;">
                         <div class="col4">
                             <label for="mobile" class="input-right">Mobile</label>
                         </div><!-- col -->
                         <div class="col8 last">
                             <input id="mobile" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div id="contact-ah-field" class="grid-row" style="display: none;">
+                        <div class="col4">
+                            <label for="afterhours" class="input-right">After hours phone</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="afterhours" type="text">
                         </div><!-- col -->
                     </div><!-- grid-row -->
                     <div class="grid-row">
@@ -1158,9 +1158,9 @@
 
 			$('#cont-afterhours-cb').click(function () {
 			    if ($('#cont-afterhours-cb').is(':checked')) {
-			        $('#cont-ah-field').show('fast');
+			        $('#contact-ah-field').show('fast');
 			    } else {
-			        $('#cont-ah-field').hide('fast');
+			        $('#contact-ah-field').hide('fast');
 			    }
 			});
 
