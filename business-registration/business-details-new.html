@@ -6,10 +6,9 @@
     <title>Business details | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
-    <style>
-    </style>
 </head>
 <body>
     <div class="wrapper wrapper-main">
@@ -104,20 +103,6 @@
                                 <input id="individual1-dob" type="date">
                             </div><!-- col -->
                         </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                &nbsp;
-                            </div><!-- col -->
-                            <div class="col7 custom-controls">
-                                <p>
-                                    <input type="checkbox" id="auth" checked class="showhide-trigger" />
-                                    <label for="auth">This person is also an authorised contact</label>
-                                </p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
 					</fieldset>
                     <fieldset id="fieldsetPOIAddress">
                         <legend class="margin4 larger">Proof of identity</legend>
@@ -150,1078 +135,907 @@
 			<!-- START SECTION 2 -->
 			<div id="section2" class="sub-section-container">
 				<h2>Business location details</h2>
-				<div class="sub-section-content">
-					<div id="validation2" class="validation-container clearfix" style="display: none;">
-						<div class="grid-row">
-							<div class="validation-summary-icon">
-								<img src="assets/img/ico-alert-red.png" alt="Error">
-							</div>
-							<div class="validation-message">
-								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
-								<div id="mainaddr-val" style="display: none;">
-									<h3>Main business address:</h3>
-									<ul>
-										<li id="val2a">Enter a value for field <a href="#addr2line1">Address line 1</a></li>
-										<li id="val2b">Enter a value for field <a href="#suburb2">Suburb</a></li>
-										<li id="val2c">Enter a value for field <a href="#state2">State</a></li>
-										<li id="val2d">Enter a value for field <a href="#postcode2">Postcode</a></li>
-										<li id="val2e">Enter a value for field <a href="#contactemail">Contact email</a></li>
-										<li id="val2f">Enter a value for field <a href="#contactphone">Contact phone</a></li>
-									</ul>
-								</div>
-								<div id="postal-val" style="display: none;">
-									<h3>Postal address:</h3>
-									<ul>
-										<li id="val2g">Enter a value for field <a href="#addr3line1">Address line 1</a></li>
-										<li id="val2h">Enter a value for field <a href="#suburb3">Suburb</a></li>
-										<li id="val2i">Enter a value for field <a href="#state3">State</a></li>
-										<li id="val2j">Enter a value for field <a href="#postcode3">Postcode</a></li>
-									</ul>
-								</div>
-								<div id="addbus-val" style="display: none;">
-									<h3>Additional business address:</h3>
-									<ul>
-										<li id="val2k">Enter a value for field <a href="#addr4line1">Address line 1</a></li>
-										<li id="val2l">Enter a value for field <a href="#suburb4">Suburb</a></li>
-										<li id="val2m">Enter a value for field <a href="#state4">State</a></li>
-										<li id="val2n">Enter a value for field <a href="#postcode4">Postcode</a></li>
-										<li id="val2o">Enter a value for field <a href="#conactemail4">Email</a></li>
-										<li id="val2p">Enter a value for field <a href="#contactphone4">Phone</a></li>
-										<li id="val2q">Enter a value for field <a href="#contactactivity2">Activity</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--fieldset class="margin-bottom-075">
-						<legend class="larger margin4">Residential address</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addrline1" class="input-right">Address line 1</label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="addrline1" type="text">
-                            </div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addrline2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="addrline2" type="text">
-                            </div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="suburb1" class="input-right">Suburb</label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="suburb1" type="text">
-                            </div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="state1" class="input-right">State</label>
-                            </div>
-                            <div class="col8 last">
-								<select id="state1" >
-									<option vlaue="">Please select...</option>
-									<option>Australian Capital Territory</option>
-									<option>New South Wales</option>
-									<option>Queensland</option>
-									<option>etc</option>
-								</select>
-							</div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="postcode1" class="input-right">Postcode</label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="postcode1" type="number">
-                            </div>
-                        </div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="country1" class="input-right">Country <span class="field-note">(optional)</span></label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="country1" type="text">
-                            </div>
-                        </div>
-					</fieldset -->
-					<fieldset id="busaddr" class="margin-bottom-075">
-						<legend class="larger margin4">Main business address</legend>
-						<div class="grid-row">
-							<p class="margin4">Your main business location must be a physical address.</p>
-						</div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr2line1" class="input-right">Address line 1</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr2line1" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr2line2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="suburb2" class="input-right">Suburb</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="suburb2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="state2" class="input-right">State</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-								<select id="state2" >
-									<option value="">Please select...</option>
-									<option value="ACT">Australian Capital Territory</option>
-									<option value="NSW">New South Wales</option>
-									<option value="QLD">Queensland</option>
-									<option>etc</option>
-								</select>
-							</div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="postcode2" class="input-right">Postcode</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="postcode2" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="country2" class="input-right">Country</label>
-                            </div><!-- col -->
-							<div class="col8 last">
-								<select id="country2">
-									<option>Australia</option>
-									<option>Indonesia</option>
-									<option>New Zealand</option>
-									<option>United States of America</option>
-									<option>etc</option>
-								</select>
-							</div><!-- col -->
-                       </div><!-- grid-row -->
-					</fieldset>
-					<fieldset class="margin-bottom-075">
-						<legend class="larger margin4">Contact details</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="contactemail" class="input-right">Email</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="contactemail" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="contactphone" class="input-right">Phone</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="contactphone" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-					</fieldset>
-					<div class="grid-row custom-controls margin-bottom-1">
-						<div class="col4">
-							<p>&nbsp;</p>
-						</div><!-- col -->
-						<div class="col8 last">
-							<p>
-								<input id="diffpostaladdr" type="checkbox">
-								<label for="diffpostaladdr">My postal address is different</label>
-							</p>
-						</div><!-- col -->
-					</div><!-- grid-row -->
-					<fieldset id="postaladdr" class="margin-bottom-075" style="display: none">
-						<legend class="larger margin4">Postal address</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr3line1" class="input-right">Address line 1</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr3line1" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="addr3line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="addr3line2" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="suburb3" class="input-right">Suburb</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="suburb3" type="text">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="state3" class="input-right">State</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-								<select id="state3" >
-									<option value="">Please select...</option>
-									<option value="ACT">Australian Capital Territory</option>
-									<option value="NSW">New South Wales</option>
-									<option value="QLD">Queensland</option>
-									<option>etc</option>
-								</select>
-							</div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="postcode3" class="input-right">Postcode</label>
-                            </div><!-- col -->
-                            <div class="col8 last">
-                                <input id="postcode3" type="number">
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="country3" class="input-right">Country</label>
-                            </div><!-- col -->
-							<div class="col8 last">
-								<select id="country3">
-									<option>Australia</option>
-									<option>Indonesia</option>
-									<option>New Zealand</option>
-									<option>United States of America</option>
-									<option>etc</option>
-								</select>
-							</div><!-- col -->
-                        </div><!-- grid-row -->
-					</fieldset>
-
-					<!-- fieldset class="margin-bottom-075">
-						<legend class="hidden">Main business activity</legend>
-						<div class="grid-row">
-                            <div class="col4">
-                                <label for="busactivity" class="input-right">Choose your main business activity<br>
-								<span class="field-note">(Start typing and choose from the options presented)</span></label>
-                            </div>
-							<div class="col8 last">
-								<input id="busactivity" type="text">
-								<button type="button" class="btn">search</button>
-							</div>
-						</div>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="contactactivity" class="input-right">Selected activity</label>
-                            </div>
-                            <div class="col8 last">
-                                <input id="contactactivity" type="text">
-                            </div>
-                        </div>
-					</fieldset -->
-					<div id="add-bus-addr" class="contacts" style="display: none">
-						<h3 class="margin4">Additional business addresses</h3>
-					</div>
-					<div id="additional-bus" style="display: none">
-						<fieldset id="busaddr4" class="margin-bottom-075">
-							<legend class="larger margin4">Add business address</legend>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr4line1" class="input-right">Address line 1</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr4line1" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr4line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr4line2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="suburb4" class="input-right">Suburb</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="suburb4" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="state4" class="input-right">State</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<select id="state4" >
-										<option value="">Please select...</option>
-										<option value="ACT">Australian Capital Territory</option>
-										<option value="NSW">New South Wales</option>
-										<option value="QLD">Queensland</option>
-										<option>etc</option>
-									</select>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="postcode4" class="input-right">Postcode</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="postcode4" type="number">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="country4" class="input-right">Country <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="country4" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-						<fieldset>
-							<legend class="larger margin4">Contact details</legend>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="contactemail4" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="contactemail4" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="contactphone4" class="input-right">Phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="contactphone4" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-						<fieldset>
-							<legend class="hidden">Main business activity</legend>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="busactivity2" class="input-right">Choose your main business activity at this location<br>
-									<span class="field-note">(Start typing and choose from the options presented)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="busactivity2" type="text">
-									<button type="button" class="btn">search</button>
-								</div>
-							</div>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="contactactivity2" class="input-right">Selected activity</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="contactactivity2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-					</div>
-					<div class="grid-row">
-						<div class="col4">
-							&nbsp;
-						</div><!-- col -->
-						<div class="col7 custom-controls">
-							<p><button id="busaddr-btn" type="button" class="btn btn-default btn-add">Add another business address</button></p>
-						</div>
-					</div>
-
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button id="bus-addr-prev" type="button" class="btn previous">Previous</button><button id="bus-addr-next" type="button" class="btn btn-default next">Next</button>
-                        </div><!-- controls-content -->
-                    </div>
-				</div>
+			<div class="sub-section-content">
+			<div id="validation2" class="validation-container clearfix" style="display: none;">
+			    <div class="grid-row">
+			        <div class="validation-summary-icon">
+			            <img src="assets/img/ico-alert-red.png" alt="Error">
+			        </div>
+			        <div class="validation-message">
+			            <h2><a id="validationSummaryAnchor" href="">There was a problem</a>
+			            </h2>
+			            <div id="mainaddr-val" style="display: none;">
+			                <h3>Main business address:</h3>
+			                <ul>
+			                    <li id="val2a">Enter a value for field <a href="#addr2line1">Address line 1</a></li>
+			                    <li id="val2b">Enter a value for field <a href="#suburb2">Suburb</a></li>
+			                    <li id="val2c">Enter a value for field <a href="#state2">State</a></li>
+			                    <li id="val2d">Enter a value for field <a href="#postcode2">Postcode</a></li>
+			                    <li id="val2e">Enter a value for field <a href="#contactemail">Contact email</a></li>
+			                    <li id="val2f">Enter a value for field <a href="#contactphone">Contact phone</a></li>
+			                </ul>
+			            </div>
+			            <div id="postal-val" style="display: none;">
+			                <h3>Postal address:</h3>
+			                <ul>
+			                    <li id="val2g">Enter a value for field <a href="#addr3line1">Address line 1</a></li>
+			                    <li id="val2h">Enter a value for field <a href="#suburb3">Suburb</a></li>
+			                    <li id="val2i">Enter a value for field <a href="#state3">State</a></li>
+			                    <li id="val2j">Enter a value for field <a href="#postcode3">Postcode</a></li>
+			                </ul>
+			            </div>
+			            <div id="addbus-val" style="display: none;">
+			                <h3>Additional business address:</h3>
+			                <ul>
+			                    <li id="val2k">Enter a value for field <a href="#addr4line1">Address line 1</a></li>
+			                    <li id="val2l">Enter a value for field <a href="#suburb4">Suburb</a></li>
+			                    <li id="val2m">Enter a value for field <a href="#state4">State</a></li>
+			                    <li id="val2n">Enter a value for field <a href="#postcode4">Postcode</a></li>
+			                    <li id="val2o">Enter a value for field <a href="#conactemail4">Email</a></li>
+			                    <li id="val2p">Enter a value for field <a href="#contactphone4">Phone</a></li>
+			                    <li id="val2q">Enter a value for field <a href="#contactactivity2">Activity</a></li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
 			</div>
+			<fieldset id="busaddr" class="margin-bottom-075">
+			    <legend class="larger margin4">Main business address</legend>
+			    <div class="grid-row">
+			        <p class="margin4">Your main business location must be a physical address.</p>
+			    </div>
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="addr2line1" class="input-right">Address line 1</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="addr2line1" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="addr2line2" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="suburb2" class="input-right">Suburb</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="suburb2" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="state2" class="input-right">State</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <select id="state2">
+			                <option value="">Please select...</option>
+			                <option value="ACT">Australian Capital Territory</option>
+			                <option value="NSW">New South Wales</option>
+			                <option value="QLD">Queensland</option>
+			                <option>etc</option>
+			            </select>
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="postcode2" class="input-right">Postcode</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="postcode2" type="number">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="country2" class="input-right">Country</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <select id="country2">
+			                <option>Australia</option>
+			                <option>Indonesia</option>
+			                <option>New Zealand</option>
+			                <option>United States of America</option>
+			                <option>etc</option>
+			            </select>
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			</fieldset>
+			<fieldset class="margin-bottom-075">
+			    <legend class="larger margin4">Contact details</legend>
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="contactemail" class="input-right">Email</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="contactemail" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="contactphone" class="input-right">Phone</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="contactphone" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			</fieldset>
+			<div class="grid-row custom-controls margin-bottom-1">
+			    <div class="col4">
+			        <p>&nbsp;</p>
+			    </div><!-- col -->
+			    <div class="col8 last">
+			        <p>
+			            <input id="diffpostaladdr" type="checkbox">
+			            <label for="diffpostaladdr">My postal address is different</label>
+			        </p>
+			    </div><!-- col -->
+			</div><!-- grid-row -->
+			<fieldset id="postaladdr" class="margin-bottom-075" style="display: none">
+			    <legend class="larger margin4">Postal address</legend>
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="addr3line1" class="input-right">Address line 1</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="addr3line1" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="addr3line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="addr3line2" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="suburb3" class="input-right">Suburb</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="suburb3" type="text">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="state3" class="input-right">State</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <select id="state3">
+			                <option value="">Please select...</option>
+			                <option value="ACT">Australian Capital Territory</option>
+			                <option value="NSW">New South Wales</option>
+			                <option value="QLD">Queensland</option>
+			                <option>etc</option>
+			            </select>
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="postcode3" class="input-right">Postcode</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <input id="postcode3" type="number">
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			    <div class="grid-row">
+			        <div class="col4">
+			            <label for="country3" class="input-right">Country</label>
+			        </div><!-- col -->
+			        <div class="col8 last">
+			            <select id="country3">
+			                <option>Australia</option>
+			                <option>Indonesia</option>
+			                <option>New Zealand</option>
+			                <option>United States of America</option>
+			                <option>etc</option>
+			            </select>
+			        </div><!-- col -->
+			    </div><!-- grid-row -->
+			</fieldset>
 
-			<!-- START SECTION 3 -->
-			<div id="section3" class="sub-section-container">
-				<h2>Authorised contacts</h2>
-                <div class="sub-section-content">
-					<div id="validation3" class="validation-container clearfix" style="display: none;">
-						<div class="grid-row">
-							<div class="validation-summary-icon">
-								<img src="assets/img/ico-alert-red.png" alt="Error">
-							</div>
-							<div class="validation-message">
-								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
-								<div id="you-val" style="display: none;">
-									<h3>Your contact details:</h3>
-									<ul>
-										<li id="val3a">Enter a value for field <a href="#you-email">Email</a></li>
-										<li id="val3b">Enter a value for field <a href="#you-bushours">Phone</a></li>
-										<li id="val3c">Enter a value for field <a href="#you-position">Position held</a></li>
-									</ul>
-								</div>
-								<div id="newcontact-val" style="display: none;">
-									<h3>New contact details:</h3>
-									<ul>
-										<li id="val3d">Enter a value for field <a href="#name1">Given name</a></li>
-										<li id="val3e">Enter a value for field <a href="#name2">Family name</a></li>
-										<li id="val3f">Enter a value for field <a href="#email">Email</a></li>
-										<li id="val3g">Enter a value for field <a href="#bushours">Phone</a></li>
-										<li id="val3h">Enter a value for field <a href="#position">Position held</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="you-auth">
-						<fieldset class="margin-bottom-075">
-							<legend class="margin4 larger">Your contact details</legend>
-							<div class="grid-row">
-								<div class="grid-row">
-									<p class="margin4">You indicated that you will be an authorised contact. You will need to provide additional contact details here.</p>
-								</div>
-								<div class="col4">
-									<label for="you-name" class="input-right">Name</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-name" type="text" disabled>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="you-email" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-email" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="you-bushours" class="input-right">Business hours phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-bushours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div id="mobile-field" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="you-mobile" class="input-right">Mobile</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-mobile" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row custom-controls margin-bottom-1">
-								<div class="col4">
-									<p>&nbsp;</p>
-								</div><!-- col -->
-								<div class="col8 last">
-									<p>
-										<input id="afterhours-cb" type="checkbox">
-										<label for="afterhours-cb">Use a different number after hours</label>
-									</p>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-
-							<div id="you-ah-field" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="you-afterhours" class="input-right">After hours phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-afterhours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="you-language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-language" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div id="you-otherlang-field" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="you-otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="you-otherlang" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="you-position" class="input-right">Position held</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<select id="you-position" >
-										<option value="">Please select...</option>
-										<option>Position 1</option>
-										<option>Position 2</option>
-										<option>Position 3</option>
-										<option>etc</option>
-									</select>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-						<div class="grid-row">
-							<div class="col4">
-								&nbsp;
-							</div><!-- col -->
-							<div class="col7 custom-controls">
-								<p><button id="auth-btn1" type="button" class="btn btn-default btn-add">Add another contact</button></p>
-							</div>
-						</div>
-					</div>
-					<div id="altauthtable" class="contacts" style="display: none">
-						<h3 class="margin4">Contact details</h3>
-					</div>
-					<div id="authform" class="showhide-target col12" style="display: none">
-						<fieldset class="margin-bottom-075">
-							<legend class="margin4 larger">New contact details</legend>
-							<div class="grid-row">
-								<div class="col4">
-									<label for="name1" class="input-right">Given name</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="name1" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="name2" class="input-right">Family name</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="name2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="email" class="input-right">Email</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="email" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="bushours" class="input-right">Business hours phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="bushours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div id="contact-mobile" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="mobile" class="input-right">Mobile</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="mobile" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row custom-controls margin-bottom-1">
-								<div class="col4">
-									<p>&nbsp;</p>
-								</div><!-- col -->
-								<div class="col8 last">
-									<p>
-										<input id="cont-afterhours-cb" type="checkbox">
-										<label for="cont-afterhours-cb">Use a different number after hours</label>
-									</p>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div id="contact-ah-field" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="afterhours" class="input-right">After hours phone</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="afterhours" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="language" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div id="other-pref-lang" class="grid-row" style="display: none;">
-								<div class="col4">
-									<label for="otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="otherlang" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="position" class="input-right">Position held</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<select id="position" >
-										<option value="">Please select...</option>
-										<option>Position 1</option>
-										<option>Position 2</option>
-										<option>Position 3</option>
-										<option>etc</option>
-									</select>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</fieldset>
-					</div>
-					<div id="add-auth2" class="grid-row" style="display: none">
-						<div class="col4">
-							&nbsp;
-						</div><!-- col -->
-						<div class="col7 custom-controls">
-							<p><button id="auth-btn" type="button" class="btn btn-default btn-add">Add another contact</button></p>
-						</div>
-					</div>
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button id="contact-prev" type="button" class="btn previous">Previous</button><button id="contact-next" type="button" class="btn btn-default next">Next</button>
-                        </div><!-- controls-content -->
-                    </div>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
-			
-            <!-- START SECTION 4 -->
-            <div id="section4" class="sub-section-container">
-                <h2>Reason for application</h2>
-                <div class="sub-section-content">
- 					<div id="validation4" class="validation-container clearfix" style="display: none;">
-						<div class="grid-row">
-							<div class="validation-summary-icon">
-								<img src="assets/img/ico-alert-red.png" alt="Error">
-							</div>
-							<div class="validation-message">
-								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
-								<ul>
-									<li id="val4a">Please select a value for <a class="skip" href="#fieldsetReasonForApplication">why you need an ABN</a></li>
-									<li id="val4b">Please select a value for: <a class="skip" href="#firsttime-selfemployed">Is this the first time you will be self-employed?</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<fieldset id="fieldsetReasonForApplication">
-                        <legend class="larger">Australian Business Number (ABN)</legend>
-                        <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
-
-                        <div class="grid-row grid-row-block clearfix custom-controls">
-                            <div class="col11">
-                                <p>
-                                    <input id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
-                                    <label for="new-business">
-                                        <span class="push-right">
-                                            <strong>New business in Australia</strong><br />
-                                            You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.
-                                        </span>
-                                    </label>
-                                </p>
-                            </div>                       
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row padding-bottom-1 clearfix showhide-target" id="new-business-check" style="display:none">
-                            <div class="col1">&nbsp;</div>
-                            <div class="col11 last">
-                                <p class="no-margin-top"><label for="australia">Is this your first time in business in Australia?</label></p>
-                                <div class="radio-toggle">
-                                    <label class="on label-left" for="australia-yes"><input id="australia-yes" type="radio" name="australia"><span>Yes</span></label>
-                                    <label class="off label-right" for="australia-no"><input id="australia-no" type="radio" name="australia"><span>No</span></label>
-                                </div>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-									<input id="radio02" class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio02">
-                                        <span class="push-right">
-											<strong>Investment purposes</strong><br>
-											For example, if you earn income as a result of an investment.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-reveal clearfix showhide-target" id="new-investment-check" style="display:none">
-                            <div class="col1">
-                                <p>&nbsp;</p>
-                            </div><!-- col -->
-                            <div class="col10">
-                                <p class="no-margin-top"><label for="australia2">Is this your first time in business in Australia?</label></p>
-                                <div class="radio-toggle">
-                                    <label class="on label-left" for="investment-yes"><input id="investment-yes" type="radio" name="australia2"><span>Yes</span></label>
-                                    <label class="off label-right" for="investment-no"><input id="investment-no" type="radio" name="australia2"><span>No</span></label>
-                                </div>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-									<input id="radio03"  class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio03">
-										<span class="push-right">
-											<strong>Bought existing business</strong><br>
-											You have bought or taken over an existing business.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-						</div><!-- grid-row -->
-
-						<div class="grid-row grid-row-reveal clearfix showhide-target" style="display: none;">
-							<div class="col1">
-								<p>&nbsp;</p>
-							</div>
-							<div class="col11 last">
-								<p>
-									<label for="prev-abn">What is the previous owner's ABN</label>
-								</p>
-								<p>
-									<input id="prev-abn" type="text">
-								</p>
-							</div><!-- col -->
-						</div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-	                                <input id="radio04" class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio04">
-										<span class="push-right">
-											<strong>Contractor or subcontractor</strong><br>
-											You are contracting or subcontracting your services.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row padding-bottom-1 clearfix showhide-target" style="display:none">
-                            <div class="col1">&nbsp;</div>
-                            <div class="col11 last">
-                                <p class="no-margin-top"><label for="contractor">Is this your first time as a contractor or subcontractor?</label></p>
-                                <div class="radio-toggle">
-                                    <label class="on label-left" for="contractor-yes"><input id="contractor-yes" type="radio" name="contractor"><span>Yes</span></label>
-                                    <label class="off label-right" for="contractor-no"><input id="contractor-no" type="radio" name="contractor"><span>No</span></label>
-                                </div>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-	                                <input id="radio05"  class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio05">
-										<span class="push-right">
-											<strong>To receive payment for services</strong><br>
-											You need an ABN to receive payment for services.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-									<input id="radio06"  class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio06">
-										<span class="push-right">
-											<strong>Recommended business</strong><br>
-											You have recommended a business as a sole trader.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-									<input id="radio07"  class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio07">
-										<span class="push-right">
-											<strong>Change in business structure</strong><br>
-											The legal structure of your business has changed. For example, from a partership to a sole trader.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-
-                        <div class="grid-row grid-row-block grid-row-last custom-controls clearfix">
-                            <div class="col11">
-                            	<p>
-									<input id="radio08"  class="showhide-trigger" name="radiogroup1" type="radio">
-									<label for="radio08">
-										<span class="push-right">
-											<strong>Other circumstances</strong><br>
-											Only select this option of none of the above apply.
-										</span>
-									</label>
-								</p>
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-                    </fieldset>
-
-					<div class="grid-row padding-bottom-1 clearfix showhide-target">
-						<div class="col12 last">
-							<fieldset id="firsttime-selfemployed">
-								<legend>Is this the first time you will be self-employed?</legend>
-								<div class="radio-toggle">
-									<label class="on label-left" for="self-yes"><input id="self-yes" type="radio" name="self-employed"><span>Yes</span></label>
-									<label class="off label-right" for="self-no"><input id="self-no" type="radio" name="self-employed"><span>No</span></label>
-								</div>
-							</fieldset>
-						</div><!-- col -->
-					</div><!-- grid-row -->
-
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button id="reason-next" type="button" class="btn btn-default next">Next</button>
-                        </div><!-- controls-content -->
-                    </div>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
-
-            
-            <!-- START SECTION 5 -->
-            <div id="section5" class="sub-section-container">
-                <h2>Business activity details</h2>
-                <div class="sub-section-content">
- 					<div id="validation5" class="validation-container clearfix" style="display: none;">
-						<div class="grid-row">
-							<div class="validation-summary-icon">
-								<img src="assets/img/ico-alert-red.png" alt="Error">
-							</div>
-							<div class="validation-message">
-								<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
-								<ul>
-									<li id="val5a">Enter a value for field <a class="skip" href="#activity-contact">Activity</a></li>
-									<li id="val5b">Enter a value for field  <a class="skip" href="#abn-start-date">Commencement date of activity</a></li>
-									<li id="val5c">Select a value for <a class="skip" href="#validation-test-field3">Will you be operating an agricultural property?</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<fieldset>
-						<legend class="hidden">Main business activity</legend>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="main-activity" class="input-right">Choose your main business activity<br>
-								<span class="field-note">(Start typing and choose from the options presented)</span></label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="main-activity" type="text">
-								<button type="button" class="btn">search</button>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="activity-contact" class="input-right">Selected activity</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="activity-contact" type="text">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-					</fieldset>
-                   <fieldset>
-                        <legend class="margin4 larger">ABN registration</legend>
-                        <div class="grid-row">
-                            <div class="col4">
-                                <label for="abn-start-date" class="input-right">Commencement date of activity</label>
-                            </div><!-- col -->
-                            <div class="col7">
-                                <input id="abn-start-date" type="date" />
-                            </div><!-- col -->
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
-                        </div><!-- grid-row -->
-                        <div id="divAbnEnddate">
-                            <div class="grid-row">
-                                <div class="col4">&nbsp;</div>
-                                <div class="col8 last custom-controls">
-                                    <p>
-                                        <input id="end-date-yes" type="checkbox" class="showhide-trigger" />
-                                        <label for="end-date-yes">Business activity will cease within 3 months of start date</label>
-                                    </p>
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
-
-                            <div class="grid-row grid-row-reveal clearfix showhide-target" style="display:none">
-                                <div class="col4">
-                                    <label for="end-date" class="input-right">End date of activity</label>
-                                </div><!-- col -->
-                                <div class="col8 last">
-                                    <input id="end-date" type="date" />
-                                </div><!-- col -->
-                            </div><!-- grid-row -->
-                        </div>
-                    </fieldset>
-
-                    <div class="grid-row grid-row-padding-bottom">
-                        <fieldset id="validation-test-field3" class="no-margin">
-                            <legend class="col4 input-right"><span id="agricultural">Will you be operating an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
-                            <div class="col8 last">
-                                <div class="col12 last">
-                                    <div class="radio-toggle">
-                                        <label class="on label-left" for="on-agricultural"><input id="on-agricultural" type="radio" name="agricultural"><span>Yes</span></label>
-                                        <label class="off label-right" for="off-agricultural"><input id="off-agricultural" type="radio" name="agricultural"><span>No</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
+            <div class="controls-container">
+                <div class="controls-content">
+                    <button id="bus-addr-prev" type="button" class="btn previous">Previous</button><button id="bus-addr-next" type="button" class="btn btn-default next">Next</button>
+                </div><!-- controls-content -->
+            </div>
+		</div>
+	</div>
+    <!-- START SECTION 3 -->
+    <div id="section3" class="sub-section-container">
+        <h2>Additional business locations</h2>
+        <div class="sub-section-content">
+            <div class="grid-row">
+                <h3 class="larger">Additional location details</h3>
+                <p>You may provide details of addresses other than your main address where you carry out your business. You need to provide details of the main business activity associated with each additional address.</p>
+                <p>Use the button below to add additional addresses.</p>
+            </div>
+            <div id="add-bus-addr" class="compact cart-container margin-bottom-075" style="display: none">
+            </div>
+            <div id="add-button-section" class="grid-row">
+                <p><button id="busaddr-btn" type="button" class="btn btn-default">Add address</button></p>
+            </div>
+            <div id="additional-bus" style="display: none">
+                <hr/>
+                <fieldset id="busaddr4" class="margin-bottom-075">
+                    <legend class="larger margin4">Add business address</legend>
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="addr4line1" class="input-right">Address line 1</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="addr4line1" type="text">
+                        </div><!-- col -->
                     </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="addr4line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="addr4line2" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="suburb4" class="input-right">Suburb</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="suburb4" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="state4" class="input-right">State</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <select id="state4">
+                                <option value="">Please select...</option>
+                                <option value="ACT">Australian Capital Territory</option>
+                                <option value="NSW">New South Wales</option>
+                                <option value="QLD">Queensland</option>
+                                <option>etc</option>
+                            </select>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="postcode4" class="input-right">Postcode</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="postcode4" type="number">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="country4" class="input-right">Country <span class="field-note">(optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="country4" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                </fieldset>
+                <fieldset>
+                    <legend class="larger margin4">Contact details</legend>
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="contactemail4" class="input-right">Email</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="contactemail4" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="contactphone4" class="input-right">Phone</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="contactphone4" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                </fieldset>
+                <fieldset class="margin-bottom-075">
+                    <legend class="visuallyhidden">Main business activity</legend>
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="busactivity2" class="input-right">
+                                Choose your main business activity at this location<br>
+                                <span class="field-note">(Start typing and choose from the options presented)</span>
+                            </label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="busactivity2" type="text">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="grid-row">
+                    <div class="col4">
+                        &nbsp;
+                    </div><!-- col -->
+                    <div class="controls-content col7">
+                        <p>
+                            <button id="save-addr" type="button" class="btn btn-default">Save</button> <button id="cancel-addr" type="button" class="btn cancel">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- div class="grid-row grid-row-padding-bottom">
-                        <fieldset id="validation-test-field3" class="no-margin">
-                            <legend class="col4 input-right"><span id="agricultural">Is the applicant an Australian resident for taxation purposes?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
-                            <div class="col8 last">
-                                <div class="col12 last">
-                                    <div class="radio-toggle">
-                                        <label class="on label-left" for="on-resident"><input id="on-resident" type="radio" name="resident"><span>Yes</span></label>
-                                        <label class="off label-right" for="off-resident"><input id="off-resident" type="radio" name="resident"><span>No</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div --><!-- grid-row -->
+            <div class="controls-container">
+                <div class="controls-content">
+                    <button id="add-addr-prev" type="button" class="btn previous">Previous</button><button id="add-addr-next" type="button" class="btn btn-default next">Next</button>
+                </div><!-- controls-content -->
+            </div>
+        </div>
+    </div>
 
-                    <!-- fieldset id="fieldsetAddress">
-                        <legend class="margin4 larger">Business address</legend>
-                        <div class="grid-row no-margin">
+    <!-- START SECTION 4 -->
+    <div id="section4" class="sub-section-container">
+        <h2>Authorised contacts</h2>
+        <div class="sub-section-content">
+            <div>
+                <div class="grid-row clearfix">
+                    <h3 class="larger">Authorised contact details</h3>
+                    <p>You need to provide at least one authorised contact. If you nominate an authorised tax agent, you can provide their tax agent number.</p>
+                </div>
+                <div id="yes-no-auth">
+                    <p>Do you want to nominate the Sole trader as an authorised contact?</p>
+                    <div class="radio-toggle clearfix">
+                        <label class="on label-left" for="sole-trader-auth-yes"><input id="sole-trader-auth-yes" type="radio" name="sole-trader-auth"><span>Yes</span></label>
+                        <label class="off label-right" for="sole-trader-auth-no"><input id="sole-trader-auth-no" type="radio" name="sole-trader-auth"><span>No</span></label>
+                    </div>
+                </div>
+                <div id="your-details" class="clearfix" style="display: none">
+                    <hr />
+                    <fieldset class="margin-bottom-075 clearfix">
+                        <legend class="margin4 larger">Contact details</legend>
+                        <div class="grid-row">
                             <div class="col4">
-                                <label for="address-suggest" class="input-right">Business address<br /><span class="field-note">(choose from the options presented)</span></label>
+                                <label for="you-name" class="input-right">Name</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-name" type="text" value="John Smith" disabled>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="you-email" class="input-right">Email</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-email" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="you-bushours" class="input-right">Business hours phone</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-bushours" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row custom-controls margin-bottom-1">
+                            <div class="col4">
+                                <p>&nbsp;</p>
                             </div>
                             <div class="col8 last">
-                                <input id="address-suggest" type="text">
-                                <p><a href="" id="manual" class="showhide-trigger">Can't find address</a></p>
-                                <p><a href="" id="addressSearch" class="showhide-trigger" style="display: none">Back to address search</a></p>
-                            </div>
-                        </div>
-                        <div class="grid-container showhide-target" id="manualAddress" style="display: none">
-                            <div class="grid-row">
-                                <div class="col4">
-                                    <label for="address-line1" class="input-right">Address line 1</label>
-                                </div>
-                                <div class="col8 last">
-                                    <input id="address-line1" type="text">
-                                </div>
-                            </div>
-                            <div class="grid-row">
-                                <div class="col4">
-                                    <label for="address-line2" class="input-right">Address line 2</label>
-                                </div>
-                                <div class="col8 last">
-                                    <input id="address-line2" type="text">
-                                </div>
-                            </div>
-                            <div class="grid-row">
-                                <div class="col4">
-                                    <label for="suburb" class="input-right">Suburb</label>
-                                </div>
-                                <div class="col8 last">
-                                    <input id="suburb" type="text">
-                                </div>
-                            </div>
-                            <div class="grid-row">
-                                <div class="col4">
-                                    <label for="postcode" class="input-right">Postcode</label>
-                                </div>
-                                <div class="col8 last">
-                                    <input id="postcode" type="number">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-row custom-controls">
-                            <div class="margin4">
                                 <p>
-                                    <input type="checkbox" id="address-same" />
-                                    <label for="address-same">My postal address is different</label>
+                                    <input id="afterhours-cb" type="checkbox">
+                                    <label for="afterhours-cb">Use a different number after hours</label>
                                 </p>
                             </div>
                         </div>
-                        <div class="grid-row">
+                        <div id="you-ah-field" class="grid-row" style="display: none;">
                             <div class="col4">
-                                &nbsp;
-                            </div>
+                                <label for="you-afterhours" class="input-right">After hours phone</label>
+                            </div><!-- col -->
                             <div class="col8 last">
-                                <p><button type="button" class="btn btn-default">Add another address</button></p>
-                            </div>
-                        </div>
-                        <div class="grid-row">
+                                <input id="you-afterhours" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div id="mobile-field" class="grid-row" style="display: none;">
                             <div class="col4">
-                                <label for="office-phone" class="input-right">Office phone</label>
-                            </div>
+                                <label for="you-mobile" class="input-right">Mobile</label>
+                            </div><!-- col -->
                             <div class="col8 last">
-                                <input id="office-phone" type="phone">
-                            </div>
-                        </div>
+                                <input id="you-mobile" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
                         <div class="grid-row">
                             <div class="col4">
-                                <label for="mobile-phone" class="input-right">Mobile</label>
-                            </div>
-                            <div class="col7">
-                                <input id="mobile-phone" type="phone">
-                            </div>
-                            <div class="col1 last">
-                                <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
-                            </div>
+                                <label for="you-language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-language" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div id="you-otherlang-field" class="grid-row" style="display: none;">
+                            <div class="col4">
+                                <label for="you-otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <input id="you-otherlang" type="text">
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                        <div class="grid-row">
+                            <div class="col4">
+                                <label for="you-position" class="input-right">Position held</label>
+                            </div><!-- col -->
+                            <div class="col8 last">
+                                <select id="you-position">
+                                    <option value="">Please select...</option>
+                                    <option>Position 1</option>
+                                    <option>Position 2</option>
+                                    <option>Position 3</option>
+                                    <option>etc</option>
+                                </select>
+                            </div><!-- col -->
+                        </div><!-- grid-row -->
+                    </fieldset>
+                    <div class="grid-row">
+                        <div class="col4">
+                            &nbsp;
                         </div>
-                        
-                    </fieldset -->
-
-                    <div class="controls-container">
-                        <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button>
-                            <button id="activity-next" type="button" class="btn btn-default" onclick="// location.href='confirm-soletrader-new.html'">Continue to step 4</button>
-                        </div><!-- controls-content -->
+                        <div class="controls-content col7 last">
+                            <p>
+                                <button id="save-you-auth" type="button" class="btn btn-default">Save</button> <button id="cancel-auth" type="button" class="btn cancel">Cancel</button>
+                            </p>
+                        </div>
                     </div>
-                </div><!-- sub-section-content -->
-            </div><!-- sub-section-container -->
+                </div>
+            </div>
+            <div id="altauthtable" class="compact cart-container margin-bottom-075" style="display: none">
+            </div>
+            <div id="authform" class="showhide-target col12" style="display: none">
+                <hr />
+                <fieldset class="margin-bottom-075">
+                    <legend class="margin4 larger">Contact details</legend>
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="name1" class="input-right">Given name</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="name1" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="name2" class="input-right">Family name</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="name2" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="email" class="input-right">Email</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="email" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="bushours" class="input-right">Business hours phone</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="bushours" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row custom-controls margin-bottom-1">
+                        <div class="col4">
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="col8 last">
+                            <p>
+                                <input id="cont-afterhours-cb" type="checkbox">
+                                <label for="cont-afterhours-cb">Use a different number after hours</label>
+                            </p>
+                        </div>
+                    </div --><!-- grid-row -->
+                    <div id="contact-ah-field" class="grid-row" style="display: none;">
+                        <div class="col4">
+                            <label for="afterhours" class="input-right">After hours phone</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="afterhours" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div id="contact-mobile" class="grid-row" style="display: none;">
+                        <div class="col4">
+                            <label for="mobile" class="input-right">Mobile</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="mobile" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="language" class="input-right">Preferred language <span class="field-note">(optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="language" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div id="other-pref-lang" class="grid-row" style="display: none;">
+                        <div class="col4">
+                            <label for="otherlang" class="input-right">Other preferred language <span class="field-note">(optional)</span></label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <input id="otherlang" type="text">
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                    <div class="grid-row">
+                        <div class="col4">
+                            <label for="position" class="input-right">Position held</label>
+                        </div><!-- col -->
+                        <div class="col8 last">
+                            <select id="position">
+                                <option value="">Please select...</option>
+                                <option>Position 1</option>
+                                <option>Position 2</option>
+                                <option>Position 3</option>
+                                <option>etc</option>
+                            </select>
+                        </div><!-- col -->
+                    </div><!-- grid-row -->
+                </fieldset>
+                <div class="grid-row">
+                    <div class="col4">
+                        &nbsp;
+                    </div>
+                    <div class="controls-content col7 last">
+                        <p>
+                            <button id="save-new-auth" type="button" class="btn btn-default">Save</button> <button id="cancel-new-auth" type="button" class="btn cancel">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="add-auth" class="grid-row clearfix" style="display: none">
+                <div class="custom-controls">
+                    <p><button id="auth-btn" type="button" class="btn btn-default">Add contact</button></p>
+                </div>
+            </div>
+            <div class="controls-container clearfix">
+                <div class="controls-content">
+                    <button id="contact-prev" type="button" class="btn previous">Previous</button> <button id="contact-next" type="button" class="btn btn-default next">Next</button>
+                </div><!-- controls-content -->
+            </div>
+        </div><!-- sub-section-content -->
+    </div><!-- sub-section-container -->
+                    <!-- START SECTION 5 -->
+                    <div id="section5" class="sub-section-container">
+                        <h2>Reason for application</h2>
+                        <div class="sub-section-content">
+                            <div id="validation4" class="validation-container clearfix" style="display: none;">
+                                <div class="grid-row">
+                                    <div class="validation-summary-icon">
+                                        <img src="assets/img/ico-alert-red.png" alt="Error">
+                                    </div>
+                                    <div class="validation-message">
+                                        <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+                                        <ul>
+                                            <li id="val4a">Please select a value for <a class="skip" href="#fieldsetReasonForApplication">why you need an ABN</a></li>
+                                            <li id="val4b">Please select a value for: <a class="skip" href="#firsttime-selfemployed">Is this the first time you will be self-employed?</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <fieldset id="fieldsetReasonForApplication">
+                                <legend class="larger">Australian Business Number (ABN)</legend>
+                                <p class="no-margin-top">Select <strong>one</strong> option that best describes why you need an ABN.</p>
 
-        </main>
+                                <div class="grid-row grid-row-block clearfix custom-controls">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="new-business" name="radiogroup1" class="showhide-trigger" type="radio">
+                                            <label for="new-business">
+                                                <span class="push-right">
+                                                    <strong>New business in Australia</strong><br />
+                                                    You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row padding-bottom-1 clearfix showhide-target" id="new-business-check" style="display:none">
+                                    <div class="col1">&nbsp;</div>
+                                    <div class="col11 last">
+                                        <p class="no-margin-top"><label for="australia">Is this your first time in business in Australia?</label></p>
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="australia-yes"><input id="australia-yes" type="radio" name="australia"><span>Yes</span></label>
+                                            <label class="off label-right" for="australia-no"><input id="australia-no" type="radio" name="australia"><span>No</span></label>
+                                        </div>
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio02" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio02">
+                                                <span class="push-right">
+                                                    <strong>Investment purposes</strong><br>
+                                                    For example, if you earn income as a result of an investment.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-reveal clearfix showhide-target" id="new-investment-check" style="display:none">
+                                    <div class="col1">
+                                        <p>&nbsp;</p>
+                                    </div><!-- col -->
+                                    <div class="col10">
+                                        <p class="no-margin-top"><label for="australia2">Is this your first time in business in Australia?</label></p>
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="investment-yes"><input id="investment-yes" type="radio" name="australia2"><span>Yes</span></label>
+                                            <label class="off label-right" for="investment-no"><input id="investment-no" type="radio" name="australia2"><span>No</span></label>
+                                        </div>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio03" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio03">
+                                                <span class="push-right">
+                                                    <strong>Bought existing business</strong><br>
+                                                    You have bought or taken over an existing business.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-reveal clearfix showhide-target" style="display: none;">
+                                    <div class="col1">
+                                        <p>&nbsp;</p>
+                                    </div>
+                                    <div class="col11 last">
+                                        <p>
+                                            <label for="prev-abn">What is the previous owner's ABN</label>
+                                        </p>
+                                        <p>
+                                            <input id="prev-abn" type="text">
+                                        </p>
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio04" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio04">
+                                                <span class="push-right">
+                                                    <strong>Contractor or subcontractor</strong><br>
+                                                    You are contracting or subcontracting your services.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row padding-bottom-1 clearfix showhide-target" style="display:none">
+                                    <div class="col1">&nbsp;</div>
+                                    <div class="col11 last">
+                                        <p class="no-margin-top"><label for="contractor">Is this your first time as a contractor or subcontractor?</label></p>
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="contractor-yes"><input id="contractor-yes" type="radio" name="contractor"><span>Yes</span></label>
+                                            <label class="off label-right" for="contractor-no"><input id="contractor-no" type="radio" name="contractor"><span>No</span></label>
+                                        </div>
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio05" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio05">
+                                                <span class="push-right">
+                                                    <strong>To receive payment for services</strong><br>
+                                                    You need an ABN to receive payment for services.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio06" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio06">
+                                                <span class="push-right">
+                                                    <strong>Recommended business</strong><br>
+                                                    You have recommended a business as a sole trader.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio07" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio07">
+                                                <span class="push-right">
+                                                    <strong>Change in business structure</strong><br>
+                                                    The legal structure of your business has changed. For example, from a partership to a sole trader.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+
+                                <div class="grid-row grid-row-block grid-row-last custom-controls clearfix">
+                                    <div class="col11">
+                                        <p>
+                                            <input id="radio08" class="showhide-trigger" name="radiogroup1" type="radio">
+                                            <label for="radio08">
+                                                <span class="push-right">
+                                                    <strong>Other circumstances</strong><br>
+                                                    Only select this option of none of the above apply.
+                                                </span>
+                                            </label>
+                                        </p>
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+                            </fieldset>
+
+                            <div class="grid-row padding-bottom-1 clearfix showhide-target">
+                                <div class="col12 last">
+                                    <fieldset id="firsttime-selfemployed">
+                                        <legend>Is this the first time you will be self-employed?</legend>
+                                        <div class="radio-toggle">
+                                            <label class="on label-left" for="self-yes"><input id="self-yes" type="radio" name="self-employed"><span>Yes</span></label>
+                                            <label class="off label-right" for="self-no"><input id="self-no" type="radio" name="self-employed"><span>No</span></label>
+                                        </div>
+                                    </fieldset>
+                                </div><!-- col -->
+                            </div><!-- grid-row -->
+
+                            <div class="controls-container">
+                                <div class="controls-content">
+                                    <button type="button" class="btn previous">Previous</button><button id="reason-next" type="button" class="btn btn-default next">Next</button>
+                                </div><!-- controls-content -->
+                            </div>
+                        </div><!-- sub-section-content -->
+                    </div><!-- sub-section-container -->
+                    <!-- START SECTION 6 -->
+                    <div id="section6" class="sub-section-container">
+                        <h2>Business activity details</h2>
+                        <div class="sub-section-content">
+                            <div id="validation5" class="validation-container clearfix" style="display: none;">
+                                <div class="grid-row">
+                                    <div class="validation-summary-icon">
+                                        <img src="assets/img/ico-alert-red.png" alt="Error">
+                                    </div>
+                                    <div class="validation-message">
+                                        <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+                                        <ul>
+                                            <li id="val5a">Enter a value for field <a class="skip" href="#activity-contact">Activity</a></li>
+                                            <li id="val5b">Enter a value for field  <a class="skip" href="#abn-start-date">Commencement date of activity</a></li>
+                                            <li id="val5c">Select a value for <a class="skip" href="#validation-test-field3">Will you be operating an agricultural property?</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <fieldset>
+                                <legend class="visuallyhidden">Main business activity</legend>
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="main-activity" class="input-right">
+                                            Choose your main business activity<br>
+                                            <span class="field-note">(Start typing and choose from the options presented)</span>
+                                        </label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="main-activity" type="text">
+                                        <button type="button" class="btn">search</button>
+                                    </div>
+                                </div>
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="activity-contact" class="input-right">Selected activity</label>
+                                    </div><!-- col -->
+                                    <div class="col8 last">
+                                        <input id="activity-contact" type="text">
+                                    </div><!-- col -->
+                                </div><!-- grid-row -->
+                            </fieldset>
+                            <fieldset>
+                                <legend class="margin4 larger">ABN registration</legend>
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="abn-start-date" class="input-right">Commencement date of activity</label>
+                                    </div><!-- col -->
+                                    <div class="col7">
+                                        <input id="abn-start-date" type="date" />
+                                    </div><!-- col -->
+                                    <div class="col1 last">
+                                        <a href="#"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
+                                    </div>
+                                </div><!-- grid-row -->
+                                <div id="divAbnEnddate">
+                                    <div class="grid-row">
+                                        <div class="col4">&nbsp;</div>
+                                        <div class="col8 last custom-controls">
+                                            <p>
+                                                <input id="end-date-yes" type="checkbox" class="showhide-trigger" />
+                                                <label for="end-date-yes">Business activity will cease within 3 months of start date</label>
+                                            </p>
+                                        </div><!-- col -->
+                                    </div><!-- grid-row -->
+
+                                    <div class="grid-row grid-row-reveal clearfix showhide-target" style="display:none">
+                                        <div class="col4">
+                                            <label for="end-date" class="input-right">End date of activity</label>
+                                        </div><!-- col -->
+                                        <div class="col8 last">
+                                            <input id="end-date" type="date" />
+                                        </div><!-- col -->
+                                    </div><!-- grid-row -->
+                                </div>
+                            </fieldset>
+
+                            <div class="grid-row grid-row-padding-bottom">
+                                <fieldset id="validation-test-field3" class="no-margin">
+                                    <legend class="col4 input-right"><span id="agricultural">Will you be operating an agricultural property?<img class="visuallyhidden" src="assets/img/ico-alert28.png" alt="Required field" /></span></legend>
+                                    <div class="col8 last">
+                                        <div class="col12 last">
+                                            <div class="radio-toggle">
+                                                <label class="on label-left" for="on-agricultural"><input id="on-agricultural" type="radio" name="agricultural"><span>Yes</span></label>
+                                                <label class="off label-right" for="off-agricultural"><input id="off-agricultural" type="radio" name="agricultural"><span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div><!-- grid-row -->
+
+                            <div class="controls-container">
+                                <div class="controls-content">
+                                    <button type="button" class="btn previous">Previous</button>
+                                    <button id="activity-next" type="button" class="btn btn-default" onclick="// location.href='confirm-soletrader-new.html'">Continue to step 4</button>
+                                </div><!-- controls-content -->
+                            </div>
+                        </div><!-- sub-section-content -->
+                    </div><!-- sub-section-container -->
+
+    </main>
 
     </div><!-- wrapper -->
 
@@ -1229,6 +1043,7 @@
     <div class="applicationoptions" id="applicationOptions"></div>
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
@@ -1238,704 +1053,258 @@
 
         $(document).ready(function () {
             /* Expand collapse headings config */
-            //navigationWithinPage();
             initSaveForLater();
             initApplicationOptions();
+
             // the following code is to register the slide up/down effect. this is
             // a customized jQuery plugin, the element that registered registerToggleSlide is
             // actually the scope of the effect.
 			
 			$('#individual1-given').focus();
-			
-			// Validation functions:
-			$('#next1').click(function(e) {
-				var valid = true;
-				$('#val1a').toggle($('#individual1-given').val() == "")
-				$('label[for="individual1-given"]').toggleClass('validation-inline', $('#individual1-given').val() == "");
-				$('#val1b').toggle($('#individual1-family').val() == "")
-				$('label[for="individual1-family"]').toggleClass('validation-inline', $('#individual1-family').val() == "");
-				$('#val1c').toggle($('#individual1-dob').val() == "")
-				$('label[for="individual1-dob"]').toggleClass('validation-inline', $('#individual1-dob').val() == "");
-				$('#val1d').toggle($('#tfn').val() == "")
-				$('label[for="tfn"]').toggleClass('validation-inline', $('#tfn').val() == "");
-				if ($('#individual1-given').val() == "" ||
-					$('#individual1-family').val() == "" ||
-					$('#individual1-dob').val() == "" ||
-					$('#tfn').val() == "") {
-					$('#validation1').show()
-				} else {
-					$('#validation1').hide();
-					return true;
-				}
-				var targetTop = $('#section1').offset().top;
-				$('html, body').animate({
-					scrollTop: targetTop
-				}, 400);
-				e.preventDefault();
-				return false;
+
+            // -----------------------------------------------------------------------------
+            // Additional business locations section:
+            // -----------------------------------------------------------------------------
+
+			$('#busaddr-btn').click(function (event) {
+			    // if (busaddrstate == 0) {
+			    $("#add-button-section, #add-bus-addr").hide();
+			    $("#add-addr-next").prop("disabled", true);
+			    $('#additional-bus').show('fast', function () {
+			        var targetTop = $('#busaddr4').offset().top;
+			        $('html, body').animate({
+			            scrollTop: targetTop
+			        }, 200);
+			        $('#addr4line1').focus();
+			    });
+
 			});
 
-			$('#bus-addr-next, #busaddr-btn').click(function (e) {
-				var valid = true;
+			$("#save-addr").click(function (event) {
+			    $('#additional-bus').hide();
 
-				// Main business address:
+			    var addr = $('#addr4line1').val();
+			    if ($('#addr4line2').val() != "")
+			        addr += '<br>' + $('#addr4line2').val();
+
+			    addr += '<br/>' + $('#suburb4').val() + ' ' + $('#state4').val() + ' ' + $('#postcode4').val();
+
+			    var table = $('<div class="result-row ">' +
+                '<div class="result-cell cell-icon">' +
+                '<img src="assets/img/ico-tick-green.png" alt="Success">' +
+                '</div>' +
+                '<div class="result-cell cell-detail">' +
+                '<h3>' + addr + '</h3>' +
+                '<p>Location details saved.</p></div>' +
+                '<div class="result-cell cell-action">' +
+                '<a class="edit"><span>Edit</span></a>' +
+                '<a class="remove" onclick="deleteAddr(this);"><span>Remove</span></a></div></div>');
+
+			    var targetTop = $('#busaddr4').offset().top - 20;
+			    $('#add-bus-addr').show().append(table);
+			    $('#additional-bus input, #additional-bus select').val('');
+			    table.show('fast', function () {
+			        var targetTop = $('#add-bus-addr').offset().top;
+		            $('html, body').delay(200).animate({
+		                scrollTop: targetTop
+		            }, 200);
+		            $('#addr4line1').focus();
+		        });
+
+			    $("#add-button-section, #add-bus-addr").show();
+			    $("#add-addr-next").prop("disabled", false);
+			});
+
+			$("#cancel-addr").click(function (event) {
+			    $('#additional-bus').hide("fast");
+			    $("#add-button-section, #add-bus-addr").show();
+			    $("#add-addr-next").prop("disabled", false);
+			});
+
+			var options = [
+                "Steam train excursions operation",
+                "Toy train manufacturing",
+                "Trainer - race horses",
+                "Examining council operation - assessment of overseas trained professionals",
+                "Trainer - greyhounds",
+                "Dog obedience training",
+                "Personal fitness training service",
+                "Horse training (except race horse)",
+                "Glider club operation mainly training",
+                "Driver training or driving school operation (including truck driver training)",
+                "Survival skill training",
+                "Study skill, career development and job search training",
+                "Public speaking training",
+                "Social and interpersonal skill training",
+                "Dog training for farm work"
+			];
+
+			$("#busactivity2").autocomplete({
+			    source: options,
+			    minLength: 3
+			});
+
+            // -----------------------------------------------------------------------------
+            // Authorised contacts section:
+            // -----------------------------------------------------------------------------
+
+			$('#afterhours-cb').click(function () {
+			    if ($('#afterhours-cb').is(':checked')) {
+			        $('#you-ah-field').show('fast');
+			    } else {
+			        $('#you-ah-field').hide('fast');
+			    }
+			});
+
+			$('#cont-afterhours-cb').click(function () {
+			    if ($('#cont-afterhours-cb').is(':checked')) {
+			        $('#cont-ah-field').show('fast');
+			    } else {
+			        $('#cont-ah-field').hide('fast');
+			    }
+			});
+
+			$('#you-bushours').blur(function () {
+			    if (!$(this).val().match("^04|^614")) {
+			        $('#mobile-field').show('fast'); // , function () {
+			        //    window.setTimeout(function () {
+			        //        if ($('#cont-afterhours-cb').is(':focus'))
+			        //            $('#mobile').focus();
+			        //    }, 10);
+			        //});
+			    } else {
+			         $('#mobile-field').hide('fast');
+			    }
+			});
+
+			$('#bushours').blur(function () {
+			    if (!$(this).val().match("^04|^614")) {
+			        $('#contact-mobile').show('fast');
+			    } else {
+			        $('#contact-mobile').hide('fast');
+			    }
+			});
+
+			//var firstTime = true;
+			$("#sole-trader-auth-yes, #sole-trader-auth-no").click(function () {
+			    if (this.id == "sole-trader-auth-yes") {
+			        $("#authform").hide();
+			        //if (firstTime) {
+			            $("#your-details").show("fast", function () {
+			                $("html, body").animate({
+			                    scrollTop: $("#your-details").offset().top
+			                }, 200);
+			            });
+			            firstTime = false;
+			        //} else {
+			        //    $("#your-details").show();
+			        //}
+			    } else {
+			        $("#your-details").hide();
+			        //if (firstTime) {
+			            $("#authform").show("fast", function () {
+			                $("html, body").animate({
+			                    scrollTop: $("#authform").offset().top
+			                }, 200);
+			            });
+			        //} else {
+			        //    $("#authform").show();
+			        //}
+			    }
+			    $("#contact-next").prop("disabled", true);
+			});
+			
+			$('#save-you-auth').click(function(event) {
+			
+				var table = $('<div class="result-row">' +
+                '<div class="result-cell cell-icon">' +
+                '<img src="assets/img/ico-tick-green.png" alt="Success">' +
+                '</div>' +
+                '<div class="result-cell cell-detail">' +
+                '<h3>' + $('#you-name').val() + '</h3>' +
+                '<p>Contact details saved.</p></div>' +
+                '<div class="result-cell cell-action">' +
+                '<a class="edit"><span>Edit</span></a>' +
+                '<a class="remove" onclick="deleteContact(this)"><span>Remove</span></a></div></div>');
+
 				
-				// display individual messages:
-				$('#val2a').toggle($('#addr2line1').val() == "");
-				$('label[for="addr2line1"]').toggleClass('validation-inline', $('#addr2line1').val() == "");
-				$('#val2b').toggle($('#suburb2').val() == "");
-				$('label[for="suburb2"]').toggleClass('validation-inline', $('#suburb2').val() == "");
-				$('#val2c').toggle($('#state2').val() == "");
-				$('label[for="state2"]').toggleClass('validation-inline', $('#state2').val() == "");
-				$('#val2d').toggle($('#postcode2').val() == "");
-				$('label[for="postcode2"]').toggleClass('validation-inline', $('#postcode2').val() == "");
-				$('#val2e').toggle($('#contactemail').val() == "");
-				$('label[for="contactemail"]').toggleClass('validation-inline', $('#contactemail').val() == "");
-				$('#val2f').toggle($('#contactphone').val() == "");
-				$('label[for="contactphone"]').toggleClass('validation-inline', $('#contactphone').val() == "");
-
-				if ($('#addr2line1').val() == "" ||
-					$('#suburb2').val() == "" ||
-					$('#state2').val() == "" ||
-					$('#postcode2').val() == "" ||
-					$('#contactemail').val() == "" ||
-					$('#contactphone').val() == "") {
-					valid = false;
-					$('#mainaddr-val').show();
-				} else {
-					$('#mainaddr-val').hide();
-				}
-				
-				// Postal address:
-				if ($('#postaladdr').is(':visible')) {
-
-						$('label[for="addr3line1"]').toggleClass('validation-inline', $('#addr3line1').val() == "");
-						$('label[for="suburb3"]').toggleClass('validation-inline', $('#suburb3').val() == "");
-						$('label[for="state3"]').toggleClass('validation-inline', $('#state3').val() == "");
-						$('label[for="postcode3"]').toggleClass('validation-inline', $('#postcode3').val() == "");
-				
-					if ($('#addr3line1').val() == "" ||
-						$('#suburb3').val() == "" ||
-						$('#state3').val() == "" ||
-						$('#postcode3').val() == "") {
-						valid = false;
-						// display individual messages:
-						$('#val2g').toggle($('#addr3line1').val() == "");
-						$('#val2h').toggle($('#suburb3').val() == "");
-						$('#val2i').toggle($('#state3').val() == "");
-						$('#val2j').toggle($('#postcode3').val() == "");
-						$('#postal-val').show();
-					} else {
-						$('#postal-val').hide();
-					}
-				} else {
-					$('#postal-val').hide();
-				}
-
-				// Additional business address:
-				if ($('#additional-bus').is(':visible')) {
-
-						$('label[for="addr4line1"]').toggleClass('validation-inline', $('#addr4line1').val() == "");
-						$('label[for="suburb4"]').toggleClass('validation-inline', $('#suburb4').val() == "");
-						$('label[for="state4"]').toggleClass('validation-inline', $('#state4').val() == "");
-						$('label[for="postcode4"]').toggleClass('validation-inline', $('#postcode4').val() == "");
-						$('label[for="contactemail4"]').toggleClass('validation-inline', $('#contactemail4').val() == "");
-						$('label[for="contactphone4"]').toggleClass('validation-inline', $('#contactphone4').val() == "");
-						$('label[for="contactactivity2"]').toggleClass('validation-inline', $('#contactactivity2').val() == "");
-				
-					if ($('#addr4line1').val() == "" &&
-						$('#suburb4').val() == "" &&
-						$('#state4').val() == "" &&
-						$('#postcode4').val() == "" &&
-						$('#contactemail4').val() == "" &&
-						$('#contactphone4').val() == "" &&
-						$('#contactactivity2').val() == "" &&
-						$(e.target).is('#bus-addr-next'))
-						{
-						$('label[for="addr4line1"]').toggleClass('validation-inline', false);
-						$('label[for="suburb4"]').toggleClass('validation-inline', false);
-						$('label[for="state4"]').toggleClass('validation-inline', false);
-						$('label[for="postcode4"]').toggleClass('validation-inline', false);
-						$('label[for="contactemail4"]').toggleClass('validation-inline', false);
-						$('label[for="contactphone4"]').toggleClass('validation-inline', false);
-						$('label[for="contactactivity2"]').toggleClass('validation-inline', false);
-						$('#addbus-val').hide();
-					} else if ($('#addr4line1').val() == "" ||
-						$('#suburb4').val() == "" ||
-						$('#state4').val() == "" ||
-						$('#postcode4').val() == "" ||
-						$('#contactemail4').val() == "" ||
-						$('#contactphone4').val() == "" ||
-						$('#contactactivity2').val() == "") {
-						valid = false;
-						// display individual messages:
-						$('#val2k').toggle($('#addr4line1').val() == "");
-						$('#val2l').toggle($('#suburb4').val() == "");
-						$('#val2m').toggle($('#state4').val() == "");
-						$('#val2n').toggle($('#postcode4').val() == "");
-						$('#val2o').toggle($('#contactemail4').val() == "");
-						$('#val2p').toggle($('#contactphone4').val() == "");
-						$('#val2q').toggle($('#contactactivity2').val() == "");
-						$('#addbus-val').show();
-					} else {
-						$('#addbus-val').hide();
-					}
-				} else {
-					$('#addbus-val').hide();
-				}
-				
-				if (!valid) {
-					$('#validation2').show();
-					var targetTop = $('#section2').offset().top;
-					$('html, body').animate({
-						scrollTop: targetTop
-					}, 400);
-					e.preventDefault();
-					return false;
-				} else {
-					$('#validation2').hide();
-				}
-			});
-
-			$('#contact-next, #auth-btn, #auth-btn1').click(function (e) {
-				var valid = true;
-
-				// Your contact details:
-				if ($('#you-auth').is(":visible")) {					
-					// display individual messages:
-					$('#val3a').toggle($('#you-email').val() == "");
-					$('label[for="you-email"]').toggleClass('validation-inline', $('#you-email').val() == "");
-					$('#val3b').toggle($('#you-bushours').val() == "");
-					$('label[for="you-bushours"]').toggleClass('validation-inline', $('#you-bushours').val() == "");
-					$('#val3c').toggle($('#you-position').val() == "");
-					$('label[for="you-position"]').toggleClass('validation-inline', $('#you-position').val() == "");
-
-					if ($('#you-email').val() == "" ||
-						$('#you-bushours').val() == "" ||
-						$('#you-position').val() == "") {
-						valid = false;
-						$('#you-val').show()
-					} else {
-						$('#you-val').hide();
-					}
-				} else {
-					$('#you-val').hide();
-				}
-				
-				// New contact details:
-				if ($('#authform').is(':visible')) {
-
-					// display individual messages:
-					$('#val3d').toggle($('#name1').val() == "");
-					$('label[for="name1"]').toggleClass('validation-inline', $('#name1').val() == "");
-					$('#val3e').toggle($('#name2').val() == "");
-					$('label[for="name2"]').toggleClass('validation-inline', $('#name2').val() == "");
-					$('#val3f').toggle($('#email').val() == "");
-					$('label[for="email"]').toggleClass('validation-inline', $('#email').val() == "");
-					$('#val3g').toggle($('#bushours').val() == "");
-					$('label[for="bushours"]').toggleClass('validation-inline', $('#bushours').val() == "");
-					$('#val3h').toggle($('#position').val() == "");
-					$('label[for="position"]').toggleClass('validation-inline', $('#position').val() == "");
-	
-					if ($('#name1').val() == "" &&
-						$('#name2').val() == "" &&
-						$('#email').val() == "" &&
-						$('#bushours').val() == "" &&
-						$('#position').val() == "" && 
-						$('#altauthtable').is(':visible') &&
-						$(e.target).is('#contact-next')) {
-						$('label[for="name1"]').toggleClass('validation-inline', false);
-						$('label[for="name2"]').toggleClass('validation-inline', false);
-						$('label[for="email"]').toggleClass('validation-inline', false);
-						$('label[for="bushours"]').toggleClass('validation-inline', false);
-						$('label[for="position"]').toggleClass('validation-inline', false);
-						$('#newcontact-val').hide();
-					} else if ($('#name1').val() == "" ||
-						$('#name2').val() == "" ||
-						$('#email').val() == "" ||
-						$('#bushours').val() == "" ||
-						$('#position').val() == "") {
-						$('#newcontact-val').show();
-						valid = false;
-					} else {
-						$('#newcontact-val').hide();
-					}
-				} else {
-					$('#newcontact-val').hide();
-				}
-				
-				if (!valid) {
-					$('#validation3').show();
-					var targetTop = $('#section3').offset().top;
-					$('html, body').animate({
-						scrollTop: targetTop
-					}, 400);
-					e.preventDefault();
-					return false;
-				} else {
-					$('#validation3').hide();
-				}
-			});
-			
-			$('#reason-next').click(function(e) {
-				var valid = true;
-				$('#fieldsetReasonForApplication legend+p').toggleClass('validation-inline', $('#fieldsetReasonForApplication input[type=radio]:checked').length == 0);
-				$('#firsttime-selfemployed legend').toggleClass('validation-inline', $('#firsttime-selfemployed input[type=radio]:checked').length == 0);
-				if ($('#fieldsetReasonForApplication input[type=radio]:checked').length == 0 ||
-					$('#firsttime-selfemployed input[type=radio]:checked').length == 0) {
-					$('#validation4').show()
-				} else {
-					$('#validation4').hide();
-					return true;
-				}
-				$('#val4a').toggle($('#fieldsetReasonForApplication input[type=radio]:checked').length == 0);
-				$('#val4b').toggle($('#firsttime-selfemployed input[type=radio]:checked').length == 0);
-				var targetTop = $('#section4').offset().top;
-				$('html, body').animate({
-					scrollTop: targetTop
-				}, 400);
-				e.preventDefault();
-				return false;
-			});
-
-			$('#activity-next').click(function(e) {
-				var valid = true;
-				$('label[for="activity-contact"').toggleClass('validation-inline', $('#activity-contact').val() == "");
-				$('label[for="abn-start-date"').toggleClass('validation-inline', $('#abn-start-date').val() == "");
-				$('#validation-test-field3 legend').toggleClass('validation-inline', $('#validation-test-field3 input[type=radio]:checked').length == 0);
-				if ($('#activity-contact').val() == "" ||
-					$('#abn-start-date').val() == "" ||
-					$('#validation-test-field3 input[type=radio]:checked').length == 0) {
-					$('#validation5').show()
-				} else {
-					location.href = 'confirm-soletrader-new.html';
-					return true;
-				}
-				$('#val5a').toggle($('#activity-contact').val() == "");
-				$('#val5b').toggle($('#abn-start-date').val() == "");
-				$('#val5c').toggle($('#validation-test-field3 input[type=radio]:checked').length == 0);
-				var targetTop = $('#section5').offset().top;
-				$('html, body').animate({
-					scrollTop: targetTop
-				}, 400);
-				e.preventDefault();
-				return false;
-			});
-			
-			$('#you-bushours').blur(function() {
-				if (!$(this).val().match("^04|^614")) {
-					$('#mobile-field').show('fast', function() {
-						window.setTimeout(function() {
-							if ($('#afterhours-cb').is(':focus'))
-								$('#you-mobile').focus();
-						}, 10);
-					});
-				} else {
-					window.setTimeout(function() {
-						if ($('#you-mobile').is(':focus'))
-							$('#afterhours-cb').focus();
-						$('#mobile-field').hide('fast');
-					}, 10);
-				}
-			});
-			
-			$('#afterhours-cb').click(function() {
-				if ($('#afterhours-cb').is(':checked')) {
-					$('#you-ah-field').show('fast');
-				} else {
-					$('#you-ah-field').hide('fast');
-				}
-			});
-			
-			$('#bushours').blur(function() {
-				if (!$(this).val().match("^04|^614")) {
-					$('#contact-mobile').show('fast', function() {
-						window.setTimeout(function() {
-							if ($('#cont-afterhours-cb').is(':focus'))
-								$('#mobile').focus();
-						}, 10);
-					});
-				} else {
-					window.setTimeout(function() {
-						if ($('#mobile').is(':focus'))
-							$('#cont-afterhours-cb').focus();
-						$('#mobile').hide('fast');
-					}, 10);
-				}
-			});
-			
-			$('#cont-afterhours-cb').click(function() {
-				if ($('#cont-afterhours-cb').is(':checked')) {
-					$('#contact-ah-field').show('fast');
-				} else {
-					$('#you-ah-field').hide('fast');
-				}
-			});
-
-			$('#you-language').blur(function() {
-				if ($(this).val() != "") {
-					$('#you-otherlang-field').show('fast', function() {
-						window.setTimeout(function() {
-							if ($('#you-position').is(':focus'))
-								$('#you-otherlang').focus();
-						}, 10);
-					});
-				}
-			});
-
-			$('#language').blur(function() {
-				if ($(this).val() != "") {
-					$('#other-pref-lang').show('fast', function() {
-						window.setTimeout(function() {
-							if ($('#position').is(':focus'))
-								$('#otherlang').focus();
-						}, 10);
-					});
-				}
-			});
-			
-			function authEvent() {
-				if ($('#auth').prop('checked')) {
-					$('#you-name').val($('#individual1-given').val() + ' ' + $('#individual1-family').val());
-					$('#you-auth').show();
-					$('#add-auth2').hide();
-					authstate = 0;
-				} else {
-					$('#you-auth').hide();
-					$('#authform').show();
-					$('#add-auth2').show();
-					authstate = 1;
-				}
-			}
-			
-			$('#individual1-given').blur(authEvent);
-			$('#individual1-family').blur(authEvent);
-			$('#auth').click(authEvent);
-			
-			$('#auth-btn1').click(function(event) {
-			
-				if (event.isDefaultPrevented())
-					return;
-
-				var table = '<table style="position: relative; display: none;"><tbody>';
-
-				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger"><strong>' + $('#you-name').val() + '</strong>';
-				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-
-				if ($('#you-mobile').val())
-					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#you-mobile').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-bushours').val() + '</td></tr>';
-
-				if ($('#you-afterhours').val())
-					table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#you-afterhours').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#you-email').val() + '</td></tr>';
-				
-				if ($('#you-language').val())
-					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-language').val() + '</td></tr>';
-
-				if ($('#you-otherlang').val())
-					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-otherlang').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-position').val() + '</td></tr>';
-				table += "</tbody></table>";
-				
-				table = $(table);
-				$('#you-auth').hide('fast', function() {
+				// table = $(table);
+				$('#yes-no-auth, #your-details').hide('fast', function() {
 					$('#altauthtable').show().append(table);
 					table.show('fast', function() {
-						$('#authform').show('fast', function() {
-							$('#add-auth2').show();
-							var targetTop = $(this).offset().top;
-							$('html, body').animate({
-								scrollTop: targetTop
-							}, 400);
-							$('#name1').focus();
-						})
+						$('#add-auth').show();
+						$("#contact-next").prop("disabled", false);
 					});
 				});
-				
-				$('#auth-btn').html("Add another contact");
-				authstate = 1;
+
 			});
+
+            $("#auth-btn").click(function() {
+                $("#authform").show("fast", function() {
+                    $("html, body").animate({
+                        scrollTop: $("#authform").offset().top
+                    }, 200);
+                });
+                $("#add-auth").hide();
+                $("#contact-next").prop("disabled", true);
+                $("#altauthtable").hide();
+            });
 			
-			$('#auth-btn').click(function(event) {
+			$('#save-new-auth').click(function(event) {
 			
 				if (event.isDefaultPrevented())
 					return;
 
-			/*
-				switch(authstate) {
-					case 0:
-						$('#authform').show();
-						authstate = 1;
-						break;
-					case 1:
-						$('#authform input').val('');
-						$('#authtable').show();
-						$('#authtablebody').append("<tr><td>123456</td><td>Justin Johnson</td><td>&nbsp;</td><td>Accountant</td><td>m: 0455 555 555<br>bh: 6100 0000<br>ah: 6199 9999</td>"
-									+ "<td>jjohnson@accountant.com</td>" 
-									+ '<td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>'
-									+ "</tr>");
-						break;
-				
-				} */
-				if (authstate == 0) {
-					$('#authform').show('fast', function() {
-						var targetTop = $(this).offset().top;
-						$('html, body').animate({
-							scrollTop: targetTop
-						}, 400);
-						$('#name1').focus();
-					});
+			    var table = $('<div class="result-row ">' +
+			        '<div class="result-cell cell-icon">' +
+			        '<img src="assets/img/ico-tick-green.png" alt="Success">' +
+			        '</div>' +
+			        '<div class="result-cell cell-detail">' +
+			        '<h3>' + $('#name1').val() + " " + $('#name2').val() + '</h3>' +
+			        '<p>Contact details saved.</p></div>' +
+			        '<div class="result-cell cell-action">' +
+			        '<a class="edit"><span>Edit</span></a>' +
+			        '<a class="remove" onclick="deleteContact(this)"><span>Remove</span></a></div></div>');
 
-					authstate = 1;
-					return;
-				}
-
-				var table = '<table style="position: relative; display: none;"><tbody>';
-
-				table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger">';
-				table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-
-				if ($('#mobile').val())
-					table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#bushours').val() + '</td></tr>';
-
-				if ($('#afterhours').val())
-					table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#afterhours').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#email').val() + '</td></tr>';
-				
-				if ($('#language').val())
-					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
-
-				if ($('#otherlang').val())
-					table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#otherlang').val() + '</td></tr>';
-
-				table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#position').val() + '</td></tr>';
-				table += "</tbody></table>";
-				
-				table = $(table);
-				//$('#altauthtable').show().append(table);
-				//table.toggle('fast');
-				//$('#authform input').val('');
-
-				var targetTop = $('#authform').offset().top - 20;
+				// var targetTop = $('#authform').offset().top - 20;
 				$('#altauthtable').show().append(table);
-				$("html, body").animate({
-					scrollTop: targetTop
-					}, 400, null, function() {
-						$('#authform input, #authform select').val('');
-						table.show('fast', function() {
-							var targetTop = $('#authform').offset().top;
-							$('html, body').delay(400).animate({
-								scrollTop: targetTop
-							}, 400);
-							$('#name1').focus();
-						});
-				});
-			});
-
-			$('#contact-nextzz').click(function() {
-			
-				// currently disabled - don't automatically add to table...
-				if ($('#you-auth').is(':visible')) {
-					if ($('#you-position').val() == "")
-						return;
-
-					var table = '<table style="position: relative;"><tbody>';
-
-					table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger"><strong>' + $('#you-name').val() + '</strong>';
-					table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-
-					if ($('#you-mobile').val())
-						table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#you-mobile').val() + '</td></tr>';
-
-					table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-bushours').val() + '</td></tr>';
-
-					if ($('#you-afterhours').val())
-						table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#you-afterhours').val() + '</td></tr>';
-
-					table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#you-email').val() + '</td></tr>';
-					
-					if ($('#you-language').val())
-						table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-language').val() + '</td></tr>';
-
-					if ($('#you-otherlang').val())
-						table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#you-otherlang').val() + '</td></tr>';
-
-					table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#you-position').val() + '</td></tr>';
-					table += "</tbody></table>";
-					
-					$('#altauthtable').show().append(table);
-					$('#you-auth').hide();
-					
-					authstate = 0;
-				}
-				
-				if ($('#authform').is(':visible')) {
-					if ($('#name1').val() != "") {
-						var table = '<table style="position: relative;"><tbody>';
-
-						table += '<tr><th class="field-name right middle">Name</th><td class="input-value middle larger">';
-						table += '<strong>' + $('#name1').val() + " " + $('#name2').val() + '</strong><span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-
-						if ($('#mobile').val())
-							table += '<tr><th class="field-name right">Mobile</th><td class="input-value">' + $('#mobile').val() + '</td></tr>';
-
-						table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#bushours').val() + '</td></tr>';
-
-						if ($('#afterhours').val())
-							table += '<tr><th class="field-name right">After hours phone</th><td class="input-value">' + $('#afterhours').val() + '</td></tr>';
-
-						table += '<tr><th class="field-name right">Email</th><td class="input-value">' + $('#email').val() + '</td></tr>';
-						
-						if ($('#language').val())
-							table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#language').val() + '</td></tr>';
-
-						if ($('#otherlang').val())
-							table += '<tr><th class="field-name right">Language</th><td class="input-value">' + $('#otherlang').val() + '</td></tr>';
-
-						table += '<tr><th class="field-name right">Business hours phone</th><td class="input-value">' + $('#position').val() + '</td></tr>';
-						table += "</tbody></table>";
-						
-						$('#altauthtable').show().append(table);
-						$('#authform input, #authform select').val('');
-						$('#authform').hide();
-					} else if ($('#altauthtable').is(':visible'))
-						$('#authform').hide();
-					
-					authstate = 0;
-				}
-			});
-			
-			$('#contact-prev').click(function() {
-				$('#validation3').hide();
-			});
-			
-			var busaddrstate = 0;
-			
-			$('#busaddr-btn').click(function(event) {
-				if (event.isDefaultPrevented())
-					return;
-				if (busaddrstate == 0) {
-					$('#additional-bus').show('fast', function() {
-						var targetTop = $('#busaddr4').offset().top;
-						$('html, body').animate({
-							scrollTop: targetTop
-						}, 400);
-						$('#addr4line1').focus();
+				$('#authform input, #authform select').val('');
+				$("#authform").hide("fast", function() {
+				    table.show('fast', function () {
+				        $("#yes-no-auth").hide();
+					    $("#authform").hide();
+					    $("#add-auth").show();
+					    $("#contact-next").prop("disabled", false);
 					});
-
-					busaddrstate = 1;
-					return;
-				}
-
-				var table = '<table style="position: relative; display: none;"><tbody>';
-
-				table += '<tr><th class="field-name right">Address</th><td class="input-value">' + $('#addr4line1').val();
-				if ($('#addr4line2').val() != "")
-					table += '<br>' + $('#addr4line2').val();
-
-				table += '<br>' + $('#suburb4').val() + ' ' + $('#state4').val() + ' ' + $('#postcode4').val();
-				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-				table += '<tr><th class="field-name right">Country</th><td class="input-value">' + $('#country4').val() + '</td></tr>';
-
-				if ($('#contactphone4').val())
-					table += '<tr><th class="field-name right">Contact phone</th><td class="input-value">' + $('#contactphone4').val() + '</td></tr>';
-
-				if ($('#contactemail4').val())
-					table += '<tr><th class="field-name right">Contact email</th><td class="input-value">' + $('#contactemail4').val() + '</td></tr>';
-				
-				table += '<tr><th class="field-name right">Main business activity</th><td class="input-value">' + $('#contactactivity2').val() + '</td></tr>';
-				
-				table += "</tbody></table>";
-				
-				table = $(table);
-				var targetTop = $('#busaddr4').offset().top - 20;
-				$('#add-bus-addr').show().append(table);
-				$("html, body").animate({
-					scrollTop: targetTop
-					}, 400, null, function() {
-						$('#additional-bus input, #additional-bus select').val('');
-						table.show('fast', function() {
-							var targetTop = $('#additional-bus').offset().top;
-							$('html, body').delay(400).animate({
-								scrollTop: targetTop
-							}, 400);
-							$('#addr4line1').focus();
-						});
 				});
 			});
-			
-			$('#bus-addr-nextZZ').click(function(event) {
-			
-				// currently disabled - don't automatically add to table...
-			
-				if (event.isDefaultPrevented())
-					return;
-			
-				$('#additional-bus').hide();
-				busaddrstate = 0;
-				
-				if ($('#addr4line1').val() == "")
-					return;
-				
-				var table = '<table style="position: relative;"><tbody>';
 
-				table += '<tr><th class="field-name right">Address</th><td class="input-value">' + $('#addr4line1').val();
-				if ($('#addr4line2').val() != "")
-					table += '<br>' + $('#addr4line2').val();
-
-				table += '<br>' + $('#suburb4').val() + ' ' + $('#state4').val() + ' ' + $('#postcode4').val();
-				table += '<span style="position: absolute; right: 0; top: 10px;"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></span></td></tr>';
-				table += '<tr><th class="field-name right">Country</th><td class="input-value">' + $('#country4').val() + '</td></tr>';
-
-				if ($('#contactphone4').val())
-					table += '<tr><th class="field-name right">Contact phone</th><td class="input-value">' + $('#contactphone4').val() + '</td></tr>';
-
-				if ($('#contactemail4').val())
-					table += '<tr><th class="field-name right">Contact email</th><td class="input-value">' + $('#contactemail4').val() + '</td></tr>';
-				
-				table += '<tr><th class="field-name right">Main business activity</th><td class="input-value">' + $('#contactactivity2').val() + '</td></tr>';
-				
-				table += "</tbody></table>";
-				
-				$('#add-bus-addr').show().append(table);
-				$('#additional-bus input, #additional-bus select').val('');
-				
+			$('#cancel-new-auth, #cancel-auth').click(function (event) {
+			    $("#authform").hide("fast");
+			    $("#your-details").hide("fast");
+			    $("#contact-next").prop("disabled", false);
+			    if ($("#altauthtable .result-row").size() > 0) {
+			        $("#altauthtable").show();
+			        $("#add-auth").show();
+			    } else {
+			        $("#altauthtable").hide();
+			        $("#yes-no-auth input").prop("checked", false);
+			        $("#yes-no-auth").show();
+			    }
 			});
-			
-			$('#bus-addr-prev').click(function() {
-				$('#validation2').hide();
-			});
-			
+
 			$('#diffbusaddr').click(function() {
 				$('#busaddr').toggle('fast'); //, $('#diffbusaddr').prop('checked'));
 			});
-			$('#diffpostaladdr').click(function() {
+
+			$('#diffpostaladdr').click(function () {
 				$('#postaladdr').toggle('fast'); // $('#diffpostaladdr').prop('checked'), 'fast');
 			});
-			
-//            $("#basic-toggle").registerToggleSlide({
-//                triggerClass: ".showhide-trigger",
-//                targetClass: ".showhide-target",
-//                clearOthers: false
-//            });
 
             $("#fieldsetReasonForApplication").registerToggleSlide({
                 triggerClass: ".showhide-trigger",
                 targetClass: ".showhide-target",
                 clearOthers: true
-            });
-
-            $("#divContact").registerToggleSlide({
-                triggerClass: ".showhide-trigger",
-                targetClass: ".showhide-target",
-                clearOthers: false
             });
 
             $("#divAbnEnddate").registerToggleSlide({
@@ -1968,7 +1337,7 @@
                 toggleSlideSameElement: true
             });
 			
-			navigationWithinPage();
+            navigationWithinPage();
 
         });
 
@@ -1991,6 +1360,28 @@
             /* css class for the open state */
             openClass: "open"
         });
+
+        function deleteAddr(elt) {
+            $(elt).closest(".result-row").hide("fast", function() {
+                $(this).remove();
+                if ($("#add-bus-addr .result-row").size() === 0) {
+                    $("#add-bus-addr").hide();
+                }
+            });
+        }
+
+        function deleteContact(elt) {
+            $(elt).closest(".result-row").hide("fast", function() {
+                $(this).remove();
+                if ($("#altauthtable .result-row").size() === 0) {
+                    $("#altauthtable").hide();
+                    $("#yes-no-auth input").prop("checked", false);
+                    $("#yes-no-auth").show();
+                    $("#add-auth").hide();
+                }
+            });
+        }
+
     </script>
 </body>
 </html>
