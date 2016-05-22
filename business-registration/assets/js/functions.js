@@ -202,7 +202,7 @@ function navigationWithinPage() {
 							var targetTop = $(this).prev().offset().top;
 							$('html, body').animate({
 								scrollTop: targetTop
-							}, 500);
+							}, 100);
 						}); 
  //                   }, 100); // add class for your need.;
                 });
@@ -224,7 +224,7 @@ function navigationWithinPage() {
 						var targetTop = $(this).prev().offset().top;
 						$('html, body').animate({
 							scrollTop: targetTop
-						}, 500);
+						}, 100);
 					});
                 });
             }
