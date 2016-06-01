@@ -76,7 +76,7 @@ function initHelp() {
     var help = new jQueryCollapse($("#help").find(".showhide"), {
         open: function () {
             this.slideDown(150);
-            $("#helpTopic").focus();
+            // $("#helpTopic").focus();
         },
         close: function () {
             this.slideUp(150);
@@ -93,6 +93,7 @@ function initHelp() {
     $('.cd-btn').on('click', function (event) {
         var index = $("a.cd-btn").index(this);
         help.open(index);
+		$("#helpfile h3 a").eq(index).focus();
         event.preventDefault();
         $("#help").find('.cd-panel').addClass('is-visible');
         $('#settings').toggle();

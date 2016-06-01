@@ -148,13 +148,15 @@ function loadQuestionHelp(applicationStep, callback) {
                     var heading = $('#helpFile h3')[index];
                     event.preventDefault();
                     $('.cd-panel').addClass('is-visible');
-                    $('#settings').toggle(function () {
+//                    $('#settings').toggle(function () {
                     	// move open topic to top:
 	                    $('.cd-panel-content').animate({
 	                    	scrollTop: heading.offsetTop
-	                    }, 200);
+	                    }, 200, function() {
+							$(heading).find('a').focus();
+						});
 	                });
-                });
+//                });
             }, 10);
 			$('#next').prop('disabled', false);
 			$('#previous').prop('disabled', false);
@@ -1234,7 +1236,7 @@ function getResult(registrationName, id, isSelected, reason, cost, helpId) {
     if (!isSelected) {
         result += " results-alert-message";
     }
-    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn"><img src="../assets/img/ico-help-form.png" alt="" /></a></span></td></tr>';
+    result += '">' + cost + '</td>  <td class="help"><span class="form-help"><a href="#help-structure" id="' + helpId + '" class="cd-btn help"><span>help</span></a></span></td></tr>';
     if (!isSelected) {
         result += '<tr><td class="results-alert-message" colspan="2"><span class="smaller">' + reason + '</span></td></tr>';
     }
