@@ -205,32 +205,27 @@ select[disabled]:active {
   }
 }
 
-input:hover,
-input:focus,
-input:active,
-textarea:hover,
-textarea:focus,
-textarea:active,
-select:hover,
-select:focus,
-select:active {
-  background-color: $input-focus;
-  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+input, textarea, select {
+
+	&:hover, &:focus, &:active {
+		-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	&:focus, &:active {
+		background-color: $input-focus;
+	}
+	
+	&[disabled] {
+	
+		&:hover, &:focus, &:active {
+			background-color: $bg-disabled;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
 }
-input[disabled]:hover,
-input[disabled]:focus,
-input[disabled]:active,
-textarea[disabled]:hover,
-textarea[disabled]:focus,
-textarea[disabled]:active,
-select[disabled]:hover,
-select[disabled]:focus,
-select[disabled]:active {
-  background-color: $bg-disabled;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
+
 /* Prevent square behind circle */
 input[type=radio]:hover,
 input[type=radio]:focus,
@@ -240,7 +235,7 @@ input[type=radio]:active {
 }
 input, select, textarea {
   font-family: $font-light;
-  line-height: 1;
+  line-height: 1.5;
   padding: 0.35em 0.25em;
 }
 input[type=text],
@@ -278,8 +273,8 @@ input[type=radio] {
   line-height: 34px; 
   border-radius: 6px;
   -webkit-border-radius: 6px;
-//  width: 34px;
-//  height: 34px;
+  width: 34px;
+  height: 34px;
   vertical-align: middle;
   margin: 0.4em 0.25em 0.4em 0;
 }
@@ -448,14 +443,34 @@ input[type=file] {
     }
 }
 
+// --------------- JQuery UI autocomplete options box styles
+// ------------------------------------------------------------------------------------------------------
+
+.ui-autocomplete {
+    background: #fff79b;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), -2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ui-state-hover, ul li.ui-state-focus, .ui-state-active
+{
+    background: #3179b5 !important;
+    color: #fff !important;
+    border: 1px solid #3179b5 !important;
+    font-weight: normal !important;
+}
+
 
 // OLD --------------- Image replacement styling for radios and checkboxes
 // ------------------------------------------------------------------------------------------------------
 
 .radios input[type="radio"], 
 .checkboxes input[type="checkbox"] { 
-    position: absolute; 
-    left: -999em; 
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+	left: -9999px;
 }
 .radios label {
   /*padding: 0.25em 0 0.25em 50px;*/
@@ -506,15 +521,15 @@ input[type=file] {
 		border-radius:4px;
 		padding: 0;
 		border: 1px solid #D0D0D0;
-		overflow:auto;       
+		overflow: visible;       
 
-		&.label-left {
+		&.label-left, &.label-left span {
 		  -webkit-border-radius: 4px 0 0 4px;
 		  border-radius: 4px 0 0 4px;
 		  border-right: 0;
 		}
 		
-		&.label-right {
+		&.label-right, &.label-right span {
 			-webkit-border-radius: 0 4px 4px 0;
 			border-radius: 0 4px 4px 0;
 		}
@@ -537,11 +552,23 @@ input[type=file] {
 		}
 		
 		input {
-			position:absolute;
-			left: -900px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+	        left: -9999px;
 		}
 	}
-		
+	
+	input:focus + span {
+		background-color: $input-focus;
+		-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+		padding: 9px 0;
+		border: 1px solid $input-outline;
+	}
+	
 	input:checked + span {
 		-webkit-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
 		-moz-box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
@@ -550,6 +577,17 @@ input[type=file] {
 		color: #FFFFFF;
 		border-color: #2366a1;
 	}
+	
+	input:checked:focus + span {
+		background-color: $button-bg-hover;
+		-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	}
+	
+	input + span:hover {
+		-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	}
 }
 
 /* Adding dollar symbol to input field */
@@ -557,6 +595,19 @@ input[type=file] {
   background: transparent url(../img/ico-dollar.png) no-repeat 0 50%;
   padding-left: 45px;
   width: 100%;
+}
+.input-percent {
+  background: transparent url(../img/ico-percent.png) no-repeat 100% 50%;
+  padding-right: 30px;
+  text-align: right;
+  width: 35px !important;
+}
+/* jquery slider used for inputting percentages */
+.input-percent + div.slider {
+    display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	margin-left:20px;
 }
 
 
@@ -568,6 +619,7 @@ input[type=file] {
 	p {
 		/* ensure hidden elements stay with label */
 		position: relative;
+		margin-bottom: 0.5em;
 
 		/* Hiding originals */
 		> input[type="checkbox"],
@@ -580,63 +632,84 @@ input[type=file] {
 			position: absolute;
 			left: 0;
 			opacity: 0;
+			
+			~ label {
+			  display: inline-block;
+			  //line-height: 38px;
+		      color: $gray-dark;
+		      padding: 9px 5px 9px 55px;
+			  min-height: 27px;
+		      -moz-transition: color 1s ease; 
+		      -o-transition: color 1s ease; 
+		      -webkit-transition: color 1s ease; 
+		      transition: color 1s ease; 			
+			}
 
             &:hover ~ label, &:focus ~ label,
             ~ label:hover, ~ label:focus {
                 color: #000;
+				cursor: pointer;
             }
 
 			/* set background sprite */
-			~ label {
+			~ label:before {
+			  position: absolute;
+			  top: 3px;
+			  left: 3px;
+			  content: '';
 			  background: url(../img/sprite-custom-controls.png) 0 0 no-repeat;
-			  height: 34px;
-		      line-height: 38px; 
-		      color: $gray-dark; 
-		      padding: 5px 0 14px 48px;
-		      -moz-transition: color 1s ease; 
-		      -o-transition: color 1s ease; 
-		      -webkit-transition: color 1s ease; 
-		      transition: color 1s ease; 
+			  width: 40px;
+			  height: 40px;
+			  cursor: pointer;
 			}
+			
+			&:checked ~ label {
+			  //font-weight: bold;
+			  color: #000;
+		    }
 		}
 
 		/* checkbox styles */
 		> input[type=checkbox] {
 		
 			/* Hover & Focus styles */
-			&:hover ~ label, &:focus ~ label, ~ label:hover { 
+			&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before { 
 			  background-position: 0 -48px;
+			}
+			
+			&:focus ~ label, & ~ label:focus {
+				outline: 1px solid $input-outline;
 			}
 
 			/* Checked styles */
 			&:checked {
 
-				~ label { 
+				~ label:before { 
 				  background-position: 0 -192px; 
 				}
 
-				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
+				&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:focus:before { 
 				  background-position: 0 -240px; 
 				}
 			}
 
 			/* Active styles */
-			&:active ~ label, ~ label:hover:active { 
+			&:active ~ label:before, ~ label:hover:active:before { 
 			  background-position: 0 -96px; 
 			}
 						
-			&:active:checked ~ label, &:checked ~ label:hover:active {
+			&:active:checked ~ label:before, &:checked ~ label:hover:active:before {
 			  background-position: 0 -288px;
 			}
 
 			/* Disabled styles */
 			&:disabled {
-				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
+				~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before { 
 				  background-position: 0 -145px; 
 				}
 
 				&:checked {
-					~ label, ~ label:hover, ~ label:hover:active, &:hover ~ label, &:focus ~ label { 
+					~ label:before, ~ label:hover:before, ~ label:hover:active:before, &:hover ~ label:before, &:focus ~ label:before { 
 					  background-position: 0 -336px; 
 					}
 				}
@@ -645,43 +718,47 @@ input[type=file] {
 
 		/* radio button styles */
 		> input[type=radio] {
-			~ label { 
-			  background-position: 0 -386px;
+			~ label:before { 
+			  background-position: 0 -384px;
 			}
 
 			/* Hover & Focus styles */
-			&:hover ~ label, &:focus ~ label, ~ label:hover { 
-			  background-position: 0 -434px; 
+			&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:focus:before { 
+			  background-position: 0 -432px; 
+			}
+			
+			&:focus ~ label, & ~ label:focus {
+				outline: 1px solid $input-outline;
+			}
+
+			/* Active styles */
+			&:active ~ label:before, ~ label:active:before { 
+			  background-position: 0 -480px;
 			}
 
 			/* Checked styles */
 			&:checked {
-				~ label { 
-				  background-position: 0 -577px;
+				~ label:before { 
+				  background-position: 0 -576px;
 				}
 
-				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
-				  background-position: 0 -625px; 
+				&:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:focus:before { 
+				  background-position: 0 -624px; 
 				}
 
-			}
-
-			/* Active styles */
-			&:active ~ label, ~ label:hover:active { 
-			  background-position: 0 -482px;
-			}
-			&:active:checked ~ label, &:checked ~ label:hover:active { 
-			  background-position: 0 -673px; 
+				&:active ~ label:before, & ~ label:active:before { 
+				  background-position: 0 -672px; 
+				}
 			}
 
 			/* Disabled styles */
 			&:disabled {
-				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active {
-				  background-position: 0 -528px; 
+				~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before {
+				  background-position: 0 -527px; 
 				}
 				&:checked {
-					~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
-				      background-position: 0 -719px; 
+					~ label:before, &:hover ~ label:before, &:focus ~ label:before, ~ label:hover:before, ~ label:hover:active:before { 
+				      background-position: 0 -718px; 
 				    }
 			    }
 			}

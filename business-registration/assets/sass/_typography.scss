@@ -117,6 +117,16 @@ h3.line {
 }
 
 
+// Capitalisation / uppercase
+// ------------------------------------------------------------------------------------------------------
+
+.uppercase {
+    text-transform: uppercase
+}
+.capitalize, .capitalise {
+    text-transform: capitalize
+}
+
 
 // Tables
 // ------------------------------------------------------------------------------------------------------
@@ -176,7 +186,7 @@ td.warning {
 }
 
 
-/* Confirmation screen table */
+/* Confirmation screen compact table */
 main.confirmation, .compact {
 
 	caption {

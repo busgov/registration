@@ -281,14 +281,6 @@ ul.section-nav-4 li {
 }
 
 
-/* use push right when content beside radio or checkbox needs to wrap */
-.push-right {
-  margin: 0 0 0 5px; 
-  padding: 0; 
-  display: inline-block; 
-  line-height: 1.4em; 
-  vertical-align: top;
-}
 .microcopy {
   color: $gray-dark;
   line-height: 1;
@@ -947,6 +939,63 @@ button.closeSystemMessage {
 	}
 }
 
+/* help-icon styles with hover state */
+a.help {
+	background-image: url(../img/sprite-help.png);
+	background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+	background-size: 30px;
+    padding: 0 0 0 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: left;
+    margin: -7px 0.5em 0 5px;
+    vertical-align: middle;
+	border: 2px solid transparent;
+
+    &:focus, &:hover {
+        background-position: 0 100%;
+    }
+
+    &:focus {
+	    outline: 1px solid $input-outline;
+    }
+
+    span {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    // full size, and at right if in last col on its own:
+    .col1.last &, .col2.last &, .has-help & {
+        position:absolute;
+	    right: 0;
+	    margin-top: 0;
+	    background-size: 34px;
+	    height: 34px;
+	    padding: 0 0 0 34px;
+    }
+
+    .col1.last &, .col2.last & {
+        margin-top: 10px;
+    }
+
+    // full size icon in table cell
+    td.help & {
+        height: 34px;
+        background-size: 34px;
+        padding-left: 34px;
+        margin-top: 2px;
+    }
+}
+
 /* help button in table and registration tip block */
 td.help a.cd-btn:hover,
 .registration-tip ul li a.cd-btn:hover,
@@ -1092,9 +1141,6 @@ nav {
 	}
 }
 
-// Validation
-// ------------------------------------------------------------------------------------------------------
-
 /* Allow space for help icon when it is required beside legend */
 
 .has-help {
@@ -1105,31 +1151,6 @@ img.help-icon {
   float: right;
 }
 
-/* allow for inline icon for registration tips */
-.registration-tip {
-
-	ul li a.cd-btn {
-		margin-left: .2em;
-	}
-
-	ul li img.help-icon,
-	img.help-icon.inline {
-		position:relative;
-		right: auto;
-		vertical-align: middle;
-	}
-
-	img.inline {
-		margin-left: .2em;
-		cursor: pointer;
-	}
-}
-
-/* postion at top when wrapped in paragraph */
-p img.help-icon {
-    top: 0;
-}
-
 @media only screen and (min-width: $break-medium) {
   img.help-icon {
     position: absolute;
@@ -1137,6 +1158,9 @@ p img.help-icon {
     right: 0;
   }
 }
+
+// Validation
+// ------------------------------------------------------------------------------------------------------
 
 .validation-container {
 	background-color: $gray-bg;
