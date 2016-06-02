@@ -87,6 +87,7 @@ body {
 		display: table;
 		border-collapse: separate;
 		border-spacing: 1.5em;
+		margin-bottom: 1em;
 		
 		@media only screen and (max-width: $break-large) {
 			border-spacing: 1em;
