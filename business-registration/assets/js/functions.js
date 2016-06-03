@@ -1,6 +1,17 @@
 jQuery(document).ready(function ($) {
     //console.log("in");
     CloseSystemMessage();
+	
+	// temporary system warning message - session cookie code
+	$("header").after(html);
+	$("#dismiss-system-message").click(function() {
+		$("#system-message").slideUp(200);
+		document.cookie="testMessageVisible=hide";
+	});
+
+	if (getCookie("testMessageVisible") != "hide") {
+		$("#system-message").show();
+	}	
 });
 
 function CloseSystemMessage() {
@@ -234,6 +245,30 @@ function navigationWithinPage() {
 
     })
 }
+
+/* test system warning message - session cookie */
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+var html = '<div id="system-message" class="system-message clearfix" style="margin-top: 0; display: none">'
+		 + '<div class="system-message-content">'
+		 + '<h1>Prototype system</h1>'
+		 + '<p>You currently viewing an instance of the SOBRS web site that has been activated for usability testing. This is not a production system, and any activities carried out in this environment will not result in any live application lodgements.</p>'
+		 + '<p>For more information about when the new web site will be available, see <a href="http://business.gov.au">business.gov.au</a>.'
+		 + '</p></div>'
+		 + '<button id="dismiss-system-message" class="closeSystemMessage" type="button">Dismiss</button>'
+		 + '</div><div>'
+		 + '<p style="float: right; padding: 2px 10px; margin-top: -17px; margin-right: 10px; color: #FFF; background-color: #3179b5; font-size: 0.8em; border-radius: 10px"><strong>PROTOTYPE</strong></p>'
+		 + '</div>';
+
 
 
 /*
