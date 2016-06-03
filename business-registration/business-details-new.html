@@ -1194,7 +1194,7 @@
 	<div id="modal-message" style="display: none;">
 		<h1>Proof of Identity</h3>
 		<div class="content">
-			<p>If you don't provide a Tax File Number then it may take up to 28 days for the ATO to complete your application as they will need to verify your details another way.</p>
+			<p><strong>Please note:</strong> Not providing your Tax File Number (TFN) can delay your application by up to 28 days, while your identity is checked manually.</p>
 			<button id="tfn-cancel" class="btn btn-default">Go back</button><button class="btn" id="tfn-continue">Continue anyway</button>
 		</div>
 	</div>
@@ -1548,13 +1548,13 @@
 				$("#next2").click();
 			});
 			
-			$("#tfn").blur(function() {
-				if (this.value == "") {
-					$("p.warning").show();
-				} else {
-					$("p.warning").hide();
-				}
-			});
+			// $("#tfn").blur(function() {
+			//	if (this.value == "") {
+			//		$("p.warning").show();
+			//	} else {
+			//		$("p.warning").hide();
+			//	}
+			// });
 
         });
 
