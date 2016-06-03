@@ -9,6 +9,63 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
+	<style>
+		#modal-message {
+			border: none;
+		}
+		
+		#modal-message h1 {
+			margin: 0;
+			padding: 10px;
+			background-color: #367ab3;
+			color: #fff;
+		}
+		
+		#modal-message .content {
+			padding: 5px 30px 20px;
+		}
+		
+		#modal-message .content p {
+			margin-bottom: 25px;
+			text-align: left;
+		}
+		
+		#modal-message .btn {
+			padding: .5em;
+			margin-right: .5em;
+		}
+		
+		.vadialog {
+			padding: 0;
+			width: 400px;
+			border-radius: 10px;
+		}
+
+		@media only screen and (max-width: 480px) {
+			.vadialog {
+				width: 100%;
+				border-radius: 0;
+			}
+		}
+		
+		.vaCloseButton {
+		    right: 0px;
+			top: 5px;
+			background: transparent;
+		}
+		
+		p.warning {
+			color: #c00;
+			font-weight: bold;
+		}
+		
+		p.warning:before {
+			content: "*";
+			position: absolute;
+			margin-left: -15px;
+		}
+		
+	</style>
 </head>
 <body>
     <div class="wrapper wrapper-main">
@@ -118,15 +175,24 @@
                             <div class="col4">
                                 <label for="tfn" class="input-right">Tax File Number</label>
                             </div><!-- col -->
-                            <div class="col8 last">
+                            <div class="col4 last">
                                 <input id="tfn" type="number">
-                            </div><!-- col -->
+                            </div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">&nbsp;</div>
+							<div class="col8 last">
+								<p class="warning" style="display: none;">If you don't provide a Tax File Number then it may take up to 28 days for the ATO to complete your application as they will need to verify your details another way.</p>
+							</div>
                         </div><!-- grid-row -->
                     </fieldset>
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button><button id="next1" type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn" onclick="location.href='business-names-05.html'">Previous</button>
+							<button id="next1" type="button" class="btn btn-default">Next</button>
+							<button id="next2" type="button" class="visuallyhidden next">Hidden Next</button>
+							<button id="next3" type="button" class="visuallyhidden">No TFN provided</button>
                         </div><!-- controls-content -->
                     </div>
 				</div>
@@ -264,6 +330,30 @@
 			        </div><!-- col -->
 			    </div><!-- grid-row -->
 			</fieldset>
+			<div class="grid-row custom-controls">
+				<p class="margin4">
+					<input type="checkbox" id="use-for-auskey" checked>
+					<label for="use-for-auskey">Use the same contact details for AUSkey registration</label>
+				</p>
+			</div>
+			<div  id="auskey-contact" style="display: none;">
+				<div class="grid-row">
+					<div class="col4">
+						<label class="input-right" for="auskey-email">Email</label>
+					</div>
+					<div class="col7 last">
+						<input id="auskey-email" type="email" value=""><br>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="col4">
+						<label class="input-right" for="auskey-phone">Phone</label>
+					</div>
+					<div class="col7 last">
+						<input id="auskey-phone" type="text" value=""><br>
+					</div>
+				</div>
+			</div>
 			<div class="grid-row custom-controls margin-bottom-1">
 			    <div class="col4">
 			        <p>&nbsp;</p>
@@ -634,7 +724,7 @@
                                 <label for="cont-afterhours-cb">Use a different number after hours</label>
                             </p>
                         </div>
-                    </div --><!-- grid-row -->
+                    </div><!-- grid-row -->
                     <div id="contact-mobile" class="grid-row" style="display: none;">
                         <div class="col4">
                             <label for="mobile" class="input-right">Mobile</label>
@@ -930,7 +1020,8 @@
 
                             <div class="controls-container">
                                 <div class="controls-content">
-                                    <button type="button" class="btn previous">Previous</button><button id="reason-next" type="button" class="btn btn-default next">Next</button>
+                                    <button type="button" class="btn previous">Previous</button>
+									<button id="reason-next" type="button" class="btn btn-default next">Next</button>
                                 </div><!-- controls-content -->
                             </div>
                         </div><!-- sub-section-content -->
@@ -1029,12 +1120,70 @@
                             <div class="controls-container">
                                 <div class="controls-content">
                                     <button type="button" class="btn previous">Previous</button>
-                                    <button id="activity-next" type="button" class="btn btn-default" onclick="// location.href='confirm-soletrader-new.html'">Continue to step 4</button>
+                                    <button id="activity-next" type="button" class="btn btn-default next">Next</button>
                                 </div><!-- controls-content -->
                             </div>
                         </div><!-- sub-section-content -->
                     </div><!-- sub-section-container -->
+                    <!-- START SECTION 7 -->
+                    <!-- div id="section6" class="sub-section-container">
+                        <h2>AUSKey contact details</h2>
+                        <div class="sub-section-content">
+                            <div id="validation5" class="validation-container clearfix" style="display: none;">
+                                <div class="grid-row">
+                                    <div class="validation-summary-icon">
+                                        <img src="assets/img/ico-alert-red.png" alt="Error">
+                                    </div>
+                                    <div class="validation-message">
+                                        <h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+                                        <ul>
+                                            <li id="val5a">Enter a value for field <a class="skip" href="#activity-contact">Activity</a></li>
+                                            <li id="val5b">Enter a value for field  <a class="skip" href="#abn-start-date">Commencement date of activity</a></li>
+                                            <li id="val5c">Select a value for <a class="skip" href="#validation-test-field3">Will you be operating an agricultural property?</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <fieldset>
+                                <legend class="larger">Provide additional contact details</legend>
+								<p>For queries regarding your AUSKey, you will be contacted using the details already provided in this application. If you want to specify alternate contact details you may enter them below.</p>
+                                <div class="grid-row custom-controls">
+                                    <div class="col11 last">
+										<p>
+											<input id="use-main-contact" type="checkbox" id="use-main-contact" checked />
+											<label for="use-main-contact">User the same contact details provided above</label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset id="auskey-contact" style="display: none">
+                                <legend class="margin4 larger">Contact details</legend>
+                                <div class="grid-row">
+                                    <div class="col4">
+                                        <label for="auskey-email" class="input-right">Email</label>
+                                    </div>
+                                    <div class="col7">
+                                        <input id="auskey-email" type="text" />
+                                    </div>
+                                </div>
+								<div class="grid-row">
+									<div class="col4">
+										<label for="auskey-phone" class="input-right">Phone</label>
+									</div>
+									<div class="col8 last custom-controls">
+										<input id="auskey-phone" type="text" />
+									</div>
+								</div>
+                            </fieldset>
 
+                            <div class="controls-container">
+                                <div class="controls-content">
+                                    <button type="button" class="btn previous">Previous</button>
+                                    <button id="activity-next" type="button" class="btn btn-default" onclick="// location.href='confirm-soletrader-new.html'">Continue to step 4</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div -->
     </main>
 
     </div><!-- wrapper -->
@@ -1042,12 +1191,22 @@
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 
+	<div id="modal-message" style="display: none;">
+		<h1>Proof of Identity</h3>
+		<div class="content">
+			<p>If you don't provide a Tax File Number then it may take up to 28 days for the ATO to complete your application as they will need to verify your details another way.</p>
+			<button id="tfn-cancel" class="btn btn-default">Go back</button><button class="btn" id="tfn-continue">Continue anyway</button>
+		</div>
+	</div>
+
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="assets/js/jquery.blockUI.js"></script>
+    <script src="assets/js/vadialog.js"></script>
     <script>
 		var authstate = 0;
 
@@ -1061,7 +1220,7 @@
             // actually the scope of the effect.
 			
 			$('#individual1-given').focus();
-
+			
             // -----------------------------------------------------------------------------
             // Additional business locations section:
             // -----------------------------------------------------------------------------
@@ -1337,7 +1496,64 @@
                 toggleSlideSameElement: true
             });
 			
+			$("#use-for-auskey").click(function() {
+				if (!this.checked) {
+					$("#auskey-contact").show(200, function() {
+						$("html, body").animate({
+							scrollTop: $(this).offset().top
+						}, 200);
+					});
+				} else {
+					$("#auskey-contact").hide(200);
+				}
+			});
+			
             navigationWithinPage();
+
+		//	$("#next1").click(function() {
+		//		$.blockUI({
+		//			message: $('#modal-message'),
+		//			centerX: true,
+		//			centerY: true,
+		//			css: {
+		//				border: "none",
+		//				width: "50%",
+		//				borderRadius: "5px"
+		//			}
+		//		});
+		//	});
+			
+		//	$("#acknowledge").click(function() {
+		//		$.unblockUI();
+		//		$("#next2").click();
+		//	});
+			
+			visionaustralia.addDialog("next3", "modal-message", null, null);
+			
+			$("#next1").click(function() {
+				if ($("#tfn").val() == "") {
+					$("#next3").click();
+				} else {
+					$("#next2").click();
+				}
+			});
+			
+			$("#tfn-cancel").click(function() {
+				visionaustralia.closeDialog("modal-message");
+			});
+
+			$("#tfn-continue").click(function() {
+				visionaustralia.closeDialog("modal-message");
+				$("#next2").click();
+			});
+			
+			$("#tfn").blur(function() {
+				if (this.value == "") {
+					$("p.warning").show();
+				} else {
+					$("p.warning").hide();
+				}
+			});
 
         });
 
