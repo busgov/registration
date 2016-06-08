@@ -366,10 +366,10 @@
                         <li id="needAuthorisedContact"><strong>at least one authorised contact</strong></li>
                     </ul>
                     <p>Individuals can fulfill multiple roles. For example, a director can also be the authorised contact.</p>
-                    <div id="addEntity1" class="controls-content margin-bottom">
+                    <!-- div id="addEntity1" class="controls-content margin-bottom">
                         <button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
                         <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-                    </div>
+                    </div -->
 
                     <!-- DIRECTOR -->
                     <div id="containerIndividual1" style="display: none">
@@ -623,66 +623,10 @@
     </fieldset>
                         <div class="margin4 controls-content margin-bottom">
                             <button type="button" id="btnsaveIndividual1" class="btn btn-default">Save individual</button>
-							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual1').hide(200); $('#addEntity1').show();" class="btn">Cancel</button>
+							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual1').hide(200); $('#individual1Saved').show();" class="btn">Cancel</button>
                         </div>                        
                     </div><!-- individual 1 -->
-
-                    <div id="individual1Saved" style="display: none">
-                        <div class="cart-container">
-                            <div class="result-row fade-in fade-in-inherit">
-                                <div class="result-cell cell-icon">
-                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
-                                </div>
-                                <div class="result-cell cell-detail">
-                                    <h3>Johnson, Robert</h3>
-                                    <p>Saved as director</p>
-                                </div>
-                                <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
-                                </div>
-                            </div><!-- result-row -->
-                        </div><!-- cart-container -->
-                        <div id="addEntity2" class="controls-content margin-top-075 margin-bottom">
-                            <button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
-                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-                        </div>
-                    </div>
-
-                    <div id="individual2Saved" style="display: none">
-                        <div class="cart-container">
-                            <div class="result-row fade-in fade-in-inherit">
-                                <div class="result-cell cell-icon">
-                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
-                                </div>
-                                <div class="result-cell cell-detail">
-                                    <h3>Firth, Vic</h3>
-                                    <p>Saved as shareholder</p>
-                                </div>
-                                <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
-                                </div>
-                            </div><!-- result-row -->
-                            <div class="result-row">
-                                <div class="result-cell cell-icon">
-                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
-                                </div>
-                                <div class="result-cell cell-detail">
-                                    <h3>Robert Johnson</h3>
-                                    <p>Saved as director</p>
-                                </div>
-                                <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
-                                </div>
-                            </div><!-- result-row -->
-                        </div><!-- cart-container -->
-                        <div id="addEntity3" class="controls-content margin-top-075 margin-bottom">
-                            <button type="button" id="btnIndividual3" class="btn btn-individual">Add individual</button>
-                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-                        </div>
-                    </div>
-
-
-                    <!-- SHAREHOLDER -->
+					                    <!-- SHAREHOLDER -->
                     <div id="containerIndividual2" style="display: none">
                         <h3 class="margin4 line">Details for associate 2:</h3>
                         <fieldset>
@@ -834,15 +778,205 @@
 
                         <div class="margin4 controls-content margin-bottom">
                             <button type="button" id="btnsaveIndividual2" class="btn btn-default">Save individual</button>
-							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual2').hide(200); $('#addEntity2').show();" class="btn">Cancel</button>
+							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual2').hide(200); $('#individual1Saved').show();" class="btn">Cancel</button>
 
                         </div>
                     </div><!-- shareholder -->
 
 
+<div id="container-corporate1" style="display: none">
+        <h3 class="margin4 line">Details for associate 3:</h3>
 
+    <fieldset>
+        <legend class="margin4 larger">Company details</legend>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_Name">Company name</label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_Name" name="Structure.OrganisationAssociate.Name" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
 
+        </div>
 
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_AsicNumber">ACN or ARBN</label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_AsicNumber" name="Structure.OrganisationAssociate.AsicNumber" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend class="margin4 larger">Registered address</legend>
+        
+<div id="Structure_OrganisationAssociate_RegisteredAddress" class="address-details">
+
+    
+
+    <div style="display: block">
+        <div style="display: none">
+            <input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+            <input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressTypeId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressTypeId" type="hidden" value="3CAzsve04FReZ9AUU2FM6Q==">
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1">Address line 1</label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine1" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine2" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Suburb">Suburb</label>
+            </div>
+            <div class="col7 last">
+                <input class="capitalize" id="Structure_OrganisationAssociate_RegisteredAddress_Suburb" name="Structure.OrganisationAssociate.RegisteredAddress.Suburb" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_State">State</label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_RegisteredAddress_State" name="Structure.OrganisationAssociate.RegisteredAddress.State" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Postcode">Postcode</label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_RegisteredAddress_Postcode" name="Structure.OrganisationAssociate.RegisteredAddress.Postcode" type="number" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="col4">
+                <label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+            </div>
+            <div class="col7 last">
+                <input id="Structure_OrganisationAssociate_RegisteredAddress_Country" name="Structure.OrganisationAssociate.RegisteredAddress.Country" type="text" value=""><br>
+                
+            </div>
+            <div class="col1 last">
+                
+            </div>
+        </div>
+
+    </div>
+</div>    
+    </fieldset>
+
+    <div class="margin4 controls-content margin-bottom">
+        <button id="btnSaveCorp" type="button" class="btn btn-default ajax-button">Save company</button>
+        <button id="btnCancelCorp" type="button" class="btn cancel ajax-button" onclick="$('#container-corporate1').hide(200); $('#individual1Saved').show();">Cancel</button>
+    </div>
+</div>
+                    <!-- div id="individual1Saved" style="display: none">
+                        <div class="cart-container">
+                            <div class="result-row fade-in fade-in-inherit">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Johnson, Robert</h3>
+                                    <p>Saved as director</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="addEntity2" class="controls-content margin-top-075 margin-bottom">
+                            <button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
+                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+                        </div>
+                    </div -->
+
+                    <div id="individual1Saved">
+                        <div class="cart-container">
+                            <div id="individual2" class="result-row fade-in fade-in-inherit" style="display: none;">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Firth, Vic</h3>
+                                    <p>Saved as Shareholder</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                            <div id="individual1" class="result-row fade-in fade-in-inherit" style="display: none;">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Robert Johnson</h3>
+                                    <p>Saved as Director</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                            <div id="corporate1" class="result-row fade-in fade-in-inherit" style="display: none;">
+                                <div class="result-cell cell-icon">
+                                    <img src="assets/img/ico-tick-green.png" alt="Success" />
+                                </div>
+                                <div class="result-cell cell-detail">
+                                    <h3>Contosso Pty Ltd</h3>
+                                    <p>Saved as Shareholder</p>
+                                </div>
+                                <div class="result-cell cell-action">
+                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                </div>
+                            </div><!-- result-row -->
+                        </div><!-- cart-container -->
+                        <div id="addEntity" class="controls-content margin-top-075 margin-bottom">
+                            <button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
+                            <button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+                        </div>
+                    </div>
 
                     <div class="controls-container">
                         <div class="controls-content">
@@ -1018,6 +1152,7 @@
                                             <option>Please select...</option>
                                             <option>Johnson, Robert</option>
                                             <option>Firth, Vic</option>
+                                            <option>Contosso Pty Ltd</option>
                                         </select>
                                     </div><!-- col -->
                                 </div><!-- grid-row -->
@@ -1307,7 +1442,7 @@
 						<div class="controls-container">
 							<div class="controls-content">
 								<button class="btn previous" type="button">Previous</button>
-								<button type="button" class="btn btn-default" onclick="location.href='taxation-details.html'">Continue to step 4</button>
+								<button type="button" class="btn btn-default">Next</button>
 							</div>
 						</div>
 					</div>
@@ -1369,50 +1504,64 @@
 
             // Add director
             $('#btnIndividual1').click(function () {
-                $('#addEntity1').toggle("fast");
-                $('#containerIndividual1').toggle("fast");
-                // scroll to top if the page is super long
-                var targetTop = $(this).parent().offset().top;
-                jQuery('html, body').animate({
-                    scrollTop: targetTop
-                }, 800);
-            });
-
-            // Save director
-            $('#btnsaveIndividual1').click(function () {
-                $('#containerIndividual1').toggle("fast");
                 $('#individual1Saved').toggle("fast");
+				if ($("#individual1").is(":hidden")) {
+					$('#containerIndividual1').toggle("fast");
+				} else {
+					$('#containerIndividual2').toggle("fast");
+				}
                 // scroll to top if the page is super long
                 var targetTop = $(this).parent().offset().top;
                 jQuery('html, body').animate({
                     scrollTop: targetTop
                 }, 800);
             });
-
-
-            // Add shareholder
-            $('#btnIndividual2').click(function () {
-				$("#addEntity2").hide();
-                $('#containerIndividual2').toggle("fast", function() {
-					// scroll to top if the page is super long
-					var targetTop = $(this).offset().top;
-					jQuery('html, body').animate({
-						scrollTop: targetTop
-					}, 800);
+			
+			// Add organisation
+			$('#btnOrganisation1').click(function () {
+                $('#individual1Saved').toggle("fast");
+				$('#container-corporate1').toggle("fast");
+                // scroll to top if the page is super long
+                var targetTop = $(this).parent().offset().top;
+                jQuery('html, body').animate({
+                    scrollTop: targetTop
+                }, 800);
+            });
+			
+            // Save director
+            $('#btnsaveIndividual1, #btnsaveIndividual2').click(function () {
+                $('#containerIndividual1, #containerIndividual2').hide("fast");
+				$("#individual1Saved").show("fast", function() {
+					if ($("#individual1").is(":hidden")) {
+						$("#individual1").show();
+						window.setTimeout(function() {
+							$("#individual1").removeClass("fade-in").removeClass("fade-in-inherit");
+						}, 2000);
+					} else {
+						$('#individual2').show();
+						window.setTimeout(function() {
+							$("#individual2").removeClass("fade-in").removeClass("fade-in-inherit");
+						}, 2000);
+					}
 				});
-            });
-
-            // Save shareholder
-            $('#btnsaveIndividual2').click(function () {
-                $('#containerIndividual2').toggle("fast");
-                $('#individual1Saved').hide();
-                $('#individual2Saved').toggle("fast");
+				
                 // scroll to top if the page is super long
                 var targetTop = $(this).parent().offset().top;
                 jQuery('html, body').animate({
                     scrollTop: targetTop
                 }, 800);
             });
+			
+			// save organisation
+			$("#btnSaveCorp").click(function() {
+				$("#container-corporate1").hide("fast");
+				$("#individual1Saved").show("fast", function() {
+					$("#corporate1").show();
+					window.setTimeout(function() {
+						$("#corporate1").removeClass("fade-in").removeClass("fade-in-inherit");
+					}, 2000);
+				});
+			});
 
             // Assign shares
             $('#btnAddShareClass').click(function () {
