@@ -35,20 +35,19 @@
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
-                    <span id="progress-percent" style="width: 40%"></span>
+                    <span id="progress-percent" style="width: 50%"></span>
                 </div><!-- meter -->
-                <ul class="section-nav">
+                <ul class="section-nav-5">
                     <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
                     <li class="done"><a href="business-names-05.html"><span>2</span><br>Company<br> name</a></li>
                     <li class="active"><span>3</span><br>Company<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                    <li><span>4</span><br>Confirm<br> application</li>
+                    <li><span>5</span><br>Payment<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">3. Company details <span>(Step 3 of 6)</span></h1>
             <p>All fields are required unless marked as optional.</p>
-			<div class="sub-section-container sub-section-open">
+			<div id="default-section" class="sub-section-container sub-section-open">
 				<h2>Address and location</h2>
 				<div class="sub-section-content">
 					<fieldset>
@@ -279,7 +278,7 @@
 				</div>
 			</div>
 			
-            <div id="section1" class="sub-section-container">
+            <div id="struct" class="sub-section-container">
                 <h2>Company structure</h2>
                 <div class="sub-section-content">
 
@@ -623,7 +622,7 @@
     </fieldset>
                         <div class="margin4 controls-content margin-bottom">
                             <button type="button" id="btnsaveIndividual1" class="btn btn-default">Save individual</button>
-							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual1').hide(200); $('#individual1Saved').show();" class="btn">Cancel</button>
+							<button type="button" id="btncancelIndividual1" class="btn">Cancel</button>
                         </div>                        
                     </div><!-- individual 1 -->
 					                    <!-- SHAREHOLDER -->
@@ -778,7 +777,7 @@
 
                         <div class="margin4 controls-content margin-bottom">
                             <button type="button" id="btnsaveIndividual2" class="btn btn-default">Save individual</button>
-							<button type="button" id="btncancelIndividual" onclick="$('#containerIndividual2').hide(200); $('#individual1Saved').show();" class="btn">Cancel</button>
+							<button type="button" id="btncancelIndividual2" class="btn">Cancel</button>
 
                         </div>
                     </div><!-- shareholder -->
@@ -909,7 +908,7 @@
 
     <div class="margin4 controls-content margin-bottom">
         <button id="btnSaveCorp" type="button" class="btn btn-default ajax-button">Save company</button>
-        <button id="btnCancelCorp" type="button" class="btn cancel ajax-button" onclick="$('#container-corporate1').hide(200); $('#individual1Saved').show();">Cancel</button>
+        <button id="btnCancelCorp" type="button" class="btn cancel ajax-button">Cancel</button>
     </div>
 </div>
                     <!-- div id="individual1Saved" style="display: none">
@@ -940,11 +939,11 @@
                                     <img src="assets/img/ico-tick-green.png" alt="Success" />
                                 </div>
                                 <div class="result-cell cell-detail">
-                                    <h3>Firth, Vic</h3>
+                                    <h3>Michael Johnson</h3>
                                     <p>Saved as Shareholder</p>
                                 </div>
                                 <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                    <a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
                                 </div>
                             </div><!-- result-row -->
                             <div id="individual1" class="result-row fade-in fade-in-inherit" style="display: none;">
@@ -953,10 +952,10 @@
                                 </div>
                                 <div class="result-cell cell-detail">
                                     <h3>Robert Johnson</h3>
-                                    <p>Saved as Director</p>
+                                    <p>Saved as Director, Shareholder</p>
                                 </div>
                                 <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                    <a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
                                 </div>
                             </div><!-- result-row -->
                             <div id="corporate1" class="result-row fade-in fade-in-inherit" style="display: none;">
@@ -964,11 +963,11 @@
                                     <img src="assets/img/ico-tick-green.png" alt="Success" />
                                 </div>
                                 <div class="result-cell cell-detail">
-                                    <h3>Contosso Pty Ltd</h3>
+                                    <h3>Contoso Pty Ltd</h3>
                                     <p>Saved as Shareholder</p>
                                 </div>
                                 <div class="result-cell cell-action">
-                                    <a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
+                                    <a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
                                 </div>
                             </div><!-- result-row -->
                         </div><!-- cart-container -->
@@ -980,14 +979,14 @@
 
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn previous">Previous</button><button type="button" class="btn btn-default next">Next</button>
+                            <button type="button" class="btn previous">Previous</button><button id="assoc-next" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
 
 
-            <div id="section4" class="sub-section-container">
+            <div id="shares" class="sub-section-container">
                 <h2>Share allocation</h2>
                 <div class="sub-section-content">
                     <!-- div id="containerAssignShares1">
@@ -1119,22 +1118,31 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Johnson, Robert</td>
+                                        <td>Robert Johnson</td>
                                         <td>ORD</td>
                                         <td>1500</td>
                                         <td>$0.50</td>
                                         <td>$1.50</td>
                                         <td>No</td>
-                                        <td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>
+                                        <td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
                                     </tr>
                                     <tr id="share-alloc-2nd-row" style="display: none">
-                                        <td>Firth, Vic</td>
+                                        <td>Michael Johnson</td>
                                         <td>ORD</td>
                                         <td>500</td>
                                         <td>$0.50</td>
                                         <td>$1.50</td>
                                         <td>No</td>
-                                        <td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>
+                                        <td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
+                                    </tr>
+                                    <tr id="share-alloc-3rd-row" style="display: none">
+                                        <td>Contoso Pty Ltd</td>
+                                        <td>ORD</td>
+                                        <td>1000</td>
+                                        <td>$0.50</td>
+                                        <td>$1.50</td>
+                                        <td>No</td>
+                                        <td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1150,9 +1158,9 @@
                                     <div class="col8 last">
                                         <select id="selectAssociate">
                                             <option>Please select...</option>
-                                            <option>Johnson, Robert</option>
-                                            <option>Firth, Vic</option>
-                                            <option>Contosso Pty Ltd</option>
+                                            <option>Robert Johnson</option>
+                                            <option>Michael Johnson</option>
+                                            <option>Contoso Pty Ltd</option>
                                         </select>
                                     </div><!-- col -->
                                 </div><!-- grid-row -->
@@ -1230,7 +1238,7 @@
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
-                            <button type="button" class="btn btn-default next">Next</button>
+                            <button  id="shares-next" type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
@@ -1247,7 +1255,7 @@
 								<div class="col7 last">
 									<select id="lodger">
 										<option value="">Please select...</option>
-										<option value="person">Johnson, Robert (Director)</option>
+										<option value="person">Robert Johnson (Director)</option>
 										<option value="AddLodger">Add another person</option>
 										<option value="AddCompanyLodger">Add another company</option>
 									</select>
@@ -1442,7 +1450,7 @@
 						<div class="controls-container">
 							<div class="controls-content">
 								<button class="btn previous" type="button">Previous</button>
-								<button type="button" class="btn btn-default">Next</button>
+								<button type="button" onclick="location.href='confirm-company.html'" class="btn btn-default">Next</button>
 							</div>
 						</div>
 					</div>
@@ -1463,6 +1471,36 @@
 
         $(document).ready(function () {
 
+			// check query string and see if we need to open a different section:
+			var section = GetQueryStringParams("section");
+			if (section != "") {
+				// reveal completed share details:
+				$("#share-alloc-2nd-row, #share-alloc-3rd-row").removeClass("fade-in").removeClass("fade-in-inherit");
+				$("#containerAllocateShares1").hide();
+				$('#share-allocation-summary').show();
+				$("#share-alloc-2nd-row").show();
+				$("#share-alloc-3rd-row").show();
+				$("#alloc-more-shares").show();
+				// reveal completed associate details:
+				$("#individual1, #individual2, #corporate1").removeClass("fade-in").removeClass("fade-in-inherit");
+				$("#individual1").show();
+				$("#individual2").show();
+				$("#corporate1").show();
+				$("#default-section").removeClass("sub-section-open");
+				if (section == "assoc") {
+					$("#struct").addClass("sub-section-open");
+					// scroll to associates:
+					$("html, body").animate({
+						scrollTop: $("#individual1Saved").offset().top
+					}, 200);
+				} else {
+					$("#" + section).addClass("sub-section-open");
+					$("html, body").animate({
+						scrollTop: $("#" + section).offset().top
+					}, 200);
+				}
+			}
+		
             /* Drop down settings menu */
             $("nav").accessibleMegaMenu({
                 /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
@@ -1504,29 +1542,40 @@
 
             // Add director
             $('#btnIndividual1').click(function () {
+				$("#assoc-next").prop("disabled", true);
                 $('#individual1Saved').toggle("fast");
+                var targetTop;
 				if ($("#individual1").is(":hidden")) {
 					$('#containerIndividual1').toggle("fast");
+					targetTop = $("#containerIndividual1").offset().top;
 				} else {
 					$('#containerIndividual2').toggle("fast");
+					targetTop = $("#containerIndividual2").offset().top;
 				}
                 // scroll to top if the page is super long
-                var targetTop = $(this).parent().offset().top;
-                jQuery('html, body').animate({
+                $('html, body').animate({
                     scrollTop: targetTop
                 }, 800);
             });
 			
 			// Add organisation
 			$('#btnOrganisation1').click(function () {
+				$("#assoc-next").prop("disabled", true);
                 $('#individual1Saved').toggle("fast");
 				$('#container-corporate1').toggle("fast");
                 // scroll to top if the page is super long
-                var targetTop = $(this).parent().offset().top;
+                var targetTop = $("#container-corporate1").offset().top;
                 jQuery('html, body').animate({
                     scrollTop: targetTop
                 }, 800);
             });
+			
+			// Cancel Add associate
+			$("#btncancelIndividual1, #btncancelIndividual2, #btnCancelCorp").click(function() {
+				$('#container-corporate1, #containerIndividual1, #containerIndividual2').hide(200);
+				$('#individual1Saved').show();
+				$("#assoc-next").prop("disabled", false);
+			});
 			
             // Save director
             $('#btnsaveIndividual1, #btnsaveIndividual2').click(function () {
@@ -1544,6 +1593,7 @@
 						}, 2000);
 					}
 				});
+				$("#assoc-next").prop("disabled", false);
 				
                 // scroll to top if the page is super long
                 var targetTop = $(this).parent().offset().top;
@@ -1561,6 +1611,7 @@
 						$("#corporate1").removeClass("fade-in").removeClass("fade-in-inherit");
 					}, 2000);
 				});
+				$("#assoc-next").prop("disabled", false);
 			});
 
             // Assign shares
@@ -1575,8 +1626,12 @@
 				if ($("#share-allocation-summary").is(":hidden")) {
 					$('#share-allocation-summary').toggle("fast");
 					$('#containerAllocateShares1').toggle("fast");
-				} else {
+				} else if ($("#share-alloc-2nd-row").is(":hidden")) {
 					$("#share-alloc-2nd-row").show("fast");
+					$('#containerAllocateShares1').toggle("fast");
+					$("#alloc-more-shares").show();
+				} else {
+					$("#share-alloc-3rd-row").show("fast");
 					$('#containerAllocateShares1').toggle("fast");
 					$("#alloc-more-shares").show();
 				}
@@ -1675,6 +1730,21 @@
 			});
 
         });
+		
+		function GetQueryStringParams(sParam)
+		{
+			var sPageURL = window.location.search.substring(1);
+			var sURLVariables = sPageURL.split('&');
+			for (var i = 0; i < sURLVariables.length; i++)
+			{
+				var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == sParam)
+				{
+					return sParameterName[1];
+				}
+			}
+			return "";
+		}
 
     </script>
 </body>
