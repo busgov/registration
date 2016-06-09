@@ -15,7 +15,7 @@
 	}
 }
 
-ul.section-nav, ul.section-nav-4 {
+ul.section-nav, ul.section-nav-4, ul.section-nav-5 {
 	padding: 0;
 	margin: 0;
 	top: -13px;
@@ -70,6 +70,10 @@ ul.section-nav, ul.section-nav-4 {
 
 ul.section-nav-4 li {
 	width: 24%;
+}
+
+ul.section-nav-5 li {
+	width: 19.5%;
 }
 
 .progress-bar {
