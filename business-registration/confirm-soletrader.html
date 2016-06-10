@@ -34,15 +34,14 @@
         <main class="confirmation">
             <div class="progress-container">
                 <div class="progress-bar">
-                    <span id="progress-percent" style="width: 75%"></span>
+                    <span id="progress-percent" style="width: 70%"></span>
                 </div><!-- meter -->
-                <ul class="section-nav">
+                <ul class="section-nav-5">
                     <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
                     <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
                     <li class="done"><a href="business-details.html"><span>3</span><br>Business<br> details</a></li>
-                    <li class="done"><a href="taxation-details.html"><span>4</span><br>Taxation<br> details</a></li>
-                    <li class="active"><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                    <li class="active"><span>4</span><br>Confirm<br> application</li>
+                    <li><span>5</span><br>Pay<br> &amp; submit</li>
                 </ul>
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">5. Confirm application <span>(Step 5 of 6)</span></h1>
@@ -50,7 +49,7 @@
                 <p><a href="" onclick="window.print();">Print</a></p>
             </div><!-- print -->
             <div class="confirmation-heading">
-                <h2>Business name <button type="button" class="btn btn-default" onclick="location.href='business-names.html'">Change</button></h2>
+                <h2>Business Names <button type="button" class="btn btn-default">Change</button></h2>
             </div>
             <div class="cart-container">
                 <div class="result-row">
@@ -75,7 +74,29 @@
                     </div>
                 </div><!-- result-row -->
             </div><!-- cart-container -->
-
+			<div class="section-container">
+                <div class="confirmation-heading">
+                    <h2>
+                        Registrations
+                            <button type="button" class="btn btn-default">Change</button>
+                    </h2>
+                </div>
+				<table>
+					<thead class="visuallyhidden">
+					<tr>
+						<th>Field item</th>
+						<th>Input value</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="field-name">Selected Registrations</td>
+							<td class="input-value">Australian Business Number (ABN), Business Name (BN)</td>
+						</tr>
+					</tbody>
+				</table>
+            </div>
+			
             <div class="confirmation-heading">
                 <h2>Sole trader details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
             </div>
@@ -107,7 +128,7 @@
             </table>
 
             <div class="confirmation-heading">
-                <h2>Business details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+                <h2>Business details <button type="button" class="btn btn-default" onclick="location.href='business-details-new.html'">Change</button></h2>
             </div>
             <table>
                 <thead class="visuallyhidden">
@@ -139,7 +160,7 @@
             </table>
 
             <div class="confirmation-heading">
-                <h2>Activity details <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
+                <h2>Activity details <button type="button" class="btn btn-default" onclick="location.href='business-details-new.html'">Change</button></h2>
             </div>
             <table>
                 <thead class="visuallyhidden">
@@ -166,7 +187,7 @@
                 </tr>
             </table>
 
-            <div class="confirmation-heading">
+            <!-- div class="confirmation-heading">
                 <h2>Goods and services tax (GST) <button type="button" class="btn btn-default" onclick="location.href='business-details.html'">Change</button></h2>
             </div>
             <table>
@@ -196,7 +217,7 @@
                     <td class="field-name no-border-bottom">Importing goods into Australia</td>
                     <td class="input-value no-border-bottom">No</td>
                 </tr>
-            </table>
+            </table -->
 
 
         <div class="confirmation-heading">

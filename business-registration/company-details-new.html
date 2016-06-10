@@ -281,7 +281,50 @@
             <div id="struct" class="sub-section-container">
                 <h2>Company structure</h2>
                 <div class="sub-section-content">
-
+					<fieldset>
+						<legend class="larger has-help margin4">
+							<label for="Structure_IsGovernedByConstitution">Will the company be governed by a constitution?</label>
+						</legend>
+						<div class="grid-row margin4">
+							<div class="col11">
+								<div class="radio-toggle" id="Structure_IsGovernedByConstitution">
+									<label class="on label-left" for="constitution-yes">
+										<input class="ajax-radio" id="constitution-yes" name="constitution" type="radio" value="Yes">
+										<span>Yes</span>
+									</label>
+									<label class="off label-right" for="constitution-no">
+										<input class="ajax-radio" id="constitution-no" name="constitution" type="radio" value="No">
+										<span>No</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col1 last">
+						</div>
+					</fieldset>
+					<div id="file-upload" style="display: none;">
+						<h3 class="margin4">Company constitution</h3>
+						<div id="_FileUploadContainer" class="file-input-container margin4">
+							<span class="file-input-btn file-input-btn-success file-input-button">
+								<span>Select file...</span>
+								<input id="FileUpload" type="file" name=".FileUpload" accept=".doc, .docx, .pdf">
+							</span>
+							<br>
+							<br>
+							<div id="_Progress" class="file-upload-progress" style="display: none;">
+								<div class="file-upload-progress-bar file-upload-progress-bar-success" style="transition: width 2s;">
+								</div>
+							</div>
+							<span class="field-note">(Upload size must not exceed 3.5MB)</span>
+						</div>
+						<div id="replace-file" class="grid-row margin4" style="display: none;">
+							<div class="col11 last">
+									<p>You have already uploaded your constitution. 
+										<a id="re-upload" href="javascript:void(0);" class="update-upload-link cancel">Update your constitution upload</a>
+									</p>
+							</div>
+						</div>
+					</div>
                     <fieldset>
                         <legend class="larger has-help margin4">Will the company have an ultimate holding company?<br />
                             <span class="field-note">For example, a parent company that has control over the new company.</span>
@@ -1727,6 +1770,31 @@
 						$("#AddLodger").hide(200);
 				}
 				
+			});
+			
+			$("input[name=constitution]").click(function() {
+				if ($("#constitution-yes").is(":checked")) {
+					$("#file-upload").show(200);
+				} else {
+					$("#file-upload").hide(200);
+				}
+			});
+			
+			$("#FileUpload").change(function() {
+				//alert($("#_Progress").show().find("div").css("width"));
+				$("#_Progress").show(0, function() {
+					$(this).find("div").css("width", "100%");
+				});
+				window.setTimeout(function() {
+					$("#_FileUploadContainer").hide();
+					$("#replace-file").show();
+					$("#_Progress").hide().find("div").css("width", "0");
+				}, 2000);
+			});
+			
+			$("#re-upload").click(function() {
+				$("#_FileUploadContainer").show();
+				$("#replace-file").hide();
 			});
 
         });
