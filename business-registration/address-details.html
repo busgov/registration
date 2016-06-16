@@ -100,16 +100,35 @@
 							</div><!-- col -->
 						</div><!-- grid-row -->
 						<div id="freetext-addr" class="grid-row">
-							<p class="margin4">Start typing the address and we'll see if we can find it for you:</p>
 							<div class="col4">
 								<label for="fulladdr" class="input-right">Address</label><br />
 							</div><!-- col -->
 							<div class="col8 last">
+								<p>Start typing the address and we'll see if we can find it for you:</p>
 								<input id="fulladdr" type="text">
-								<p>Or you can: <button id="manual-address" class="btn">Enter it manually</button></p>
+								<p>Or you can: <button id="man-addr" class="btn">Enter it manually</button></p>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div id="readonly-addr" class="grid-row" style="display: none;">
+							<div class="col4">
+								<label for="fulladdr-readonly" class="input-right">Address</label><br />
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="fulladdr-readonly" type="text" readonly>
+								<div id="ro-addr" style="font-weight: bold; margin-left: 2em;"></div>
+								<p>If this is not your address you can:</p>
+								<p><button id="find-addr" class="btn">Find a different address</button> or <button id="man-addr-2" class="btn">Edit / Enter manually</button></p>
 							</div><!-- col -->
 						</div><!-- grid-row -->
 						<div id="addr-local-fields" style="display: none;">
+							<div class="grid-row">
+								<div class="col4">
+									<label for="addr2line1" class="input-right">Address</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<p>You can  <button id="find-addr" class="btn">Find an Address</button> or Enter/Modify the details below:</p>
+								</div><!-- col -->
+							</div><!-- grid-row -->
 							<div class="grid-row">
 								<div class="col4">
 									<label for="addr2line1" class="input-right">Address line 1</label>
@@ -269,7 +288,7 @@
 						})
 					});
 				} else {
-					$("#addr-local-fields, #freetext-addr").hide();
+					$("#addr-local-fields, #freetext-addr, #readonly-addr").hide();
 					$("#addr-international-fields").show(200, function() {
 						$("html, body").animate({
 							scrollTop: $(this).offset().top
@@ -792,12 +811,16 @@
 				$("#suburb2").val(addr[1]);
 				$("#state2").val(addr[2]);
 				$("#postcode2").val(addr[3]);
-				$("#fulladdr").prop("readonly", true);
-				$("#addr-local-fields").show("fast", function() {
-					$("html, body").animate({
-						scrollTop: $(this).offset().top
-					});
-				});
+				// $("#fulladdr").prop("readonly", true);
+				$("#fulladdr-readonly").val(ui.item.value);
+				$("#freetext-addr").hide();
+				$("#readonly-addr").show();
+				$("#ro-addr").html("<p>" + addr[0] + "<br />" + addr[1] + " " + addr[2] + " " + addr[3] + "</p>");
+				//$("#addr-local-fields").show("fast", function() {
+				//	$("html, body").animate({
+				//		scrollTop: $(this).offset().top
+				//	});
+				//});
 			},
 			_renderMenu: function( ul, items ) {
 				var that = this;
@@ -807,22 +830,17 @@
 			}
 		});
 		
-		$("#fulladdr").change(function() {
-			alert(0);
-			var addr = $(this).val().split(", ");
-			$("#addr2line1").val(addr[0]);
-			$("#suburb2").val(addr[1]);
-			$("#state2").val(addr[2]);
-			$("#postcode2").val(addr[3]);
-			$("#addr-local-fields").show("fast", function() {
-				$("html, body").animate({
-					scrollTop: $(this).offset().top
-				});
-			});
+		$("#find-addr, #find-addr-2").click(function() {
+			$("#fulladdr, #fulladdr-readonly").val("");
+			$("#addr-local-fields input, #addr-local-fields select").val("");
+			$("#readonly-addr").hide();
+			$("#freetext-addr").show();
+			$("#addr-local-fields").hide("fast");
+			$("#fulladdr").focus();
 		});
 		
-		$("#manual-address").click(function() {
-			$("#freetext-addr").hide();
+		$("#man-addr, #man-addr-2").click(function() {
+			$("#freetext-addr, #readonly-addr").hide();
 			$("#addr-local-fields").show(200, function() {
 				$("html, body").animate({
 					scrollTop: $(this).offset().top
