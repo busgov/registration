@@ -136,16 +136,17 @@
                 <div class="confirmation-heading">
                     <h2>
                         Selected registrations
+						<button type="button" class="btn btn-default" data-changepath="/registration/businessname?appId=2236&amp;s=1">Change</button>
                     </h2>
                 </div>
 				<div class="grid-row">
 					<ul>
-						<li>Australian Business Number (ABN)</li>
-						<li>Business name</li>
-						<li>Australian company</li>
-						<li>Goods and Services Tax (GST)</li>
-						<li>Pay As You Go (PAYG) withholding</li>
-						<li>Luxury Car Tax (LCT), Fuel tax credits (FTC), Wine equalisation tax (WET)</li>
+						<li><a href="#bn">Business Names</a></li>
+						<li><a href="#co">Australian Company</a></li>
+						<li><a href="#abn">Australian Business Number (ABN)</a></li>
+						<li><a href="#gst">Goods and Services Tax (GST)</a></li>
+						<li><a href="#payg">Pay As You Go (PAYG) withholding</a></li>
+						<li><a href="#wet">Wine equalisation tax (WET)</a></li>
 					</ul>
 				</div>
                         <!-- table>
@@ -163,7 +164,7 @@
                         </table -->
             </div>
             <div class="section-container" data-section-name="BusinessNames">
-                <div class="confirmation-heading">
+                <div id="bn" class="confirmation-heading">
                     <h2>
                         Business Names
                             <button type="button" class="btn btn-default" data-changepath="/registration/businessname?appId=2236&amp;s=1">Change</button>
@@ -225,10 +226,9 @@
                         <!-- cart-container -->
             </div>
             <div class="section-container" data-section-name="CompanyDetails">
-                <div class="confirmation-heading">
+                <div id="co" class="confirmation-heading">
                     <h2>
-                        Company Details
-                            <button type="button" class="btn btn-default" data-changepath="/registration/companydetails?appId=2236&amp;s=0">Change</button>
+                        Australian Company
                     </h2>
                 </div>
                         <table>
@@ -238,6 +238,11 @@
                                 <th>Input value</th>
                             </tr>
                             </thead>
+							<tbody>
+							<tr>
+								<th style="vertical-align: middle;">Company details</th>
+								<th><a class="edit margin-left-075 no-margin" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
+							</tr>
         <tr>
             <td class="field-name">Company Name</td>
             <td class="input-value">BOOGIE LIMITED</td>
@@ -277,7 +282,7 @@
                             </thead>
                                 <tr>
                                     <th style="vertical-align: middle">Business associates</th>
-                                    <th><a class="edit margin-left-075 no-margin" style="float: right" href="javascript:void(0);"><span>Edit</span></a>
+                                    <th><a class="edit margin-left-075 no-margin" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
                                 </tr>
         <tr>
             <td class="field-name">Name</td>
@@ -329,7 +334,14 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table>
+			</div>
+            <div class="section-container" data-section-name="GstDetails">
+                <div class="confirmation-heading">
+                    <h2>
+                        Tax Registrations
+                    </h2>
+                </div>
+				                        <table id="abn">
                             <thead class="visuallyhidden">
                             <tr>
                                 <th>Field item</th>
@@ -369,15 +381,7 @@
             <td class="input-value">Yes</td>
         </tr>
                         </table>
-            </div>
-            <div class="section-container" data-section-name="GstDetails">
-                <div class="confirmation-heading">
-                    <h2>
-                        Tax details
-                            <button type="button" class="btn btn-default" data-changepath="/registration/taxation?appId=2236&amp;s=0">Change</button>
-                    </h2>
-                </div>
-                        <table>
+                        <table id="gst">
                             <thead class="visuallyhidden">
                             <tr>
                                 <th>Field item</th>
@@ -414,7 +418,7 @@
         </tr>
 							</tbody>
                         </table>
-                        <table>
+                        <table id="payg">
                             <thead class="visuallyhidden">
                             <tr>
                                 <th>Field item</th>
@@ -451,7 +455,7 @@
         </tr>
 							</tbody>
                         </table>
-                        <table>
+                        <!-- table>
                             <thead class="visuallyhidden">
                             <tr>
                                 <th>Field item</th>
@@ -516,8 +520,8 @@
             <td class="input-value">Petrol, Diesel</td>
         </tr>
 							</tbody>
-                        </table>
-                        <table>
+                        </table -->
+                        <table id="wet">
                             <thead class="visuallyhidden">
                             <tr>
                                 <th>Field item</th>
@@ -546,7 +550,6 @@
         </tr>
 							</body>
                         </table>
-						<p><button class="btn">Add tax registration</button>
             </div>
 
         <div class="confirmation-heading">
@@ -582,7 +585,7 @@
 				        <legend class="larger no-padding-bottom">I declare that:</legend -->
 					<div class="grid-row">
 						<fieldset class="custom-controls">
-							<legend class="larger no-padding">Business Name</legend>
+							<legend class="larger no-padding">Business Names</legend>
 							<p>I declare that:</p>
 							<p>
 								<input type="checkbox" id="authorised" />
@@ -610,7 +613,7 @@
 							<p>ASIC may contact the applicant if there are any questions regarding this application for registration of a business name.</p>
 						</fieldset>
 						<fieldset class="custom-controls">
-							<legend class="larger no-padding">Company Registration</legend>
+							<legend class="larger no-padding">Australian Company</legend>
 							<p>
 								<input type="checkbox" id="company-registration" />
 								<label for="company-registration">I apply for the registration of a company on the basis of the information in this form and any attachments. I have the necessary written consents and agreements referred to in this application concerning the members and officeholders and I shall give the consents and agreements to the company after the company becomes registered. The information provided in this application and in any attachments is true and correct at the time of signing.</label>
@@ -623,7 +626,7 @@
 								<li>Australian Business Number (ABN)</li>
 								<li>Goods and Services Tax (GST)
 								<li>Pay As You Go (PAYG) withholding</li>
-								<li>Luxury Car Tax (LCT), Fuel tax credits (FTC), Wine equalisation tax (WET)</li>
+								<li>Wine equalisation tax (WET)</li>
 							</ul>
 							<p>
 								<input type="checkbox" id="true-and-correct2" />
