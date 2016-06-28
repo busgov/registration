@@ -1053,13 +1053,14 @@
                 
                 switch (this.id) {
                     case 'coPublic':
-						$("#public-co").show();
-                        $('#publicCo').show(); $('#privateCo').hide();
+						$("#public-co").show("fast");
+						break;
+                        //$('#publicCo').show(); $('#privateCo').hide();
                     case 'coPrivate':
-						$("#private-co").show();
-                        $('#divCorporate').show('fast', function () {
-                            $('html, body').animate({ scrollTop: $('#divCorporate').offset().top }, 1200);
-                        });
+						$("#private-co").show("fast");
+                        //$('#divCorporate').show('fast', function () {
+                         //   $('html, body').animate({ scrollTop: $('#divCorporate').offset().top }, 1200);
+                        //});
                         break;
                     case 'coUnitTrust':
                     case 'coFirstHomeSaver':
