@@ -23,6 +23,13 @@ a:active {
   text-decoration: none;
 }
 
+// add image to background of external links
+a.external-link {
+	padding-right: 18px;
+	background-image: url(../img/ico-external.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
 
 // Font styling
 // ------------------------------------------------------------------------------------------------------
