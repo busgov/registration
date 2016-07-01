@@ -78,7 +78,7 @@ button[disabled], html input[disabled] {
   cursor: default;
   color: $button-disabled;
 }
-input[readonly], input[readonly]:hover, input[readonly]:focus, input[readonly]:active {
+input[readonly], input[readonly]:hover, input[readonly]:focus, input[readonly]:active, textarea[readonly] {
     color:$button-disabled;
     background-color: $bg-disabled;
     box-shadow: none;

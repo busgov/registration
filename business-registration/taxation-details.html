@@ -6,10 +6,19 @@
     <title>Taxation details | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
-    <style>
-    </style>
+
+	<style>
+		div.slider {
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			margin-left:20px;
+		}
+	</style>
+
 </head>
 <body>
     <div class="wrapper wrapper-main">
@@ -94,7 +103,7 @@
                                 <div class="col6">
                                     <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
                                 </div><!-- col -->
-                                <div id="activity-statement-frequency" class="col5">
+                                <div id="activity-statement-frequency" class="col6 last">
                                     <div class="radio-toggle" id="activity-statement-frequency-1">
                                         <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
                                         <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
@@ -104,9 +113,6 @@
                                         <p>For a GST turnover of $20 million and over your activity statements must be lodged monthly.</p>
                                     </div>
 
-                                </div><!-- col -->
-                                <div class="col1 last">
-                                    <a href="#help" class="cd-btn"><img class="help-icon " src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
 
                             </div><!-- grid-row -->
@@ -137,9 +143,99 @@
                                     <a href="#help" class="cd-btn"><img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></a>
                                 </div><!-- col -->
                             </div><!-- grid-row -->
+							<div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col6">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col6 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+                                    <div id="activity-statement-frequency-2">
+                                        <p>For a GST turnover of $20 million and over your activity statements must be lodged monthly.</p>
+                                    </div>
 
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
+                            <div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col4">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col4 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
+                            <div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col4">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col5 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
+                            <div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col4">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col7 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
+                            <div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col4">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col8 last">
+                                    <div class="radio-toggle" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
+							<div id="activity-statement" class="grid-row grid-row-reveal">
+                                <div class="col4">
+                                    <label for="statements" class="input-right">How often will you lodge your activity statements?</label>
+                                </div><!-- col -->
+                                <div id="activity-statement-frequency" class="col4 last">
+                                    <div class="radio-toggle stacked" id="activity-statement-frequency-1">
+                                        <label id="asf-monthly" class="label-left" for="freq_1"><input type="radio" name="statements" id="freq_1" /> <span>Monthly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Quarterly</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Option 3</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Option 4</span></label>
+                                        <label id="asf-quarterly" class="label-middle" for="freq_2"><input type="radio" name="statements" id="freq_2" /> <span>Option 5</span></label>
+                                        <label id="asf-annually" class="label-right" for="freq_3"><input type="radio" name="statements" id="freq_3" /> <span>Annually</span></label>
+                                    </div>
+
+                                </div><!-- col -->
+
+                            </div><!-- grid-row -->
                         </fieldset>
                     </div>
+                            
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn" onclick="location.href='business-details.html'">Previous</button>
@@ -225,13 +321,127 @@
                     <div class="controls-container">
                         <div class="controls-content">
                             <button type="button" class="btn previous">Previous</button>
-                            <button type="button" class="btn btn-default" onclick="location.href='confirm.html'">Continue to step 5</button>
+                            <button type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
                 </div><!-- sub-section-content -->
             </div><!-- sub-section-container -->
-        </main>
 
+			<div class="sub-section-container">
+				<h2>Luxury Car Tax (LCT)</h2>
+				<div class="sub-section-content">
+					<fieldset>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="LctDetails_RegistrationDate">What is the start date of your LCT registration? <span class="field-note nowrap">(dd/mm/yyyy)</span></label>
+							</div>
+							<div class="col6 last">
+								<input class="date hasDatepicker" id="RegistrationDate" type="text" value="24/05/2016">
+							</div>
+						</div>
+						
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="LctDetails_AnnualLiability">What is annual LCT liability?</label>
+							</div>
+							<div class="col6 last custom-controls">
+								<p>
+									<input name="LctDetails.AnnualLiability" id="LctDetails_AnnualLiabilities_0_" type="radio" value="$0 to $49,999">
+									<label for="LctDetails_AnnualLiabilities_0_">$0 to $49,999</label>
+								</p>
+								<p>
+									<input name="LctDetails.AnnualLiability" id="LctDetails_AnnualLiabilities_1_" type="radio" value="$50,000 to $99,999">
+									<label for="LctDetails_AnnualLiabilities_1_">$50,000 to $99,999</label>
+								</p>
+								<p>
+									<input name="LctDetails.AnnualLiability" id="LctDetails_AnnualLiabilities_2_" type="radio" value="$100,000 to $499,999">
+									<label for="LctDetails_AnnualLiabilities_2_">$100,000 to $499,999</label>
+								</p>
+								<p>
+									<input name="LctDetails.AnnualLiability" id="LctDetails_AnnualLiabilities_3_" type="radio" value="$500,000 to $5 million">
+									<label for="LctDetails_AnnualLiabilities_3_">$500,000 to $5 million</label>
+								</p>
+								<p>
+									<input name="LctDetails.AnnualLiability" id="LctDetails_AnnualLiabilities_4_" type="radio" value="More than $5 million">
+									<label for="LctDetails_AnnualLiabilities_4_">More than $5 million</label>
+								</p>
+							</div>
+						</div>
+												
+						<div class="grid-row clearfix">
+							<p class="margin4"><strong>What is the distribution of your business activities?</strong></p>
+						</div>
+						
+						<div class="grid-row no-padding">
+							<div class="col4">
+								<label class="input-right" for="importpercentage">Importing</label>
+							</div>
+							<div class="col8 last">
+								<input class="percentage input-percent" name="importpercentage" id="importpercentage" type="number" value="10">
+								<div class="slider"></div>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="manufacturingpercentage">Manufacturing</label>
+							</div>
+							<div class="col8 last">
+								<input class="percentage input-percent" name="manufacturingpercentage" id="manufacturingpercentage" type="number" value="20">
+								<div class="slider"></div>
+							</div>
+						</div>
+						<div class="grid-row no-padding">
+							<div class="col4">
+								<label class="input-right" for="retailingpercentage">Retailing</label>
+							</div>
+							<div class="col8 last">
+								<input class="percentage input-percent" name="retailingpercentage" id="retailingpercentage" type="number" value="30">
+								<div class="slider"></div>
+							</div>
+						</div>
+						<div class="grid-row no-padding">
+							<div class="col4">
+								<label class="input-right" for="wholesalingpercentage">Wholesaling</label>
+							</div>
+							<div class="col8 last">
+								<input class="percentage input-percent" name="wholesalingpercentage" id="wholesalingpercentage" type="number">
+								<div class="slider"></div>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="wholesalingpercentage">Total</label>
+							</div>
+							<div class="col1">
+								<p style="text-align: right; padding-right: 6px;"><strong><span id="totalpercentage">0%</span></strong></p>
+							</div>
+							<div class="col4 last">
+								<p><span class="field-note">Cannot exceed 100%</span></p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="mainactivity">Which best describes your business as your Main activity? <span class="field-note nowrap">(select any that apply)</span></label>
+							</div>
+							<div class="col6 last custom-controls">
+								<select name="mainactivity" class="valid" id="mainactivity" aria-invalid="false"><option value="">Please select...</option>
+									<option>Importing</option>
+									<option>Manufacturing</option>
+									<option>Retailing</option>
+									<option>Wholesaling</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<div class="controls-container">
+						<div class="controls-content">
+							<button type="button" class="btn previous">Previous</button>
+							<button type="button" class="btn btn-default" onclick="location.href='confirm.html'">Continue to step 5</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
     </div><!-- wrapper -->
 
     <div class="help" id="help">
@@ -257,17 +467,88 @@
     <div class="applicationoptions" id="applicationOptions"></div>
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/jquery-toggleslide.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$( ".slider" ).slider({
+				create: function(event, ui) {
+							if ($(this).prev().val() == "")
+								$(this).prev().val(0);
+						},
+				change: function(event, ui) {
+							var sum = 0;
+							$(".slider").each(function() {
+								sum += Number($(this).slider("option", "value"));
+							});
+							var val = ui.value;
+							if (sum > 100) {
+								var others = sum - val;
+								val = 100 - others;
+								sum = 100;
+								reset = true;
+								$(this).slider("option", "value", val);
+							}
+							// alert("Val: " + val + ", tot: " + sum);
+							$(this).prev().val(val);
+							$("#totalpercentage").html(sum + "%");
+							setOptions();
+						},
+				slide: function(event, ui) {
+					$(this).prev().val(ui.value);
+				}
+			}).promise().done(function() {
+				$(".slider").each(function(){
+					$(this).slider("option", "value", $(this).prev().val());
+				});
+			});
+			
+			$(".percentage").on("blur", function() {
+				if ($(this).val() > 100)
+					$(this).val(100);
+				if ($(this).val() < 0)
+					$(this).val(0);
+				var slider = $(this).next();
+				$(slider).slider("option", "value", $(this).val());
+			});
+		});
+		
+		function setOptions() {
+			var max = 0;
+			$(".slider").each(function() {
+				if ($(this).slider("option", "value") > max)
+					max = $(this).slider("option", "value");
+			});
+			var count = 0;
+			var last = 0;
+			var selected = $("#mainactivity").selectedIndex;
+			$(".slider").each(function(ind, obj) {
+				if ($(obj).slider("option", "value") == max) {
+					count++;
+					$("#mainactivity option").eq(ind + 1).css("display", "block");
+					last = ind + 1;
+				} else {
+					if (ind + 1 == selected)
+						selected = -1;
+					$("#mainactivity option").eq(ind + 1).css("display", "none");
+				}
+			});
+			if (count == 1)
+				selected = last;
+			$("#mainactivity").prop("selectedIndex", selected);
+		}
+	</script>
     <script>
 
         $(document).ready(function () {
             navigationWithinPage();
             initSaveForLater();
             initApplicationOptions();
-
+						
             /* Drop down settings menu */
             $("nav").accessibleMegaMenu({
                 /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
