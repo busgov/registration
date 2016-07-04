@@ -524,9 +524,9 @@ input[type=file] {
 		overflow: visible;       
 
 		&.label-left, &.label-left span {
-		  -webkit-border-radius: 4px 0 0 4px;
-		  border-radius: 4px 0 0 4px;
-		  border-right: 0;
+			-webkit-border-radius: 4px 0 0 4px;
+			border-radius: 4px 0 0 4px;
+			border-right: 0;
 		}
 		
 		&.label-right, &.label-right span {
@@ -595,32 +595,36 @@ input[type=file] {
 	// stack radio options vertically
 	label {
 	
-		&.label-left:nth-last-child(n+#{$minsize}) {
-			display: block;
-			float: none;
-			width: 140px;
-			margin-bottom: 0;
-			border-right: 1px solid #D0D0D0;
-			border-radius: 4px 4px 0 0;
-			
-			span {
+		&.label-left, &.label-top {
+			&:nth-last-child(n+#{$minsize}) {
+				display: block;
+				float: none;
+				width: 140px;
+				margin-bottom: 0;
+				border-right: 1px solid #D0D0D0;
 				border-radius: 4px 4px 0 0;
+				
+				span {
+					border-radius: 4px 4px 0 0;
+				}
 			}
 		}
 
-		&.label-right:nth-child(n+#{$minsize}) {
-			display: block;
-			float: none;
-			width: 140px;
-			margin-top: 0;
-			border-radius: 0 0 4px 4px;
-			
-			span {
+		&.label-right, &.label-bottom {
+			&:nth-child(n+#{$minsize}) {
+				display: block;
+				float: none;
+				width: 140px;
+				margin-top: 0;
 				border-radius: 0 0 4px 4px;
-			}
-			
-			&:nth-child(2) {
-				border-top: 0;
+				
+				span {
+					border-radius: 0 0 4px 4px;
+				}
+				
+				&:nth-child(2) {
+					border-top: 0;
+				}
 			}
 		}
 
@@ -646,16 +650,12 @@ input[type=file] {
 	}
 }
 
-.col1, .col2, .col3, .col4, .col5, .col6, .col6, .col8, .col9, .col10, .col11, .col12 {
+div.radio-toggle.stacked {
+	@include radio-toggle-stacked();
 
-	div.radio-toggle.stacked {
-		@include radio-toggle-stacked();
-
-		&.full-width label {
-			width: 100% !important;
-		}
+	&.full-width label {
+		width: 100% !important;
 	}
-
 }
 
 /* responsive styles for radio-toggle control */
