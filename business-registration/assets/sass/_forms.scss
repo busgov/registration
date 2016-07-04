@@ -590,6 +590,160 @@ input[type=file] {
 	}
 }
 
+/* Stacked radio-toggle control */
+@mixin radio-toggle-stacked($minsize: 1) {
+	// stack radio options vertically
+	label {
+	
+		&.label-left:nth-last-child(n+#{$minsize}) {
+			display: block;
+			float: none;
+			width: 140px;
+			margin-bottom: 0;
+			border-right: 1px solid #D0D0D0;
+			border-radius: 4px 4px 0 0;
+			
+			span {
+				border-radius: 4px 4px 0 0;
+			}
+		}
+
+		&.label-right:nth-child(n+#{$minsize}) {
+			display: block;
+			float: none;
+			width: 140px;
+			margin-top: 0;
+			border-radius: 0 0 4px 4px;
+			
+			span {
+				border-radius: 0 0 4px 4px;
+			}
+			
+			&:nth-child(2) {
+				border-top: 0;
+			}
+		}
+
+		&.label-middle:nth-child(n+#{$minsize - 1}),
+		&.label-middle:nth-last-child(n+#{$minsize - 1}) {
+			display: block;
+			float: none;
+			width: 140px;
+			margin-top: 0;
+			margin-bottom: 0;
+			border-right: 1px solid #D0D0D0;
+			//border-top: 0;
+			border-bottom: 0;
+			
+			&:nth-child(2) {
+				border-top: 0;
+			}
+		}
+	
+		@media only screen and (max-width: 340px) {
+			width: 100% !important;
+		}
+	}
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col6, .col8, .col9, .col10, .col11, .col12 {
+
+	div.radio-toggle.stacked {
+		@include radio-toggle-stacked();
+
+		&.full-width label {
+			width: 100% !important;
+		}
+	}
+
+}
+
+/* responsive styles for radio-toggle control */
+
+@mixin radio-toggle-prop-50() {
+	// distribute options proportionally - 50% (2 options)
+	label.label-left:nth-last-child(2) {
+		width: 49%;
+	}
+	label.label-right:nth-child(2) {
+		width: 49%;
+	}
+}
+
+@mixin radio-toggle-prop-33() {
+	// distribute options proportionally - 33% (3 options)
+	label.label-left:nth-last-child(3) {
+		width: 33%;
+	}
+	label.label-middle {
+		width: 32%;
+	}
+	label.label-right:nth-child(3) {
+		width: 33%;
+	}
+}
+
+@media only screen and (min-width: $break-medium + 1) {
+
+	.col1, .col2, .col3 {
+		div.radio-toggle {
+			@include radio-toggle-stacked();
+		}
+	}
+
+	.col4, .col5 {
+		div.radio-toggle {
+			@include radio-toggle-prop-33();
+		}
+	}
+}
+		
+@media only screen and (min-width: $break-medium + 1) and (max-width: 1050px) {
+
+	.col4 {
+		div.radio-toggle {
+			@include radio-toggle-stacked(3);
+			@include radio-toggle-prop-50();
+		}
+	}
+	
+	.col6 {
+		div.radio-toggle {
+			@include radio-toggle-prop-33();
+		}
+	}
+}
+
+@media only screen and (min-width: $break-medium + 1) and (max-width: 850px) {
+	.col5 {
+		div.radio-toggle {
+			@include radio-toggle-prop-50();
+		}
+	}
+
+	.col7 {
+		div.radio-toggle {
+			@include radio-toggle-prop-33();
+		}
+	}
+}
+
+@media only screen and (min-width: 341px) and (max-width: 500px) {
+
+	div.radio-toggle {
+		@include radio-toggle-prop-33();
+	}
+
+}
+
+@media only screen and (max-width: 340px) {
+
+	div.radio-toggle {
+		@include radio-toggle-stacked();
+	}
+
+}
+
 /* Adding dollar symbol to input field */
 .input-dollar {
   background: transparent url(../img/ico-dollar.png) no-repeat 0 50%;
