@@ -108,7 +108,7 @@
     <hr />
     <h3>Custom radio and checkboxes</h3>
     <p>A custom class enables radio buttons and checkboxes to appear larger for easier targeting in mobile devices. Styling is also consistent with SOBRS branding and should behave more consistently across browsers. To ensure radio buttons and checkboxes receive the image replacement styling, apply the <code>custom-controls</code> class to either the fieldset or any containing element (ie: a div) surrounding the form elements.</p>
-    <div class="custom-controls">
+    <div class="custom-controls clearfix">
         <fieldset>
             <legend>Some information about you</legend>
             <p>Gender:</p>
@@ -131,6 +131,47 @@
             <p><input type="checkbox" value="Stop" id="disablecheck" disabled checked /> <label for="disablecheck">This is checked and disabled</label></p>
             <p><input type="checkbox" value="Other" id="other2" /> <label for="other2">Other</label></p>
         </fieldset>
+		<h3 id="radio-toggle">Radio toggle (class="radio-toggle")</h3>
+		<fieldset>
+			<legend>Question? (two options)</legend>
+			<div class="radio-toggle" id="activity-statement-frequency-1">
+				<label class="label-left" for="yes"><input type="radio" name="statements" id="yes" /> <span>Yes</span></label>
+				<label class="label-right" for="no"><input type="radio" name="statements" id="no" /> <span>No</span></label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Question? (three options)</legend>
+			<div class="radio-toggle" id="activity-statement-frequency-1">
+				<label class="label-left" for="male"><input type="radio" name="statements" id="male" /> <span>Male</span></label>
+				<label class="label-middle" for="female"><input type="radio" name="statements" id="female" /> <span>Female</span></label>
+				<label class="label-right" for="none"><input type="radio" name="statements" id="none" /> <span>Not specified</span></label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Question? (multiple options class="stacked")</legend>
+			<div class="radio-toggle stacked" id="activity-statement-frequency-1">
+				<label class="label-top" for="opt1"><input type="radio" name="statements" id="opt1" /> <span>09:00 - 10:00</span></label>
+				<label class="label-middle" for="opt2"><input type="radio" name="statements" id="opt2" /> <span>10:00 - 11:00</span></label>
+				<label class="label-middle" for="opt3"><input type="radio" name="statements" id="opt3" /> <span>11:00 - 12:00</span></label>
+				<label class="label-middle" for="opt4"><input type="radio" name="statements" id="opt4" /> <span>12:00 - 13:00</span></label>
+				<label class="label-bottom" for="opt5"><input type="radio" name="statements" id="opt5" /> <span>13:00 - 14:00</span></label>
+			</div>
+		</fieldset>
+		<div class="col4 last">
+			<fieldset>
+				<legend>Question? (multiple longer options class="stacked full-width")</legend>
+				<div class="radio-toggle stacked full-width" id="activity-statement-frequency-1">
+					<label class="label-top" for="opt1a"><input type="radio" name="statements" id="opt1a" /> <span>Australian Capital Territory</span></label>
+					<label class="label-middle" for="opt2a"><input type="radio" name="statements" id="opt2a" /> <span>New South Wales</span></label>
+					<label class="label-middle" for="opt3a"><input type="radio" name="statements" id="opt3a" /> <span>Northern Territory</span></label>
+					<label class="label-middle" for="opt3a"><input type="radio" name="statements" id="opt3a" /> <span>Queensland</span></label>
+					<label class="label-middle" for="opt3a"><input type="radio" name="statements" id="opt3a" /> <span>South Australia</span></label>
+					<label class="label-middle" for="opt4a"><input type="radio" name="statements" id="opt4a" /> <span>Tasmania</span></label>
+					<label class="label-middle" for="opt3a"><input type="radio" name="statements" id="opt3a" /> <span>Victoria</span></label>
+					<label class="label-bottom" for="opt3a"><input type="radio" name="statements" id="opt3a" /> <span>Western Australia</span></label>
+				</div>
+			</fieldset>
+		</div>
     </div><!-- custom-controls -->
 
 
