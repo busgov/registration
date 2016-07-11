@@ -808,7 +808,7 @@
 			minLength: 3,
 			select: function(event, ui) {
 				var addr;
-				if (!ui.item) {
+				if (ui.item.label == "My address is not here") {
 					$("#addr2line1").val($("#fulladdr").val());
 					$("#freetext-addr, #readonly-addr").hide();
 					$("#addr-local-fields").show(200, function() {
@@ -835,18 +835,14 @@
 				//	});
 				//});
 			},
-			_renderMenu: function( ul, items ) {
-				var that = this;
-				items.add($("ul.ui-autocomplete.ui-menu"));
-				for (var i=0; i<items.length || i<5; i++) {
-					that._renderItemData( ul, item );
-				};
-			},
-			open: function(event, ui) {
-				var elt = $('<li id="manual" class="ui-menu-item">My address is not here</li>');
-				$("ul.ui-autocomplete.ui-menu").append(elt);
-				//ui.items.append(elt);
-			}
+			response: function(event, ui) {
+				ui.content.push({label: "My address is not here", value: $("#fulladdr").val()});
+			}			
+			//open: function(event, ui) {
+			//	var elt = $('<li id="manual" class="ui-menu-item">My address is not here</li>');
+			//	$("ul.ui-autocomplete.ui-menu").append(elt);
+			//	//ui.items.append(elt);
+			//}
 		});
 		
 		$("#find-addr, #find-addr-2").click(function() {
@@ -887,8 +883,17 @@
             /* css class for the open state */
             openClass: "open"
         });
-
-
+		$.ui.autocomplete.prototype._renderMenu = function( ul, items ) {
+			var that = this;
+			$.each( items, function( index, item ) {
+				if (index < 5)
+					that._renderItemData( ul, item );
+				else {
+					that._renderItemData( ul, items[items.length - 1]);
+					return false;
+				}
+			});
+		}
     </script>
 </body>
 </html>
