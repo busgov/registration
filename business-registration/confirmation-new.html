@@ -15,6 +15,38 @@
 	<link href="assets/css/ie.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
+	<style>
+	
+		button.ico-edit
+		{
+			float: right;
+			font-size: 1rem !important;
+			color: #fff;
+			padding: 7px !important;
+			padding-left: 30px !important;
+			font-weight: normal !important;
+			background-color: #444;
+			background-image: url(assets/img/ico-edit.png);
+			background-repeat: no-repeat;
+			background-position: 2px 2px;
+			background-size: 25px;
+			border 1px solid #000;
+			border-radius: 25px;
+		}
+		
+		button.ico-edit:hover, button.ico-edit:focus {
+			background-color: #000;
+			background-image: url(assets/img/ico-edit.png);
+			background-repeat: no-repeat;
+			background-position: 2px 2px;
+			background-size: 25px;
+		}
+		
+		h2 button.ico-edit {
+			margin-right: 10px;
+		}
+	
+	</style>
     
 <!-- script src="/scripts/jquery-2.1.1.js"></script>
 <script src="/scripts/jquery-2.1.4.js"></script>
@@ -195,7 +227,7 @@
                 <div class="confirmation-heading">
                     <h2>
                         Selected registrations
-						<button type="button" class="btn btn-default" style="font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
+						<button type="button" class="btn btn-default ico-edit">Edit</button>
                     </h2>
                 </div>
 				<div class="grid-row">
@@ -233,7 +265,7 @@
 					<tbody>
 					<tr>
 							<th style="width:65%">Business name</th>
-							<th style="width:35%">Status<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+							<th style="width:35%">Status<button type="button" class="btn btn-default ico-edit">Edit</button></th>
 					</tr>
 						<tr>
 							<td>BOOGIE NIGHTS</td>
@@ -263,7 +295,7 @@
 							<tbody>
 							<tr>
 								<th style="vertical-align: middle;">Company details</th>
-								<th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+								<th><button type="button" class="btn btn-default ico-edit">Edit</button></th>
 							</tr>
         <tr>
             <td class="field-name">Company Name</td>
@@ -304,7 +336,7 @@
                             </thead>
                                 <tr>
                                     <th style="vertical-align: middle">Business associates</th>
-                                    <th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+                                    <th><button type="button" class="btn btn-default ico-edit">Edit</button></th>
                                 </tr>
         <tr>
             <td class="field-name">Name</td>
@@ -344,7 +376,7 @@
                                     <th style="width:15%">$ paid per share</th>
                                     <th style="width:15%">$ unpaid per share</th>
                                     <th style="width:15%">Beneficially held?</th>
-									<th style="width:5%"><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+									<th style="width:5%"><button type="button" class="btn btn-default ico-edit">Edit</button></th>
                             </tr>
                                 <tr>
                                         <td class="no-border-bottom">Nerk, Fred</td>
@@ -372,7 +404,7 @@
                             </thead>
                                 <tr>
                                     <th style="vertical-align: middle">Australian Business Number (ABN)</th>
-                                    <th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+                                    <th><button type="button" class="btn btn-default ico-edit">Edit</button></th>
                                 </tr>
         <tr>
             <td class="field-name">Reason for ABN</td>
@@ -414,7 +446,7 @@
 							<tr>
 								<th style="vertical-align: middle;">Goods and services tax (GST)</th>
 								<th>
-									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
+									<button type="button" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
         <tr>
@@ -450,7 +482,7 @@
 							<tr>
 								<th style="vertical-align: middle;">Pay as you go withholding (PAYG)</th>
 								<th>
-									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
+									<button type="button" class="btn btn-default ico-edit">Edit</button>
 								</th>
 							</tr>
                                     <tr>
@@ -551,7 +583,7 @@
 								<tr>
 									<th style="vertical-align: middle;">Wine equalisation tax (WET)</th>
 								<th>
-									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
+									<button type="button" class="btn btn-default ico-edit">Edit</button>
 								</th>
 								</tr>
                                     <tr>
