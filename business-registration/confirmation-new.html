@@ -11,9 +11,9 @@
     <title>5. Confirm application - Business Registration Service</title>
 
     <link href="assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="assets/css/ie.css" rel="stylesheet"/>
-
+	<link href="assets/css/style.css" rel="stylesheet"/>
+	<link href="assets/css/ie.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
     
 <!-- script src="/scripts/jquery-2.1.1.js"></script>
@@ -132,11 +132,70 @@
     </div>
 </div>
     <main class="confirmation">
+				<div class="section-container">
+                <div class="confirmation-heading">
+                    <h2>Fee summary</h2>
+                </div>
+				
+				<h3>Business names</h3>
+				<div class="cart-container">
+					<div class="result-row" data-business-name-id="1049">
+						<div class="result-cell cell-icon">
+								<img src="assets/img/ico-exclamation-orange.png" alt="Alert"/>
+						</div>
+						<div class="result-cell cell-detail">
+							<h3>BOOGIE NIGHTS</h3>
+							<p></p>
+						</div>
+						<div class="result-cell cell-action">
+							<span class="subtotal">AU $34.00</span>
+						</div>
+					</div>
+					<div class="result-row" data-business-name-id="1049">
+						<div class="result-cell cell-icon">
+								<img src="assets/img/ico-tick-green.png" alt="Success"/>
+						</div>
+						<div class="result-cell cell-detail">
+							<h3>BOOGIE DAYS</h3>
+							<p></p>
+						</div>
+						<div class="result-cell cell-action">
+							<span class="subtotal">AU $34.00</span>
+						</div>
+					</div>
+				</div>
+				<h3>Company Registration</h3>
+				<div class="cart-container">
+					<!-- result-row -->
+					<div class="result-row" data-business-name-id="">
+						<div class="result-cell cell-icon">
+								<img src="assets/img/ico-tick-green.png" alt="Success"/>
+						</div>
+						<div class="result-cell cell-detail">
+							<h3>BOOGIE LIMITED</h3>
+							<p></p>
+						</div>
+						<div class="result-cell cell-action">
+							<span class="subtotal">AU $469.00</span>
+						</div>
+					</div>
+					<!-- result-row -->
+				</div>
+				<!-- cart-container -->
+				<div class="cart-container">
+					<div class="result-row">
+						<div class="result-cell cell-total">
+							<p>Total payment required: AU<span id="totalPayment">$537.00</span></p>
+						</div>
+					</div><!-- result-row -->
+				</div>
+				<!-- cart-container -->
+			</div>
             <div class="section-container" data-section-name="Summary">
                 <div class="confirmation-heading">
                     <h2>
                         Selected registrations
-						<button type="button" class="btn btn-default" data-changepath="/registration/businessname?appId=2236&amp;s=1">Change</button>
+						<button type="button" class="btn btn-default" style="font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
                     </h2>
                 </div>
 				<div class="grid-row">
@@ -163,67 +222,30 @@
 
                         </table -->
             </div>
-            <div class="section-container" data-section-name="BusinessNames">
+			
+			<div class="section-container" data-section-name="BusinessNames">
                 <div id="bn" class="confirmation-heading">
                     <h2>
                         Business Names
-                            <button type="button" class="btn btn-default" data-changepath="/registration/businessname?appId=2236&amp;s=1">Change</button>
                     </h2>
                 </div>
-                        <div class="cart-container">
-                                <div class="result-row" data-business-name-id="1049">
-                                    <div class="result-cell cell-icon">
-                                            <img src="assets/img/ico-exclamation-orange.png" alt="Alert"/>
-                                    </div>
-                                    <div class="result-cell cell-detail">
-                                        <h3>BOOGIE NIGHTS</h3>
-                                        <p></p>
-                                    </div>
-                                    <div class="result-cell cell-action no-padding">
-                                        <span class="subtotal">AU $34.00</span>
-                                            <a class="remove margin-left-075 no-margin-right" style="text-align: right" href="javascript:void(0);" id="link1049"
-                                               data-business-name-id="1049" data-remove-url="/registration/confirmation/removebusinessname?appId=2236&amp;businessName=1049"><span>Remove</span></a>
-                                    </div>
-                                </div>
-                                <!-- result-row -->
-                                <div class="result-row" data-business-name-id="1050">
-                                    <div class="result-cell cell-icon">
-                                            <img src="assets/img/ico-tick-green.png" alt="Success"/>
-                                    </div>
-                                    <div class="result-cell cell-detail">
-                                        <h3>BOOGIE DAYS</h3>
-                                        <p></p>
-                                    </div>
-                                    <div class="result-cell cell-action no-padding">
-                                        <span class="subtotal">AU $34.00</span>
-                                            <a class="remove margin-left-075 no-margin-right" style="text-align: right" href="javascript:void(0);" id="link1050"
-                                               data-business-name-id="1050" data-remove-url="/registration/confirmation/removebusinessname?appId=2236&amp;businessName=1050"><span>Remove</span></a>
-                                    </div>
-                                </div>
-                                <!-- result-row -->
-                                <div class="result-row" data-business-name-id="">
-                                    <div class="result-cell cell-icon">
-                                            <img src="assets/img/ico-tick-green.png" alt="Success"/>
-                                    </div>
-                                    <div class="result-cell cell-detail">
-                                        <h3>BOOGIE LIMITED</h3>
-                                        <p></p>
-                                    </div>
-                                    <div class="result-cell cell-action no-padding">
-                                        <span class="subtotal">AU $469.00</span>
-                                    </div>
-                                </div>
-                                <!-- result-row -->
-                        </div>
-                        <!-- cart-container -->
-                        <div class="cart-container">
-                            <div class="result-row">
-                                <div class="result-cell cell-total">
-                                    <p>Total payment required: AU<span id="totalPayment">$537.00</span></p>
-                                </div>
-                            </div><!-- result-row -->
-                        </div>
-                        <!-- cart-container -->
+				<table>
+					<tbody>
+					<tr>
+							<th style="width:65%">Business name</th>
+							<th style="width:35%">Status<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
+					</tr>
+						<tr>
+							<td>BOOGIE NIGHTS</td>
+							<td><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 5px; float: left" alt="Alert"/> Pending manual asessment</td>
+						</tr>
+						<tr>
+							<td>BOOGIE DAYS</td>
+							<td><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="Success"/> Available</td>
+						</tr>
+					</tbody>
+				</table>
+
             </div>
             <div class="section-container" data-section-name="CompanyDetails">
                 <div id="co" class="confirmation-heading">
@@ -241,11 +263,11 @@
 							<tbody>
 							<tr>
 								<th style="vertical-align: middle;">Company details</th>
-								<th><a class="edit margin-left-075 no-margin" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
+								<th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
 							</tr>
         <tr>
             <td class="field-name">Company Name</td>
-            <td class="input-value">BOOGIE LIMITED</td>
+            <td class="input-value"><span style="float: left; margin-right: 15px">BOOGIE LIMITED</span><span><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="Success"/> Available</span></td>
         </tr>
 		<tr>
             <td class="field-name">State/Territory Of Business</td>
@@ -282,7 +304,7 @@
                             </thead>
                                 <tr>
                                     <th style="vertical-align: middle">Business associates</th>
-                                    <th><a class="edit margin-left-075 no-margin" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
+                                    <th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
                                 </tr>
         <tr>
             <td class="field-name">Name</td>
@@ -322,7 +344,7 @@
                                     <th style="width:15%">$ paid per share</th>
                                     <th style="width:15%">$ unpaid per share</th>
                                     <th style="width:15%">Beneficially held?</th>
-									<th style="width:5%"><a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
+									<th style="width:5%"><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
                             </tr>
                                 <tr>
                                         <td class="no-border-bottom">Nerk, Fred</td>
@@ -350,7 +372,7 @@
                             </thead>
                                 <tr>
                                     <th style="vertical-align: middle">Australian Business Number (ABN)</th>
-                                    <th><a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a></th>
+                                    <th><button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button></th>
                                 </tr>
         <tr>
             <td class="field-name">Reason for ABN</td>
@@ -392,8 +414,7 @@
 							<tr>
 								<th style="vertical-align: middle;">Goods and services tax (GST)</th>
 								<th>
-									<a class="remove margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Remove</span></a>
-									<a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a>
+									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
 								</th>
 							</tr>
         <tr>
@@ -429,8 +450,7 @@
 							<tr>
 								<th style="vertical-align: middle;">Pay as you go withholding (PAYG)</th>
 								<th>
-									<a class="remove margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Remove</span></a>
-									<a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a>
+									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
 								</th>
 							</tr>
                                     <tr>
@@ -466,8 +486,7 @@
 								<tr>
 									<th style="vertical-align: middle;">Luxury car tax (LCT)</th>
 								<th>
-									<a class="remove margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Remove</span></a>
-									<a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a>
+									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
 								</th>
 								</tr>
                                     <tr>
@@ -532,8 +551,7 @@
 								<tr>
 									<th style="vertical-align: middle;">Wine equalisation tax (WET)</th>
 								<th>
-									<a class="remove margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Remove</span></a>
-									<a class="edit margin-left-075 no-margin-right" style="float: right" href="javascript:void(0);"><span>Edit</span></a>
+									<button type="button" class="btn btn-default" style="float: right; font-size:1rem; padding: 5px; font-weight: normal;"><span class="fa fa-pencil-square-o"></span>Edit</button>
 								</th>
 								</tr>
                                     <tr>
@@ -580,7 +598,7 @@
 						</select>
 					</div>
 				</div -->
-				<div class="declaration-wrapper">
+				<div class="declaration-wrapper" style="background-color: transparent; border: 1px solid #ddd;">
 				    <!-- fieldset class="business-name custom-controls">
 				        <legend class="larger no-padding-bottom">I declare that:</legend -->
 					<div class="grid-row">
