@@ -262,7 +262,7 @@ var html = '<div id="system-message" class="system-message clearfix" style="marg
 		 + '<div class="system-message-content">'
 		 + '<h1>Prototype system</h1>'
 		 + '<p>You currently viewing an instance of the SOBRS web site that has been activated for usability testing. This is not a production system, and any activities carried out in this environment will not result in any live application lodgements.</p>'
-		 + '<p>For more information about when the new web site will be available, see <a href="http://business.gov.au">business.gov.au</a>.'
+		 + '<p>For more information about when the new web site will be available, see <a href="https://www.business.gov.au/for-government/streamlining-business-registration">business.gov.au</a>.'
 		 + '</p></div>'
 		 + '<button id="dismiss-system-message" class="closeSystemMessage" type="button">Dismiss</button>'
 		 + '</div><div>'
