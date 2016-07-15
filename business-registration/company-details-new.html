@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="assets/js/functions.js"></script>
+	<script type="text/javascript" src="assets/js/activity-search-min-1.0.js"></script>
     <style>
     </style>
 </head>
@@ -269,6 +276,91 @@
 							</div>
 						</div>
 					</div>
+					<fieldset id="fieldsetBusinessAddressActivity">
+						<legend class="margin4 larger has-help">
+							
+							<br>
+						</legend>
+						<script type="text/javascript" src="assets/js/activity-search-min-1.0.js"></script>
+
+						<div id="ContactDetails_BusinessAddressActivity">
+							<div class="showhide-target" style="display: block">
+								<div style="display: none">
+									<input id="__c__ContactDetails_BusinessAddressActivity_BusinessActivityId" name="__c__ContactDetails.BusinessAddressActivity.BusinessActivityId" type="hidden" value="oIgrcwEMuT2AgEl+YQZTXg==">
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label for="ContactDetails_BusinessAddressActivity_SearchTerm" class="input-right">
+											Choose your main business activity<br>
+											<span class="field-note">(Start typing and choose from the options presented)</span>
+										</label>
+									</div>
+									<div class="col6">
+										<input id="ContactDetails_BusinessAddressActivity_SearchTerm" name="ContactDetails.BusinessAddressActivity.SearchTerm" placeholder="Start typing activity" style="width: 15em;" type="text" value="sandwich" spellcheck="true" aria-invalid="false" class="valid">
+										
+										<div id="ContactDetails_BusinessAddressActivity_Debug" style="display: none;">Filter result count: 1<br>Filter result count: 10<br></div><br>
+									</div>
+									<div class="col1 last">
+										<a class="cd-btn help" href="#help-businessdetailsbusinessaddressactivitysearchterm"><span>help</span></a>
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="ContactDetails_BusinessAddressActivity_Name">Selected activity</label>
+									</div>
+									<div class="col6">
+										<textarea cols="20" id="ContactDetails_BusinessAddressActivity_Name" name="ContactDetails.BusinessAddressActivity.Name" readonly="readonly" rows="2" style="margin: 7.67188px 4.79688px 7.67188px 0px; width: 464px; height: 56px; background: rgb(249, 249, 249);" role="combobox" aria-owns="businessActivitySuggestions1" aria-autocomplete="both" aria-readonly="true" aria-required="true" aria-describedby="businessActivitySuggestionsMessage1" aria-expanded="false" aria-invalid="false" class="valid">Sandwich retailing</textarea>
+
+										<input data-val="true" data-val-number="The field ActivityId must be a number." id="ContactDetails_BusinessAddressActivity_ActivityId" name="ContactDetails.BusinessAddressActivity.ActivityId" type="hidden" value="67200">
+										<input id="ContactDetails_BusinessAddressActivity_History" name="ContactDetails.BusinessAddressActivity.History" type="hidden" value="real|10">
+										<input id="ContactDetails_BusinessAddressActivity_Index" name="ContactDetails.BusinessAddressActivity.Index" type="hidden" value="5">
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<script type="text/javascript">
+							function onActivityCodeChanged(code, activityIndex, activityDescription) {
+								$('#ContactDetails_BusinessAddressActivity_ActivityId').val(code);
+							}
+
+							$(document).ready(function () {
+								$("#ContactDetails_BusinessAddressActivity_SearchTerm").keypress(function (e) {
+									if (e.which === 13) {
+										$("#ContactDetails_BusinessAddressActivity_Name").focus();
+										return false;
+									}
+								});
+
+								$("#ContactDetails_BusinessAddressActivity_Search").on('click', function () {
+									$("#ContactDetails_BusinessAddressActivity_Name").focus();
+								});
+
+								$("#ContactDetails_BusinessAddressActivity_Name").anzsiclookup({
+									searchTextElement: $('#ContactDetails_BusinessAddressActivity_SearchTerm'),
+									selectedIndexElement: $('#ContactDetails_BusinessAddressActivity_Index'),
+									recentItems: [],
+									delay: 300,
+									probableMatchesHeaderText: "Probable Activities",
+									alphabeticMatchesHeaderText: "Alphabetic Activities",
+									recentHeaderText: "Recent",
+									blockSize: 50,
+									probableMatchSize: 20,
+									appendDelay: 50,
+									width: 600,
+									debugMode: false,
+									debugElement: $("#ContactDetails_BusinessAddressActivity_Debug"),
+									onCodeChanged: onActivityCodeChanged,
+									showRecentElement: null,
+									selectMessage: "Enter you activity here then press Search",
+									blankSearchInstructionText: "Business activities will display here.",
+									noResultsInstructionText: "No business activity found using your text.",
+									historyElement: $("#ContactDetails_BusinessAddressActivity_History")
+								});
+							});
+						</script>
+					</fieldset>
 					<div class="controls-container">
 						<div class="controls-content">
 							<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
@@ -1505,11 +1597,6 @@
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
-    <script src="assets/js/jquery.collapse.js"></script>
-    <script src="assets/js/jquery-toggleslide.js"></script>
-    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
-    <script src="assets/js/functions.js"></script>
     <script>
 
         $(document).ready(function () {
