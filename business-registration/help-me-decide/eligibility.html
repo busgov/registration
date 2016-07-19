@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
+	<style>
+		div.registration-tip {
+			font-size: 90%;
+		}
+		
+		div.registration-tip h2 {
+			margin-top: 15px;
+			font-size: 120%;
+		}
+	</style>
 </head>
 <body id="top">
     <div class="wrapper wrapper-main">
@@ -17,27 +27,35 @@
             <nav id="settings">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="btn-options"><span>Sign in</span></a>
+                        <a href="#" class="btn-options"><span>Profile</span></a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <div id="eligibilityTest" class="wrapper main-container clearfix">
-            <h1>Help me decide</h1>
-            <p>Are you <strong>starting a business</strong>, or thinking about starting one?</p>
-            <p class="intro">If so, this tool can help you work out:</p>
-            <ul>
-                <li>the <strong>business structure</strong> that will best suit your needs</li>
-                <li>the <strong>basic business and tax registrations</strong> you should consider applying for.</li>
-            </ul>
-            <h2>Legal things we need to say...</h2>
-            <p>Business decisions should not be entered into lightly. Many factors can affect your decisions including your finances, legal requirements, industry group and your own personal circumstances. While we make every effort to ensure that this tool is accurate and up to date, it can’t possibly take all your circumstances into account – so please treat it as a guide only.</p>
-            <p>Before you make any decisions based on the information in this tool, consider seeking independent professional advice as we can’t guarantee or accept legal liability as a result of using this tool.</p>
-            <p><button type="button" class="btn btn-default" onclick="window.location = 'registration-discovery.html'">Ok, let's go</button></p>
-			<h2>Not sure if you need to register a business?</h2>
-			<p>We can help you make a decision about whether we would consider you to be in business and what you might need to do next.</p>
-			<p><button type="button" class="btn" onclick="location.href = 'http://start.business.gov.au'">Do I need to register?</button></p>
+            <h1>Business registration - help me decide</h1>
+			<div class="grid-row clearfix">
+				<div class="col7">
+					<p>Are you <strong>starting a business</strong>, or thinking about starting one?</p>
+					<p>This tool can help you work out:</p>
+					<ul>
+						<li>the <strong>business structure</strong> that will best suit your needs</li>
+						<li>the <strong>basic business and tax registrations</strong> you should consider applying for.</li>
+					</ul>
+					<p>While we make every effort to ensure that this tool is accurate and up to date, it can’t possibly take all your circumstances into account – so please treat it as a guide only.</p>
+					<p>Before you make any decisions based on the information in this tool, consider seeking independent professional advice as we can’t guarantee or accept legal liability as a result of using this tool.</p>
+				</div>
+				<div class="col5 last">
+					<div class="registration-tip">
+						<h2>Are you an artist, creative or maker?</h2>
+						<p>Did you know that even if you get money for your creative work, what you're doing could still be a hobby?</p>
+						<p>We can help you make a decision about whether we would consider you to be in business and what you might need to do next.</p>
+						<p><a href="http://start.business.gov.au">Hobby or business - help me work it out</a></p>
+					</div>
+				</div>
+			</div>
+			<p><button type="button" class="btn btn-default" onclick="window.location = 'registration-discovery.html'">Ok, let's go</button></p>
         </div><!-- main-container -->
         <div class="applicationoptions" id="applicationOptions"></div>
         <footer>
