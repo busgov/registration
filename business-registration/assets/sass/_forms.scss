@@ -449,16 +449,15 @@ input[type=file] {
 .ui-autocomplete {
     background: #fff79b;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1), -2px 2px 2px 0 rgba(0, 0, 0, 0.1);
-}
 
-.ui-state-hover, ul li.ui-state-focus, .ui-state-active
-{
-    background: #3179b5 !important;
-    color: #fff !important;
-    border: 1px solid #3179b5 !important;
-    font-weight: normal !important;
+    .ui-state-hover, ul li.ui-state-focus, .ui-state-active
+    {
+        background: #3179b5 !important;
+        color: #fff !important;
+        border: 1px solid #3179b5 !important;
+        font-weight: normal !important;
+    }
 }
-
 
 // OLD --------------- Image replacement styling for radios and checkboxes
 // ------------------------------------------------------------------------------------------------------
