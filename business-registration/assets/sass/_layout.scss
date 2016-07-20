@@ -23,8 +23,8 @@ body {
 // ------------------------------------------------------------------------------------------------------
 
 .feature-home {
-  background: white url(../img/bg-home.jpg) no-repeat 0 0;
-  background-size: cover;
+  // background: white url(../img/bg-home.jpg) no-repeat 0 0;
+  // background-size: cover;
 
   p.logo {
     width: 100%;
@@ -98,39 +98,26 @@ body {
 			font-size: $larger;
 		}
 	}
-	footer {
-  		background-color: $white70;
-	}
+	// footer {
+  		// background-color: $white70;
+	// }
 
 }
 
 .feature-box {
-	display: table-cell;
-	width: 33%;
 	background-color: $black75;
 	border-radius: $medium-border-radius;
 	-webkit-border-radius: $medium-border-radius;
-	padding: 2.5em 1em 1em 1em;
+	padding: 1.5em 1em 1em 1em;
 	margin: 1em 0.5em 0 0.5em;
 	color: white;
 	font-size: $larger;
 
 	p {
-		font-size: $smaller;
 
 		a, a:link, a:visited {
 			color: white;
 		}
-	}
-	
-	@media only screen and (max-width: $break-large) {
-		font-size: $normal;
-		padding: 2em 0.8em 0.8em 0.8em;
-	}
-	
-	@media only screen and (max-width: $break-medium) {
-		display: block;
-		width: auto;
 	}
 
 }
@@ -150,8 +137,15 @@ body {
   .byline {
     font-size: $largest;
   }
-  .grid-row, .table-row {
-    margin-bottom: 6em;
+  .feature-box {
+	padding: 2.5em 1em 1em 1em;
+	margin: 1.5em 0.5em 0 0.5em;
+	p {
+		font-size: 85%;
+	}
+	.grid-row {
+		margin-bottom: 6em;
+	}
   }
 }
 
