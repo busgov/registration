@@ -945,21 +945,21 @@ button.closeSystemMessage {
 
 /* help-icon styles with hover state */
 a.help {
-	background-image: url(../img/sprite-help.png);
+	background-image: url(../img/sprite-info.png);
 	background-color: transparent;
     background-repeat: no-repeat;
     background-position: 0 0;
-	background-size: 30px;
+	// background-size: 30px;
     padding: 0 0 0 30px;
     height: 30px;
     display: inline-block;
     text-align: left;
-    margin: -7px 0.5em 0 5px;
+    margin: -7px 0.5em 0 0;
     vertical-align: middle;
 	border: 2px solid transparent;
 
     &:focus, &:hover {
-        background-position: 0 100%;
+        background-position: 0 -100px;
     }
 
     &:focus {
@@ -978,13 +978,18 @@ a.help {
     }
 
     // full size, and at right if in last col on its own:
-    .col1.last &, .col2.last &, .has-help & {
+    .col1.last &, .col2.last &, legend.has-help &, div.has-help &, h3.has-help & {
         position:absolute;
 	    right: 0;
 	    margin-top: 0;
-	    background-size: 34px;
-	    height: 34px;
-	    padding: 0 0 0 34px;
+	    //background-size: 34px;
+	    height: 30px;
+	    padding: 0 0 0 30px;
+    }
+
+    label.has-help & {
+        position: absolute;
+        margin-top: -5px;
     }
 
     .col1.last &, .col2.last & {
@@ -994,8 +999,8 @@ a.help {
     // full size icon in table cell
     td.help & {
         height: 34px;
-        background-size: 34px;
-        padding-left: 34px;
+        //background-size: 34px;
+        padding-left: 30px;
         margin-top: 2px;
     }
 }
@@ -1148,7 +1153,10 @@ nav {
 /* Allow space for help icon when it is required beside legend */
 
 .has-help {
-  margin-right: 36px;
+  margin-right: 50px;
+}
+label.has-help {
+    margin-right: 12px;
 }
 img.help-icon {
   max-width: 34px;
@@ -1201,7 +1209,7 @@ img.help-icon {
 }
 
 .validation-inline {
-  color: $validation-red;
+  color: $validation-red !important;
 
 	img {
 		display: inline-block;
@@ -1211,6 +1219,15 @@ img.help-icon {
 		margin: 0 5px 0 0;
 		vertical-align: middle;
 	}
+}
+
+.validation-inline::after {
+    content: "*";
+}
+
+.validation-red {
+    color: $validation-red;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: $break-medium) {
