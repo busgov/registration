@@ -8,7 +8,41 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <style>
+		ul.section-nav li {
+			width: 15%;
+		}
+	
+		ul.section-nav li.bookend {
+		margin-top: -3px;
+			width: 10%;
+			line-height: 150%;
+			font-size: 75%;
+			line-height:20px;
+			vertical-align: top;
+			background-position-y: -494px;
+			position: relative;
+		}
+		
+		ul.section-nav li.bookend.right {
+			background-position-y: 8px;
+			float: right;
+		}
+		
+		ul.section-nav li.bookend span {
+			font-size: 175%;
+			font-weight: bold;
+			line-height:60px;
+		}
+		
+		li.bookend span.icon-left::before {
+			content: "‹";
+		}
+		
+		li.bookend span.icon-right::after {
+			content: "›";
+		}		
     </style>
 </head>
 <body>
@@ -34,15 +68,16 @@
         <main>
             <div class="progress-container">
                 <div class="progress-bar">
-                    <span id="progress-percent" style="width: 8%"></span>
+                    <span id="progress-percent" style="width: 18%"></span>
                 </div><!-- meter -->
                 <ul class="section-nav">
+                    <li class="bookend"><a href="register.html"><span>&lsaquo;</span><br>Registrations</a></li>
                     <li class="active"><span>1</span><br>Getting<br> started</li>
-                    <li><span>2</span><br>Business<br> name</li>
-                    <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                    <li><span>2</span><br>Business<br> details</li>
+                    <li><span>3</span><br>Taxation<br>details</li>
+                    <li><span>4</span><br>Confirm<br> application</li>
+                    <li><span>5</span><br>Payment<br> &amp; submit</li>
+					<li class="bookend right"><span class="icon-right"></span><br>Dashboard</li>
                 </ul>
             </div><!-- progress-container -->
             <h1 id="heading" tabindex="-1">1. Getting started <span>(Step 1 of 6)</span></h1>
@@ -102,7 +137,7 @@
                     
                     <div class="controls-container">
                         <div class="controls-content">
-                            <button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
+                            <button type="button" class="btn" onclick="location.href='register.html'">Previous</button>
                             <button type="button" class="btn btn-default next">Next</button>
                         </div><!-- controls-content -->
                     </div>
