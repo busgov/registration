@@ -19,6 +19,34 @@
     <meta name="application-name" content="Business Registration" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+	<style>
+	
+		button.ico-info
+		{
+			font-size: 0.9rem !important;
+			padding: 7px !important;
+			padding-left: 30px !important;
+			font-weight: normal !important;
+			background-image: url(assets/img/ico-info.png);
+			background-color: #4f8fe6;
+			background-repeat: no-repeat;
+			background-position: 2px 2px;
+			background-size: 25px;
+			border-radius: 25px;
+		}
+		
+		button.ico-info:hover, button.ico-info:focus {
+			background-image: url(assets/img/ico-info.png);
+			background-repeat: no-repeat;
+			background-position: 2px 2px;
+			background-size: 25px;
+		}
+		
+		h2 button.ico-info {
+			margin-right: 10px;
+		}
+	
+	</style>
 </head>
 <body>
     <div class="wrapper wrapper-main">
@@ -28,10 +56,10 @@
             <nav id="settings">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
+                        <a href="settings.html"><span>Profile</span></a>
                         <div class="sub-nav">
                             <ul class="sub-nav-group">
-                                <li><a href="#">Set up save</a></li>
+                                <li><a href="#" class="btn-save">Login</a></li>
                                 <li><a href="#">Start a new application</a></li>
                                 <li><a href="#">Sign out</a></li>
                             </ul>
@@ -43,89 +71,98 @@
 
         <main>
             <h1 id="heading" tabindex="-1">Ready to register</h1>
-            <div class="grid-row">
-                <div class="col9 select-registrations">
-                    <p class="intro">This is the start page to register for an Australian business. To get started, choose the items relevant to your business then click <strong>start applying</strong>.</p>
-                    <fieldset id="select-registrations" class="custom-controls">
-                        <legend class="larger">Select registrations</legend>
-                        <div class="grid-row clearfix">
-                            <div class="col7">
-                                <p>
-                                    <input id="abn" type="checkbox" value="abn">
-                                    <label for="abn">Australian Business Number (ABN) <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="bn" type="checkbox" value="bn">
-                                    <label for="bn">Business Name <a class="cd-btn inline help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="gst" type="checkbox" value="gst">
-                                    <label for="gst">Goods and Services Tax (GST)</label>
-                                </p>
-                                <p>
-                                    <input id="co" type="checkbox" value="co">
-                                    <label for="co">Australian Company</label>
-                                </p>
-                                <p>
-                                    <input id="payg" type="checkbox" value="payg">
-                                    <label for="payg">Pay as you go withholding (PAYG) <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="tfn" type="checkbox" value="tfn">
-                                    <label for="tfn">Business Tax File Number <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                            </div><!-- col -->
-                            <div class="col5 last">
-                                <p>
-                                    <input id="fbt" type="checkbox" value="fbt">
-                                    <label for="fbt">Fringe Benefits Tax <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="lct" type="checkbox" value="lct">
-                                    <label for="lct">Luxury Car Tax <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="ftc" type="checkbox" value="ftc">
-                                    <label for="ftc">Fuel Tax Credits <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="wet" type="checkbox" value="wet">
-                                    <label for="wet">Wine Equalisation Tax <a class="cd-btn help" href="#"><span>help</span></a></label>
-                                </p>
-                                <p>
-                                    <input id="auskey" type="checkbox" value="auskey">
-                                    <label for="auskey">AUSkey</label>
-                                </p>
-                            </div><!-- col -->
-                        </div><!-- grid-row -->
-                    </fieldset>
-                    <div class="controls-content">
-                        <button type="button" id="next" class="btn btn-default">Start applying</button>
-                    </div><!-- controls-content -->
-                </div><!-- col -->
-                <div class="col3 last">
-                    <div class="big-help-box">
-                        <h2>Not sure?</h2>
-                        <p>Not sure if you're a hobbyist, or which registrations you may need? We can help you decide, and help create a list of suggested registrations and potential costs.</p>
-                        <p><button type="button" class="btn btn-default" onclick="location.href = 'help-me-decide/eligibility.html'">Help me decide tool</button></p>
-                    </div><!-- big-help-box -->
-                    <div class="sign-in-box">
-                        <h2>Previous registrations</h2>
-                        <p>Return to an open application or check status.</p>
-                        <p>
-                            <label for="un">Email:</label><br />
-                            <input type="text" id="un" />
-                        </p>
-                        <p>
-                            <label for="pw">Password:</label><br />
-                            <input type="text" id="pw" />
-                        </p>
-                        <p style="margin-bottom: 2em"><button type="button" class="btn btn-default" style="margin: 0; vertical-align: middle">Sign in</button>&nbsp; <a href="" class="smallest">Forgotten password?</a></p>
-                    </div><!-- sign-in-box -->
-                </div><!-- col -->
-            </div><!-- grid-row -->
-
-
+			<p class="intro">This is the start page to register for an Australian business. To return to a <strong>previous registration</strong> simply select "login" from the profile menu, and login using the same credentials you used when you entered the application details.</p>
+			<div id="select-registrations" class="sub-section-container sub-section-open">
+				<h2>Select registrations</h2>
+				<div class="sub-section-content">
+					<p>To get started, choose the items relevant to your business then click <strong>next</strong>.</p>
+					<div class="grid-row custom-controls clearfix">
+						<div class="col6">
+							<p>
+								<input id="abn" type="checkbox" value="abn">
+								<label class="has-help" for="abn">Australian Business Number (ABN)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="bn" type="checkbox" value="bn">
+								<label class="has-help" for="bn">Business Name&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="gst" type="checkbox" value="gst">
+								<label for="gst">Goods and Services Tax (GST)</label>
+							</p>
+							<p>
+								<input id="co" type="checkbox" value="co">
+								<label for="co">Australian Company</label>
+							</p>
+							<p>
+								<input id="payg" type="checkbox" value="payg">
+								<label class="has-help" for="payg">Pay as you go withholding (PAYG)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="tfn" type="checkbox" value="tfn">
+								<label class="has-help" for="tfn">Business Tax File Number&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+						</div><!-- col -->
+						<div class="col6 last">
+							<p>
+								<input id="fbt" type="checkbox" value="fbt">
+								<label class="has-help" for="fbt">Fringe Benefits Tax&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="lct" type="checkbox" value="lct">
+								<label class="has-help" for="lct">Luxury Car Tax&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="ftc" type="checkbox" value="ftc">
+								<label class="has-help" for="ftc">Fuel Tax Credits&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="wet" type="checkbox" value="wet">
+								<label class="has-help" for="wet">Wine Equalisation Tax&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+							</p>
+							<p>
+								<input id="auskey" type="checkbox" value="auskey">
+								<label for="auskey">Business login</label>
+							</p>
+						</div><!-- col -->
+					</div><!-- grid-row -->
+					<div class="registration-tip">
+						<h3>Not sure?</h3>
+						<p>Not sure if you're a hobbyist, or which registrations you may need? We can help you decide, and help create a list of suggested registrations and potential costs.</p>
+						<p><a href="help-me-decide/eligibility.html">Help me decide</a>.</p>
+					</div><!-- big-help-box -->
+					<div class="controls-content">
+						<button type="button" id="start-applying" class="btn btn-default next">Next</button>
+					</div><!-- controls-content -->
+				</div>
+			</div>
+			<div class="sub-section-container">
+				<h2>Summary of required information</h2>
+				<div class="sub-section-content">
+					<p>Selected registrations:</p>
+					<ul style="list-style: none">
+						<li><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Australian Business Number (ABN)</li>
+						<li><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Business Name</li>
+						<li><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Goods and Services Tax (GST)</li>
+						<li><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Pay as you go withholding (PAYG)</li>
+						<li><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Fringe Benefits Tax (FBT)</li>
+					</ul>
+					<p>You will need to have the following information to complete your application:</p>
+					<ul>
+						<li>The names you will be using for your the new entities you will be creating</li>
+						<li>Names and addresses of all business associates</li>
+						<li>Your individual Tax File Number (TFN) to confirm your identity</li>
+						<li>etc.</li>
+					</ul>
+					<p>The application will be saved as you progress, so you will be able to come back later if you don't have all the required information from the start.</p>
+					<div class="controls-container">
+						<div class="controls-content">
+							<button id="prev" class="btn previous" type="button">Previous</button>
+							<button id="next" type="button" onclick="location.href='confirm-company.html'" class="btn btn-default previous">Start applying</button>
+						</div>
+					</div>
+				</div>
+			</div>
         </main>
 
         <footer>
@@ -143,6 +180,10 @@
     <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+		
+			navigationWithinPage();
+			initSaveForLater();
+
         
         	var qryStr = getUrlVars();
         	if (qryStr.type !== undefined) {
@@ -150,6 +191,10 @@
         			$('#' + str).prop('checked', true);
         		});
         	}
+			
+			$("#start-applying").click(function() {
+				
+			});
         
             $("#next").click(function (e) {
                 e.preventDefault();
