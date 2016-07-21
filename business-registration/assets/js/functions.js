@@ -265,8 +265,8 @@ var html = '<div id="system-message" class="system-message clearfix" style="marg
 		 + '<p>For more information about when the new web site will be available, see <a href="https://www.business.gov.au/for-government/streamlining-business-registration">business.gov.au</a>.'
 		 + '</p></div>'
 		 + '<button id="dismiss-system-message" class="closeSystemMessage" type="button">Dismiss</button>'
-		 + '</div><div>'
-		 + '<p style="float: right; padding: 2px 10px; margin-top: -17px; margin-right: 10px; color: #FFF; background-color: #3179b5; font-size: 0.8em; border-radius: 10px"><strong>PROTOTYPE</strong></p>'
+		 + '</div><div class="environment">'
+		 + '<p><strong>PROTOTYPE</strong></p>'
 		 + '</div>';
 
 
