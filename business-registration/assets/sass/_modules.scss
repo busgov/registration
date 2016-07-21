@@ -430,7 +430,7 @@ img.visuallyhidden {
 	-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 	border-bottom: 2px solid $blue-pale;
-	margin-top: 55px;
+	margin-top: 0;
 
 	h1 {
 		color: white;
@@ -1022,11 +1022,11 @@ nav {
 	right: 0;
 
 	@media only screen and (min-width: $break-small) {
-		top: 28px;
+		top: 80px;
 	}
 
 	@media only screen and (min-width: $break-medium) {
-		top: 40px;
+		top: 80px;
 	}
 }
 
