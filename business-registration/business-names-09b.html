@@ -12,162 +12,166 @@
     </style>
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <span id="progress-percent" style="width: 23%"></span>
-                </div><!-- meter -->
-                <ul class="section-nav">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="active"><span>2</span><br>Business<br> name</li>
-                    <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
-                </ul>
-            </div><!-- progress-container -->
-           <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<main>
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 23%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="active"><span>2</span><br>Business<br> name</li>
+							<li><span>3</span><br>Business<br> details</li>
+							<li><span>4</span><br>Taxation<br>details</li>
+							<li><span>5</span><br>Confirm<br> application</li>
+							<li><span>6</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+				   <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
 
-            <div class="sub-section-container sub-section-open">
-                <h2>Business name</h2>
+					<div class="sub-section-container sub-section-open">
+						<h2>Business name</h2>
 
-                <div class="card clearfix">
-                    <div class="validation-summary-icon">
-                        <img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
-                    </div>
-                    <div class="validation-message">
-                        <h3 style="margin-top: 4px;">Unable to check names</h3>
-                        <p>We are unable to check your names at the moment. You can continue with your application, but you will not be able to submit it for processing until the names have been checked.</p>
-                        <p>You may choose to <a href="#">save and return</a> later, and we will send you an email when the service is available.</p>
-                    </div>
-                </div>
+						<div class="card clearfix">
+							<div class="validation-summary-icon">
+								<img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+							</div>
+							<div class="validation-message">
+								<h3 style="margin-top: 4px;">Unable to check names</h3>
+								<p>We are unable to check your names at the moment. You can continue with your application, but you will not be able to submit it for processing until the names have been checked.</p>
+								<p>You may choose to <a href="#">save and return</a> later, and we will send you an email when the service is available.</p>
+							</div>
+						</div>
 
-                <h3 class="cart-heading">5 names added</h3>
+						<h3 class="cart-heading">5 names added</h3>
 
-                <div class="cart-container">
-                    <div class="result-row">
-                        <div class="result-cell cell-icon">
-                            <img src="assets/img/ico-question-orange.png" alt="unknown" />
-                        </div>
-                        <div class="result-cell cell-detail">
-                            <h3>Bob's Whitegoods Repairs</h3>
-                            <p><strong>Business name has not been checked.</strong><br />The name will need to be checked before your application can be submitted.</p>
-                        </div>
-                        <div class="result-cell cell-action">
-                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                            <select class="registration-duration" id="registration-duration">
-                                <option value="1" selected="selected">1 year $33</option>
-                                <option value="2">3 years $78</option>
-                            </select>
-                            <a class="remove" href="business-names.html"><span>Remove</span></a>
-                        </div>
-                    </div><!-- result-row -->
-                    <div class="result-row">
-                        <div class="result-cell cell-icon">
-                            <img src="assets/img/ico-exclamation-orange.png" alt="Warning" />
-                        </div>
-                        <div class="result-cell cell-detail">
-                            <h3>Bob the Builder</h3>
-                            <p><strong>Business name may not be available.</strong><br />Requires manual assessment.</p>
-                        </div>
-                        <div class="result-cell cell-action">
-                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                            <select class="registration-duration" id="registration-duration">
-                                <option value="1" selected="selected">1 year $33</option>
-                                <option value="2">3 years $78</option>
-                            </select>
-                            <a class="remove" href="business-names.html"><span>Remove</span></a>
-                        </div>
-                    </div><!-- result-row -->
-                    <div class="result-row">
-                        <div class="result-cell cell-icon">
-                            <img src="assets/img/ico-tick-green.png" alt="Success" />
-                        </div>
-                        <div class="result-cell cell-detail">
-                            <h3>Plumb Bob</h3>
-                            <p>Business name added.</p>
-                        </div>
-                        <div class="result-cell cell-action">
-                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                            <select class="registration-duration" id="registration-duration">
-                                <option value="1" selected="selected">1 year $33</option>
-                                <option value="2">3 years $78</option>
-                            </select>
-                            <a class="remove" href="business-names.html"><span>Remove</span></a>
-                        </div>
-                    </div><!-- result-row -->
-                    <div class="result-row">
-                        <div class="result-cell cell-icon">
-                            <img src="assets/img/ico-tick-green.png" alt="Success" />
-                        </div>
-                        <div class="result-cell cell-detail">
-                            <h3>Bob's Gasfitting</h3>
-                            <p>Business name added.</p>
-                        </div>
-                        <div class="result-cell cell-action">
-                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                            <select class="registration-duration" id="registration-duration">
-                                <option value="1" selected="selected">1 year $33</option>
-                                <option value="2">3 years $78</option>
-                                <a href="business-details-new.html">business-details-new.html</a>
-                            </select>
-                            <a class="remove" href="business-names.html"><span>Remove</span></a>
-                        </div>
-                    </div><!-- result-row -->
-                    <div class="result-row">
-                        <div class="result-cell cell-icon">
-                            <img src="assets/img/ico-tick-green.png" alt="Success" />
-                        </div>
-                        <div class="result-cell cell-detail">
-                            <h3>Bob's Plumbing</h3>
-                            <p>Business name added.</p>
-                        </div>
-                        <div class="result-cell cell-action">
-                            <label class="visuallyhidden" for="registration-duration">Select duration:</label>
-                            <select class="registration-duration" id="registration-duration">
-                                <option value="1" selected="selected">1 year $33</option>
-                                <option value="2">3 years $78</option>
-                            </select>
-                            <a class="remove" href="business-names.html"><span>Remove</span></a>
-                        </div>
-                    </div><!-- result-row -->
-                </div><!-- cart-container -->
-                <div class="card clearfix">
-                    <h3>Add another business name?</h3>
-                    <p>Enter a name to check its availability. Some names may require manual validation based on <a href="#">business naming rules</a>. You can register multiple business names to protect your brand.</p>
-                    <p>
-                        <label for="name-search">Search for name</label><br />
-                        <input id="name-search" type="text" value=""> <button type="button" class="btn btn-default btn-small">Check</button>
-                    </p>
-                </div>
-            </div>
-        </main>
-        
-        <div class="controls-container">
-            <div class="controls-content">
-                <button type="button" class="btn previous" onclick="location.href = 'business-names-06.html'">Previous</button>
-                <button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
-            </div><!-- controls-content -->
-        </div><!-- controls-container -->
+						<div class="cart-container">
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-question-orange.png" alt="unknown" />
+								</div>
+								<div class="result-cell cell-detail">
+									<h3>Bob's Whitegoods Repairs</h3>
+									<p><strong>Business name has not been checked.</strong><br />The name will need to be checked before your application can be submitted.</p>
+								</div>
+								<div class="result-cell cell-action">
+									<label class="visuallyhidden" for="registration-duration">Select duration:</label>
+									<select class="registration-duration" id="registration-duration">
+										<option value="1" selected="selected">1 year $33</option>
+										<option value="2">3 years $78</option>
+									</select>
+									<a class="remove" href="business-names.html"><span>Remove</span></a>
+								</div>
+							</div><!-- result-row -->
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-exclamation-orange.png" alt="Warning" />
+								</div>
+								<div class="result-cell cell-detail">
+									<h3>Bob the Builder</h3>
+									<p><strong>Business name may not be available.</strong><br />Requires manual assessment.</p>
+								</div>
+								<div class="result-cell cell-action">
+									<label class="visuallyhidden" for="registration-duration">Select duration:</label>
+									<select class="registration-duration" id="registration-duration">
+										<option value="1" selected="selected">1 year $33</option>
+										<option value="2">3 years $78</option>
+									</select>
+									<a class="remove" href="business-names.html"><span>Remove</span></a>
+								</div>
+							</div><!-- result-row -->
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-tick-green.png" alt="Success" />
+								</div>
+								<div class="result-cell cell-detail">
+									<h3>Plumb Bob</h3>
+									<p>Business name added.</p>
+								</div>
+								<div class="result-cell cell-action">
+									<label class="visuallyhidden" for="registration-duration">Select duration:</label>
+									<select class="registration-duration" id="registration-duration">
+										<option value="1" selected="selected">1 year $33</option>
+										<option value="2">3 years $78</option>
+									</select>
+									<a class="remove" href="business-names.html"><span>Remove</span></a>
+								</div>
+							</div><!-- result-row -->
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-tick-green.png" alt="Success" />
+								</div>
+								<div class="result-cell cell-detail">
+									<h3>Bob's Gasfitting</h3>
+									<p>Business name added.</p>
+								</div>
+								<div class="result-cell cell-action">
+									<label class="visuallyhidden" for="registration-duration">Select duration:</label>
+									<select class="registration-duration" id="registration-duration">
+										<option value="1" selected="selected">1 year $33</option>
+										<option value="2">3 years $78</option>
+										<a href="business-details-new.html">business-details-new.html</a>
+									</select>
+									<a class="remove" href="business-names.html"><span>Remove</span></a>
+								</div>
+							</div><!-- result-row -->
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-tick-green.png" alt="Success" />
+								</div>
+								<div class="result-cell cell-detail">
+									<h3>Bob's Plumbing</h3>
+									<p>Business name added.</p>
+								</div>
+								<div class="result-cell cell-action">
+									<label class="visuallyhidden" for="registration-duration">Select duration:</label>
+									<select class="registration-duration" id="registration-duration">
+										<option value="1" selected="selected">1 year $33</option>
+										<option value="2">3 years $78</option>
+									</select>
+									<a class="remove" href="business-names.html"><span>Remove</span></a>
+								</div>
+							</div><!-- result-row -->
+						</div><!-- cart-container -->
+						<div class="card clearfix">
+							<h3>Add another business name?</h3>
+							<p>Enter a name to check its availability. Some names may require manual validation based on <a href="#">business naming rules</a>. You can register multiple business names to protect your brand.</p>
+							<p>
+								<label for="name-search">Search for name</label><br />
+								<input id="name-search" type="text" value=""> <button type="button" class="btn btn-default btn-small">Check</button>
+							</p>
+						</div>
+					</div>
+				</main>
+				
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous" onclick="location.href = 'business-names-06.html'">Previous</button>
+						<button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+					</div><!-- controls-content -->
+				</div><!-- controls-container -->
+			</div>
+		</div>
     </div><!-- wrapper -->    
 
     <div class="saveforlater" id="saveForLater"></div>

@@ -54,243 +54,247 @@
 	</style>
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="confirmation">
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <span id="progress-percent" style="width: 75%"></span>
-                </div><!-- meter -->
-                <ul class="section-nav">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
-                    <li class="done"><a href="business-details.html"><span>3</span><br>Business<br> details</a></li>
-                    <li class="done"><a href="taxation-details.html"><span>4</span><br>Taxation<br> details</a></li>
-                    <li class="active"><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
-                </ul>
-            </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">5. Confirm application <span>(Step 5 of 6)</span></h1>
-            <div class="print">
-                <p><a href="" onclick="window.print();">Print</a></p>
-            </div><!-- print -->
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<main class="confirmation">
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 75%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
+							<li class="done"><a href="business-details.html"><span>3</span><br>Business<br> details</a></li>
+							<li class="done"><a href="taxation-details.html"><span>4</span><br>Taxation<br> details</a></li>
+							<li class="active"><span>5</span><br>Confirm<br> application</li>
+							<li><span>6</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+					<h1 id="heading" tabindex="-1">5. Confirm application <span>(Step 5 of 6)</span></h1>
+					<div class="print">
+						<p><a href="" onclick="window.print();">Print</a></p>
+					</div><!-- print -->
 
-        <!-- div class="grid-row clearfix custom-controls">
-            <div class="col6">
-                <p>
-                    <input id="bn" type="checkbox" value="bn">
-                    <label for="bn">Business Name Registration</label>
-                </p>
-                <p>
-                    <input id="co" type="checkbox" value="co">
-                    <label for="co">Company Registration</label>
-                </p>
-                <div class="company-registration clearfix">
-                <div class="col1">&nbsp;</div>
-                <div class="col11 last">
-                    <p>
-                        <input id="spc" type="checkbox" value="spc">
-                        <label for="spc">Special purpose company</label>
-                    </p>
-                    </div>
-                    <div class="col1">&nbsp;</div>
-                <div class="col11 last">
-                    <p>
-                        <input id="nid" type="checkbox" value="nid">
-                        <label for="nid">Identical business names</label>
-                    </p>
-                </div>
-                    <div class="col1">&nbsp;</div>
-                    <div class="col11 last">
-                        <p>
-                            <input id="rnid" type="checkbox" value="rnid">
-                            <label for="rnid">Reserved name identical</label>
-                        </p>
-                    </div>
-            </div>
-                <p>
-                    <input id="abn" type="checkbox" value="abn">
-                    <label for="abn">Australian Business Number (ABN)</label>
-                </p>
-                <p>
-                    <input id="tfn" type="checkbox" value="tfn">
-                    <label for="tfn">Business Tax File Number</label>
-                </p>
-                <p>
-                    <input id="gst" type="checkbox" value="gst">
-                    <label for="gst">Goods and Services Tax (GST)</label>
-                </p>
-                <p>
-                    <input id="payg" type="checkbox" value="payg">
-                    <label for="payg">Pay as you go withholding (PAYG)</label>
-                </p>
-            </div>
-            <div class="col6 last">
-                <p>
-                    <input id="fbt" type="checkbox" value="fbt">
-                    <label for="fbt">Fringe Benefits Tax</label>
-                </p>
-                <p>
-                    <input id="lct" type="checkbox" value="lct">
-                    <label for="lct">Luxury Car Tax</label>
-                </p>
-                <p>
-                    <input id="ftc" type="checkbox" value="ftc">
-                    <label for="ftc">Fuel Tax Credits</label>
-                </p>
-                <p>
-                    <input id="wet" type="checkbox" value="wet">
-                    <label for="wet">Wine Equalisation Tax</label>
-                </p>
-                <p>
-                    <input id="auskey" type="checkbox" value="auskey">
-                    <label for="auskey">AUSkey</label>
-                </p>
-            </div>
-            <div></div>
-        </div -->
-
-            <div class="grid-row clearfix">
-				<div>
-					<p>The declaration below will be displayed on the confirmation page, with an application that includes the following registrations:</p>
-					<ul>
-						<li>Business Name</li>
-						<li>Company</li>
-						<li>Australian Business Number (ABN)</li>
-						<li>Goods and Services Tax (GST)</li>
-						<li>AUSkey</li>
-					</ul>
-					<p>The lodger of the application is the applicant (the proposed business name holder)</p>
-				</div>
-                <!-- div>
-					<p>Use the following controls to include/exclude an Auskey, or to change who is lodging the application.</p>
-                    <label for="declaree">Person making the declaration:</label><br/>
-                    <select id="declaree">
-                        <option value="1" selected="">The applicant</option>
-                        <option value="2">Lodger, on behalf of the applicant</option>
-                    </select>
-                </div>
-				<div id="oz-key" class="custom-controls">
-					<p>
-						<input id="auskey" type="checkbox" value="auskey" checked>
-						<label for="auskey">Application includes AUSkey</label>
-					</p>
-				</div>
-				<div class="custom-controls">
-					<p>
-						<input id="excluded" type="checkbox" value="excluded">
-						<label for="excluded">Show what's been excluded</label>
-					</p>
-				</div -->
-            </div>
-
-			<div class="confirmation-heading">
-				<h2>Declaration <em style="font-family: open_sanslight,helvetica,arial,sans-serif; font-size: 75%">for applicant</em></h2>
-                <!-- h2>Declaration to the Australian Taxation Office (ATO) and the Australian Securities and Investments Commission (ASIC)</h2 -->
-				<!-- p><em>for authorised person</em></p -->
-            </div>
-			<div id="declaration" class="declaration-container hide-exclusions">
-				<!-- div class="grid-row clearfix">
-					<div class="col4">
-						<label for="declaree" class="input-left">Who is making the declaration?</label>
-					</div>
-					<div class="col8 last">
-						<select id="declaree">
-							<option value="1" selected>Isabella McGrath (lodger)</option>
-							<option value="2">Robert Johnson (director)</option>
-							<option value="3">Michael Johnson (secretary)</option>
-						</select>
-					</div>
-				</div -->
-				<div class="declaration-wrapper">
-				    <fieldset class="business-name custom-controls">
-				        <legend class="larger no-padding-bottom">Declaration to the Australian Taxation Office (ATO) and the Australian Securities and Investments Commission (ASIC)</legend>
-						<div class="grid-row">
-							<h3>Privacy</h3>
-							<p>The information provided to business.gov.au in this form for transmittal to ASIC and ATO may include personal information. All three organisations comply with their obligations under the Privacy Act 1988. The privacy policy pages for <a href="https://www.business.gov.au/Legal-notices/Privacy" target="_blank">business.gov.au<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>, <a href="http://www.asic.gov.au/privacy" target="_blank">ASIC<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> and <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ATO<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> describe how your personal information is handled, your rights to seek access to and correct personal information, and how to complain about breaches of privacy.</p>
-							<h3>Authority</h3>
-							<p>See <a href="http://www.asic.gov.au/asic/ASIC.NSF/byHeadline/Authorised%20lodgers%20for%20business%20names" target="_blank">who may be authorised to lodge an application to register a business name<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> for more information. It is an offence to provide false or misleading information to ASIC.</p>
-							<div class="grid-row">
-								<p>
-									<input type="checkbox" id="authorised" />
-									<label for="authorised">I am authorised to make this application on behalf of the Business.</label>
-								</p>
+				<!-- div class="grid-row clearfix custom-controls">
+					<div class="col6">
+						<p>
+							<input id="bn" type="checkbox" value="bn">
+							<label for="bn">Business Name Registration</label>
+						</p>
+						<p>
+							<input id="co" type="checkbox" value="co">
+							<label for="co">Company Registration</label>
+						</p>
+						<div class="company-registration clearfix">
+						<div class="col1">&nbsp;</div>
+						<div class="col11 last">
+							<p>
+								<input id="spc" type="checkbox" value="spc">
+								<label for="spc">Special purpose company</label>
+							</p>
 							</div>
-							<div>
-								<h3>Declaration</h3>
-								<p>
-									<input type="checkbox" id="applicant" />
-									<label for="applicant">I declare that I am the applicant (the proposed business name holder). ASIC may contact me if there are any questions regarding this application for registration of a business name.</label>
-								</p>
-							</div>
-							<div class="grid-row">
-								<h3>Eligibility</h3>
-								<p>You must declare that the following statements are true to confirm eligibility to register a business name. If either of these statements is untrue, your application will be forwarded to an ASIC staff member to determine whether you are eligible under the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</p>
-							</div>
-							<div class="grid-row">
-								<p>
-									<input type="checkbox" id="not-disqualified" />
-									<label for="not-disqualified">I declare that I am not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act</em> 2001<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</label>
-								</p>
-								<p>
-									<input type="checkbox" id="convictions" />
-									<label for="convictions">I declare that within the last 5 years I have not been:<br />
-										<span class="dot-point">convicted of, or</span><br />
-										<span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</li>
-									</label>
-								</p>
-							</div>
-							<div class="grid-row">
-								<h3>AUSkey</h3>
-								<p>
-									<input type="checkbox" id="auskey" />
-									<label for="auskey">I am the person identified as an associate eligible for an AUSkey in this application. This application is for an AUSkey to be held by me for that business. I understand the terms and conditions associated with that AUSkey. Notices about this AUSkey application, and that AUSkey, may be sent to the email address recorded for the business on the Australian Business Register.</label>
-								</p>
-							</div>
-							<div class="grid-row">
-								<h3>Consents and agreements</h3>
-								<p>
-									<input type="checkbox" id="company" />
-									<label for="company">I apply for the registration of a company on the basis of the information in this form and any attachments. I have the necessary written consents and agreements referred to in this application concerning the members and office holders, and I shall give the consents and agreements to the company after the company becomes registered. The information provided in this application and in any annexures is true and correct at the time of signing.</label>
-								</p>
-								<p>
-									<input type="checkbox" id="asic-conditions" />
-									<label for="asic-conditions">This application is submitted under, and is compliant with, the terms and conditions of the <a href="http://www.asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">Australian Securities and Investments Commission (ASIC) Electronic Lodgement Protocol<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</label>
-								</p>
-								<p>
-									<input type="checkbox" id="true-and-correct" />
-									<label for="true-and-correct">To the best of my knowledge, the information supplied in this application (including attachments if applicable) is true and correct.</label>
-								</p>
-							</div>
+							<div class="col1">&nbsp;</div>
+						<div class="col11 last">
+							<p>
+								<input id="nid" type="checkbox" value="nid">
+								<label for="nid">Identical business names</label>
+							</p>
 						</div>
-				    </fieldset>
-				</div>
-			</div>
-            <div class="controls-container">
-                <div class="controls-content">
-                    <button type="button" class="btn" onclick="location.href = 'taxation-details.html'">Previous</button>
-                    <button id="next" type="button" class="btn btn-default" onclick="location.href = 'payment.html'" disabled>Go to payment</button>
-                </div><!-- controls-content -->
-            </div>
-        </main>
-    </div><!-- wrapper -->
+							<div class="col1">&nbsp;</div>
+							<div class="col11 last">
+								<p>
+									<input id="rnid" type="checkbox" value="rnid">
+									<label for="rnid">Reserved name identical</label>
+								</p>
+							</div>
+					</div>
+						<p>
+							<input id="abn" type="checkbox" value="abn">
+							<label for="abn">Australian Business Number (ABN)</label>
+						</p>
+						<p>
+							<input id="tfn" type="checkbox" value="tfn">
+							<label for="tfn">Business Tax File Number</label>
+						</p>
+						<p>
+							<input id="gst" type="checkbox" value="gst">
+							<label for="gst">Goods and Services Tax (GST)</label>
+						</p>
+						<p>
+							<input id="payg" type="checkbox" value="payg">
+							<label for="payg">Pay as you go withholding (PAYG)</label>
+						</p>
+					</div>
+					<div class="col6 last">
+						<p>
+							<input id="fbt" type="checkbox" value="fbt">
+							<label for="fbt">Fringe Benefits Tax</label>
+						</p>
+						<p>
+							<input id="lct" type="checkbox" value="lct">
+							<label for="lct">Luxury Car Tax</label>
+						</p>
+						<p>
+							<input id="ftc" type="checkbox" value="ftc">
+							<label for="ftc">Fuel Tax Credits</label>
+						</p>
+						<p>
+							<input id="wet" type="checkbox" value="wet">
+							<label for="wet">Wine Equalisation Tax</label>
+						</p>
+						<p>
+							<input id="auskey" type="checkbox" value="auskey">
+							<label for="auskey">AUSkey</label>
+						</p>
+					</div>
+					<div></div>
+				</div -->
+
+					<div class="grid-row clearfix">
+						<div>
+							<p>The declaration below will be displayed on the confirmation page, with an application that includes the following registrations:</p>
+							<ul>
+								<li>Business Name</li>
+								<li>Company</li>
+								<li>Australian Business Number (ABN)</li>
+								<li>Goods and Services Tax (GST)</li>
+								<li>AUSkey</li>
+							</ul>
+							<p>The lodger of the application is the applicant (the proposed business name holder)</p>
+						</div>
+						<!-- div>
+							<p>Use the following controls to include/exclude an Auskey, or to change who is lodging the application.</p>
+							<label for="declaree">Person making the declaration:</label><br/>
+							<select id="declaree">
+								<option value="1" selected="">The applicant</option>
+								<option value="2">Lodger, on behalf of the applicant</option>
+							</select>
+						</div>
+						<div id="oz-key" class="custom-controls">
+							<p>
+								<input id="auskey" type="checkbox" value="auskey" checked>
+								<label for="auskey">Application includes AUSkey</label>
+							</p>
+						</div>
+						<div class="custom-controls">
+							<p>
+								<input id="excluded" type="checkbox" value="excluded">
+								<label for="excluded">Show what's been excluded</label>
+							</p>
+						</div -->
+					</div>
+
+					<div class="confirmation-heading">
+						<h2>Declaration <em style="font-family: open_sanslight,helvetica,arial,sans-serif; font-size: 75%">for applicant</em></h2>
+						<!-- h2>Declaration to the Australian Taxation Office (ATO) and the Australian Securities and Investments Commission (ASIC)</h2 -->
+						<!-- p><em>for authorised person</em></p -->
+					</div>
+					<div id="declaration" class="declaration-container hide-exclusions">
+						<!-- div class="grid-row clearfix">
+							<div class="col4">
+								<label for="declaree" class="input-left">Who is making the declaration?</label>
+							</div>
+							<div class="col8 last">
+								<select id="declaree">
+									<option value="1" selected>Isabella McGrath (lodger)</option>
+									<option value="2">Robert Johnson (director)</option>
+									<option value="3">Michael Johnson (secretary)</option>
+								</select>
+							</div>
+						</div -->
+						<div class="declaration-wrapper">
+							<fieldset class="business-name custom-controls">
+								<legend class="larger no-padding-bottom">Declaration to the Australian Taxation Office (ATO) and the Australian Securities and Investments Commission (ASIC)</legend>
+								<div class="grid-row">
+									<h3>Privacy</h3>
+									<p>The information provided to business.gov.au in this form for transmittal to ASIC and ATO may include personal information. All three organisations comply with their obligations under the Privacy Act 1988. The privacy policy pages for <a href="https://www.business.gov.au/Legal-notices/Privacy" target="_blank">business.gov.au<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>, <a href="http://www.asic.gov.au/privacy" target="_blank">ASIC<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> and <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ATO<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> describe how your personal information is handled, your rights to seek access to and correct personal information, and how to complain about breaches of privacy.</p>
+									<h3>Authority</h3>
+									<p>See <a href="http://www.asic.gov.au/asic/ASIC.NSF/byHeadline/Authorised%20lodgers%20for%20business%20names" target="_blank">who may be authorised to lodge an application to register a business name<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a> for more information. It is an offence to provide false or misleading information to ASIC.</p>
+									<div class="grid-row">
+										<p>
+											<input type="checkbox" id="authorised" />
+											<label for="authorised">I am authorised to make this application on behalf of the Business.</label>
+										</p>
+									</div>
+									<div>
+										<h3>Declaration</h3>
+										<p>
+											<input type="checkbox" id="applicant" />
+											<label for="applicant">I declare that I am the applicant (the proposed business name holder). ASIC may contact me if there are any questions regarding this application for registration of a business name.</label>
+										</p>
+									</div>
+									<div class="grid-row">
+										<h3>Eligibility</h3>
+										<p>You must declare that the following statements are true to confirm eligibility to register a business name. If either of these statements is untrue, your application will be forwarded to an ASIC staff member to determine whether you are eligible under the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</p>
+									</div>
+									<div class="grid-row">
+										<p>
+											<input type="checkbox" id="not-disqualified" />
+											<label for="not-disqualified">I declare that I am not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act</em> 2001<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</label>
+										</p>
+										<p>
+											<input type="checkbox" id="convictions" />
+											<label for="convictions">I declare that within the last 5 years I have not been:<br />
+												<span class="dot-point">convicted of, or</span><br />
+												<span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/"><em>Business Names Registration Act</em> 2011<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</li>
+											</label>
+										</p>
+									</div>
+									<div class="grid-row">
+										<h3>AUSkey</h3>
+										<p>
+											<input type="checkbox" id="auskey" />
+											<label for="auskey">I am the person identified as an associate eligible for an AUSkey in this application. This application is for an AUSkey to be held by me for that business. I understand the terms and conditions associated with that AUSkey. Notices about this AUSkey application, and that AUSkey, may be sent to the email address recorded for the business on the Australian Business Register.</label>
+										</p>
+									</div>
+									<div class="grid-row">
+										<h3>Consents and agreements</h3>
+										<p>
+											<input type="checkbox" id="company" />
+											<label for="company">I apply for the registration of a company on the basis of the information in this form and any attachments. I have the necessary written consents and agreements referred to in this application concerning the members and office holders, and I shall give the consents and agreements to the company after the company becomes registered. The information provided in this application and in any annexures is true and correct at the time of signing.</label>
+										</p>
+										<p>
+											<input type="checkbox" id="asic-conditions" />
+											<label for="asic-conditions">This application is submitted under, and is compliant with, the terms and conditions of the <a href="http://www.asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">Australian Securities and Investments Commission (ASIC) Electronic Lodgement Protocol<img class="ico-external" alt="Links to another web site" src="assets/img/ico-external.png"></a>.</label>
+										</p>
+										<p>
+											<input type="checkbox" id="true-and-correct" />
+											<label for="true-and-correct">To the best of my knowledge, the information supplied in this application (including attachments if applicable) is true and correct.</label>
+										</p>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="controls-container">
+						<div class="controls-content">
+							<button type="button" class="btn" onclick="location.href = 'taxation-details.html'">Previous</button>
+							<button id="next" type="button" class="btn btn-default" onclick="location.href = 'payment.html'" disabled>Go to payment</button>
+						</div><!-- controls-content -->
+					</div>
+				</main>
+			</div><!-- wrapper -->
+		</div>
+	</div>
 
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>

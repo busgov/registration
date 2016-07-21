@@ -12,110 +12,113 @@
     </style>
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <span id="progress-percent" style="width: 23%"></span>
-                </div><!-- meter -->
-                <ul class="section-nav">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="active"><span>2</span><br>Business<br> name</li>
-                    <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
-                </ul>
-            </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				
+				<main>
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 23%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="active"><span>2</span><br>Business<br> name</li>
+							<li><span>3</span><br>Business<br> details</li>
+							<li><span>4</span><br>Taxation<br>details</li>
+							<li><span>5</span><br>Confirm<br> application</li>
+							<li><span>6</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+					<h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
 
-            <div id="emptySearch" class="validation-container clearfix" style="display: none">
-                <div class="grid-row">
-                    <div class="validation-icon">
-                        <img src="assets/img/ico-alert-red.png" alt="Error">
-                    </div>
-                    <div class="validation-message">
-                        <h2><a id="emptySearchAnchor" href="">Error</a></h2>
-                        <p>You must choose an option for company name before continuing to step 3.</p>
-                    </div>
-                </div>
-            </div>
+					<div id="emptySearch" class="validation-container clearfix" style="display: none">
+						<div class="grid-row">
+							<div class="validation-icon">
+								<img src="assets/img/ico-alert-red.png" alt="Error">
+							</div>
+							<div class="validation-message">
+								<h2><a id="emptySearchAnchor" href="">Error</a></h2>
+								<p>You must choose an option for company name before continuing to step 3.</p>
+							</div>
+						</div>
+					</div>
 
-            <fieldset id="fieldsetPOIAddress">
-                <legend class="larger has-help">Do you have a proposed company name?<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
-                <div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix custom-controls">
-                    <div class="col12 last">
-                        <p>
-                            <input class="no-margin" type="radio" name="names" id="names-search" checked="checked" />
-                            <label class="no-margin" for="names-search"><strong>Create a new name</strong></label>
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-row" style="padding-bottom: 5.5em">
-                    <div class="col1">&nbsp;</div>
-                    <div class="col11 last">
-                        <label for="name-search">Enter name</label><br />
-                        <input id="name-search" type="text" value="Johnson and Griffith Plumbers">
-                        <label for="name-element" class="visuallyhidden">Choose legal element</label>
-                        <select id="name-element" class="larger" style="max-width: 12em;">
-                            <option selected="selected">Select element type</option>
-                            <option>Pty Ltd</option>
-                            <option>Pty</option>
-                            <option>Pty Ltd</option>
-                            <option>etc</option>
-                        </select>
-                        <button type="button" class="btn btn-default btn-inline" id="search-btn" onclick="location.href = 'company-name-01.html'">Check</button>
-                    </div>                    
-                </div>
+					<fieldset id="fieldsetPOIAddress">
+						<legend class="larger has-help">Do you have a proposed company name?<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
+						<div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix custom-controls">
+							<div class="col12 last">
+								<p>
+									<input class="no-margin" type="radio" name="names" id="names-search" checked="checked" />
+									<label class="no-margin" for="names-search"><strong>Create a new name</strong></label>
+								</p>
+							</div>
+						</div>
+						<div class="grid-row" style="padding-bottom: 5.5em">
+							<div class="col1">&nbsp;</div>
+							<div class="col11 last">
+								<label for="name-search">Enter name</label><br />
+								<input id="name-search" type="text" value="Johnson and Griffith Plumbers">
+								<label for="name-element" class="visuallyhidden">Choose legal element</label>
+								<select id="name-element" class="larger" style="max-width: 12em;">
+									<option selected="selected">Select element type</option>
+									<option>Pty Ltd</option>
+									<option>Pty</option>
+									<option>Pty Ltd</option>
+									<option>etc</option>
+								</select>
+								<button type="button" class="btn btn-default btn-inline" id="search-btn" onclick="location.href = 'company-name-01.html'">Check</button>
+							</div>                    
+						</div>
 
-                <div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix custom-controls">
-                    <div class="col12 last">
-                        <p>
-                            <input class="no-margin" type="radio" name="names" id="names-reserved" />
-                            <label class="no-margin" for="names-reserved"><strong>Use a reserved name</strong></label>
-                        </p>
-                    </div><!-- col -->
-                </div>
+						<div class="grid-row grid-row-lines grid-row-no-line-bottom clearfix custom-controls">
+							<div class="col12 last">
+								<p>
+									<input class="no-margin" type="radio" name="names" id="names-reserved" />
+									<label class="no-margin" for="names-reserved"><strong>Use a reserved name</strong></label>
+								</p>
+							</div><!-- col -->
+						</div>
 
-                <div class="grid-row grid-row-lines clearfix custom-controls">
-                    <div class="col12 last">
-                        <p>
-                            <input class="no-margin" type="radio" name="names" id="names-acn" />
-                            <label class="no-margin" for="names-acn"><strong>Use ACN</strong> <span class="field-note">We'll use the ACN generated by this application as your company name</span></label>
-                        </p>
-                    </div><!-- col -->
-                </div>
-            </fieldset>
+						<div class="grid-row grid-row-lines clearfix custom-controls">
+							<div class="col12 last">
+								<p>
+									<input class="no-margin" type="radio" name="names" id="names-acn" />
+									<label class="no-margin" for="names-acn"><strong>Use ACN</strong> <span class="field-note">We'll use the ACN generated by this application as your company name</span></label>
+								</p>
+							</div><!-- col -->
+						</div>
+					</fieldset>
 
-        </main>
-        
-        <div class="controls-container">
-            <div class="controls-content">
-                <button type="button" class="btn previous" onclick="location.href='entitlement.html?type=co,gst'">Previous</button>
-                <button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
-            </div><!-- controls-content -->
-        </div>
-    </div><!-- wrapper -->    
-
+				</main>
+				
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous" onclick="location.href='entitlement.html?type=co,gst'">Previous</button>
+						<button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
+					</div><!-- controls-content -->
+				</div>
+			</div><!-- wrapper -->    
+		</div>
+	</div>
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
 

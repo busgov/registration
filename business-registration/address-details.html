@@ -11,250 +11,254 @@
     <meta name="application-name" content="Business Registration" />
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <span id="progress-percent" style="width: 50%"></span>
-                </div><!-- meter -->
-                <ul class="section-nav-5">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
-                    <li class="active"><span>2</span><br>Business<br> details</li>
-                    <!-- li><span>4</span><br>Taxation<br>details</li -->
-                    <li><span>3</span><br>Confirm<br> application</li>
-                    <li><span>4</span><br>Payment<br> &amp; submit</li>
-                </ul>
-            </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">3. Business details <span>(Step 2 of 4)</span></h1>
-            <p>All fields are required unless marked as optional.</p>
-				
-			<!-- START SECTION 2 -->
-			<div id="section2" class="sub-section-container sub-section-open">
-				<h2>Address details</h2>
-				<div class="sub-section-content">
-					<fieldset id="busaddr" class="margin-bottom-075">
-						<legend class="larger margin4">Main business address</legend>
-						<div class="grid-row">
-							<p class="margin4">Your main business location must be a physical address.</p>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="country2" class="input-right">Country</label>
-							</div><!-- col -->
-							<div class="col8 last">
-                <select id="country">
-					<option value="aus" selected>Australia</option>
-					<option value="1">Afghanistan</option>
-					<option value="11">Argentina</option>
-					<option value="19">Bangladesh</option>
-					<option value="32">Brazil</option>
-					<option value="41">Canada</option>
-					<option value="46">China</option>
-					<option value="61">Denmark</option>
-					<option value="66">Egypt</option>
-					<option value="76">France</option>
-					<option value="86">Greece</option>
-					<option value="100">Hong Kong</option>
-					<option value="109">Israel</option>
-					<option value="110">Italy</option>
-					<option value="112">Japan</option>
-					<option value="124">Lebanon</option>
-					<option value="135">Malaysia</option>
-					<option value="144">Mexico</option>
-					<option value="157">Netherlands</option>
-					<option value="159">New Zealand</option>
-					<option value="168">Pakistan</option>
-					<option value="172">Papua New Guinea</option>
-					<option value="182">Romania</option>
-					<option value="200">Singapore</option>
-					<option value="206">South Africa</option>
-					<option value="214">Sweden</option>
-					<option value="220">Thailand</option>
-					<option value="227">Turkey</option>
-					<option value="234">United Kingdom</option>
-					<option value="236">United States</option>
-					<option value="246">Yemen</option>
-					<option value="248">Zimbabwe</option>
-					<option value="250">Etc</option>
-				</select>
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div id="freetext-addr" class="grid-row">
-							<div class="col4">
-								<label for="fulladdr" class="input-right">Address</label><br />
-							</div><!-- col -->
-							<div class="col8 last">
-								<p>Start typing the address and we'll see if we can find it for you:</p>
-								<input id="fulladdr" type="text">
-								<!-- p>Or you can: <button id="man-addr" class="btn">Enter it manually</button></p -->
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div id="readonly-addr" class="grid-row" style="display: none;">
-							<div class="col4">
-								<label for="fulladdr-readonly" class="input-right">Address</label><br />
-							</div><!-- col -->
-							<div class="col8 last">
-								<p>Selected address:</p>
-								<input id="fulladdr-readonly" type="text" readonly style="display: none;">
-								<div id="ro-addr" style="font-weight: bold;"></div>
-								<p>If this is not your address you can:</p>
-								<p><button id="find-addr" class="btn">Find a different address</button></p>
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div id="addr-local-fields" style="display: none;">
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr2line1" class="input-right">Address</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<p>You can  <button id="find-addr" class="btn">Search for an Address</button> or enter the details below:</p>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr2line1" class="input-right">Address line 1</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr2line1" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr2line2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="suburb2" class="input-right">Suburb</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="suburb2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="state2" class="input-right">State</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<select id="state2">
-										<option value="">Please select...</option>
-										<option value="ACT">Australian Capital Territory</option>
-										<option value="NSW">New South Wales</option>
-										<option value="NT">Northern Territory</option>
-										<option value="Qld">Queensland</option>
-										<option value="SA">South Australia</option>
-										<option value="Tas">Tasmania</option>
-										<option value="Vic">Victoria</option>
-										<option value="WA">Western Australia</option>
-									</select>
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="postcode2" class="input-right">Postcode</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="postcode2" type="number">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-						</div>
-						<div id="addr-international-fields" style="display: none;">
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr2line1" class="input-right">Address line 1</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr2line1" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="addr2line2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="suburb2" class="input-right">Suburb</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="suburb2" type="text">
-								</div><!-- col -->
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="state2" class="input-right">State</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="state3" type="">
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
 								</div>
-							</div><!-- grid-row -->
-							<div class="grid-row">
-								<div class="col4">
-									<label for="postcode2" class="input-right">Postal code</label>
-								</div><!-- col -->
-								<div class="col8 last">
-									<input id="postcode3" type="">
-								</div><!-- col -->
-							</div><!-- grid-row -->
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+				<main>
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 50%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav-5">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="done"><a href="business-names-05.html"><span>2</span><br>Business<br> name</a></li>
+							<li class="active"><span>2</span><br>Business<br> details</li>
+							<!-- li><span>4</span><br>Taxation<br>details</li -->
+							<li><span>3</span><br>Confirm<br> application</li>
+							<li><span>4</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+					<h1 id="heading" tabindex="-1">3. Business details <span>(Step 2 of 4)</span></h1>
+					<p>All fields are required unless marked as optional.</p>
+						
+					<!-- START SECTION 2 -->
+					<div id="section2" class="sub-section-container sub-section-open">
+						<h2>Address details</h2>
+						<div class="sub-section-content">
+							<fieldset id="busaddr" class="margin-bottom-075">
+								<legend class="larger margin4">Main business address</legend>
+								<div class="grid-row">
+									<p class="margin4">Your main business location must be a physical address.</p>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label for="country2" class="input-right">Country</label>
+									</div><!-- col -->
+									<div class="col8 last">
+						<select id="country">
+							<option value="aus" selected>Australia</option>
+							<option value="1">Afghanistan</option>
+							<option value="11">Argentina</option>
+							<option value="19">Bangladesh</option>
+							<option value="32">Brazil</option>
+							<option value="41">Canada</option>
+							<option value="46">China</option>
+							<option value="61">Denmark</option>
+							<option value="66">Egypt</option>
+							<option value="76">France</option>
+							<option value="86">Greece</option>
+							<option value="100">Hong Kong</option>
+							<option value="109">Israel</option>
+							<option value="110">Italy</option>
+							<option value="112">Japan</option>
+							<option value="124">Lebanon</option>
+							<option value="135">Malaysia</option>
+							<option value="144">Mexico</option>
+							<option value="157">Netherlands</option>
+							<option value="159">New Zealand</option>
+							<option value="168">Pakistan</option>
+							<option value="172">Papua New Guinea</option>
+							<option value="182">Romania</option>
+							<option value="200">Singapore</option>
+							<option value="206">South Africa</option>
+							<option value="214">Sweden</option>
+							<option value="220">Thailand</option>
+							<option value="227">Turkey</option>
+							<option value="234">United Kingdom</option>
+							<option value="236">United States</option>
+							<option value="246">Yemen</option>
+							<option value="248">Zimbabwe</option>
+							<option value="250">Etc</option>
+						</select>
+									</div><!-- col -->
+								</div><!-- grid-row -->
+								<div id="freetext-addr" class="grid-row">
+									<div class="col4">
+										<label for="fulladdr" class="input-right">Address</label><br />
+									</div><!-- col -->
+									<div class="col8 last">
+										<p>Start typing the address and we'll see if we can find it for you:</p>
+										<input id="fulladdr" type="text">
+										<!-- p>Or you can: <button id="man-addr" class="btn">Enter it manually</button></p -->
+									</div><!-- col -->
+								</div><!-- grid-row -->
+								<div id="readonly-addr" class="grid-row" style="display: none;">
+									<div class="col4">
+										<label for="fulladdr-readonly" class="input-right">Address</label><br />
+									</div><!-- col -->
+									<div class="col8 last">
+										<p>Selected address:</p>
+										<input id="fulladdr-readonly" type="text" readonly style="display: none;">
+										<div id="ro-addr" style="font-weight: bold;"></div>
+										<p>If this is not your address you can:</p>
+										<p><button id="find-addr" class="btn">Find a different address</button></p>
+									</div><!-- col -->
+								</div><!-- grid-row -->
+								<div id="addr-local-fields" style="display: none;">
+									<div class="grid-row">
+										<div class="col4">
+											<label for="addr2line1" class="input-right">Address</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<p>You can  <button id="find-addr" class="btn">Search for an Address</button> or enter the details below:</p>
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="addr2line1" class="input-right">Address line 1</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="addr2line1" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="addr2line2" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="suburb2" class="input-right">Suburb</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="suburb2" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="state2" class="input-right">State</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<select id="state2">
+												<option value="">Please select...</option>
+												<option value="ACT">Australian Capital Territory</option>
+												<option value="NSW">New South Wales</option>
+												<option value="NT">Northern Territory</option>
+												<option value="Qld">Queensland</option>
+												<option value="SA">South Australia</option>
+												<option value="Tas">Tasmania</option>
+												<option value="Vic">Victoria</option>
+												<option value="WA">Western Australia</option>
+											</select>
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="postcode2" class="input-right">Postcode</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="postcode2" type="number">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+								</div>
+								<div id="addr-international-fields" style="display: none;">
+									<div class="grid-row">
+										<div class="col4">
+											<label for="addr2line1" class="input-right">Address line 1</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="addr2line1" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="addr2line2" class="input-right">Address line 2 <span class="field-note">(optional)</span></label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="addr2line2" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="suburb2" class="input-right">Suburb</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="suburb2" type="text">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="state2" class="input-right">State</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="state3" type="">
+										</div>
+									</div><!-- grid-row -->
+									<div class="grid-row">
+										<div class="col4">
+											<label for="postcode2" class="input-right">Postal code</label>
+										</div><!-- col -->
+										<div class="col8 last">
+											<input id="postcode3" type="">
+										</div><!-- col -->
+									</div><!-- grid-row -->
+								</div>
+							</fieldset>
+							<!-- fieldset class="margin-bottom-075">
+								<legend class="larger margin4">Contact details</legend>
+								<div class="grid-row">
+									<div class="col4">
+										<label for="contactemail" class="input-right">Email</label>
+									</div>
+									<div class="col8 last">
+										<input id="contactemail" type="text">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label for="contactphone" class="input-right">Phone</label>
+									</div>
+									<div class="col8 last">
+										<input id="contactphone" type="text">
+									</div>
+								</div>
+							</fieldset -->
+						
+							<div class="controls-container">
+								<div class="controls-content">
+									<button id="bus-addr-prev" type="button" class="btn previous">Previous</button><button id="bus-addr-next" type="button" class="btn btn-default next">Next</button>
+								</div><!-- controls-content -->
+							</div>
 						</div>
-					</fieldset>
-					<!-- fieldset class="margin-bottom-075">
-						<legend class="larger margin4">Contact details</legend>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="contactemail" class="input-right">Email</label>
-							</div>
-							<div class="col8 last">
-								<input id="contactemail" type="text">
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="contactphone" class="input-right">Phone</label>
-							</div>
-							<div class="col8 last">
-								<input id="contactphone" type="text">
-							</div>
-						</div>
-					</fieldset -->
-				
-					<div class="controls-container">
-						<div class="controls-content">
-							<button id="bus-addr-prev" type="button" class="btn previous">Previous</button><button id="bus-addr-next" type="button" class="btn btn-default next">Next</button>
-						</div><!-- controls-content -->
 					</div>
-				</div>
+
+				</main>
+
 			</div>
-
-		</main>
-
-    </div><!-- wrapper -->
+		</div>
+	</div>
 
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>

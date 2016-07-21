@@ -12,211 +12,215 @@
     </style>
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-        <div class="card">
-            <fieldset class="no-margin">
-                <legend class="larger margin4 padding-bottom-05"><button class="btn btn-small" id="btnHide" style="display: none">Hide</button><button class="btn btn-small" id="btnShow">Show</button> Application search filters<a href="#"><img class="help-icon padding-right-1" src="assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
-                <div class="filter-container" id="filterContainer" style="display: none">
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="field1" class="input-right">Application or receipt number</label>
-                        </div>
-                        <div class="col8 last">
-                            <input id="field1" type="text">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="date-from" class="input-right">Date from <span class="field-note">(DD/MM/YYYY)</span></label>
-                        </div>
-                        <div class="col8 last">
-                            <input id="date-from" type="text" style="width: 6em">&nbsp;&nbsp;
-                            <label for="date-to" class="input-right label-inline">Date to <span class="field-note">(DD/MM/YYYY)</span></label>
-                            <input id="date-to" type="text" style="width: 6em; ">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="field3" class="input-right">ABN or ACN</label>
-                        </div>
-                        <div class="col8 last">
-                            <input id="field3" type="number">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="field4" class="input-right">Business or company name</label>
-                        </div>
-                        <div class="col8 last">
-                            <input id="field4" type="text">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="col4">
-                            <label for="field5" class="input-right">Status of application</label>
-                        </div>
-                        <div class="col8 last">
-                            <select id="field5">
-                                <option>Show all</option>
-                                <option>Saved but not complete</option>
-                                <option>Completed</option>
-                                <option>Payment declined</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="controls-clear">
-                        <p class="margin4"><button type="button" class="btn btn-default btn-inline" id="btnSearch">Search</button></p>
-                    </div>
-                </div><!-- filterContainer -->
-            </fieldset>
-        </div>
+				<div class="card">
+					<fieldset class="no-margin">
+						<legend class="larger margin4 padding-bottom-05"><button class="btn btn-small" id="btnHide" style="display: none">Hide</button><button class="btn btn-small" id="btnShow">Show</button> Application search filters<a href="#"><img class="help-icon padding-right-1" src="assets/img/ico-help-form.png" alt="Help with question" /></a></legend>
+						<div class="filter-container" id="filterContainer" style="display: none">
+							<div class="grid-row">
+								<div class="col4">
+									<label for="field1" class="input-right">Application or receipt number</label>
+								</div>
+								<div class="col8 last">
+									<input id="field1" type="text">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="date-from" class="input-right">Date from <span class="field-note">(DD/MM/YYYY)</span></label>
+								</div>
+								<div class="col8 last">
+									<input id="date-from" type="text" style="width: 6em">&nbsp;&nbsp;
+									<label for="date-to" class="input-right label-inline">Date to <span class="field-note">(DD/MM/YYYY)</span></label>
+									<input id="date-to" type="text" style="width: 6em; ">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="field3" class="input-right">ABN or ACN</label>
+								</div>
+								<div class="col8 last">
+									<input id="field3" type="number">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="field4" class="input-right">Business or company name</label>
+								</div>
+								<div class="col8 last">
+									<input id="field4" type="text">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="field5" class="input-right">Status of application</label>
+								</div>
+								<div class="col8 last">
+									<select id="field5">
+										<option>Show all</option>
+										<option>Saved but not complete</option>
+										<option>Completed</option>
+										<option>Payment declined</option>
+									</select>
+								</div>
+							</div>
+							<div class="controls-clear">
+								<p class="margin4"><button type="button" class="btn btn-default btn-inline" id="btnSearch">Search</button></p>
+							</div>
+						</div><!-- filterContainer -->
+					</fieldset>
+				</div>
 
-        <div id="applicationResults">
+				<div id="applicationResults">
 
-            <div class="dashboard-container">
-                <table>
-                    <caption>Application status: <strong>#16AN8710</strong><br /><span>Submitted on 18 April 2016 &nbsp;<button class="btn btn-small">Refresh</button></span></caption>
-                    <thead>
-                        <tr>
-                            <th class="status-item">Registration item</th>
-                            <th class="status-detail">Detail</th>
-                            <th class="status-information">Information</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
-                        <td>Receipt number 376711075</td>
-                        <td><a href="">Payment details</a></td>
-                    </tr>
-                    <tr>
-                        <td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
-                        <td><span class="abn1">68 102 299 331</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn1">Copy</button></td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="waiting"><span class="visuallyhidden">Waiting - </span>Business name</td>
-                        <td>Rockhollow</td>
-                        <td><a href="">Waiting</a></td>
-                    </tr>
-                </table>
-            </div>
+					<div class="dashboard-container">
+						<table>
+							<caption>Application status: <strong>#16AN8710</strong><br /><span>Submitted on 18 April 2016 &nbsp;<button class="btn btn-small">Refresh</button></span></caption>
+							<thead>
+								<tr>
+									<th class="status-item">Registration item</th>
+									<th class="status-detail">Detail</th>
+									<th class="status-information">Information</th>
+								</tr>
+							</thead>
+							<tr>
+								<td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
+								<td>Receipt number 376711075</td>
+								<td><a href="">Payment details</a></td>
+							</tr>
+							<tr>
+								<td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
+								<td><span class="abn1">68 102 299 331</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn1">Copy</button></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="waiting"><span class="visuallyhidden">Waiting - </span>Business name</td>
+								<td>Rockhollow</td>
+								<td><a href="">Waiting</a></td>
+							</tr>
+						</table>
+					</div>
 
-            <div id="application-16TL3306">
-                <div class="dashboard-container">
-                    <table>
-                        <caption>Application status: <strong>#16TL3306</strong><br /><span>Completed on 11 April 2016</span><span class="controls"><a href="javascript:void(0);" id="linkOne" class="remove">Delete</a></span></caption>
-                        <thead>
-                            <tr>
-                                <th class="status-item">Registration item</th>
-                                <th class="status-detail">Detail</th>
-                                <th class="status-information">Information</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
-                            <td>Receipt number 176920075</td>
-                            <td><a href="">Payment details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>Company</td>
-                            <td>JOHNSON PLUMBERS PTY PTD</td>
-                            <td><a href="">Download certificate (PDF)</a></td>
-                        </tr>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
-                            <td>Bob's Plumbing</td>
-                            <td><a href="">Download certificate (PDF)</a></td>
-                        </tr>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
-                            <td>Bob's Whitegoods Repairs</td>
-                            <td><a href="">Download certificate (PDF)</a></td>
-                        </tr>
-                        <tr>
-                            <td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
-                            <td>Canberra plumbing</td>
-                            <td><a href="">Declined</a></td>
-                        </tr>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
-                            <td><span class="abn2">68 957 383 599</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn2">Copy</button></td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="registered"><span class="visuallyhidden">Success - </span>GST</td>
-                            <td>Done</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="no-border-bottom registered"><span class="visuallyhidden">Success - </span>PAYG</td>
-                            <td class="status-waiting no-border-bottom">Done</td>
-                            <td class="no-border-bottom">&nbsp;</td>
-                        </tr>
-                    </table>
-                </div>
-            </div><!-- applicationResults -->
-        </div><!-- 16TL3306 -->
+					<div id="application-16TL3306">
+						<div class="dashboard-container">
+							<table>
+								<caption>Application status: <strong>#16TL3306</strong><br /><span>Completed on 11 April 2016</span><span class="controls"><a href="javascript:void(0);" id="linkOne" class="remove">Delete</a></span></caption>
+								<thead>
+									<tr>
+										<th class="status-item">Registration item</th>
+										<th class="status-detail">Detail</th>
+										<th class="status-information">Information</th>
+									</tr>
+								</thead>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
+									<td>Receipt number 176920075</td>
+									<td><a href="">Payment details</a></td>
+								</tr>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>Company</td>
+									<td>JOHNSON PLUMBERS PTY PTD</td>
+									<td><a href="">Download certificate (PDF)</a></td>
+								</tr>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
+									<td>Bob's Plumbing</td>
+									<td><a href="">Download certificate (PDF)</a></td>
+								</tr>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
+									<td>Bob's Whitegoods Repairs</td>
+									<td><a href="">Download certificate (PDF)</a></td>
+								</tr>
+								<tr>
+									<td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
+									<td>Canberra plumbing</td>
+									<td><a href="">Declined</a></td>
+								</tr>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
+									<td><span class="abn2">68 957 383 599</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn2">Copy</button></td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="registered"><span class="visuallyhidden">Success - </span>GST</td>
+									<td>Done</td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="no-border-bottom registered"><span class="visuallyhidden">Success - </span>PAYG</td>
+									<td class="status-waiting no-border-bottom">Done</td>
+									<td class="no-border-bottom">&nbsp;</td>
+								</tr>
+							</table>
+						</div>
+					</div><!-- applicationResults -->
+				</div><!-- 16TL3306 -->
 
-        <div class="dashboard-container">
-            <table>
-                <caption>Application status: <strong>#16XH9172</strong><br /><span>Declined on 08 April 2016</span><span class="controls"><a href="javascript:void(0);" id="linkTwo" class="remove">Delete</a></span></caption>
-                <thead>
-                    <tr>
-                        <th class="status-item">Registration item</th>
-                        <th class="status-detail">Detail</th>
-                        <th class="status-information">Information</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td class="declined"><span class="visuallyhidden">Declined - </span>Payment declined</td>
-                    <td>Receipt number 376711075</td>
-                    <td><a href="">Payment details</a></td>
-                </tr>
-                <tr>
-                    <td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
-                    <td>Woolsworth</td>
-                    <td><a href="">Declined</a></td>
-                </tr>
-            </table>
-        </div>
+				<div class="dashboard-container">
+					<table>
+						<caption>Application status: <strong>#16XH9172</strong><br /><span>Declined on 08 April 2016</span><span class="controls"><a href="javascript:void(0);" id="linkTwo" class="remove">Delete</a></span></caption>
+						<thead>
+							<tr>
+								<th class="status-item">Registration item</th>
+								<th class="status-detail">Detail</th>
+								<th class="status-information">Information</th>
+							</tr>
+						</thead>
+						<tr>
+							<td class="declined"><span class="visuallyhidden">Declined - </span>Payment declined</td>
+							<td>Receipt number 376711075</td>
+							<td><a href="">Payment details</a></td>
+						</tr>
+						<tr>
+							<td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
+							<td>Woolsworth</td>
+							<td><a href="">Declined</a></td>
+						</tr>
+					</table>
+				</div>
 
-        <div class="cart-container dashboard-pagination">
-            <div class="result-row">
-                <div class="result-cell">Applications: <strong>1 to 3</strong> of 4 total</div>
-                <div class="result-cell result-count">Show: <a href="">5</a> | <a href="">10</a> | <a href="">20</a></div>
-                <div class="result-cell numbers">Page: <span class="current">1</span> <span><a href="">2</a></span> <span><a href="">3</a></span> <span><a href="">Next</a></span></div>
-            </div>
-        </div>
+				<div class="cart-container dashboard-pagination">
+					<div class="result-row">
+						<div class="result-cell">Applications: <strong>1 to 3</strong> of 4 total</div>
+						<div class="result-cell result-count">Show: <a href="">5</a> | <a href="">10</a> | <a href="">20</a></div>
+						<div class="result-cell numbers">Page: <span class="current">1</span> <span><a href="">2</a></span> <span><a href="">3</a></span> <span><a href="">Next</a></span></div>
+					</div>
+				</div>
 
-        <footer>
-            <ul>
-                <li><a href="#">Legal notices</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Site map</a></li>
-            </ul>
-        </footer>
+				<footer>
+					<ul>
+						<li><a href="#">Legal notices</a></li>
+						<li><a href="#">Accessibility</a></li>
+						<li><a href="#">Glossary</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+				</footer>
 
-    </div><!-- wrapper -->  
+			</div><!-- wrapper -->  
+		</div>
+	</div>
     <div id="dialogOne" style="display:none;">
         <h1>Confirm delete</h1>
         <p>Are you sure you want to delete application #16TL3306?</p>

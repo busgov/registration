@@ -12,95 +12,99 @@
     </style>
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#" class="btn-save">Save and return</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-        <main>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <span id="progress-percent" style="width: 23%"></span>
-                </div><!-- meter -->
-                <ul class="section-nav">
-                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-                    <li class="active"><span>2</span><br>Business<br> name</li>
-                    <li><span>3</span><br>Business<br> details</li>
-                    <li><span>4</span><br>Taxation<br>details</li>
-                    <li><span>5</span><br>Confirm<br> application</li>
-                    <li><span>6</span><br>Payment<br> &amp; submit</li>
-                </ul>
-            </div><!-- progress-container -->
-            <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
-<div class="sub-section-container sub-section-open">
-        <h2>Business Name</h2>
-		<fieldset>
-		<legend>Enter your proposed name to check if it's available to register as a business name. <strong>Remember:</strong> It's also a good idea to check that the name isn't already a <a href="http://www.ipaustralia.gov.au/trade-marks">trade mark</a> or <a href="https://www.business.gov.au/Info/Run/Advertising-and-online/Register-a-website-name">website name</a> before registering.</legend>
-            <div class="result-container">
-        <div class="result-row">
-            <div class="result-cell cell-icon">
-                 <img src="assets/img/ico-exclamation-orange.png" alt="Alert">
-            </div>
-            <div class="result-cell cell-detail custom-controls">
-                <h2>ABORIGINAL CORPORATION OF CHURCHILL</h2>
+				<main>
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 23%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="active"><span>2</span><br>Business<br> name</li>
+							<li><span>3</span><br>Business<br> details</li>
+							<li><span>4</span><br>Taxation<br>details</li>
+							<li><span>5</span><br>Confirm<br> application</li>
+							<li><span>6</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+					<h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
+		<div class="sub-section-container sub-section-open">
+				<h2>Business Name</h2>
+				<fieldset>
+				<legend>Enter your proposed name to check if it's available to register as a business name. <strong>Remember:</strong> It's also a good idea to check that the name isn't already a <a href="http://www.ipaustralia.gov.au/trade-marks">trade mark</a> or <a href="https://www.business.gov.au/Info/Run/Advertising-and-online/Register-a-website-name">website name</a> before registering.</legend>
+					<div class="result-container">
+				<div class="result-row">
+					<div class="result-cell cell-icon">
+						 <img src="assets/img/ico-exclamation-orange.png" alt="Alert">
+					</div>
+					<div class="result-cell cell-detail custom-controls">
+						<h2>ABORIGINAL CORPORATION OF CHURCHILL</h2>
 
-				<blockquote>Name may not be available. ABORIGINAL CORPORATION OF CHURCHILL contains a restricted word or expression and may require Ministerial or other official consent to be used. This name may be rejected. We suggest you try another name. Restricted word or expression ABORIGINAL CORP</blockquote>
-				<div style="margin-left: 40px">
-					<p>You will need to attach a letter of consent to use this name.</p>
-					<p>
-						<input type="file" id="letter" accept=".pdf">
-						<label for="letter">Choose a file&hellip;</label>
-					</p>
+						<blockquote>Name may not be available. ABORIGINAL CORPORATION OF CHURCHILL contains a restricted word or expression and may require Ministerial or other official consent to be used. This name may be rejected. We suggest you try another name. Restricted word or expression ABORIGINAL CORP</blockquote>
+						<div style="margin-left: 40px">
+							<p>You will need to attach a letter of consent to use this name.</p>
+							<p>
+								<input type="file" id="letter" accept=".pdf">
+								<label for="letter">Choose a file&hellip;</label>
+							</p>
+						</div>
+					</div>
+					<div class="result-cell cell-action">
+						<label class="visuallyhidden" for="BusinessNames_SearchedBusinessName_SelectedPrice">Select duration:</label>
+						<select class="registration-duration" id="BusinessNames_SearchedBusinessName_SelectedPrice" name="BusinessNames.SearchedBusinessName.SelectedPrice">
+							<option value="34.00">1 year $34.00</option>
+							<option value="80.00">3 year $80.00</option>
+						</select>
+						<button class="btn btn-inline ajax-button no-margin-right" id="add-name" onclick="location.href='business-names-min-added.html'" type="button">Add this name</button><br>
+						<a href="javascript:void(0);" class="smaller ajax-link">Search for something else</a>
+					</div>
 				</div>
 			</div>
-			<div class="result-cell cell-action">
-				<label class="visuallyhidden" for="BusinessNames_SearchedBusinessName_SelectedPrice">Select duration:</label>
-				<select class="registration-duration" id="BusinessNames_SearchedBusinessName_SelectedPrice" name="BusinessNames.SearchedBusinessName.SelectedPrice">
-					<option value="34.00">1 year $34.00</option>
-					<option value="80.00">3 year $80.00</option>
-				</select>
-				<button class="btn btn-inline ajax-button no-margin-right" id="add-name" onclick="location.href='business-names-min-added.html'" type="button">Add this name</button><br>
-				<a href="javascript:void(0);" class="smaller ajax-link">Search for something else</a>
-            </div>
+
+
+				<div class="tip margin-top-075">
+					<strong>Similar registered names</strong><p>Want a business name that stands out? Check that your proposed name isnt too similar to the names below::</p>
+					<ul class="lines">
+							<li>ABORIGINAL CORPORATION PTY LTD</li>
+							<li>ABORIGINAL CORPORATION CHURCHIL PTY LTD</li>
+							<li>ABORIGINAL CORPORATION FOR COMMUNITY AWARNESS OF ABORIGINAL PEOPLE (A.C.C.A.A.P.) INC</li>
+					</ul>
+				</div>
+					</fieldset>
+				</div>
+
+				</main>
+
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous" onclick="location.href = 'business-names.html'">Previous</button>
+						<button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+					</div><!-- controls-content -->
+				</div><!-- controls-container -->
+			</div><!-- wrapper -->
 		</div>
-    </div>
-
-
-		<div class="tip margin-top-075">
-            <strong>Similar registered names</strong><p>Want a business name that stands out? Check that your proposed name isnt too similar to the names below::</p>
-            <ul class="lines">
-                    <li>ABORIGINAL CORPORATION PTY LTD</li>
-                    <li>ABORIGINAL CORPORATION CHURCHIL PTY LTD</li>
-                    <li>ABORIGINAL CORPORATION FOR COMMUNITY AWARNESS OF ABORIGINAL PEOPLE (A.C.C.A.A.P.) INC</li>
-            </ul>
-        </div>
-			</fieldset>
-		</div>
-
-        </main>
-
-        <div class="controls-container">
-            <div class="controls-content">
-                <button type="button" class="btn previous" onclick="location.href = 'business-names.html'">Previous</button>
-                <button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
-            </div><!-- controls-content -->
-        </div><!-- controls-container -->
-    </div><!-- wrapper -->
+	</div>
    
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
