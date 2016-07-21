@@ -21,10 +21,7 @@ $(document).ready(function() {
             else if (e.target.value)
                 fileName = e.target.value.split("\\").pop();
 
-            if (fileName)
-                $label.find("span").html(fileName);
-            else
-                $label.html(labelVal);
+            $label.find("span").html(fileName);
         });
 
         // Firefox bug fix
