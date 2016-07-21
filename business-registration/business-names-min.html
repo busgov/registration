@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business name - Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper wrapper-main">
+        <header class="clearfix">
+            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+            <nav id="settings">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="settings.html"><span>Settings</span></a>
+                        <div class="sub-nav">
+                            <ul class="sub-nav-group">
+                                <li><a href="#" class="btn-save">Save and return</a></li>
+                                <li><a href="#">Start a new application</a></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span id="progress-percent" style="width: 23%"></span>
+                </div><!-- meter -->
+                <ul class="section-nav">
+                    <li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+                    <li class="active"><span>2</span><br>Business<br> name</li>
+                    <li><span>3</span><br>Business<br> details</li>
+                    <li><span>4</span><br>Taxation<br>details</li>
+                    <li><span>5</span><br>Confirm<br> application</li>
+                    <li><span>6</span><br>Payment<br> &amp; submit</li>
+                </ul>
+            </div><!-- progress-container -->
+            <h1 id="heading" tabindex="-1">2. Business name <span>(Step 2 of 6)</span></h1>
+
+            <div class="result-container">
+        <div class="result-row">
+            <div class="result-cell cell-icon">
+                 <img src="assets/img/ico-exclamation-orange.png" alt="Alert">
+            </div>
+            <div class="result-cell cell-detail custom-controls">
+                <h2>ABORIGINAL CORPORATION OF CHURCHILL</h2>
+
+				<blockquote>Name may not be available. ABORIGINAL CORPORATION OF CHURCHILL contains a restricted word or expression and may require Ministerial or other official consent to be used. This name may be rejected. We suggest you try another name. Restricted word or expression ABORIGINAL CORP</blockquote>
+				<p class="label">You will need to attach a letter of consent to use this name.</p>
+				<p>
+					<input type="file" id="letter">
+					<label for="letter">Choose a file&hellip;</label>
+				</p>
+			</div>
+			<div class="result-cell cell-action">
+				<label class="visuallyhidden" for="BusinessNames_SearchedBusinessName_SelectedPrice">Select duration:</label>
+				<select class="registration-duration" id="BusinessNames_SearchedBusinessName_SelectedPrice" name="BusinessNames.SearchedBusinessName.SelectedPrice">
+					<option value="34.00">1 year $34.00</option>
+					<option value="80.00">3 year $80.00</option>
+				</select>
+				<button class="btn btn-inline ajax-button no-margin-right" id="add-name" onclick="location.href='business-names-min-added.html'" type="button">Add this name</button><br>
+				<a href="javascript:void(0);" class="smaller ajax-link">Search for something else</a>
+            </div>
+		</div>
+    </div>
+
+		<div class="tip margin-top-075">
+            <strong>Similar registered names</strong><p>Want a business name that stands out? Check that your proposed name isnt too similar to the names below::</p>
+            <ul class="lines">
+                    <li>ABORIGINAL CORPORATION PTY LTD</li>
+                    <li>ABORIGINAL CORPORATION CHURCHIL PTY LTD</li>
+                    <li>ABORIGINAL CORPORATION FOR COMMUNITY AWARNESS OF ABORIGINAL PEOPLE (A.C.C.A.A.P.) INC</li>
+            </ul>
+        </div>
+
+        </main>
+
+        <div class="controls-container">
+            <div class="controls-content">
+                <button type="button" class="btn previous" onclick="location.href = 'business-names.html'">Previous</button>
+                <button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+            </div><!-- controls-content -->
+        </div><!-- controls-container -->
+    </div><!-- wrapper -->
+   
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+	<script src="assets/js/file-inputs.js"></script>
+    <script type="text/javascript">
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+        $(document).ready(function () {
+            initSaveForLater();
+            initApplicationOptions();
+        });
+
+        $('#trigger').click(function () {
+            $('.hide-me').fadeOut('fast', function () { $('#the-rest').fadeIn('fast'); });
+            return false;
+        });
+
+        $('#hide-names').click(function () {
+            $('#similar-names').hide('fast');
+            return false;
+        });
+    </script>
+</body>
+</html>
