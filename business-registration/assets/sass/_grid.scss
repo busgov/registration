@@ -15,9 +15,12 @@
 	clear: both;
 	margin-bottom: 0;
 	
-	 p {
+	p {
 		margin-top: 0.5em;
 	}
+    p.label {
+        margin-top: 0;
+    }
 }
 .grid-row-shaded {
 	background-color: $blue-pale;
@@ -73,11 +76,6 @@
 		width: 100%;
 		height: auto;
 		display: block;		
-	}
-	
-	img.ico-external {
-		width: auto;
-		display: inline;
 	}
 
 	&.last {
