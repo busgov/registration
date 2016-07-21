@@ -21,184 +21,188 @@
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
 </head>
 <body>
-    <div class="wrapper wrapper-main">
-        <header class="clearfix">
-            <div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-            <div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-            <nav id="settings">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="settings.html"><span>Settings</span></a>
-                        <div class="sub-nav">
-                            <ul class="sub-nav-group">
-                                <li><a href="#">Set up save</a></li>
-                                <li><a href="#">Start a new application</a></li>
-                                <li><a href="#">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#">Set up save</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-        <main>
-            <h1 id="heading" tabindex="-1">Content management</h1>
-			<div class="grid-row compare-wrapper clearfix">
-				<div class="col4">
-					<div class="grid-row">
-						<h3>Import content file</h3>
-						<p>Select the target file to be imported using the browse button, then click the Import button to process the file.</p>
+				<main>
+					<h1 id="heading" tabindex="-1">Content management</h1>
+					<div class="grid-row compare-wrapper clearfix">
+						<div class="col4">
+							<div class="grid-row">
+								<h3>Import content file</h3>
+								<p>Select the target file to be imported using the browse button, then click the Import button to process the file.</p>
+							</div>
+							<div class="custom-controls">
+								<p>
+									<input type="file" id="filename" />
+									<label for="filename">Choose a file&hellip;</label>
+								</p>
+									
+							</div>
+							<div class="grid-row">
+								<button id="import-btn" type="button" class="btn btn-small" disabled>Import</button><span id="loading1" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span>
+							</div>
+						</div>
+						<div class="col4 last">
+							<div class="grid-row">
+								<h3>Export to local file</h3>
+								<p>Click the export button to save a copy of the current content list.</p>
+							</div>
+							<div class="grid-row">
+								<button id="import-btn" type="button" class="btn btn-small">Export</button><!-- span id="loading1" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span -->
+							</div>
+						</div>
+						<div class="col4">
+							<div class="grid-row">
+								<h3>Compare content keys</h3>
+								<p>Generate comparison information between the keys in the code and database.</p>
+							</div>
+							<div class="grid-row">
+								<button id="compare-btn" type="button" class="btn btn-small">Compare</button><span id="loading2" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span>
+							</div>
+						</div>
 					</div>
-					<div class="custom-controls">
-						<p>
-							<input type="file" id="filename" />
-							<label for="filename">Choose a file&hellip;</label>
-						</p>
-							
+					<div id="import-results" class="compact" style="display: none;">
+						<div class="confirmation-heading"></div>
+						<div class="grid-row">
+							<h3>File imported<button id="dismiss-imp" style="float: right; margin-right: 11px;" type="button" class="btn btn-add btn-default">Dismiss</button></h3>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<table>
+									<tbody>
+										<tr>
+											<th class="field-name right">File</th>
+											<td id="fname"></td>
+										</tr>
+										<tr>
+											<th class="field-name right">Time</th>
+											<td>21/04/2016 16:24</td>
+										</tr>
+										<tr>
+											<th class="field-name right">Added</th>
+											<td>32</td>
+										</tr>
+										<tr>
+											<th class="field-name right">Updated</th>
+											<td>4</td>
+										</tr>
+										<tr>
+											<th class="field-name right">Deleted</th>
+											<td>2</td>
+										</tr>
+										<tr>
+											<th class="field-name right">Errors</th>
+											<td><a id="error-link" href="#">3 errors</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col8 last contacts">
+								<div id="errors" style="display: none;">
+									<h4>Errors:</h4>
+									<table>
+										<thead>
+											<tr>
+												<th>Content&nbsp;key</th>
+												<th>Error information</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>KeyValue22</td>
+												<td><strong>Delete failed:</strong> no matching content key in database</td>
+											</tr>
+											<tr>
+												<td>KeyValue41</td>
+												<td><strong>Update failed:</strong> no matching content key in database</td>
+											</tr>
+											<tr>
+												<td>KeyValue76</td>
+												<td><strong>Add failed:</strong> invalid format</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="grid-row">
-						<button id="import-btn" type="button" class="btn btn-small" disabled>Import</button><span id="loading1" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span>
-					</div>
-				</div>
-				<div class="col4 last">
-					<div class="grid-row">
-						<h3>Export to local file</h3>
-						<p>Click the export button to save a copy of the current content list.</p>
-					</div>
-                    <div class="grid-row">
-                        <button id="import-btn" type="button" class="btn btn-small">Export</button><!-- span id="loading1" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span -->
-                    </div>
-				</div>
-                <div class="col4">
-                    <div class="grid-row">
-                        <h3>Compare content keys</h3>
-                        <p>Generate comparison information between the keys in the code and database.</p>
-                    </div>
-                    <div class="grid-row">
-                        <button id="compare-btn" type="button" class="btn btn-small">Compare</button><span id="loading2" style="width: 16px; height: 16px; background-image: url(../assets/img/ajax-loader.gif); vertical-align: middle; display: inline-block;"></span>
-                    </div>
-                </div>
-			</div>
-			<div id="import-results" class="compact" style="display: none;">
-				<div class="confirmation-heading"></div>
-				<div class="grid-row">
-					<h3>File imported<button id="dismiss-imp" style="float: right; margin-right: 11px;" type="button" class="btn btn-add btn-default">Dismiss</button></h3>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<table>
-							<tbody>
-								<tr>
-									<th class="field-name right">File</th>
-									<td id="fname"></td>
-								</tr>
-								<tr>
-									<th class="field-name right">Time</th>
-									<td>21/04/2016 16:24</td>
-								</tr>
-								<tr>
-									<th class="field-name right">Added</th>
-									<td>32</td>
-								</tr>
-								<tr>
-									<th class="field-name right">Updated</th>
-									<td>4</td>
-								</tr>
-								<tr>
-									<th class="field-name right">Deleted</th>
-									<td>2</td>
-								</tr>
-								<tr>
-									<th class="field-name right">Errors</th>
-									<td><a id="error-link" href="#">3 errors</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="col8 last contacts">
-						<div id="errors" style="display: none;">
-							<h4>Errors:</h4>
+					
+					<div id="comparison-results" class="grid-row compact" style="display: none;">
+						<div class="confirmation-heading"></div>
+						<div>
+							<h3>Content key comparison<button id="dismiss-comp" style="float: right; margin-right: 11px;" type="button" class="btn btn-add btn-default">Dismiss</button></h3>
+						</div>
+						<div class="col12">
 							<table>
 								<thead>
 									<tr>
-										<th>Content&nbsp;key</th>
-										<th>Error information</th>
+										<th>Code</th>
+										<th>Database</th>
+										<th>Delta Reason</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>KeyValue22</td>
-										<td><strong>Delete failed:</strong> no matching content key in database</td>
+										<td>KeyValue1</td>
+										<td>Keyvalue1</td>
+										<td>Case mismatch</td>
 									</tr>
 									<tr>
-										<td>KeyValue41</td>
-										<td><strong>Update failed:</strong> no matching content key in database</td>
+										<td>KeyValue2</td>
+										<td>-</td>
+										<td>Missing form DB</td>
 									</tr>
 									<tr>
-										<td>KeyValue76</td>
-										<td><strong>Add failed:</strong> invalid format</td>
+										<td>-</td>
+										<td>KeyValue3</td>
+										<td>Missing from Code</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
-				</div>
+							
+					<!-- div class="controls-container">
+						<div class="controls-content">
+							<button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
+							<button type="button" class="btn btn-default next">Next</button>
+						</div>
+					</div -->
+
+				</main>
+
+				<footer>
+					<ul>
+						<li><a href="#">Legal notices</a></li>
+						<li><a href="#">Accessibility</a></li>
+						<li><a href="#">Glossary</a></li>
+						<li><a href="#">Site map</a></li>
+					</ul>
+				</footer>
+
 			</div>
-			
-			<div id="comparison-results" class="grid-row compact" style="display: none;">
-				<div class="confirmation-heading"></div>
-				<div>
-					<h3>Content key comparison<button id="dismiss-comp" style="float: right; margin-right: 11px;" type="button" class="btn btn-add btn-default">Dismiss</button></h3>
-				</div>
-				<div class="col12">
-					<table>
-						<thead>
-							<tr>
-								<th>Code</th>
-								<th>Database</th>
-								<th>Delta Reason</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>KeyValue1</td>
-								<td>Keyvalue1</td>
-								<td>Case mismatch</td>
-							</tr>
-							<tr>
-								<td>KeyValue2</td>
-								<td>-</td>
-								<td>Missing form DB</td>
-							</tr>
-							<tr>
-								<td>-</td>
-								<td>KeyValue3</td>
-								<td>Missing from Code</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-					
-			<!-- div class="controls-container">
-				<div class="controls-content">
-					<button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
-					<button type="button" class="btn btn-default next">Next</button>
-				</div>
-			</div -->
-
-        </main>
-
-        <footer>
-            <ul>
-                <li><a href="#">Legal notices</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Site map</a></li>
-            </ul>
-        </footer>
-
-    </div><!-- wrapper -->
+		</div>
+	</div>
     <script src="../assets/js/jquery-1.11.3.min.js"></script>
     <script src="../assets/js/functions.js"></script>
     <script src="../assets/js/jquery-accessibleMegaMenu.js"></script>
