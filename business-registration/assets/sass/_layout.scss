@@ -5,41 +5,377 @@
 // Layout containers
 // ------------------------------------------------------------------------------------------------------
 
-body {
-    border-top: 29px solid #254f90;
-}
-
-.body {
-    border-top: .25rem solid #e5b13d;
-}
-
-.wrapper-main {
+.wrapper {
+	position: relative;
     margin: 0 auto;
     max-width: $content-max-width;
+	padding: 0 2%;
+	box-sizing: border-box;
+	
+	/* embed clearfix */
+	zoom: 1;
+	
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	
+				
+	&:after { 
+		clear: both;
+	}
 }
 
-.wrapper {
-    width: 94%;
-    margin: 0 3%;
-    position: relative;
+// Top banner
+// ------------------------------------------------------------------------------------------------------
+
+.top-banner {
+	padding-bottom: 29px;
+	background-color: #254f90;
+	border-bottom: .25rem solid #e5b13d;
+
+	.mobile-logo {
+		display: none;
+		margin: 0;
+		font-size: 1.65rem;
+		padding-top: .47rem;
+		margin-left: .5rem;
+		line-height: 1.4;
+		position: relative;
+		height: 3rem;
+		
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 300;
+			float: left;
+		}
+	}
+
+	@media only screen and (max-width: $banner-break) {
+
+		padding-bottom: 0;
+	
+		.mobile-logo {
+			display: block;
+		}
+	}
+
 }
 
+// Header
+// ------------------------------------------------------------------------------------------------------
+
+header {
+	position: relative;
+	margin-bottom: 10px;
+	background-color: white;
+	height: 150px;
+	font-family: open_sansregular, sans-serif;
+
+	/* Application heading */
+	.sub-brand {
+		margin-top: 40px;
+		float: right;
+
+		a, a:link, a:visited {
+			display: inline-block;
+			margin: 0;
+			font-size: 1.5rem;
+			background: transparent;
+			color: black; // $brand-blue;
+			text-decoration: none;
+		}
+		a:hover, a:focus, a:active {
+			background: transparent;
+			color: black;
+			text-decoration: underline;
+		}
+	}
+
+	/* Gov logo */
+	.gov {
+		margin-top: 50px;
+	
+		span {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		a, a:link, a:visited {
+			background: transparent url(../img/header-logo.png) no-repeat 0 0;
+			display: block;
+			width: 235px;
+			height: 46px;
+			background-size: cover;
+			margin-top: 0;
+		}
+	}
+	
+	nav {
+		position: absolute;
+		top: 65px;
+		right: 2%;
+	}
+
+	@media only screen and (max-width: $banner-break) {
+		
+		height: 75px;
+		
+		.sub-brand {
+			margin-top: 0;
+			float: none;
+
+			span::before { 
+			  content: "\00AB  ";
+			}
+			a, a:link, a:visited {
+				border-radius: $small-border-radius;
+				-webkit-border-radius: $small-border-radius;
+				display: block;
+				padding: 12px;
+				font-size: 1.3rem;
+				background: $brand-blue;
+				margin-top: 10px;
+				color: white;
+				text-decoration: none;
+			}
+			a:hover, a:focus, a:active {
+				background: $brand-hover-bg;
+				color: $brand-hover-fg;
+			}
+		}
+
+		.gov {
+			display: none;  
+		}
+		
+		nav {
+			top: 18px;
+			
+			.nav-item span {
+				display: none;
+			}
+		}
+
+	}
+}
+
+div.environment {
+	width: 1220px;
+	margin: 0 auto;
+	padding-left: 2%;
+	
+	p {
+		position: absolute;
+		top: 4px;
+		padding: 2px 10px;
+		color: #FFF;
+		background-color: #3179b5;
+		font-size: 0.8rem;
+		border-radius: 10px;
+	}
+	
+	@media only screen and (max-width: $banner-break) {
+		width: 100%;
+		margin: 0;
+
+		p {
+			top: 5px;
+			right: 2%;
+		}
+	}
+
+}
+
+// Footer
+// ------------------------------------------------------------------------------------------------------
+
+footer {
+
+	margin-top: 50px;
+
+	.navigation-footer-legal {
+		background: #214d94;
+		color: #fff !important;
+		padding-top: 1.5rem;
+		padding-bottom: 4.5rem;
+		font-family: "Open Sans",sans-serif;
+		
+		.row {
+			margin: 0 auto;
+			max-width: 71.25rem;
+			width: 100%;
+		}
+		
+		.columns {
+			position: relative;
+			padding-left: .625rem;
+			padding-right: .625rem;
+			width: 100%;
+			box-sizing: border-box;
+			
+			/* embed clearfix */
+			zoom: 1;
+			
+			&:before, &:after {
+				content: "";
+				display: table;
+			}
+			
+			&:after { 
+				clear: both 
+			}
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		
+			li {
+				font-size: 1rem;
+				font-weight: normal;
+				padding-left: 0;
+				padding: .75rem 1em .75rem 0;
+				display: inline-block;
+			}		
+		}
+		
+		a, a:hover {
+			color: #fff !important;
+			text-decoration: none !important;
+			background: transparent;
+			padding: 0 !important;
+		}
+		
+		.social {
+			float: left;
+			display: block;
+			justify-content: initial;
+			margin: 0;
+			padding: 0;
+			
+			.fa {
+				font-size: 3rem;
+			}
+			
+			.show-for-sr {
+				clip: rect(1px,1px,1px,1px);
+				height: 1px;
+				overflow: hidden;
+				position: absolute !important;
+				width: 1px;
+			}
+		}
+		
+		.bga-ftr-logo {
+			display: block;
+			padding-top: 1rem;
+			margin: 0;
+			font-size: 1.75rem;
+			float: right;
+		}
+		
+		.footer-logo {
+			display: none;
+			
+			a, a:link, a:visited {
+				background: transparent url(../img/bga_logo_footer.png) no-repeat 0 0;
+				display: block;
+				width: 60%;
+				min-width: 265px;
+				min-height: 95px;
+				background-size: 100%;
+				margin: 4rem auto 0;
+			}
+
+			span {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+		}
+		
+		@media only screen and (max-width: $banner-break) {
+
+			padding-top: 3rem;
+			padding-bottom: 4.5rem;
+			
+			ul li {
+				display: block;
+				padding: .75rem;
+				padding-left: 0;
+				margin-left: 1rem;
+				font-family: open_sansregular,helvetica,arial,sans-serif;
+				font-weight: bold;
+				font-size: 1.125rem;
+			}
+			
+			.social {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-moz-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				margin: 0;
+				justify-content: space-between;
+				margin-left: 1rem;
+				margin-right: 1rem;
+				padding-top: 4rem;
+				float: none;
+				
+				li {
+					padding: 0;
+				}
+				
+				.fa {
+					font-size: 3.5rem;
+				}
+			}
+			
+			.bga-ftr-logo {
+				display: none;
+			}
+			
+			.footer-logo {
+				display: block;
+			}
+		
+		}
+	}
+}
 
 // Layout for feature home page
 // ------------------------------------------------------------------------------------------------------
 
 .feature-home {
-  // background: white url(../img/bg-home.jpg) no-repeat 0 0;
-  // background-size: cover;
 
   p.logo {
     width: 100%;
     max-width: 317px;
     padding-top: 0.5em;
   }
-  /*nav {
-    top: 19px;
-  }*/
+
 }
 
 .feature-wrapper {
@@ -104,10 +440,6 @@ body {
 			font-size: $larger;
 		}
 	}
-	// footer {
-  		// background-color: $white70;
-	// }
-
 }
 
 .feature-box {
@@ -155,142 +487,6 @@ body {
   }
 }
 
-// Header
-// ------------------------------------------------------------------------------------------------------
-
-header {
-	// border-bottom: 10px solid $brand-blue;
-	margin-bottom: 10px;
-	background-color: white;
-	height: 150px;
-	font-family: "Open Sans",sans-serif;
-
-	/* Application heading */
-
-	.sub-brand {
-
-		span::before { 
-		  content: "\00AB  ";
-		}
-		a, a:link, a:visited {
-			border-radius: $small-border-radius;
-			-webkit-border-radius: $small-border-radius;
-			display: block;
-			padding: 15px;
-			background: $brand-blue;
-			margin-top: 10px;
-			color: white;
-			text-decoration: none;
-		}
-		a:hover, a:focus, a:active {
-			background: $brand-hover-bg;
-			color: $brand-hover-fg;
-		}
-	}
-
-	/* Gov logo */
-
-	.gov {
-		display: none;  
-	}
-}
-
-div.environment {
-
-    position: absolute;
-    top: -15px;
-    right: 0;
-    padding: 2px 10px;
-    color: #FFF;
-    background-color: #3179b5;
-    font-size: 0.8em;
-    border-radius: 10px;
-	
-	p {
-		margin: 0;
-	}
-}
-
-@media only screen and (min-width: $break-small) {
-	header {
-  		.sub-brand {
-			margin-top: 40px;
-			float: right;
-
-			span::before { 
-				content: "";
-			}
-			a, a:link, a:visited {
-				display: inline-block;
-				padding: 0 0 20px 0;
-				margin: 0;
-				font-size: 1.5rem;
-				background: transparent;
-				color: black; // $brand-blue;
-				text-decoration: none;
-			}
-			a:hover, a:focus, a:active {
-				background: transparent;
-				color: black;
-				text-decoration: underline;
-			}
-		}
-
-		.gov {
-			display: block;
-			margin-top: 50px;
-		
-			span {
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-			a, a:link, a:visited {
-				background: transparent url(../img/header-logo.png) no-repeat 0 0;
-				background-size: 235px;
-				display: block;
-				width: 235px;
-				height: 46px;
-				background-size: cover;
-				margin-top: 0;
-			}
-			/*a:hover, a:focus, a:active {
-				background: transparent url(../img/brand.png) no-repeat 0 -76px;
-				background-size: cover;
-			}*/
-		}
-	}
-}
-
-@media only screen and (min-width: $break-medium) {
-	header {
-		// height: 95px;
-
-		.sub-brand {
-			a, a:link, a:visited {
-				padding: 5px 0 20px 0;
-				font-size: 1.5rem;
-			}
-		}
-		/*.gov {
-			 a, a:link, a:visited {
-				width: 329px;
-				height: 70px;
-			}
-			a:hover, a:focus, a:active {
-				background: transparent url(../img/brand.png) no-repeat 0 -104px;
-				background-size: cover;
-			}
-		}*/
-	}
-}
-
-
 // Group of buttons for navigating registration steps
 // ------------------------------------------------------------------------------------------------------
 
@@ -323,62 +519,62 @@ div.environment {
 // Footer
 // ------------------------------------------------------------------------------------------------------
 
-footer {
-	clear: both;
-	background-color: $bg-footer;
-	border-radius: $small-border-radius;
-	-webkit-border-radius: $small-border-radius;
-	margin: 0;
-	padding: 0;
-	text-align: left;
+// footer {
+	// clear: both;
+	// background-color: $bg-footer;
+	// border-radius: $small-border-radius;
+	// -webkit-border-radius: $small-border-radius;
+	// margin: 0;
+	// padding: 0;
+	// text-align: left;
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		list-style-type: none;
-		font-size: $smaller;
-		margin: 0;
-		padding: 0;
-	}
-	a, a:link, a:visited {
-		color: $gray;
-		background-color: transparent;
-		text-decoration: none;
-		display: block;
-		padding: 0.5em;
-	}
-	a:hover, a:focus, a:active {
-		color: white;
-		background-color: black;
-	}
-	p {
-		text-align: center;
+	// ul {
+		// margin: 0;
+		// padding: 0;
+	// }
+	// li {
+		// list-style-type: none;
+		// font-size: $smaller;
+		// margin: 0;
+		// padding: 0;
+	// }
+	// a, a:link, a:visited {
+		// color: $gray;
+		// background-color: transparent;
+		// text-decoration: none;
+		// display: block;
+		// padding: 0.5em;
+	// }
+	// a:hover, a:focus, a:active {
+		// color: white;
+		// background-color: black;
+	// }
+	// p {
+		// text-align: center;
 	
-		a, a:link, a:visited {
-			display: inline;
-			padding: 0.3em 0.1em;
-			text-decoration: underline;
-		}
-	}
-}
+		// a, a:link, a:visited {
+			// display: inline;
+			// padding: 0.3em 0.1em;
+			// text-decoration: underline;
+		// }
+	// }
+// }
 
-@media only screen and (min-width: $break-medium) {
-    footer {
-		margin: 2em 0 0 0;
+// @media only screen and (min-width: $break-medium) {
+    // footer {
+		// margin: 2em 0 0 0;
 
-		li {
-			display: inline-block;
-			padding: 0.1em 0;
-			margin: 0.4em 0.5em 0.4em 0.5em;
+		// li {
+			// display: inline-block;
+			// padding: 0.1em 0;
+			// margin: 0.4em 0.5em 0.4em 0.5em;
 		
-			&:last-child {
-				margin: 0.4em 0 0.4em 0.5em;
-			}
-		}
-	}
-}
+			// &:last-child {
+				// margin: 0.4em 0 0.4em 0.5em;
+			// }
+		// }
+	// }
+// }
 
 
 // Iconography
