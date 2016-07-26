@@ -6,6 +6,7 @@
     <title>Help me decide - Business Registration | business.gov.au</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
 	<style>
@@ -20,58 +21,98 @@
 	</style>
 </head>
 <body id="top">
-	<div class="body">
-		<div class="wrapper-main">
-			<div class="wrapper">
-				<header class="clearfix">
-					<div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
-					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-					<nav id="settings">
-						<ul class="nav-menu">
-							<li class="nav-item">
-								<a href="#" class="btn-options"><span>Profile</span></a>
-							</li>
-						</ul>
-					</nav>
-				</header>
-
-				<div id="eligibilityTest" class="wrapper main-container clearfix">
-					<h1>Business registration - help me decide</h1>
-					<div class="grid-row clearfix">
-						<div class="col7">
-							<p>Are you <strong>starting a business</strong>, or thinking about starting one?</p>
-							<p>This tool can help you work out:</p>
-							<ul>
-								<li>the <strong>business structure</strong> that will best suit your needs</li>
-								<li>the <strong>basic business and tax registrations</strong> you should consider applying for.</li>
-							</ul>
-							<p>While we make every effort to ensure that this tool is accurate and up to date, it can’t possibly take all your circumstances into account – so please treat it as a guide only.</p>
-							<p>Before you make any decisions based on the information in this tool, consider seeking independent professional advice as we can’t guarantee or accept legal liability as a result of using this tool.</p>
-						</div>
-						<div class="col5 last">
-							<div class="registration-tip">
-								<h2>Are you an artist, creative or maker?</h2>
-								<p>Did you know that even if you get money for your creative work, what you're doing could still be a hobby?</p>
-								<p>We can help you make a decision about whether we would consider you to be in business and what you might need to do next.</p>
-								<p><a href="http://start.business.gov.au">Hobby or business - help me work it out</a></p>
-							</div>
-						</div>
-					</div>
-					<p><button type="button" class="btn btn-default" onclick="window.location = 'registration-discovery.html'">Ok, let's go</button></p>
-				</div><!-- main-container -->
-				<div class="applicationoptions" id="applicationOptions"></div>
-				<footer>
-					<ul>
-						<li><a href="#">Legal notices</a></li>
-						<li><a href="#">Accessibility</a></li>
-						<li><a href="#">Glossary</a></li>
-						<li><a href="#">Site map</a></li>
-					</ul>
-				</footer>
-			</div><!-- wrapper -->
-		</div>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
 	</div>
-
+	<header class="wrapper">
+		<div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="#" class="btn-options"><span>Profile</span></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div id="eligibilityTest" class="wrapper main-container clearfix">
+			<h1>Business registration - help me decide</h1>
+			<div class="grid-row clearfix">
+				<div class="col7">
+					<p>Are you <strong>starting a business</strong>, or thinking about starting one?</p>
+					<p>This tool can help you work out:</p>
+					<ul>
+						<li>the <strong>business structure</strong> that will best suit your needs</li>
+						<li>the <strong>basic business and tax registrations</strong> you should consider applying for.</li>
+					</ul>
+					<p>While we make every effort to ensure that this tool is accurate and up to date, it can’t possibly take all your circumstances into account – so please treat it as a guide only.</p>
+					<p>Before you make any decisions based on the information in this tool, consider seeking independent professional advice as we can’t guarantee or accept legal liability as a result of using this tool.</p>
+				</div>
+				<div class="col5 last">
+					<div class="registration-tip">
+						<h2>Are you an artist, creative or maker?</h2>
+						<p>Did you know that even if you get money for your creative work, what you're doing could still be a hobby?</p>
+						<p>We can help you make a decision about whether we would consider you to be in business and what you might need to do next.</p>
+						<p><a href="http://start.business.gov.au">Hobby or business - help me work it out</a></p>
+					</div>
+				</div>
+			</div>
+			<p><button type="button" class="btn btn-default" onclick="window.location = 'registration-discovery.html'">Ok, let's go</button></p>
+		</div><!-- main-container -->
+		<div class="applicationoptions" id="applicationOptions"></div>
+	</main>
+	<footer>
+		<div class="navigation-footer-legal">
+			<div class="row">
+				<div class="columns">
+					<ul class="legal">
+						<li class="small-only-12">    <a href="/about">About</a></li>
+						<li class="small-only-12">    <a href="/for-government">For Government</a></li>
+						<li class="small-only-12">    <a href="/legal-notices">Legal notices</a></li>
+						<li class="small-only-12">    <a href="/about/accessibility">Accessibility</a></li>
+						<li class="small-only-12">    <a href="/about/other-languages">Other languages</a></li>
+						<li class="small-only-12">    <a href="/contact-us">Contact us</a></li>
+					</ul>
+					<ul class="social">
+						<li>
+							<a class="facebook" href="https://www.facebook.com/business.gov.au">
+								<span class="fa fa-facebook-square"></span>
+								<span class="label show-for-sr">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a class="twitter" href="https://twitter.com/business_gov_au">
+								<span class="fa fa-twitter-square"></span>
+								<span class="label show-for-sr">Twitter</span>
+							</a>
+						</li>
+						<li>
+							<a class="linkedin" href="https://www.linkedin.com/company/department-of-innovation-industry-science-and-research">
+								<span class="fa fa-linkedin-square"></span>
+								<span class="label show-for-sr">LinkedIn</span>
+							</a>
+						</li>
+						<li>
+							<a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+								<span class="fa fa-youtube-square"></span>
+								<span class="label show-for-sr">Youtube</span>
+							</a>
+						</li>
+					</ul>
+					<div class="bga-ftr-logo">
+						<a href="/"><strong>business</strong>.gov.au</a>
+					</div>
+					<div class="footer-logo">
+						<a href="https://www.business.gov.au">
+							<span>business.gov.au</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- a href="/web-chat" class="chat-now">Chat Now</a -->
+	</footer>
     <script src="../assets/js/jquery-1.11.3.min.js"></script>
     <script src="../assets/js/jquery.collapse.js"></script>
     <script src="../assets/js/jquery-toggleslide.js"></script>
