@@ -1,0 +1,343 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Company name taken | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Business Registration" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+</head>
+<body>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="settings.html"><span>Settings</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="#">Set up save</a></li>
+							<li><a href="#">Start a new application</a></li>
+							<li><a href="#">Sign out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="progress-container">
+			<div class="progress-bar">
+				<span id="progress-percent" style="width: 23%"></span>
+			</div><!-- meter -->
+			<ul class="section-nav">
+				<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+				<li class="active"><span>2</span><br>Business<br> name</li>
+				<li><span>3</span><br>Company<br> details</li>
+				<li><span>4</span><br>Taxation<br>details</li>
+				<li><span>5</span><br>Confirm<br> application</li>
+				<li><span>6</span><br>Payment<br> &amp; submit</li>
+			</ul>
+		</div><!-- progress-container -->
+		<h1 id="heading" tabindex="-1">2. Business name</h1>
+		<div class="sub-section-container sub-section-open">
+			<h2>Company name</h2>
+			<div class="sub-section-content">
+				<h3 class="larger">Do you have a proposed company name?</h3>
+				<p><strong>Important:</strong> Before you choose a company name, it's a good idea to check that the name isn't already a <a href="#">trade mark</a> and, if you want a website, that the <a href="#">domain name</a> is available.</p>
+				<div class="grid-row">
+					<div class="custom-controls">
+						<p>
+							<input checked="checked" id="new-name" name="company" type="radio" value="NewName">
+							<label for="new-name">Create a new name</label>
+						</p>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="col1">
+						<p>&nbsp;</p>
+					</div>
+					<div class="col11 last">
+						<div class="result-container">
+							<div class="result-row">
+								<div class="result-cell cell-icon">
+									<img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+								</div>
+								<div class="result-cell cell-detail custom-controls">
+									<h2>MACDONALDS PTY LTD</h2>
+									<blockquote>MACDONALDS PTY LTD is unavailable.</blockquote>
+									<p>This name is the same as or similar to a registered business or trading name.</p>
+									<p>You can only use this company name if someone connected to your company, for example a company member or owner, owns the registered name. </p>
+								</div>
+								<div class="result-cell cell-action">
+									<a href="javascript:void(0);" class="smaller ajax-link">Search for something else</a>
+								</div>
+							</div><!-- result-row -->
+						</div><!-- result-container -->
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="col1">
+						<p>&nbsp;</p>
+					</div>
+					<div class="col11 last">
+						<h3 class="larger">Already own this name?</h3>
+						<p>Enter the business or trading names that your company owns and add them to the list.</p>
+						<p>After you submit your application, we'll confirm your details.</p>
+						<div id="name-table" class="dashboard-container custom-controls" style="display: none;">
+							<table id="table-names">
+								<caption>Registered names</caption>
+								<thead>
+									<tr>
+										<th class="status-item" style="width: 45%">Name</th>
+										<th class="status-detail" style="width: 45%">Detail</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr id="row-none">
+										<td colspan="3">
+											<p>No names added.</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="business-name" style="display: none;">
+							<fieldset>
+								<legend class="margin4 larger">Business name details</legend>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="bus-name">Business name</label>
+									</div>
+									<div class="col8 last">
+										<input id="bus-name" type="text">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="abn">ABN <span class="field-note">(Optional)</span></label>
+									</div>
+									<div class="col8 last">
+										<input id="abn" type="text">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="margin4">
+										<button id="bn-add" type="button" class="btn">Add</button>
+										<button id="bn-cancel" type="button" class="btn">Cancel</button>
+									</div><!-- controls-content -->
+								</div>
+							</fieldset>
+						</div>
+						<div id="trading-name" style="display: none;">
+							<fieldset>
+								<legend class="margin4 larger">Trading name details</legend>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="trad-name">Trading name</label>
+									</div>
+									<div class="col8 last">
+										<input id="trad-name" type="text">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="rego">Registration number</label>
+									</div>
+									<div class="col8 last">
+										<input id="rego" type="text">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="state">State / territory registered</label>
+									</div>
+									<div class="col8 last">
+										<select id="tn-state">
+											<option selected="selected" value="">Please select...</option>
+											<option value="ACT">Australian Capital Territory</option>
+											<option value="NSW">New South Wales</option>
+											<option value="NT">Northern Territory</option>
+											<option value="Qld">Queensland</option>
+											<option value="SA">South Australia</option>
+											<option value="Tas">Tasmania</option>
+											<option value="Vic">Victoria</option>
+											<option value="WA">Western Australia</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="margin4">
+										<button id="tn-add" type="button" class="btn">Add</button>
+										<button id="tn-cancel" type="button" class="btn">Cancel</button>
+									</div><!-- controls-content -->
+								</div>
+							</fieldset>
+						</div>
+						<div id="adders" class="controls-container">
+							<div class="controls-content">
+								<button id="add-bn" type="button" class="btn">Add business name</button>
+								<button id="add-tn" type="button" class="btn">Add trading name</button>
+							</div><!-- controls-content -->
+						</div>
+						<!-- div>
+							<h4>Add name:</h4>
+							<label for="name">Business/trading name</label><br><input id="name" type="text"><br>
+							<label for="abn">ABN/Registration number</label><br><input id="abn" type="text"><br>
+							<label for="state">State of registration (if applicable)</label><br>
+							<select id="state">
+								<option>-- select state --</option>
+								<option>Australian Capital Territory</option>
+								<option>New South Wales</option>
+								<option>Northern Territory</option>
+								<option>Queensland</option>
+								<option>South Australia</option>
+								<option>Tasmania</option>
+								<option>Western Australia</option>
+							</select>
+						</div -->
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="custom-controls">
+						<p>
+							<input id="reserved-name" name="company" type="radio" value="reserved">
+							<label for="reserved-name">Use a reserved name</label>
+						</p>
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="custom-controls">
+						<p>
+							<input id="use-acn" name="company" type="radio" value="acn">
+							<label for="use-acn">Use ACN</label>
+						</p>
+					</div>
+				</div>
+				<div id="actions" class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
+						<button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
+					</div><!-- controls-content -->
+				</div>
+			</div>
+		</div>
+	</main>
+
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script type="text/javascript">
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+
+        $(document).ready(function () {
+            initSaveForLater();
+            initApplicationOptions();
+			
+			$("#add-bn").click(function() {
+				$("#name-table").hide();
+				$("#business-name").show("fast", function() {
+					$("html, body").animate({
+						scrollTop: $("#business-name").offset().top
+					}, 400);
+				});
+				$("#adders").hide();
+			});
+			
+			$("#bn-add").click(function() {
+				$("#business-name").hide();
+				$("#row-none").hide();
+				var abnText = ($("#abn").val() == ""?"<strong>No ABN</strong>":"<strong>ABN</strong>: " + $("#abn").val());
+				$("#table-names tbody").append("<tr><td>" + $("#bus-name").val() + "</td><td>" + abnText + "</td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
+				$("#bus-name").val("");
+				$("#abn").val("");
+				$("#name-table").show("fast", function() {
+					$("html, body").animate({
+						scrollTop: $("#name-table").offset().top
+					}, 400);
+				});
+				$("#adders").show();
+			});
+
+			$("#add-tn").click(function() {
+				$("#name-table").hide();
+				$("#trading-name").show("fast", function() {
+					$("html, body").animate({
+						scrollTop: $("#trading-name").offset().top
+					}, 400);
+				});
+				$("#adders").hide();
+			});
+			
+			$("#tn-add").click(function() {
+				$("#trading-name").hide();
+				$("#row-none").hide();
+				$("#table-names tbody").append("<tr><td>" + $("#trad-name").val() + "</td><td>" + $("#rego").val() + " - Registered in <strong>" + $("#tn-state").val() + "</strong></td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
+				$("#trad-name").val("");
+				$("#rego").val("");
+				$("#tn-state").val([]);
+				$("#name-table").show("fast", function() {
+					$("html, body").animate({
+						scrollTop: $("#name-table").offset().top
+					}, 400);
+				});
+				$("#adders").show();
+			});
+			
+			$("#tn-cancel, #bn-cancel").click(function() {
+				$("#business-name").hide();
+				$("#trading-name").hide();
+				if ($("#table-names tbody tr").length > 1)
+					$("#name-table").show("fast", function() {
+						$("html, body").animate({
+							scrollTop: $("#name-table").offset().top
+						}, 400);
+					});
+				$("#adders").show();
+
+			});
+        });
+    </script>
+</body>
+</html>
