@@ -258,7 +258,7 @@ function getCookie(cname) {
     return "";
 }
 
-var html = '<div id="system-message" class="system-message clearfix" style="margin-top: 0; display: none">'
+var html = '<div id="system-message" class="system-message wrapper" style="margin-top: 0; display: none">'
 		 + '<div class="system-message-content">'
 		 + '<h1>Prototype system</h1>'
 		 + '<p>You currently viewing an instance of the SOBRS web site that has been activated for usability testing. This is not a production system, and any activities carried out in this environment will not result in any live application lodgements.</p>'

@@ -21,109 +21,104 @@
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
 </head>
 <body>
-	<div class="body">
-		<div class="wrapper-main">
-			<div class="wrapper">
-				<header class="clearfix">
-					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-					<nav id="settings">
-						<ul class="nav-menu">
-							<li class="nav-item">
-								<a href="settings.html"><span>Settings</span></a>
-								<div class="sub-nav">
-									<ul class="sub-nav-group">
-										<li><a href="#">Set up save</a></li>
-										<li><a href="#">Start a new application</a></li>
-										<li><a href="#">Sign out</a></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</nav>
-				</header>
-				
-				<main>
-					<div class="progress-container">
-						<div class="progress-bar">
-							<span id="progress-percent" style="width: 23%"></span>
-						</div><!-- meter -->
-						<ul class="section-nav">
-							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-							<li class="active"><span>2</span><br>Business<br> name</li>
-							<li><span>3</span><br>Business<br> details</li>
-							<li><span>4</span><br>Taxation<br>details</li>
-							<li><span>5</span><br>Confirm<br> application</li>
-							<li><span>6</span><br>Payment<br> &amp; submit</li>
-						</ul>
-					</div><!-- progress-container -->
-					<h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
-
-					<div class="result-container">
-						<div class="result-row">
-							<div class="result-cell cell-icon">
-								<img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
-							</div>
-							<div class="result-cell cell-detail">
-								<h2>Johnson and Griffith Plumbers Pty Ltd</h2>
-								<p>This name is already taken. <a href="business-names.html">Search again</a>.</p>
-							</div>
-						</div><!-- result-row -->
-					</div><!-- result-container -->
-
-					<h2>Already own this name?</h2>
-					<p>If you are attempting to register a company name that you have already registered as a business or trading name you can select it from the list below. We'll verify your details and you can continue with the application.</p>
-					<div class="dashboard-container custom-controls">
-						<table>
-							<caption>Select registered name</caption>
-							<thead>
-								<tr>
-									<th class="status-item">Name</th>
-									<th class="status-detail">Detail</th>
-								</tr>
-							</thead>
-							<tr>
-								<td><p><input type="radio" name="matching" value="name01" id="name01" /> <label for="name01">Bob's Plumbing</label></p></td>
-								<td><p><span class="abn">ABN: 68 957 383 599</span></p></td>
-							</tr>
-							<tr>
-								<td><p><input type="radio" name="matching" value="name02" id="name02" /> <label for="name02">Bobs Plumbing</label></p></td>
-								<td><p><span class="abn">ABN: 89 667 088 001</span></p></td>
-							</tr>
-							<tr>
-								<td><p><input type="radio" name="matching" value="name01" id="name03" /> <label for="name03">Bob's Plumbing</label></p></td>
-								<td><p><span class="abn">Trading name</span></p></td>
-							</tr>
-							<tr>
-								<td class="no-border-bottom"><p><input type="radio" checked name="matching" value="name01" id="name04" /> <label for="name04">Bobz Plumbing</label></p></td>
-								<td class="no-border-bottom"><p><span class="abn">Trading name</span></p></td>
-							</tr>
-							<tr>
-								<td class="no-border-bottom">&nbsp;</td>
-								<td class="no-border-bottom"><p><input type="checkbox" id="trading01" /> <label for="trading01">#123456789 - Registered in <strong>New South Wales</strong></label></p></td>
-							</tr>
-							<tr>
-								<td class="no-border-bottom">&nbsp;</td>
-								<td class="no-border-bottom"><p><input type="checkbox" id="trading02" /> <label for="trading02">#123456789 - Registered in <strong>Victoria</strong></label></p></td>
-							</tr>
-							<tr>
-								<td class="no-border-bottom">&nbsp;</td>
-								<td class="no-border-bottom"><p><input type="checkbox" id="trading03" /> <label for="trading03">#123456789 - Registered in <strong>South Australia</strong></label></p></td>
-							</tr>
-						</table>
-						</table>
-					</div>
-				</main>
-				
-				<div class="controls-container">
-					<div class="controls-content">
-						<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
-						<button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
-					</div><!-- controls-content -->
-				</div>
-			</div><!-- wrapper -->    
-		</div>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
 	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="settings.html"><span>Settings</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="#">Set up save</a></li>
+							<li><a href="#">Start a new application</a></li>
+							<li><a href="#">Sign out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="progress-container">
+			<div class="progress-bar">
+				<span id="progress-percent" style="width: 23%"></span>
+			</div><!-- meter -->
+			<ul class="section-nav">
+				<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+				<li class="active"><span>2</span><br>Business<br> name</li>
+				<li><span>3</span><br>Business<br> details</li>
+				<li><span>4</span><br>Taxation<br>details</li>
+				<li><span>5</span><br>Confirm<br> application</li>
+				<li><span>6</span><br>Payment<br> &amp; submit</li>
+			</ul>
+		</div><!-- progress-container -->
+		<h1 id="heading" tabindex="-1">2. Company name <span>(Step 2 of 6)</span></h1>
+
+		<div class="result-container">
+			<div class="result-row">
+				<div class="result-cell cell-icon">
+					<img src="assets/img/ico-exclamation-orange.png" alt="Alert" />
+				</div>
+				<div class="result-cell cell-detail">
+					<h2>Johnson and Griffith Plumbers Pty Ltd</h2>
+					<p>This name is already taken. <a href="business-names.html">Search again</a>.</p>
+				</div>
+			</div><!-- result-row -->
+		</div><!-- result-container -->
+
+		<h2>Already own this name?</h2>
+		<p>If you are attempting to register a company name that you have already registered as a business or trading name you can select it from the list below. We'll verify your details and you can continue with the application.</p>
+		<div class="dashboard-container custom-controls">
+			<table>
+				<caption>Select registered name</caption>
+				<thead>
+					<tr>
+						<th class="status-item">Name</th>
+						<th class="status-detail">Detail</th>
+					</tr>
+				</thead>
+				<tr>
+					<td><p><input type="radio" name="matching" value="name01" id="name01" /> <label for="name01">Bob's Plumbing</label></p></td>
+					<td><p><span class="abn">ABN: 68 957 383 599</span></p></td>
+				</tr>
+				<tr>
+					<td><p><input type="radio" name="matching" value="name02" id="name02" /> <label for="name02">Bobs Plumbing</label></p></td>
+					<td><p><span class="abn">ABN: 89 667 088 001</span></p></td>
+				</tr>
+				<tr>
+					<td><p><input type="radio" name="matching" value="name01" id="name03" /> <label for="name03">Bob's Plumbing</label></p></td>
+					<td><p><span class="abn">Trading name</span></p></td>
+				</tr>
+				<tr>
+					<td class="no-border-bottom"><p><input type="radio" checked name="matching" value="name01" id="name04" /> <label for="name04">Bobz Plumbing</label></p></td>
+					<td class="no-border-bottom"><p><span class="abn">Trading name</span></p></td>
+				</tr>
+				<tr>
+					<td class="no-border-bottom">&nbsp;</td>
+					<td class="no-border-bottom"><p><input type="checkbox" id="trading01" /> <label for="trading01">#123456789 - Registered in <strong>New South Wales</strong></label></p></td>
+				</tr>
+				<tr>
+					<td class="no-border-bottom">&nbsp;</td>
+					<td class="no-border-bottom"><p><input type="checkbox" id="trading02" /> <label for="trading02">#123456789 - Registered in <strong>Victoria</strong></label></p></td>
+				</tr>
+				<tr>
+					<td class="no-border-bottom">&nbsp;</td>
+					<td class="no-border-bottom"><p><input type="checkbox" id="trading03" /> <label for="trading03">#123456789 - Registered in <strong>South Australia</strong></label></p></td>
+				</tr>
+			</table>
+			</table>
+		</div>
+		<div class="controls-container">
+			<div class="controls-content">
+				<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
+				<button type="button" class="btn btn-default" onclick="location.href='company-details.html'">Continue to step 3</button>
+			</div><!-- controls-content -->
+		</div>
+	</main>
 
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
