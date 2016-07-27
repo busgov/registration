@@ -128,7 +128,7 @@
 										<label class="input-right" for="bus-name">Business name</label>
 									</div>
 									<div class="col8 last">
-										<input id="bus-name" type="text">
+										<input id="bus-name" value="MACDONALDS" type="text">
 									</div>
 								</div>
 								<div class="grid-row">
@@ -155,7 +155,7 @@
 										<label class="input-right" for="trad-name">Trading name</label>
 									</div>
 									<div class="col8 last">
-										<input id="trad-name" type="text">
+										<input id="trad-name" value="MACDONALDS" type="text">
 									</div>
 								</div>
 								<div class="grid-row">
@@ -290,7 +290,7 @@
 				$("#row-none").hide();
 				var abnText = ($("#abn").val() == ""?"<strong>No ABN</strong>":"<strong>ABN</strong>: " + $("#abn").val());
 				$("#table-names tbody").append("<tr><td>" + $("#bus-name").val() + "</td><td>" + abnText + "</td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
-				$("#bus-name").val("");
+				$("#bus-name").val("MACDONALDS");
 				$("#abn").val("");
 				$("#name-table").show("fast", function() {
 					$("html, body").animate({
@@ -314,7 +314,7 @@
 				$("#trading-name").hide();
 				$("#row-none").hide();
 				$("#table-names tbody").append("<tr><td>" + $("#trad-name").val() + "</td><td>" + $("#rego").val() + " - Registered in <strong>" + $("#tn-state").val() + "</strong></td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
-				$("#trad-name").val("");
+				$("#trad-name").val("MACDONALDS");
 				$("#rego").val("");
 				$("#tn-state").val([]);
 				$("#name-table").show("fast", function() {
