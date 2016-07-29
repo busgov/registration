@@ -155,7 +155,16 @@ select[disabled]:active {
 .btn-organisation:active {
   background: black url(../img/sprite-add-organisation.png) no-repeat 11px -146px;
 } 
-
+.btn-unincorp {
+  background: transparent url(../img/sprite-add-unincorp.png) no-repeat 11px 14px;
+  margin: 0 0 0 0.5em;
+  padding: 1em 1.5em 1em 2.5em;
+}
+.btn-unincorp:hover,
+.btn-unincorp:focus,
+.btn-unincorp:active {
+  background: black url(../img/sprite-add-unincorp.png) no-repeat 11px -146px;
+} 
 
 /* Custom added button with less padding */
 
