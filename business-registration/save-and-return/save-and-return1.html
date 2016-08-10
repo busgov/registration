@@ -1,0 +1,460 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting started - Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+	
+		.icon-buttons a {
+			margin-right: 15px;
+		}
+
+		.icon-buttons a span::before,
+		.icon-buttons label span:before	{
+			font-size: 1.5em;
+			color: #fff;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.icon-buttons input[type=checkbox],
+		.icon-buttons input[type=radio] {
+			width: 20px;
+			height: 20px;
+		}
+		
+		.icon-buttons label {
+			margin-right: 15px;
+		}
+		
+		.icon-buttons span.fa-facebook:before
+		{
+			padding: 5px 11px;
+			background-color: #3b5998
+		}
+		
+		.icon-buttons span.fa-twitter:before {
+			padding: 5px 6px;
+			background-color: #1da1f2;
+		}
+		
+		.icon-buttons span.fa-linkedin:before {
+			padding: 5px 6px;
+			background-color: #0077b5;
+		}
+		
+		.icon-buttons span.fa-google:before {
+			padding: 5px 6px;
+			background-color: #d73d32;
+		}
+		
+		.icon-buttons span.fa-windows:before {
+			padding: 5px 4px;
+			background-color: #57b057;
+		}
+		
+		.icon-buttons span.mygov:before {
+			content: "my\AGov";
+			white-space: pre;
+			font-family: 'open_sansregular', sans-serif;
+			font-weight: bold;
+			line-height: 11px;
+			color: #d7ea6a;
+			background-color: #006633;
+			font-size: 12px;
+			display: inline-block;
+			padding: 8px 7px;
+		}
+
+		button.mygov span.green {
+			color: #d7ea6a;
+		}
+		
+		.visually-hidden {
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+	        left: -9999px;
+		}
+		
+		.vadialog {
+			width: 400px;
+		}
+    </style>
+</head>
+<body>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="../index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="settings.html"><span>Profile</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="#" class="btn-save">Save and return</a></li>
+							<li><a href="#">Start a new application</a></li>
+							<li><a href="#">Re-send confirmation</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="progress-container">
+			<div class="progress-bar">
+				<span id="progress-percent" style="width: 8%"></span>
+			</div><!-- meter -->
+			<ul class="section-nav">
+				<li class="active"><span>1</span><br>Getting<br> started</li>
+				<li><span>2</span><br>Business<br> name</li>
+				<li><span>3</span><br>Business<br> details</li>
+				<li><span>4</span><br>Taxation<br>details</li>
+				<li><span>5</span><br>Confirm<br> application</li>
+				<li><span>6</span><br>Payment<br> &amp; submit</li>
+			</ul>
+		</div><!-- progress-container -->
+		<h1 id="heading" tabindex="-1">1. Getting started <span>(Step 1 of 6)</span></h1>
+		<p>All fields are required unless marked as optional.</p>
+	
+		<div id="section1" class="sub-section-container sub-section-open">
+			<h2>Save and return</h2>
+			<div class="sub-section-content">                                            
+				<div id="validationSummary" class="validation-container clearfix" style="display: none">
+					<div class="grid-row">
+						<div class="validation-summary-icon">
+							<img src="../assets/img/ico-alert-red.png" alt="Error">
+						</div>
+						<div class="validation-message">
+							<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
+							<ul>
+								<li>Enter a value for <a class="skip" href="#validation-test-field1">Label for field 1</a></li>
+								<li>Enter a value for <a class="skip" href="#validation-test-field2">Label for field 2</a></li>
+								<li>Choose yes or no for <a class="skip" href="#validation-test-field3">Yes or no right aligned</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<fieldset id="login-form">
+					<legend class="margin4 larger no-padding-bottom">Save and return details<br />
+					<span class="field-note">Your progress is saved throughout the application process. By registering your details you can return to the application at a later date and pick up where you left off.</span></legend>
+					<div class="margin4 custom-controls">
+						<p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
+					</div>
+					<div id="create-account">
+						<div class="grid-row">
+							<div class="margin4">
+								<h3>Create an account</h3>
+								<p>Create an account with business.gov.au for all your business registrations.</p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="email0" class="input-right">Email address</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="email0" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="margin4">
+								<p>Login using a password</p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="password0" class="input-right">Password</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="password0" type="password">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div id="confirm-password" class="grid-row">
+							<div class="col4">
+								<label for="password02" class="input-right">Confirm password</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="password02" type="password" style="width: 100%; max-width: 24em;">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="margin4">
+								<p>Or</p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="margin4">
+								<p>Login with your account from any of the following systems:</p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="margin4 icon-buttons">
+								<p>
+									<input type="checkbox" id="fb-cb" />
+									<label for="fb-cb"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></label>
+									<input type="checkbox" id="tw-cb" />
+									<label for="tw-cb"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></label>
+									<input type="checkbox" id="go-cb" />
+									<label for="go-cb"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></label>
+									<input type="checkbox" id="ms-cb" />
+									<label for="ms-cb"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></label>
+									<input type="checkbox" id="in-cb" />
+									<label for="in-cb"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></label>
+									<input type="checkbox" id="my-cb" />
+									<label for="my-cb"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="mygov"></span><span class="visually-hidden">myGov</span></label>
+								</p>
+							</div>
+						</div>
+						<div  class="grid-row">
+							<div class="col4">
+								<p>&nbsp;</p>
+							</div><!-- col -->
+							<div class="col8 last">
+								<button id="create-button" type="button" class="btn btn-inline">Create account</button>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+					</div>
+					<div id="account-login" style="display: none;">
+						<div class="grid-row">
+							<div class="margin4">
+								<h3>Login to your account</h3>
+								<p>Enter the email and address you used to register your account.</p>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="login-email" class="input-right">Email address</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="login-email" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="col4">
+								<label for="login-passwd" class="input-right">Password</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="login-passwd" type="password">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div  class="grid-row">
+							<div class="col4">
+								<p>&nbsp;</p>
+							</div><!-- col -->
+							<div class="col8 last">
+								<button id="login" type="button"class="btn btn-inline">Login</button>
+								<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+
+					</div>
+					<div class="grid-row" style="display: none">
+						<div class="col4">&nbsp;</div>
+						<div class="col4 last">
+							<p>Or</p>
+						</div>
+					</div>
+					<div class="grid-row" style="display: none;">
+						<div class="margin4">
+							<h3>Connect with an existing account</h3>
+							<p>Select from any of the following systems:</p>
+						</div>
+					</div>
+					<div class="grid-row" style="display: none;">
+						<div class="margin4 icon-buttons" id="icon-buttons">
+							<a class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
+							<a class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
+							<a class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
+							<a class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
+							<a class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
+							<a class="mygov"><span class="mygov"></span><span class="visually-hidden">myGov</span></a>
+						</div>
+					</div>
+				</fieldset>
+
+				<div id="logged-in" class="grid-row margin-bottom-075" style="display: none;">
+					<div class="margin4">
+						<h3>Save and return details</h3>
+						<p>You are logged in with the email address: <strong>user@test.com</strong>
+						<span id="confirm"><br />You email has not been confirmed ( <a href="#">resend confirmation email</a> ).</span></p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner, or you can login using different credentials by selecting the button below.</p>
+						<button class="btn btn-small" onclick="logout()">Logout</button>
+					</div>
+				</div>
+				<div id="logged-in-fb" class="grid-row margin-bottom-075" style="display: none;">
+					<div class="margin4">
+						<h3>Save and return details</h3>
+						<p>You are logged in with your facebook account.</p>
+						<p>You
+						<span id="confirm"><br />You email has not been confirmed ( <a href="#">resend confirmation email</a> ).</span></p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner, or you can login using different credentials by selecting the button below.</p>
+						<button class="btn btn-small" onclick="logout()">Logout</button>
+					</div>
+				</div>
+				
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
+						<button type="button" class="btn btn-default next" id="btn-next" disabled>Next</button>
+					</div><!-- controls-content -->
+				</div>
+			</div>
+		</div>
+
+		<div id="section2" class="sub-section-container">
+			<h2>ABN details</h2>
+			<div class="sub-section-content">
+			</div><!-- sub-section-content -->
+		</div><!-- sub-section-container -->
+	</main>
+	
+	<div id="dialogLoginSuccessful" style="display:none;">
+        <h1>Login successful</h1> 
+        <p>You have successfully logged in to you account.<br />Your application progress will be saved with your account.</p>
+        <button type="button" class="btn btn-default" id="btnContinue" onclick="localLogin(); visionaustralia.closeDialog('dialogLoginSuccessful')">Continue</button>
+    </div>
+	
+	<div id="dialogLoginCreated" style="display:none;">
+        <h1>Login created</h1> 
+        <p>An account has been created for: <strong>user@test.com</strong>.</p>
+		<p>A confirmation link has been sent to your email address. You will need to confirm your email address before you can submit your application.</p>
+		<p>Your application progress will be saved with your account.</p>
+        <button type="button" class="btn btn-default" onclick="create(); visionaustralia.closeDialog('dialogLoginCreated')">Continue</button>
+    </div>
+	
+	<div id="dialogSocialLogin" style="display:none;">
+        <h1>External login</h1> 
+        <p>You will now be redirected to the Facebook website so you can login to your account and confirm access.</p>
+		<p>Once completed you will be returned to this page to continue with your application.</p>
+		<p>You will need to provide an email address for correspondence relating to your application.</p>
+        <button type="button" class="btn btn-default" onclick="extnLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
+    </div>
+	
+    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+
+                    </div><!-- showhide -->
+                </div><!-- cd-panel-content -->
+            </div><!-- cd-panel-container -->
+        </div><!-- cd-panel -->
+    </div>
+
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/jquery.collapse.js"></script>
+    <script src="../assets/js/jquery-toggleslide.js"></script>
+    <script src="../assets/js/functions.js"></script>
+    <script src="../assets/js/jquery-accessibleMegaMenu.js"></script>
+	<script src="../assets/js/vadialog.js"></script>
+    <script type="text/javascript">
+	
+		visionaustralia.addDialog("login", "dialogLoginSuccessful");
+		visionaustralia.addDialog("create-button", "dialogLoginCreated");
+		visionaustralia.addDialog("icon-buttons a", "dialogSocialLogin");
+		
+		function localLogin() {
+			$("#login-form").hide();
+			$("#confirm").hide();
+			$("#logged-in").show("fast");
+			$("#btn-next").removeAttr("disabled");
+		}
+		
+		function extnLogin() {
+		
+		}
+		
+		function create() {
+			$("#login-form").hide();
+			$("#confirm").show();
+			$("#logged-in").show("fast");
+			$("#btn-next").removeAttr("disabled");
+		}
+		
+		function logout() {
+			$("#logged-in").hide();
+			$("#already-setup").attr("checked", false);
+			$("#create-account").show();
+			$("#account-login").hide();
+			$("#login-form").show("fast");
+		}
+
+        $(document).ready(function () {
+            // load save for later content
+            // initSaveForLater();
+            // initApplicationOptions();
+            // navigationWithinPage();
+
+            $("#already-setup").click(function () {
+                if (this.checked) {
+                    $("#create-account").hide();
+                    $("#account-login").show();
+                } else {
+                    $("#create-account").show();
+                    $("#account-login").hide();
+                }
+            });
+
+			$("#resend-email").click(function() {
+				// todo: message - email re-sent
+			});
+			
+			$("#different-address").click(function() {
+				$("#verify-email").hide();
+				$("#login-form").show();
+			});
+
+            $("#btnContinue").click(function() {
+                window.location = nextStepUrl;
+            });
+
+			/* Drop down settings menu */
+			$("nav").accessibleMegaMenu({
+				/* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+				uuidPrefix: "accessible-megamenu",
+				/* css class used to define the megamenu styling */
+				menuClass: "nav-menu",
+				/* css class for a top-level navigation item in the megamenu */
+				topNavItemClass: "nav-item",
+				/* css class for a megamenu panel */
+				panelClass: "sub-nav",
+				/* css class for a group of items within a megamenu panel */
+				panelGroupClass: "sub-nav-group",
+				/* css class for the hover state */
+				hoverClass: "hover",
+				/* css class for the focus state */
+				focusClass: "focus",
+				/* css class for the open state */
+				openClass: "open"
+			});
+		});
+    </script>
+</body>
+</html>
