@@ -905,22 +905,39 @@
 					<fieldset>
 						<legend class="margin4 larger">Company details</legend>
 						<div class="grid-row">
-							<div class="grid-row clearfix" style="display: block;">
-								<div class="col4">
-									<label class="input-right" for="associate-abn">Australian Business Number (ABN)<br /><span class="field-note">(optional)</span></label>
-								</div>
-								<div class="col7 last">
-									<input id="associate-abn" name="Structure.HoldingCompanyAbn" type="text">
-									<button id="abn-validate" class="btn btn-inline">Validate</button>
-									<div id="valid-success" class="grid-row margin-bottom-075" style="display: none;">
-										<div class="col1">
-											<img src="assets/img/ico-tick-green.png" alt="Success">
-										</div>
-										<div class="col11 last">
-											Your ABN has validated successfully.
-										</div>
+							<div class="col4">
+								<label class="input-right" for="associate-abn">Australian Business Number (ABN)<br /><span class="field-note">(optional)</span></label>
+							</div>
+							<div class="col7 last">
+								<input id="associate-abn" name="Structure.HoldingCompanyAbn" type="text">
+								<button id="abn-validate" class="btn btn-inline">Validate</button>
+								<div id="valid-success" class="grid-row margin-bottom-075" style="display: none;">
+									<div class="col1">
+										<img src="assets/img/ico-tick-green.png" alt="Success">
+									</div>
+									<div class="col11 last">
+										Your ABN has validated successfully.
 									</div>
 								</div>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="assoc-acn">ACN or ARBN</label>
+							</div>
+							<div class="col7 last">
+								<input id="assoc-acn" name="Structure.OrganisationAssociate.AsicNumber" type="text" value="">
+								<button id="acn-validate" class="btn btn-inline">Validate</button>
+								<div id="valid-success2" class="grid-row margin-bottom-075" style="display: none;">
+									<div class="col1">
+										<img src="assets/img/ico-tick-green.png" alt="Success">
+									</div>
+									<div class="col11 last">
+										Your ACN has validated successfully.
+									</div>
+								</div>
+							</div>
+							<div class="col1 last">
 							</div>
 						</div>
 						<div class="grid-row">
@@ -929,16 +946,6 @@
 							</div>
 							<div class="col7 last">
 								<input id="assoc-co-name" name="Structure.OrganisationAssociate.Name" type="text" value=""><br>
-							</div>
-							<div class="col1 last">
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label class="input-right" for="assoc-acn">ACN or ARBN</label>
-							</div>
-							<div class="col7 last">
-								<input id="assoc-acn" name="Structure.OrganisationAssociate.AsicNumber" type="text" value=""><br>
 							</div>
 							<div class="col1 last">
 							</div>
@@ -1741,6 +1748,13 @@
 					$("#valid-success").show();
 					$("#assoc-co-name").val("CORPORATION PTY LTD");
 					$("#assoc-acn").val("1234567890");
+				}, 500);
+			});
+			$("#acn-validate").click(function(){
+				window.setTimeout(function() {
+					$("#valid-success2").show();
+					$("#assoc-co-name").val("CORPORATION PTY LTD");
+					// $("#assoc-acn").val("1234567890");
 				}, 500);
 			});
 
