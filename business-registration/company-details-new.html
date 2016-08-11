@@ -19,617 +19,58 @@
     </style>
 </head>
 <body>
-	<div class="body">
-		<div class="wrapper-main">
-			<div class="wrapper">
-				<header class="clearfix">
-					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
-					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
-					<nav id="settings">
-						<ul class="nav-menu">
-							<li class="nav-item">
-								<a href="settings.html"><span>Settings</span></a>
-								<div class="sub-nav">
-									<ul class="sub-nav-group">
-										<li><a href="#" class="btn-save">Save and return</a></li>
-										<li><a href="#">Start a new application</a></li>
-										<li><a href="#">Sign out</a></li>
-									</ul>
-								</div>
-							</li>
+	<div class="top-banner">
+		<div class="mobile-logo">
+			<a href="/"><strong>business</strong>.gov.au</a>
+		</div>
+	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="settings.html"><span>Settings</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="#" class="btn-save">Save and return</a></li>
+							<li><a href="#">Start a new application</a></li>
+							<li><a href="#">Sign out</a></li>
 						</ul>
-					</nav>
-				</header>
-
-				<main>
-					<div class="progress-container">
-						<div class="progress-bar">
-							<span id="progress-percent" style="width: 50%"></span>
-						</div><!-- meter -->
-						<ul class="section-nav-5">
-							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
-							<li class="done"><a href="business-names-05.html"><span>2</span><br>Company<br> name</a></li>
-							<li class="active"><span>3</span><br>Company<br> details</li>
-							<li><span>4</span><br>Confirm<br> application</li>
-							<li><span>5</span><br>Payment<br> &amp; submit</li>
-						</ul>
-					</div><!-- progress-container -->
-					<h1 id="heading" tabindex="-1">3. Company details <span>(Step 3 of 6)</span></h1>
-					<p>All fields are required unless marked as optional.</p>
-					<div id="default-section" class="sub-section-container sub-section-open">
-						<h2>Address and location</h2>
-						<div class="sub-section-content">
-							<fieldset>
-								<legend class="margin4 larger">State of registration</legend>
-								<div class="grid-row">
-									<div class="col4">
-										<label class="input-right" for="state-territory">State or territory where company is registered</label>
-									</div>
-									<div class="col7 last">
-										<select id="state-territory" name="ContactDetails.StateTerritoryOfBusinessId">
-											<option value="">Please select...</option>
-											<option value="2">Australian Capital Territory</option>
-											<option value="3">New South Wales</option>
-											<option value="4">Northern Territory</option>
-											<option value="5">Queensland</option>
-											<option value="6">South Australia</option>
-											<option value="7">Tasmania</option>
-											<option value="8">Victoria</option>
-											<option value="9">Western Australia</option>
-										</select><br>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset id="divContact">
-								<legend class="margin4 larger">Company contact details</legend>
-								<div class="grid-row">
-									<div class="col4">
-										<label class="input-right" for="co-contact-phone">Phone</label>
-									</div>
-									<div class="col7 last">
-										<input id="co-contact-phone" type="text">
-									</div>
-								</div>
-								<div class="grid-row">
-									<div class="col4">
-										<label class="input-right" for="co-contact-email">Email</label>
-									</div>
-									<div class="col7 last">
-										<input id="co-contact-email" type="email">										
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<legend class="margin4 larger">Registered office address<br>
-									<span class="field-note">This does not have to be the principal place of business.</span>
-								</legend>
-								<div id="registered-address" class="address-details">
-									<div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-addr-line1">Address line 1</label>
-											</div>
-											<div class="col7 last">
-												<input id="registered-addr-line1" type="text">								
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-addr-line2">Address line 2 <span class="field-note optional">(optional)</span></label>
-											</div>
-											<div class="col7 last">
-												<input id="registered-addr-line2" type="text" value="">
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-suburb">Suburb</label>
-											</div>
-											<div class="col7 last">
-												<input class="capitalize" id="registered-suburb" type="text">
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-state">State</label>
-											</div>
-											<div class="col7 last">
-												<input id="registered-state" type="text">
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-postcode">Postcode</label>
-											</div>
-											<div class="col7 last">
-												<input id="registered-postcode" type="number">
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="registered-country">Country <span class="field-note optional">(optional)</span></label>
-											</div>
-											<div class="col7 last">
-												<input id="registered-country" type="text" value="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<legend class="margin4 larger">
-									<label for="co-occupy-premises">Does the company occupy this address?</label>
-									<span class="field-note">
-										If not, the occupier of the premises is required to consent in writing to the use of the specified
-										address as the address of the registered office of the company and has not withdrawn that consent.
-									</span>
-								</legend>
-								<div class="col4">&nbsp;</div>
-								<div class="col7 last" id="co-occupy-premises">
-									<div class="radio-toggle">
-										<label class="on label-left" for="co-occupy-premises-yes">
-											<input id="co-occupy-premises-yes" name="co-occupy-premises" type="radio" value="Yes">
-											<span>Yes</span>
-										</label>
-										<label class="off label-right" for="co-occupy-premises-no">
-											<input id="co-occupy-premises-no" name="co-occupy-premises" type="radio" value="No">
-											<span>No</span>
-										</label>
-									</div>
-								</div>
-
-								<div id="co-occupier-details" style="display: none">
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_NameOfOccupier">Name of occupier</label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_NameOfOccupier" name="ContactDetails.NameOfOccupier" type="text" value="">
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">&nbsp;</div>
-										<div class="col7 last custom-controls">
-											<p>
-												<input id="co-occupier-consent" type="checkbox" value="true">
-												<label for="co-occupier-consent">The company has written consent from the occupier to use this address as the registered office address<br><span class="field-note">(select to indicate statement above is correct)</span></label>
-											</p>									
-										</div>
-									</div>
-								</div>
-							</fieldset>
-
-							<fieldset>
-								<legend class="margin4 larger">
-									<label for="co-principle-place">Is this the principal place of business?</label>
-								</legend>
-								<div class="grid-row">
-									<div class="col4">&nbsp;</div>
-									<div class="col7 last" id="co-principle-place">
-										<div class="radio-toggle">
-											<label class="on label-left" for="co-principle-place-yes">
-												<input id="co-principle-place-yes" name="co-principle-place" type="radio" value="Yes">
-												<span>Yes</span>
-											</label>
-											<label class="off label-right" for="co-principle-place-no">
-												<input id="co-principle-place-no" name="co-principle-place" type="radio" value="No">
-												<span>No</span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-							<div id="co-principle-address" class="address-details" style="display: none;">
-								<div>
-									<div style="display: none">
-										<input id="__c__ContactDetails_PrincipalBusinessAddress_AddressId" name="__c__ContactDetails.PrincipalBusinessAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-										<input id="__c__ContactDetails_PrincipalBusinessAddress_AddressTypeId" name="__c__ContactDetails.PrincipalBusinessAddress.AddressTypeId" type="hidden" value="beAZxfdqrVgQhcNHWtvxUg==">
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_AddressLine1">Address line 1</label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_PrincipalBusinessAddress_AddressLine1" name="ContactDetails.PrincipalBusinessAddress.AddressLine1" type="text" value=""><br>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_PrincipalBusinessAddress_AddressLine2" name="ContactDetails.PrincipalBusinessAddress.AddressLine2" type="text" value=""><br>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Suburb">Suburb</label>
-										</div>
-										<div class="col7 last">
-											<input class="capitalize" id="ContactDetails_PrincipalBusinessAddress_Suburb" name="ContactDetails.PrincipalBusinessAddress.Suburb" type="text" value=""><br>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_State">State</label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_PrincipalBusinessAddress_State" name="ContactDetails.PrincipalBusinessAddress.State" type="text" value=""><br>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Postcode">Postcode</label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_PrincipalBusinessAddress_Postcode" name="ContactDetails.PrincipalBusinessAddress.Postcode" type="number" value=""><br>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Country">Country <span class="field-note optional">(optional)</span></label>
-										</div>
-										<div class="col7 last">
-											<input id="ContactDetails_PrincipalBusinessAddress_Country" name="ContactDetails.PrincipalBusinessAddress.Country" type="text" value=""><br>
-										</div>
-									</div>
-								</div>
-							</div>
-							<fieldset id="fieldsetBusinessAddressActivity">
-								<legend class="margin4 larger has-help">
-									
-									<br>
-								</legend>
-								<script type="text/javascript" src="assets/js/activity-search-min-1.0.js"></script>
-
-								<div id="ContactDetails_BusinessAddressActivity">
-									<div class="showhide-target" style="display: block">
-										<div style="display: none">
-											<input id="__c__ContactDetails_BusinessAddressActivity_BusinessActivityId" name="__c__ContactDetails.BusinessAddressActivity.BusinessActivityId" type="hidden" value="oIgrcwEMuT2AgEl+YQZTXg==">
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label for="ContactDetails_BusinessAddressActivity_SearchTerm" class="input-right">
-													Choose your main business activity<br>
-													<span class="field-note">(Start typing and choose from the options presented)</span>
-												</label>
-											</div>
-											<div class="col6">
-												<input id="ContactDetails_BusinessAddressActivity_SearchTerm" name="ContactDetails.BusinessAddressActivity.SearchTerm" placeholder="Start typing activity" style="width: 15em;" type="text" value="sandwich" spellcheck="true" aria-invalid="false" class="valid">
-												
-												<div id="ContactDetails_BusinessAddressActivity_Debug" style="display: none;">Filter result count: 1<br>Filter result count: 10<br></div><br>
-											</div>
-											<div class="col1 last">
-												<a class="cd-btn help" href="#help-businessdetailsbusinessaddressactivitysearchterm"><span>help</span></a>
-											</div>
-										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="ContactDetails_BusinessAddressActivity_Name">Selected activity</label>
-											</div>
-											<div class="col6">
-												<textarea cols="20" id="ContactDetails_BusinessAddressActivity_Name" name="ContactDetails.BusinessAddressActivity.Name" readonly="readonly" rows="2" style="margin: 7.67188px 4.79688px 7.67188px 0px; width: 464px; height: 56px; background: rgb(249, 249, 249);" role="combobox" aria-owns="businessActivitySuggestions1" aria-autocomplete="both" aria-readonly="true" aria-required="true" aria-describedby="businessActivitySuggestionsMessage1" aria-expanded="false" aria-invalid="false" class="valid">Sandwich retailing</textarea>
-
-												<input data-val="true" data-val-number="The field ActivityId must be a number." id="ContactDetails_BusinessAddressActivity_ActivityId" name="ContactDetails.BusinessAddressActivity.ActivityId" type="hidden" value="67200">
-												<input id="ContactDetails_BusinessAddressActivity_History" name="ContactDetails.BusinessAddressActivity.History" type="hidden" value="real|10">
-												<input id="ContactDetails_BusinessAddressActivity_Index" name="ContactDetails.BusinessAddressActivity.Index" type="hidden" value="5">
-											</div>
-										</div>
-									</div>
-								</div>
-
-
-								<script type="text/javascript">
-									function onActivityCodeChanged(code, activityIndex, activityDescription) {
-										$('#ContactDetails_BusinessAddressActivity_ActivityId').val(code);
-									}
-
-									$(document).ready(function () {
-										$("#ContactDetails_BusinessAddressActivity_SearchTerm").keypress(function (e) {
-											if (e.which === 13) {
-												$("#ContactDetails_BusinessAddressActivity_Name").focus();
-												return false;
-											}
-										});
-
-										$("#ContactDetails_BusinessAddressActivity_Search").on('click', function () {
-											$("#ContactDetails_BusinessAddressActivity_Name").focus();
-										});
-
-										$("#ContactDetails_BusinessAddressActivity_Name").anzsiclookup({
-											searchTextElement: $('#ContactDetails_BusinessAddressActivity_SearchTerm'),
-											selectedIndexElement: $('#ContactDetails_BusinessAddressActivity_Index'),
-											recentItems: [],
-											delay: 300,
-											probableMatchesHeaderText: "Probable Activities",
-											alphabeticMatchesHeaderText: "Alphabetic Activities",
-											recentHeaderText: "Recent",
-											blockSize: 50,
-											probableMatchSize: 20,
-											appendDelay: 50,
-											width: 600,
-											debugMode: false,
-											debugElement: $("#ContactDetails_BusinessAddressActivity_Debug"),
-											onCodeChanged: onActivityCodeChanged,
-											showRecentElement: null,
-											selectMessage: "Enter you activity here then press Search",
-											blankSearchInstructionText: "Business activities will display here.",
-											noResultsInstructionText: "No business activity found using your text.",
-											historyElement: $("#ContactDetails_BusinessAddressActivity_History")
-										});
-									});
-								</script>
-							</fieldset>
-							<div class="controls-container">
-								<div class="controls-content">
-									<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
-									<button class="btn btn-default next" type="button">Next</button> 
-								</div>
-							</div>
-						</div>
 					</div>
-					
-					<div id="struct" class="sub-section-container">
-						<h2>Company structure</h2>
-						<div class="sub-section-content">
-							<fieldset>
-								<legend class="larger has-help margin4">
-									<label for="Structure_IsGovernedByConstitution">Will the company be governed by a constitution?</label>
-								</legend>
-								<div class="grid-row margin4">
-									<div class="col11">
-										<div class="radio-toggle" id="Structure_IsGovernedByConstitution">
-											<label class="on label-left" for="constitution-yes">
-												<input class="ajax-radio" id="constitution-yes" name="constitution" type="radio" value="Yes">
-												<span>Yes</span>
-											</label>
-											<label class="off label-right" for="constitution-no">
-												<input class="ajax-radio" id="constitution-no" name="constitution" type="radio" value="No">
-												<span>No</span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="col1 last">
-								</div>
-							</fieldset>
-							<div id="file-upload" style="display: none;">
-								<h3 class="margin4">Company constitution</h3>
-								<div id="_FileUploadContainer" class="file-input-container margin4">
-									<span class="file-input-btn file-input-btn-success file-input-button">
-										<span>Select file...</span>
-										<input id="FileUpload" type="file" name=".FileUpload" accept=".doc, .docx, .pdf">
-									</span>
-									<br>
-									<br>
-									<div id="_Progress" class="file-upload-progress" style="display: none;">
-										<div class="file-upload-progress-bar file-upload-progress-bar-success" style="transition: width 2s;">
-										</div>
-									</div>
-									<span class="field-note">(Upload size must not exceed 3.5MB)</span>
-								</div>
-								<div id="replace-file" class="grid-row margin4" style="display: none;">
-									<div class="col11 last">
-											<p>You have already uploaded your constitution. 
-												<a id="re-upload" href="javascript:void(0);" class="update-upload-link cancel">Update your constitution upload</a>
-											</p>
-									</div>
-								</div>
-							</div>
-							<fieldset>
-								<legend class="larger has-help margin4">Will the company have an ultimate holding company?<br />
-									<span class="field-note">For example, a parent company that has control over the new company.</span>
-								</legend>
-								<div class="grid-row margin4">
-									<div class="col12 last">
-										<div class="radio-toggle">
-											<label class="on label-left" for="holding-on"><input id="holding-on" type="radio" name="holding"><span>Yes</span></label>
-											<label class="off label-right" for="holding-off"><input id="holding-off" type="radio" name="holding"><span>No</span></label>
-										</div>
-									</div>
-								</div><!-- grid-row -->
-								<div id="co-holding-company" style="display: none;">
-									<div class="grid-row clearfix">
-										<div class="col4">
-											<label class="input-right" for="holding-full-legal-name">Full legal name</label>
-										</div>
-										<div class="col7 last">
-											<input id="holding-full-legal-name"type="text">
-										</div>
-									</div>
-									<div class="grid-row clearfix">
-										<div class="col4">
-											<label class="input-right" for="holding-in-aus">Is the ultimate holding company registered in Australia?</label>
-										</div>
-										<div class="col7 last">
-											<div class="radio-toggle" id="holding-in-aus">
-												<label class="on label-left" for="holding-in-aus-yes">
-													<input id="holding-in-aus-yes" name="holding-in-aus" type="radio" value="Yes">
-													<span>Yes</span>
-												</label>
-												<label class="off label-right" for="holding-in-aus-no">
-													<input id="holding-in-aus-no" name="holding-in-aus" type="radio" value="No">
-													<span>No</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div id="holding-incorp" style="display: none">
-										<div class="grid-row clearfix">
-											<div class="col4">
-												<label class="input-right" for="holding-incorporation">Place of incorporation</label>
-											</div>
-											<div class="col7 last">
-												<input id="holding-incorporation" type="text">
-											</div>
-											<div class="col1 last">
-												
-											</div>
-										</div>
-										<div id="in-aus-holding">
-											<div class="grid-row clearfix">
-												<div class="col4">
-													<label class="input-right" for="holding-asic-no">ACN or ARBN</label>
-												</div>
-												<div class="col7 last">
-													<input id="holding-asic-no" type="text" value=""><br>
-													
-												</div>
-											</div>
-											<div id="Structure_HoldingCompanyAbnNumber_Container" class="grid-row clearfix" style="display: block;">
-												<div class="col4">
-													<label class="input-right" for="Structure_HoldingCompanyAbn">Australian Business Number (ABN)</label>
-												</div>
-												<div class="col7 last">
-													<input id="Structure_HoldingCompanyAbn" name="Structure.HoldingCompanyAbn" type="text">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-							
-
-							<hr />
-							<h3 class="larger">Business associates</h3>
-							<p>Add business associates using the buttons below. You require:</p>
-							<ul>
-								<li id="needDirector"><strong>at least one director</strong> with an Australian residential address</li>
-								<li id="needOrganisation"><strong>at least one shareholder</strong></li>
-								<li id="needAuthorisedContact"><strong>at least one authorised contact</strong></li>
-							</ul>
-							<p>Individuals can fulfill multiple roles. For example, a director can also be the authorised contact.</p>
-							<!-- div id="addEntity1" class="controls-content margin-bottom">
-								<button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
-								<button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-							</div -->
-
-							<!-- DIRECTOR -->
-							<div id="containerIndividual1" style="display: none">
-								<h3 class="margin4 line">Details for associate 1:</h3>
-								<fieldset class="custom-controls">
-									<legend class="margin4 has-help larger">Office held<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
-									<div class="grid-row">
-										<div class="col4">&nbsp;</div>
-										<div class="col3">
-											<p>
-												<input id="director" type="checkbox">
-												<label for="director">Director</label>
-											</p>
-										</div><!-- col -->
-										<div class="col5 last">
-											<p>
-												<input id="secretary" type="checkbox">
-												<label for="secretary">Secretary</label>
-											</p>
-										</div><!-- col -->
-									</div>
-									<div class="grid-row">
-										<div class="col4">&nbsp;</div>
-										<div class="col3 last">
-											<p>
-												<input id="shareholder" type="checkbox">
-												<label for="shareholder">Shareholder</label>
-											</p>
-										</div><!-- col -->
-									</div><!-- grid-row -->
-								</fieldset>
-								<fieldset>
-									<legend class="margin4 larger">Individual details</legend>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="individual1-given" class="input-right">Given name</label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-given" value="" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-									<div class="grid-row">
-										<div class="col4">
-											<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-other" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-									<div class="grid-row">
-										<div class="col4">
-											<label for="individual1-family" class="input-right">Family name</label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-family" value="" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-									<div class="grid-row">
-										<div class="col4">
-											&nbsp;
-										</div><!-- col -->
-										<div class="col8 custom-controls last">
-											<p>
-												<input type="checkbox" id="former-name" checked />
-												<label for="former-name">The person has no former name</label>
-											</p>
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-								</fieldset>
-		<fieldset id="Structure_PersonAssociate_PlaceOfBirthDetails" style="display: block;">
-				<legend class="margin4 larger">Which country was the associate born in?</legend>
-				<div class="grid-row">
-					<div class="col4 input-right">
-						&nbsp;
-					</div>
-					<div class="col7 last">
-						<select data-val="true" data-val-number="The field CountryId must be a number." id="Structure_PersonAssociate_CountryId" name="Structure.PersonAssociate.CountryId"><option value="14">Australia</option>
-							<option value="1">Afghanistan</option>
-							<option value="11">Argentina</option>
-							<option value="19">Bangladesh</option>
-							<option value="32">Brazil</option>
-							<option value="41">Canada</option>
-							<option value="46">China</option>
-							<option value="61">Denmark</option>
-							<option value="66">Egypt</option>
-							<option value="76">France</option>
-							<option value="86">Greece</option>
-							<option value="100">Hong Kong</option>
-							<option value="109">Israel</option>
-							<option value="110">Italy</option>
-							<option value="112">Japan</option>
-							<option value="124">Lebanon</option>
-							<option value="135">Malaysia</option>
-							<option value="144">Mexico</option>
-							<option value="157">Netherlands</option>
-							<option value="159">New Zealand</option>
-							<option value="168">Pakistan</option>
-							<option value="172">Papua New Guinea</option>
-							<option value="182">Romania</option>
-							<option value="200">Singapore</option>
-							<option value="206">South Africa</option>
-							<option value="214">Sweden</option>
-							<option value="220">Thailand</option>
-							<option value="227">Turkey</option>
-							<option value="234">United Kingdom</option>
-							<option value="236">United States</option>
-							<option value="246">Yemen</option>
-							<option value="248">Zimbabwe</option>
-							<option value="250">Etc</option>
-						</select>
-					</div>
-					<div class="col1 last">
-					</div>
-				</div>
-				<div id="Structure_PersonAssociate_PersonBirthDetails" style="">
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<div class="progress-container">
+			<div class="progress-bar">
+				<span id="progress-percent" style="width: 50%"></span>
+			</div><!-- meter -->
+			<ul class="section-nav-5">
+				<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+				<li class="done"><a href="business-names-05.html"><span>2</span><br>Company<br> name</a></li>
+				<li class="active"><span>3</span><br>Company<br> details</li>
+				<li><span>4</span><br>Confirm<br> application</li>
+				<li><span>5</span><br>Payment<br> &amp; submit</li>
+			</ul>
+		</div><!-- progress-container -->
+	</div>
+	<main class="wrapper">
+		<h1 id="heading" tabindex="-1">3. Company details <span>(Step 3 of 6)</span></h1>
+		<p>All fields are required unless marked as optional.</p>
+		<div id="default-section" class="sub-section-container">
+			<h2>Address and location</h2>
+			<div class="sub-section-content">
+				<fieldset>
+					<legend class="margin4 larger">State of registration</legend>
 					<div class="grid-row">
 						<div class="col4">
-							<label class="input-right" for="Structure_PersonAssociate_StateTerritoryId">State or territory of birth</label>
+							<label class="input-right" for="state-territory">State or territory where company is registered</label>
 						</div>
 						<div class="col7 last">
-							<select data-val="true" data-val-number="The field StateTerritoryId must be a number." id="Structure_PersonAssociate_StateTerritoryId" name="Structure.PersonAssociate.StateTerritoryId"><option value="">Please select...</option>
+							<select id="state-territory" name="ContactDetails.StateTerritoryOfBusinessId">
+								<option value="">Please select...</option>
 								<option value="2">Australian Capital Territory</option>
 								<option value="3">New South Wales</option>
 								<option value="4">Northern Territory</option>
@@ -638,965 +79,1372 @@
 								<option value="7">Tasmania</option>
 								<option value="8">Victoria</option>
 								<option value="9">Western Australia</option>
+							</select><br>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset id="divContact">
+					<legend class="margin4 larger">Company contact details</legend>
+					<div class="grid-row">
+						<div class="col4">
+							<label class="input-right" for="co-contact-phone">Phone</label>
+						</div>
+						<div class="col7 last">
+							<input id="co-contact-phone" type="text">
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							<label class="input-right" for="co-contact-email">Email</label>
+						</div>
+						<div class="col7 last">
+							<input id="co-contact-email" type="email">										
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend class="margin4 larger">Registered office address<br>
+						<span class="field-note">This does not have to be the principal place of business.</span>
+					</legend>
+					<div id="registered-address" class="address-details">
+						<div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-addr-line1">Address line 1</label>
+								</div>
+								<div class="col7 last">
+									<input id="registered-addr-line1" type="text">								
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-addr-line2">Address line 2 <span class="field-note optional">(optional)</span></label>
+								</div>
+								<div class="col7 last">
+									<input id="registered-addr-line2" type="text" value="">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-suburb">Suburb</label>
+								</div>
+								<div class="col7 last">
+									<input class="capitalize" id="registered-suburb" type="text">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-state">State</label>
+								</div>
+								<div class="col7 last">
+									<input id="registered-state" type="text">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-postcode">Postcode</label>
+								</div>
+								<div class="col7 last">
+									<input id="registered-postcode" type="number">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="registered-country">Country <span class="field-note optional">(optional)</span></label>
+								</div>
+								<div class="col7 last">
+									<input id="registered-country" type="text" value="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend class="margin4 larger">
+						<label for="co-occupy-premises">Does the company occupy this address?</label>
+						<span class="field-note">
+							If not, the occupier of the premises is required to consent in writing to the use of the specified
+							address as the address of the registered office of the company and has not withdrawn that consent.
+						</span>
+					</legend>
+					<div class="col4">&nbsp;</div>
+					<div class="col7 last" id="co-occupy-premises">
+						<div class="radio-toggle">
+							<label class="on label-left" for="co-occupy-premises-yes">
+								<input id="co-occupy-premises-yes" name="co-occupy-premises" type="radio" value="Yes">
+								<span>Yes</span>
+							</label>
+							<label class="off label-right" for="co-occupy-premises-no">
+								<input id="co-occupy-premises-no" name="co-occupy-premises" type="radio" value="No">
+								<span>No</span>
+							</label>
+						</div>
+					</div>
+					<div id="co-occupier-details" style="display: none">
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_NameOfOccupier">Name of occupier</label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_NameOfOccupier" name="ContactDetails.NameOfOccupier" type="text" value="">
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">&nbsp;</div>
+							<div class="col7 last custom-controls">
+								<p>
+									<input id="co-occupier-consent" type="checkbox" value="true">
+									<label for="co-occupier-consent">The company has written consent from the occupier to use this address as the registered office address<br><span class="field-note">(select to indicate statement above is correct)</span></label>
+								</p>									
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend class="margin4 larger">
+						<label for="co-principle-place">Is this the principal place of business?</label>
+					</legend>
+					<div class="grid-row">
+						<div class="col4">&nbsp;</div>
+						<div class="col7 last" id="co-principle-place">
+							<div class="radio-toggle">
+								<label class="on label-left" for="co-principle-place-yes">
+									<input id="co-principle-place-yes" name="co-principle-place" type="radio" value="Yes">
+									<span>Yes</span>
+								</label>
+								<label class="off label-right" for="co-principle-place-no">
+									<input id="co-principle-place-no" name="co-principle-place" type="radio" value="No">
+									<span>No</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div id="co-principle-address" class="address-details" style="display: none;">
+					<div>
+						<div style="display: none">
+							<input id="__c__ContactDetails_PrincipalBusinessAddress_AddressId" name="__c__ContactDetails.PrincipalBusinessAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+							<input id="__c__ContactDetails_PrincipalBusinessAddress_AddressTypeId" name="__c__ContactDetails.PrincipalBusinessAddress.AddressTypeId" type="hidden" value="beAZxfdqrVgQhcNHWtvxUg==">
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_AddressLine1">Address line 1</label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_PrincipalBusinessAddress_AddressLine1" name="ContactDetails.PrincipalBusinessAddress.AddressLine1" type="text" value=""><br>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_PrincipalBusinessAddress_AddressLine2" name="ContactDetails.PrincipalBusinessAddress.AddressLine2" type="text" value=""><br>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Suburb">Suburb</label>
+							</div>
+							<div class="col7 last">
+								<input class="capitalize" id="ContactDetails_PrincipalBusinessAddress_Suburb" name="ContactDetails.PrincipalBusinessAddress.Suburb" type="text" value=""><br>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_State">State</label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_PrincipalBusinessAddress_State" name="ContactDetails.PrincipalBusinessAddress.State" type="text" value=""><br>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Postcode">Postcode</label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_PrincipalBusinessAddress_Postcode" name="ContactDetails.PrincipalBusinessAddress.Postcode" type="number" value=""><br>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="ContactDetails_PrincipalBusinessAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+							</div>
+							<div class="col7 last">
+								<input id="ContactDetails_PrincipalBusinessAddress_Country" name="ContactDetails.PrincipalBusinessAddress.Country" type="text" value=""><br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<fieldset id="fieldsetBusinessAddressActivity">
+					<legend class="margin4 larger has-help">
+						
+						<br>
+					</legend>
+					<script type="text/javascript" src="assets/js/activity-search-min-1.0.js"></script>
+
+					<div id="ContactDetails_BusinessAddressActivity">
+						<div class="showhide-target" style="display: block">
+							<div style="display: none">
+								<input id="__c__ContactDetails_BusinessAddressActivity_BusinessActivityId" name="__c__ContactDetails.BusinessAddressActivity.BusinessActivityId" type="hidden" value="oIgrcwEMuT2AgEl+YQZTXg==">
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="ContactDetails_BusinessAddressActivity_SearchTerm" class="input-right">
+										Choose your main business activity<br>
+										<span class="field-note">(Start typing and choose from the options presented)</span>
+									</label>
+								</div>
+								<div class="col6">
+									<input id="ContactDetails_BusinessAddressActivity_SearchTerm" name="ContactDetails.BusinessAddressActivity.SearchTerm" placeholder="Start typing activity" style="width: 15em;" type="text" value="sandwich" spellcheck="true" aria-invalid="false" class="valid">
+									
+									<div id="ContactDetails_BusinessAddressActivity_Debug" style="display: none;">Filter result count: 1<br>Filter result count: 10<br></div><br>
+								</div>
+								<div class="col1 last">
+									<a class="cd-btn help" href="#help-businessdetailsbusinessaddressactivitysearchterm"><span>help</span></a>
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="ContactDetails_BusinessAddressActivity_Name">Selected activity</label>
+								</div>
+								<div class="col6">
+									<textarea cols="20" id="ContactDetails_BusinessAddressActivity_Name" name="ContactDetails.BusinessAddressActivity.Name" readonly="readonly" rows="2" style="margin: 7.67188px 4.79688px 7.67188px 0px; width: 464px; height: 56px; background: rgb(249, 249, 249);" role="combobox" aria-owns="businessActivitySuggestions1" aria-autocomplete="both" aria-readonly="true" aria-required="true" aria-describedby="businessActivitySuggestionsMessage1" aria-expanded="false" aria-invalid="false" class="valid">Sandwich retailing</textarea>
+
+									<input data-val="true" data-val-number="The field ActivityId must be a number." id="ContactDetails_BusinessAddressActivity_ActivityId" name="ContactDetails.BusinessAddressActivity.ActivityId" type="hidden" value="67200">
+									<input id="ContactDetails_BusinessAddressActivity_History" name="ContactDetails.BusinessAddressActivity.History" type="hidden" value="real|10">
+									<input id="ContactDetails_BusinessAddressActivity_Index" name="ContactDetails.BusinessAddressActivity.Index" type="hidden" value="5">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<script type="text/javascript">
+						function onActivityCodeChanged(code, activityIndex, activityDescription) {
+							$('#ContactDetails_BusinessAddressActivity_ActivityId').val(code);
+						}
+
+						$(document).ready(function () {
+							$("#ContactDetails_BusinessAddressActivity_SearchTerm").keypress(function (e) {
+								if (e.which === 13) {
+									$("#ContactDetails_BusinessAddressActivity_Name").focus();
+									return false;
+								}
+							});
+
+							$("#ContactDetails_BusinessAddressActivity_Search").on('click', function () {
+								$("#ContactDetails_BusinessAddressActivity_Name").focus();
+							});
+
+							$("#ContactDetails_BusinessAddressActivity_Name").anzsiclookup({
+								searchTextElement: $('#ContactDetails_BusinessAddressActivity_SearchTerm'),
+								selectedIndexElement: $('#ContactDetails_BusinessAddressActivity_Index'),
+								recentItems: [],
+								delay: 300,
+								probableMatchesHeaderText: "Probable Activities",
+								alphabeticMatchesHeaderText: "Alphabetic Activities",
+								recentHeaderText: "Recent",
+								blockSize: 50,
+								probableMatchSize: 20,
+								appendDelay: 50,
+								width: 600,
+								debugMode: false,
+								debugElement: $("#ContactDetails_BusinessAddressActivity_Debug"),
+								onCodeChanged: onActivityCodeChanged,
+								showRecentElement: null,
+								selectMessage: "Enter you activity here then press Search",
+								blankSearchInstructionText: "Business activities will display here.",
+								noResultsInstructionText: "No business activity found using your text.",
+								historyElement: $("#ContactDetails_BusinessAddressActivity_History")
+							});
+						});
+					</script>
+				</fieldset>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn" onclick="location.href='company-name.html'">Previous</button>
+						<button class="btn btn-default next" type="button">Next</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="struct" class="sub-section-container">
+			<h2>Company structure</h2>
+			<div class="sub-section-content">
+				<fieldset>
+					<legend class="larger has-help margin4">
+						<label for="Structure_IsGovernedByConstitution">Will the company be governed by a constitution?</label>
+					</legend>
+					<div class="grid-row margin4">
+						<div class="col11">
+							<div class="radio-toggle" id="Structure_IsGovernedByConstitution">
+								<label class="on label-left" for="constitution-yes">
+									<input class="ajax-radio" id="constitution-yes" name="constitution" type="radio" value="Yes">
+									<span>Yes</span>
+								</label>
+								<label class="off label-right" for="constitution-no">
+									<input class="ajax-radio" id="constitution-no" name="constitution" type="radio" value="No">
+									<span>No</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col1 last">
+					</div>
+				</fieldset>
+				<div id="file-upload" style="display: none;">
+					<h3 class="margin4">Company constitution</h3>
+					<div id="_FileUploadContainer" class="file-input-container margin4">
+						<span class="file-input-btn file-input-btn-success file-input-button">
+							<span>Select file...</span>
+							<input id="FileUpload" type="file" name=".FileUpload" accept=".doc, .docx, .pdf">
+						</span>
+						<br>
+						<br>
+						<div id="_Progress" class="file-upload-progress" style="display: none;">
+							<div class="file-upload-progress-bar file-upload-progress-bar-success" style="transition: width 2s;">
+							</div>
+						</div>
+						<span class="field-note">(Upload size must not exceed 3.5MB)</span>
+					</div>
+					<div id="replace-file" class="grid-row margin4" style="display: none;">
+						<div class="col11 last">
+								<p>You have already uploaded your constitution. 
+									<a id="re-upload" href="javascript:void(0);" class="update-upload-link cancel">Update your constitution upload</a>
+								</p>
+						</div>
+					</div>
+				</div>
+				<fieldset>
+					<legend class="larger has-help margin4">Will the company have an ultimate holding company?<br />
+						<span class="field-note">For example, a parent company that has control over the new company.</span>
+					</legend>
+					<div class="grid-row margin4">
+						<div class="col12 last">
+							<div class="radio-toggle">
+								<label class="on label-left" for="holding-on"><input id="holding-on" type="radio" name="holding"><span>Yes</span></label>
+								<label class="off label-right" for="holding-off"><input id="holding-off" type="radio" name="holding"><span>No</span></label>
+							</div>
+						</div>
+					</div><!-- grid-row -->
+					<div id="co-holding-company" style="display: none;">
+						<div class="grid-row clearfix">
+							<div class="col4">
+								<label class="input-right" for="holding-full-legal-name">Full legal name</label>
+							</div>
+							<div class="col7 last">
+								<input id="holding-full-legal-name"type="text">
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="col4">
+								<label class="input-right" for="holding-in-aus">Is the ultimate holding company registered in Australia?</label>
+							</div>
+							<div class="col7 last">
+								<div class="radio-toggle" id="holding-in-aus">
+									<label class="on label-left" for="holding-in-aus-yes">
+										<input id="holding-in-aus-yes" name="holding-in-aus" type="radio" value="Yes">
+										<span>Yes</span>
+									</label>
+									<label class="off label-right" for="holding-in-aus-no">
+										<input id="holding-in-aus-no" name="holding-in-aus" type="radio" value="No">
+										<span>No</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div id="holding-incorp" style="display: none">
+							<div class="grid-row clearfix">
+								<div class="col4">
+									<label class="input-right" for="holding-incorporation">Place of incorporation</label>
+								</div>
+								<div class="col7 last">
+									<input id="holding-incorporation" type="text">
+								</div>
+								<div class="col1 last">
+									
+								</div>
+							</div>
+							<div id="in-aus-holding">
+								<div class="grid-row clearfix">
+									<div class="col4">
+										<label class="input-right" for="holding-asic-no">ACN or ARBN</label>
+									</div>
+									<div class="col7 last">
+										<input id="holding-asic-no" type="text" value=""><br>
+										
+									</div>
+								</div>
+								<div id="Structure_HoldingCompanyAbnNumber_Container" class="grid-row clearfix" style="display: block;">
+									<div class="col4">
+										<label class="input-right" for="Structure_HoldingCompanyAbn">Australian Business Number (ABN)</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_HoldingCompanyAbn" name="Structure.HoldingCompanyAbn" type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn">Previous</button>
+						<button class="btn btn-default next" type="button">Next</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="struct" class="sub-section-container sub-section-open">
+			<h2>Business associates</h2>
+			<div class="sub-section-content">
+				<p>Add business associates using the buttons below. You require:</p>
+				<ul>
+					<li id="needDirector"><strong>at least one director</strong> with an Australian residential address</li>
+					<li id="needOrganisation"><strong>at least one shareholder</strong></li>
+					<li id="needAuthorisedContact"><strong>at least one authorised contact</strong></li>
+				</ul>
+				<p>Individuals can fulfill multiple roles. For example, a director can also be the authorised contact.</p>
+
+				<!-- DIRECTOR -->
+				<div id="containerIndividual1" style="display: none">
+					<h3 class="margin4 line">Details for associate 1:</h3>
+					<fieldset class="custom-controls">
+						<legend class="margin4 has-help larger">Office held<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
+						<div class="grid-row">
+							<div class="col4">&nbsp;</div>
+							<div class="col3">
+								<p>
+									<input id="director" type="checkbox">
+									<label for="director">Director</label>
+								</p>
+							</div><!-- col -->
+							<div class="col5 last">
+								<p>
+									<input id="secretary" type="checkbox">
+									<label for="secretary">Secretary</label>
+								</p>
+							</div><!-- col -->
+						</div>
+						<div class="grid-row">
+							<div class="col4">&nbsp;</div>
+							<div class="col3 last">
+								<p>
+									<input id="shareholder" type="checkbox">
+									<label for="shareholder">Shareholder</label>
+								</p>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+					</fieldset>
+					<fieldset>
+						<legend class="margin4 larger">Individual details</legend>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-given" class="input-right">Given name</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-given" value="" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-other" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-family" class="input-right">Family name</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-family" value="" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="col4">
+								&nbsp;
+							</div><!-- col -->
+							<div class="col8 custom-controls last">
+								<p>
+									<input type="checkbox" id="former-name" checked />
+									<label for="former-name">The person has no former name</label>
+								</p>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+
+					</fieldset>
+					<fieldset id="Structure_PersonAssociate_PlaceOfBirthDetails" style="display: block;">
+						<legend class="margin4 larger">Which country was the associate born in?</legend>
+						<div class="grid-row">
+							<div class="col4 input-right">
+								&nbsp;
+							</div>
+							<div class="col7 last">
+								<select data-val="true" data-val-number="The field CountryId must be a number." id="Structure_PersonAssociate_CountryId" name="Structure.PersonAssociate.CountryId"><option value="14">Australia</option>
+									<option value="1">Afghanistan</option>
+									<option value="11">Argentina</option>
+									<option value="19">Bangladesh</option>
+									<option value="32">Brazil</option>
+									<option value="41">Canada</option>
+									<option value="46">China</option>
+									<option value="61">Denmark</option>
+									<option value="66">Egypt</option>
+									<option value="76">France</option>
+									<option value="86">Greece</option>
+									<option value="100">Hong Kong</option>
+									<option value="109">Israel</option>
+									<option value="110">Italy</option>
+									<option value="112">Japan</option>
+									<option value="124">Lebanon</option>
+									<option value="135">Malaysia</option>
+									<option value="144">Mexico</option>
+									<option value="157">Netherlands</option>
+									<option value="159">New Zealand</option>
+									<option value="168">Pakistan</option>
+									<option value="172">Papua New Guinea</option>
+									<option value="182">Romania</option>
+									<option value="200">Singapore</option>
+									<option value="206">South Africa</option>
+									<option value="214">Sweden</option>
+									<option value="220">Thailand</option>
+									<option value="227">Turkey</option>
+									<option value="234">United Kingdom</option>
+									<option value="236">United States</option>
+									<option value="246">Yemen</option>
+									<option value="248">Zimbabwe</option>
+									<option value="250">Etc</option>
+								</select>
+							</div>
+							<div class="col1 last">
+							</div>
+						</div>
+						<div id="Structure_PersonAssociate_PersonBirthDetails" style="">
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="Structure_PersonAssociate_StateTerritoryId">State or territory of birth</label>
+								</div>
+								<div class="col7 last">
+									<select data-val="true" data-val-number="The field StateTerritoryId must be a number." id="Structure_PersonAssociate_StateTerritoryId" name="Structure.PersonAssociate.StateTerritoryId"><option value="">Please select...</option>
+										<option value="2">Australian Capital Territory</option>
+										<option value="3">New South Wales</option>
+										<option value="4">Northern Territory</option>
+										<option value="5">Queensland</option>
+										<option value="6">South Australia</option>
+										<option value="7">Tasmania</option>
+										<option value="8">Victoria</option>
+										<option value="9">Western Australia</option>
+									</select>
+								</div>
+								<div class="col1 last">
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="Structure_PersonAssociate_PlaceOfBirth">Place of birth</label>
+								</div>
+								<div class="col7 last">
+									<input id="Structure_PersonAssociate_PlaceOfBirth" name="Structure.PersonAssociate.PlaceOfBirth" type="text" value=""><br>
+									
+								</div>
+								<div class="col1 last">
+									
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="col4">
+									<label class="input-right" for="Structure_PersonAssociate_DateOfBirth">Date of birth</label>
+								</div>
+								<div class="col7 last">
+									<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Structure_PersonAssociate_DateOfBirth" name="Structure.PersonAssociate.DateOfBirth" type="text" value=""><br>
+									
+								</div>
+								<div class="col1 last">
+									
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend class="margin4 larger">Residential address</legend>
+						<div id="Structure_PersonAssociate_ResidentialAddress" class="address-details">
+							<div style="display: block">
+								<div style="display: none">
+									<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+									<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressTypeId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressTypeId" type="hidden" value="/hGNjxDNyhEGHfQbb9O3Vg==">
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine1">Address line 1</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine1" name="Structure.PersonAssociate.ResidentialAddress.AddressLine1" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine2" name="Structure.PersonAssociate.ResidentialAddress.AddressLine2" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Suburb">Suburb</label>
+									</div>
+									<div class="col7 last">
+										<input class="capitalize" id="Structure_PersonAssociate_ResidentialAddress_Suburb" name="Structure.PersonAssociate.ResidentialAddress.Suburb" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_State">State</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_State" name="Structure.PersonAssociate.ResidentialAddress.State" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Postcode">Postcode</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_Postcode" name="Structure.PersonAssociate.ResidentialAddress.Postcode" type="number" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_Country" name="Structure.PersonAssociate.ResidentialAddress.Country" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+							</div>
+						</div>    
+					</fieldset>
+					<div class="margin4 controls-content margin-bottom">
+						<button type="button" id="btnsaveIndividual1" class="btn btn-default">Save individual</button>
+						<button type="button" id="btncancelIndividual1" class="btn">Cancel</button>
+					</div>                        
+				</div><!-- individual 1 -->
+				
+				<!-- SHAREHOLDER -->
+				<div id="containerIndividual2" style="display: none">
+					<h3 class="margin4 line">Details for associate 2:</h3>
+					<fieldset>
+						<legend class="margin4 has-help larger">Office held<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
+						<div class="grid-row custom-controls">
+							<div class="col4">&nbsp;</div>
+							<div class="col3">
+								<p>
+									<input id="director1" type="checkbox">
+									<label for="director1">Director</label>
+								</p>
+							</div><!-- col -->
+							<div class="col5 last">
+								<p>
+									<input id="secretary1" type="checkbox">
+									<label for="secretary1">Secretary</label>
+								</p>
+							</div><!-- col -->
+						</div>
+						<div class="grid-row custom-controls">
+							<div class="col4">&nbsp;</div>
+							<div class="col3 last">
+								<p>
+									<input id="shareholder1" type="checkbox">
+									<label for="shareholder1">Shareholder</label>
+								</p>
+							</div><!-- col -->
+						</div><!-- grid-row -->
+					</fieldset>
+					<fieldset>
+						<legend class="margin4 larger">Individual details</legend>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-given" class="input-right">Given name</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-given" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-other" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+						<div class="grid-row">
+							<div class="col4">
+								<label for="individual1-family" class="input-right">Family name</label>
+							</div><!-- col -->
+							<div class="col8 last">
+								<input id="individual1-family" type="text">
+							</div><!-- col -->
+						</div><!-- grid-row -->
+					</fieldset>
+					<fieldset>
+						<legend class="margin4 larger">Residential address</legend>
+						<div id="Structure_PersonAssociate_ResidentialAddress" class="address-details">
+							<div style="display: block">
+								<div style="display: none">
+									<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+									<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressTypeId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressTypeId" type="hidden" value="/hGNjxDNyhEGHfQbb9O3Vg==">
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine1">Address line 1</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine1" name="Structure.PersonAssociate.ResidentialAddress.AddressLine1" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine2" name="Structure.PersonAssociate.ResidentialAddress.AddressLine2" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Suburb">Suburb</label>
+									</div>
+									<div class="col7 last">
+										<input class="capitalize" id="Structure_PersonAssociate_ResidentialAddress_Suburb" name="Structure.PersonAssociate.ResidentialAddress.Suburb" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_State">State</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_State" name="Structure.PersonAssociate.ResidentialAddress.State" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Postcode">Postcode</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_Postcode" name="Structure.PersonAssociate.ResidentialAddress.Postcode" type="number" value=""><br>
+									</div>
+									<div class="col1 last">
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_PersonAssociate_ResidentialAddress_Country" name="Structure.PersonAssociate.ResidentialAddress.Country" type="text" value=""><br>
+									</div>
+									<div class="col1 last">
+									</div>
+								</div>
+							</div>
+						</div>    
+					</fieldset>
+					<div class="margin4 controls-content margin-bottom">
+						<button type="button" id="btnsaveIndividual2" class="btn btn-default">Save individual</button>
+						<button type="button" id="btncancelIndividual2" class="btn">Cancel</button>
+					</div>
+				</div><!-- shareholder -->
+
+				<div id="container-corporate1" style="display: none">
+					<h3 class="margin4 line">Details for associate 3:</h3>
+					<fieldset>
+						<legend class="margin4 larger">Company details</legend>
+						<div class="grid-row">
+							<div class="grid-row clearfix" style="display: block;">
+								<div class="col4">
+									<label class="input-right" for="associate-abn">Australian Business Number (ABN)<br /><span class="field-note">(optional)</span></label>
+								</div>
+								<div class="col7 last">
+									<input id="associate-abn" name="Structure.HoldingCompanyAbn" type="text">
+									<button id="abn-validate" class="btn btn-inline">Validate</button>
+									<div id="valid-success" class="grid-row margin-bottom-075" style="display: none;">
+										<div class="col1">
+											<img src="assets/img/ico-tick-green.png" alt="Success">
+										</div>
+										<div class="col11 last">
+											Your ABN has validated successfully.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="assoc-co-name">Company name</label>
+							</div>
+							<div class="col7 last">
+								<input id="assoc-co-name" name="Structure.OrganisationAssociate.Name" type="text" value=""><br>
+							</div>
+							<div class="col1 last">
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="assoc-acn">ACN or ARBN</label>
+							</div>
+							<div class="col7 last">
+								<input id="assoc-acn" name="Structure.OrganisationAssociate.AsicNumber" type="text" value=""><br>
+							</div>
+							<div class="col1 last">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend class="margin4 larger">Registered address</legend>
+						<div id="Structure_OrganisationAssociate_RegisteredAddress" class="address-details">
+							<div style="display: block">
+								<div style="display: none">
+									<input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+									<input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressTypeId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressTypeId" type="hidden" value="3CAzsve04FReZ9AUU2FM6Q==">
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1">Address line 1</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine1" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine2" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Suburb">Suburb</label>
+									</div>
+									<div class="col7 last">
+										<input class="capitalize" id="Structure_OrganisationAssociate_RegisteredAddress_Suburb" name="Structure.OrganisationAssociate.RegisteredAddress.Suburb" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_State">State</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_OrganisationAssociate_RegisteredAddress_State" name="Structure.OrganisationAssociate.RegisteredAddress.State" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Postcode">Postcode</label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_OrganisationAssociate_RegisteredAddress_Postcode" name="Structure.OrganisationAssociate.RegisteredAddress.Postcode" type="number" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+								<div class="grid-row">
+									<div class="col4">
+										<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+									</div>
+									<div class="col7 last">
+										<input id="Structure_OrganisationAssociate_RegisteredAddress_Country" name="Structure.OrganisationAssociate.RegisteredAddress.Country" type="text" value=""><br>
+										
+									</div>
+									<div class="col1 last">
+										
+									</div>
+								</div>
+							</div>
+						</div>    
+					</fieldset>
+					<div class="margin4 controls-content margin-bottom">
+						<button id="btnSaveCorp" type="button" class="btn btn-default ajax-button">Save company</button>
+						<button id="btnCancelCorp" type="button" class="btn cancel ajax-button">Cancel</button>
+					</div>
+				</div>
+				<div id="individual1Saved">
+					<div class="cart-container">
+						<div id="individual2" class="result-row fade-in fade-in-inherit" style="display: none;">
+							<div class="result-cell cell-icon">
+								<img src="assets/img/ico-tick-green.png" alt="Success" />
+							</div>
+							<div class="result-cell cell-detail">
+								<h3>Michael Johnson</h3>
+								<p>Saved as Shareholder</p>
+							</div>
+							<div class="result-cell cell-action">
+								<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
+							</div>
+						</div><!-- result-row -->
+						<div id="individual1" class="result-row fade-in fade-in-inherit" style="display: none;">
+							<div class="result-cell cell-icon">
+								<img src="assets/img/ico-tick-green.png" alt="Success" />
+							</div>
+							<div class="result-cell cell-detail">
+								<h3>Robert Johnson</h3>
+								<p>Saved as Director, Shareholder</p>
+							</div>
+							<div class="result-cell cell-action">
+								<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
+							</div>
+						</div><!-- result-row -->
+						<div id="corporate1" class="result-row fade-in fade-in-inherit" style="display: none;">
+							<div class="result-cell cell-icon">
+								<img src="assets/img/ico-tick-green.png" alt="Success" />
+							</div>
+							<div class="result-cell cell-detail">
+								<h3>Contoso Pty Ltd</h3>
+								<p>Saved as Shareholder</p>
+							</div>
+							<div class="result-cell cell-action">
+								<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
+							</div>
+						</div><!-- result-row -->
+					</div><!-- cart-container -->
+					<div id="addEntity" class="controls-content margin-top-075 margin-bottom">
+						<button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
+						<button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
+					</div>
+				</div>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous">Previous</button><button id="assoc-next" type="button" class="btn btn-default next">Next</button>
+					</div><!-- controls-content -->
+				</div>
+			</div><!-- sub-section-content -->
+		</div><!-- sub-section-container -->
+		<div id="shares" class="sub-section-container">
+			<h2>Share allocation</h2>
+			<div class="sub-section-content">
+				<div id="allocate-shares">
+					<div id="share-allocation-summary" style="display: none">
+						<table>
+							<caption>Summary of shares allocated to business associates<br />
+							<thead>
+								<tr>
+									<th style="width: 25%">Shareholder</th>
+									<th style="width: 11%">Share class/type</th>
+									<th style="width: 11%">No. of shares</th>
+									<th style="width: 15%">$ paid per share</th>
+									<th style="width: 15%">$ unpaid per share</th>
+									<th style="width: 10%">Beneficially held?</th>
+									<th style="width: 10%"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Robert Johnson</td>
+									<td>ORD</td>
+									<td>1500</td>
+									<td>$0.50</td>
+									<td>$1.50</td>
+									<td>No</td>
+									<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
+								</tr>
+								<tr id="share-alloc-2nd-row" style="display: none">
+									<td>Michael Johnson</td>
+									<td>ORD</td>
+									<td>500</td>
+									<td>$0.50</td>
+									<td>$1.50</td>
+									<td>No</td>
+									<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
+								</tr>
+								<tr id="share-alloc-3rd-row" style="display: none">
+									<td>Contoso Pty Ltd</td>
+									<td>ORD</td>
+									<td>1000</td>
+									<td>$0.50</td>
+									<td>$1.50</td>
+									<td>No</td>
+									<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="no-margin-top"><button id="alloc-more-shares" type="button" class="btn btn-small">Allocate more shares</button></p>
+					</div>
+					<div id="containerAllocateShares1">
+						<fieldset class="no-margin">
+							<legend class="margin4 larger">Allocate shares to business associates<br /><span class="field-note">Share amounts must total amount specified in company share summary</span></legend>
+							<div class="grid-row">
+								<div class="col4">
+									<label for="selectAssociate" class="input-right">Select business associate</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<select id="selectAssociate">
+										<option>Please select...</option>
+										<option>Robert Johnson</option>
+										<option>Michael Johnson</option>
+										<option>Contoso Pty Ltd</option>
+									</select>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="company-share" class="input-right">Share class/type</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<select id="company-share">
+										<option selected="selected">-- Select share type --</option>
+										<optgroup label="Common share types">
+											<option>A - A</option>
+											<option>ORD - ordinary</option>
+										</optgroup>
+										<optgroup label="Custom share types">
+											<option>Create custom share type</option>
+										</optgroup>
+										<optgroup label="Other share types">
+											<option>B - B</option>
+											<option>EMP - employee's</option>
+											<option>FOU - founder's</option>
+											<option>LG  - life governor's</option>
+											<option>MAN - management</option>
+											<option>RED - redeemable</option>
+											<option>SPE - special</option>
+											<option>PRF - preference</option>
+											<option>CUMP - cumulative preference</option>
+											<option>NCP - non-cumulative preference</option>
+											<option>REDP - redeemable preference</option>
+											<option>NRP - non-redeemable preference</option>
+											<option>CRP - cumulative redeemable preference</option>
+											<option>NCRP - non-cumulative redeemable preference</option>
+											<option>PARP - participative preference</option>
+										</optgroup>
+									</select>
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="share-num" class="input-right">Number of shares</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="share-num" type="number">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="share-paid" class="input-right">Amount paid per share</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="share-paid" class="input-dollar" type="number">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<div class="col4">
+									<label for="share-unpaid" class="input-right">Amount unpaid per share</label>
+								</div><!-- col -->
+								<div class="col8 last">
+									<input id="share-unpaid" class="input-dollar" type="number">
+								</div><!-- col -->
+							</div><!-- grid-row -->
+							<div class="grid-row">
+								<fieldset class="no-margin">
+									<legend class="col4 input-right">Are these shares held on behalf of another individual, organisation or trust?</legend>
+									<div class="col8 last">
+										<div class="col12 last">
+											<div class="radio-toggle">
+												<label class="on label-left" for="on-behalf"><input id="on-behalf" type="radio" name="behalf"><span>Yes</span></label>
+												<label class="off label-right" for="off-behalf"><input id="off-behalf" type="radio" name="behalf"><span>No</span></label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</fieldset>
+						<p class="no-margin-top margin4"><button id="btnAllocateShares" type="button" class="btn btn-default btn-small">Allocate shares</button></p>
+					</div><!-- containerAllocateShares1 -->
+				</div><!-- allocate shares -->
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous">Previous</button>
+						<button  id="shares-next" type="button" class="btn btn-default next">Next</button>
+					</div><!-- controls-content -->
+				</div>
+			</div><!-- sub-section-content -->
+		</div><!-- sub-section-container -->
+		<div class="sub-section-container">
+			<h2>Lodgement</h2>
+			<div class="sub-section-content">
+			   <fieldset class="no-margin" id="fieldsetLodgement">
+					<legend class="larger" style="text-align: left">Lodgement</legend>
+					<div class="grid-row">
+						<div class="col4">
+							<label class="input-right" for="Lodgement_OfficeholderId">Who is submitting the form?</label>
+						</div>
+						<div class="col7 last">
+							<select id="lodger">
+								<option value="">Please select...</option>
+								<option value="person">Robert Johnson (Director)</option>
+								<option value="AddLodger">Add another person</option>
+								<option value="AddCompanyLodger">Add another company</option>
 							</select>
 						</div>
-						<div class="col1 last">
-						</div>
 					</div>
-					<div class="grid-row">
-						<div class="col4">
-							<label class="input-right" for="Structure_PersonAssociate_PlaceOfBirth">Place of birth</label>
-						</div>
-						<div class="col7 last">
-							<input id="Structure_PersonAssociate_PlaceOfBirth" name="Structure.PersonAssociate.PlaceOfBirth" type="text" value=""><br>
-							
-						</div>
-						<div class="col1 last">
-							
-						</div>
-					</div>
-					<div class="grid-row">
-						<div class="col4">
-							<label class="input-right" for="Structure_PersonAssociate_DateOfBirth">Date of birth</label>
-						</div>
-						<div class="col7 last">
-							<input class="date hasDatepicker" data-val="true" data-val-date="The field DateOfBirth must be a date." id="Structure_PersonAssociate_DateOfBirth" name="Structure.PersonAssociate.DateOfBirth" type="text" value=""><br>
-							
-						</div>
-						<div class="col1 last">
-							
-						</div>
-					</div>
-				</div>
-			</fieldset>
-								<fieldset>
-				<legend class="margin4 larger">Residential address</legend>
-				
-		<div id="Structure_PersonAssociate_ResidentialAddress" class="address-details">
-
-			
-
-			<div style="display: block">
-				<div style="display: none">
-					<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-					<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressTypeId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressTypeId" type="hidden" value="/hGNjxDNyhEGHfQbb9O3Vg==">
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine1">Address line 1</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine1" name="Structure.PersonAssociate.ResidentialAddress.AddressLine1" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine2" name="Structure.PersonAssociate.ResidentialAddress.AddressLine2" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Suburb">Suburb</label>
-					</div>
-					<div class="col7 last">
-						<input class="capitalize" id="Structure_PersonAssociate_ResidentialAddress_Suburb" name="Structure.PersonAssociate.ResidentialAddress.Suburb" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_State">State</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_State" name="Structure.PersonAssociate.ResidentialAddress.State" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Postcode">Postcode</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_Postcode" name="Structure.PersonAssociate.ResidentialAddress.Postcode" type="number" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Country">Country <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_Country" name="Structure.PersonAssociate.ResidentialAddress.Country" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-
-			</div>
-		</div>    
-			</fieldset>
-								<div class="margin4 controls-content margin-bottom">
-									<button type="button" id="btnsaveIndividual1" class="btn btn-default">Save individual</button>
-									<button type="button" id="btncancelIndividual1" class="btn">Cancel</button>
-								</div>                        
-							</div><!-- individual 1 -->
-												<!-- SHAREHOLDER -->
-							<div id="containerIndividual2" style="display: none">
-								<h3 class="margin4 line">Details for associate 2:</h3>
-								<fieldset>
-									<legend class="margin4 has-help larger">Office held<img class="help-icon" src="assets/img/ico-help-form.png" alt="Help with question" /></legend>
-									<div class="grid-row custom-controls">
-										<div class="col4">&nbsp;</div>
-										<div class="col3">
-											<p>
-												<input id="director1" type="checkbox">
-												<label for="director1">Director</label>
-											</p>
-										</div><!-- col -->
-										<div class="col5 last">
-											<p>
-												<input id="secretary1" type="checkbox">
-												<label for="secretary1">Secretary</label>
-											</p>
-										</div><!-- col -->
-									</div>
-									<div class="grid-row custom-controls">
-										<div class="col4">&nbsp;</div>
-										<div class="col3 last">
-											<p>
-												<input id="shareholder1" type="checkbox">
-												<label for="shareholder1">Shareholder</label>
-											</p>
-										</div><!-- col -->
-									</div><!-- grid-row -->
-								</fieldset>
-								<fieldset>
-									<legend class="margin4 larger">Individual details</legend>
+					<div id="AddLodger" class="grid-row" style="display:none">
+						<fieldset id="fieldsetAddLodgerIndividual" style="display:none">
+							<div id="Lodgement" class="grid-row">
+								<div>
 									<div class="grid-row">
 										<div class="col4">
-											<label for="individual1-given" class="input-right">Given name</label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-given" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-									<div class="grid-row">
-										<div class="col4">
-											<label for="individual1-other" class="input-right">Other given name <span class="field-note">(optional)</span></label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-other" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-									<div class="grid-row">
-										<div class="col4">
-											<label for="individual1-family" class="input-right">Family name</label>
-										</div><!-- col -->
-										<div class="col8 last">
-											<input id="individual1-family" type="text">
-										</div><!-- col -->
-									</div><!-- grid-row -->
-
-								</fieldset>
-
-			<fieldset>
-				<legend class="margin4 larger">Residential address</legend>
-				
-		<div id="Structure_PersonAssociate_ResidentialAddress" class="address-details">
-
-			
-
-			<div style="display: block">
-				<div style="display: none">
-					<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-					<input id="__c__Structure_PersonAssociate_ResidentialAddress_AddressTypeId" name="__c__Structure.PersonAssociate.ResidentialAddress.AddressTypeId" type="hidden" value="/hGNjxDNyhEGHfQbb9O3Vg==">
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine1">Address line 1</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine1" name="Structure.PersonAssociate.ResidentialAddress.AddressLine1" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_AddressLine2" name="Structure.PersonAssociate.ResidentialAddress.AddressLine2" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Suburb">Suburb</label>
-					</div>
-					<div class="col7 last">
-						<input class="capitalize" id="Structure_PersonAssociate_ResidentialAddress_Suburb" name="Structure.PersonAssociate.ResidentialAddress.Suburb" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_State">State</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_State" name="Structure.PersonAssociate.ResidentialAddress.State" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Postcode">Postcode</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_Postcode" name="Structure.PersonAssociate.ResidentialAddress.Postcode" type="number" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_PersonAssociate_ResidentialAddress_Country">Country <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_PersonAssociate_ResidentialAddress_Country" name="Structure.PersonAssociate.ResidentialAddress.Country" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-
-			</div>
-		</div>    
-			</fieldset>
-
-								<div class="margin4 controls-content margin-bottom">
-									<button type="button" id="btnsaveIndividual2" class="btn btn-default">Save individual</button>
-									<button type="button" id="btncancelIndividual2" class="btn">Cancel</button>
-
-								</div>
-							</div><!-- shareholder -->
-
-
-		<div id="container-corporate1" style="display: none">
-				<h3 class="margin4 line">Details for associate 3:</h3>
-
-			<fieldset>
-				<legend class="margin4 larger">Company details</legend>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_Name">Company name</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_Name" name="Structure.OrganisationAssociate.Name" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-
-				</div>
-
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_AsicNumber">ACN or ARBN</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_AsicNumber" name="Structure.OrganisationAssociate.AsicNumber" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-
-				</div>
-			</fieldset>
-			
-			<fieldset>
-				<legend class="margin4 larger">Registered address</legend>
-				
-		<div id="Structure_OrganisationAssociate_RegisteredAddress" class="address-details">
-
-			
-
-			<div style="display: block">
-				<div style="display: none">
-					<input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-					<input id="__c__Structure_OrganisationAssociate_RegisteredAddress_AddressTypeId" name="__c__Structure.OrganisationAssociate.RegisteredAddress.AddressTypeId" type="hidden" value="3CAzsve04FReZ9AUU2FM6Q==">
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1">Address line 1</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine1" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine1" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_RegisteredAddress_AddressLine2" name="Structure.OrganisationAssociate.RegisteredAddress.AddressLine2" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Suburb">Suburb</label>
-					</div>
-					<div class="col7 last">
-						<input class="capitalize" id="Structure_OrganisationAssociate_RegisteredAddress_Suburb" name="Structure.OrganisationAssociate.RegisteredAddress.Suburb" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_State">State</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_RegisteredAddress_State" name="Structure.OrganisationAssociate.RegisteredAddress.State" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Postcode">Postcode</label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_RegisteredAddress_Postcode" name="Structure.OrganisationAssociate.RegisteredAddress.Postcode" type="number" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-				<div class="grid-row">
-					<div class="col4">
-						<label class="input-right" for="Structure_OrganisationAssociate_RegisteredAddress_Country">Country <span class="field-note optional">(optional)</span></label>
-					</div>
-					<div class="col7 last">
-						<input id="Structure_OrganisationAssociate_RegisteredAddress_Country" name="Structure.OrganisationAssociate.RegisteredAddress.Country" type="text" value=""><br>
-						
-					</div>
-					<div class="col1 last">
-						
-					</div>
-				</div>
-
-			</div>
-		</div>    
-			</fieldset>
-
-			<div class="margin4 controls-content margin-bottom">
-				<button id="btnSaveCorp" type="button" class="btn btn-default ajax-button">Save company</button>
-				<button id="btnCancelCorp" type="button" class="btn cancel ajax-button">Cancel</button>
-			</div>
-		</div>
-							<!-- div id="individual1Saved" style="display: none">
-								<div class="cart-container">
-									<div class="result-row fade-in fade-in-inherit">
-										<div class="result-cell cell-icon">
-											<img src="assets/img/ico-tick-green.png" alt="Success" />
-										</div>
-										<div class="result-cell cell-detail">
-											<h3>Johnson, Robert</h3>
-											<p>Saved as director</p>
-										</div>
-										<div class="result-cell cell-action">
-											<a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a>
-										</div>
-									</div>
-								</div>
-								<div id="addEntity2" class="controls-content margin-top-075 margin-bottom">
-									<button type="button" id="btnIndividual2" class="btn btn-individual">Add individual</button>
-									<button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-								</div>
-							</div -->
-
-							<div id="individual1Saved">
-								<div class="cart-container">
-									<div id="individual2" class="result-row fade-in fade-in-inherit" style="display: none;">
-										<div class="result-cell cell-icon">
-											<img src="assets/img/ico-tick-green.png" alt="Success" />
-										</div>
-										<div class="result-cell cell-detail">
-											<h3>Michael Johnson</h3>
-											<p>Saved as Shareholder</p>
-										</div>
-										<div class="result-cell cell-action">
-											<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
-										</div>
-									</div><!-- result-row -->
-									<div id="individual1" class="result-row fade-in fade-in-inherit" style="display: none;">
-										<div class="result-cell cell-icon">
-											<img src="assets/img/ico-tick-green.png" alt="Success" />
-										</div>
-										<div class="result-cell cell-detail">
-											<h3>Robert Johnson</h3>
-											<p>Saved as Director, Shareholder</p>
-										</div>
-										<div class="result-cell cell-action">
-											<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
-										</div>
-									</div><!-- result-row -->
-									<div id="corporate1" class="result-row fade-in fade-in-inherit" style="display: none;">
-										<div class="result-cell cell-icon">
-											<img src="assets/img/ico-tick-green.png" alt="Success" />
-										</div>
-										<div class="result-cell cell-detail">
-											<h3>Contoso Pty Ltd</h3>
-											<p>Saved as Shareholder</p>
-										</div>
-										<div class="result-cell cell-action">
-											<a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a>
-										</div>
-									</div><!-- result-row -->
-								</div><!-- cart-container -->
-								<div id="addEntity" class="controls-content margin-top-075 margin-bottom">
-									<button type="button" id="btnIndividual1" class="btn btn-individual">Add individual</button>
-									<button type="button" id="btnOrganisation1" class="btn btn-organisation">Add organisation</button>
-								</div>
-							</div>
-
-							<div class="controls-container">
-								<div class="controls-content">
-									<button type="button" class="btn previous">Previous</button><button id="assoc-next" type="button" class="btn btn-default next">Next</button>
-								</div><!-- controls-content -->
-							</div>
-						</div><!-- sub-section-content -->
-					</div><!-- sub-section-container -->
-
-
-					<div id="shares" class="sub-section-container">
-						<h2>Share allocation</h2>
-						<div class="sub-section-content">
-							<!-- div id="containerAssignShares1">
-								<fieldset class="no-margin" id="assign-shares">
-									<legend class="margin4 larger">Allocate shares to business associates<br />
-									<span class="field-note">You need to specify the amount paid and unpaid per share.</span></legend>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="share-bus-assoc" class="input-right">Select business associate</label>
-										</div>
-										<div class="col8 last">
-											<select id="share-bus-assoc">
-												<option selected="selected">Please select</option>
-												<option>Johnson, Robert</option>
-												<option>Firth, Vic</option>
-											</select>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="company-share" class="input-right">Share class/type</label>
-										</div>
-										<div class="col8 last">
-											<select id="company-share">
-												<option selected="selected">-- Select share type --</option>
-												<option>Create custom share type</option>
-												<option>A - A</option>
-												<option>B - B</option>
-												<option>EMP - employee's</option>
-												<option>FOU - founder's</option>
-												<option>LG  - life governor's</option>
-												<option>MAN - management</option>
-												<option>ORD - ordinary</option>
-												<option>RED - redeemable</option>
-												<option>SPE - special</option>
-												<option>PRF - preference</option>
-												<option>CUMP -cumulative preference</option>
-												<option>NCP - non-cumulative preference</option>
-												<option>REDP - redeemable preference</option>
-												<option>NRP - non-redeemable preference</option>
-												<option>CRP - cumulative redeemable preference</option>
-												<option>NCRP - non-cumulative redeemable preference</option>
-												<option>PARP - participative preference</option>
-											</select>
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="share-num" class="input-right">Number of shares</label>
-										</div>
-										<div class="col8 last">
-											<input id="share-num" type="number">
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="share-paid" class="input-right">Amount paid per share</label>
-										</div>
-										<div class="col8 last">
-											<input id="share-paid" class="input-dollar" type="number">
-										</div>
-									</div>
-									<div class="grid-row">
-										<div class="col4">
-											<label for="share-unpaid" class="input-right">Amount unpaid per share</label>
-										</div>
-										<div class="col8 last">
-											<input id="share-unpaid" class="input-dollar" type="number">
-										</div>
-									</div>
-								</fieldset>
-								<div class="grid-row">
-									<fieldset class="no-margin">
-										<legend class="col4 input-right">Are these shares held on behalf of another individual, organisation or trust?</legend>
-										<div class="col8 last">
-											<div class="col12 last">
-												<div class="radio-toggle">
-													<label class="on label-left" for="on-behalf"><input id="on-behalf" type="radio" name="behalf"><span>Yes</span></label>
-													<label class="off label-right" for="off-behalf"><input id="off-behalf" type="radio" name="behalf"><span>No</span></label>
-												</div>
-											</div>
-										</div>
-									</fieldset>
-								</div>
-								<p class="no-margin-top"><button type="button" id="btnAddShareClass" class="btn btn-default btn-small margin4">Allocate shares</button></p>
-							</div -->
-
-							<!-- div id="share-summary" style="display: none">
-								<table>
-									<caption>Summary of shares assigned to the company</caption>
-									<thead>
-										<tr>
-											<th style="width: 23%">Share class/type</th>
-											<th style="width: 23%">Total number of shares</th>
-											<th style="width: 22%">Total paid</th>
-											<th style="width: 22%">Total unpaid</th>
-											<th style="width: 10%"></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>ORD</td>
-											<td>2000</td>
-											<td>$0.50</td>
-											<td>$2.00</td>
-											<td class="nowrap"><a class="edit" href=""><span>Edit</span></a>&nbsp;<a class="remove" href=""><span>Remove</span></a></td>
-										</tr>
-									</tbody>
-								</table>
-								<p class="no-margin-top"><button type="button" class="btn btn-small">Assign more shares</button></p>
-								<hr />
-							</div -->
-
-
-							<div id="allocate-shares">
-								<div id="share-allocation-summary" style="display: none">
-									<table>
-										<caption>Summary of shares allocated to business associates<br />
-										<thead>
-											<tr>
-												<th style="width: 25%">Shareholder</th>
-												<th style="width: 11%">Share class/type</th>
-												<th style="width: 11%">No. of shares</th>
-												<th style="width: 15%">$ paid per share</th>
-												<th style="width: 15%">$ unpaid per share</th>
-												<th style="width: 10%">Beneficially held?</th>
-												<th style="width: 10%"></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Robert Johnson</td>
-												<td>ORD</td>
-												<td>1500</td>
-												<td>$0.50</td>
-												<td>$1.50</td>
-												<td>No</td>
-												<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
-											</tr>
-											<tr id="share-alloc-2nd-row" style="display: none">
-												<td>Michael Johnson</td>
-												<td>ORD</td>
-												<td>500</td>
-												<td>$0.50</td>
-												<td>$1.50</td>
-												<td>No</td>
-												<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
-											</tr>
-											<tr id="share-alloc-3rd-row" style="display: none">
-												<td>Contoso Pty Ltd</td>
-												<td>ORD</td>
-												<td>1000</td>
-												<td>$0.50</td>
-												<td>$1.50</td>
-												<td>No</td>
-												<td class="nowrap"><a class="edit" href="javascript:void(0);"><span>Edit</span></a>&nbsp;<a class="remove" href="javascript:void(0);"><span>Remove</span></a></td>
-											</tr>
-										</tbody>
-									</table>
-									<p class="no-margin-top"><button id="alloc-more-shares" type="button" class="btn btn-small">Allocate more shares</button></p>
-								</div>
-								<div id="containerAllocateShares1">
-									<fieldset class="no-margin">
-										<legend class="margin4 larger">Allocate shares to business associates<br /><span class="field-note">Share amounts must total amount specified in company share summary</span></legend>
-										<div class="grid-row">
-											<div class="col4">
-												<label for="selectAssociate" class="input-right">Select business associate</label>
-											</div><!-- col -->
-											<div class="col8 last">
-												<select id="selectAssociate">
-													<option>Please select...</option>
-													<option>Robert Johnson</option>
-													<option>Michael Johnson</option>
-													<option>Contoso Pty Ltd</option>
-												</select>
-											</div><!-- col -->
-										</div><!-- grid-row -->
-										<div class="grid-row">
-											<div class="col4">
-												<label for="company-share" class="input-right">Share class/type</label>
-											</div><!-- col -->
-											<div class="col8 last">
-												<select id="company-share">
-													<option selected="selected">-- Select share type --</option>
-													<option>Create custom share type</option>
-													<option>A - A</option>
-													<option>B - B</option>
-													<option>EMP - employee's</option>
-													<option>FOU - founder's</option>
-													<option>LG  - life governor's</option>
-													<option>MAN - management</option>
-													<option>ORD - ordinary</option>
-													<option>RED - redeemable</option>
-													<option>SPE - special</option>
-													<option>PRF - preference</option>
-													<option>CUMP - cumulative preference</option>
-													<option>NCP - non-cumulative preference</option>
-													<option>REDP - redeemable preference</option>
-													<option>NRP - non-redeemable preference</option>
-													<option>CRP - cumulative redeemable preference</option>
-													<option>NCRP - non-cumulative redeemable preference</option>
-													<option>PARP - participative preference</option>
-												</select>
-											</div><!-- col -->
-										</div><!-- grid-row -->
-										<div class="grid-row">
-											<div class="col4">
-												<label for="share-num" class="input-right">Number of shares</label>
-											</div><!-- col -->
-											<div class="col8 last">
-												<input id="share-num" type="number">
-											</div><!-- col -->
-										</div><!-- grid-row -->
-										<div class="grid-row">
-											<div class="col4">
-												<label for="share-paid" class="input-right">Amount paid per share</label>
-											</div><!-- col -->
-											<div class="col8 last">
-												<input id="share-paid" class="input-dollar" type="number">
-											</div><!-- col -->
-										</div><!-- grid-row -->
-										<div class="grid-row">
-											<div class="col4">
-												<label for="share-unpaid" class="input-right">Amount unpaid per share</label>
-											</div><!-- col -->
-											<div class="col8 last">
-												<input id="share-unpaid" class="input-dollar" type="number">
-											</div><!-- col -->
-										</div><!-- grid-row -->
-										<div class="grid-row">
-											<fieldset class="no-margin">
-												<legend class="col4 input-right">Are these shares held on behalf of another individual, organisation or trust?</legend>
-												<div class="col8 last">
-													<div class="col12 last">
-														<div class="radio-toggle">
-															<label class="on label-left" for="on-behalf"><input id="on-behalf" type="radio" name="behalf"><span>Yes</span></label>
-															<label class="off label-right" for="off-behalf"><input id="off-behalf" type="radio" name="behalf"><span>No</span></label>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-									</fieldset>
-									<p class="no-margin-top margin4"><button id="btnAllocateShares" type="button" class="btn btn-default btn-small">Allocate shares</button></p>
-								</div><!-- containerAllocateShares1 -->
-							</div><!-- allocate shares -->
-
-
-							<div class="controls-container">
-								<div class="controls-content">
-									<button type="button" class="btn previous">Previous</button>
-									<button  id="shares-next" type="button" class="btn btn-default next">Next</button>
-								</div><!-- controls-content -->
-							</div>
-						</div><!-- sub-section-content -->
-					</div><!-- sub-section-container -->
-					<div class="sub-section-container">
-						<h2>Lodgement</h2>
-							<div class="sub-section-content">
-							   <fieldset class="no-margin" id="fieldsetLodgement">
-									<legend class="larger" style="text-align: left">Lodgement</legend>
-									<div class="grid-row">
-										<div class="col4">
-											<label class="input-right" for="Lodgement_OfficeholderId">Who is submitting the form?</label>
+											<label class="input-right" for="Lodgement_NewLodgerIndividualGivenName">Given name</label>
 										</div>
 										<div class="col7 last">
-											<select id="lodger">
-												<option value="">Please select...</option>
-												<option value="person">Robert Johnson (Director)</option>
-												<option value="AddLodger">Add another person</option>
-												<option value="AddCompanyLodger">Add another company</option>
-											</select>
+											<input id="Lodgement_NewLodgerIndividualGivenName" name="Lodgement.NewLodgerIndividualGivenName" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
 										</div>
 									</div>
-									<div id="AddLodger" class="grid-row" style="display:none">
-										<fieldset id="fieldsetAddLodgerIndividual" style="display:none">
-											<div id="Lodgement" class="grid-row">
-												<div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerIndividualGivenName">Given name</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerIndividualGivenName" name="Lodgement.NewLodgerIndividualGivenName" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerIndividualOtherGivenNames">Other given name <span class="field-note optional">(optional)</span></label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerIndividualOtherGivenNames" name="Lodgement.NewLodgerIndividualOtherGivenNames" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerIndividualFamilyName">Family name</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerIndividualFamilyName" name="Lodgement.NewLodgerIndividualFamilyName" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset id="fieldsetAddLodgerCompany" style="display:none">
-											<div id="Lodgement" class="grid-row">
-												<div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerCompanyName">Company name</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerCompanyName" name="Lodgement.NewLodgerCompanyName" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerCompanyAsicNumber">ACN or ARBN <span class="field-note optional">(optional)</span></label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerCompanyAsicNumber" name="Lodgement.NewLodgerCompanyAsicNumber" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset id="fieldsetAddLodgerAddress">
-											<div id="Lodgement_NewLodgerAddress" class="address-details">
-												<div style="display: block">
-													<div style="display: none">
-														<input id="__c__Lodgement_NewLodgerAddress_AddressId" name="__c__Lodgement.NewLodgerAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-														<input id="__c__Lodgement_NewLodgerAddress_AddressTypeId" name="__c__Lodgement.NewLodgerAddress.AddressTypeId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_AddressLine1">Address line 1</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerAddress_AddressLine1" name="Lodgement.NewLodgerAddress.AddressLine1" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerAddress_AddressLine2" name="Lodgement.NewLodgerAddress.AddressLine2" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_Suburb">Suburb</label>
-														</div>
-														<div class="col7 last">
-															<input class="capitalize" id="Lodgement_NewLodgerAddress_Suburb" name="Lodgement.NewLodgerAddress.Suburb" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_State">State</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerAddress_State" name="Lodgement.NewLodgerAddress.State" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_Postcode">Postcode</label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerAddress_Postcode" name="Lodgement.NewLodgerAddress.Postcode" type="number" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-													<div class="grid-row">
-														<div class="col4">
-															<label class="input-right" for="Lodgement_NewLodgerAddress_Country">Country <span class="field-note optional">(optional)</span></label>
-														</div>
-														<div class="col7 last">
-															<input id="Lodgement_NewLodgerAddress_Country" name="Lodgement.NewLodgerAddress.Country" type="text" value=""><br>
-															
-														</div>
-														<div class="col1 last">
-															
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</fieldset>
-									</div>
-									<div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="Lodgement_Phone">Phone <span class="field-note optional">(optional)</span></label>
-											</div>
-											<div class="col7 last">
-												<input id="Lodgement_Phone" name="Lodgement.Phone" type="text" value=""><br>
-												
-											</div>
-											<div class="col1 last">
-												
-											</div>
-
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerIndividualOtherGivenNames">Other given name <span class="field-note optional">(optional)</span></label>
 										</div>
-										<div class="grid-row">
-											<div class="col4">
-												<label class="input-right" for="Lodgement_Email">Email</label>
-											</div>
-											<div class="col7 last">
-												<input id="Lodgement_Email" name="Lodgement.Email" type="email" value=""><br>
-												
-											</div>
-											<div class="col1 last">
-												
-											</div>
-
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerIndividualOtherGivenNames" name="Lodgement.NewLodgerIndividualOtherGivenNames" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
 										</div>
 									</div>
-								</fieldset>
-								<div class="controls-container">
-									<div class="controls-content">
-										<button class="btn previous" type="button">Previous</button>
-										<button type="button" onclick="location.href='confirm-company.html'" class="btn btn-default">Next</button>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerIndividualFamilyName">Family name</label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerIndividualFamilyName" name="Lodgement.NewLodgerIndividualFamilyName" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-				</main>
+						</fieldset>
+						<fieldset id="fieldsetAddLodgerCompany" style="display:none">
+							<div id="Lodgement" class="grid-row">
+								<div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerCompanyName">Company name</label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerCompanyName" name="Lodgement.NewLodgerCompanyName" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerCompanyAsicNumber">ACN or ARBN <span class="field-note optional">(optional)</span></label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerCompanyAsicNumber" name="Lodgement.NewLodgerCompanyAsicNumber" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset id="fieldsetAddLodgerAddress">
+							<div id="Lodgement_NewLodgerAddress" class="address-details">
+								<div style="display: block">
+									<div style="display: none">
+										<input id="__c__Lodgement_NewLodgerAddress_AddressId" name="__c__Lodgement.NewLodgerAddress.AddressId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+										<input id="__c__Lodgement_NewLodgerAddress_AddressTypeId" name="__c__Lodgement.NewLodgerAddress.AddressTypeId" type="hidden" value="BfNQIa39YHWRsVvADavFng==">
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_AddressLine1">Address line 1</label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerAddress_AddressLine1" name="Lodgement.NewLodgerAddress.AddressLine1" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_AddressLine2">Address line 2 <span class="field-note optional">(optional)</span></label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerAddress_AddressLine2" name="Lodgement.NewLodgerAddress.AddressLine2" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_Suburb">Suburb</label>
+										</div>
+										<div class="col7 last">
+											<input class="capitalize" id="Lodgement_NewLodgerAddress_Suburb" name="Lodgement.NewLodgerAddress.Suburb" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_State">State</label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerAddress_State" name="Lodgement.NewLodgerAddress.State" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_Postcode">Postcode</label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerAddress_Postcode" name="Lodgement.NewLodgerAddress.Postcode" type="number" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
+									<div class="grid-row">
+										<div class="col4">
+											<label class="input-right" for="Lodgement_NewLodgerAddress_Country">Country <span class="field-note optional">(optional)</span></label>
+										</div>
+										<div class="col7 last">
+											<input id="Lodgement_NewLodgerAddress_Country" name="Lodgement.NewLodgerAddress.Country" type="text" value=""><br>
+											
+										</div>
+										<div class="col1 last">
+											
+										</div>
+									</div>
 
-			</div><!-- wrapper -->
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="Lodgement_Phone">Phone <span class="field-note optional">(optional)</span></label>
+							</div>
+							<div class="col7 last">
+								<input id="Lodgement_Phone" name="Lodgement.Phone" type="text" value=""><br>
+								
+							</div>
+							<div class="col1 last">
+								
+							</div>
+
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="Lodgement_Email">Email</label>
+							</div>
+							<div class="col7 last">
+								<input id="Lodgement_Email" name="Lodgement.Email" type="email" value=""><br>
+								
+							</div>
+							<div class="col1 last">
+								
+							</div>
+
+						</div>
+					</div>
+				</fieldset>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button class="btn previous" type="button">Previous</button>
+						<button type="button" onclick="location.href='confirm-company.html'" class="btn btn-default">Next</button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</main>
 
     <div class="saveforlater" id="saveForLater"></div>
     <div class="applicationoptions" id="applicationOptions"></div>
@@ -1886,6 +1734,14 @@
 			$("#re-upload").click(function() {
 				$("#_FileUploadContainer").show();
 				$("#replace-file").hide();
+			});
+			
+			$("#abn-validate").click(function(){
+				window.setTimeout(function() {
+					$("#valid-success").show();
+					$("#assoc-co-name").val("CORPORATION PTY LTD");
+					$("#assoc-acn").val("1234567890");
+				}, 500);
 			});
 
         });
