@@ -7,8 +7,8 @@ var businessStructure = {
     "contentFile": "business_structure_question.html"
 };
 
-var activity_gst = { "name": "Activity", "helpFile": "activity_gst_help.html", "contentFile": "activity_gst_question.html" };
-var activity_tax = { "name": "Activity (continued)", "helpFile": "activity_tax_help.html", "contentFile": "activity_tax_question.html" };
+var activity_gst = { "name": "Goods &amp; Services Tax (GST)", "helpFile": "activity_gst_help.html", "contentFile": "activity_gst_question.html" };
+var activity_tax = { "name": "Other taxes", "helpFile": "activity_tax_help.html", "contentFile": "activity_tax_question.html" };
 var finished = { "name": "Registration summary", "helpFile": "finished_help.html", "contentFile": "finished_content.html" };
 var actions = { "eligibilityStep": "eligibility", "businessStructureStep": "businessStructure", "businessNameStep": "name", "employeeStep": "employee", "activityGSTStep": "activityGST", "activityTaxStep": "activityTax", "finishedStep": "finished", "helpMeDecideStep": "helpMeDecide", "helpMeDecideSelectStep": "helpMeDecideSelect", "helpMeDecideResultStep": "helpMeDecideResultStep" }
 
