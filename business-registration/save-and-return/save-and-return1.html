@@ -15,51 +15,39 @@
 			margin-right: 15px;
 		}
 
-		.icon-buttons a span::before,
-		.icon-buttons label span:before	{
+		.icon-buttons a span::before {
 			font-size: 1.5em;
 			color: #fff;
 			border-radius: 5px;
 			cursor: pointer;
 		}
 		
-		.icon-buttons input[type=checkbox],
-		.icon-buttons input[type=radio] {
-			width: 20px;
-			height: 20px;
-		}
-		
-		.icon-buttons label {
-			margin-right: 15px;
-		}
-		
-		.icon-buttons span.fa-facebook:before
-		{
+		.icon-buttons a.facebook span:before {
 			padding: 5px 11px;
 			background-color: #3b5998
 		}
 		
-		.icon-buttons span.fa-twitter:before {
+		.icon-buttons a.twitter span:before {
 			padding: 5px 6px;
 			background-color: #1da1f2;
 		}
 		
-		.icon-buttons span.fa-linkedin:before {
+		.icon-buttons a.linkedin span:before {
 			padding: 5px 6px;
 			background-color: #0077b5;
 		}
 		
-		.icon-buttons span.fa-google:before {
+		.icon-buttons a.google span:before {
 			padding: 5px 6px;
 			background-color: #d73d32;
 		}
 		
-		.icon-buttons span.fa-windows:before {
+		.icon-buttons a.microsoft span:before {
 			padding: 5px 4px;
 			background-color: #57b057;
 		}
 		
-		.icon-buttons span.mygov:before {
+		.icon-buttons a.mygov span::before {
 			content: "my\AGov";
 			white-space: pre;
 			font-family: 'open_sansregular', sans-serif;
@@ -171,7 +159,7 @@
 						</div><!-- grid-row -->
 						<div class="grid-row">
 							<div class="margin4">
-								<p>Login using a password</p>
+								<p>Login using a password:</p>
 							</div>
 						</div>
 						<div class="grid-row">
@@ -190,34 +178,6 @@
 								<input id="password02" type="password" style="width: 100%; max-width: 24em;">
 							</div><!-- col -->
 						</div><!-- grid-row -->
-						<div class="grid-row">
-							<div class="margin4">
-								<p>Or</p>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="margin4">
-								<p>Login with your account from any of the following systems:</p>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="margin4 icon-buttons">
-								<p>
-									<input type="checkbox" id="fb-cb" />
-									<label for="fb-cb"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></label>
-									<input type="checkbox" id="tw-cb" />
-									<label for="tw-cb"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></label>
-									<input type="checkbox" id="go-cb" />
-									<label for="go-cb"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></label>
-									<input type="checkbox" id="ms-cb" />
-									<label for="ms-cb"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></label>
-									<input type="checkbox" id="in-cb" />
-									<label for="in-cb"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></label>
-									<input type="checkbox" id="my-cb" />
-									<label for="my-cb"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="mygov"></span><span class="visually-hidden">myGov</span></label>
-								</p>
-							</div>
-						</div>
 						<div  class="grid-row">
 							<div class="col4">
 								<p>&nbsp;</p>
@@ -261,26 +221,26 @@
 						</div><!-- grid-row -->
 
 					</div>
-					<div class="grid-row" style="display: none">
+					<div class="grid-row">
 						<div class="col4">&nbsp;</div>
 						<div class="col4 last">
 							<p>Or</p>
 						</div>
 					</div>
-					<div class="grid-row" style="display: none;">
+					<div class="grid-row">
 						<div class="margin4">
-							<h3>Connect with an existing account</h3>
-							<p>Select from any of the following systems:</p>
+							<h3>Connect with another account</h3>
+							<p>Login using your social media or myGov account:</p>
 						</div>
 					</div>
-					<div class="grid-row" style="display: none;">
+					<div class="grid-row">
 						<div class="margin4 icon-buttons" id="icon-buttons">
 							<a class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
 							<a class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
 							<a class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
 							<a class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
 							<a class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-							<a class="mygov"><span class="mygov"></span><span class="visually-hidden">myGov</span></a>
+							<a class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
 						</div>
 					</div>
 				</fieldset>
@@ -295,18 +255,28 @@
 						<button class="btn btn-small" onclick="logout()">Logout</button>
 					</div>
 				</div>
-				<div id="logged-in-fb" class="grid-row margin-bottom-075" style="display: none;">
-					<div class="margin4">
-						<h3>Save and return details</h3>
-						<p>You are logged in with your facebook account.</p>
-						<p>You
-						<span id="confirm"><br />You email has not been confirmed ( <a href="#">resend confirmation email</a> ).</span></p>
-						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
-						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner, or you can login using different credentials by selecting the button below.</p>
-						<button class="btn btn-small" onclick="logout()">Logout</button>
+				<div id="logged-in-fb" style="display: none;">
+					<div id="logged-in-fb" class="grid-row">
+						<div class="margin4">
+							<h3>Save and return details</h3>
+							<p>You are logged in with your <strong>Facebook</strong> account.</p>
+							<p>You will need to provide an email address for correspondence relating to your applications.</p>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							<label for="social-email" class="input-right">Email address</label>
+						</div>
+						<div class="col8 last">
+							<input id="social-email" type="text"/>
+						</div>
+					</div>
+					<div class="grid-row margin-bottom-075">
+						<div class="margin4">
+							<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website and return to the same point later by logging in with you Facebook account when you return.</p>
+						</div>
 					</div>
 				</div>
-				
 				<div class="controls-container">
 					<div class="controls-content">
 						<button type="button" class="btn" onclick="location.href='index.html'">Previous</button>
@@ -341,7 +311,7 @@
         <h1>External login</h1> 
         <p>You will now be redirected to the Facebook website so you can login to your account and confirm access.</p>
 		<p>Once completed you will be returned to this page to continue with your application.</p>
-		<p>You will need to provide an email address for correspondence relating to your application.</p>
+		<p>If you have not already done so, you will need to provide an email address for correspondence relating to your application.</p>
         <button type="button" class="btn btn-default" onclick="extnLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
 		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
     </div>
@@ -388,7 +358,10 @@
 		}
 		
 		function extnLogin() {
-		
+			$("#login-form").hide();
+			$("#logged-in-fb").show("fast");
+			$("#btn-next").removeAttr("disabled");
+			$("#social-email").focus();
 		}
 		
 		function create() {

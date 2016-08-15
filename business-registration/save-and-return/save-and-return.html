@@ -22,6 +22,10 @@
 			cursor: pointer;
 		}
 		
+		.icon-buttons a:focus span::before {
+			outline: 1px solid #02bfe7; 
+		}
+		
 		.icon-buttons a.facebook span:before {
 			padding: 5px 11px;
 			background-color: #3b5998
@@ -93,8 +97,8 @@
 						<ul class="sub-nav-group">
 							<li><a href="#" class="btn-save">Save and return</a></li>
 							<li><a href="#">Start a new application</a></li>
-							<li><a href="#">Re-send confirmation</a></li>
-							<li><a href="#">Logout</a></li>
+							<li><a id="menu-resend" href="#">Re-send confirmation</a></li>
+							<li><a id="menu-logout" href="#">Logout</a></li>
 						</ul>
 					</div>
 				</li>
@@ -137,17 +141,39 @@
 					</div>
 				</div>
 				<fieldset id="login-form">
-					<legend class="margin4 larger no-padding-bottom">Save and return details<br />
-					<span class="field-note">Your progress is saved throughout the application process. By registering your details you can return to the application at a later date and pick up where you left off.</span></legend>
-					<div class="margin4 custom-controls">
-						<p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
+					<legend class="margin4 larger no-padding-bottom visually-hidden">Save and return details</legend>
+					<p class="margin4">Your progress is saved throughout the application process. By registering your details you can return to the application at a later date and pick up where you left off.</p>
+					<div class="grid-row">
+						<div class="margin4">
+							<h3>Social login</h3>
+							<p>Connect using your social media or myGov account:</p>
+						</div>
+					</div>
+					<div class="grid-row margin-bottom">
+						<div class="margin4 icon-buttons" id="icon-buttons">
+							<a href="#" class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
+							<a href="#" class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
+							<a href="#" class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
+							<a href="#" class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
+							<a href="#" class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
+							<a href="#" class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="margin4">
+							<p>Or</p>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="margin4 custom-controls">
+							<h3>Use a password</h3>
+							<p>Manage your account using a password</p>
+							<p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
+						</div>
 					</div>
 					<div id="create-account">
-						<div class="grid-row">
-							<div class="margin4">
-								<h3>Create an account</h3>
-								<p>Create an account with business.gov.au for all your business registrations.</p>
-							</div>
+						<div class="margin4 custom-controls">
+							<p>Complete the details to create your account.</p>
 						</div>
 						<div class="grid-row">
 							<div class="col4">
@@ -157,11 +183,6 @@
 								<input id="email0" type="text">
 							</div><!-- col -->
 						</div><!-- grid-row -->
-						<div class="grid-row">
-							<div class="margin4">
-								<p>Login using a password:</p>
-							</div>
-						</div>
 						<div class="grid-row">
 							<div class="col4">
 								<label for="password0" class="input-right">Password</label>
@@ -188,11 +209,14 @@
 						</div><!-- grid-row -->
 					</div>
 					<div id="account-login" style="display: none;">
-						<div class="grid-row">
+						<!-- div class="grid-row">
 							<div class="margin4">
 								<h3>Login to your account</h3>
 								<p>Enter the email and address you used to register your account.</p>
 							</div>
+						</div -->
+						<div class="margin4 custom-controls">
+							<p>Enter the email address and password you used to create your account.</p>
 						</div>
 						<div class="grid-row">
 							<div class="col4">
@@ -219,48 +243,25 @@
 								<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
 							</div><!-- col -->
 						</div><!-- grid-row -->
-
-					</div>
-					<div class="grid-row">
-						<div class="col4">&nbsp;</div>
-						<div class="col4 last">
-							<p>Or</p>
-						</div>
-					</div>
-					<div class="grid-row">
-						<div class="margin4">
-							<h3>Connect with another account</h3>
-							<p>Login using your social media or myGov account:</p>
-						</div>
-					</div>
-					<div class="grid-row">
-						<div class="margin4 icon-buttons" id="icon-buttons">
-							<a class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
-							<a class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
-							<a class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
-							<a class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
-							<a class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-							<a class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
-						</div>
 					</div>
 				</fieldset>
 
 				<div id="logged-in" class="grid-row margin-bottom-075" style="display: none;">
 					<div class="margin4">
-						<h3>Save and return details</h3>
+						<h3 class="visually-hidden">Save and return details</h3>
 						<p>You are logged in with the email address: <strong>user@test.com</strong>
-						<span id="confirm"><br />You email has not been confirmed ( <a href="#">resend confirmation email</a> ).</span></p>
+						<span id="confirm"><br />You email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ).</span></p>
 						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
 						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner, or you can login using different credentials by selecting the button below.</p>
-						<button class="btn btn-small" onclick="logout()">Logout</button>
+						<button id="logout" class="btn btn-small">Logout</button>
 					</div>
 				</div>
 				<div id="logged-in-fb" style="display: none;">
 					<div id="logged-in-fb" class="grid-row">
 						<div class="margin4">
-							<h3>Save and return details</h3>
-							<p>You are logged in with your <strong>Facebook</strong> account.</p>
-							<p>You will need to provide an email address for correspondence relating to your applications.</p>
+							<h3 class="visually-hidden">Save and return details</h3>
+							<p>You have connected with your <strong>Facebook</strong> account.</p>
+							<p>You need to provide an email address for correspondence relating to your applications.</p>
 						</div>
 					</div>
 					<div class="grid-row">
@@ -276,6 +277,38 @@
 							<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website and return to the same point later by logging in with you Facebook account when you return.</p>
 						</div>
 					</div>
+				</div>
+				<div id="wait-passwd" class="grid-row margin-bottom-075" style="display: none;">
+					<div class="margin4">
+						<h3 class="visually-hidden">Save and return details</h3>
+						<p>A password reset link has been emailed to: <strong>user@test.com</strong>
+						<p>Follow the link to reset your password, then login with your email address and new password.</p>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							<label for="login-email2" class="input-right">Email address</label>
+						</div><!-- col -->
+						<div class="col8 last">
+							<input id="login-email2" type="text" value="user@test.com">
+						</div><!-- col -->
+					</div><!-- grid-row -->
+					<div class="grid-row">
+						<div class="col4">
+							<label for="login-passwd2" class="input-right">Password</label>
+						</div><!-- col -->
+						<div class="col8 last">
+							<input id="login-passwd2" type="password">
+						</div><!-- col -->
+					</div><!-- grid-row -->
+					<div  class="grid-row">
+						<div class="col4">
+							<p>&nbsp;</p>
+						</div><!-- col -->
+						<div class="col8 last">
+							<button id="login2" type="button"class="btn btn-inline">Login</button>
+							<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
+						</div><!-- col -->
+					</div><!-- grid-row -->
 				</div>
 				<div class="controls-container">
 					<div class="controls-content">
@@ -303,17 +336,37 @@
         <h1>Login created</h1> 
         <p>An account has been created for: <strong>user@test.com</strong>.</p>
 		<p>A confirmation link has been sent to your email address. You will need to confirm your email address before you can submit your application.</p>
-		<p>Your application progress will be saved with your account.</p>
         <button type="button" class="btn btn-default" onclick="create(); visionaustralia.closeDialog('dialogLoginCreated')">Continue</button>
+    </div>
+		
+	<div id="dialogConfirmationResent" style="display:none;">
+        <h1>Login created</h1> 
+        <p>A confirmation link has been re-sent to your email address: <strong>user@test.com</strong>.</p>
+		<p>You will need to confirm your email address before you can submit your application.</p>
+        <button type="button" class="btn btn-default" onclick="create(); visionaustralia.closeDialog('dialogConfirmationResent')">Continue</button>
     </div>
 	
 	<div id="dialogSocialLogin" style="display:none;">
         <h1>External login</h1> 
         <p>You will now be redirected to the Facebook website so you can login to your account and confirm access.</p>
 		<p>Once completed you will be returned to this page to continue with your application.</p>
-		<p>If you have not already done so, you will need to provide an email address for correspondence relating to your application.</p>
         <button type="button" class="btn btn-default" onclick="extnLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
 		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
+    </div>
+		
+	<div id="dialogPasswordReset" style="display:none;">
+        <h1>Forgotten password</h1> 
+        <p>Enter your email address and we will send you a link to reset the password.</p>
+		<p><label for="reset-email">Email address</label><br /><input id="reset-email" type="text" /></p>
+        <button type="button" class="btn btn-default" onclick="changePasswd(); visionaustralia.closeDialog('dialogPasswordReset')">Reset password</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogPasswordReset')">Cancel</button>
+    </div>
+		
+	<div id="dialogLogout" style="display:none;">
+        <h1>Logout</h1> 
+        <p>You have been logged out of the system.</p>
+		<p>Return to this page to login again and proceed with your applications.</p>
+        <button type="button" class="btn btn-default" onclick="logout(); visionaustralia.closeDialog('dialogLogout')">Ok</button>
     </div>
 	
     <div class="help" id="help">
@@ -346,13 +399,17 @@
 	<script src="../assets/js/vadialog.js"></script>
     <script type="text/javascript">
 	
-		visionaustralia.addDialog("login", "dialogLoginSuccessful");
+		visionaustralia.addDialog("login, #login2", "dialogLoginSuccessful");
 		visionaustralia.addDialog("create-button", "dialogLoginCreated");
 		visionaustralia.addDialog("icon-buttons a", "dialogSocialLogin");
+		visionaustralia.addDialog("forgotten-password", "dialogPasswordReset");
+		visionaustralia.addDialog("resend-confirmation, #menu-resend", "dialogConfirmationResent");
+		visionaustralia.addDialog("logout, #menu-logout", "dialogLogout");
 		
 		function localLogin() {
 			$("#login-form").hide();
 			$("#confirm").hide();
+			$("#wait-passwd").hide();
 			$("#logged-in").show("fast");
 			$("#btn-next").removeAttr("disabled");
 		}
@@ -362,6 +419,13 @@
 			$("#logged-in-fb").show("fast");
 			$("#btn-next").removeAttr("disabled");
 			$("#social-email").focus();
+		}
+		
+		function changePasswd() {
+			$("#login-form").hide();
+			$("#wait-passwd").show("fast");
+			// $("#btn-next").removeAttr("disabled");
+			$("#login-passwd2").focus();
 		}
 		
 		function create() {
@@ -376,6 +440,7 @@
 			$("#already-setup").attr("checked", false);
 			$("#create-account").show();
 			$("#account-login").hide();
+			$("#btn-next").attr("disabled", "disabled");
 			$("#login-form").show("fast");
 		}
 
