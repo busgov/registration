@@ -1,0 +1,540 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <link rel="shortcut icon" href="/images/favicon.gif" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Business Registration" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <style>
+	
+		.icon-buttons a {
+			margin-right: 15px;
+			text-decoration: none;
+		}
+
+		.icon-buttons a span::before {
+			font-size: 1.5em;
+			color: #fff;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.icon-buttons a:focus span::before {
+			outline: 1px solid #02bfe7; 
+		}
+		
+		.icon-buttons a.facebook span:before {
+			padding: 5px 11px;
+			background-color: #3b5998
+		}
+		
+		.icon-buttons a.twitter span:before {
+			padding: 5px 6px;
+			background-color: #1da1f2;
+		}
+		
+		.icon-buttons a.linkedin span:before {
+			padding: 5px 6px;
+			background-color: #0077b5;
+		}
+		
+		.icon-buttons a.google span:before {
+			padding: 5px 6px;
+			background-color: #d73d32;
+		}
+		
+		.icon-buttons a.microsoft span:before {
+			padding: 5px 4px;
+			background-color: #57b057;
+		}
+		
+		.icon-buttons a.mygov span::before {
+			content: "my\AGov";
+			white-space: pre;
+			font-family: 'open_sansregular', sans-serif;
+			font-weight: bold;
+			line-height: 11px;
+			color: #d7ea6a;
+			background-color: #006633;
+			font-size: 12px;
+			display: inline-block;
+			padding: 8px 7px;
+		}
+
+		button.mygov span.green {
+			color: #d7ea6a;
+		}
+		
+		.visually-hidden {
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+	        left: -9999px;
+		}
+		
+		.vadialog {
+			width: 400px;
+		}
+		
+		#login {
+			background: transparent url(../assets/img/ico-account-gray.png) no-repeat 12px 8px;
+			color: black;
+			cursor: pointer;
+		}
+    </style>
+</head>
+<body>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="https://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li id="login-menu" class="nav-item">
+					<a id="login" href="#"><span>Sign in</span></a>
+				</li>
+				<li id="profile-nav" class="nav-item" style="display: none;">
+					<a href="settings.html"><span>Profile</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="../dashboard.html">Dashboard</a>
+							<li><a href="#">Start a new application</a></li>
+							<li><a id="logout" href="#">Sign out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="wrapper">
+		<h1 id="heading" tabindex="-1">Business registration</h1>
+		<p class="intro"><strong>Welcome to the Australian Government Business Registration Service.</strong></p>
+		<p>Here you can apply for your key business and tax registrations in one place.<a class="cd-btn help" href="#"><span>more information</span></a></p>
+		<div id="select-registrations" class="sub-section-container sub-section-open">
+			<h2>Select registrations</h2>
+			<div class="sub-section-content">
+				<div class="grid-row custom-controls clearfix">
+					<div class="col6">
+						<p>
+							<input id="abn" type="checkbox" value="abn">
+							<label class="has-help" for="abn">Australian Business Number (ABN)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="bn" type="checkbox" value="bn">
+							<label class="has-help" for="bn">Business Name</label>
+						</p>
+						<p>
+							<input id="gst" type="checkbox" value="gst">
+							<label for="gst">Goods and Services Tax (GST)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="co" type="checkbox" value="co">
+							<label for="co">Australian Company&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="payg" type="checkbox" value="payg">
+							<label class="has-help" for="payg">Pay as you go (PAYG) withholding&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="tfn" type="checkbox" value="tfn">
+							<label class="has-help" for="tfn">Business Tax File Number (TFN)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+					</div><!-- col -->
+					<div class="col6 last">
+						<p>
+							<input id="fbt" type="checkbox" value="fbt">
+							<label class="has-help" for="fbt">Fringe Benefits Tax (FBT)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="lct" type="checkbox" value="lct">
+							<label class="has-help" for="lct">Luxury Car Tax (LCT)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="ftc" type="checkbox" value="ftc">
+							<label class="has-help" for="ftc">Fuel Tax Credits (FTC)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="wet" type="checkbox" value="wet">
+							<label class="has-help" for="wet">Wine Equalisation Tax (WET)&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+						<p>
+							<input id="auskey" type="checkbox" value="auskey">
+							<label for="auskey">Business login&nbsp;<a class="cd-btn help" href="#"><span>more information</span></a></label>
+						</p>
+					</div><!-- col -->
+				</div><!-- grid-row -->
+				<div class="registration-tip">
+					<h3>Not sure?</h3>
+					<p>Not sure what registrations you need for your business? We can help you work it out.</p>
+					<p><a href="help-me-decide/eligibility.html">Help me decide</a>.</p>
+				</div><!-- big-help-box -->
+				<div class="controls-content">
+					<button type="button" id="start-applying" class="btn btn-default next">Next</button>
+				</div><!-- controls-content -->
+			</div>
+		</div>
+		<div class="sub-section-container">
+			<h2>Information you should have already</h2>
+			<div class="sub-section-content">
+				<p>You've selected:</p>
+				<ul style="list-style: none">
+					<li><img src="../assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Australian Business Number (ABN)</li>
+					<li><img src="../assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Business Name</li>
+					<li><img src="../assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Goods and Services Tax (GST)</li>
+					<li><img src="../assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Pay as you go withholding (PAYG)</li>
+					<li><img src="../assets/img/ico-tick-green.png" style="width: 22px; margin-right: 5px; float: left" alt="selected"> Fringe Benefits Tax (FBT)</li>
+				</ul>
+				<p>To apply for these registrations, you should have the following information ready:</p>
+				<ul>
+					<li>Your proposed business name</li>
+					<li>Names and addresses of all business associates</li>
+					<li>Your individual Tax File Number (TFN) to confirm your identity</li>
+				</ul>
+				<div class="registration-tip">
+					<h3>Don't have all the information handy?</h3>
+					<p>Don't worry, you can start filling in the form and finish it later once you have all the information. To return to your saved application, select "login" from the profile menu on the top right hand of the screen.</p>
+				</div>
+				<div class="controls-container">
+					<div class="controls-content">
+						<button id="prev" class="btn previous" type="button">Previous</button>
+						<button id="next" type="button" onclick="location.href='save-and-return.html'" class="btn btn-default previous">Start applying</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="saveforlater" id="saveForLater">
+		<div class="cd-panel from-right">
+			<div class="cd-panel-header">
+				<a href="#" class="cd-panel-close">Close</a>
+				<h2 id="h2SaveForLater">Save and return</h2>
+			</div>
+			<div class="cd-panel-container">
+				<div class="cd-panel-content">
+					<div id="helpFile" class="showhide">
+						<fieldset id="login-form">
+							<legend class="margin4 larger no-padding-bottom visually-hidden">Save and return login</legend>
+							<p>You can login here to access your previous applications. If you have not created an account, you can register your details with your first application.</p>
+							<div class="grid-row">
+								<h3>Social login</h3>
+								<p>Connect using your social media or myGov account:</p>
+							</div>
+							<div class="grid-row margin-bottom">
+								<div class="icon-buttons" id="icon-buttons">
+									<a href="#" class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
+									<a href="#" class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
+									<a href="#" class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
+									<a href="#" class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
+									<a href="#" class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
+									<a href="#" class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
+								</div>
+							</div>
+							<div class="grid-row">
+								<p>Or</p>
+							</div>
+							<div class="grid-row">
+								<div class="custom-controls">
+									<h3>Use a password</h3>
+								</div>
+							</div>
+							<div id="account-login">
+								<!-- div class="grid-row">
+									<div class="margin4">
+										<h3>Login to your account</h3>
+										<p>Enter the email and address you used to register your account.</p>
+									</div>
+								</div -->
+								<div class="custom-controls">
+									<p>Enter the email address and password you used to create your account.</p>
+								</div>
+								<div class="grid-row">
+									<label for="login-email">Email address</label><br />
+									<input id="login-email" type="text">
+								</div><!-- grid-row -->
+								<div class="grid-row margin-bottom-075">
+									<label for="login-passwd">Password</label><br />
+									<input id="login-passwd" type="password">
+								</div><!-- grid-row -->
+								<div  class="grid-row">
+									<button id="login-now" type="button"class="btn btn-inline btn-default">Sign in</button>
+									<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
+								</div><!-- grid-row -->
+							</div>
+							<div id="wait-passwd" class="grid-row margin-bottom-075" style="display: none;">
+								<p>A password reset link has been emailed to: <strong>user@test.com</strong>
+								<p>Follow the link to reset your password, then login with your email address and new password (<a href="#">resend link</a>).</p>
+								<div class="grid-row">
+									<label for="login-email2">Email address</label><br />
+									<input id="login-email2" type="text" value="user@test.com">
+								</div><!-- grid-row -->
+								<div class="grid-row">
+									<label for="login-passwd2">Password</label><br />
+									<input id="login-passwd2" type="password">
+								</div><!-- grid-row -->
+								<div  class="grid-row">
+									<button id="login2" type="button"class="btn btn-inline btn-default">Sign in</button>
+									<a href="javascript:void(0);" class="smallest">Forgotten password?</a>
+								</div><!-- grid-row -->
+							</div>
+						</fieldset>
+						<div id="logged-in" class="margin-bottom-075" style="display: none;">
+							<div class="grid-row clearfix">
+								<div class="col1">
+									<img src="../assets/img/ico-tick-green.png" alt="Success">
+								</div>
+								<div class="col11 last">
+									<h3>You have signed in successfully.</h3>
+								</div>
+							</div>
+							<div class="grid-row">
+								<p>You can go to the <a href="../dashboard.html">dashboard</a> to view your current applications.</p>
+								<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+								<p>You can sign out at any time by selecting "Sign out" from the profile menu in the banner.</p>
+								<button id="dismiss" class="btn btn-inline btn-default">Dismiss</button>
+							</div>
+						</div>
+						<div id="fb-login" class="grid-row margin-bottom-075" style="display: none;">
+							<div class="grid-row clearfix">
+								<div class="col1">
+									<img src="../assets/img/ico-tick-green.png" alt="Success">
+								</div>
+								<div class="col11 last">
+									<h3>You have connected using Facebook</h3>
+								</div>
+							</div>
+							<div class="grid-row">
+								<p>You can go to the <a href="../dashboard.html">dashboard</a> to view your current applications.</p>
+								<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by connecting using your Facebook account.</p>
+								<p>You can sign out at any time by selecting "Sign out" from the profile menu in the banner.</p>
+								<button id="dismiss" class="btn btn-inline btn-default">Dismiss</button>
+							</div>
+						</div>
+					</div><!-- showhide -->
+				</div><!-- cd-panel-content -->
+			</div><!-- cd-panel-container -->
+		</div><!-- cd-panel -->
+	</div>
+	
+	<div id="dialogSocialLogin" style="display:none;">
+        <h1>Social login</h1> 
+        <p>You will now be redirected to the Facebook website so you can sign in to your account and confirm access.</p>
+		<p>Once completed you will be returned to this page to continue with your application.</p>
+        <button type="button" class="btn btn-default" onclick="fbLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
+    </div>
+			
+	<div id="dialogLogout" style="display:none;">
+        <h1>Sign out</h1> 
+        <p>You have been signed out of the system.</p>
+		<p>You can come back later and sign in again later to return to your applications.</p>
+        <button type="button" class="btn btn-default" onclick="logout(); visionaustralia.closeDialog('dialogLogout')">Ok</button>
+    </div>
+			
+	<div id="dialogPasswordReset" style="display:none;">
+        <h1>Forgotten password</h1> 
+        <p>Enter your email address and we will send you a link to reset the password.</p>
+		<p><label for="reset-email">Email address</label><br /><input id="reset-email" type="text" /></p>
+        <button type="button" class="btn btn-default" onclick="changePasswd(); visionaustralia.closeDialog('dialogPasswordReset')">Reset password</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogPasswordReset')">Cancel</button>
+    </div>
+	
+	<footer>
+		<div class="navigation-footer-legal">
+			<div class="row">
+				<div class="columns">
+					<ul class="legal">
+						<li class="small-only-12"><a href="/about">About</a></li>
+						<li class="small-only-12"><a href="/for-government">For Government</a></li>
+						<li class="small-only-12"><a href="/legal-notices">Legal notices</a></li>
+						<li class="small-only-12"><a href="/about/accessibility">Accessibility</a></li>
+						<li class="small-only-12"><a href="/about/other-languages">Other languages</a></li>
+						<li class="small-only-12"><a href="/contact-us">Contact us</a></li>
+					</ul>
+					<ul class="social">
+						<li>
+							<a class="facebook" href="https://www.facebook.com/business.gov.au">
+								<span class="fa fa-facebook-square"></span>
+								<span class="label show-for-sr">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a class="twitter" href="https://twitter.com/business_gov_au">
+								<span class="fa fa-twitter-square"></span>
+								<span class="label show-for-sr">Twitter</span>
+							</a>
+						</li>
+						<li>
+							<a class="linkedin" href="https://www.linkedin.com/company/department-of-innovation-industry-science-and-research">
+								<span class="fa fa-linkedin-square"></span>
+								<span class="label show-for-sr">LinkedIn</span>
+							</a>
+						</li>
+						<li>
+							<a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+								<span class="fa fa-youtube-square"></span>
+								<span class="label show-for-sr">Youtube</span>
+							</a>
+						</li>
+					</ul>
+					<div class="bga-ftr-logo">
+						<a href="/"><strong>business</strong>.gov.au</a>
+					</div>
+					<div class="footer-logo">
+						<a href="https://www.business.gov.au">
+							<span>business.gov.au</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- a href="/web-chat" class="chat-now">Chat Now</a -->
+	</footer>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/functions.js"></script>
+    <script src="../assets/js/jquery-accessibleMegaMenu.js"></script>
+	<script src="../assets/js/jquery.collapse.js"></script>
+	<script src="../assets/js/vadialog.js"></script>
+
+    <script type="text/javascript">
+		function fbLogin() {
+			$("#login-form").hide();
+			$("#fb-login").show("fast");
+			$("#login-menu").hide(); $("#profile-nav").show();
+		}
+		
+		function logout() {
+			$("#logged-in").hide();
+			$("#fb-login").hide();
+			$("#login-menu").show(); $("#profile-nav").hide();
+			$("#wait-passwd").hide();
+			$("#account-login").show();
+			$("#login-form").show("fast");
+		}
+		
+		function changePasswd() {
+			$("#account-login").hide();
+			$("#wait-passwd").show();
+			// $("#btn-next").removeAttr("disabled");
+			$("#login-passwd2").focus();
+		}
+			
+        $(document).ready(function () {
+		
+			navigationWithinPage();
+			// initSaveForLater();
+			
+			visionaustralia.addDialog("icon-buttons a", "dialogSocialLogin");
+			visionaustralia.addDialog("logout, #logout", "dialogLogout");
+			visionaustralia.addDialog("forgotten-password", "dialogPasswordReset");
+
+			$("#login-now, #login2").click(function() {
+				$("#login-form").hide();
+				$("#logged-in").show("fast");
+				$("#login-menu").hide(); $("#profile-nav").show();
+			});
+			
+			var saveForLater = new jQueryCollapse($("#saveForLater").find(".saveforlater"), {
+                open: function () {
+                    this.slideDown(150);
+                },
+                close: function () {
+                    this.slideUp(150);
+                }
+            });
+            $("#saveForLater .cd-panel").on('click', function (event) {
+                if ($(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ||
+                    $(event.target).is('#save-cancel') || $(event.target).is('#save-save') || $(event.target).is('#dismiss')) {
+                    saveForLater.close();
+                    $("#saveForLater").find('.cd-panel').removeClass('is-visible');
+                    event.preventDefault();
+                    $('#settings').toggle();
+                }
+            });
+            $("#login").on("click", function (event) {
+                saveForLater.open();
+                event.preventDefault();
+                $('#settings').toggle();
+                $("#saveForLater").find('.cd-panel').addClass('is-visible');$("#saveForLater").find('.cd-panel').addClass('is-visible');
+            });
+        
+        	var qryStr = getUrlVars();
+        	if (qryStr.type !== undefined) {
+        		$(qryStr.type.split(',')).each(function(i, str) {
+        			$('#' + str).prop('checked', true);
+        		});
+        	}
+			
+			$("#start-applying").click(function() {
+				
+			});
+        
+            $("#nextzzz").click(function (e) {
+                e.preventDefault();
+                var queryString = "";
+
+                if ($("#co").prop("checked") && $("#gst").prop("checked")) {
+                    queryString = "type=co,gst";
+                } else if ($("#co").prop("checked")) {
+                    queryString = "type=co";
+                } else if ($("#gst").prop("checked")) {
+                    queryString = "type=gst";
+                }
+
+                if ($("#abn").prop("checked")) {
+
+                    if (queryString.length == 0) {
+                        queryString = "type=abn";
+                    }
+                    else {
+                        queryString += ",abn";
+                    }
+                }
+
+                document.location = "entitlement.html?" + queryString;
+            });
+        });
+
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+    </script>
+
+</body>
+</html>
