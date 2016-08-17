@@ -81,7 +81,13 @@
 		.vadialog {
 			width: 400px;
 		}
-    </style>
+		
+		#menu-login {
+			background: transparent url(../assets/img/ico-account-gray.png) no-repeat 12px 8px;
+			color: black;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
 	<div class="top-banner">
@@ -92,14 +98,17 @@
 		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
 		<nav id="settings">
 			<ul class="nav-menu">
-				<li class="nav-item">
+				<li id="login-menu" class="nav-item">
+					<a id="menu-login" href="#"><span>Sign in</span></a>
+				</li>
+				<li id="profile-nav" class="nav-item" style="display: none;">
 					<a href="settings.html"><span>Profile</span></a>
 					<div class="sub-nav">
 						<ul class="sub-nav-group">
-							<li><a href="#" class="btn-save">Save and return</a></li>
+							<li><a href="../dashboard.html">Dashboard</a>
 							<li><a href="#">Start a new application</a></li>
 							<li><a id="menu-resend" href="#">Re-send confirmation</a></li>
-							<li><a id="menu-logout" href="#">Logout</a></li>
+							<li><a id="menu-logout" href="#">Sign out</a></li>
 						</ul>
 					</div>
 				</li>
@@ -124,26 +133,24 @@
 		<p>All fields are required unless marked as optional.</p>
 	
 		<div id="section1" class="sub-section-container sub-section-open">
-			<h2>Save and return</h2>
-			<div class="sub-section-content">                                            
-				<div id="validationSummary" class="validation-container clearfix" style="display: none">
-					<div class="grid-row">
-						<div class="validation-summary-icon">
-							<img src="../assets/img/ico-alert-red.png" alt="Error">
-						</div>
-						<div class="validation-message">
-							<h2><a id="validationSummaryAnchor" href="">There was a problem</a></h2>
-							<ul>
-								<li>Enter a value for <a class="skip" href="#validation-test-field1">Label for field 1</a></li>
-								<li>Enter a value for <a class="skip" href="#validation-test-field2">Label for field 2</a></li>
-								<li>Choose yes or no for <a class="skip" href="#validation-test-field3">Yes or no right aligned</a></li>
-							</ul>
-						</div>
+			<div id="validationSummary" class="validation-container clearfix" style="display: none">
+				<div class="grid-row">
+					<div class="validation-summary-icon">
+						<img src="../assets/img/ico-alert-red.png" alt="Error">
+					</div>
+					<div class="validation-message">
+						<h2><a id="validationSummaryAnchor" href="">Login incorrect</a></h2>
+						<ul>
+							<li>You have entered an incorrect email/password combination. You can <a id="forgotten-pwd" href="#">reset your password</a> if you have forgotten it.</li>
+						</ul>
 					</div>
 				</div>
+			</div>
+			<h2>Save and return</h2>
+			<div class="sub-section-content">                                            
 				<fieldset id="login-form">
 					<legend class="margin4 larger no-padding-bottom visually-hidden">Save and return details</legend>
-					<p class="margin4">Your progress is saved throughout the application process. By registering your details you can return to the application at a later date and pick up where you left off.</p>
+					<p class="margin4">Your progress is saved throughout the application process. By registering your details you can return to your application later and pick up where you left off.</p>
 					<div class="grid-row">
 						<div class="margin4">
 							<h3>Social login</h3>
@@ -205,7 +212,7 @@
 								<p>&nbsp;</p>
 							</div><!-- col -->
 							<div class="col8 last">
-								<button id="create-button" type="button" class="btn btn-inline">Create account</button>
+								<button id="create-button" type="button" class="btn btn-inline btn-default" onclick="create()">Create account</button>
 							</div><!-- col -->
 						</div><!-- grid-row -->
 					</div>
@@ -217,7 +224,7 @@
 							</div>
 						</div -->
 						<div class="margin4 custom-controls">
-							<p>Enter the email address and password you used to create your account.</p>
+							<p>Enter your email address and password to sign in.</p>
 						</div>
 						<div class="grid-row">
 							<div class="col4">
@@ -240,29 +247,55 @@
 								<p>&nbsp;</p>
 							</div><!-- col -->
 							<div class="col8 last">
-								<button id="login" type="button"class="btn btn-inline">Login</button>
+								<button id="login" type="button"class="btn btn-inline btn-default" onclick="localLogin()">Sign in</button>
 								<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
 							</div><!-- col -->
 						</div><!-- grid-row -->
 					</div>
 				</fieldset>
-
 				<div id="logged-in" class="grid-row margin-bottom-075" style="display: none;">
-					<div class="margin4">
-						<h3 class="visually-hidden">Save and return details</h3>
-						<p>You are logged in with the email address: <strong>user@test.com</strong>
-						<span id="confirm"><br />You email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ).</span></p>
+					<div class="no-margin4">
+						<div class="grid-row clearfix">
+							<img src="../assets/img/ico-tick-green.png" alt="Success">
+							<h3 style="display: inline-block; vertical-align: bottom;">You have logged in successfully.</h3>
+						</div>
+						<p>You are logged in with the email <strong>user@test.com</strong></p>
 						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
-						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner, or you can login using different credentials by selecting the button below.</p>
-						<button id="logout" class="btn btn-small">Logout</button>
+						<p>You can sign out at any time during the application process by selecting "Sign out" from the profile menu in the banner.</p>
+					</div>
+				</div>
+				<div id="account-created" class="grid-row margin-bottom-075" style="display: none;">
+					<div class="no-margin4">
+						<div class="grid-row clearfix">
+							<img src="../assets/img/ico-tick-green.png" alt="Success">
+							<h3 style="display: inline-block; vertical-align: bottom;">Your account has been created.</h3>
+						</div>
+						<p>Your account has been created and you are signed in with the email <strong>user@test.com</strong></p>
+						<p><span id="confirm"><br />Your email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ). You will need to confirm your email address before you can submit your application.</span></p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>You can sign out at any time during the application process by selecting "Sign out" from the Profile menu in the banner.</p>
+					</div>
+				</div>
+				<div id="social-created" class="grid-row margin-bottom-075" style="display: none;">
+					<div class="no-margin4">
+						<div class="grid-row clearfix">
+							<img src="../assets/img/ico-tick-green.png" alt="Success">
+							<h3 style="display: inline-block; vertical-align: bottom;">Your account has been created.</h3>
+						</div>
+						<p>Your are connected using <strong>Facebook</strong>, and you have registered your email address: <strong>test@email.com</strong></p> 
+						<p><span id="confirm">Your email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ).</span></p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>You can sign out at any time during the application process by selecting "Sign out" from the Profile menu in the banner.</p>
 					</div>
 				</div>
 				<div id="logged-in-fb" style="display: none;">
-					<div id="logged-in-fb" class="grid-row">
-						<div class="margin4">
-							<h3 class="visually-hidden">Save and return details</h3>
-							<p>You have connected with your <strong>Facebook</strong> account.</p>
-							<p>You need to provide an email address for correspondence relating to your applications.</p>
+					<div id="logged-in-fb" class="grid-row margin4">
+						<div class="grid-row clearfix">
+							<img src="../assets/img/ico-tick-green.png" alt="Success">
+							<h3 style="display: inline-block; vertical-align: bottom;">You have connected using Facebook.</h3>
+						</div>
+						<div class="no-margin4">
+							<p>You need to provide an email address for correspondence relating to your applications. We will send you an email with a link that you will need to follow in order to confirm that the email address is yours.</p>
 						</div>
 					</div>
 					<div class="grid-row">
@@ -270,12 +303,12 @@
 							<label for="social-email" class="input-right">Email address</label>
 						</div>
 						<div class="col8 last">
-							<input id="social-email" type="text"/>
+							<input id="social-email" type="text" value="test@email.com"/>
 						</div>
 					</div>
 					<div class="grid-row margin-bottom-075">
 						<div class="margin4">
-							<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website and return to the same point later by logging in with you Facebook account when you return.</p>
+							<button id="register-email" class="btn btn-inline btn-default" onclick="fbCreate()">Register email</button>
 						</div>
 					</div>
 				</div>
@@ -283,7 +316,7 @@
 					<div class="margin4">
 						<h3 class="visually-hidden">Save and return details</h3>
 						<p>A password reset link has been emailed to: <strong>user@test.com</strong>
-						<p>Follow the link to reset your password, then login with your email address and new password.</p>
+						<p>Follow the link to reset your password, then sign in with your email address and new password.</p>
 					</div>
 					<div class="grid-row">
 						<div class="col4">
@@ -306,7 +339,7 @@
 							<p>&nbsp;</p>
 						</div><!-- col -->
 						<div class="col8 last">
-							<button id="login2" type="button"class="btn btn-inline">Login</button>
+							<button id="login2" type="button" class="btn btn-inline btn-default" onclick="localLogin()">Sign in</button>
 							<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
 						</div><!-- col -->
 					</div><!-- grid-row -->
@@ -329,7 +362,7 @@
 	
 	<div id="dialogLoginSuccessful" style="display:none;">
         <h1>Login successful</h1> 
-        <p>You have successfully logged in to you account.<br />Your application progress will be saved with your account.</p>
+        <p>You have successfully signed in to you account.<br />Your application progress will be saved with your account.</p>
         <button type="button" class="btn btn-default" id="btnContinue" onclick="localLogin(); visionaustralia.closeDialog('dialogLoginSuccessful')">Continue</button>
     </div>
 	
@@ -341,15 +374,15 @@
     </div>
 		
 	<div id="dialogConfirmationResent" style="display:none;">
-        <h1>Login created</h1> 
-        <p>A confirmation link has been re-sent to your email address: <strong>user@test.com</strong>.</p>
+        <h1>Confirmation re-sent</h1> 
+        <p>The confirmation link has been re-sent to your email address: <strong>user@test.com</strong>.</p>
 		<p>You will need to confirm your email address before you can submit your application.</p>
         <button type="button" class="btn btn-default" onclick="create(); visionaustralia.closeDialog('dialogConfirmationResent')">Continue</button>
     </div>
 	
 	<div id="dialogSocialLogin" style="display:none;">
-        <h1>External login</h1> 
-        <p>You will now be redirected to the Facebook website so you can login to your account and confirm access.</p>
+        <h1>Social login</h1> 
+        <p>You will now be redirected to the Facebook website so you can sign in to your account and confirm access.</p>
 		<p>Once completed you will be returned to this page to continue with your application.</p>
         <button type="button" class="btn btn-default" onclick="extnLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
 		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
@@ -364,9 +397,9 @@
     </div>
 		
 	<div id="dialogLogout" style="display:none;">
-        <h1>Logout</h1> 
+        <h1>Sign out</h1> 
         <p>You have been logged out of the system.</p>
-		<p>Return to this page to login again and proceed with your applications.</p>
+		<p>Return to this page to sign in again and proceed with your applications.</p>
         <button type="button" class="btn btn-default" onclick="logout(); visionaustralia.closeDialog('dialogLogout')">Ok</button>
     </div>
 	
@@ -400,49 +433,88 @@
 	<script src="../assets/js/vadialog.js"></script>
     <script type="text/javascript">
 	
-		visionaustralia.addDialog("login, #login2", "dialogLoginSuccessful");
-		visionaustralia.addDialog("create-button", "dialogLoginCreated");
+		// visionaustralia.addDialog("login, #login2", "dialogLoginSuccessful");
+		// visionaustralia.addDialog("create-button", "dialogLoginCreated");
 		visionaustralia.addDialog("icon-buttons a", "dialogSocialLogin");
-		visionaustralia.addDialog("forgotten-password", "dialogPasswordReset");
+		visionaustralia.addDialog("forgotten-password, #forgotten-pwd", "dialogPasswordReset");
 		visionaustralia.addDialog("resend-confirmation, #menu-resend", "dialogConfirmationResent");
 		visionaustralia.addDialog("logout, #menu-logout", "dialogLogout");
 		
 		function localLogin() {
+			if ($("#login-email").val() == "bad@email.com") {
+				$("#validationSummary").show();
+				$("html, body").animate({
+					scrollTop: $("#validationSummary").offset().top
+				});
+				return;
+			}
 			$("#login-form").hide();
 			$("#confirm").hide();
 			$("#wait-passwd").hide();
 			$("#logged-in").show("fast");
 			$("#btn-next").removeAttr("disabled");
+			$("#login-menu").hide(); $("#profile-nav").show();
+			scrollSection();
 		}
 		
 		function extnLogin() {
 			$("#login-form").hide();
 			$("#logged-in-fb").show("fast");
-			$("#btn-next").removeAttr("disabled");
+			// $("#btn-next").removeAttr("disabled");
 			$("#social-email").focus();
+			$("#login-menu").hide(); $("#profile-nav").show();
+			scrollSection();
 		}
 		
 		function changePasswd() {
 			$("#login-form").hide();
-			$("#wait-passwd").show("fast");
-			// $("#btn-next").removeAttr("disabled");
-			$("#login-passwd2").focus();
+			$("#validationSummary").hide();
+			$("#wait-passwd").show("fast", function() {
+				// $("#btn-next").removeAttr("disabled");
+				$("#login-passwd2").focus();
+				scrollSection();
+			});
 		}
 		
 		function create() {
 			$("#login-form").hide();
+			$("#logged-in-fb").hide();
 			$("#confirm").show();
-			$("#logged-in").show("fast");
+			$("#account-created").show("fast");
 			$("#btn-next").removeAttr("disabled");
+			$("#login-menu").hide(); $("#profile-nav").show();
+			scrollSection();
+		}
+
+		function fbCreate() {
+			$("#login-form").hide();
+			$("#logged-in-fb").hide();
+			$("#social-created").hide();
+			$("#confirm").show();
+			$("#social-created").show("fast");
+			$("#btn-next").removeAttr("disabled");
+			$("#login-menu").hide(); $("#profile-nav").show();
+			scrollSection();
 		}
 		
 		function logout() {
 			$("#logged-in").hide();
+			$("#account-created").hide();
+			$("#social-created").hide();
 			$("#already-setup").attr("checked", false);
 			$("#create-account").show();
 			$("#account-login").hide();
+			$("#logged-in-fb").hide();
 			$("#btn-next").attr("disabled", "disabled");
 			$("#login-form").show("fast");
+			$("#login-menu").show(); $("#profile-nav").hide();
+			scrollSection();
+		}
+		
+		function scrollSection() {
+			$("html, body").animate({
+				scrollTop: $("#section1").offset().top
+			});
 		}
 
         $(document).ready(function () {
@@ -450,6 +522,18 @@
             // initSaveForLater();
             // initApplicationOptions();
             // navigationWithinPage();
+			
+			$("#menu-login").click(function() {
+				var offset = $("#section1").offset().top;
+				$("#already-setup").attr("checked", "checked");
+				$("#create-account").hide();
+				$("#account-login").show();
+				$("html, body").animate({
+					scrollTop: offset
+				}, function() {
+					$("#login-email").focus();
+				});
+			});
 
             $("#already-setup").click(function () {
                 if (this.checked) {
