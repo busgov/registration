@@ -154,7 +154,7 @@
 					<div class="grid-row">
 						<div class="margin4">
 							<h3>Social login</h3>
-							<p>Connect using your social media or myGov account:</p>
+							<p>Connect using your social media account:</p>
 						</div>
 					</div>
 					<div class="grid-row margin-bottom">
@@ -164,7 +164,7 @@
 							<a href="#" class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
 							<a href="#" class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
 							<a href="#" class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-							<a href="#" class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
+							<!-- a href="#" class="mygov"><span class="my-gov"></span><span class="visually-hidden">myGov</span></a -->
 						</div>
 					</div>
 					<div class="grid-row">
@@ -175,13 +175,13 @@
 					<div class="grid-row">
 						<div class="margin4 custom-controls">
 							<h3>Use a password</h3>
-							<p>Manage your account using a password</p>
+							<p>Manage your registration profile using a password</p>
 							<p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
 						</div>
 					</div>
 					<div id="create-account">
 						<div class="margin4 custom-controls">
-							<p>Complete the details to create your account.</p>
+							<p>Complete the details to create your registration profile.</p>
 						</div>
 						<div class="grid-row">
 							<div class="col4">
@@ -212,7 +212,7 @@
 								<p>&nbsp;</p>
 							</div><!-- col -->
 							<div class="col8 last">
-								<button id="create-button" type="button" class="btn btn-inline btn-default" onclick="create()">Create account</button>
+								<button id="create-button" type="button" class="btn btn-inline btn-default" onclick="create()">Create profile</button>
 							</div><!-- col -->
 						</div><!-- grid-row -->
 					</div>
@@ -260,7 +260,7 @@
 							<h3 style="display: inline-block; vertical-align: bottom;">You have logged in successfully.</h3>
 						</div>
 						<p>You are logged in with the email <strong>user@test.com</strong></p>
-						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering the email address and the password you used to create your profile.</p>
 						<p>You can logout at any time during the application process by selecting "Logout" from the profile menu in the banner.</p>
 					</div>
 				</div>
@@ -268,11 +268,11 @@
 					<div class="no-margin4">
 						<div class="grid-row clearfix">
 							<img src="../assets/img/ico-tick-green.png" alt="Success">
-							<h3 style="display: inline-block; vertical-align: bottom;">Your account has been created.</h3>
+							<h3 style="display: inline-block; vertical-align: bottom;">Your registration profile has been created.</h3>
 						</div>
-						<p>Your account has been created and you are signed in with the email <strong>user@test.com</strong></p>
+						<p>Your reistration profile has been created and you are signed in with the email <strong>user@test.com</strong></p>
 						<p><span id="confirm"><br />Your email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ). You will need to confirm your email address before you can submit your application.</span></p>
-						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering the email address and the password you used to create your profile.</p>
 						<p>You can logout at any time during the application process by selecting "Logout" from the Profile menu in the banner.</p>
 					</div>
 				</div>
@@ -280,11 +280,11 @@
 					<div class="no-margin4">
 						<div class="grid-row clearfix">
 							<img src="../assets/img/ico-tick-green.png" alt="Success">
-							<h3 style="display: inline-block; vertical-align: bottom;">Your account has been created.</h3>
+							<h3 style="display: inline-block; vertical-align: bottom;">Your registration profile has been created.</h3>
 						</div>
 						<p>Your are connected using <strong>Facebook</strong>, and you have registered your email address: <strong>test@email.com</strong></p> 
 						<p><span id="confirm">Your email has not been confirmed ( <a id="resend-confirmation" href="#">resend confirmation email</a> ).</span></p>
-						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+						<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering the email address and password you used to create your registration profile.</p>
 						<p>You can logout at any time during the application process by selecting "Logout" from the Profile menu in the banner.</p>
 					</div>
 				</div>
@@ -362,13 +362,13 @@
 	
 	<div id="dialogLoginSuccessful" style="display:none;">
         <h1>Login successful</h1> 
-        <p>You have successfully signed in to you account.<br />Your application progress will be saved with your account.</p>
+        <p>You have successfully logged in to your registration profile.<br />Your application progress will be saved with your profile.</p>
         <button type="button" class="btn btn-default" id="btnContinue" onclick="localLogin(); visionaustralia.closeDialog('dialogLoginSuccessful')">Continue</button>
     </div>
 	
 	<div id="dialogLoginCreated" style="display:none;">
         <h1>Login created</h1> 
-        <p>An account has been created for: <strong>user@test.com</strong>.</p>
+        <p>A registration profile has been created for: <strong>user@test.com</strong>.</p>
 		<p>A confirmation link has been sent to your email address. You will need to confirm your email address before you can submit your application.</p>
         <button type="button" class="btn btn-default" onclick="create(); visionaustralia.closeDialog('dialogLoginCreated')">Continue</button>
     </div>

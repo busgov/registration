@@ -235,10 +235,10 @@
 					<div id="helpFile" class="showhide">
 						<fieldset id="login-form">
 							<legend class="margin4 larger no-padding-bottom visually-hidden">Save and return login</legend>
-							<p>You can login here to access your previous applications. If you have not created an account, you can register your details with your first application.</p>
+							<p>You can login here to access your previous applications. If you have not created a registration profile, you can register your details with your first application.</p>
 							<div class="grid-row">
 								<h3>Social login</h3>
-								<p>Connect using your social media or myGov account:</p>
+								<p>Connect using your social media account:</p>
 							</div>
 							<div class="grid-row margin-bottom">
 								<div class="icon-buttons" id="icon-buttons">
@@ -247,7 +247,7 @@
 									<a href="#" class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
 									<a href="#" class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
 									<a href="#" class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-									<a href="#" class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
+									<!-- a href="#" class="mygov"><span class="my-gov"></span><span class="visually-hidden">myGov</span></a -->
 								</div>
 							</div>
 							<div class="grid-row">
@@ -266,7 +266,7 @@
 									</div>
 								</div -->
 								<div class="custom-controls">
-									<p>Enter the email address and password you used to create your account.</p>
+									<p>Enter the email address and password you used to create your registration profile.</p>
 								</div>
 								<div class="grid-row">
 									<label for="login-email">Email address</label><br />
@@ -304,12 +304,12 @@
 									<img src="../assets/img/ico-tick-green.png" alt="Success">
 								</div>
 								<div class="col11 last">
-									<h3>You have signed in successfully.</h3>
+									<h3>You have logged in successfully.</h3>
 								</div>
 							</div>
 							<div class="grid-row">
 								<p>You can go to the <a href="../dashboard.html">dashboard</a> to view your current applications.</p>
-								<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering your email address and the password you used to create the account.</p>
+								<p>Your details will be saved automatically each time you click a "Next" button during the application process. You can leave the website at any time and return to the same point later by entering the email address and password you used to create your registration profile.</p>
 								<p>You can logout at any time by selecting "Logout" from the profile menu in the banner.</p>
 								<button id="dismiss" class="btn btn-inline btn-default">Dismiss</button>
 							</div>
@@ -340,13 +340,29 @@
         <h1>Social login</h1> 
         <p>You will now be redirected to the Facebook website so you can login to your account and confirm access.</p>
 		<p>Once completed you will be returned to this page to continue with your application.</p>
-        <button type="button" class="btn btn-default" onclick="fbLogin(); visionaustralia.closeDialog('dialogSocialLogin')">Continue</button>
+        <button type="button" class="btn btn-default" onclick="visionaustralia.closeDialog('dialogSocialLogin'); fbLogin()">Continue</button>
 		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogSocialLogin')">Cancel</button>
     </div>
-			
+	
+	<div id="dialogLogin1" style="display:none;">
+        <h1>Login successful</h1> 
+        <p>You have successfully logged in to your registration profile.</p>
+		<p>You will now be taken to your dashboard so you can view the status of your applications.</p>
+        <button type="button" class="btn btn-default" onclick="location.href='../dashboard.html'">Continue</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogLogin1'); $('#saveForLater').find('.cd-panel').removeClass('is-visible');">Cancel</button>
+    </div>
+	
+	<div id="dialogLogin2" style="display:none;">
+        <h1>Login successful</h1> 
+        <p>You have successfully logged in to your registration profile.</p>
+		<p>You will now be taken to where you where you were up to so you can continue with your application.</p>
+        <button type="button" class="btn btn-default" onclick="location.href='../company-details-new.html'">Continue</button>
+		<button type="button" class="btn" onclick="visionaustralia.closeDialog('dialogLogin2'); $('#saveForLater').find('.cd-panel').removeClass('is-visible');">Cancel</button>
+    </div>
+	
 	<div id="dialogLogout" style="display:none;">
         <h1>Logout</h1> 
-        <p>You have been signed out of the system.</p>
+        <p>You have been logged out of the system.</p>
 		<p>You can come back later and login again later to return to your applications.</p>
         <button type="button" class="btn btn-default" onclick="logout(); visionaustralia.closeDialog('dialogLogout')">Ok</button>
     </div>
@@ -418,9 +434,11 @@
 
     <script type="text/javascript">
 		function fbLogin() {
-			$("#login-form").hide();
-			$("#fb-login").show("fast");
+			//$("#login-form").hide();
+			//$("#fb-login").show("fast");
+			$('#saveForLater').find('.cd-panel').removeClass('is-visible');
 			$("#login-menu").hide(); $("#profile-nav").show();
+			visionaustralia.openDialog('dialogLogin2');
 		}
 		
 		function logout() {
@@ -447,10 +465,13 @@
 			visionaustralia.addDialog("icon-buttons a", "dialogSocialLogin");
 			visionaustralia.addDialog("logout, #logout", "dialogLogout");
 			visionaustralia.addDialog("forgotten-password", "dialogPasswordReset");
+			visionaustralia.addDialog("login-now, #login2", "dialogLogin1");
+			visionaustralia.addDialog("dummy", "dialogLogin2");
 
 			$("#login-now, #login2").click(function() {
-				$("#login-form").hide();
-				$("#logged-in").show("fast");
+				$('#saveForLater').find('.cd-panel').removeClass('is-visible');
+			//	$("#login-form").hide();
+			//	$("#logged-in").show("fast");
 				$("#login-menu").hide(); $("#profile-nav").show();
 			});
 			
@@ -468,13 +489,13 @@
                     saveForLater.close();
                     $("#saveForLater").find('.cd-panel').removeClass('is-visible');
                     event.preventDefault();
-                    $('#settings').toggle();
+                    //$('#settings').toggle();
                 }
             });
             $("#login").on("click", function (event) {
                 saveForLater.open();
                 event.preventDefault();
-                $('#settings').toggle();
+                //$('#settings').toggle();
                 $("#saveForLater").find('.cd-panel').addClass('is-visible');$("#saveForLater").find('.cd-panel').addClass('is-visible');
             });
         
