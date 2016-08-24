@@ -167,6 +167,7 @@ visionaustralia.addDialog = function (linkId, dialogId,fBeforeOpen,fForCloseButt
 		
 		visionaustralia[dialogId] = {};
 		visionaustralia[dialogId].closeDialog = close;
+		visionaustralia[dialogId].openDialog = open
 		
 	});//end jQUERY on page load
 
@@ -175,6 +176,10 @@ visionaustralia.addDialog = function (linkId, dialogId,fBeforeOpen,fForCloseButt
 
 visionaustralia.closeDialog = function (dialogId){
 	visionaustralia[dialogId].closeDialog();
+}
+
+visionaustralia.openDialog = function (dialogId){
+	visionaustralia[dialogId].openDialog();
 }
 
 
