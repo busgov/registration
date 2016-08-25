@@ -144,6 +144,7 @@ function loadQuestionHelp(applicationStep, callback) {
                     if (applicationStep.name === "Registration summary") {
                         index = $(this)[0].id;
                     }
+					notifyGAofHelpRequest(event);
                     help.open(index);
                     var heading = $('#helpFile h3')[index];
                     event.preventDefault();
