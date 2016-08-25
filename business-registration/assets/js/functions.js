@@ -82,15 +82,28 @@ function loadHelpContent(url) {
     });    
 }
 
+function notifyGAofHelpRequest(event) {
+	var href = event.target.href;
+    var helpKey = href.substring(href.indexOf("#help-")+6);
+    if (helpKey.length > 0 && typeof(ga) != "undefined") {
+		console.log("Helplink followed: " + helpKey);
+        // ga('send', 'event', {
+            // eventCategory: 'Help Link',
+            // eventAction: 'click',
+            // eventLabel: helpKey
+        // });
+    }
+}
+
 function initHelp() {
     /* Expand collapse headings config */
     var help = new jQueryCollapse($("#help").find(".showhide"), {
         open: function () {
-            this.slideDown(150);
+            this.slideDown(1500);
             // $("#helpTopic").focus();
         },
         close: function () {
-            this.slideUp(150);
+            this.slideUp(1500);
         }
     });
     $("#help").find('.cd-panel').on('click', function (event) {
@@ -102,6 +115,8 @@ function initHelp() {
         }
     });
     $('.cd-btn').on('click', function (event) {
+		alert(0);
+		notifyGAofHelpRequest(event);
         var index = $("a.cd-btn").index(this);
         help.open(index);
 		$("#helpfile h3 a").eq(index).focus();
