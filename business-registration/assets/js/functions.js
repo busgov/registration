@@ -82,9 +82,8 @@ function loadHelpContent(url) {
     });    
 }
 
-function notifyGAofHelpRequest(event) {
-	var href = event.target.href;
-    var helpKey = href.substring(href.indexOf("#help-")+6);
+function notifyGAofHelpRequest(href) {
+	var helpKey = href.substring(href.indexOf("#help-")+6);
     if (helpKey.length > 0 && typeof(ga) != "undefined") {
 		console.log("Helplink followed: " + helpKey);
         // ga('send', 'event', {
