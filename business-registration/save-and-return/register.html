@@ -21,64 +21,104 @@
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
     <style>
-	
-		.icon-buttons a {
-			margin-right: 15px;
-			text-decoration: none;
-		}
-
-		.icon-buttons a span::before {
-			font-size: 1.5em;
-			color: #fff;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		
-		.icon-buttons a:focus span::before {
-			outline: 1px solid #02bfe7; 
-		}
-		
-		.icon-buttons a.facebook span:before {
-			padding: 5px 11px;
-			background-color: #3b5998
-		}
-		
-		.icon-buttons a.twitter span:before {
-			padding: 5px 6px;
-			background-color: #1da1f2;
-		}
-		
-		.icon-buttons a.linkedin span:before {
-			padding: 5px 6px;
-			background-color: #0077b5;
-		}
-		
-		.icon-buttons a.google span:before {
-			padding: 5px 6px;
-			background-color: #d73d32;
-		}
-		
-		.icon-buttons a.microsoft span:before {
-			padding: 5px 4px;
-			background-color: #57b057;
-		}
-		
-		.icon-buttons a.mygov span::before {
-			content: "my\AGov";
-			white-space: pre;
-			font-family: 'open_sansregular', sans-serif;
-			font-weight: bold;
-			line-height: 11px;
-			color: #d7ea6a;
-			background-color: #006633;
-			font-size: 12px;
-			display: inline-block;
-			padding: 8px 7px;
-		}
-
-		button.mygov span.green {
-			color: #d7ea6a;
-		}
+	a.btn-lg {
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	a.btn-social {
+		position: relative;
+		display: block;
+		padding-left: 61px;
+		margin-bottom: 15px;
+		text-decoration: none;
+	}
+	a.btn-local {
+		color: #fff;
+		background-color: #444;
+		border-color: rgba(0,0,0,0.2);
+	}
+	a.btn-local:hover, a.btn-local:focus {
+		background-color: #2b2b2b;
+	}
+	a.btn-linkedin {
+		color: #fff;
+		background-color: #007bb6;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-linkedin:hover, a.btn-linkedin:focus {
+		background-color: #005983;
+	}
+	a.btn-google-plus {
+		color: #fff;
+		background-color: #dd4b39;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-google-plus:hover, a.btn-google-plus:focus {
+		background-color: #ca3523;
+	}
+	a.btn-microsoft {
+		color: #fff;
+		background-color: #2672ec;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-microsoft:hover, a.btn-microsoft:focus {
+		background-color: #125acd;
+	}
+	.btn-social.btn-lg>:first-child {
+		line-height: 45px;
+		width: 45px;
+		font-size: 1.8em;
+	}
+	.btn-social>:first-child {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 32px;
+		line-height: 34px;
+		font-size: 1.6em;
+		text-align: center;
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	a.forgot-link {
+		text-decoration: none;
+		font-size: 0.8em;
+		color: #125b9a;
+	}
+	a.forgot-link:hover, a.forgot-link:focus {
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	.divOr {
+		color: rgb(85, 85, 85);
+		height: 8px;
+		text-align: center;
+		/* width: 350px; */
+		column-rule-color: rgb(85, 85, 85);
+		perspective-origin: 175px 4.5px;
+		transform-origin: 175px 4.5px;
+		border-top: 0px none rgb(85, 85, 85);
+		border-right: 0px none rgb(85, 85, 85);
+		border-bottom: 1px solid rgb(221, 221, 221);
+		border-left: 0px none rgb(85, 85, 85);
+		font: normal normal normal normal 12px / 14.4px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		margin: 0px 0px 20px;
+		outline: rgb(85, 85, 85) none 0px;
+		clear: right;
+	}
+	.spanOr {
+		color: rgb(85, 85, 85);
+		text-align: center;
+		text-transform: lowercase;
+		column-rule-color: rgb(85, 85, 85);
+		background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(85, 85, 85);
+		font: normal normal normal normal 14px / 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		outline: rgb(85, 85, 85) none 0px;
+		padding: 0px 10px;
+	}
 		
 		.visually-hidden {
             width: 1px;
@@ -234,69 +274,48 @@
 				<div class="cd-panel-content">
 					<div id="helpFile" class="showhide">
 						<fieldset id="login-form">
-							<legend class="margin4 larger no-padding-bottom visually-hidden">Save and return login</legend>
+							<legend class="margin4 larger no-padding-bottom visually-hidden">Sign in</legend>
 							<p>You can login here to access your previous applications. If you have not created a registration profile, you can register your details with your first application.</p>
-							<div class="grid-row">
-								<h3>Social login</h3>
-								<p>Connect using your social media account:</p>
+					<div class="grid-row">
+						<div class="col12 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-local push-bottom" href="https://duaz01aws001.azurewebsites.net/Account/SignIn?provider=azure">
+								<i class="fa fa-user"></i>Sign in with Local Account
+							</a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col12">
+							<a class="pull-right forgot-link" href="https://duaz01aws001.azurewebsites.net/Account/ForgotPassword">Forgot Password?</a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col12 last">
+							<div class="divOr push-top-small">
+								<span class="spanOr">OR</span>
 							</div>
-							<div class="grid-row margin-bottom">
-								<div class="icon-buttons" id="icon-buttons">
-									<a href="#" class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
-									<a href="#" class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
-									<a href="#" class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
-									<a href="#" class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
-									<a href="#" class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-									<!-- a href="#" class="mygov"><span class="my-gov"></span><span class="visually-hidden">myGov</span></a -->
-								</div>
-							</div>
-							<div class="grid-row">
-								<p>Or</p>
-							</div>
-							<div class="grid-row">
-								<div class="custom-controls">
-									<h3>Use a password</h3>
-								</div>
-							</div>
-							<div id="account-login">
-								<!-- div class="grid-row">
-									<div class="margin4">
-										<h3>Login to your account</h3>
-										<p>Enter the email and address you used to register your account.</p>
-									</div>
-								</div -->
-								<div class="custom-controls">
-									<p>Enter the email address and password you used to create your registration profile.</p>
-								</div>
-								<div class="grid-row">
-									<label for="login-email">Email address</label><br />
-									<input id="login-email" type="text">
-								</div><!-- grid-row -->
-								<div class="grid-row margin-bottom-075">
-									<label for="login-passwd">Password</label><br />
-									<input id="login-passwd" type="password">
-								</div><!-- grid-row -->
-								<div  class="grid-row">
-									<button id="login-now" type="button"class="btn btn-inline btn-default">Login</button>
-									<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
-								</div><!-- grid-row -->
-							</div>
-							<div id="wait-passwd" class="grid-row margin-bottom-075" style="display: none;">
-								<p>A password reset link has been emailed to: <strong>user@test.com</strong>
-								<p>Follow the link to reset your password, then login with your email address and new password (<a href="#">resend link</a>).</p>
-								<div class="grid-row">
-									<label for="login-email2">Email address</label><br />
-									<input id="login-email2" type="text" value="user@test.com">
-								</div><!-- grid-row -->
-								<div class="grid-row">
-									<label for="login-passwd2">Password</label><br />
-									<input id="login-passwd2" type="password">
-								</div><!-- grid-row -->
-								<div  class="grid-row">
-									<button id="login2" type="button"class="btn btn-inline btn-default">Login</button>
-									<a href="javascript:void(0);" class="smallest">Forgotten password?</a>
-								</div><!-- grid-row -->
-							</div>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col12 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-linkedin push-bottom" href="https://duaz01aws001.azurewebsites.net/Account/SignIn?provider=linkedin">
+								<i class="fa fa-linkedin"></i>Sign in with LinkedIn
+							</a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col12 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-google-plus push-bottom" href="https://duaz01aws001.azurewebsites.net/Account/SignIn?provider=google">
+								<i class="fa fa-google"></i>Sign in with Google
+							</a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col12 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-microsoft" href="https://duaz01aws001.azurewebsites.net/Account/SignIn?provider=microsoft">
+								<i class="fa fa-windows"></i>Sign in with Microsoft
+							</a>
+						</div>
+					</div>
 						</fieldset>
 						<div id="logged-in" class="margin-bottom-075" style="display: none;">
 							<div class="grid-row clearfix">

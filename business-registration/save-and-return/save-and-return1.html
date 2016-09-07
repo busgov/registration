@@ -10,72 +10,104 @@
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
     <style>
-	
-		.icon-buttons a {
-			margin-right: 15px;
-		}
-
-		.icon-buttons a span::before {
-			font-size: 1.5em;
-			color: #fff;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		
-		.icon-buttons a.facebook span:before {
-			padding: 5px 11px;
-			background-color: #3b5998
-		}
-		
-		.icon-buttons a.twitter span:before {
-			padding: 5px 6px;
-			background-color: #1da1f2;
-		}
-		
-		.icon-buttons a.linkedin span:before {
-			padding: 5px 6px;
-			background-color: #0077b5;
-		}
-		
-		.icon-buttons a.google span:before {
-			padding: 5px 6px;
-			background-color: #d73d32;
-		}
-		
-		.icon-buttons a.microsoft span:before {
-			padding: 5px 4px;
-			background-color: #57b057;
-		}
-		
-		.icon-buttons a.mygov span::before {
-			content: "my\AGov";
-			white-space: pre;
-			font-family: 'open_sansregular', sans-serif;
-			font-weight: bold;
-			line-height: 11px;
-			color: #d7ea6a;
-			background-color: #006633;
-			font-size: 12px;
-			display: inline-block;
-			padding: 8px 7px;
-		}
-
-		button.mygov span.green {
-			color: #d7ea6a;
-		}
-		
-		.visually-hidden {
-            width: 1px;
-            height: 1px;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-	        left: -9999px;
-		}
-		
-		.vadialog {
-			width: 400px;
-		}
+	a.btn-lg {
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	a.btn-social {
+		position: relative;
+		display: block;
+		padding-left: 61px;
+		margin-bottom: 15px;
+		text-decoration: none;
+	}
+	a.btn-local {
+		color: #fff;
+		background-color: #444;
+		border-color: rgba(0,0,0,0.2);
+	}
+	a.btn-local:hover, a.btn-local:focus {
+		background-color: #2b2b2b;
+	}
+	a.btn-linkedin {
+		color: #fff;
+		background-color: #007bb6;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-linkedin:hover, a.btn-linkedin:focus {
+		background-color: #005983;
+	}
+	a.btn-google-plus {
+		color: #fff;
+		background-color: #dd4b39;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-google-plus:hover, a.btn-google-plus:focus {
+		background-color: #ca3523;
+	}
+	a.btn-microsoft {
+		color: #fff;
+		background-color: #2672ec;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	a.btn-microsoft:hover, a.btn-microsoft:focus {
+		background-color: #125acd;
+	}
+	.btn-social.btn-lg>:first-child {
+		line-height: 45px;
+		width: 45px;
+		font-size: 1.8em;
+	}
+	.btn-social>:first-child {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 32px;
+		line-height: 34px;
+		font-size: 1.6em;
+		text-align: center;
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	a.forgot-link {
+		text-decoration: none;
+		font-size: 0.8em;
+		color: #125b9a;
+	}
+	a.forgot-link:hover, a.forgot-link:focus {
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	.divOr {
+		color: rgb(85, 85, 85);
+		height: 8px;
+		text-align: center;
+		/* width: 350px; */
+		column-rule-color: rgb(85, 85, 85);
+		perspective-origin: 175px 4.5px;
+		transform-origin: 175px 4.5px;
+		border-top: 0px none rgb(85, 85, 85);
+		border-right: 0px none rgb(85, 85, 85);
+		border-bottom: 1px solid rgb(221, 221, 221);
+		border-left: 0px none rgb(85, 85, 85);
+		font: normal normal normal normal 12px / 14.4px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		margin: 0px 0px 20px;
+		outline: rgb(85, 85, 85) none 0px;
+		clear: right;
+	}
+	.spanOr {
+		color: rgb(85, 85, 85);
+		text-align: center;
+		text-transform: lowercase;
+		column-rule-color: rgb(85, 85, 85);
+		background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+		border: 0px none rgb(85, 85, 85);
+		font: normal normal normal normal 14px / 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		outline: rgb(85, 85, 85) none 0px;
+		padding: 0px 10px;
+	}
     </style>
 </head>
 <body>
@@ -137,112 +169,55 @@
 					</div>
 				</div>
 				<fieldset id="login-form">
-					<legend class="margin4 larger no-padding-bottom">Save and return details<br />
+					<legend class="margin4 larger">Sign in<br />
 					<span class="field-note">Your progress is saved throughout the application process. By registering your details you can return to the application at a later date and pick up where you left off.</span></legend>
-					<div class="margin4 custom-controls">
-						<p><input type="checkbox" id="already-setup" /><label for="already-setup">I have already set up save and return.</label></p>
-					</div>
-					<div id="create-account">
-						<div class="grid-row">
-							<div class="margin4">
-								<h3>Create an account</h3>
-								<p>Create an account with business.gov.au for all your business registrations.</p>
-							</div>
+					<div class="grid-row">
+						<div class="col4">&nbsp;</div>
+						<div class="col6 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-local push-bottom" href="/Account/SignIn?provider=azure">
+								<i class="fa fa-user"></i>Sign in with Local Account
+							</a>
 						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="email0" class="input-right">Email address</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="email0" type="text">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div class="grid-row">
-							<div class="margin4">
-								<p>Login using a password:</p>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="password0" class="input-right">Password</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="password0" type="password">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div id="confirm-password" class="grid-row">
-							<div class="col4">
-								<label for="password02" class="input-right">Confirm password</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="password02" type="password" style="width: 100%; max-width: 24em;">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div  class="grid-row">
-							<div class="col4">
-								<p>&nbsp;</p>
-							</div><!-- col -->
-							<div class="col8 last">
-								<button id="create-button" type="button" class="btn btn-inline">Create account</button>
-							</div><!-- col -->
-						</div><!-- grid-row -->
-					</div>
-					<div id="account-login" style="display: none;">
-						<div class="grid-row">
-							<div class="margin4">
-								<h3>Login to your account</h3>
-								<p>Enter the email and address you used to register your account.</p>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="col4">
-								<label for="login-email" class="input-right">Email address</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="login-email" type="text">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div class="grid-row">
-							<div class="col4">
-								<label for="login-passwd" class="input-right">Password</label>
-							</div><!-- col -->
-							<div class="col8 last">
-								<input id="login-passwd" type="password">
-							</div><!-- col -->
-						</div><!-- grid-row -->
-						<div  class="grid-row">
-							<div class="col4">
-								<p>&nbsp;</p>
-							</div><!-- col -->
-							<div class="col8 last">
-								<button id="login" type="button"class="btn btn-inline">Login</button>
-								<a id="forgotten-password" href="javascript:void(0);" class="smallest">Forgotten password?</a>
-							</div><!-- col -->
-						</div><!-- grid-row -->
-
 					</div>
 					<div class="grid-row">
 						<div class="col4">&nbsp;</div>
-						<div class="col4 last">
-							<p>Or</p>
+						<div class="col6 last">
+							<a class="pull-right forgot-link" href="/Account/ForgotPassword">Forgot Password?</a>
 						</div>
 					</div>
 					<div class="grid-row">
-						<div class="margin4">
-							<h3>Connect with another account</h3>
-							<p>Login using your social media or myGov account:</p>
+						<div class="col4">&nbsp;</div>
+						<div class="col6 last">
+							<div class="divOr push-top-small">
+								<span class="spanOr">OR</span>
+							</div>
 						</div>
 					</div>
 					<div class="grid-row">
-						<div class="margin4 icon-buttons" id="icon-buttons">
-							<a class="facebook"><span class="fa fa-facebook"></span><span class="visually-hidden">Facebook</span></a>
-							<a class="twitter"><span class="fa fa-twitter"></span><span class="visually-hidden">Twitter</span></a>
-							<a class="google"><span class="fa fa-google"></span><span class="visually-hidden">Google</span></a>
-							<a class="microsoft"><span class="fa fa-windows"></span><span class="visually-hidden">Microsoft</span></a>
-							<a class="linkedin"><span class="fa fa-linkedin"></span><span class="visually-hidden">Linked in</span></a>
-							<a class="mygov"><!-- <span>my<br><span class="green">Gov</span></span> --><span class="my-gov"></span><span class="visually-hidden">myGov</span></a>
+						<div class="col4">&nbsp;</div>
+						<div class="col6 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-linkedin push-bottom" href="/Account/SignIn?provider=linkedin">
+								<i class="fa fa-linkedin"></i>Sign in with LinkedIn
+							</a>
 						</div>
 					</div>
+					<div class="grid-row">
+						<div class="col4">&nbsp;</div>
+						<div class="col6 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-google-plus push-bottom" href="/Account/SignIn?provider=google">
+								<i class="fa fa-google"></i>Sign in with Google
+							</a>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col4">&nbsp;</div>
+						<div class="col6 last">
+							<a class="btn1 btn-block btn-lg btn-social btn-microsoft" href="/Account/SignIn?provider=microsoft">
+								<i class="fa fa-windows"></i>Sign in with Microsoft
+							</a>
+						</div>
+					</div>
+
 				</fieldset>
 
 				<div id="logged-in" class="grid-row margin-bottom-075" style="display: none;">
