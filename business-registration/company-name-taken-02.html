@@ -99,7 +99,7 @@
 					</div>
 					<div class="col11 last">
 						<h3 class="larger">Already own this name?</h3>
-						<p>Enter the business or trading names that your company owns and add them to the list.</p>
+						<p>Enter the business name or trading names that your company owns and add them to the list.</p>
 						<p>After you submit your application, we'll confirm your details.</p>
 						<div id="name-table" class="dashboard-container custom-controls" style="display: none;">
 							<table id="table-names">
@@ -112,11 +112,6 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr id="row-none">
-										<td colspan="3">
-											<p>No names added.</p>
-										</td>
-									</tr>
 								</tbody>
 							</table>
 						</div>
@@ -133,7 +128,25 @@
 								</div>
 								<div class="grid-row">
 									<div class="col4">
-										<label class="input-right" for="abn">ABN <span class="field-note">(Optional)</span></label>
+										<p class="label input-right">Do you have an ABN for the business?</p>
+									</div>
+									<div class="col8 last">
+										<div class="radio-toggle">
+											<label class="on label-left" for="have-abn-yes">
+												<input id="have-abn-yes" name="have-abn" type="radio" value="Yes">
+												<span>Yes</span>
+											</label>
+											<label class="off label-right" for="have-abn-no">
+												<input id="have-abn-no" name="have-abn" type="radio" value="No">
+												<span>No</span>
+											</label>
+										</div> 
+										
+									</div>
+								</div>
+								<div id="enter-abn" class="grid-row" style="display: none;">
+									<div class="col4">
+										<label class="input-right" for="abn">ABN</label>
 									</div>
 									<div class="col8 last">
 										<input id="abn" type="text">
@@ -195,7 +208,7 @@
 						<div id="adders" class="controls-container">
 							<div class="controls-content">
 								<button id="add-bn" type="button" class="btn">Add business name</button>
-								<button id="add-tn" type="button" class="btn">Add trading name</button>
+								<button id="add-tn" type="button" class="btn">Add state registrations</button>
 							</div><!-- controls-content -->
 						</div>
 						<!-- div>
@@ -289,7 +302,7 @@
 				$("#business-name").hide();
 				$("#row-none").hide();
 				var abnText = ($("#abn").val() == ""?"<strong>No ABN</strong>":"<strong>ABN</strong>: " + $("#abn").val());
-				$("#table-names tbody").append("<tr><td>" + $("#bus-name").val() + "</td><td>" + abnText + "</td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
+				$("#table-names tbody").append("<tr><td>" + $("#bus-name").val() + "</td><td>" + abnText + "</td><td><a class=\"remove\" href=\"javascript:void(0);\" onclick=\"delRow(this)\"><span>Remove</span></a></td></tr>");
 				$("#bus-name").val("MACDONALDS");
 				$("#abn").val("");
 				$("#name-table").show("fast", function() {
@@ -298,6 +311,8 @@
 					}, 400);
 				});
 				$("#adders").show();
+				$("#add-bn").hide();
+				$("#add-tn").hide();
 			});
 
 			$("#add-tn").click(function() {
@@ -311,18 +326,24 @@
 			});
 			
 			$("#tn-add").click(function() {
+				var opt = $("#tn-state :selected");
+				if (opt.html() == "Please select...")
+					return;
 				$("#trading-name").hide();
 				$("#row-none").hide();
-				$("#table-names tbody").append("<tr><td>" + $("#trad-name").val() + "</td><td>" + $("#rego").val() + " - Registered in <strong>" + $("#tn-state").val() + "</strong></td><td><a class=\"remove\" href=\"javascript:void(0);\" id=\"linkOne\"><span>Remove</span></a></td></tr>");
+				$("#table-names tbody").append("<tr><td>" + $("#trad-name").val() + "</td><td>" + $("#rego").val() + " - Registered in <strong>" + $("#tn-state").val() + "</strong></td><td><a class=\"remove\" href=\"javascript:void(0);\" onclick=\"delRow(this)\"><span>Remove</span></a></td></tr>");
 				$("#trad-name").val("MACDONALDS");
 				$("#rego").val("");
-				$("#tn-state").val([]);
 				$("#name-table").show("fast", function() {
 					$("html, body").animate({
 						scrollTop: $("#name-table").offset().top
 					}, 400);
 				});
+				opt.hide();
 				$("#adders").show();
+				$("#add-bn").hide();
+				$("#tn-state").selectedIndex = 0;
+				$("#add-tn").html("Add another registration")
 			});
 			
 			$("#tn-cancel, #bn-cancel").click(function() {
@@ -337,7 +358,25 @@
 				$("#adders").show();
 
 			});
+			
+			$("[name=have-abn]").click(function() {
+				if (this.value == "Yes") {
+					$("#enter-abn").show("fast");
+				} else {
+					$("#enter-abn").hide("fast");
+				}
+			});
         });
+			
+			function delRow(elt) {
+				$(elt).closest("TR").remove();
+				if ($("#table-names tbody tr").length == 0) {
+					$("#name-table").hide();
+					$("#add-bn").show();
+					$("#add-tn").html("Add state registrations").show();
+					$("#tn-state option").show();
+				}
+			}
     </script>
 </body>
 </html>
