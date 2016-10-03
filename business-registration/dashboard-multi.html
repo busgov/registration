@@ -567,7 +567,7 @@
             $('#show-adv').click(function () {
                 $('#advanced-search').toggle("fast");
 				$("#search-term").focus();
-				if ($('#show-adv').html().startsWith("Show"))
+				if ($('#show-adv').html().substr(0,4) == "Show")
 					$('#show-adv').html("Hide filter options");
 				else
 					$('#show-adv').html("Show filter options");
