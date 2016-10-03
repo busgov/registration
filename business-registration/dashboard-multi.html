@@ -1,0 +1,592 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+    </style>
+</head>
+<body>
+	<div class="top-banner">
+		<div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+	</div>
+	<header class="wrapper">
+		<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+		<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+		<nav id="settings">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="settings.html"><span>Settings</span></a>
+					<div class="sub-nav">
+						<ul class="sub-nav-group">
+							<li><a href="#" class="btn-save">Save and return</a></li>
+							<li><a href="#">Start a new application</a></li>
+							<li><a href="#">Sign out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<h1>Application summary</h1>
+		<p>You have <strong>23 applications</strong>, showing the <strong>3 most recently changed</strong>.</p>
+		<div class="card clearfix">
+			<div id="updates" class="grid-row">
+				<h2 style="margin-top: 0.5em">Latest updates</h2>
+				<!-- <p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16AN8710">#16AN8710</a>: ABN issued</p> -->
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined</p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed</p>
+				<!-- <ul>
+					<li>Application <a href="#16AN8710">#16AN8710</a>: ABN issued</li>
+					<li>Application <a href="#16MN1547">#16MN1547</a>: </li>
+					<li>Application <a href="#16TL3306">#16TL3306</a>: Application completed</li>
+				</ul> -->
+				<p id="find-more" style="margin-top: 2em">Can't see the application you're looking for? <button class="btn btn-inline" type="button" id="btnShow">Show search options</button>
+			</div>
+			<fieldset id="filterContainer" class="no-margin" style="display: none">
+				<legend class="larger margin4 padding-bottom-05">Application search <button class="btn" id="hide-search" type="button">Hide</button><!-- a href="#" class="cd-btn help"></a --></legend>
+				<div class="filter-container">
+					<div class="grid-row">
+						<div class="col4">&nbsp;</div>
+						<div class="col8 last">
+							<p>Enter all or part of any of the following to display more applications.</p>
+							<ul>
+								<li>Reference number, ABN, ACN, Business name, Company name</li>
+							</ul>
+						</div>
+					</div>
+					<div class="grid-row">
+						<div class="col4">
+							<label for="search-term" class="input-right">Search string</label>
+						</div>
+						<div class="col8 last">
+							<input id="search-term" type="text"> <button id="find-btn" type="button" class="btn btn-default btn-inline">Find applications</button><br />
+							<a href="javascript:void(0)" id="show-adv">Show filter options</a>
+						</div>
+					</div>
+					<div id="advanced-search" style="display: none;">
+						<div class="grid-row">
+							<div class="col4">
+								<label for="date-from" class="input-right">Date from <span class="field-note">(DD/MM/YYYY)</span></label>
+							</div>
+							<div class="col8 last">
+								<input id="date-from" type="text" style="width: 6em">&nbsp;&nbsp;
+								<label for="date-to" class="input-right label-inline">Date to <span class="field-note">(DD/MM/YYYY)</span></label>
+								<input id="date-to" type="text" style="width: 6em; ">
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label class="input-right" for="structure">Business structure</label>
+							</div>
+							<div class="col8 last">
+								<select id="structure">
+									<option value="">Select a structure...</option>
+									<option value="">Sole trader</option>
+									<option value="">Partnership</option>
+									<option value="">Company</option>
+									<option value="">etc...</option>
+								</select>
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="field5" class="input-right">Status of application</label>
+							</div>
+							<div class="col8 last">
+								<select id="field5">
+									<option>Show all</option>
+									<option>Saved but not complete</option>
+									<option>Completed</option>
+									<option>Payment declined</option>
+								</select>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="col4">
+								<p class="label input-right">Registration types</p>
+							</div>
+							<style>.inline p { margin: 0; } .inline { display: inline-block; margin-right: 20px; }</style>
+							<div class="col8 last">
+								<div class="custom-controls inline">
+									<p class="no-margin">
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_0__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[0].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_0__Selected" id="type-abn">ABN</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_1__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[1].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_1__Selected" id="type-bn">Business name</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_3__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[3].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_3__Selected" id="type-company">Australian company</label>
+									</p>	
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_10__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[10].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_10__Selected" id="type-btfn">Business TFN</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_4__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[4].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_4__Selected" id="type-payg">PAYG withholding</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_9__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[9].Selected" type="checkbox" value="true">
+										<label class="has-help" for="RegistrationTypesViewModel_SelectedRegistrationTypes_9__Selected">AUSkey</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_2__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[2].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_2__Selected" id="type-gst">GST</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_6__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[6].Selected" type="checkbox" value="true">
+										<label class="has-help" for="RegistrationTypesViewModel_SelectedRegistrationTypes_6__Selected">LCT</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_7__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[7].Selected" type="checkbox" value="true">
+										<label class="has-help" for="RegistrationTypesViewModel_SelectedRegistrationTypes_7__Selected">FTC</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_8__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[8].Selected" type="checkbox" value="true">
+										<label class="has-help" for="RegistrationTypesViewModel_SelectedRegistrationTypes_8__Selected">WET</label>
+									</p>
+								</div>
+								<div class="custom-controls inline">
+									<p>
+										<input id="RegistrationTypesViewModel_SelectedRegistrationTypes_5__Selected" name="RegistrationTypesViewModel.SelectedRegistrationTypes[5].Selected" type="checkbox" value="true">
+										<label for="RegistrationTypesViewModel_SelectedRegistrationTypes_5__Selected">FBT</label>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="grid-row">
+							<div class="col4">
+								<label for="field3" class="input-right">ABN or ACN</label>
+							</div>
+							<div class="col8 last">
+								<input id="field3" type="number">
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="col4">
+								<label for="field4" class="input-right">Business or company name</label>
+							</div>
+							<div class="col8 last">
+								<input id="field4" type="text">
+							</div>
+						</div> -->
+						<div>
+							<p class="margin4"><button type="button" class="btn btn-default btn-inline" id="btnSearch">Find applications</button></p>
+						</div>
+					</div>
+				</div><!-- filterContainer -->
+			</fieldset>
+		</div>
+		<div id="applicationResults">
+		
+			<div id="16AN8710" class="dashboard-container">
+				<table>
+					<caption>Application reference: <strong>#16AN8710</strong><br /><span>Not submitted</span><span class="controls"><a href="business-names-06.html" id="" class="edit">Edit</a></span></caption>
+					<thead>
+						<tr>
+							<th class="status-item">Registration item</th>
+							<th class="status-detail">Detail</th>
+							<th class="status-information">Information</th>
+						</tr>
+					</thead>
+					<!-- <tr>
+						<td class="declined"><span class="visuallyhidden">Declined - </span>Payment declined</td>
+						<td></td>
+						<td><a href="">Retry payment</a></td>
+					</tr> -->
+					<tr>
+						<td class="">Business name</td>
+						<td>BOB THE BUILDER</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class=""><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>PLUMB BOB</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class=""><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>BOB&apos;S GASFITTING</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class=""><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>BOB&apos;S PLUMBING</td>
+						<td></td>
+					<tr>
+						<td class=""><span class="visuallyhidden">Waiting - </span>ABN</td>
+						<td>&nbsp;</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class=""><span class="visuallyhidden">Waiting - </span>GST</td>
+						<td>&nbsp;</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="no-border-bottom"><span class="visuallyhidden">Waiting - </span>PAYG</td>
+						<td class="status-waiting no-border-bottom">&nbsp;</td>
+						<td class="no-border-bottom"></td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- <div id="16AN8710" class="dashboard-container">
+				<table>
+					<caption>Application reference: <strong>#16AN8710</strong><br /><span>Submitted on 18 April 2016 &nbsp;<button class="btn btn-small">Refresh</button></span></caption>
+					<thead>
+						<tr>
+							<th class="status-item">Registration item</th>
+							<th class="status-detail">Detail</th>
+							<th class="status-information">Information</th>
+						</tr>
+					</thead>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
+						<td>Receipt number 376711075</td>
+						<td><a href="">Payment details</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
+						<td><span class="abn1">68 102 299 331</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn1">Copy</button></td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>Rockhollow</td>
+						<td><a href="">Waiting</a></td>
+					</tr>
+				</table>
+			</div> -->
+
+			<div id="16MN1547" class="dashboard-container">
+				<table>
+					<caption>Application reference: <strong>#16MN1547</strong><br /><span>Submitted on 30 April 2016</span><span class="controls"><a href="confirmation-new.html" class="edit">Edit</a></span></caption>
+					<thead>
+						<tr>
+							<th class="status-item">Registration item</th>
+							<th class="status-detail">Detail</th>
+							<th class="status-information">Information</th>
+						</tr>
+					</thead>
+					<tr>
+						<td class="declined"><span class="visuallyhidden">Declined - </span>Payment declined</td>
+						<td></td>
+						<td><a href="payment.html">Retry payment</a></td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>Company</td>
+						<td>BOOGIE PTY PTD</td>
+						<td><a href="#">Not submitted</a></td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>BOOGIE DAYS</td>
+						<td><a href="#">Not submitted</a></td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>Business name</td>
+						<td>BOOGIE NIGHTS</td>
+						<td><a href="#">Not submitted</a></td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>ABN</td>
+						<td>&nbsp;</td>
+						<td><a href="#">Not submitted</a></td>
+					</tr>
+					<tr>
+						<td class="waiting"><span class="visuallyhidden">Waiting - </span>GST</td>
+						<td>&nbsp;</td>
+						<td><a href="#">Not submitted</a></td>
+					</tr>
+					<tr>
+						<td class="no-border-bottom waiting"><span class="visuallyhidden">Waiting - </span>PAYG</td>
+						<td class="status-waiting no-border-bottom">&nbsp;</td>
+						<td class="no-border-bottom"><a href="#">Not submitted</a></td>
+					</tr>
+				</table>
+			</div>
+			<div id="16TL3306" class="dashboard-container">
+				<table>
+					<caption>Application reference: <strong>#16TL3306</strong><br /><span>Completed on 11 April 2016</span><!-- <span class="controls"><a href="javascript:void(0);" id="linkOne" class="remove">Delete</a></span> --></caption>
+					<thead>
+						<tr>
+							<th class="status-item">Registration item</th>
+							<th class="status-detail">Detail</th>
+							<th class="status-information">Information</th>
+						</tr>
+					</thead>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
+						<td>Receipt number 176920075</td>
+						<td><a class="more" href="#help-paymentdetails">Payment details</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>Company</td>
+						<td>JOHNSON PLUMBERS PTY PTD</td>
+						<td><a class="more" href="#help-company">Registered</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
+						<td>Bob's Plumbing</td>
+						<td><a class="more" href="#help-business1">Registered</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
+						<td>Bob's Whitegoods Repairs</td>
+						<td><a class="more" href="#help-business2">Registered</a></td>
+					</tr>
+					<tr>
+						<td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
+						<td>Canberra plumbing</td>
+						<td><a class="more" href="#help-business3">Unavailable</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
+						<td><span class="abn2">68 957 383 599</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn2">Copy</button></td>
+						<td><a class="more" href="#help-abn">Successful</a></td>
+					</tr>
+					<tr>
+						<td class="registered"><span class="visuallyhidden">Success - </span>GST</td>
+						<td>Done</td>
+						<td><a class="more" href="#help-gst">Successful</a></td>
+					</tr>
+					<tr>
+						<td class="no-border-bottom registered"><span class="visuallyhidden">Success - </span>PAYG</td>
+						<td class="status-waiting no-border-bottom">Done</td>
+						<td class="no-border-bottom"><a class="more" href="#help-payg">Successful</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="card">
+			<div class="grid-row">
+				<p>Can't see the application you're looking for? <button id="btnShowFooter" type="button" class="btn btn-inline">Show search options</button></p>
+			</div>
+		</div>
+	</main>
+	<div class="help" id="more-info">
+		<div class="cd-panel from-right">
+			<div class="cd-panel-header">
+				<a href="#" class="cd-panel-close">Close</a>
+				<h2 id="helpTopic">Application reference: #16TL3306</h2>
+				<p class="cd-panel-print">
+					<a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+				</p>
+			</div>
+			<div class="cd-panel-container">
+				<div class="cd-panel-content">
+					<div id="helpFile" class="showhide">
+						<input type="hidden" class="help-anchor" id="help-paymentdetails"/>
+						<h3>Payment details</h3>
+						<div>
+							<p>Payment processed, receipt number 176920075</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-company"/>
+						<h3>Company registration</h3>
+						<div>
+							<h4>JOHNSON PLUMBERS PTY LTD</h4>
+							<p>Company registration successful, <a href="#">download certificate (PDF)</a>.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-business1"/>
+						<h3>Business name</h3>
+						<div>
+							<h4>BOB'S PLUMBING</h4>
+							<p>Business name registration successful, <a href="#">download certificate (PDF)</a>.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-business2"/>
+						<h3>Business name</h3>
+						<div>
+							<h4>BOB'S WHITEGOODS REPAIRS</h4>
+							<p>Business name registration successful, <a href="#">download certificate (PDF)</a>.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-business3"/>
+						<h3>Business name</h3>
+						<div>
+							<h4>CANBERRA PLUMBING</h4>
+							<p>Business name registration unsuccessful, name rejected.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-abn"/>
+						<h3>Australian Business Number (ABN)</h3>
+						<div>
+							<p>Your ABN has been issued, 68 957 383 599.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-gst"/>
+						<h3>Goods and Services Tax (GST)</h3>
+						<div>
+							<p>You are registered for GST.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-payg"/>
+						<h3>Pay As You Go (PAYG) withholding</h3>
+						<div>
+							<p>You are registered for PAYG withholding</p>
+						</div>
+					</div>
+				</div>
+				<div class="tmp-ftr" style="margin-bottom:-65px; margin-top: 5px; height: 60px; width: 100%; text-align: center; background-color: #eee; padding-top: 1px;">
+					<!-- <p><strong>Need more help? <a href="https://www.business.gov.au/contact" target="_blank">Contact business.gov.au <span class="visuallyhidden">(opens in new window)</span></a> on 13&nbsp;28&nbsp;46</strong></p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="dialogOne" style="display:none;">
+        <h1>Confirm delete</h1>
+        <p>Are you sure you want to delete application #16TL3306?</p>
+        <input type="button" class="btn btn-default" id="btnRemoveApplication" value="Yes, delete" />
+        <a href="#" class="margin-left-075" onclick='visionaustralia.closeDialog("dialogOne");'>Cancel</a>
+    </div>  
+	<footer>
+		<div class="navigation-footer-legal">
+			<div class="row">
+				<div class="columns">
+					<ul class="legal">
+						<li class="small-only-12">    <a href="/about">About</a></li>
+						<li class="small-only-12">    <a href="/for-government">For Government</a></li>
+						<li class="small-only-12">    <a href="/legal-notices">Legal notices</a></li>
+						<li class="small-only-12">    <a href="/about/accessibility">Accessibility</a></li>
+						<li class="small-only-12">    <a href="/about/other-languages">Other languages</a></li>
+						<li class="small-only-12">    <a href="/contact-us">Contact us</a></li>
+					</ul>
+					<ul class="social">
+						<li>
+							<a class="facebook" href="https://www.facebook.com/business.gov.au">
+								<span class="fa fa-facebook-square"></span>
+								<span class="label show-for-sr">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a class="twitter" href="https://twitter.com/business_gov_au">
+								<span class="fa fa-twitter-square"></span>
+								<span class="label show-for-sr">Twitter</span>
+							</a>
+						</li>
+						<li>
+							<a class="linkedin" href="https://www.linkedin.com/company/department-of-innovation-industry-science-and-research">
+								<span class="fa fa-linkedin-square"></span>
+								<span class="label show-for-sr">LinkedIn</span>
+							</a>
+						</li>
+						<li>
+							<a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+								<span class="fa fa-youtube-square"></span>
+								<span class="label show-for-sr">Youtube</span>
+							</a>
+						</li>
+					</ul>
+					<div class="bga-ftr-logo">
+						<a href="/"><strong>business</strong>.gov.au</a>
+					</div>
+					<div class="footer-logo">
+						<a href="https://www.business.gov.au">
+							<span>business.gov.au</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- a href="/web-chat" class="chat-now">Chat Now</a -->
+	</footer>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/vadialog.js"></script>
+    
+    <script>
+
+        /* Copy to clipboard */
+        var clipboard = new Clipboard('.btn-copy');
+
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+
+        $(document).ready(function () {
+            /* show/hide search filters */
+            $('#btnShow, #btnShowFooter').click(function () {
+				$("#updates").hide();
+                $('#filterContainer').show("fast", function() {
+					$("html, body").animate({
+						scrollTop: $("#filterContainer").offset().top
+					}, 500);
+					$("#search-term").focus();
+				});
+                $('#find-more').hide();
+            });
+			$("#hide-search").click(function() {
+				$("#filterContainer").hide("fast");
+				$("#updates").show();
+				$('#find-more').show();
+			});
+            $('#show-adv').click(function () {
+                $('#advanced-search').toggle("fast");
+				$("#search-term").focus();
+				if ($('#show-adv').html().startsWith("Show"))
+					$('#show-adv').html("Hide filter options");
+				else
+					$('#show-adv').html("Show filter options");
+				$("#find-btn").toggle();
+            });
+			initHelp("#more-info", ".more");
+        });
+
+        $(document).ready(function () {
+            /* Delete confirmation */
+            //visionaustralia.addDialog("linkOne", "dialogOne");
+            $('#btnRemoveApplication').click(function () {
+                visionaustralia.closeDialog("dialogOne");
+                $('#application-16TL3306').toggle("fast");
+                $('#messageNoApplications').toggle("fast");
+            });
+        });
+
+    </script>
+
+</body>
+</html>
