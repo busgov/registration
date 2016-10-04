@@ -1043,10 +1043,6 @@ td.help a.cd-btn:focus,
 			text-decoration: none;
 			color: $brand-blue;
 
-			// @media only screen and (min-width: $break-medium) {
-				// background: transparent url(../img/ico-account.png) no-repeat 12px 5px;
-			// }
-
 			@media only screen and (min-width: $banner-break) {
 				background: transparent url(../img/ico-account.png) no-repeat 12px 8px;
 				padding: 0.5em 0.5em 0.5em 48px;

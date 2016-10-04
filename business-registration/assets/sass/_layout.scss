@@ -516,67 +516,6 @@ footer {
 }
 
 
-// Footer
-// ------------------------------------------------------------------------------------------------------
-
-// footer {
-	// clear: both;
-	// background-color: $bg-footer;
-	// border-radius: $small-border-radius;
-	// -webkit-border-radius: $small-border-radius;
-	// margin: 0;
-	// padding: 0;
-	// text-align: left;
-
-	// ul {
-		// margin: 0;
-		// padding: 0;
-	// }
-	// li {
-		// list-style-type: none;
-		// font-size: $smaller;
-		// margin: 0;
-		// padding: 0;
-	// }
-	// a, a:link, a:visited {
-		// color: $gray;
-		// background-color: transparent;
-		// text-decoration: none;
-		// display: block;
-		// padding: 0.5em;
-	// }
-	// a:hover, a:focus, a:active {
-		// color: white;
-		// background-color: black;
-	// }
-	// p {
-		// text-align: center;
-	
-		// a, a:link, a:visited {
-			// display: inline;
-			// padding: 0.3em 0.1em;
-			// text-decoration: underline;
-		// }
-	// }
-// }
-
-// @media only screen and (min-width: $break-medium) {
-    // footer {
-		// margin: 2em 0 0 0;
-
-		// li {
-			// display: inline-block;
-			// padding: 0.1em 0;
-			// margin: 0.4em 0.5em 0.4em 0.5em;
-		
-			// &:last-child {
-				// margin: 0.4em 0 0.4em 0.5em;
-			// }
-		// }
-	// }
-// }
-
-
 // Iconography
 // ------------------------------------------------------------------------------------------------------
 
@@ -887,6 +826,10 @@ select.registration-duration {
 	}
 	.declined {
 		background: white url(../img/sprite-registration-status.png) no-repeat 1em -212px; 
+		padding-left: 57px;
+	}
+	.editing {
+		background: white url(../img/sprite-registration-status.png) no-repeat 1em -324px; 
 		padding-left: 57px;
 	}
 }
