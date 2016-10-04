@@ -10,6 +10,21 @@
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
     <style>
+	a.dismiss span {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+	}
+	
+	p:hover a.dismiss span, a.dismiss:focus span {
+		background: url(assets/img/ico-close.png);
+		background-size: cover;
+	}
+	
+	a.dismiss:hover, a.dismiss:focus {
+		background-color: transparent;
+	}
     </style>
 </head>
 <body>
@@ -41,8 +56,8 @@
 			<div id="updates" class="grid-row">
 				<h2 style="margin-top: 0.5em">Latest updates</h2>
 				<!-- <p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16AN8710">#16AN8710</a>: ABN issued</p> -->
-				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined</p>
-				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. </p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined <a class="dismiss" href="#"><span>&nbsp;</span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. <a class="dismiss" href="#"><span>&nbsp;</span></a></p>
 				<!-- <ul>
 					<li>Application <a href="#16AN8710">#16AN8710</a>: ABN issued</li>
 					<li>Application <a href="#16MN1547">#16MN1547</a>: </li>
@@ -376,7 +391,7 @@
 		</div>
 		<div class="card">
 			<div class="grid-row">
-				<p>Can't see the application you're looking for? <button id="btnShowFooter" type="button" class="btn btn-inline">Show search options</button></p>
+				<p>You have 20 more applications <button id="btnShowFooter" type="button" class="btn btn-inline" style="margin-left: 10px">Show more...</button></p>
 			</div>
 		</div>
 	</main>
@@ -571,6 +586,11 @@
                 $('#messageNoApplications').toggle("fast");
             });
         });
+		
+		$("a.dismiss").click(function() {
+			$(this).parent().remove();
+			return false;
+		});
 
     </script>
 
