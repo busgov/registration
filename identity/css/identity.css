@@ -204,12 +204,12 @@ button#MicrosoftAccountExchange:hover {
 	display: inline;
 }
 
-a {
+#api a {
 	margin-left:10px;
 	font-weight: normal;
 }
 
-a:hover, a:focus, a:active {
+#api a:hover, #api a:focus, #api a:active {
     background-color: #000;
     color: white;
     outline: none;
