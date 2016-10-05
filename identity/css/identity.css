@@ -2,7 +2,7 @@
 
 /* set container properties */
 #api {
-	max-width:600px;
+	max-width:500px;
 	font-weight: 300;
 	width: 100%;
 	padding: 5px;
@@ -143,7 +143,7 @@ button#LinkedInExchange, button#LinkedInExchange:hover, button#LinkedInExchange:
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEUAe7b///8AdrMklscAc7EAeLUAcbB5ttifzeMqmckAdLIAaqz7+/6PxeAShr0CgLkAba4nmMctksTv9Puw1eij0OWGvNtfrNJNo80YjMAeib/D4vGt3Oy82+yfzOOCvtyJvdx3tddirtI/ncoxmMj9KsrQAAAAw0lEQVQ4y9WSVw7DIAxAG8CkjJDVzO5x/zMWk0RNJaB/kfo+sGUeCMvstgI4J7F9aS5NxSLnTWLpZVDgexTqIiycUNBhgTxRyCKPYJ3dl7sITCkO+FyLXaWU310DscASOesf3ahWChGJ5cb4ASO5Joiu2EegWEmZa1c3yUwOHmHNuQgJup4CgF8YlKpcMhKvkNmb1REz6hdetsyziIBldv8lpH8ouGm28zQFCu2SOSAXlJYGYCgpFThEMFPm/zCryja8Acy7CRfMrcKPAAAAAElFTkSuQmCC);
 	background-color:#0077B5;
 	background-repeat: no-repeat;
-	background-position: 5px center;
+	background-position: left center;
 	color: #FFF;
 	max-width:24em;
 	text-align: left;
@@ -173,7 +173,7 @@ button#GoogleExchange, button#GoogleExchange:hover, button#GoogleExchange:focus 
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEXcTkH////cTD/bSj3ZQDLYOyzaRDbeV0vbSDrZPS/66Obyv7rsnpfpkorjcWfgZlvXOCr++Pj5393haFz88/L88fD67Or319T1zsv1zsrxuLPuqaLuqKLoi4LlfXTgYlbWMyTWMiPwtrHwta/fXVH/sCIIAAAAmElEQVQ4y+2RyQ7DIBBDMcwAIXvovqXb/39jRaX0AEmr5px3tSV7PGLhX6TVRFpN61l9zPNS6kn9gDcXO67zDnCnO2BCiNIyMtgKKJgyY2zQ68JEDtqju0nFTcOsxPUMw1GDDUqt+tY51/YNVlhvacTgEfCDIY0Q/lkBSg4RaUmmDo4/JdMzHy1Q2ejMeCj6PrXQP5+1MI8X0Y4HL4c826EAAAAASUVORK5CYII=);
 	background-color:#DC4E41;
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: 3px center;
 	color: #FFF;
 	max-width:24em;
 	width:100%;
@@ -204,9 +204,16 @@ button#MicrosoftAccountExchange:hover {
 	display: inline;
 }
 
-a#createAccount, a#forgotPassword {
+a {
 	margin-left:10px;
 	font-weight: normal;
+}
+
+a:hover, a:focus, a:active {
+    background-color: #000;
+    color: white;
+    outline: none;
+    text-decoration: none;
 }
 
 .localAccount .divider, .working {
