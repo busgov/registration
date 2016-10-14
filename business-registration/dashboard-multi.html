@@ -10,19 +10,25 @@
     <meta name="description" content="Australian business registration in one place.">
     <meta name="application-name" content="Business Registration" />
     <style>
-	a.dismiss span {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		vertical-align: middle;
+	
+	p a.dismiss span {
+		color: #aaa;
 	}
 	
-	p:hover a.dismiss span, a.dismiss:focus span {
-		background: url(assets/img/ico-close.png);
-		background-size: cover;
+	p a.dismiss span:hover, a.dismiss:focus span {
+		color: #000;
 	}
 	
 	a.dismiss:hover, a.dismiss:focus {
+		background-color: transparent;
+	}
+	
+	tr.extra {
+		background-color: #eee;
+		display: none;
+	}
+	
+	tr.extra td {
 		background-color: transparent;
 	}
     </style>
@@ -52,23 +58,33 @@
 	<main class="wrapper">
 		<h1>Application summary</h1>
 		<p>You have <strong>23 applications</strong>, showing the <strong>3 most recently changed</strong>.</p>
-		<div class="card clearfix">
+		<div id="latest-updates" class="card clearfix">
 			<div id="updates" class="grid-row">
 				<h2 style="margin-top: 0.5em">Latest updates</h2>
 				<!-- <p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16AN8710">#16AN8710</a>: ABN issued</p> -->
-				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined <a class="dismiss" href="#"><span>&nbsp;</span></a></p>
-				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. <a class="dismiss" href="#"><span>&nbsp;</span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Business name registered. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-tick-green.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				<div id="more-updates" style="display: none">
+					<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+					<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16MN1547">#16MN1547</a>: Payment declined <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+					<p style="margin: 0.5em"><img src="assets/img/ico-exclamation-orange.png" style="width: 22px; margin-right: 10px; float: left" alt="Success"> Application <a href="#16TL3306">#16TL3306</a>: Application completed, with 1 issue. <a class="dismiss" href="#"><span class="fa fa-close"></span></a></p>
+				</div>
+				<button id="btnMoreUpdates" class="btn btn-small">Show more...</button>
 				<!-- <ul>
 					<li>Application <a href="#16AN8710">#16AN8710</a>: ABN issued</li>
 					<li>Application <a href="#16MN1547">#16MN1547</a>: </li>
 					<li>Application <a href="#16TL3306">#16TL3306</a>: Application completed</li>
 				</ul> -->
-				<p id="find-more" style="margin-top: 2em">Can't see the application you're looking for? <button class="btn btn-inline" type="button" id="btnShow">Show search options</button>
 			</div>
-			<fieldset id="filterContainer" class="no-margin" style="display: none">
-				<legend class="larger margin4 padding-bottom-05">Application search <button class="btn" id="hide-search" type="button">Hide</button><!-- a href="#" class="cd-btn help"></a --></legend>
+		</div>
+		<div class="card clearfix">
+			<fieldset id="filterContainer" class="no-margin">
+				<legend class="larger visuallyhidden">Application search<!-- a href="#" class="cd-btn help"></a --></legend>
 				<div class="filter-container">
-					<div class="grid-row">
+					<!-- <div class="grid-row">
 						<div class="col4">&nbsp;</div>
 						<div class="col8 last">
 							<p>Enter all or part of any of the following to display more applications.</p>
@@ -76,14 +92,14 @@
 								<li>Reference number, ABN, ACN, Business name, Company name</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 					<div class="grid-row">
 						<div class="col4">
 							<label for="search-term" class="input-right">Search string</label>
 						</div>
 						<div class="col8 last">
-							<input id="search-term" type="text"> <button id="find-btn" type="button" class="btn btn-default btn-inline">Find applications</button><br />
-							<a href="javascript:void(0)" id="show-adv">Show filter options</a>
+							<input id="search-term" placeholder="Reference, ABN/ACN, Company/Business name" type="text"> <button id="find-btn" type="button" class="btn btn-default btn-inline">Find applications</button><br />
+							<a href="javascript:void(0)" id="show-adv">Show advanced options</a>
 						</div>
 					</div>
 					<div id="advanced-search" style="display: none;">
@@ -343,49 +359,105 @@
 						<tr>
 							<th class="status-item">Registration item</th>
 							<th class="status-detail">Detail</th>
-							<th class="status-information">Information</th>
+							<th colspan="2" class="status-information">Information</th>
 						</tr>
 					</thead>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>Payment received</td>
 						<td>Receipt number 176920075</td>
 						<td><a class="more" href="#help-paymentdetails">Payment details</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Payment processed, receipt number 176920075</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>Company</td>
 						<td>JOHNSON PLUMBERS PTY PTD</td>
 						<td><a class="more" href="#help-company">Registered</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Company registration successful, <a href="#">download certificate (PDF)</a>.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
 						<td>Bob's Plumbing</td>
 						<td><a class="more" href="#help-business1">Registered</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Business name registration successful, <a href="#">download certificate (PDF)</a>.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>Business name</td>
 						<td>Bob's Whitegoods Repairs</td>
 						<td><a class="more" href="#help-business2">Registered</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Business name registration successful, <a href="#">download certificate (PDF)</a>.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="declined"><span class="visuallyhidden">Declined - </span>Business name</td>
 						<td>Canberra plumbing</td>
 						<td><a class="more" href="#help-business3">Unavailable</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Business name registration unsuccessful, name rejected.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>ABN</td>
 						<td><span class="abn2">68 957 383 599</span> <button class="btn btn-copy" data-clipboard-action="copy" data-clipboard-target="span.abn2">Copy</button></td>
 						<td><a class="more" href="#help-abn">Successful</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>Your ABN has been issued, 68 957 383 599.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="registered"><span class="visuallyhidden">Success - </span>GST</td>
 						<td>Done</td>
 						<td><a class="more" href="#help-gst">Successful</a></td>
+						<td><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>You are registered for GST.</p>
+							</td>
+						</tr>
 					<tr>
 						<td class="no-border-bottom registered"><span class="visuallyhidden">Success - </span>PAYG</td>
 						<td class="status-waiting no-border-bottom">Done</td>
 						<td class="no-border-bottom"><a class="more" href="#help-payg">Successful</a></td>
+						<td class="no-border-bottom"><span class="fa fa-caret-down">&nbsp;</span></td>
 					</tr>
+						<tr class="extra">
+							<td>&nbsp;</td>
+							<td colspan="3">
+								<p>You are registered for PAYG withholding</p>
+							</td>
+						</tr>
 				</table>
 			</div>
 			<div id="more" style="display: none;">
@@ -727,12 +799,26 @@
                 $('#advanced-search').toggle("fast");
 				$("#search-term").focus();
 				if ($('#show-adv').html().substr(0,4) == "Show")
-					$('#show-adv').html("Hide filter options");
+					$('#show-adv').html("Hide advanced options");
 				else
-					$('#show-adv').html("Show filter options");
+					$('#show-adv').html("Show advanced options");
 				$("#find-btn").toggle();
             });
-			initHelp("#more-info", ".more");
+			// initHelp("#more-info", ".more");
+			$("a.more").click(function() {
+				var elt = $(this).closest("TR").next();
+				var span = $(this).closest("TD").next().find("span");
+				if (elt.is(":visible")) {
+					elt.hide();
+					span.removeClass("fa-caret-up").addClass("fa-caret-down");
+				}
+				else {
+					$("tr.extra").hide();
+					$(this).closest("TBODY").find("span.fa-caret-up").removeClass("fa-caret-up").addClass("fa-caret-down");
+					elt.slideDown("slow");
+					span.removeClass("fa-caret-down").addClass("fa-caret-up");
+				}
+			});
         });
 
         $(document).ready(function () {
@@ -745,13 +831,20 @@
             });
         });
 		
+		var count = 8;
 		$("a.dismiss").click(function() {
 			$(this).parent().remove();
+			if (--count == 0)
+				$("#latest-updates").hide("fast");
 			return false;
 		});
 		
 		$("#btnShowMore").click(function() {
 			$("#more").show("fast");
+		});
+		
+		$("#btnMoreUpdates").click(function() {
+			$("#more-updates").show("fast");
 		});
 
     </script>
