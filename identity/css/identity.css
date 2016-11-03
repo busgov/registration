@@ -237,3 +237,7 @@ button#MicrosoftAccountExchange:hover {
 	position: absolute;
 	top: 35px;
 }
+
+[aria-hidden=true] {
+	display: none;
+}
