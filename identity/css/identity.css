@@ -203,6 +203,13 @@ button#MicrosoftAccountExchange:hover {
 	background-color:#1387D2;
 }
 
+/* error page spacing */
+div#api.error-page-content > div {
+    margin-top: 1em;
+    /* line-height: 2em; */
+}
+
+
 /* miscellaneous tweaks to improve layout */
 .password-label label {
 	display: inline;
