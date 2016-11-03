@@ -42,7 +42,7 @@
 	background-color: #fff79b;
 }
 
-#api button {
+#api button, a#createAccount {
 	transition: none;
 	background-color: white;
 	border: 1px solid #367ab3;
@@ -69,6 +69,10 @@
 	font-weight: 300;
 	margin-right: 0.5em;
 	margin-bottom: 0.5em;
+}
+
+a#createAccount {
+	padding: 0.5em;
 }
 
 #api div.buttons button:first-child {				
@@ -218,4 +222,18 @@ button#MicrosoftAccountExchange:hover {
 
 .localAccount .divider, .working {
 	display: none;
+}
+
+/* Move create account link to top of form */
+.localAccount {
+	position: relative;
+}
+
+.localAccount .intro {
+	margin-bottom: 60px;
+}
+
+.localAccount .create {
+	position: absolute;
+	top: 35px;
 }
