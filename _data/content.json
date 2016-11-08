@@ -1,0 +1,234 @@
+{ "Content": [
+	{
+		"id": 1,
+		"helpTitle": "Foreign investors",
+		"helpContent": "<p>A foreign investor is:</p><ul><li>an individual not ordinarily resident in Australia</li><li>a company or trust not ordinarily resident in Australia</li><li>a foreign government</li></ul>",
+		"summary": "<p>Indigenous Australians can apply for a declaration under the Aboriginal and Torres Strait Islander Heritage Protection Act 1984 to protect significant Indigenous areas and objects. Declarations are rarely made but can override project approvals.</p><p>State and Territories may also have their own jurisdictional Indigenous Heritage regulations.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>The Aboriginal & Torres Strait Islander Heritage Protection Act 1984</em>"
+	},
+	{
+		"id": 2,
+		"helpTitle": "Capital expenditure",
+		"helpContent": "<p>Capital expenditure refers to expenditure to acquire, construct or upgrade fixed assets such as land, buildings and equipment.</p>",
+		"summary": "<p>All major projects with capital expenditure of AUD $500 million or more require the preparation of an Australian Industry Participation Plan under Australian Jobs Act 2013. The Plan outlines how the project will provide Australian businesses with full, fair and reasonable opportunity to supply goods and services.</p><p>State and Territories have their own jurisdictional Industry Participation Plans for projects of AUD $20 million.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Australian Jobs Act 2013</em>"
+	},
+	{
+		"id": 3,
+		"helpTitle": "Foreign workers",
+		"helpContent": "<p>Foreign workers are employees from another country without:</p><ul><li>Australian citizenship</li><li>New Zealand citizenship</li><li>Australian permanent residence</li></ul>",
+		"summary": "<p>All foreign workers require the appropriate visa that allows them to work in Australia and in Commonwealth waters under the Migration Act 1958.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Migration Act 1958</em>"
+	},
+	{
+		"id": 4,
+		"helpTitle": "Native title",
+		"helpContent": "<p>You can check if your area is affected by Native Title on the <a href=\"http://www.nntt.gov.au/searchRegApps/Pages/default.aspx\">Online Register</a>.</p>",
+		"summary": "<p>Activity on areas held by Native Title require approvals through negotiations with the affected title holders under the Native Title Act 1993.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Native Title Act 1993</em>"
+	},
+	{
+		"id": 5,
+		"helpTitle": "Indigenous heritage",
+		"helpContent": "<p>Certain forms of Indigenous heritage are not protected:</p><ul><li>objects with archaeological, scientific or historical interests</li><li>contemporary art</li><li>natural & intangible heritage</li></ul>",
+		"summary": "<p>Indigenous Australians can apply for a declaration under the Aboriginal and Torres Strait Islander Heritage Protection Act 1984 to protect significant Indigenous areas and objects. Declarations are rarely made but can override project approvals.</p><p>State and Territories may also have their own jurisdictional Indigenous Heritage regulations.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>The Aboriginal & Torres Strait Islander Heritage Protection Act 1984</em>"
+	},
+	{
+		"id": 7,
+		"helpTitle": "Environmental impact",
+		"helpContent": "<p>Significant impact depends on all of the following factors:</p><ul><li>sensitivity & intensity</li><li>value & quality</li><li>duration & magnitude</li><li>geographic extent</li></ul>",
+		"summary": "<p>If your project may pose a significant impact on the environment you are responsible to refer your project under the Environment Protection & Biodiversity Conservation Act 1999. All activities within certain geographical and ecological properties are automatically considered matters of significance.</p><p>Bilateral environmental assessment agreements are in place for all state and territories. For impacts on land or within 3 nautical miles from the coastline refer to your relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Environment Protection & Biodiversity Conservation Act 1999</em>"
+	},
+	{
+		"id": 8,
+		"helpTitle": "Import / export",
+		"helpContent": "<p>Imported goods are brought into Australia.</p><p>Exported goods are sent out from Australia.</p>",
+		"summary": "<p>Businesses are able to import and export goods without approval subject to biosecurity and taxation clearances under the Customs Act 1901. Certain goods are prohibited from import and export while restricted goods require additional approvals.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Customs Act 1901</em>"
+	},
+	{
+		"id": 9,
+		"helpTitle": "Biosecurity risk",
+		"helpContent": "<p>Imports that pose a biosecurity risk include:</p><ul><li>animal & plant products</li><li>equipment & machinery</li><li>samples & specimens</li></ul><p>Conveyances that pose a biosecurity risk include the vehicles & vessels used in transport.</p><p>You can check your biosecurity requirements on the <a href=\"http://www.agriculture.gov.au/import/online-services/bicon\">Biosecurity Import Conditions system (BICON)</a>.</p>",
+		"summary": "<p>All imports and conveyances that arrive within 12 nautical miles from the Australian coastline or its external territories are assessed under the Biosecurity Act 2015. If imports or conveyances are assessed to be biosecurity risks, they will not be allowed to enter Australia and may be destroyed at your expense.</p><p>State and Territories may also have their own jurisdictional biosecurity regulations.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Biosecurity Act 2015</em>"
+	},
+	{
+		"id": 10,
+		"helpTitle": "Food products",
+		"helpContent": "<p>Food products are items intended to be eaten or taken into the body. These include ingredients used to produce the consumable products and stockfeed.</p>",
+		"summary": "<p>All imported food products must satisfy both biosecurity under the Biosecurity Act 2015 and food safety requirements under the Imported Food Control Act 1992 to be allowed into the country.</p><p>State and Territory regulators undertake inspection activities and have responsibility for monitoring all imported food that is available for sale.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Import Control Act 1992</em>"
+	},
+	{
+		"id": 11,
+		"helpTitle": "Prescribed goods",
+		"helpContent": "<p>Prescribed goods include:</p><ul><li>dairy & egg products</li><li>meat & fish products</li><li>fruit & vegetable products</li><li>grain, hay, seed, straw & plant products</li><li>live animals</li><li>organic products</li></ul>",
+		"summary": "<p>All premises including fishing vessels where prescribed goods are prepared for export must be registered under the Export Control Act 1982</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Export Control Act 1982</em>"
+	},
+	{
+		"id": 12,
+		"helpTitle": "Cultural objects",
+		"helpContent": "<p>Cultural objects includes:</p><ul><li></li><li>art works</li><li>historical artefacts (technology & artefacts)</li><li>natural objects</li><li>fossils and skeletal remains</li></ul>",
+		"summary": "<p>The movement of significant national cultural objects across Australian borders requires approvals under the Protection Of Movable Cultural Heritage Act 1986. Certain cultural objects require additional approvals from the host country and others are prohibited from leaving Australia.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Protection of Movable Cultural Heritage Act 1986</em>"
+	},
+	{
+		"id": 13,
+		"helpTitle": "Radioactive materials",
+		"helpContent": "<p>Activities with radioactive materials include:</p><ul><li>constructing, operating & de-commissioning facilities</li><li>possessing, processing & disposing apparatus or materials</li></ul>",
+		"summary": "<p>All Commonwealth activities related to or involving radioactive materials are strongly regulated under the Australian Radiation Protection and Nuclear Safety Act 1998.</p><p>State and Territories may also have their own jurisdictional radioactive material regulations.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>The Australian Radiation Protection and Nuclear Safety Act 1998</em>"
+	},
+	{
+		"id": 14,
+		"helpTitle": "Greenhouse gases",
+		"helpContent": "<p>Large amounts of greenhouse gases and energy include:</p><ul><li>25 000 tonnes of carbon dioxide</li><li>28 000 megawatt hours of electricity</li><li>2.8 million litres of fuel</li></ul>",
+		"summary": "<p>Organisations that emit large amounts of greenhouse gases or consumes large amounts of energy may need to report their emissions under the National Greenhouse And Energy Reporting Act 2007. Organisations are responsible for determining their reporting obligations.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>National Greenhouse and Energy Reporting Act 2007</em>"
+	},
+	{
+		"id": 15,
+		"helpTitle": "Around an airport",
+		"helpContent": "<p>Building and construction activities include:</p><ul><li>New buildings, terminal & hangers</li><li>Civil works (runways, taxiways, roads & drains)</li><li>Shop fit-outs</li></ul>",
+		"summary": "<p>All major building and construction activities within federally leased airports (except for Mount Isa and Tennant Creek) require approvals under the Airports (Building Control) Regulations 1996.  Minor activities, alterations and repairs do not require permits but notification must be given.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Airports (Building Control) Regulations 1996</em>"
+	},
+	{
+		"id": 16,
+		"helpTitle": "Within an airport",
+		"helpContent": "<p>Building and construction activities include:</p><ul><li>New buildings, terminal &amp; hangers</li><li>Civil works (runways, taxiways, roads & drains)</li><li>Shop fit-outs</li></ul>",
+		"summary": "<p>All major building and construction activities within federally leased airports (except for Mount Isa and Tennant Creek) require approvals under the Airports (Building Control) Regulations 1996.  Minor activities, alterations and repairs do not require permits but notification must be given.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Airports (Building Control) Regulations 1996</em>"
+	},
+	{
+		"id": 17,
+		"helpTitle": "Impact on airspace",
+		"helpContent": "<p>Activities and obstructions with an impact include:</p><ul><li>Permanent structures (buildings)</li><li>Temporary structures (cranes)</li><li>Activities causing intrusions (glare from artificial light or reflected sunlight, turbulence from stacks or vents, steam, other gases or other particulate matter)</li></ul>",
+		"summary": "<p>All activities that may cause an obstruction within 20km of an airport or its protected airspace require approvals under the Airports (Protection of Airspace) Regulations 1996.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Airports (Protection of Airspace) Regulations 1996</em>"
+	},
+	{
+		"id": 18,
+		"helpTitle": "Heavy vehicles",
+		"helpContent": "<p>Heavy vehicles are vehicles over 4.5 tonnes gross vehicle mass.</p>",
+		"summary": "<p>Heavy vehicles may require approvals to operate on all roads (except Northern Territory & Western Australia) under the Heavy Vehicle National Law. Approvals are granted by the class and type of vehicles.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>National Heavy Vehicle Regulator</em>"
+	},
+	{
+		"id": 20,
+		"helpTitle": "Waste disposal at sea",
+		"helpContent": "<p>Waste and other matter includes all materials other than operational discharges from ships (sewage & galley scraps)</p>",
+		"summary": "<p>The disposal of waste and other matter into Commonwealth waters is generally prohibited under the Environment Protection (Sea Dumping) Act 1981.  This applies to all vessels, aircraft and platforms in Australian waters and all Australian vessels and aircraft in any part of the sea.</p><p>For disposals within 3 nautical miles from the coastline refer to your relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Environment Protection (Sea Dumping) Act 1981</em>"
+	},
+	{
+		"id": 21,
+		"helpTitle": "Shipwrecks",
+		"helpContent": "<p>You can find the location of these protected zones on the <a href=\"http://www.environment.gov.au/heritage/historic-shipwrecks/australian-national-shipwreck-database\">Australian National Shipwreck Database</a>.</p>",
+		"summary": "<p>All activities which disturb or damage the protected zone around shipwrecks in Commonwealth waters must be approved under the Historic Shipwrecks Act 1976.</p><p>Shipwrecks located within 3 nautical miles of the Australian coastline may require additional approvals from the relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Historic Shipwrecks Act 1976</em>"
+	},
+	{
+		"id": 22,
+		"helpTitle": "Operating a vessel",
+		"helpContent": "",
+		"summary": "",
+		"pdf": "",
+		"pdfDescription": ""
+	},
+	{
+		"id": 23,
+		"helpTitle": "International ship",
+		"helpContent": "<p>International ships include:</p><ul><li>foreign vessels</li><li>Australian vessels with voyages outside Australia’s exclusive economic zone</li></ul></p>",
+		"summary": "<p>All international ships require approvals to demonstrate the safety of ships & seafarers and the management of marine environments & seafarer behaviours under the Navigation Act 2012.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Navigation Act 2012</em>"
+	},
+	{
+		"id": 24,
+		"helpTitle": "Commercial vessel",
+		"helpContent": "<p>A domestic commercial vessel is a vessel that is for use in connection with a commercial, governmental or research activity.</p><p>Vessels are a craft for travelling on water.</p><p>The following are not domestic commercial vessels:</p><ul><li>Vessels with voyages outside Australia’s exclusive economic zone</li><li>Foreign vessels</li><li>Defence vessels</li></ul>",
+		"summary": "<p>All domestic commercial vessels in Commonwealth waters require approval to demonstrate the vessel and seafarer safety under the Marine Safety (Domestic Commercial Vessel) National Law Act 2012.</p><p>Domestic commercial vessels within 3 nautical miles Australian coastline may require additional approvals from the relevant State and Territory authority</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Marine Safety (Domestic Commercial Vessel) National Law Act 2012</em>"
+	},
+	{
+		"id": 25,
+		"helpTitle": "Ports in Australia",
+		"helpContent": "<p>Cargo includes any property loaded onto the ship and intended to be offloaded.</p><p>Passengers include any persons who is carried on board the ship with consent from the owner.</p>",
+		"summary": "<p>All domestic movements of cargo or passengers on interstate and intrastate voyages must be approved under the Coastal Trading (Revitalising Australian Shipping) Act 2012</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Coastal Trading (Revitalising Australian Shipping) Act 2012</em>"
+	},
+	{
+		"id": 26,
+		"helpTitle": "Fishing activities",
+		"helpContent": "<p>Fishing activities include:</p><ul><li>commercial fishing</li><li>receipt of fish (processors, wholesalers & retailers)</li><li>scientific research</li></ul>",
+		"summary": "<p>All fishing activities in Commonwealth waters must be approved and demonstrate ecologically sustainable management practices under the Fisheries Management Act 1991.</p><p>Fishing activities within 3 nautical miles of the Australian coastline may require additional approvals from the relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Fisheries Management Act 1991</em>"
+	},
+	{
+		"id": 27,
+		"helpTitle": "Large ship",
+		"helpContent": "<p>Large oil tankers are 150 gross tonnage and above.</p><p>Large ships are 400 gross tonnage and above.</p>",
+		"summary": "<p>All large oil tankers and ships require an approved pollution management plan for accidental and operational discharges under the Protection Of The Sea (Prevention Of Pollution From Ships) Act 1983.</p><p>For oil tankers and ships within 3 nautical miles from the coastline refer to your relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Protection Of The Sea (Prevention Of Pollution From Ships) Act 1983</em>"
+	},
+	{
+		"id": 28,
+		"helpTitle": "Offshore resources",
+		"helpContent": "",
+		"summary": "",
+		"pdf": "",
+		"pdfDescription": "MPAA Fact Sheet: <em></em>"
+	},
+	{
+		"id": 29,
+		"helpTitle": "Petroleum activities",
+		"helpContent": "<p>Petroleum activities involve the exploration, development & extraction of oil and gas.</p>",
+		"summary": "<p>All offshore petroleum activities in Commonwealth waters require approvals for each type of activity under the Offshore Petroleum And Greenhouse Gas Storage Act 2006.</p><p>Offshore petroleum activities within 3 nautical miles of the Australian coastline require additional approvals from the relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Offshore Petroleum and Greenhouse Gas Storage Act 2006</em>"
+	},
+	{
+		"id": 30,
+		"helpTitle": "Mineral mining activities",
+		"helpContent": "<p>Mineral mining activities involve the exploration, development & extraction of minerals (other than petroleum).</p>",
+		"summary": "<p>All offshore mineral mining activities in Commonwealth waters require approvals for each type of activity under the Offshore Minerals Act 1994.</p><p>Offshore mineral mining activities within 3 nautical miles of the Australian coastline require additional approvals from the relevant State and Territory authority.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Offshore Minerals Act 1994</em>"
+	},
+	{
+		"id": 31,
+		"helpTitle": "Submarine cables",
+		"helpContent": "<p>The protected zones for submarine cables are located in along the coast of <a href=\"http://www.acma.gov.au/Industry/Telco/Infrastructure/Submarine-cabling-and-protection-zones/nsw-protection-zones-submarine-cable-zones-i-acma\">NSW</a> and <a href=\"http://www.acma.gov.au/Industry/Telco/Infrastructure/Submarine-cabling-and-protection-zones/wa-protection-zone-submarine-cable-zones-i-acma\">Perth</a>.</p>",
+		"summary": "<p>All activities which disturb or interfere the protected zone around submarine cables Commonwealth waters must be approved under the Telecommunications Act 1997. Certain activities are prohibited around the protected zones.</p>",
+		"pdf": "dummy.pdf",
+		"pdfDescription": "MPAA Fact Sheet: <em>Schedule 3a To The Telecommunications Act 1997</em>"
+	}]
+}
