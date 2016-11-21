@@ -1661,20 +1661,20 @@ button.closeSystemMessage {
     margin: 0;
     line-height: 1.4em; }
     .showhide h3 a, .showhide h3 a:link, .showhide h3 a:visited {
-      background: transparent url(app/img/sprite-expand-collapse.png) 8px 17px no-repeat;
+      background: transparent url(App/img/sprite-expand-collapse.png) 8px 17px no-repeat;
       color: #367ab3;
       display: block;
       padding: 0.75em 0 0.75em 2.5em;
       margin: 0;
       text-decoration: none; }
     .showhide h3 a:hover, .showhide h3 a:focus, .showhide h3 a:active {
-      background: black url(app/img/sprite-expand-collapse.png) 8px -112px no-repeat;
+      background: black url(App/img/sprite-expand-collapse.png) 8px -112px no-repeat;
       color: white; }
     .showhide h3.open a, .showhide h3.open a:link, .showhide h3.open a:visited {
-      background: #0B5394 url(app/img/sprite-expand-collapse.png) 8px -240px no-repeat;
+      background: #0B5394 url(App/img/sprite-expand-collapse.png) 8px -240px no-repeat;
       color: white; }
     .showhide h3.open a:hover, .showhide h3.open a:focus, .showhide h3.open a:active {
-      background: black url(app/img/sprite-expand-collapse.png) 8px -370px no-repeat;
+      background: black url(App/img/sprite-expand-collapse.png) 8px -370px no-repeat;
       color: white; }
     .showhide h3 + div {
       padding: 0em 0em 0.5em 0em;
