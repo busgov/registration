@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,iBAAkB;EACd,UAAU,EAAE,gEAAgE;EAC5E,YAAY,EAAE,IAAI;EAElB,qBAAI;IACA,KAAK,EAAE,IAAI;IACX,QAAQ,EAAE,QAAQ;IAClB,IAAI,EAAE,KAAK",
+"sources": ["questions.scss"],
+"names": [],
+"file": "questions.css"
+}
