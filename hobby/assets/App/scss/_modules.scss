@@ -668,7 +668,7 @@ button.closeSystemMessage {
 		line-height: 1.4em;
 
 		a, a:link, a:visited {
-			background: transparent url(app/img/sprite-expand-collapse.png) 8px 17px no-repeat;
+			background: transparent url(App/img/sprite-expand-collapse.png) 8px 17px no-repeat;
 			color: #367ab3;
 			display: block;
 			padding: 0.75em 0 0.75em 2.5em;
@@ -677,19 +677,19 @@ button.closeSystemMessage {
 		}
 
 		a:hover, a:focus, a:active {
-			background: black url(app/img/sprite-expand-collapse.png) 8px -112px no-repeat;
+			background: black url(App/img/sprite-expand-collapse.png) 8px -112px no-repeat;
 			color: white;
 		}
 		
 		&.open {
 		
 			a, a:link, a:visited {
-				background: #0B5394 url(app/img/sprite-expand-collapse.png) 8px -240px no-repeat;
+				background: #0B5394 url(App/img/sprite-expand-collapse.png) 8px -240px no-repeat;
 				color: white;
 			}
 
 			a:hover, a:focus, a:active {
-				background: black url(app/img/sprite-expand-collapse.png) 8px -370px no-repeat;
+				background: black url(App/img/sprite-expand-collapse.png) 8px -370px no-repeat;
 				color: white;
 			}
 		}
