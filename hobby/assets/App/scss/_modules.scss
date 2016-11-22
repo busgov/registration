@@ -725,13 +725,12 @@ td.help a.cd-btn:focus,
 }
 a.cd-btn {
   max-width: 34px;
-  right: 0;
   z-index: 10;
-  position:absolute;
   top: 4px;
    main &:hover, main &:focus{
       background-color: transparent;
   }
+  margin-left: 10px;
 }
 
 @media only screen and (min-width: $break-medium) {
