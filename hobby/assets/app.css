@@ -391,7 +391,7 @@ nav {
 main {
   margin-bottom: 4rem; }
   main .row .column legend, main .row .columns legend {
-    padding-right: 40px; }
+    width: 100%; }
   main .row .medium-8 {
     padding-right: 2rem; }
   main .row .answers {
@@ -1698,10 +1698,9 @@ td.help a.cd-btn:focus,
 
 a.cd-btn {
   max-width: 34px;
-  right: 0;
   z-index: 10;
-  position: absolute;
-  top: 4px; }
+  top: 4px;
+  margin-left: 10px; }
   main a.cd-btn:hover, main a.cd-btn:focus {
     background-color: transparent; }
 
