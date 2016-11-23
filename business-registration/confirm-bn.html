@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration">
+    <title>4. Confirm application - Business Registration Service</title>
+
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/ie.css" rel="stylesheet">
+<!-- <link href="/content/jquery.fileupload/css/jquery.fileupload.css" rel="stylesheet"> -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    
+    <script src="assets/js/jquery-2.1.1.js"></script>
+<!-- <script src="/scripts/jquery-2.2.4.js"></script> -->
+<script src="assets/js/jquery-ui-min.js"></script>
+<script src="assets/js/jquery.collapse.js"></script>
+<!-- <script src="/scripts/jquery.blockui.js"></script> -->
+<!-- <script src="/scripts/jquery.form.js"></script> -->
+
+<!-- <script src="/scripts/bootstrap.js"></script>
+<script src="/scripts/respond.js"></script> -->
+
+<!--     <script src="/scripts/jquery.validate.culture.en-AU.js"></script>
+<script src="/scripts/jquery.validate.js"></script>
+<script src="/scripts/jquery.validate.unobtrusive.js"></script> -->
+
+ <!--    <script src="/scripts/jquery.fileupload/jquery.iframe-transport.js"></script>
+<script src="/scripts/jquery.fileupload/jquery.fileupload.js"></script> -->
+
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+
+    <script src="assets/js/file-inputs.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/vadialog.js"></script>
+<script src="assets/js/PrintThis.js"></script>
+<style>
+	div.cart-container.summary .cell-icon img {
+		display: none;
+	}
+	
+	div.cart-container.summary .result-cell p {
+		margin: 0.5em 0;
+	}
+
+	div.cart-container.summary div.cart-container {
+		border-bottom: none;
+	}
+	
+	div.cart-container.summary div.cart-container.bottom-border {
+		border-bottom: 1px solid #CCC;
+	}
+	
+	#BusinessNames tbody tr td p {
+		margin: 0;
+	}
+</style>
+</head>
+<body class="">
+    <div class="top-banner">
+        <div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+    </div>
+<header class="wrapper">
+    <div class="gov">
+        <a href="http://www.business.gov.au" target="_blank"><span>business.gov.au</span> <span class="visuallyhidden">(opens in new window)</span></a>
+    </div>
+    <div class="sub-brand">
+                <a href="/registration/type?appid=3622"><span>Business registration</span></a>
+
+    </div>
+        <nav id="settings">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                        <a href="settings.html" id="accessible-megamenu-1479851679874-1" aria-haspopup="true" aria-owns="accessible-megamenu-1479851679874-2" aria-controls="accessible-megamenu-1479851679874-2" aria-expanded="false"><span>Settings</span></a>
+                        <div class="sub-nav" id="accessible-megamenu-1479851679874-2" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1479851679874-1">
+                            <ul class="sub-nav-group">
+                                <li><a href="#">Set up save</a></li>
+                                <li><a href="/registration/type">Start a new application</a></li>
+
+                                <li><a href="/account/signout">Sign out</a></li>
+                            </ul>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+</header>
+    
+    
+
+
+
+        <div class="environment">
+            <p>
+                <strong>LOCALHOST</strong>
+            </p>
+        </div>
+
+
+
+    <div class="wrapper">
+            <div class="progress-container">
+        <div class="progress-bar">
+            <span id="progress-percent" role="progressbar" aria-valuetext="step 4 of 5 steps" style="width:63.55%"></span>
+        </div><!-- meter -->
+
+        <ul class="section-nav">
+            <li class="bookend"><a href="/registration/type?appid=3622"><span>‹</span><br>Select<br> registrations<span class="visuallyhidden"> (completed)</span></a></li>
+                    <li class="done" style="width: 15.3%">
+                        <a href="/registration/gettingstarted?appid=3622"><span class="visuallyhidden">Step </span><span>1</span><br>Getting<br> started <span class="visuallyhidden"> (completed)</span></a>
+                    </li>
+                    <li class="done" style="width: 15.3%">
+                        <a href="/registration/businessname?appid=3622"><span class="visuallyhidden">Step </span><span>2</span><br>Business<br> name <span class="visuallyhidden"> (completed)</span></a>
+                    </li>
+                    <li class="done" style="width: 15.3%">
+                        <a href="/registration/businessdetails?appid=3622"><span class="visuallyhidden">Step </span><span>3</span><br>Business<br> details <span class="visuallyhidden"> (completed)</span></a>
+                    </li>
+                    <li class="active" style="width: 15.3%">
+                        <span class="visuallyhidden">Step </span><span>4</span><br>Confirm<br> application <span class="visuallyhidden"> (current step)</span>
+                    </li>
+                    <li style="width: 15.3%">
+                        <span class="visuallyhidden">Step </span><span>5</span><br>Pay<br> &amp; submit <span class="visuallyhidden"> (not completed)</span>
+                    </li>
+            <!-- TODO: link to dashboard of logged in user -->
+            <li class="bookend right"><span>›</span><br>Dashboard<br> view</li>
+        </ul>
+    </div>
+
+    </div>
+
+<main class="wrapper">
+    
+
+
+<h1 id="heading" tabindex="-1">4. Confirm application <span role="progressbar">(Step 4 of 5 steps)</span></h1>
+
+<div class="grid-row">
+    <div>
+        Here's your chance to check that you've entered all the details correctly. If you find an error on this page, select the Change button next to a section to return to that part of the form.
+ <a class="cd-btn help" href="#help-confirmationnotes"><span>Help - Confirmation</span></a>
+    </div>
+</div>
+<form action="/registration/confirmation?appid=3622" id="sobrsform" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="IKvtfNOvgJGrE06aRAjvzG68CtQD9EEdhvx3wQk8xZOC-ujd2DbkgXFTU7NZx6s7qH_RIY2nbu-EOuxeB0FUs3Mip3GqwSBAYs2jCIeaV7qJlSwddeYCXdcrjVyQO4C-FPhQ3vDb2QV0XKnxBcVVBg2"><input id="__c__ApplicationId" name="__c__ApplicationId" type="hidden" value="/jWYLcZ4RrGAU58iaFIxLQ=="><input id="__c__isDisplayContentKey" name="__c__isDisplayContentKey" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw=="><div id="validationSummary" class="validation-summary-valid validation-container clearfix" data-valmsg-summary="true">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="assets/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" tabindex="-1">Just <span id="validation-error-count">0</span> thing(s) to check and you're on your way:</a>
+            </h2>
+            <ul class="validation-message-errors">
+                
+
+            </ul>
+            <p><span class="validation-red">*</span> indicates areas that need to be checked.</p>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    if ($("#validationSummary").hasClass("validation-summary-errors")) {
+                        scrollToAndFocus('#validationSummaryAnchor');
+                    }
+                });
+
+                function scrollToAndFocus(id) {
+                    scrollToTargetElement(id);
+                    var target = $(id);
+                    if (target) {
+                        target.focus();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+    <div class="confirmation">
+                <div id="feesummary" class="section-container" data-section-name="FeeSummary">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Fee Summary
+                        </h2>
+                    </div>
+    <div class="cart-container summary">
+	<h3>Company Names</h3>
+            <div class="cart-container bottom-border">
+                <div class="result-row" data-business-name-id="1593">
+                    <div class="result-cell cell-icon">
+                            
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <p>GUZUMPTION</p>
+                        
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $999</span>
+                    </div>
+                </div>
+            </div>
+                <h3>Business Names</h3>
+            <div class="cart-container">
+                <div class="result-row" data-business-name-id="1593">
+                    <div class="result-cell cell-icon">
+                            
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <p>CAFE</p>
+                        
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $999</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="result-row" data-business-name-id="1594">
+                    <div class="result-cell cell-icon">
+                            
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <p>BANK</p>
+                        
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $999</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="result-row" data-business-name-id="1595">
+                    <div class="result-cell cell-icon">
+                            
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <p>NORMAL NAME</p>
+                        
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $999</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="result-row" data-business-name-id="1596">
+                    <div class="result-cell cell-icon">
+                            
+                    </div>
+                    <div class="result-cell cell-detail">
+                        <p>ABORIGINAL CORPORATION OF CHURCHILL NEW</p>
+                        
+                    </div>
+                    <div class="result-cell cell-action no-padding">
+                        <span class="subtotal">AU $999</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+    <!-- cart-container -->
+        <div class="cart-container">
+            <div class="result-row">
+                <div class="result-cell cell-total">
+                    <p style="
+    margin: 0.5em 0 0.5em 0;
+">Total payment required: AU<span id="totalPayment">$4995</span></p>
+                </div>
+            </div><!-- result-row -->
+        </div>
+    <!-- cart-container -->
+                <div id="selectedregistrations" class="section-container" data-section-name="Registrations">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Selected Registrations
+                                <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/type?appId=3622&amp;s=0">Edit</button>
+                        </h2>
+                    </div>
+                        <ul>
+<li><a href="#australianbusinessnumber">Australian Business Number (ABN)</a></li>
+<li><a href="#businessnames">Business name</a></li>
+    </ul>
+	
+                <div id="gettingstarted" class="section-container" data-section-name="GettingStarted">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Getting Started
+                        </h2>
+                    </div>
+                                                                                            <table id="abndetails">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">ABN Details</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/gettingstarted?appId=3622&amp;s=0">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">Entity Type</td>
+        <td class="input-value">Individual</td>
+    </tr>
+    <tr>
+        <td class="field-name">Entity Subtype</td>
+        <td class="input-value">Individual/Sole Trader</td>
+    </tr>
+                                    
+                                </tbody></table>
+                </div>
+				<div id="companyname" class="section-container" data-section-name="CompanyRegistration">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Company Name
+                        </h2>
+                    </div>
+                                            <div class="cart-container">
+        <table id="CompanyRegistration">
+            <thead class="visuallyhidden">
+            <tr>
+                <th style="width:50%">Field item</th>
+                <th style="width:50%">Input value</th>
+            </tr>
+            </thead>
+            <tbody><tr>
+                <th>Company Name</th>
+                <th>Status
+                    <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessname?appId=5&amp;s=0">Edit</button>
+                </th>
+            </tr>
+                <tr>
+                    <td style="width:50%">GUZUMPTION PTY LTD</td>
+                    <td style="width:50%">
+                            <img style="width: 22px; margin-right: 5px; float: left" src="assets/img/ico-tick-green.png" alt="Success">
+                        Available
+                    </td>
+                </tr>
+        </tbody></table>
+</div>
+</div>
+                <div id="businessname" class="section-container" data-section-name="BusinessNames">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Business Name
+                        </h2>
+                    </div>
+                                            <div class="cart-container">
+        <table id="BusinessNames">
+            <thead class="visuallyhidden">
+            <tr>
+                <th style="width:65%">Field item</th>
+                <th style="width:35%">Input value</th>
+            </tr>
+            </thead>
+            <tbody><tr>
+                <th>Business Name</th>
+                <th>Status
+                    <button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessname?appId=3622&amp;s=0">Edit</button>
+                </th>
+            </tr>
+                <tr valign="top">
+                    <td style="width:50%"><p>CAFE</p></td>
+                    <td style="width:50%"><p style="
+    margin-bottom: 0.5em;
+">
+   <img style="width: 22px; margin-right: 5px; float: left" src="assets/img/ico-exclamation-orange.png" alt="Alert">
+   <strong>Under Transfer</strong></p>
+  <p>The name has been previously cancelled with the intention to transfer to another holder.<br />Transfer key: 1-12345678901</p>
+</td>
+                </tr>
+                <tr valign="top">
+                    <td style="width:50%"><p>BANK</p></td>
+                    <td style="width:50%"> <p style="
+    margin-bottom: 0.5em;
+"><img style="width: 22px; margin-right: 5px; float: left" src="assets/img/ico-exclamation-orange.png" alt="Alert">
+ <strong>Subject to names determination</strong></p>
+<p>The name is referred to ASIC staff for manual determination.</p>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td style="width:50%"><p>NORMAL NAME</p></td>
+                    <td style="width:50%"><p><img style="width: 22px; margin-right: 5px; float: left" src="assets/img/ico-tick-green.png" alt="Success">
+  <strong>Available</strong></p>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td style="width:50%"><p>ABORIGINAL CORPORATION OF CHURCHILL NEW</p></td>
+                    <td style="width:50%"><p style="
+    margin-bottom: 0.5em;
+"><img style="width: 22px; margin-right: 5px; float: left" src="assets/img/ico-exclamation-orange.png" alt="Alert">
+  <strong>Subject to names determination</strong></p>
+  <p>May require ministerial or other official consent.<br>Letter of consent: <a href="#">23921.docx</a></p></td>
+                </tr>
+        </tbody></table>
+</div>
+                <div id="businessdetails" class="section-container" data-section-name="AbnRegistrationDetails">
+                    <div class="confirmation-heading">
+                        <h2>
+                            Business Details
+                        </h2>
+                    </div>
+                                                                                            <table id="proofofidentity">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Proof of Identity</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=0">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">Name</td>
+        <td class="input-value">Nerk, Fred</td>
+    </tr>
+    <tr>
+        <td class="field-name">Tax File Number</td>
+        <td class="input-value">123456789</td>
+    </tr>
+    <tr>
+        <td class="field-name">Place of Birth</td>
+        <td class="input-value">Acton, ACT, Australia</td>
+    </tr>
+    <tr>
+        <td class="field-name">Date of birth</td>
+        <td class="input-value">3/04/1977</td>
+    </tr>
+    <tr>
+        <td class="field-name">Home Address</td>
+        <td class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
+    </tr>
+                                    
+                                </tbody></table>
+                                <table id="businessactivity">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Business activity</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=1">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">ABN start date</td>
+        <td class="input-value">23/11/2016</td>
+    </tr>
+    <tr>
+        <td class="field-name">All business activity will end within 3 months of the start date</td>
+        <td class="input-value">No</td>
+    </tr>
+    <tr>
+        <td class="field-name">Do you operate an agricultural property?</td>
+        <td class="input-value">No</td>
+    </tr>
+    <tr>
+        <td class="field-name">Are you an Australian resident for taxation purposes?</td>
+        <td class="input-value">Yes</td>
+    </tr>
+    <tr>
+        <td class="field-name">Main business activity</td>
+        <td class="input-value">Snake catching</td>
+    </tr>
+                                    
+                                </tbody></table>
+                                <table id="yourcontactdetails">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Your contact details</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=2">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">Business Address</td>
+        <td class="input-value">100 Abbett St, Scarborough, WA, Australia, 6019</td>
+    </tr>
+    <tr>
+        <td class="field-name">Main business activity @ this address</td>
+        <td class="input-value">Same as the main business activity</td>
+    </tr>
+    <tr>
+        <td class="field-name">Email</td>
+        <td class="input-value">test@test.com</td>
+    </tr>
+                                    
+                                </tbody></table>
+                                <table id="additionalbusinesslocations">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Additional business locations</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=3">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name"></td>
+        <td class="input-value">Not Provided</td>
+    </tr>
+                                    
+                                </tbody></table>
+                                <table id="authorisedcontacts">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Authorised contacts</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=4">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">Tax file number</td>
+        <td class="input-value">123456789</td>
+    </tr>
+    <tr>
+        <td class="field-name">Name</td>
+        <td class="input-value">Nerk, Fred</td>
+    </tr>
+    <tr>
+        <td class="field-name">Position</td>
+        <td class="input-value">Individual/Sole Trader</td>
+    </tr>
+    <tr>
+        <td class="field-name">Email</td>
+        <td class="input-value">test@test.com</td>
+    </tr>
+    <tr>
+        <td class="field-name">Business Hours Phone</td>
+        <td class="input-value">12123434</td>
+    </tr>
+                                    
+                                </tbody></table>
+                                <table id="reasonforabnapplication">
+                                    <thead class="visuallyhidden">
+                                        <tr>
+                                            <th>Field item</th>
+                                            <th>Input value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody><tr>
+                                        <th style="vertical-align: middle">Reason for ABN application</th>
+                                            <th><button type="button" class="btn btn-default ico-edit" data-changepath="/registration/businessdetails?appId=3622&amp;s=5">Edit</button></th>
+                                    </tr>
+    <tr>
+        <td class="field-name">Reason</td>
+        <td class="input-value">New business in Australia</td>
+    </tr>
+    <tr>
+        <td class="field-name">Is this your first time in business in Australia?</td>
+        <td class="input-value">Yes</td>
+    </tr>
+                                    
+                                </tbody></table>
+                </div>
+
+        <div id="ajax-container-for-declaration">
+            
+<div style="display: none">
+    <input id="__c__Declaration_IsDeclarantDetailsRequired" name="__c__Declaration.IsDeclarantDetailsRequired" type="hidden" value="5uR1c+nYSyEWkNRZa73mcg==">
+    <input id="__c__Declaration_IsDeclarantNameRequired" name="__c__Declaration.IsDeclarantNameRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
+    <input id="__c__Declaration_IsDeclarantAddressRequired" name="__c__Declaration.IsDeclarantAddressRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
+    <input id="__c__Declaration_IsDeclarantPositionRequired" name="__c__Declaration.IsDeclarantPositionRequired" type="hidden" value="5uR1c+nYSyEWkNRZa73mcg==">
+    <input id="__c__Declaration_IsDeclarantContactDetailsRequired" name="__c__Declaration.IsDeclarantContactDetailsRequired" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
+    <input id="__c__Declaration_IsAusKeyRegistrationPresent" name="__c__Declaration.IsAusKeyRegistrationPresent" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
+    <input id="__c__Declaration_IsDeclarantACompany" name="__c__Declaration.IsDeclarantACompany" type="hidden" value="YRBk3UFuGeCu5zo+Lao/Qw==">
+
+<input id="__c__Declaration_Officeholders_0__Value" name="__c__Declaration.Officeholders[0].Value" type="hidden" value="QZYlKTg+xIUtvxJ2JSGGQQ=="><input id="__c__Declaration_Officeholders_0__Text" name="__c__Declaration.Officeholders[0].Text" type="hidden" value="xG+PPoCFaVTtfWz+4WFDAmeNfe7ov6+RkbFvCepKx26Aj7R1LbkMSNwk7p3g+qLg"><input id="__c__Declaration_Officeholders_1__Value" name="__c__Declaration.Officeholders[1].Value" type="hidden" value="Bl4QuLay3uQM/jutouihIw=="><input id="__c__Declaration_Officeholders_1__Text" name="__c__Declaration.Officeholders[1].Text" type="hidden" value="mNDAvZQCnDqRCgvXeGCfhQgX2Q414eYQJ7y4eS3DpGE=">
+</div>
+
+<fieldset id="declarationFieldset" class="showhide-target">
+    <legend class="larger">
+        Declaration <a class="cd-btn help" href="#help-confirmationdeclarationlegend"><span>Help - Declaration</span></a>
+    </legend>
+        <p>Please complete the details below. All fields are required unless marked as "optional". </p>
+
+        <div class="grid-row">
+            <div class="col4">
+<label class="input-right" for="Declaration_OfficeholderId">Who is making the declaration?</label>
+            </div>
+            <div class="col8 last">
+<select id="Declaration_OfficeholderId" name="Declaration.OfficeholderId"><option value="">Please select...</option>
+<option value="4397">Nerk, Fred (Authorised Contact, Sole Trader)</option>
+<option value="AddAnother">Add another person</option>
+</select> 
+                
+            </div>
+        </div>
+
+
+    <div id="AddDeclarant" style="">
+
+            <div class="grid-row">
+                <div class="col4">
+                    <label class="input-right" for="Declaration_RegistrationDeclarationPosition">Position held</label>
+                </div>
+                <div class="col8 last">
+<input id="Declaration_RegistrationDeclarationPosition" name="Declaration.RegistrationDeclarationPosition" type="text" value=""> 
+                    <br>For example: director, partner, trustee, tax agent or public officer.
+                </div>
+            </div>
+
+    </div>
+
+
+</fieldset>
+
+
+
+
+
+
+<div class="declaration-wrapper margin-top-075">
+
+    <div id="declaration-text" class="grid-row">
+            <fieldset class="custom-controls">
+                <legend class="larger no-padding">Business Names</legend>
+                <p>I declare that:</p>
+                    <p>
+                        <input data-val="true" data-val-required="The ApplicantCheckBox field is required." id="ApplicantCheckBox" name="ApplicantCheckBox" type="checkbox" value="true"><input name="ApplicantCheckBox" type="hidden" value="false">
+                        <label id="bn-applicant-check" for="ApplicantCheckBox">I am lodging this application on behalf of the applicant (the proposed business name holder). </label>
+                    </p>
+                    <p>
+                        <input data-val="true" data-val-required="The NotDisqualifiedCheckBox field is required." id="NotDisqualifiedCheckBox" name="NotDisqualifiedCheckBox" type="checkbox" value="true"><input name="NotDisqualifiedCheckBox" type="hidden" value="false">
+                        <label id="bn-notdisqualified-check" for="NotDisqualifiedCheckBox">The applicant is not disqualified from managing corporations under section 206B(1) of the <a href="http://www.austlii.edu.au/au/legis/cth/consol_act/ca2001172/" target="_blank"><em>Corporations Act</em> 2001 <span class="visuallyhidden">(opens in new window)</span></a>. </label>
+                    </p>
+                    <p>
+                        <input data-val="true" data-val-required="The NoConvictionCheckBox field is required." id="NoConvictionCheckBox" name="NoConvictionCheckBox" type="checkbox" value="true"><input name="NoConvictionCheckBox" type="hidden" value="false">
+                        <label id="bn-conviction-check" for="NoConvictionCheckBox">Within the last 5 years the applicant has not been:<br>
+<span class="dot-point">convicted of, or</span><br>
+<span class="dot-point">released from prison after being convicted of, and serving a term of imprisonment for, any of the criminal offences referred to in section 32(1) (c) or (d) of the <a href="http://www.austlii.edu.au/au/legis/cth/num_act/bnra2011311/" target="_blank"><em>Business Names Registration Act</em> 2011 <span class="visuallyhidden">(opens in new window)</span></a>.</span> </label>
+                    </p>
+                    <p>
+                        <input data-val="true" data-val-required="The ElectronicLodgementCheckBox field is required." id="ElectronicLodgementCheckBox" name="ElectronicLodgementCheckBox" type="checkbox" value="true"><input name="ElectronicLodgementCheckBox" type="hidden" value="false">
+                        <label id="bn-electronic-check" for="ElectronicLodgementCheckBox">I am authorised to submit this application for lodgement on behalf of the applicant under the terms and conditions of the <a href="http://www.asic.gov.au/online-services/register-for-online-access/electronic-lodgement-protocol/" target="_blank">Australian Securities and Investments Commission (ASIC) Electronic Lodgement Protocol <span class="visuallyhidden">(opens in new window)</span></a>. </label>
+                    </p>
+                    <p>
+                        <input data-val="true" data-val-required="The DueAndProperEnquiriesCheckBox field is required." id="DueAndProperEnquiriesCheckBox" name="DueAndProperEnquiriesCheckBox" type="checkbox" value="true"><input name="DueAndProperEnquiriesCheckBox" type="hidden" value="false">
+                        <label id="bn-enquiries-check" for="DueAndProperEnquiriesCheckBox">I am authorised to make each of the above declarations on behalf of the applicant after making all due and proper enquiries. </label>
+                    </p>
+                <p>
+                    <input data-val="true" data-val-required="The AsicTrueAndCorrectCheckBox field is required." id="AsicTrueAndCorrectCheckBox" name="AsicTrueAndCorrectCheckBox" type="checkbox" value="true"><input name="AsicTrueAndCorrectCheckBox" type="hidden" value="false">
+                    <label id="bn-trueandcorrect-check" for="AsicTrueAndCorrectCheckBox">To the best of my knowledge, the information supplied in this transaction is complete and accurate (it is an offence to provide false or misleading information to ASIC). </label>
+                </p>
+                <p>ASIC may contact the applicant or the lodging party (if any) if there are any questions regarding this application for registration of a business name.</p>
+            </fieldset>
+                            <fieldset class="custom-controls">
+                <legend class="larger no-padding">Tax Registrations</legend>
+                <p>The declaration below applies to your application for the following Australian Taxation Office (ATO) registrations:</p>
+                <ul>
+                        <li>Australian Business Number (ABN)</li>
+                </ul>
+                <p>
+                    <input data-val="true" data-val-required="The ATOTrueAndCorrectCheckBox field is required." id="ATOTrueAndCorrectCheckBox" name="ATOTrueAndCorrectCheckBox" type="checkbox" value="true"><input name="ATOTrueAndCorrectCheckBox" type="hidden" value="false">
+                    <label id="ato-trueandcorrect-check" for="ATOTrueAndCorrectCheckBox">The information provided in this application (including attachments if applicable) is true and correct. </label>
+                </p>
+            </fieldset>
+    </div>
+    <div class="grid-row">
+        <h3>Privacy</h3>
+        <p>The information provided to ASIC <span class="addition">, the ABR and the ATO</span> in this form may include personal information. Please refer to the <a href="http://www.asic.gov.au/privacy" target="_blank">ASIC privacy policy <span class="visuallyhidden">(opens in new window)</span></a>, the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ABR privacy policy <span class="visuallyhidden">(opens in new window)</span></a> for more information about how we handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p>
+    </div>
+</div>
+
+
+
+
+
+
+        </div>
+        
+        <input data-val="true" data-val-required="The RegistrationDeclarationAccepted field is required." id="RegistrationDeclarationAccepted" name="RegistrationDeclarationAccepted" type="hidden" value="False">
+        <div class="grid-row custom-controls">
+            <div>
+                Almost done! If payment is required, the next step will open our secure payment page. Then you'll be directed to a dashboard where you can track the progress of your application. <a class="cd-btn help" href="#help-confirmationalmostdone"><span>Help - Almost Done</span></a>
+            </div>
+        </div>
+        
+        
+    </div>
+<div class="controls-container">
+    <div class="controls-content">
+<button class="btn cancel" name="wNjv11HSL2eBWG4934fyzQ==" type="submit" value="__cvg__3Vm2adfQYvusabNtBnBi9w==">Previous</button><button class="btn btn-default next" id="next-submit-btn" name="ch0lcMUREELjo7/FopH4PA==" type="submit" value="__cvg__tY59JnGJfVXqfDa5D37xIQ==">Submit</button>    </div>
+</div>    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+                                <input type="hidden" class="help-anchor" id="help-confirmationnotes">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Confirmation</a></h3>
+<div aria-hidden="true" style="display: none;">
+<p>This is a draft page</p>
+<h4>What if my details change?</h4>
+<p>If you have made an error or your details have changed, you have 28 days to <a href="https://www.ato.gov.au/Business/Registration/Update-your-details/" target="_blank">update your details with the ABN registrar <span class="visuallyhidden">(opens in new window)</span></a>. </p>
+<h4>Are there penalties for incorrect information?</h4>
+<p>There are penalties if the information entered is false or misleading. However, if you let ATO or ASIC know as soon as you're aware of the error or if you update them before they contact you, you may not receive a penalty. </p><p>See the <a href="https://abr.gov.au/General-information/Making-a-false-or-misleading-statement/" target="_blank">Making a false or misleading statement <span class="visuallyhidden">(opens in new window)</span></a> page on the Australian Business Register (ABR) website.</p>
+<h4>What happens to my form after I submit?</h4>
+<p>Once you accept the declaration and submit the form. Your application will be sent to the ATO and or ASIC to be processed. </p>
+<h4>Can I access my form details after I submit?</h4>
+<p> No, once you submit the form, you'll no longer have access to the details in your form. These will be deleted from the Business registration website.</p>
+<h4>How can I check on the progress of my application?</h4>
+<p> The status of your application can be checked on the Dashboard. Here you'll see whether your application was successful. You'll also be able to see the reason if it was not successful.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-confirmationdeclarationlegend">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Declaration</a></h3>
+<div aria-hidden="true" style="display: none;"><p>This declaration can only be made by you the applicant, or an authorised person.</p>
+<p>There are penalties if the information entered is false or misleading. However, if you let ATO or ASIC know as soon as you're aware of the error or if you update them before they contact you, you may not receive a penalty. </p><p>See the <a href="https://abr.gov.au/General-information/Making-a-false-or-misleading-statement/" target="_blank">Making a false or misleading statement <span class="visuallyhidden">(opens in new window)</span></a> page on the Australian Business Register (ABR) website.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-confirmationalmostdone">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Almost Done</a></h3>
+<div aria-hidden="true" style="display: none;"><h4>What is the payment for?</h4>
+<p>Payment will be required if you have registered one or more business names, or you have registered a company.</p>
+<h4>What happens to my payment?</h4>
+<p>Your payment details will be forwarded securely to the Australian Securities &amp; Investments Commission (ASIC) for processing. Once your payment is processed, our system will receive a receipt number and whether the payment was successful from ASIC. These details will then be displayed on the Dashboard.</p></div>                    </div>
+                    <div class="more-help">
+                        <p><strong>Need more help? <a href="https://www.business.gov.au/contact" target="_blank">Contact business.gov.au <span class="visuallyhidden">(opens in new window)</span></a> on 13&nbsp;28&nbsp;46</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="dialogBusinessName" style="display:none;">
+    <h1>Confirm remove</h1>
+    <p>Are you sure you want to remove this business name?</p>
+    <p style="display: none;">At least one business name is required. If you remove this one you will be directed back to the business name search page.</p>
+    <input type="button" class="btn btn-default" id="btnRemoveName" value="Yes, remove">
+    <a href="#" class="margin-left-075 close-dialog">Cancel</a>
+</div>
+
+<script type="text/javascript" src="/scripts/pages/shared/validation.js?v=636077127471228399"></script>
+<script type="text/javascript" src="/scripts/vadialog.js?v=636078199660248526"></script>
+<script type="text/javascript" src="/scripts/pages/shared/functions.js?v=636147940111098421"></script>
+<script type="text/javascript" src="/scripts/pages/shared/address.js?v=636044539315254203"></script>
+<script type="text/javascript" src="/scripts/pages/registration/confirmation.js?v=636124605961651549"></script>
+<script type="text/javascript" src="/scripts/jquery-toggleslide.js?v=635959582673333980"></script>
+<script type="text/javascript">
+    $(document)
+        .ready(function() {
+            ConfirmationPageScript.InitPage();
+        });
+</script>
+
+
+
+
+
+
+
+
+</div></div></div></form></main>
+
+
+
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"b0117d63e3144423a244080bbe4984c2"}
+</script>
+<script type="text/javascript" src="https://localhost:44399/e4974827636c423db7096f2a1ed011fc/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+
+
+</body></html>
