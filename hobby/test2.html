@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="local">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/vendor.css" rel="stylesheet"/>
+    <link href="assets/app.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/App/js/help.js"></script>
+    <script src="assets/App/js/jquery.collapse.js"></script>
+    <title>Question 1 | business.gov.au</title>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+	<!-- <style>
+	a.tooltip2 {outline:none; }
+a.tooltip2 strong {line-height:30px;}
+a.tooltip2:hover {text-decoration:none;} 
+a.tooltip2 span {
+font-size: 75%;
+line-height: 1.5em;
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:-30px; margin-left:28px;
+    width:500px; line-height:16px;
+}
+a.tooltip2:hover span{
+    display:inline; position:absolute; color:#111;
+    border:1px solid #DCA; background:#fffAF0;}
+.callout2 {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+    
+/*CSS3 extras*/
+a.tooltip2 span
+{
+    border-radius:4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
+	</style> -->
+	<style>
+.ui-tooltip {
+    font-family: arial, sans-serif;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 20px;
+    position: absolute;
+    background: #ecfaff;
+    border: 1px solid #767676;
+	background-color: #ecfaff;
+    max-width: 450px;
+    z-index: 9999;
+	box-shadow: 2px 2px 2px #ddd;
+
+}
+
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+.bottom .ui-tooltip-content::after {
+    border-color: rgba(118, 118, 118, 0);
+    border-top-color: #ecfaff;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.bottom .ui-tooltip-content::before {
+    border-color: rgba(118, 118, 118, 0);
+    border-top-color: #767676;
+    border-width: 11px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+.top .ui-tooltip-content::after {
+    top: -10px;
+    left: 50%;
+    border-color: #ecfaff transparent;
+    border-width: 0 10px 10px;
+    margin-left: -10px;
+}
+
+.top .ui-tooltip-content::before {
+     border-color: rgba(118, 118, 118, 0);
+     border-bottom-color: #767676;
+     top: -11px;
+     left: 50%;
+     border-width: 0 11px 11px;
+     margin-left: -11px;
+ }
+ 
+ .panel.callout {
+	background-color: #efe8ce;
+ }
+ 
+ .panel.callout a:not(.button) {
+	color: #333;
+ }
+</style>
+</head>
+<body>
+    
+    <a class="SkipToContent" href="#maincontent">skip to main content</a>
+    
+    <div id="wrapper">
+        <div class="top-bar">
+    <div class="row">
+        <h2 class="mobile-logo">
+            <a href="https://www.business.gov.au/"><strong>business</strong>.gov.au</a>
+        </h2>
+    </div>
+</div>
+        <header role="banner">
+            <div class="row">
+                <div class="small-12 columns">
+                    <a href="http://www.business.gov.au/"><img src="assets/App/img/header-logo.png" alt="Business.gov.au logo" id="bga-logo" /></a>
+                </div>
+            </div>
+        </header>
+        <nav aria-label="breadcrumbs">
+    <div class="row">
+        <div class="small-12 columns">
+            <ol class="breadcrumbs">
+                <li><a href="https://www.business.gov.au/">Home</a></li>
+                <li><a href="https://www.business.gov.au/info/plan-and-start">MP Reg Check</a></li>
+                <li>Question 1</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+        <main id="maincontent" role="main">            
+            <div id="cookies" class="hide">
+    <div class="small-12 columns">
+        <div class="validation-summary-errors validation-container">
+            <div class="validation-summary-icon">
+                <img src="assets/App/img/ico-alert-red.png" alt="Error">
+            </div>
+            <div class="validation-message">
+                <p>
+                    Cookies seem to be disabled on your browser which means this site will not work. Please enable cookies if you wish to continue. Cookies are used in accordance with our privacy policy.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+            
+
+
+<div class="row questions">
+    <div class="small-12 columns">
+<form action="/Questions/QN120" method="post">
+
+<p class="meter-description">
+    <strong>Step <span id="stepNo">1</span>:</strong>
+    <span id="percentCompleted">11</span>% complete
+</p>
+<div class="meter">
+    <span id="percentMeter" style="width: 11%"></span>
+</div><div class="panel validation hide" role="alert" tabindex="-1">
+    <h2>Sorry, we need more information</h2>
+    <p>Please make a selection.</p>
+</div>
+<div class="question-block">
+	<div>
+		<div>
+			<fieldset class="">
+				<legend>Will your project involve the import or export of goods? <a id="test-tip1" title="help" class="cd-btn help" href="#help-importexport"><span>Help - Import export</span></a>
+					
+				</legend>
+				<div class="answers">
+					<div>
+						<div class="radio-toggle">
+							<label class="on label-left" for="answer_yes1">
+								<input id="answer_yes1" type="radio" value="yes" name="answer1">
+								<span>Yes</span>
+							</label>
+							<label class="on label-right" for="answer_no1">
+								<input id="answer_no1" type="radio" value="no" name="answer1">
+								<span>No</span>
+							</label>
+							 
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<aside id="info1" class="panel callout radius" role="status" style="display: none">
+				<p>Businesses are able to import and export goods without approval subject to biosecurity and taxation clearances under the Customs Act 1901. Certain goods are prohibited from import and export while restricted goods require additional approvals.</p>
+				<p>For more information, see the <a href="/mpaa-website/pdf/dummy.pdf">MPAA Fact Sheet: <em>Customs Act 1901</em></a>.</p>
+			</aside>
+		</div>	
+		<div>
+			<fieldset class="">
+				<legend>Will your imports or conveyances pose a biosecurity risk? <a id="test-tip2" title="help text" class="cd-btn help" href="#"><span>help</span></a>
+					
+				</legend>
+				<div class="answers">
+					<div>
+						<div class="radio-toggle">
+							<label class="on label-left" for="answer_yes2">
+								<input id="answer_yes2" type="radio" value="yes" name="answer2">
+								<span>Yes</span>
+							</label>
+							<label class="on label-right" for="answer_no2">
+								<input id="answer_no2" type="radio" value="no" name="answer2">
+								<span>No</span>
+							</label>
+							 
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<aside id="info1" class="panel callout radius" role="status" style="display: none">
+				<p>All imports and conveyances that arrive within 12 nautical miles from the Australian coastline or its external territories are assessed under the Biosecurity Act 2015. If imports or conveyances are assessed to be biosecurity risks, they will not be allowed to enter Australia and may be destroyed at your expense.</p><p>State and Territories may also have their own jurisdictional biosecurity regulations.</p>
+				<p>For more information, see the <a href="/mpaa-website/pdf/dummy.pdf">MPAA Fact Sheet: <em>Biosecurity Act 2015</em></a>.</p>
+			</aside>
+		</div>
+		<div>
+			<fieldset class="">
+				<legend>Will you be importing goods destined to become food products for animal or human consumption? <a title="help" id="test-tip3" class="cd-btn help" href="#help-consumption"><span>Help - Animal or human consumption</span></a>
+					
+				</legend>
+				<div class="answers">
+					<div>
+						<div class="radio-toggle">
+							<label class="on label-left" for="answer_yes3">
+								<input id="answer_yes3" type="radio" value="yes" name="answer3">
+								<span>Yes</span>
+							</label>
+							<label class="on label-right" for="answer_no3">
+								<input id="answer_no3" type="radio" value="no" name="answer3">
+								<span>No</span>
+							</label>
+							 
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<aside id="info1" class="panel callout radius" role="status" style="display: none">
+				<p>All imported food products must satisfy both biosecurity under the Biosecurity Act 2015 and food safety requirements under the Imported Food Control Act 1992 to be allowed into the country.</p><p>State and Territory regulators undertake inspection activities and have responsibility for monitoring all imported food that is available for sale.</p>
+				<p>For more information, see the <a href="/mpaa-website/pdf/dummy.pdf">MPAA Fact Sheet: <em>Import Control Act 1992</em></a>.</p>
+			</aside>
+		</div>
+		<div>
+			<fieldset class="">
+				<legend>Will you be exporting prescribed goods? <a id="test-tip4" class="cd-btn help" title="help" href="#help-prescribed"><span>Help - Prescribed goods</span></a>
+					
+				</legend>
+				<div class="answers">
+					<div>
+						<div class="radio-toggle">
+							<label class="on label-left" for="answer_yes4">
+								<input id="answer_yes4" type="radio" value="yes" name="answer4">
+								<span>Yes</span>
+							</label>
+							<label class="on label-right" for="answer_no4">
+								<input id="answer_no4" type="radio" value="no" name="answer4">
+								<span>No</span>
+							</label>
+							 
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<aside id="info1" class="panel callout radius" role="status" style="display: none">
+				<p>All premises including fishing vessels where prescribed goods are prepared for export must be registered under the Export Control Act 1982</p>
+				<p>For more information, see the <a href="/mpaa-website/pdf/dummy.pdf">MPAA Fact Sheet: <em>Export Control Act 1982</em></a>.</p>
+			</aside>
+		</div>
+		<div>
+			<fieldset class="">
+				<legend>Will you be importing or exporting cultural objects? <a id="test-tip5" class="cd-btn help" title="help" href="#help-cultural"><span>Help - Cultural objects</span></a>
+					
+				</legend>
+				<div class="answers">
+					<div>
+						<div class="radio-toggle">
+							<label class="on label-left" for="answer_yes5">
+								<input id="answer_yes5" type="radio" value="yes" name="answer5">
+								<span>Yes</span>
+							</label>
+							<label class="on label-right" for="answer_no5">
+								<input id="answer_no5" type="radio" value="no" name="answer5">
+								<span>No</span>
+							</label>
+							 
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<aside id="info1" class="panel callout radius" role="status" style="display: none">
+				<p>The movement of significant national cultural objects across Australian borders requires approvals under the Protection Of Movable Cultural Heritage Act 1986. Certain cultural objects require additional approvals from the host country and others are prohibited from leaving Australia.</p>
+				<p>For more information, see the <a href="/mpaa-website/pdf/dummy.pdf">MPAA Fact Sheet: <em>Protection of Movable Cultural Heritage Act 1986</em></a>.</p>
+			</aside>
+		</div>
+	</div>
+</div>
+<div class="default-button-container" aria-hidden="true">
+    <button type="submit" name="next" tabindex="-1" title="Next" class="validateAnswers">Next</button>
+</div>
+<div class="buttons-content">
+    <button type="submit" id="previous" name="submit" value="previous" class="btn" formnovalidate>Previous</button>
+    <button type="submit" id="next" name="submit" value="next" class="btn btn-default validateAnswers">Next</button>
+
+        <!-- <button type="submit" id="results" name="submit" value="results" class="btn validateAnswers">View my results</button> -->
+</div><input id="Id" name="Id" type="hidden" value="QN120" /><input name="__RequestVerificationToken" type="hidden" value="ECv35-gAwe8irdbMDkNI1wwUdTn1H-gkQ2BOhYIh45yWdTz5vjZYFgGeYw96t6VWcaOTt-_4ZUxVi1unvkfyikAFxHLSXMWSu6CBvnGKPiw1" /></form>
+
+
+    </div>
+</div>
+
+
+	<div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+						<input type="hidden" class="help-anchor" id="help-importexport">
+						<h3>Import / export</h3>
+						<div aria-hidden="false" style="display: block;">
+							<p>Imported goods are brought into Australia.</p>
+							<p>Exported goods are sent out from Australia.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-biosecurity">
+						<h3>Biosecurity risk</h3>
+						<div aria-hidden="true" style="display: none;">
+							<p>Imports that pose a biosecurity risk include:</p>
+							<ul>
+								<li>animal &amp; plant products</li>
+								<li>equipment &amp; machinery</li>
+								<li>samples &amp; specimens</li>
+							</ul>
+							<p>Conveyances that pose a biosecurity risk include the vehicles &amp; vessels used in transport.</p>
+							<p>You can check your biosecurity requirements on the <a href="http://www.agriculture.gov.au/import/online-services/bicon">Biosecurity Import Conditions system (BICON)</a>.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-consumption">
+						<h3>Food products</h3>
+						<div aria-hidden="true" style="display: none;">
+							<p>Food products are items intended to be eaten or taken into the body. These include ingredients used to produce the consumable products and stockfeed.</p>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-prescribed">
+						<h3>Prescribed goods</h3>
+						<div aria-hidden="true" style="display: none;">
+							<p>Prescribed goods include:</p>
+							<ul>
+								<li>dairy &amp; egg products</li>
+								<li>meat &amp; fish products</li>
+								<li>fruit &amp; vegetable products</li>
+								<li>grain, hay, seed, straw &amp; plant products</li>
+								<li>live animals</li><li>organic products</li>
+							</ul>
+						</div>
+						<input type="hidden" class="help-anchor" id="help-cultural">
+						<h3>Cultural objects</h3>
+						<div aria-hidden="true" style="display: none;">
+							<p>Cultural objects includes:</p>
+							<ul>
+								<li>art works</li>
+								<li>historical artefacts (technology &amp; artefacts)</li>
+								<li>natural objects</li>
+								<li>fossils and skeletal remains</li>
+							</ul>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+        <footer role="contentinfo">
+            <section class="navigation-footer-legal">
+    <div class="row">
+        <div class="columns">
+            <ul class="legal">
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/about">About</a>
+                </li>
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/for-government">For Government</a>
+                </li>
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/legal-notices">Legal notices</a>
+                </li>
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/about/accessibility">Accessibility</a>
+                </li>
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/about/other-languages">Other languages</a>
+                </li>
+                <li class="small-only-12">
+                    <a href="https://www.business.gov.au/contact-us">Contact us</a>
+                </li>
+            </ul>
+            <ul class="social">
+                <li>
+                    <a class="facebook" href="https://www.facebook.com/business.gov.au">
+                        <span class="fa fa-facebook-square"></span>
+                        <span class="label show-for-sr">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter" href="https://twitter.com/business_gov_au">
+                        <span class="fa fa-twitter-square"></span>
+                        <span class="label show-for-sr">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin" href="https://www.linkedin.com/company/department-of-innovation-industry-science-and-research">
+                        <span class="fa fa-linkedin-square"></span>
+                        <span class="label show-for-sr">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+                        <span class="fa fa-youtube-square"></span>
+                        <span class="label show-for-sr">YouTube</span>
+                    </a>
+                </li>
+            </ul>
+            <div id="bga-logo-title">
+                <a href="https://www.business.gov.au/"><strong>business</strong>.gov.au</a>
+            </div>
+            <a href="https://www.business.gov.au/" class="logo">
+                <img src="assets/App/img/bga_logo_footer.png" alt="Business.gov.au logo">
+            </a>
+        </div>
+    </div>
+</section>
+
+            <a href="#" class="chat-now">Chat Now</a>
+        </footer>
+    </div>
+    <!-- <script src="https://chat1.business.gov.au/responselive/responseLive.js"></script>
+    <script src="https://chat1.business.gov.au/responselive/responseLiveChat.js"></script>
+    <script src="https://chat1.business.gov.au/responselive/responseLiveCustomChat.js"></script>
+    <script src="/scripts/foot?v=h2w52ClvzXru5EYxSlBCMxoltJ5pnPMMupjCtjlaAiU1"></script> -->
+
+<script>
+	$(document).ready(function() {
+		$("[name^=answer]").click(function() {
+			if ($(this).val() == "yes") {
+				$(this).parents("fieldset").next().show("fast");
+			}
+			else {
+				$(this).parents("fieldset").next().hide();
+			}
+		});
+ 			
+		var options = {
+			position: {
+				my: "center top+35",
+				at: "center bottom-20",
+				using: function( position, feedback ) {
+					$( this ).css( position );
+					$( this )
+						.addClass( feedback.vertical );
+				}
+			},
+			show: {
+				delay: 500
+			},
+			close: function (event, ui) {
+				ui.tooltip.hover(
+
+					function () {
+						$(this).stop(true).fadeTo(400, 1);
+					},
+
+					function () {
+						$(this).fadeOut("400", function () {
+							$(this).remove();
+						})
+					}
+				);
+			}
+		};
+		$("#test-tip1").tooltip(options).tooltip("option", "content", "<p>Imported goods are brought into Australia.</p>" +
+				"<p>Exported goods are sent out from Australia.</p>")
+		$("#test-tip2").tooltip(options).tooltip("option", "content", "<p>imports that pose a biosecurity risk include:</p>" +
+				"<ul><li>animal &amp; plant products</li>" +
+				"<li>equipment &amp; machinery</li>" +
+				"<li>samples &amp; specimens</li></ul>" +
+				"<p>conveyances that pose a biosecurity risk include the vehicles &amp; vessels used in transport.</p>" +
+				"<p>you can check your biosecurity requirements on the <a href=\"http://www.agriculture.gov.au/import/online-services/bicon\">biosecurity import conditions system (bicon)</a>.</p>");
+		$("#test-tip3").tooltip(options).tooltip("option", "content", "<p>Prescribed goods include:</p><ul>" +
+				"<li>dairy &amp; egg products</li>" +
+				"<li>meat &amp; fish products</li>" +
+				"<li>fruit &amp; vegetable products</li>" +
+				"<li>grain, hay, seed, straw &amp; plant products</li>" +
+				"<li>live animals</li><li>organic products</li></ul>");
+		$("#test-tip4").tooltip(options).tooltip("option", "content", "<p>Food products are items intended to be eaten or taken into the body. These include ingredients used to produce the consumable products and stockfeed.</p>");
+		$("#test-tip5").tooltip(options).tooltip("option", "content", "<p>Cultural objects includes:</p><ul>" +
+				"<li>art works</li>" +
+				"<li>historical artefacts (technology &amp; artefacts)</li>" +
+				"<li>natural objects</li>" +
+				"<li>fossils and skeletal remains</li></ul>");
+		// inithelp();
+	});
+</script>
+</body>
+</html>
