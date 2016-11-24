@@ -45,7 +45,7 @@ a.tooltip2 span
     font-size: 14px;
     padding: 5px 20px;
     position: absolute;
-    background: #ecfaff;
+/*    background: #ecfaff; */
     border: 1px solid #767676;
 	background-color: #ecfaff;
     max-width: 450px;
@@ -53,7 +53,7 @@ a.tooltip2 span
 	box-shadow: 2px 2px 2px #ddd;
 
 }
-
+/*
 .ui-tooltip-content::after, .ui-tooltip-content::before {
     top: 100%;
     border: solid transparent;
@@ -61,7 +61,7 @@ a.tooltip2 span
     height: 0;
     width: 0;
     position: absolute;
-}
+} */
 
 .bottom .ui-tooltip-content::after {
     border-color: rgba(118, 118, 118, 0);
@@ -70,7 +70,7 @@ a.tooltip2 span
     left: 50%;
     margin-left: -10px;
 }
-
+/*
 .bottom .ui-tooltip-content::before {
     border-color: rgba(118, 118, 118, 0);
     border-top-color: #767676;
@@ -94,7 +94,7 @@ a.tooltip2 span
      left: 50%;
      border-width: 0 11px 11px;
      margin-left: -11px;
- }
+ } */
  
  .panel.callout {
 	background-color: #efe8ce;
@@ -462,11 +462,13 @@ a.tooltip2 span
 				$(this).parents("fieldset").next().hide();
 			}
 		});
+		
+		$("a.help").attr("href", "javascript:void(0)");
  			
 		var options = {
 			position: {
-				my: "center top+35",
-				at: "center bottom-20",
+				my: "center top+25",
+				at: "center bottom-15",
 				using: function( position, feedback ) {
 					$( this ).css( position );
 					$( this )
@@ -474,7 +476,7 @@ a.tooltip2 span
 				}
 			},
 			show: {
-				delay: 500
+				delay: 250
 			},
 			close: function (event, ui) {
 				ui.tooltip.hover(
