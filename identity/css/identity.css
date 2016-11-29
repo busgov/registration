@@ -242,7 +242,7 @@ div#api.error-page-content > div {
 
 .localAccount .create {
 	position: absolute;
-	top: 35px;
+	top: 2.5rem;
 }
 
 [aria-hidden=true] {
