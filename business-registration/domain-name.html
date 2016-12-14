@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business name - Business Registration | business.gov.au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration" />
+    <style>
+    </style>
+</head>
+<body>
+	<div class="body">
+		<div class="wrapper-main">
+			<div class="wrapper">
+				<header class="clearfix">
+					<div class="sub-brand"><a href="index.html"><span>Business registration</span></a></div>
+					<div class="gov"><a href="http://www.business.gov.au"><span>business.gov.au</span></a></div>
+					<nav id="settings">
+						<ul class="nav-menu">
+							<li class="nav-item">
+								<a href="settings.html"><span>Settings</span></a>
+								<div class="sub-nav">
+									<ul class="sub-nav-group">
+										<li><a href="#" class="btn-save">Save and return</a></li>
+										<li><a href="#">Start a new application</a></li>
+										<li><a href="#">Sign out</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				
+				<main>
+					<div class="progress-container">
+						<div class="progress-bar">
+							<span id="progress-percent" style="width: 23%"></span>
+						</div><!-- meter -->
+						<ul class="section-nav">
+							<li class="done"><a href="entitlement.html"><span>1</span><br>Getting<br> started</a></li>
+							<li class="active"><span>2</span><br>Business<br> name</li>
+							<li><span>3</span><br>Business<br> details</li>
+							<li><span>4</span><br>Taxation<br>details</li>
+							<li><span>5</span><br>Confirm<br> application</li>
+							<li><span>6</span><br>Payment<br> &amp; submit</li>
+						</ul>
+					</div><!-- progress-container -->
+					<h1 id="heading" tabindex="-1">2. Domain name <span>(Step 2 of 6)</span></h1>
+					<p class="intro">Enter a name to check its availability.</p>
+					<div class="card clearfix">
+						<div class="form-row">
+							<label for="name-search">Search for domain name</label><br />
+							<input id="name-search" class="larger" type="text" value="www.joeyiscool.com.au"> <button type="button" class="btn btn-default btn-inline" onclick="$('#avail').show()">Check</button><br />
+						</div><!-- form-row -->
+					</div><!-- card -->
+					<div id="avail" class="grid-row" style="display: none;">
+						<p><strong>That name is not available!</strong></p>
+						<p>Have you tried &quot;www.joeyislame.com.au&quot;?</p>
+					</div>
+
+				</main>
+				
+				<div class="controls-container">
+					<div class="controls-content">
+						<button type="button" class="btn previous" onclick="location.href = 'entitlement.html'">Previous</button><button type="button" id="btnContinue" class="btn btn-default" onclick="location.href='business-details.html'">Continue to step 3</button>
+					</div><!-- controls-content -->
+				</div><!-- controls-container -->
+			</div>
+		</div>
+	</div>
+
+    <div class="saveforlater" id="saveForLater"></div>
+    <div class="applicationoptions" id="applicationOptions"></div>
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery.collapse.js"></script>
+    <script src="assets/js/jquery-toggleslide.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/jquery-accessibleMegaMenu.js"></script>
+    <script type="text/javascript">
+        /* Drop down settings menu */
+        $("nav").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+            /* css class for the hover state */
+            hoverClass: "hover",
+            /* css class for the focus state */
+            focusClass: "focus",
+            /* css class for the open state */
+            openClass: "open"
+        });
+        $(document).ready(function () {
+            initSaveForLater();
+            initApplicationOptions();
+        });
+    </script>
+</body>
+</html>
