@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in | business.gov.au</title>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+		<link href="//www.business.gov.au/areas/business/assets/bundle1.css" rel="stylesheet">
+		<link href="//www.business.gov.au/areas/business/assets/bundle2.css" rel="stylesheet">
+		<!-- needed for testing, remove for prod: -->
+		<link href="/business-registration/assets/css/font-awesome.min.css" rel="stylesheet">
+		<script src="/business-registration/assets/js/jquery-1.11.3.min.js"></script>
+		<!-- <link href="https://nuaz01stg002.blob.core.windows.net/nonprodb2c/DIIS/identity.css" rel="stylesheet"> -->
+		<link href="identity.css" rel="stylesheet">    </head>
+    <body>
+		<header>
+			<!-- ~/Areas/Business/Views/Navigation/Mega.cshtml -->
+			<nav class="business-navigation-mega">
+				<div class="MegaMenu" role="menubar">
+					<div class="row">
+						<div class="mobile-logo">
+							<a href="/"><strong>business</strong>.gov.au</a> 
+						</div>
+						<a href="https://www.business.gov.au" class="left logo">
+							<img src="https://www.business.gov.au/Areas/Business/Assets/App/header-logo.png" alt="Business.gov.au logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+ 			<div class="row">
+				<h1>Sign in</h1>
+				<div>
+					<p>Welcome to the business.gov.au account. Sign in below with your email address and password to:</p>
+					<ul>
+						<li><strong>access</strong> digital services on the business.gov.au website</li>
+						<li><strong>save</strong> your progress</li>
+						<li><strong>store</strong> all your data securely.</li>
+					</ul>
+				</div>
+				<div id="api" data-name="Unified"><div class="social" role="form"> <div class="intro"> <h2>Sign in with your social account</h2> </div><div class="options"><div><button class="accountButton firstButton" id="FacebookExchange" tabindex="1">Sign in with Facebook</button></div><div><button class="accountButton" id="GoogleExchange" tabindex="1">Sign in with Google</button></div><div><button class="accountButton" id="LinkedInExchange" tabindex="1">Sign in with LinkedIn</button></div><div><button class="accountButton" id="MicrosoftAccountExchange" tabindex="1">Sign in with Microsoft</button></div></div></div><div class="divider"> <h2>OR</h2> </div><div class="localAccount" role="form"> <div class="intro"> <h2>Sign in with your existing account</h2> </div><div class="error pageLevel" aria-hidden="true" style="display: none;"> <p role="alert"></p></div><div class="entry"> <div class="entry-item"> <label for="logonIdentifier">Email Address</label> <div class="error itemLevel" aria-hidden="true" style="display: none;"> <p role="alert"></p></div><input type="email" id="logonIdentifier" name="Username or email address" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Email Address" value="" tabindex="1"></div><div class="entry-item"> <div class="password-label"> <label for="password">Password</label><a id="forgotPassword" tabindex="2" href="/nonprodausgovcustomers.onmicrosoft.com/B2C_1_SOBRS_SISU_All/api/CombinedSigninAndSignup/forgotPassword?csrf_token=VnRQbmRsTjMvNlJ3emF2SkpHd0ZDOFI4c1JEbm9BM0gzdUcrSmhpekdzd1VYbGJGaVIrZXA0UkdMY2l6L1RCRDZrajNackd5cVI2cHlGOFhlZVg1elE9PTsyMDE3LTAyLTA3VDIxOjEyOjA3LjMwNTAxOTVaO2JQM3RYTHptZjRBakJqMSsvdXhQNkE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiJkZGQ1MWE5OC1mNjVmLTRiMTYtODczNi05NTc1ZjdkZmM2MTcifQ&amp;metrics=v1.0.1%3Bhttps%3A%2F%2Fnuaz01stg002.blob.core.windows.net%2Fnonprodb2c%2FDIIS%2Funified.html%2C0%2C1%2C0%2C200%3B&amp;p=B2C_1_SOBRS_SISU_All">Forgot your password?</a></div><div class="error itemLevel" aria-hidden="true" style="display: none;"> <p role="alert"></p></div><input type="password" id="password" name="Password" placeholder="Password" tabindex="1"></div><div class="working"></div><div class="buttons"> <button id="next" tabindex="1">Sign in</button> </div></div><div class="divider"> <h2>OR</h2> </div><div class="create"> <p>Don't have an account?<a id="createAccount" tabindex="1" href="/nonprodausgovcustomers.onmicrosoft.com/B2C_1_SOBRS_SISU_All/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=VnRQbmRsTjMvNlJ3emF2SkpHd0ZDOFI4c1JEbm9BM0gzdUcrSmhpekdzd1VYbGJGaVIrZXA0UkdMY2l6L1RCRDZrajNackd5cVI2cHlGOFhlZVg1elE9PTsyMDE3LTAyLTA3VDIxOjEyOjA3LjMwNTAxOTVaO2JQM3RYTHptZjRBakJqMSsvdXhQNkE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiJkZGQ1MWE5OC1mNjVmLTRiMTYtODczNi05NTc1ZjdkZmM2MTcifQ&amp;metrics=v1.0.1%3Bhttps%3A%2F%2Fnuaz01stg002.blob.core.windows.net%2Fnonprodb2c%2FDIIS%2Funified.html%2C0%2C1%2C0%2C200%3B&amp;p=B2C_1_SOBRS_SISU_All">Sign up now</a> </p></div></div></div>    <!-- IMP: This element is intentionally empty; don't enter anything here -->
+			</div>
+		</main>
+		<footer class="hide-on-print">
+			<div class="navigation-footer-links">
+				<div class="row">
+				</div>
+			</div>
+			<div class="navigation-footer-legal">
+				<div class="row">
+					<div class="columns">
+
+						<ul class="legal">
+							<li class="small-only-12"><a href="https://www.business.gov.au/about">About</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/for-government">For Government</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/legal-notices">Legal notices</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/about/accessibility">Accessibility</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/about/other-languages">Other languages</a></li>
+							<li class="small-only-12"><a href="tel:132846">13 28 46</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/contact-us">Contact us</a></li>
+						</ul>
+						<ul class="social">
+							<li>
+								<a class="facebook" href="https://www.facebook.com/business.gov.au">
+									<span class="fa fa-facebook-square"></span>
+									<span class="label show-for-sr">Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a class="twitter" href="https://twitter.com/business_gov_au">
+									<span class="fa fa-twitter-square"></span>
+									<span class="label show-for-sr">Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a class="linkedin" href="https://www.linkedin.com/company/business.gov.au">
+									<span class="fa fa-linkedin-square"></span>
+									<span class="label show-for-sr">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+									<span class="fa fa-youtube-square"></span>
+									<span class="label show-for-sr">Youtube</span>
+								</a>
+							</li>
+						</ul>
+						<div class="bga-ftr-logo">
+							<a href="https://www.business.gov.au"><strong>business</strong>.gov.au</a>
+						</div>
+						<a href="/" class="logo">
+							<img src="https://www.business.gov.au/Areas/Business/Assets/App/Images/bga_logo_footer.png" alt="Business.gov.au logo">
+						</a>
+					</div>
+				</div>
+			</div>
+        <a href="https://www.business.gov.au/web-chat" class="chat-now">Chat Now</a>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<div id="api" data-name="Unified">
+	<div class="social" role="form">
+		<div class="intro">
+			<h2>Sign in with your social account</h2>
+		</div>
+		<div class="options">
+			<div>
+				<button class="accountButton firstButton" id="FacebookExchange" tabindex="1">Sign in with Facebook</button>
+			</div>
+			<div>
+				<button class="accountButton" id="GoogleExchange" tabindex="1">Sign in with Google</button>
+			</div>
+			<div>
+				<button class="accountButton" id="LinkedInExchange" tabindex="1">Sign in with LinkedIn</button>
+			</div>
+			<div>
+				<button class="accountButton" id="MicrosoftAccountExchange" tabindex="1">Sign in with Microsoft</button>
+			</div>
+		</div>
+	</div>
+	<div class="divider">
+		<h2>OR</h2>
+	</div>
+	<div class="localAccount" role="form">
+		<div class="intro">
+			<h2>Sign in with your existing account</h2>
+		</div>
+		<div class="error pageLevel" aria-hidden="true" style="display: none;">
+			<p role="alert">
+			</p>
+		</div>
+		<div class="entry">
+			<div class="entry-item">
+				<label for="logonIdentifier">Email Address</label>
+				<div class="error itemLevel" aria-hidden="true" style="display: none;">
+					<p role="alert"/>
+				</div>
+				<input type="email" id="logonIdentifier" name="Username or email address" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Email Address" value="" tabindex="1">
+			</div>
+			<div class="entry-item">
+				<div class="password-label">
+					<label for="password">Password</label>
+					<a id="forgotPassword" tabindex="2" href="/nonprodausgovcustomers.onmicrosoft.com/B2C_1_SOBRS_SISU_All/api/CombinedSigninAndSignup/forgotPassword?csrf_token=QSs1VXM2VmJoY2RQbklhMFFXY3FJc0o3Y0tGZWd3ZS82MFZBejVmaG9jekowV2VhYlo4bkpBdjFjZGFMTXRMRWpkOXJ4Ykh1THBTa3VpVXJpM1dQVHc9PTsyMDE3LTAyLTAyVDIzOjIwOjMzLjU1MTI1NDZaOzZRWUtpcEZ3SDFTUGUwdXJRNzdsMHc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiJhNzVmNzY2Yy0zODVkLTRiZWUtOTMyZi03YTkyNzA0ZWQ4ZDMifQ&amp;metrics=v1.0.1%3Bhttps%3A%2F%2Fnuaz01stg002.blob.core.windows.net%2Fnonprodb2c%2FDIIS%2Funified.html%2C3%2C1%2C0%2C200%3B&amp;p=B2C_1_SOBRS_SISU_All">Forgot your password?</a>
+				</div>
+				<div class="error itemLevel" aria-hidden="true" style="display: none;">
+					<p role="alert"/>
+				</div>
+				<input type="password" id="password" name="Password" placeholder="Password" tabindex="1">
+			</div>
+			<div class="working"/>
+			<div class="buttons">
+				<button id="next" tabindex="1">Sign in</button>
+			</div>
+		</div>
+		<div class="divider">
+			<h2>OR</h2>
+		</div>
+		<div class="create">
+			<p>Don't have an account?<a id="createAccount" tabindex="1" href="/nonprodausgovcustomers.onmicrosoft.com/B2C_1_SOBRS_SISU_All/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=QSs1VXM2VmJoY2RQbklhMFFXY3FJc0o3Y0tGZWd3ZS82MFZBejVmaG9jekowV2VhYlo4bkpBdjFjZGFMTXRMRWpkOXJ4Ykh1THBTa3VpVXJpM1dQVHc9PTsyMDE3LTAyLTAyVDIzOjIwOjMzLjU1MTI1NDZaOzZRWUtpcEZ3SDFTUGUwdXJRNzdsMHc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiJhNzVmNzY2Yy0zODVkLTRiZWUtOTMyZi03YTkyNzA0ZWQ4ZDMifQ&amp;metrics=v1.0.1%3Bhttps%3A%2F%2Fnuaz01stg002.blob.core.windows.net%2Fnonprodb2c%2FDIIS%2Funified.html%2C3%2C1%2C0%2C200%3B&amp;p=B2C_1_SOBRS_SISU_All">Sign up now</a>
+			</p>
+		</div>
+	</div>
+</div>
