@@ -126,7 +126,6 @@ a#createAccount {
 
 #api .buttons {
 	margin-top: 15px;
-/*	margin-left: 1%; */
 }
 
 #api div.buttons button:first-child,
@@ -328,7 +327,7 @@ div#help-content h2 {
 	margin-bottom: 30px;
 }
 
-div.entry, div.attrEntry, div.intro {
+div.entry, div.attrEntry, div.intro, div.buttons {
 	margin-left: 25%;
 }
 
@@ -363,7 +362,7 @@ a.chat-now[href*="//"]:after
 
 @media only screen and (max-width: 900px) {
 
-	div.entry, div.attrEntry, div.intro {
+	div.entry, div.attrEntry, div.intro, div.buttons {
 		margin-left: 33%;
 	}
 
@@ -396,7 +395,7 @@ a.chat-now[href*="//"]:after
 		font-size: 1.2rem;
 	}
 	
-	div.entry, div.attrEntry, div.intro {
+	div.entry, div.attrEntry, div.intro. div.buttons {
 		margin-left: 0;
 	}
 
