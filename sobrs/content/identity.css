@@ -317,13 +317,14 @@ h1 a.help span {
 }
 
 div#help-content {
-    background: #efe8cb url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAgVBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx/////k4+MuKyvExMS6ubmWlZWAfn5raWleW1s2MzPx8fHV1dXR0NDLysq/vr62tbWvrq6gnp6bmpqFg4N6eHh0cnJjYWFJR0dDQEA/PT0zMTG7yzNHAAAAD3RSTlMAz8mNSw0679PRqKcX8Dm36ShoAAAA7klEQVQoz4WS167DMAxDFbvZyWWzk+69/v8Dbx3ZQtM89DyJIAQIIskRaBUCudIBTVl4ELzFh+EnmJD6zskifBFndifGjIj3Uji6TsZkvIDnvgHaFmh61uYWd9v2jscD9627kyiApXy1h0P7Kp0OSMNQNeVQLN8UQ9lUMGhSvHJ5npYjp+eFFxWFsFRsVU6HBMeerT0c1toVfcdW1xc7a4Vw8Bkic1Iyn411FqlIyzwYaxCpKYBwrOsjhD9+FFOv17UIj99ruV2vNxFj1BLxZrXaSNAcZYQZsW8LEM9CzqQ2KSYk/u+ySUVzIPyo6D8QmyIn5KHZiAAAAABJRU5ErkJggg==) no-repeat 15px 15px;
+    background: #efe8cb url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAgVBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx/////k4+MuKyvExMS6ubmWlZWAfn5raWleW1s2MzPx8fHV1dXR0NDLysq/vr62tbWvrq6gnp6bmpqFg4N6eHh0cnJjYWFJR0dDQEA/PT0zMTG7yzNHAAAAD3RSTlMAz8mNSw0679PRqKcX8Dm36ShoAAAA7klEQVQoz4WS167DMAxDFbvZyWWzk+69/v8Dbx3ZQtM89DyJIAQIIskRaBUCudIBTVl4ELzFh+EnmJD6zskifBFndifGjIj3Uji6TsZkvIDnvgHaFmh61uYWd9v2jscD9627kyiApXy1h0P7Kp0OSMNQNeVQLN8UQ9lUMGhSvHJ5npYjp+eFFxWFsFRsVU6HBMeerT0c1toVfcdW1xc7a4Vw8Bkic1Iyn411FqlIyzwYaxCpKYBwrOsjhD9+FFOv17UIj99ruV2vNxFj1BLxZrXaSNAcZYQZsW8LEM9CzqQ2KSYk/u+ySUVzIPyo6D8QmyIn5KHZiAAAAABJRU5ErkJggg==) no-repeat 15px 20px;
 	padding: 10px 55px;
     border-radius: 5px;
+	margin-bottom: 30px;
 }
 
 div#help-content h2 {
-	margin: 0;
+	margin: 0 0 50px 0;
 }
 
 div.entry, div.attrEntry, div.intro {
