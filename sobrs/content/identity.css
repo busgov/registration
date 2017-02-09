@@ -434,7 +434,7 @@ div.divider {
 }
 
 div.localAccount {
-	padding-top: 100px;
+	padding-top: 80px;
 }
 
 #api .localAccount .intro h2 {
@@ -460,7 +460,7 @@ div.localAccount {
 
 .localAccount .create {
 	position: absolute;
-	top: 3.5rem;
+	top: 2rem;
 }
 
 .create p:before {
