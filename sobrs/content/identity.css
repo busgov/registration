@@ -339,11 +339,10 @@ a.left.logo {
 	text-decoration: none;
 }
 
-.navigation-footer-legal a[href*="https://www.business.gov.au"]:after,
-a.left.logo[href*="//"]:after,
-a.chat-now[href*="//"]:after
+/* don't show BGA links as external */
+a[href*="https://www.business.gov.au"]:after
 {
-    content: "";
+    content: "" !important;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
