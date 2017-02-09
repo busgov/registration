@@ -331,7 +331,7 @@ div.entry, div.attrEntry, div.intro, div.buttons {
 	margin-left: 25%;
 }
 
-div.localAccount div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
+div.localAccount div.intro, div.social div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
 	margin-left: 0;
 }
 
@@ -369,7 +369,7 @@ a[href*="https://www.business.gov.au"]:after
 		margin-left: 33%;
 	}
 	
-	div.localAccount div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
+	div.localAccount div.intro, div.social div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
 		margin-left: 0;
 	}
 
