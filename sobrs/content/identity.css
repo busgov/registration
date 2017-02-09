@@ -463,6 +463,10 @@ div.localAccount {
 	top: 2rem;
 }
 
+.localAccount .create a {
+	vertical-align: top;
+}
+
 .create p:before {
 	font-size: 2rem;
 	content: "Need to create an account?";
