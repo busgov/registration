@@ -7,7 +7,8 @@
 		<link href="//www.business.gov.au/areas/business/assets/bundle1.css" rel="stylesheet">
 		<link href="//www.business.gov.au/areas/business/assets/bundle2.css" rel="stylesheet">
 		<!-- needed for testing, remove for prod: -->
-		<script src="/business-registration/assets/js/jquery-1.11.3.min.js"></script>
+		<link href="/registration/business-registration/assets/css/font-awesome.min.css" rel="stylesheet">
+		<script src="/registration/business-registration/assets/js/jquery-1.11.3.min.js"></script>
 		<!-- <link href="https://nuaz01stg002.blob.core.windows.net/nonprodb2c/DIIS/identity.css" rel="stylesheet"> -->
 		<link href="identity.css" rel="stylesheet">
     </head>
@@ -29,31 +30,87 @@
 		</header>
 		<main>
 			<div class="row">
-				<h1>Sign up with a new account <a id="help" class="cd-btn help" href="javascript:$('#help-content').toggle(); void(0);"><span>more information</span></a></h1>
+				<h1>Create an account <a id="help" class="cd-btn help" href="javascript:$('#help-content').toggle(); void(0);"><span>more information</span></a></h1>
 				<div id="help-content" style="display: none;">
-					<h2>How to create a new account</h2>
+					<h2>Create an account help</h2>
 					<p>To create an account follow the steps below:</p>
 					<ol>
 						<li>Enter your email address below</li>
-						<li>Select the <strong>Send verification code</strong> button (this emails you the code you need to continue)</li>
-						<li>Find the verification code email from “Microsoft on behalf of business.gov.au”.</li>
+						<li>Select the <strong>Send verification code</strong> button.</li>
+						<li>Check your email account for an email arriving shortly from "Microsoft on behalf of business.gov.au".</li>
 						<li>Copy the code from your email and return to this page.</li>
-						<li>Pop the verification code in the box that’ll appear below.</li>
-						<li>Select the <<strong>Verify code</strong> button.</li>
-						<li>Create a password 8 - 16 characters long with <strong>at least 3</strong> of the following:
+						<li>Enter the verification code into the box that&apos;ll appear below.</li>
+						<li>Select the <strong>Verify code</strong> button.</li>
+						<li>If this doesn’t work, select the Send new code button and repeat steps 3 to 6.</li>
+						<li>Enter a password 8 - 16 characters long with <strong>at least 3</strong> of the following:
 							<ul>
-							<li>lowercase letters
-							<li>uppercase letters
-							<li>numbers
-							<li>one or more of the following symbols:<br />@ # $ % ^ & * - _ + = [ ] { } | \ : ‘ , ? / ` ~ “ ( ) ; .</li>
+								<li>lowercase letters</li>
+								<li>uppercase letters</li>
+								<li>numbers</li>
+								<li>one or more of the following symbols:<br />@ # $ % ^ &amp; * - _ + = [ ] { } | \ : ‘ , ? / &apos; ~ " ( ) ; .</li>
 							</ul>
 						</li>
 						<li>Fill in the rest of the details and select the <strong>Create</strong> button.</li>
 					</ol>
-					<p><strong>Still having trouble?</strong> Contact us via <a href="https://www.business.gov.au/contact-us">business.gov.au</a> or call 13 28 46.</p>
+					<p><strong>Need more help?</strong> Contact us via <a href="https://www.business.gov.au/contact-us">business.gov.au</a> or call 13&nbsp;28&nbsp;46.</p>
 				</div>
-				<div id="api" data-name="SelfAsserted"></div>
+				<div id="api" data-name="SelfAsserted"> <div class="intro"> <p>Please provide the following details.</p></div><div id="attributeVerification" role="form"> <div class="error pageLevel" id="passwordEntryMismatch" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div><div class="error pageLevel" id="requiredFieldMissing" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div><div class="error pageLevel" id="fieldIncorrect" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div><div class="error pageLevel" id="claimVerificationServerError" style="display: none;" aria-hidden="true"></div><div class="attr" id="attributeList"> <ul><li> <div class="attrEntry validate"><div> <div class="verificationInfoText" id="email_intro" style="display: inline;" aria-hidden="false" role="alert" aria-live="polite"></div><div class="verificationInfoText" id="email_info" style="display:none" aria-hidden="true"></div><div class="verificationSuccessText" id="email_success" style="display:none" aria-hidden="true"></div><div class="verificationErrorText error" id="email_fail_retry" style="display:none" aria-hidden="true">That code is incorrect. Please try again.</div><div class="verificationErrorText error" id="email_fail_no_retry" style="display:none" aria-hidden="true">You've made too many incorrect attempts. Please try again later.</div><div class="verificationErrorText error" id="email_fail_throttled" style="display:none" aria-hidden="true">There have been too many requests to verify this email address. Please wait a while, then try again.</div><div class="verificationErrorText error" id="email_fail_server" style="display:none" aria-hidden="true">We are having trouble verifying your email address. Please try again later.</div><div class="verificationErrorText error" id="email_incorrect_format" style="display:none" aria-hidden="true"></div></div><label for="email">Email Address</label><div class="error itemLevel show" aria-hidden="false"><p role="alert" aria-live="polite">Please enter a valid email address. This information is required.</p></div><input id="email" class="textInput" type="text" placeholder="Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" title="Please enter a valid email address." required="" aria-required="true" autofocus=""><a href="javascript:void(0)" data-help="Email address that can be used to contact you." class="helpLink tiny">What is this?</a><div class="buttons verify" claim_id="email"> <div id="email_ver_wait" class="working" aria-hidden="true" style="display: none;"></div><label id="email_ver_input_label" for="email_ver_input" aria-hidden="true" style="display: none;">Verification code</label> <input id="email_ver_input" type="text" placeholder="Verification code" style="display:none" aria-hidden="true"> <button id="email_ver_but_send" class="sendButton" type="button" style="display: inline;" aria-label="Send verification code" aria-hidden="false">Send verification code</button> <button id="email_ver_but_verify" class="verifyButton" type="button" style="display:none" aria-label="Verify code" aria-hidden="true">Verify code</button> <button id="email_ver_but_resend" class="sendButton" type="button" style="display:none" aria-label="Send new code" aria-hidden="true">Send new code</button><button id="email_ver_but_edit" class="editButton" type="button" style="display:none" aria-label="Change e-mail" aria-hidden="true">Change e-mail</button><button id="email_ver_but_default" class="defaultButton" type="button" style="display:none" aria-label="Default">Default</button> </div></div></li><li> <div class="attrEntry"><label for="newPassword">New Password</label><div class="error itemLevel" aria-hidden="true"><p role="alert" aria-live="polite">8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ + = [ ] { } | \ : ' , ? / ` ~ " ( ) ; . This information is required.</p></div><input id="newPassword" class="textInput" type="password" placeholder="New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title="8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ + = [ ] { } | \ : ' , ? / ` ~ &quot; ( ) ; ." required="" aria-required="true"><a href="javascript:void(0)" data-help="Enter new password" class="helpLink tiny">What is this?</a></div></li><li> <div class="attrEntry"><label for="reenterPassword">Confirm New Password</label><div class="error itemLevel" aria-hidden="true"><p role="alert" aria-live="polite">  This information is required.</p></div><input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title=" " required="" aria-required="true"><a href="javascript:void(0)" data-help="Confirm new password" class="helpLink tiny">What is this?</a></div></li><li> <div class="attrEntry"><label for="surname">Surname</label><div class="error itemLevel" aria-hidden="true"><p role="alert" aria-live="polite"></p></div><input id="surname" class="textInput" type="text" placeholder="Surname"><a href="javascript:void(0)" data-help="Your surname (also known as family name or last name)." class="helpLink tiny">What is this?</a></div></li><li> <div class="attrEntry"><label for="givenName">Given Name</label><div class="error itemLevel" aria-hidden="true"><p role="alert" aria-live="polite"></p></div><input id="givenName" class="textInput" type="text" placeholder="Given Name"><a href="javascript:void(0)" data-help="Your given name (also known as first name)." class="helpLink tiny">What is this?</a></div></li></ul> </div><div class="buttons"> <button id="continue" disabled="" aria-label="Create">Create</button> <button id="cancel" aria-label="Cancel">Cancel</button> </div><div class="verifying-modal"> <div id="verifying_blurb"></div></div></div></div>
 			</div>
 		</main>
+		<footer class="hide-on-print">
+			<div class="navigation-footer-links">
+				<div class="row">
+				</div>
+			</div>
+			<div class="navigation-footer-legal">
+				<div class="row">
+					<div class="columns">
+
+						<ul class="legal">
+							<li class="small-only-12"><a href="https://www.business.gov.au/about">About</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/for-government">For Government</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/legal-notices">Legal notices</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/about/accessibility">Accessibility</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/about/other-languages">Other languages</a></li>
+							<li class="small-only-12"><a href="tel:132846">13 28 46</a></li>
+							<li class="small-only-12"><a href="https://www.business.gov.au/contact-us">Contact us</a></li>
+						</ul>
+						<ul class="social">
+							<li>
+								<a class="facebook" href="https://www.facebook.com/business.gov.au">
+									<span class="fa fa-facebook-square"></span>
+									<span class="label show-for-sr">Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a class="twitter" href="https://twitter.com/business_gov_au">
+									<span class="fa fa-twitter-square"></span>
+									<span class="label show-for-sr">Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a class="linkedin" href="https://www.linkedin.com/company/business.gov.au">
+									<span class="fa fa-linkedin-square"></span>
+									<span class="label show-for-sr">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a class="youtube" href="https://www.youtube.com/user/BusinessGovAu">
+									<span class="fa fa-youtube-square"></span>
+									<span class="label show-for-sr">Youtube</span>
+								</a>
+							</li>
+						</ul>
+						<div class="bga-ftr-logo">
+							<a href="https://www.business.gov.au"><strong>business</strong>.gov.au</a>
+						</div>
+						<a href="/" class="logo">
+							<img src="https://www.business.gov.au/Areas/Business/Assets/App/Images/bga_logo_footer.png" alt="Business.gov.au logo">
+						</a>
+					</div>
+				</div>
+			</div>
+			<a href="https://www.business.gov.au/web-chat" class="chat-now">Chat Now</a>
+		</footer>
     </body>
 </html>

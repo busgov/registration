@@ -331,6 +331,10 @@ div.entry, div.attrEntry, div.intro, div.buttons {
 	margin-left: 25%;
 }
 
+div.localAccount div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
+	margin-left: 0;
+}
+
 a.left.logo {
 	text-decoration: none;
 }
@@ -365,25 +369,11 @@ a.chat-now[href*="//"]:after
 	div.entry, div.attrEntry, div.intro, div.buttons {
 		margin-left: 33%;
 	}
-
-}
-
-@media only screen and (max-width: 800px) {
-	/*
-	#api button.accountButton {
-		width: 36px;
-		height: 36px;
-		padding: 0 !important;
-	}
-	*/
-	/*
-	#api .localAccount .intro h2 {
-		height: 90px;
-	}
 	
-	#api .localAccount .create {
-		top: 6.2rem;
-	} */
+	div.localAccount div.intro, div.localAccount div.buttons, div.attrEntry div.buttons {
+		margin-left: 0;
+	}
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -395,7 +385,7 @@ a.chat-now[href*="//"]:after
 		font-size: 1.2rem;
 	}
 	
-	div.entry, div.attrEntry, div.intro. div.buttons {
+	div.entry, div.attrEntry, div.intro, div.buttons {
 		margin-left: 0;
 	}
 
@@ -418,11 +408,6 @@ a.chat-now[href*="//"]:after
 		margin-top: auto;
 		margin-left: 0;
 	}
-	/*
-	button.accountButton {
-		min-width: auto;
-		padding: 20px !important;
-	} */
 	
 	#api .social-label {
 		display: none;
@@ -437,6 +422,7 @@ a.chat-now[href*="//"]:after
 	}
 	
 	div#help-content {
+		background-position: 15px 10px;
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -551,16 +537,3 @@ a#createAccount:before {
 		margin-left: 150px;
 	}
 }
-/*
-@media only screen and (max-width: 400px) {
-
-	#api .localAccount .intro h2:before {
-		content: "Have an account?\ASign in:\A";
-	}
-
-	a#createAccount {
-		margin-left: 0;
-	}
-	
-}
-*/
