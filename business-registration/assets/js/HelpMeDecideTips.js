@@ -60,11 +60,11 @@ $(document).ready(function () {
         $("#tip-just-me").hide();
         $("#tip-two-or-more").hide();
 
-        if ($("input[name=radioSeparatePersonalAsset]").fieldValue() == "yes") {
+        if ($("input[name=radioSeparatePersonalAsset]").val() == "yes") {
             $("#tip-hold-control-asset").show();
-        } else if ($("input[name=radioHowManyOwners]").fieldValue() == "1") {
+        } else if ($("input[name=radioHowManyOwners]").val() == "1") {
             $("#tip-just-me").show();
-        } else if ($("input[name=radioHowManyOwners]").fieldValue() == "2") {
+        } else if ($("input[name=radioHowManyOwners]").val() == "2") {
             $("#tip-two-or-more").show();
         } else {
             return;
@@ -98,7 +98,7 @@ $(document).ready(function () {
             $("#fringeBenefit").show();
             $("#help-helpmedecideemployeesfringebenefits").next('h3').show();
         }
-        if ($("input[name=Employees]").fieldValue() == "yes") {
+        if ($("input[name=Employees]").val() == "yes") {
             $("#tip-payg").show();
             $("#help-helpmedecideemployeespayg").next('h3').show();
             tips = true;
@@ -106,7 +106,7 @@ $(document).ready(function () {
             $("#tip-payg").hide();
             $("#help-helpmedecideemployeespayg").next('h3').hide();
         }
-        if ($("input[name=FringeBenefits]").fieldValue() == "yes") {
+        if ($("input[name=FringeBenefits]").val() == "yes") {
             $("#tip-fbt").show();
             $("#help-helpmedecideemployeesfbt").next('h3').show();
             tips = true;
@@ -121,7 +121,7 @@ $(document).ready(function () {
         }
     });
 
-    if ($("#Company").val() == "True" || $("input[name=Employees]").fieldValue() == "yes") {
+    if ($("#Company").val() == "True" || $("input[name=Employees]").val() == "yes") {
         $("#fringeBenefit").show();
     } else {
         $("input[name=FringeBenefits]").prop("checked", false);
