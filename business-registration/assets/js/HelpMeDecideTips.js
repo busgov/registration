@@ -87,7 +87,7 @@ $(document).ready(function () {
     $("#help-helpmedecideemployeespayg").next('h3').hide();
     $("#help-helpmedecideemployeesfbt").next('h3').hide();
 
-    $("input[name=Employees], input[name=FringeBenefits").click(function() {
+    $("input[name=Employees], input[name=FringeBenefits]").click(function() {
         var tips = false;
         if (this.id == "employee-no" && $("#Company").val() != "True") {
             $("input[name=FringeBenefits]").prop("checked", false);
