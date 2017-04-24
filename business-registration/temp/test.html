@@ -1,0 +1,438 @@
+<html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Australian business registration in one place.">
+    <meta name="application-name" content="Business Registration">
+    <link rel="shortcut icon" href="/content/img/favicon.ico" type="image/x-icon">
+    <title>Business Structure - Business Registration Service</title>
+
+    <link href="../assets/css/jquery-ui.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/ie.css" rel="stylesheet">
+<link href="../assets/css/jquery.fileupload.css" rel="stylesheet">
+<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    
+    <script src="../assets/js/jquery-2.1.1.js"></script>
+<script src="../assets/js/jquery-2.2.4.js"></script>
+<script src="../assets/js/jquery-ui-1.11.4.js"></script>
+<script src="../assets/js/jquery.collapse.js"></script>
+<script src="../assets/js/jquery.blockui.js"></script>
+<script src="../assets/js/jquery.form.js"></script>
+
+<!-- <script src="/scripts/bootstrap.js"></script>
+<script src="/scripts/respond.js"></script>
+
+<script src="/scripts/jquery.validate.culture.en-AU.js"></script>
+<script src="/scripts/jquery.validate.js"></script>
+<script src="/scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script src="/scripts/jquery.fileupload/jquery.iframe-transport.js"></script>
+<script src="/scripts/jquery.fileupload/jquery.fileupload.js"></script>
+
+    <script src="/scripts/jquery-accessibleMegaMenu.js"></script>
+
+    <script src="/scripts/file-inputs.js"></script> -->
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/vadialog.js"></script>
+<script src="../assets/js/PrintThis.js"></script>
+
+
+
+    
+
+</head>
+<body class="">
+    <div class="top-banner">
+        <div class="mobile-logo"><a href="/"><strong>business</strong>.gov.au</a></div>
+    </div>
+<header class="wrapper">
+    <div class="gov">
+        <a href="http://www.business.gov.au" target="_blank"><span>business.gov.au</span> <span class="visuallyhidden">(opens in new window)</span></a>
+    </div>
+        <div class="sub-brand">
+                    <a href="/registration/type"><span>Business registration</span></a>
+
+        </div>
+    </header>
+    
+    
+
+
+
+        <div class="environment">
+            <p><strong>DEV</strong>
+            </p>
+        </div>
+
+
+
+<main class="wrapper">
+    
+
+
+<h1 id="heading" tabindex="-1">Business structure</h1>
+<p class="meter-description"><strong>Step <span id="stepNo">1</span>:</strong> <span id="percentCompleted">5</span>% complete</p>
+<div class="meter">
+    <span id="percentMeter" style="width: 5%"></span>
+</div>
+
+<div id="validationSummary" class="validation-summary-valid validation-container clearfix" data-valmsg-summary="true">
+    <div class="grid-row">
+        <div class="validation-summary-icon">
+            <img src="/content/img/ico-alert-red.png" alt="Error">
+        </div>
+        <div class="validation-message">
+            <h2><a id="validationSummaryAnchor" tabindex="-1">Just 1 thing(s) to check and you're on your way:</a>
+            </h2>
+                <p></p>
+                        <script type="text/javascript">
+                $(document).ready(function () {
+                    if ($("#validationSummary").hasClass("validation-summary-errors")) {
+                        scrollToTargetElement('#validationSummaryAnchor');
+                    }
+                });
+
+                function scrollToAndFocus(id) {
+                    scrollToTargetElement(id);
+                    var target = $(id);
+                    if (target) {
+                        target.focus();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+
+<form action="/helpmedecide/businessstructure" id="__CompareContentKeysAntiForgeryForm" method="post">        <fieldset>
+            <legend class="larger">What business structure do you plan to use?</legend>
+            <input name="__RequestVerificationToken" type="hidden" value="I5mA8MSwa_i9mT0EJjML1cJs6Cz5L_s7rCb5Up8P2sk04QWdQzJNq7rr-WGk-JXat1vf_9k_KnwSDzChubyPOdfqkHwe_F9b3Px4hjFIbrc1">
+            <div class="grid-row grid-row-block clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="structure-not-sure" name="structure" type="radio" value="not-sure">
+                        <!--input id="structure-not-sure" name="structure" type="radio" -->
+                        <label for="structure-not-sure">
+                            <strong>I'm not sure</strong>
+                            <br><span>Help me decide. </span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    
+                </div>
+            </div><!-- grid-row -->
+
+            <div class="grid-row grid-row-block clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="structure-sole" name="structure" type="radio" value="soletrader">
+                        <!-- input id="structure-sole" name="structure" type="radio" -->
+                        <label for="structure-sole">
+                            <strong>Sole trader</strong>
+                            <br>You're an individual and the sole owner of the business, but you can employ staff. You're responsible for all decisions and losses in your business, and you report the business income in your personal tax return.
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    <a class="cd-btn help" href="#help-helpmedecidebusinessstructuresoletrader"><span>Help - Sole traders</span></a>
+                </div>
+            </div><!-- grid-row -->
+
+            <div class="grid-row grid-row-block clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="structure-partnership" name="structure" type="radio" value="partnership">
+                        <!-- input id="structure-partnership" name="structure" type="radio" -->
+                        <label for="structure-partnership">
+                            <strong>Partnership</strong>
+                            <br>You and your partners carry on a business together and share income, losses, and control of the business. The partnership can employ staff, but the partners in the partnership are not considered employees.
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    <a class="cd-btn help" href="#help-helpmedecidebusinessstructurepartnership"><span>Help - Partnerships</span></a>
+                </div>
+            </div><!-- grid-row -->
+
+            <div class="grid-row grid-row-block clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="structure-company" name="structure" type="radio" value="company">
+                        <!-- input id="structure-company" name="structure" type="radio" -->
+                        <label for="structure-company">
+                            <strong>Company</strong>
+                            <br>A company is a separate legal entity from you, and has at least one shareholder (owner) and one director (who runs the business). Income and losses belong to the company. Companies can employ staff.
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    <a class="cd-btn help" href="#help-helpmedecidebusinessstructurecompany"><span>Help - Companies</span></a>
+                </div>
+            </div><!-- grid-row -->
+
+            <div class="grid-row grid-row-block grid-row-last clearfix custom-controls">
+                <div class="col11">
+                    <p>
+                        <input id="structure-trust" name="structure" type="radio" value="trust">
+                        <!-- input id="structure-trust" name="structure" type="radio" -->
+                        <label for="structure-trust">
+                            <strong>Trust</strong>
+                            <br>Your business is managed by a trustee for the benefit of others (the beneficiaries). A trustee is responsible for dealing with the trust, including lodging returns, distributing income or losses to the beneficiaries, and is also responsible for overseeing the payment of debts.
+                        </label>
+                    </p>
+                </div>
+                <div class="col1 last padding-top-bottom">
+                    <a class="cd-btn help" href="#help-helpmedecidebusinessstructuretrust"><span>Help - Trusts</span></a>
+                </div>
+            </div><!-- grid-row -->
+
+            <div id="div-bus-tip" class="registration-tip clearfix" style="display: none">
+                <p>Based on your answer, you should apply for:</p>
+                <ul>
+                    <li id="item-company" style="display: none"><strong>Company registration</strong> <a class="cd-btn help" href="#help-helpmedecidebusinessstructurecompanyregistration"><span>Help - Company registration</span></a></li>
+                    <li id="item-tfn" style="display: none"><strong>Business Tax File Number (TFN)</strong> <a class="cd-btn help" href="#help-helpmedecidebusinessstructurebusinesstfn"><span>Help - Business Tax File Number (TFN)</span></a></li>
+                    <li><strong>Australian Business Number (ABN)</strong> <a class="cd-btn help" href="#help-helpmedecidebusinessstructureabn"><span>Help - Australian Business Number (ABN)</span></a></li>
+                </ul>
+                <p id="tip-soletrader" style="display: none;">Sole traders use their <strong>individual Tax File Number (TFN)</strong> for both their personal and business dealings with the Australian Taxation Office (ATO). If you don't have one, you should also <a href="https://www.ato.gov.au/individuals/tax-file-number/apply-for-a-tfn/australian-residents---tfn-application/" target="_blank">apply for an individual TFN <span class="visuallyhidden">(opens in new window)</span></a>.</p>
+                <p id="tip-partnership" style="display: none;"></p>
+                <p id="tip-company" style="display: none;">The cost of registering a company depends on the type of company. The most common company structure, a proprietary limited company, costs $469 to register.</p>
+            </div>
+        </fieldset>
+        <div class="controls-container">
+            <div class="controls-content">
+                <button type="button" id="previous" class="btn" onclick="window.location = '/helpmedecide/helpmedecide'">Previous</button>
+                <button type="submit" id="next" class="btn btn-default">Next</button>
+            </div><!-- controls-content -->
+        </div>
+    <div class="help" id="help">
+        <div class="cd-panel from-right">
+            <div class="cd-panel-header">
+                <a href="#" class="cd-panel-close">Close</a>
+                <h2 id="helpTopic">Help topics</h2>
+                <p class="cd-panel-print">
+                    <a href="#" id="aPrint" onclick="printHelp(); return false;">Print</a>
+                </p>
+            </div>
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div id="helpFile" class="showhide">
+                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructuresoletrader">
+<h3 data-collapse-summary="" aria-expanded="false" class=""><a href="#">Sole traders</a></h3>
+<div aria-hidden="true" style="display: none;"> <p>A sole trader structure is the easiest and cheapest business structure to set up.</p><p>If you're a sole trader, you're an individual and the <strong>sole owner of the business</strong>.</p>
+    <p>The income your business makes belongs to you. You report the income on your individual tax return and pay tax on your business income at your <a href="https://www.ato.gov.au/rates/individual-income-tax-rates/" target="_blank">individual income tax rate <span class="visuallyhidden">(opens in new window)</span></a>.</p>
+    <p>You're responsible for all decisions and losses in your business. This means you have complete control over your business, but it also means your personal assets are at risk if things go wrong.</p>
+    <p>If you employ staff, you're responsible for giving them their minimum employee entitlements and conditions (such as superannuation and leave).</p>
+<blockquote><hr>
+    <h4>Example of a sole trader</h4>
+    <p>Jason operates his landscaping business as a sole trader, he trades on his own and controls and manages the business. He employs a part-time junior gardener to help out on basic garden maintenance jobs.</p>
+    <p>The business income is treated as Jason's individual income and he is solely responsible for any tax the business must pay. He includes all his business income with any other income and reports it on his individual tax return.</p><hr></blockquote>
+    <h4>Key facts for sole traders</h4>
+    <ul>
+        <li><strong>Cost</strong> - cheapest structure to set up and run</li>
+        <li><strong>Setting up process</strong> - easy</li>
+        <li><strong>Owner</strong> - you</li>
+        <li><strong>Responsibility for business decisions</strong> - you</li>
+        <li><strong>Responsibility for losses</strong> - you</li>
+        <li><strong>Report business income</strong> - on your individual tax return</li>
+        <li><strong>Tax rate</strong> - you pay your individual tax rate on any business profit</li>
+        <li><strong>Risk of losing assets</strong> - yes</li>
+        <li><strong>Business tax file number (TFN) needed</strong> - no</li>
+        <li><strong>Additional administration</strong> - no</li>
+        <li><strong>Additional reporting</strong> - no</li>
+        <li><strong>Separate business bank account needed</strong> - no</li>
+        <li><strong>Your super</strong> - you're not considered an employee, so you're responsible for organising your own superannuation</li>
+    </ul>
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructurepartnership">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Partnerships</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>A partnership structure is relatively inexpensive and easy to set up and operate.</p>
+    <p>In a partnership structure, <strong>you and your business partners own the business together</strong> and share the income and losses of the business. A partnership can have two or more partners.</p>
+<blockquote><hr><p>You're in a <em>family</em> partnership structure if two or more of the partners are related.</p><hr></blockquote>
+    <p>Each partner reports their share of the income on their own individual tax return, and pays tax at their <a href="https://www.ato.gov.au/rates/individual-income-tax-rates/" target="_blank">individual income tax rate <span class="visuallyhidden">(opens in new window)</span></a>. The partnership must lodge a <a href="https://www.ato.gov.au/business/reports-and-returns/income-tax-return/#Partnershipsandpartners" target="_blank">partnership income tax return <span class="visuallyhidden">(opens in new window)</span></a> every year with the Australian Taxation Office (ATO).</p>
+<blockquote><hr><p><strong>Tax File Number (TFN):</strong> A partnership needs its own TFN. The good news is you <strong>don't need to register</strong>. The ATO will automatically issue a partnership with a TFN (if one doesn't already exist).</p><hr></blockquote>
+    <p>All partners share legal responsibility for the business. This means the personal assets of all partners are at risk if things go wrong. If some partners want to limit their responsibility for business losses, you might want to consider a limited partnership structure. See below for more information.</p>
+    <p>If your business employs staff, all partners are responsible for giving staff their minimum employee entitlements and conditions (such as superannuation and leave).</p>
+<blockquote><hr>
+    <h4>Example of a partnership</h4>
+    <p>Greg and Fiona operate their website business as a partnership. The partnership has its own tax file number (TFN).</p>
+    <p>A partnership is not a separate legal entity and doesn't pay income tax on the income it earns. Instead, Greg and Fiona pay tax on their share of the net partnership income they each receive.</p>
+    <p>While the partnership doesn't pay tax, it does have to lodge an annual partnership tax return to show all income the partnership earned and deductions it claimed for expenses it incurred in carrying on the partnership business. The tax return also shows each partner's share of the net partnership income.</p>
+<hr></blockquote>
+    <h4>Key facts for partnerships</h4>
+    <ul>
+        <li><strong>Cost</strong> - low cost to set up and run</li>
+        <li><strong>Setting up process</strong> - relatively easy</li>
+        <li><strong>Owner</strong> - you and your partners</li>
+        <li><strong>Responsibility for business decisions</strong> - you and your partners share</li>
+        <li><strong>Responsibility for losses</strong> - you and your partners share</li>
+        <li><strong>Report business income</strong> - each partner reports their share in their individual tax return</li>
+        <li><strong>Tax rate</strong> - all partners pay their individual tax rate on their share of any business profit</li>
+        <li><strong>Risk of losing assets</strong> - yes</li>
+        <li><strong>Additional administration</strong> - if partners' shares aren't equal, a partnership agreement is required</li>
+        <li><strong>Business tax file number (TFN) needed</strong> - yes</li>
+        <li><strong>Additional reporting</strong> - yes, an annual partnership return must be lodged at the ATO under the business TFN</li>
+        <li><strong>Separate business bank account needed</strong> - yes</li>
+        <li><strong>Your superannuation</strong> - you're not considered an employee, so you're responsible for organising your own superannuation.</li>
+    </ul>
+    <h4>Limited partnerships</h4>
+    <p>In a limited partnership, there are two types of partners: a general partner and a limited partner. There must be at least one of each.</p>
+    <p>General partners are responsible for the day-to-day management of the business and their responsibility for losses (their liability for debt) is unlimited. Limited partners don't play any role in the day-to-day management of the business, and their liability for debt is limited to the amount they contributed to the partnership.</p>
+    <p>You <strong>must</strong> register a limited partnership in your state or territory. Contact your <a href="http://www.australia.gov.au/about-government/states-territories-and-local-government" target="_blank">state or territory government <span class="visuallyhidden">(opens in new window)</span></a> to find out more.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructurecompany">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Companies</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>A company structure has higher costs and is more difficult to set up. Running a company can also be more expensive, because you have to meet reporting and other requirements under Australian company law. This is why the structure is generally considered to be better suited to medium to large businesses.</p>
+    <p>A company structure means that your business is a <strong>separate legal entity from you</strong>. This means the company has the same rights as a natural person and can have debt, sue and be sued. A company is owned by its shareholders and run by its directors.</p>
+    <p>The personal assets of directors and shareholders are separate from the company, so they can't be used to pay company debts. In certain cases where directors breach their duties, they may be held personally responsible for company losses.</p>
+    <p>The income and losses that the business makes belongs to the company, and is reported on a company tax return. The <a href="https://www.ato.gov.au/Business/Small-business-entity-concessions/Concessions/Income-tax-concessions/Small-business-company-tax-rate/" target="_blank">company tax rate <span class="visuallyhidden">(opens in new window)</span></a> applies to the business income.</p>
+<blockquote><hr><p><strong>Tax File Number (TFN):</strong> A company needs its own TFN. The good news is you <strong>don't need to register</strong>. The ATO will automatically issue a company with a TFN (if one doesn't already exist).</p><hr></blockquote>
+
+    <p>If the company employs staff, the company is responsible for giving them their minimum employee entitlements and conditions (such as superannuation and leave).</p>
+<blockquote><hr>
+    <p>Companies must appoint a <a href="https://www.ato.gov.au/tax-professionals/your-practice/tax-and-bas-agents/primary-contact-and-authorised-contacts/#Public_officer" target="_blank">public officer <span class="visuallyhidden">(opens in new window)</span></a> and let the Australian Taxation Office (ATO) know. Public officers are responsible for making sure the company complies with tax law, keeping tax records and submitting company tax returns. The ATO needs to know their details so they can contact them about company tax matters.</p><hr></blockquote>
+    <h4>Proprietary limited company</h4>
+<p>Companies can be proprietary (private) or public. Most companies in Australia are proprietary limited. A proprietary limited company generally isn't allowed to raise money from the public by selling shares (like public companies can).</p>
+    <p>They must have:</p>
+    <ul>
+<li>no more than 50 non-employee shareholders</li>
+        <li>at least one shareholder (also known as a member)</li>
+        <li>at least one director.</li>
+    </ul>
+    <p>You can be both a shareholder and a director. You can also be the sole shareholder and director.</p>
+
+    <p>When companies are 'limited', the liability of shareholders is limited to any unpaid value (if any) on their shares. This means that shareholders can only be responsible for company losses <strong>up to</strong> any amount unpaid on their shares.</p>
+<p>Visit the Australian Securities &amp; Commissions (ASIC) website to find out more about:</p>
+    <ul>
+        <li><a href="http://asic.gov.au/for-business/running-a-company/members-of-a-company/" target="_blank">shareholders (members) <span class="visuallyhidden">(opens in new window)</span></a></li>
+        <li><a href="http://asic.gov.au/for-business/starting-a-company/minimum-officeholders/" target="_blank">company officeholders (directors and secretaries) <span class="visuallyhidden">(opens in new window)</span></a></li>
+        <li><a href="http://asic.gov.au/for-business/running-a-company/company-officeholder-duties/" target="_blank">duties of company officeholders <span class="visuallyhidden">(opens in new window)</span></a>.</li>
+    </ul>
+<blockquote><hr>
+    <h4>Example of a company</h4>
+    <p>Mary runs her business as a company and the money the business earns belongs to the company. The company must have a separate bank account.</p>
+    <p>Companies have to lodge an annual company tax return, which shows the company's income, deductions and income tax it is liable to pay.</p>
+<hr></blockquote>
+
+ <h4>Public companies</h4>
+    <p>Unlike private companies, public companies can have an unlimited number of non-employee shareholders and raise money from the public by selling shares. A public company must have at least one shareholder, one secretary, and three directors.</p>
+    <h4>Key facts for companies</h4>
+    <ul>
+        <li><strong>Cost</strong> - higher cost to set up and run</li>
+        <li><strong>Setting up process</strong> - more complicated</li>
+        <li><strong>Owner</strong> - company shareholders</li>
+        <li><strong>Responsibility for business decisions</strong> - the director(s)</li>
+        <li><strong>Responsibility for losses</strong> - generally, the company is responsible</li>
+        
+        <li><strong>Report business income</strong> - on the company tax return</li>
+<li><strong>Other income</strong> - if you're a shareholder and/or director, you pay your individual tax rate on any share dividends and/or your earnings as a director</li>
+        <li><strong>Tax rate</strong> - the company pays tax on any profits at the company tax rate</li>
+        <li><strong>Risk of losing assets</strong> - if you're a director, you can be personally liable in some cases for company debts</li>
+        <li><strong>Business Tax file number (TFN) needed</strong> - yes</li>
+        <li><strong>Additional administration</strong> - yes, registration with ASIC and <a href="http://asic.gov.au/for-business/your-business/small-business/compliance-for-small-business/small-business-knowing-your-legal-requirements-companies/" target="_blank">reporting and lodgement requirements <span class="visuallyhidden">(opens in new window)</span></a></li>
+        <li><strong>Additional reporting</strong> - yes, annual company tax return and other requirements</li>
+        <li><strong>Separate business bank account needed</strong> - yes</li>
+        <li><strong>Your superannuation</strong> - if you're a director, the company is responsible for setting it up</li>
+    </ul>
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructuretrust">
+<h3 data-collapse-summary="" aria-expanded="false"><a href="#">Trusts</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>Using a <strong>trust</strong> structure for a business means that the business is held and controlled by a trustee for the benefit of others (the beneficiaries).</p>
+    <p>A trustee is responsible for everything in the trust, including income and losses, and must report income in a trust income tax return.</p>
+    <p>A trustee can be a company or a person.</p>
+    <h4>Key facts for trusts</h4>
+    <ul>
+        <li><strong>Cost</strong> - higher cost to set up</li>
+        <li><strong>Setting up process</strong> - complicated</li>
+        <li><strong>Responsibility for business decisions</strong> - trustee</li>
+        <li><strong>Responsibility for debts</strong> - trustee</li>
+        <li><strong>Report business income</strong> - on trust income tax return</li>
+        <li><strong>The money you get from the business</strong> - as a beneficiary, you report any distributions on your individual tax return (if you're the trustee and there is net trust income, you're taxed at the highest marginal tax rate)</li>
+        <li><strong>Tax rate</strong> - depending on the trust deed, the trust may need to pay at the company tax rate. If all income is distributed to adult beneficiaries who are Australian residents, the trust doesn't need to pay tax.</li>
+	<li><strong>Business Tax file number (TFN) needed</strong> - yes</li>
+        <li><strong>Additional administration</strong> - the trustee is responsible for formal deed and yearly administrative tasks</li>
+        <li><strong>Additional reporting</strong> - yes, the trustee is responsible for annual company tax return and other requirements</li>
+        <li><strong>Separate bank account</strong> - yes</li>
+    </ul>
+    <p>Find out more about <a href="https://www.ato.gov.au/Business/Starting-your-own-business/Before-you-get-started/Choosing-your-business-structure/trust/" target="_blank">trusts <span class="visuallyhidden">(opens in new window)</span></a> on the Australian Taxation Office (ATO) website.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructurecompanyregistration">
+<h3 data-collapse-summary="" aria-expanded="false" style="display: none;"><a href="#">Company registration</a></h3><div aria-hidden="true" style="display: none;">
+    <p>All companies need to be registered if they're operating in Australia. The cost of registering a company depends on the type of company. The most common company structure, a proprietary limited company, costs $469 to register.</p>
+    <h4> Before you register</h4>
+    <p>Before you register, you'll need to prepare and do things like:</p>
+    <ul>
+        <li>decide whether your company will be private (proprietary) or public</li>
+        <li>decide on the officeholders (directors and secretaries)</li>
+        <li>choose a company name (that is, the company's legal name)</li>
+        <li>understand your legal obligations as a director and shareholder.</li>
+    </ul>
+<p>To find out more, read <a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/" target="_blank">starting a company <span class="visuallyhidden">(opens in new window)</span></a> on the Australian Securities &amp; Investments Commission (ASIC) website.</p>
+    <h4>When you've registered</h4>
+    <p>When registered, the company will:</p>
+    <ul>
+        <li>get an Australian Company Number (ACN) and a Certificate of Registration</li>
+	<li>appear in the <a href="https://connectonline.asic.gov.au/RegistrySearch/faces/landing/SearchRegisters.jspx" target="_blank">company register <span class="visuallyhidden">(opens in new window)</span></a></li>
+<li>be required to complete an annual review and pay an annual review fee each year (see <a href="http://www.asic.gov.au/for-business/running-a-company/annual-statements/" target="_blank">annual statements <span class="visuallyhidden">(opens in new window)</span></a> on the ASIC website).</li>
+    </ul>
+<p>To find out what company information is available to the public in the company register, go to <a href="http://asic.gov.au/online-services/search-asics-registers/companies-and-organisations/" target="_blank">companies and organisations - search ASIC's Registers <span class="visuallyhidden">(opens in new window)</span></a>.</p>
+
+
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructurebusinesstfn">
+<h3 data-collapse-summary="" aria-expanded="false" style="display: none;"><a href="#">Business Tax File Number (TFN)</a></h3>
+<div aria-hidden="true" style="display: none;"> 
+	<p>All partnerships and companies need a business TFN to deal with the Australian Taxation Office (ATO), for example to report business income and deductions. </p>
+<p>The good news is you <strong>don't need to register</strong>. The ATO will automatically issue a partnership or company with a TFN (if one doesn't already exist).</p>
+	<p>Sole traders can use their individual TFN for both their personal and business matters.</p>
+	<p>Find out more about <a href="https://www.ato.gov.au/Business/Registration/Work-out-which-registrations-you-need/Taxation-registrations/Tax-file-number/" target="_blank">TFNs for businesses <span class="visuallyhidden">(opens in new window)</span></a> on the ATO website.</p>
+</div>                                <input type="hidden" class="help-anchor" id="help-helpmedecidebusinessstructureabn">
+<h3 data-collapse-summary="" aria-expanded="false" style="display: none;"><a href="#">Australian Business Number (ABN)</a></h3>
+<div aria-hidden="true" style="display: none;">
+    <p>If you run a business in Australia, you should have an ABN.</p>
+    <p>An ABN is a unique 11 digit number that identifies your business to the public, the Australian Taxation Office (ATO), and other government agencies. Applying for an ABN is free.</p>
+    <h4>Why should I have an ABN?</h4>
+    <p>Having an ABN means you can:</p>
+    <ul>
+        <li>confirm your business identity to others when ordering and invoicing</li>
+        <li>avoid having business clients withhold 46.5% of any payments they make to you</li>
+        <li>register a business name</li>
+        <li>register an Australian domain name.</li>
+    </ul>
+    <p>You also need to have an ABN if you register for Goods and Services Tax (GST)</p>
+
+    <h4>Find out more</h4>
+    <p>Read about <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/" target="_blank">applying for an ABN <span class="visuallyhidden">(opens in new window)</span></a> on the Australian Business Register website.</p>
+</div>                    </div>
+                    <div class="more-help">
+                        <p><strong>Need more help? Contact us via <a href="https://www.business.gov.au/contact-us" target="_blank">business.gov.au <span class="visuallyhidden">(opens in new window)</span></a> or call 13&nbsp;28&nbsp;46.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form></div>
+
+<script src="/Scripts/Pages/HelpMeDecide/HelpMeDecideTips.js"></script>
+
+
+</main>
+
+
+<script type="text/javascript" src="../assets/js/functions.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        initHelp();
+    });
+</script>
+
+
+
+</body></html>
