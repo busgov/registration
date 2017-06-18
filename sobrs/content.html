@@ -75,11 +75,17 @@
 	}
 @Model.FurtherInfoContent</p><h2>Content key: DashboardPaymentDeclined</h2><p>Inline content: <p>Unfortunately, your payment was unsuccessful. Please check the credit card details were entered correctly or try using a different MasterCard or Visa card.</p>
 <p>We&apos;ve saved the application, but it won&apos;t be submitted until you make a successful payment.</p>
-<p>To enter your payment details again, select the <strong>Resume</strong> button beside your application on the <strong>Application summary</strong> screen. Then complete the declaration on the confirmation screen before continuing to the payment screen. </p></p><h2>Content key: CompanyNameCheckedIdentical</h2><p>Inline content: <blockquote>@Model.ServiceMessage</blockquote><p>Your proposed company name is the same as a registered business name.</p><p>You can only use this name if a company director or shareholder (member) owns the registered business name.</p></p><h2>Content key: CompanyNameIntroText
+<p>To enter your payment details again, select the <strong>Resume</strong> button beside your application on the <strong>Application summary</strong> screen. Then complete the declaration on the confirmation screen before continuing to the payment screen. </p></p><h2>Content key: CompanyNameCheckedIdentical</h2><p>Inline content: <blockquote>@Model.ServiceMessage</blockquote><p>Your proposed company name is the same as a registered business name.</p><p>You can only use this name if a company director or shareholder (member) owns the registered business name.</p></p><h2>Content key: CompanyNameCheckedAvailable
+	</h2><p>Inline content: Name is "Available". Asic says: <blockquote>@Model.ServiceMessage</blockquote></p><h2>Content key: CompanyNameAddedIdentical</h2><p>Inline content: Company name added. <blockquote><strong>Remember: </strong>@Model.ServiceMessage It&apos;s the same as or similar to a registered name. We&apos;ll confirm your company owns the registered name and let you know if you can use it.</blockquote></p><h2>Content key: CompanyNameIntroText
 	</h2><p>Inline content: <p><strong>Important:</strong></p><ul><li>Registering a company name doesn't stop others from using it. To get exclusive use, <a href="http://www.ipaustralia.gov.au/get-the-right-ip/trade-marks/">apply for a trade mark</a>.</li><li>Make sure you?re not infringing on someone else?s copyright. <a href="http://www.ipaustralia.gov.au/understanding-intellectual-property/ip-for-business/business-name-search-service/">Search trade marks</a> for your proposed company name before you register it.</li><li>If you want to use your proposed company name as part of your web address, consider <a href="http://www.business.gov.au/registration-and-licences/Pages/register-your-domain-name.aspx">registering a domain name</a></li></ul>
 	</p><h2>Content key: CompanyNameCreateNewNameLabel
 	</h2><p>Help content:</p><div><h3>Company name availability</h3><p>A company name is not available if it's the same or similar to:</p><ul><li>another registered company's name</li><li>a name that's been reserved by another company</li><li>a registered business name.</li></ul><p>If your proposed company name is the same as a registered business name, you can only use it if the owner of the business name is connected to the company in a specific way (e.g. the business name owner is a proposed company member or owner).</p><p>There are also certain words or phrases that can only be used if the relevant government agency approves it, such as "university", "building society", etc.</p><p>Find out more about choosing company names - see step 2 on ASIC's <a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/">Starting a company</a> page.</p>
-	</div><h2>Content key: EntitlementQuestion1</h2><h2>Content key: EntitlementQuestion2</h2><h2>Content key: EntitlementQuestion3</h2><h2>Content key: EntitlementQuestion4</h2><h2>Content key: EntitlementQuestion5</h2><p>Help content:</p><div><h3>Regular or continuous basis</h3>
+	</div><h2>Content key: CompanyNameCheckedManual
+	</h2><p>Inline content: Name is "Manual". Asic says: <blockquote>@Model.ServiceMessage</blockquote><p>Perhaps you could ?</p></p><h2>Content key: CompanyNameCheckedUnAvailable
+	</h2><p>Inline content: Name is "UnAvailable". Asic says: <blockquote>@Model.ServiceMessage</blockquote><p>Try again ?.</p>
+	</p><h2>Content key: CompanyNameAddedAvailable
+	</h2><p>Inline content: Company name added. <p>Added Name is "Available". Asic says: <blockquote>@Model.ServiceMessage</blockquote></p></p><h2>Content key: CompanyNameAddedManual
+	</h2><p>Inline content: Company name added. <p>This company name <strong>may be</strong> available. Asic says: <blockquote>@Model.ServiceMessage</blockquote>You can add the name but availability will be subject to manual assessment.</p></p><h2>Content key: EntitlementQuestion1</h2><h2>Content key: EntitlementQuestion2</h2><h2>Content key: EntitlementQuestion3</h2><h2>Content key: EntitlementQuestion4</h2><h2>Content key: EntitlementQuestion5</h2><p>Help content:</p><div><h3>Regular or continuous basis</h3>
 <div><p>When we say &#34;regular&#34;, we mean repeated in a way that follows a general pattern. There?s no set time period for which you must repeat activities. For example, you&apos;re selling regularly if you:
 <ul><li>set up a stall at your local markets every 4 to 6 weeks to sell your products</li>
 <li>put on exhibitions 3 or 4 times a year to sell your artwork.</li></ul></p>
@@ -743,7 +749,7 @@ If you have a ministerial or official consent letter to use this name, please at
 <h4>What payment methods are accepted?</h4>
 <p>We only accept MasterCard or Visa credit cards.</p> 
 <h4>Where is my receipt number?</h4>
-<p>Once your payment is processed, our system will display the receipt number and whether the payment was successful on the <strong>Application summary</strong> page.</p></div></div><h2>Content key: CompanyNameSimilarIntro</h2><p>Inline content: <p>From the list below, select the business name that a director or shareholder (member) of your company owns. </p> 
+<p>Once your payment is processed, our system will display the receipt number and whether the payment was successful on the <strong>Application summary</strong> page.</p></div></div><h2>Content key: CompanyNameAddedUnavailable</h2><p>Inline content: Company name added. <blockquote><strong>Remember: </strong>@Model.ServiceMessage</blockquote></p><h2>Content key: CompanyNameSimilarIntro</h2><p>Inline content: <p>From the list below, select the business name that a director or shareholder (member) of your company owns. </p> 
 <p>After you submit your application, we&apos;ll confirm your details.</p></p><h2>Content key: BusinessDetailsPersonDetailsPlaceOfBirth</h2><p>Inline content: Enter the city or town.</p><p>Help content:</p><div><h3>Place of birth</h3>
 <div>
 <p>Please only enter the city <strong>or</strong> town of birth and check it:  </p>
@@ -1035,7 +1041,22 @@ Find out more about <a href="https://abr.gov.au/For-Business,-Super-funds---Char
 <h4>Where can I find out more?</h4>
 <p>Details on what information the ABR needs to <a href="https://abr.gov.au/General-information/Proving-your-identity/">prove your identity</a> can be found on the ABR website. </p>
 </div></div><h2>Content key: BusinessDetailsWhyAbnIntro</h2><p>Inline content: Select <strong>one</strong> option that best describes why you need an ABN.</p><h2>Content key: BusinessDetailsWhyAbnNew</h2><p>Inline content: You have set up, or are about to set up, a new business and have never had an ABN using the same business structure in Australia.</p><h2>Content key: BusinessDetailsWhyAbnInvestment</h2><p>Inline content: For example, if you earn income from an investment.</p><h2>Content key: BusinessDetailsWhyAbnBought</h2><p>Inline content: You have bought or taken over an existing business.</p><h2>Content key: BusinessDetailsWhyAbnContractor</h2><p>Inline content: You are contracting or sub-contracting your services.</p><h2>Content key: BusinessDetailsWhyAbnPaymentServices</h2><p>Inline content: You need an ABN to receive payment for services.</p><h2>Content key: BusinessDetailsWhyAbnRestartedSameStructure</h2><p>Inline content: You have restarted a business in the same business structure.</p><h2>Content key: BusinessDetailsWhyAbnRestartedDifferentStructure</h2><p>Inline content: You have restarted a business in a different business structure.</p><h2>Content key: BusinessDetailsWhyAbnChangeBusinessStructure</h2><p>Inline content: The legal structure of your business has changed. For example, from a partnership to a sole trader.</p><h2>Content key: BusinessDetailsWhyAbnFirstTime</h2><p>Help content:</p><div><h3>First time in business</h3>
-<div>Answer Yes to this question if you&apos;ve never owned or operated a business in Australia. This includes as a sole trader, partner, trustee, director or contractor/subcontractor.</div></div><h2>Content key: CompanyNameSimilarReview</h2><p>Inline content: <p>Want a company name that stands out? Check that your proposed name isn&apos;t too similar to the names below:</p></p><h2>Content key: CompanyShareholderRegOffice</h2><p>Inline content: Must be a street address.</p><h2>Content key: CompanyShareDetailsLegend</h2><p>Inline content: Share details for each shareholder</p><h2>Content key: SelectRegistrationsDescription</h2><p>Inline content: <strong>Welcome to the Australian Government Business Registration Service.</strong><br />
+<div>Answer Yes to this question if you&apos;ve never owned or operated a business in Australia. This includes as a sole trader, partner, trustee, director or contractor/subcontractor.</div></div><h2>Content key: TaxDetailsGstStartDate</h2><p>Help content:</p><div><h3>GST start date</h3>
+<div><p>If you&apos;re required by law to register for GST, your GST registration should start on the date:
+<ul><li>your annual turnover reached &#36;75,000 or more</li>
+<li>you started charging passengers for taxi services or limousine travel (including ride-sharing)</li>
+<li>you want to start claiming fuel tax credits.</li></ul></p>
+<p>If you choose to register for GST, you can choose any start date, as long as it&apos;s the same as or later than your ABN start date.</p>
+<blockquote><hr /><strong>Important:</strong> You?re expected to stay registered for at least 12 months. If you apply for your GST registration to be cancelled within 12 months, you may be refused or be required to report monthly.<hr /></blockquote>
+<p>Visit the ATO website to <a href="https://www.ato.gov.au/Business/Registration/Work-out-which-registrations-you-need/Taxation-registrations/Goods-and-Services-Tax/">find out more about GST</a>.</p></div></div><h2>Content key: TaxDetailsGstTurnover</h2><p>Help content:</p><div><h3>GST turnover</h3>
+<div><p>GST turnover is your current or projected annual turnover (excluding GST amounts) &#45; whichever is greater. GST turnover is not your profit.</p>
+<p>Current annual turnover is:
+<ul><li>the value of all sales you made or are likely to make in the current month plus </li>
+<li>the value of all sales you made in the previous 11 months.</li></ul></p>
+<p>Projected annual turnover is:
+<ul><li>the value of all sales you made or are likely to make in the current month plus</li>
+<li>the value of all sales you&apos;re likely to make in the next 11 months.</li></ul></p>
+<p>If you need more help working out your annual <a href="https://www.ato.gov.au/Business/GST/Registering-for-GST/?anchor=WorkingoutyourGSTturnover1#WorkingoutyourGSTturnover1">GST turnover</a> visit the ATO website.</p></div></div><h2>Content key: CompanyNameSimilarReview</h2><p>Inline content: <p>Want a company name that stands out? Check that your proposed name isn&apos;t too similar to the names below:</p></p><h2>Content key: CompanyShareholderRegOffice</h2><p>Inline content: Must be a street address.</p><h2>Content key: CompanyShareDetailsLegend</h2><p>Inline content: Share details for each shareholder</p><h2>Content key: SelectRegistrationsDescription</h2><p>Inline content: <strong>Welcome to the Australian Government Business Registration Service.</strong><br />
 Here you can apply for your key business and tax registrations in one place.</p><p>Help content:</p><div><h3>Select registrations</h3>
 <div>
 <p>Welcome to the Australian Government Business Registration Service Public Beta. The service combines a number of key government business and tax registration forms in one place including: </p>
@@ -3223,7 +3244,16 @@ Industry (Supervision) Act 1993</em></a> on the Legislation Register website.</l
   <h4>Find out more</h4>
 <p>More on the <a href="https://www.business.gov.au/info/plan-and-start/start-your-business/business-structure/business-structures-and-types/partnership">partnership business structure</a> can be found on the business.gov.au website.</p>
 <p>To find out if you&apos;re a <a href="https://www.ato.gov.au/Business/Starting-your-own-business/Before-you-get-started/Choosing-your-business-structure/partnership/">partnership for tax purposes</a>, visit the Australian Taxation Office website. </p>
-</div></div><h2>Content key: CompanyDetailsOrganisationOrPersonAssociateOfficeHeld</h2><h2>Content key: BusinessAssociateRuleAPUB+PUB</h2><p>Inline content: <p>Please add all the business associates related to the company and include:</p>
+</div></div><h2>Content key: SaveAndReturnDetailsSaveAndReturnDetails</h2><p>Inline content: Create a login to save your details while you complete your form. To begin, please enter an email and password below:  </p><p>Help content:</p><div><h3>Save and return</h3>
+<div><h4>Don&apos;t lose your work</h4>
+<p>Use our save and return feature to save your progress through the form. You can then return at a later date to finish and lodge your form.</p>
+<h4>Check your form status</h4><p>Once you&apos;ve lodged your form, you can use your login details to check on the progress of each of your registrations such as your business name or Australian Business Number (ABN).</p><p>The dashboard screen is where you can see each registration you&apos;ve applied for, and whether they&apos;re successful.</p>
+<p> If the status of one of your applications wasn&apos;t successful, you can use the dashboard to find out why and where to go for more information.</p>
+<h4>Why do you need my email address?</h4>
+<p>The email address is your unique user name and also allows us to contact you to:
+<ul><li>verify your login</li>
+<li>confirm a change of password</li>
+<li>provide you with important information about your form.</li></ul></p></div></div><h2>Content key: CompanyDetailsOrganisationOrPersonAssociateOfficeHeld</h2><h2>Content key: BusinessAssociateRuleAPUB+PUB</h2><p>Inline content: <p>Please add all the business associates related to the company and include:</p>
 
 <ul>
 <li><strong>at least 3 directors</strong> (with at least 2 who lives in Australia)</li>
@@ -3971,7 +4001,7 @@ You can now use eligible online or &apos;cloud&apos; accounting, bookkeeping or 
 <p>To find out more about why the company application was unsuccessful, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC</a>. You&apos;ll need to quote your ASIC reference number below. </p>
       <blockquote><strong>ASIC reference number:</strong> @Model.Reference</blockquote>
 <h4>Can I get a refund?</h4>
-<p>If you paid for a company application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC online</a> or you can <a href="http://www.asic.gov.au/for-business/payments-fees-and-invoices/payment-options/business-name-fees-and-payment-methods/#refunds">request a refund</a> from ASIC. </p></p><h2>Content key: DashboardCompanySuccessful</h2><p>Inline content: <p><strong>Congratulations.</strong> This application to register a company was successful. Please download the certificate of registration below for your files:</p>
+<p>If you paid for a company application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC</a>. </p></p><h2>Content key: DashboardCompanySuccessful</h2><p>Inline content: <p><strong>Congratulations.</strong> This application to register a company was successful. Please download the certificate of registration below for your files:</p>
  <blockquote><a href="@Model.Url"><strong>Certificate of registration for @Model.EntityName</strong></a></blockquote>
 <p>You can expect a letter of confirmation in the mail from the Australian Securities &amp; Investments Commission (ASIC) within 5 to 7 business days.</p>
 <h4>Who can I contact?</h4>
@@ -4188,7 +4218,7 @@ You can now use eligible online or &apos;cloud&apos; accounting, bookkeeping or 
 <p>To find out more about why this application was unsuccessful, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC</a>. You&apos;ll need to quote your ASIC reference number below: </p>
 <blockquote><strong>ASIC reference number:</strong> @Model.Reference</blockquote>
 <h4>Can I get a refund?</h4>
-<p>If you paid for a business name application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC online</a> or you can <a href="http://www.asic.gov.au/for-business/payments-fees-and-invoices/payment-options/business-name-fees-and-payment-methods/#refunds">request a refund</a> from ASIC. </p>
+<p>If you paid for a business name application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC</a>. </p>
 <h4>Can I appeal? </h4>
 <p>If you&apos;ve contacted ASIC and still want to appeal the decision, you have 28 business days to request a <a href="http://www.asic.gov.au/for-business/registering-a-business-name/before-you-start/business-name-availability/request-review-of-asic-business-names-decision/">review of ASIC&apos;s business name decision</a> on the ASIC website.</p>
 <h4>Can I apply again? </h4>
@@ -4445,7 +4475,7 @@ span.nsw-logo {
 }
 </ul>
 <h4>Can I get a refund?</h4>
-<p>If you paid for a business name application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC online</a> or you can <a href="http://www.asic.gov.au/for-business/payments-fees-and-invoices/payment-options/business-name-fees-and-payment-methods/#refunds">request a refund</a> from ASIC. </p>
+<p>If you paid for a business name application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/">contact ASIC</a>. </p>
 <h4>Can I apply again? </h4>
 <p>Yes, you can apply here for a different business name if your ABN application was successful. </p>
 <p>Once you receive your ABN number, you can select <strong>Start a new application</strong> from the drop-down next to your email address at the top right of your screen. You can then select the business name registration option and use your new ABN to continue with the form.</p> 
@@ -4457,107 +4487,10 @@ span.nsw-logo {
 }
 </ul>
 <h4>Can I get a refund?</h4>
-<p>If you paid for a company application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/" target="_blank">contact ASIC online</a> or you can <a href="http://www.asic.gov.au/for-business/payments-fees-and-invoices/payment-options/business-name-fees-and-payment-methods/#refunds" target="_blank">request a refund</a> from ASIC. </p>
+<p>If you paid for a company application but it was unsuccessful, ASIC will refund your payment. If you don&apos;t receive a refund within 10 business days, please <a href="http://asic.gov.au/about-asic/contact-us/" target="_blank">contact ASIC</a>. </p>
 <h4>Can I apply again? </h4>
 <p>Yes, you can select <strong>Start a new application</strong> from the drop-down next to your email address at the top right of your screen. You can then select the Company registration option to apply again.</p>
 <h4>Who can I contact?</h4>
-<p>To speak to someone about this application, please contact <a href="https://www.business.gov.au/contact-us" target="_blank">contact business.gov.au</a>.</p></p><h2>Content key: NewRegistrationTileHeader</h2><p>Inline content: New business</p><h2>Content key: NewRegistrationTileText</h2><p>Inline content: Start here to register a new ABN with a business name, company, taxes or AUSkey.</p><p>Help content:</p><div><h3>New business</h3>
-<div>
-<p>The new business service combines a number of key government business and tax registration forms in one place including: </p>
-<ul>
-<li>Australian Business Number (ABN)</li>
-<li>Business name</li>
-<li>Goods and Services Tax (GST)*</li>
-<li>Australian company</li>
-<li>Pay as You Go (PAYG) withholding*</li>
-<li>Fringe Benefits Tax (FBT)*</li>
-<li>Luxury Car Tax (LCT)*</li>
-<li>Fuel Tax Credits (FTC)*</li>
-<li>Wine Equalisation Tax (WET)*</li>
-<li>Administrator AUSkey*.</li></ul>
-<p>*Here you can only apply for the registrations indicated above together with a business or company application. </p>
+<p>To speak to someone about this application, please contact <a href="https://www.business.gov.au/contact-us" target="_blank">contact business.gov.au</a>.</p></p><h2>Content key: ManualAddressNotValidatedWarningMessage</h2><p>Inline content: <p>We can&apos;t seem to find this address. Please <strong>Go Back</strong> to check the address details again.</p>
 
-<p>If you already have an ABN and want to register for one of the tax registrations above, select the <strong>Taxes</strong> tile on the home page.</p>
-</div></div><h2>Content key: AdditionalRegistrationTileHeader</h2><p>Inline content: Add taxes</p><h2>Content key: AdditionalRegistrationTileText</h2><p>Inline content: Have an ABN and need to apply for additional taxes? <br /><br />
-Use your <strong>AUSkey</strong> or <strong>MyGov</strong> login to register.</p><h2>Content key: AuskeyRegistrationTileHeader</h2><p>Inline content: Add AUSkey</p><h2>Content key: AuskeyRegistrationTileText</h2><p>Inline content: Have an ABN and need an Administrator AUSkey for yourself or a business associate? <br />Apply here.</p><h2>Content key: AuskeyRegistrationsSideNote</h2><p>Inline content: <h2>Need an AUSkey for a tax agent or accountant?</h2><p>Already have an Administrator AUSkey but need an additional AUSkey for your tax agent or accountant? This is called a <strong>Standard AUSkey</strong>.</p> <p>You&apos;ll need to <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/What-type-of-AUSkey-is-right-for-you/" target="_blank">register for a Standard AUSkey</a> on the Australian Business Register (ABR) website.</p></p><h2>Content key: AuskeyRegistrationsDescription</h2><p>Inline content: <p>Have an ABN? You can apply for an Administrator AUSkey here.</p></p><p>Help content:</p><div><h3>AUSkey</h3>
-<div>
-<blockquote><hr /><strong>Only Administrator AUSkey</strong> registration is available here. <hr /></blockquote>
-<h4>What is an AUSkey?</h4>
-<p>An <a href="https://abr.gov.au/AUSkey/AUSkey-explained/">AUSkey</a> is a secure login that&apos;s set up on your computer. If you&apos;re <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Verify-your-eligibility-for-an-AUSkey/">eligible</a>, AUSkey lets you log in to many government services including business and tax forms. </p>
-<h4>What can I do with an AUSkey? </h4>
-<p>With a <a href="https://abr.gov.au/AUSkey/Help-and-support/Setting-up-AUSkey-troubleshooting/AUSkey-compatibility/">compatible system or browser</a>, an AUSkey can help you:</p>
-<ul>
-  <li>update your business name details through <a href="http://www.asic.gov.au/auskey">ASIC connect</a></li>
-  <li>lodge your  Business Activity Statements (BAS) through the <a href="https://bp.ato.gov.au/">Business Portal</a></li>
-  <li>update your Australian  Business Number (ABN) details</li>
-  <li>submit tax statements through &apos;<a href="http://www.sbr.gov.au/products-register/sbr-product-register-full-list">SBR-enabled</a>&apos; accounting,  bookkeeping or payroll desktop software.<strong></strong></li>
-</ul>
-<p>See <a href="https://abr.gov.au/AUSkey/Where-you-can-use-AUSkey/">where you can use your AUSkey</a> on the Australian Business Register (ABR) website. </p>
-<p>If you want to log in from different computers, you can set up an AUSkey on a USB stick.</p>
-<h4>How do I register? </h4>
-<p>You can <strong>only</strong> register for an Administrator AUSkey here by selecting the AUSkey checkbox together with another registration on the &apos;Ready to register&apos; screen. All you need to provide is your:</p>
-<ul>
-  <li>Tax file number</li>
-  <li>Australian telephone number </li>
-<li>Email address.</li></ul>
-<p>Find out more about <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Register-for-an-AUSkey/">registering for an AUSkey</a> on the ABR website.</p>
-<p>To register a tax agent or accountant for a <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Register-for-an-AUSkey/">Standard AUSkey</a>, you&apos;ll need to register on the Australian Business Register (ABR) website.</p>
-<p>You can now choose how you want to log in to manage your government business and tax details. Only AUSkey is available to register here on this Business registration form. To find out more about additional business login options, expand the &quot;Additional logins&quot; tab below. </p>
-</div>
-<h3>Additional logins</h3>
-<div><p>You can now choose how you want to log in to manage your government business and tax details.</p><p>You can use your AUSkey or one of the login options below:</p>
-<ul><li><strong>Manage ABN connections</strong><br />
-If you have a myGov login, you can link your ABNs to your myGov account. This means you can then use your myGov account to manage your ABN details.<br /></li>
-<li><strong>Online or &apos;cloud&apos; tax software</strong><br />
-You can now use eligible online or &apos;cloud&apos; accounting, bookkeeping or payroll software to process certain government tax forms. <br /><br /></li></ul>
-<p><strong>Please note</strong>: the login options above are for specific tax paperwork. You&apos;ll still need to use either your AUSkey or ASIC connect login to:</p>
-<ul>
-<li>manage business name details or renewals</li>
-<li>submit tax forms through &apos;<a href="http://www.sbr.gov.au/products-register/sbr-product-register-full-list">SBR-enabled</a>&apos; accounting, bookkeeping or payroll desktop software.</li>
-</ul>
-<p>Visit the <a href="https://my.gov.au/">myGov</a> website to find out more about the <a href="https://abr.gov.au/General-information/Manage-ABN-Connections/Manage-ABN-Connections--FAQs/#UsemyGovlogintosignintoonlinebusinessser">Manage ABN Connections</a> option.</p>
-<p>Find out more about the <a href="https://www.ato.gov.au/general/gen/cloud-software-authentication-and-authorisation/">online or &apos;cloud&apos; software</a> service on the Australian Taxation Office (ATO) website.</p>
-</div></div><h2>Content key: AuskeyRegistrationsNote</h2><p>Inline content: <p>An Administrator AUSkey is the login given to business owners to manage their tax details with the Australian Taxation Office (ATO).</p></p><h2>Content key: ManualAddressNotValidatedWarningMessage</h2><p>Inline content: <p>We can&apos;t seem to find this address. Please <strong>Go Back</strong> to check the address details again.</p>
-
-<p><strong>Please note:</strong> If you continue now, your application may be rejected.</p></p><h2>Content key: BusinessActivityIsResidentOfAustraliaNo</h2><p>Inline content: <p>Are you registered for <a href="https://www.ato.gov.au/business/international-tax-for-business/in-detail/doing-business-in-australia/gst-registration-information-for-a-non-resident/?page=1#Types_of_registration" target="_blank">Simplified Goods &amp; Services Tax (GST)</a>? </p>
-<p><strong>Please note:</strong> If you register for an ABN, you will lose this GST status and will be moved to full GST registration.</p></p><h2>Content key: DashboardGSTReportingMethodFullBeforeJuly2017</h2><p>Inline content: GST reporting method: <a href="https://www.ato.gov.au/GSTreportingmethods/" target="_blank">Full Reporting</a></p><h2>Content key: DashboardGSTReportingMethodFullAfterJuly2017</h2><p>Inline content: GST reporting method: <a href="https://www.ato.gov.au/GSTreportingmethods/" target="_blank">Full Reporting</a> (from 1 July 2017).</p><h2>Content key: DashboardGSTReportingMethodSimpleBeforeJuly2017</h2><p>Inline content: GST reporting method: <a href="https://www.ato.gov.au/GSTreportingmethods/" target="_blank">Simpler BAS</a></p><h2>Content key: DashboardGSTReportingMethodSimpleAfterJuly2017</h2><p>Inline content: GST reporting method: <a href="https://www.ato.gov.au/GSTreportingmethods/" target="_blank">Simpler BAS</a> (from 1 July 2017).</p><h2>Content key: AuskeyRegistrationsIntro</h2><p>Inline content: Here you can apply for an AUSkey or additional authorisations for your business.</p><p>Help content:</p><div><h3>AUSkey</h3>
-<div>
-<blockquote><hr /><strong>Only Administrator AUSkey</strong> registration is available here. <hr /></blockquote>
-<h4>What is an AUSkey?</h4>
-<p>An <a href="https://abr.gov.au/AUSkey/AUSkey-explained/">AUSkey</a> is a secure login that&apos;s set up on your computer. If you&apos;re <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Verify-your-eligibility-for-an-AUSkey/">eligible</a>, AUSkey lets you log in to many government services including business and tax forms. </p>
-<h4>What can I do with an AUSkey? </h4>
-<p>With a <a href="https://abr.gov.au/AUSkey/Help-and-support/Setting-up-AUSkey-troubleshooting/AUSkey-compatibility/">compatible system or browser</a>, an AUSkey can help you:</p>
-<ul>
-  <li>update your business name details through <a href="http://www.asic.gov.au/auskey">ASIC connect</a></li>
-  <li>lodge your  Business Activity Statements (BAS) through the <a href="https://bp.ato.gov.au/">Business Portal</a></li>
-  <li>update your Australian  Business Number (ABN) details</li>
-  <li>submit tax statements through &apos;<a href="http://www.sbr.gov.au/products-register/sbr-product-register-full-list">SBR-enabled</a>&apos; accounting,  bookkeeping or payroll desktop software.<strong></strong></li>
-</ul>
-<p>See <a href="https://abr.gov.au/AUSkey/Where-you-can-use-AUSkey/">where you can use your AUSkey</a> on the Australian Business Register (ABR) website. </p>
-<p>If you want to log in from different computers, you can set up an AUSkey on a USB stick.</p>
-<h4>How do I register? </h4>
-<p>You can <strong>only</strong> register for an Administrator AUSkey here by selecting the AUSkey checkbox together with another registration on the &apos;Ready to register&apos; screen. All you need to provide is your:</p>
-<ul>
-  <li>Tax file number</li>
-  <li>Australian telephone number </li>
-<li>Email address.</li></ul>
-<p>Find out more about <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Register-for-an-AUSkey/">registering for an AUSkey</a> on the ABR website.</p>
-<p>To register a tax agent or accountant for a <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/Register-for-an-AUSkey/">Standard AUSkey</a>, you&apos;ll need to register on the Australian Business Register (ABR) website.</p>
-<p>You can now choose how you want to log in to manage your government business and tax details. Only AUSkey is available to register here on this Business registration form. To find out more about additional business login options, expand the &quot;Additional logins&quot; tab below. </p>
-<h4>Additional logins</h4>
-<p>You can now choose how you want to log in to manage your government business and tax details.</p><p>You can use your AUSkey or one of the login options below:</p>
-<ul><li><strong>Manage ABN connections</strong><br />
-If you have a myGov login, you can link your ABNs to your myGov account. This means you can then use your myGov account to manage your ABN details.<br /></li>
-<li><strong>Online or &apos;cloud&apos; tax software</strong><br />
-You can now use eligible online or &apos;cloud&apos; accounting, bookkeeping or payroll software to process certain government tax forms. <br /><br /></li></ul>
-<p><strong>Please note</strong>: the login options above are for specific tax paperwork. You&apos;ll still need to use either your AUSkey or ASIC connect login to:</p>
-<ul>
-<li>manage business name details or renewals</li>
-<li>submit tax forms through &apos;<a href="http://www.sbr.gov.au/products-register/sbr-product-register-full-list">SBR-enabled</a>&apos; accounting, bookkeeping or payroll desktop software.</li>
-</ul>
-<p>Visit the <a href="https://my.gov.au/">myGov</a> website to find out more about the <a href="https://abr.gov.au/General-information/Manage-ABN-Connections/Manage-ABN-Connections--FAQs/#UsemyGovlogintosignintoonlinebusinessser">Manage ABN Connections</a> option.</p>
-<p>Find out more about the <a href="https://www.ato.gov.au/general/gen/cloud-software-authentication-and-authorisation/">online or &apos;cloud&apos; software</a> service on the Australian Taxation Office (ATO) website.</p>
-</div></div><h2>Content key: AuskeyRegistrationsNoteSingle</h2><p>Inline content: <h2>Don&apos;t have an AUSkey?</h2>
-<p>If you already have an ABN, but don&apos;t have an Administrator AUSkey, continue here.</p></p><h2>Content key: AuskeyRegistrationsNoteAdditional</h2><p>Inline content: <h2>Have an AUSkey?</h2>
-<p>If you already have an Administrator AUSkey but need one or more additional AUSkeys e.g. for multiple owners, continue here.</p>
-<p>You&apos;ll need to sign in using an existing AUSkey or a myGov account so you can apply for one or more additional AUSkeys and assign them to your authorised representatives.</p></p><h2>Content key: AdditionalTaxRegistrationsIntro</h2><p>Inline content: Here you can apply for additional registrations for your business.</p><h2>Content key: AdditionalTaxRegistrationsCurrent</h2><p>Inline content: The following roles have already been registered with the Australian Taxation Office (ATO):</p><h2>Content key: AdditionalTaxRegistrationsAvailable</h2><p>Inline content: Select from the following to apply for the associated tax registration:</p><h2>Content key: AdditionalTaxRegistrationsProvided</h2><p>Inline content: You have provided details to apply for the following tax roles:</p><h2>Content key: AdditionalTaxRegistrationsContacts</h2><p>Inline content: You can enter new contacts that can be contacted by the ATO about this application:</p><h2>Content key: ConfirmationDeclarationTextPrivacyStatementATO</h2><p>Inline content: <p>The information provided to the ABR and the ATO in this form may include personal information. Please refer to the <a href="https://abr.gov.au/General-information/Privacy/Privacy---abr-gov-au-website" target="_blank">ABR privacy policy <span class="visuallyhidden">(opens in new window)</span></a> for more information about how we handle your personal information, your rights to seek access to and correct personal information, and to complain about breaches of privacy.</p></p>
+<p><strong>Please note:</strong> If you continue now, your application may be rejected.</p></p>
