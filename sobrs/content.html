@@ -4015,27 +4015,21 @@ You can now use eligible online or &apos;cloud&apos; accounting, bookkeeping or 
 <h4>Where do I update my details?</h4>
 <p>The Business registration service does not currently process company updates. You can <a href="http://www.asic.gov.au/changes">update your company details</a> on the ASIC website.</p>
 <h4>How do I renew my company?</h4>
-<p>ASIC will send you a company registration annual review each year. Find out more about the <a href="http://asic.gov.au/for-business/running-a-company/annual-statements/">company annual review and fees</a> on the ASIC website.</p></p><h2>Content key: CompanyNameCheckedMinisterialConsent</h2><p>Inline content: <blockquote>@Model.ServiceMessage</blockquote></p><h2>Content key: DashboardABNPending</h2><p>Inline content: <p>The Australian Business Register (ABR) will need to review this ABN application manually because they need more information. See below the possible reasons why and the links to what information needs to be provided:</p> 
+<p>ASIC will send you a company registration annual review each year. Find out more about the <a href="http://asic.gov.au/for-business/running-a-company/annual-statements/">company annual review and fees</a> on the ASIC website.</p></p><h2>Content key: CompanyNameCheckedMinisterialConsent</h2><p>Inline content: <blockquote>@Model.ServiceMessage</blockquote></p><h2>Content key: DashboardABNPending</h2><p>Inline content: <p>Thank you. This ABN application was received by the Australian Business Register (ABR), however they&apos;ll need to review the application manually. The possible reason for this could be:</p>
 <ul>
-  <li>If the applicant is not a resident of Australia, see the <a href="https://abr.gov.au/General-information/Proof-of-identity-for-non-residents/">proof of Identity for non-residents</a> page on the ABR website.</li>
-  <li>If an associate listed on the application is not a resident of Australia, see the <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/Associates-details/">associates</a> page on the ABR website.</li>
-  <li>If an associate listed on the application is under 18 years old, see the <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/What-you-need-for-your-ABN-application/Associates-details/">associates</a> page on ABR website for details. </li>
-  <li>If none of the above apply, please wait while ABR make further checks to confirm the information provided in your application.</li>
+  <li>your <a href="https://abr.gov.au/General-information/Proving-your-identity/" target="_blank">identity</a> needs to be checked manually, or</li>
+  <li>more information is needed to finalise your application.</li>
 </ul>
-<p>You have <strong>43 calendar days</strong> from the date you submitted the application to provide ABR with the required details or paperwork, or your application may be refused. </p>
-<p>Details on what happens <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/After-applying-for-an-ABN/Status-of-your-ABN-application/">when an application is under manual review</a> can be found on the ABR website.</p>
+<blockquote><hr /><strong>Important:</strong> Please <strong>do not</strong> re-apply for an ABN while this application is being reviewed.<hr /></blockquote>
+<p>Details on what happens <a href="https://abr.gov.au/For-Business,-Super-funds---Charities/Applying-for-an-ABN/After-applying-for-an-ABN/Status-of-your-ABN-application/" target="_blank">when an application is under manual review</a> can be found on the ABR website.</p>
+
 <h4>How long will it take?</h4>
-<p>Once you&apos;ve provided your details, please allow up to 28 business days for the ABR to process your application. </p>
+<p>Please allow up to 20 business days for the ABR to process your application. If you haven&apos;t heard anything from the ABR, please contact them on 13 92 26 and quote the ATO Application reference number below:</p>
+<blockquote><strong>ATO Application reference number:</strong> @Model.Reference
+</blockquote>
 <h4>What happens to my other applications?</h4>
 <p>If you&apos;ve also applied for other tax applications, they&apos;ll remain in a pending state until the manual review is finalised.</p>  
-<blockquote><hr /><p><strong>Did you also apply for an AUSkey?</strong> If an ABN application is under manual review, a related AUSkey application is automatically unsuccessful. </p><p>In this case you&apos;ll need to wait for an ABN number before you can <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/">register for an AUSkey</a> again on the ABR website.</p><hr /></blockquote>
-<h4>Who can I contact?</h4>
-<p>If you haven&apos;t received an update on your application within 28 business days, please <a href="https://abr.gov.au/Contact-us/Contact-the-ABR/">contact the ABR</a> on 13 92 26. Please quote the ATO Application reference number below:</p>
-<blockquote><strong>ATO Application reference number:</strong> @Model.Reference
-@if(Model.WorkItemId != null) {
-    <br /><strong>Work item ID:</strong> @Model.WorkItemId
-}
-</blockquote></p><h2>Content key: DashboardABNUnsuccessful</h2><p>Inline content: <p>Unfortunately this application for an Australian Business Number (ABN) was unsuccessful. You can expect a letter in the mail from the Australian Business Register (ABR) within 14 days. </p>
+<blockquote><hr /><p><strong>Did you also apply for an AUSkey?</strong> If an ABN application is under manual review, a related AUSkey application is automatically unsuccessful. </p><p>In this case you&apos;ll need to wait for an ABN number before you can <a href="https://abr.gov.au/AUSkey/Registering-for-AUSkey/" target="_blank">register for an AUSkey</a> again on the ABR website.</p><hr /></blockquote></p><h2>Content key: DashboardABNUnsuccessful</h2><p>Inline content: <p>Unfortunately this application for an Australian Business Number (ABN) was unsuccessful. You can expect a letter in the mail from the Australian Business Register (ABR) within 14 days. </p>
 <h4>Will this affect my other applications?</h4>
 <p>If an ABN application is unsuccessful then all other applications depending on it will also be unsuccessful. These include your business name, AUSkey, goods and services tax and other tax applications. </p>
 <h4>How do I find out more?</h4>
@@ -4493,4 +4487,114 @@ span.nsw-logo {
 <h4>Who can I contact?</h4>
 <p>To speak to someone about this application, please contact <a href="https://www.business.gov.au/contact-us" target="_blank">contact business.gov.au</a>.</p></p><h2>Content key: ManualAddressNotValidatedWarningMessage</h2><p>Inline content: <p>We can&apos;t seem to find this address. Please <strong>Go Back</strong> to check the address details again.</p>
 
-<p><strong>Please note:</strong> If you continue now, your application may be rejected.</p></p>
+<p><strong>Please note:</strong> If you continue now, your application may be rejected.</p></p><h2>Content key: CompanyDetailsPersonAssociateABNOnlyOfficeTrustee</h2><p>Help content:</p><div><h3>Trustee</h3>
+<div>
+<p>Trustees can be an individual or a company.</p>
+<p>&apos;Company&apos; includes any of the following:</p>
+<ul>
+<li>Australian private company</li>
+<li>Australian public company</li>
+<li>Other incorporated entity</li>
+<li>Co-operative</li>
+<li>Public trading trust</li>
+</ul>
+</div></div><h2>Content key: CompanyDetailsPersonAssociateABNOnlyOfficeShareholder</h2><p>Help content:</p><div><h3>Shareholders</h3>
+<div>
+<p>Shareholders are also known as members. Together, they own the company by owning shares in the company.</p>
+
+<p>Remember, however, that the company is a separate legal entity, so the company&apos;s assets belong to the company, not the shareholders.</p>
+
+<p>Shareholders can be individuals or companies. Company law doesn&apos;t set out a minimum age requirement for shareholders, but a company can make rules about this if they like.</p>
+
+
+<p>Find out more about the <a href="http://asic.gov.au/members">role of company members (shareholders)</a> on the ASIC website.</p>
+
+<h4>What information will be available to the public?</h4>
+
+<p>The name and residential address of company members (shareholders) will be available to the public from the <a href="https://asic.gov.au/search-organisations">company register</a> for a small fee.</p> 
+<p>Read the <a href="http://www.asic.gov.au/privacy">summary of ASIC&apos;s privacy policy</a> to find out how ASIC handles personal information.</p>
+
+</div></div><h2>Content key: CompanyDetailsPersonAssociateABNOnlyOfficeSecretary</h2><p>Help content:</p><div><h3>Secretaries</h3>
+<div>
+<p>The day-to-day responsibilities of company secretaries may include:</p>
+<ul>
+<li>letting ASIC know about changes to company details (such as changes to the registered office address, secretaries or directors)</li>
+<li>lodging the company&apos;s financial reports</li>
+<li>ensuring the company meets its legal requirements.</li>
+</ul>
+
+<p>To be a secretary, a person must:</p>
+<ul>
+<li>have agreed in writing to be a company secretary</li>
+<li>be at least 18 years of age.</li>
+</ul>
+
+<p>A secretary&apos;s appointment is effective on the day the company is successfully registered.</p>
+
+<p>Find out more about the <a href="http://asic.gov.au/for-business/running-a-company/company-officeholder-duties/">duties of officeholders (directors and secretaries)</a> on the Australian Securities &amp; Investments Commission (ASIC) website.</p>
+
+<h4>What personal information will be available to the public?</h4>
+
+<p>The name, date of birth and residential address of company secretaries will be available to the public from the <a href="https://asic.gov.au/search-organisations">company register</a> for a small fee.</p> 
+<p>Read the <a href="http://www.asic.gov.au/privacy">summary of ASIC&apos;s privacy policy</a> to find out how ASIC handles personal information.</p>
+
+<h4>Who can&apos;t be a secretary?</h4>
+
+<p>Unless a court allows it, a person <strong>must not be a secretary</strong> if they:</p>
+<ul>
+<li>are bankrupt</li>
+<li>are in debt and have an agreement with creditors to manage the debt</li>
+<li>have been convicted of offences such as fraud or offences under the <em>Corporations Act 2001</em>.</li>
+</ul>
+</div></div><h2>Content key: CompanyDetailsPersonAssociateABNOnlyOfficeDirector</h2><p>Help content:</p><div><h3>Directors</h3>
+<div>
+
+<p>Directors are expected to:</p>
+<ul>
+<li>guide and monitor the management of the company</li>
+<li>always act in the company&apos;s best interests</li>
+<li>ensure the company complies with its legal requirements.</li>
+</ul>
+
+
+<p>To be a director, a person must:</p>
+
+<ul>
+<li>have agreed in writing to be a company director</li>
+<li>be at least 18 years of age.</li>
+</ul>
+
+<p>A director&apos;s appointment is effective on the day the company is successfully registered.</p>
+<p>For more about the duties of a company director, go to the Australian Securities &amp; Investments Commission (ASIC) website:</p>
+
+<ul>
+<li><a href="http://asic.gov.au/your-company">Your company and the law</a></li>
+<li><a href="http://asic.gov.au/company-officeholders">Company officeholder duties</a></li>
+</ul>
+
+<h4>What personal information will be available to the public?</h4>
+
+<p>The name, date of birth and residential address of directors will be available to the public from the <a href="https://asic.gov.au/search-organisations">company register</a> for a small fee.</p> 
+<p>Read the <a href="http://www.asic.gov.au/privacy">summary of ASIC&apos;s privacy policy</a> to find out how ASIC handles personal information.</p>
+
+<h4>Who can&apos;t be a director?</h4>
+
+<p>Unless a court allows it, a person <strong>must not be a director</strong> if they:</p>
+<ul>
+<li>are bankrupt</li>
+<li>are in debt and have an agreement with creditors to manage the debt</li>
+<li>have been convicted of offences such as fraud or offences under the <em>Corporations Act 2001</em></li>
+<li>have been disqualified from managing companies.</li>
+</ul>
+
+
+<p>Find out more about <a href="http://asic.gov.au/regulatory-resources/insolvency/insolvency-for-directors/bankruptcy-and-personal-insolvency-agreements/">bankruptcy and personal insolvency agreements while you&apos;re a director</a> on the ASIC website.</p>
+
+</div></div><h2>Content key: CompanyDetailsPersonAssociateABNOnlyOfficeTrustBeneficiary</h2><p>Help content:</p><div><h3>Trust beneficiary</h3>
+<div>
+<p>Individuals or organisations are trust beneficiaries if they:</p>
+<ul>
+<li>are named as a beneficiary under a trust deed, or</li>
+<li>may benefit under a trust arrangement.</li>
+</ul>
+</div></div>
